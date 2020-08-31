@@ -1,0 +1,1 @@
+# Dynamsoft Label Recognition - C API Reference

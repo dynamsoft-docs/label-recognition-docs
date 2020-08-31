@@ -1,0 +1,1 @@
+# Dynamsoft Label Recognition - C User Guide

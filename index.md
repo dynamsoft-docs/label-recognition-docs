@@ -1,0 +1,8 @@
+
+# Dynamsoft Label Recognition Documentation
+
+DLR Docs.
+
+- [Programming]({{ site.programming }})
+   - [C]({{ site.c }})
+   - [C++]({{ site.cpp }})

@@ -4,5 +4,4 @@
 DLR Docs.
 
 - [Programming]({{ site.programming }})
-   - [C]({{ site.c }})
-   - [C++]({{ site.cpp }})
+   - [C/C++]({{ site.c-cpp }})

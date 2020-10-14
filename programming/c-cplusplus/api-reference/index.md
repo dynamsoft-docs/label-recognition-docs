@@ -137,15 +137,14 @@ breadcrumbText: API Reference
 ## [Error Code](errorcode.md)
 		
 
-&nbsp;
 
 ## [Structs](structs/index.md)
-- [`DLRRuntimeSettings`](structs/DLRRuntimeSettings.md)	
-- [`DLRQuadrilateral`](structs/DLRQuadrilateral.md)	
-- [`DLRRegion`](structs/DLRRegion.md)	
-- [`DLRResultArray`](structs/DLRResultArray.md)		
-- [`DLRResult`](structs/DLRResult.md)		
-- [`DLRLineResult`](structs/DLRLineResult.md)	
-- [`DLRCharacterResult`](structs/DLRCharacterResult.md)		
-- [`DLRPoint`](structs/DLRPoint.md)		
-- [`DLRImageData`](structs/DLRImageData.md)		
+- [`DLRRuntimeSettings`](structs/dlrruntimesettings.md)	
+- [`DLRQuadrilateral`](structs/dlrquadrilateral.md)	
+- [`DLRRegion`](structs/dlrregion.md)	
+- [`DLRResultArray`](structs/dlrresultarray.md)		
+- [`DLRResult`](structs/dlrresult.md)		
+- [`DLRLineResult`](structs/dlrlineResult.md)	
+- [`DLRCharacterResult`](structs/dlrcharacterresult.md)		
+- [`DLRPoint`](structs/dlrpoint.md)		
+- [`DLRImageData`](structs/dlrimagedata.md)		

@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Enumerations - Parameter Mode Enumerations
-description: This article shows Parameter Mode Enumerations of Dynamsoft Barcode Reader.
+title: Dynamsoft Label Recognition Enumerations - Parameter Mode Enumerations
+description: This article shows Parameter Mode Enumerations of Dynamsoft Label Recognition.
 keywords: DLRBinarizationMode, DLRGrayscaleTransformationMode, DLRRegionPredetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# Dynamsoft Barcode Reader Enumeration - Parameter Mode Enumeration
+# Dynamsoft Label Recognition Enumeration - Parameter Mode Enumeration
 
   | Enumeration | Description |
   |-------------|-------------|

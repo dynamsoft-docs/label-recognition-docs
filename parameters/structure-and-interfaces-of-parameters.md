@@ -1,6 +1,6 @@
 ---   
-description: Introduce the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
-title: Dynamsoft Barcode Reader Parameters - Structure and Interfaces of Parameters
+description: Introduce the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Label Recognition.
+title: Dynamsoft Label Recognition Parameters - Structure and Interfaces of Parameters
 keywords: Parameter,Interface,Hierarchy
 layout: default-layout
 needAutoGenerateSidebar: false
@@ -8,10 +8,10 @@ needAutoGenerateSidebar: false
 
 
 # Hierarchy and work domain of parameters 
-This article introduces the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
+This article introduces the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Label Recognition.
 
 ## Definitions
-Dynamsoft Barcode Reader uses a template to set parameters. A template contains three types of data: `LabelRecognitionParameter`, `ReferenceRegion`, and `TextArea`.
+Dynamsoft Label Recognition uses a template to set parameters. A template contains three types of data: `LabelRecognitionParameter`, `ReferenceRegion`, and `TextArea`.
 - `LabelRecognitionParameter` is used to specify the decoding operation settings on the entire image. The value of the `LabelRecognitionParameter.Name` field is the unique identifier of the `LabelRecognitionParameter`.
 - `ReferenceRegion` is used to specify a decoding region. It is also used to specify the decoding operation settings in this area. The value of the `ReferenceRegion.Name` field is the unique identifier of `ReferenceRegion`.
 - `TextArea` is used to specify a barcode format. It is also used to specify the decoding operation settings of this barcode format. The value of the `TextArea.Name` field is the unique identifier of `TextArea`.
@@ -126,7 +126,7 @@ The parameters of `TextArea` are:
 - TextArea.TailModuleRatio
 
 ## Parameter template files assignment rules 
-When setting parameters through a JSON template, Dynamsoft Barcode Reader will process the template according to the following rules:
+When setting parameters through a JSON template, Dynamsoft Label Recognition will process the template according to the following rules:
 - Parameters not defined in `LabelRecognitionParameter`/`ReferenceRegion`/`TextArea` will be filled with default values
 - `TextArea` is automatically split into multiple settings for a single barcode format, for example:
 
@@ -217,23 +217,23 @@ Template used by DBR
     - TextAreaNameArray: Take the combined value of the two settings, but if the TextArea is set for the same barcode format, TextAreaNameArray will only keep the name of the last TextArea
 
 ## Modes, Mode, Arguments 
-The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
-For example, one of the functions in the decoding process is barcode localization. Dynamsoft Barcode Reader provides the `LocalizationModes` parameter to control this function. It provides `LM_CONNECTED_BLOCKS`, `LM_STATISTICS`, `LM_LINES`, `LM_SCAN_DIRECTLY`, `LM_STATISTICS_MARKS`, `LM_STATISTICS_POSTAL_CODE`, a total of 6 methods to implement barcode localization. For LM_SCAN_DIRECTLY, there are two Arguments, `ScanStride` and `ScanDirection`.
+The entire decoding process of Dynamsoft Label Recognition consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
+For example, one of the functions in the decoding process is barcode localization. Dynamsoft Label Recognition provides the `LocalizationModes` parameter to control this function. It provides `LM_CONNECTED_BLOCKS`, `LM_STATISTICS`, `LM_LINES`, `LM_SCAN_DIRECTLY`, `LM_STATISTICS_MARKS`, `LM_STATISTICS_POSTAL_CODE`, a total of 6 methods to implement barcode localization. For LM_SCAN_DIRECTLY, there are two Arguments, `ScanStride` and `ScanDirection`.
 
 ## Interfaces to change settings 
 
-Dynamsoft Barcode Reader provides two ways to set parameters: `PublicRuntimeSettings` and JSON template files. 
-`PublicRuntimeSettings` is used to modify the Dynamsoft Barcode Reader built-in template, and only supports commonly used parameters. The following are the steps to update Dynamsoft Barcode Reader parameters through `PublicRuntimeSettings`:
+Dynamsoft Label Recognition provides two ways to set parameters: `PublicRuntimeSettings` and JSON template files. 
+`PublicRuntimeSettings` is used to modify the Dynamsoft Label Recognition built-in template, and only supports commonly used parameters. The following are the steps to update Dynamsoft Label Recognition parameters through `PublicRuntimeSettings`:
 
-1. (optional) Restore the parameter settings of the Dynamsoft Barcode Reader built-in template to the default values through the `ResetRuntimeSettings` interface
-2. Call the `GetRuntimeSettings` interface to get the current `PublicRuntimeSettings` of the Dynamsoft Barcode Reader object
+1. (optional) Restore the parameter settings of the Dynamsoft Label Recognition built-in template to the default values through the `ResetRuntimeSettings` interface
+2. Call the `GetRuntimeSettings` interface to get the current `PublicRuntimeSettings` of the Dynamsoft Label Recognition object
 3. Modify the contents in `PublicRuntimeSettings` in the previous step
-4. Call the `UpdateRuntimeSettings` interface to apply the modified `PublicRuntimeSettings` in the previous step to the Dynamsoft Barcode Reader object
+4. Call the `UpdateRuntimeSettings` interface to apply the modified `PublicRuntimeSettings` in the previous step to the Dynamsoft Label Recognition object
 5. (optional) Call the `SetModeArgument` interface to set the optional argument for a specified mode in Modes parameters.
 
 
-JSON templates supports all Dynamsoft Barcode Reader parameters. The related parameter setting interfaces are:
-- `InitRuntimeSettingsWithFile`: After calling this interface, the template definition in the file are processed according to the merging rules stated in the "Multiple parameter template files" section. Each independent template is stored in the Dynamsoft Barcode Reader object. All templates are merged into one template, then replace the built-in template of Dynamsoft Barcode Reader;
+JSON templates supports all Dynamsoft Label Recognition parameters. The related parameter setting interfaces are:
+- `InitRuntimeSettingsWithFile`: After calling this interface, the template definition in the file are processed according to the merging rules stated in the "Multiple parameter template files" section. Each independent template is stored in the Dynamsoft Label Recognition object. All templates are merged into one template, then replace the built-in template of Dynamsoft Label Recognition;
 - `InitRuntimeSettingsWithString`: The effect after calling this interface is the same as `InitRuntimeSettingsWithFile`. The only difference is the template definition of `InitRuntimeSettingsWithString` is saved as a string;
-- `AppendTplFileToRuntimeSettings`: After calling this interface, the template definition in the file will be processed according to the merging rules stated in the "Multiple parameter template files" section . Each independent template is stored in the Dynamsoft Barcode Reader object. All templates, including Dynamsoft Barcode Reader's built-in template, are merged into one template to replace the built-in template of Dynamsoft Barcode Reader;
+- `AppendTplFileToRuntimeSettings`: After calling this interface, the template definition in the file will be processed according to the merging rules stated in the "Multiple parameter template files" section . Each independent template is stored in the Dynamsoft Label Recognition object. All templates, including Dynamsoft Label Recognition's built-in template, are merged into one template to replace the built-in template of Dynamsoft Label Recognition;
 - `AppendTplStringToRuntimeSettings`: The effect after calling this interface is the same as `AppendTplFileToRuntimeSettings`. The only difference is the template definition of `AppendTplStringToRuntimeSettings` is saved as a string.

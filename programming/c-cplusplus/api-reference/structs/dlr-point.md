@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C & C++ Struct - DLRPoint
-description: This page shows the DLRPoint struct of Dynamsoft Barcode Reader for C & C++ Language.
+title: Dynamsoft Label Recognition C & C++ Struct - DLRPoint
+description: This page shows the DLRPoint struct of Dynamsoft Label Recognition for C & C++ Language.
 keywords: DLRPoint, struct, c, c++
 needAutoGenerateSidebar: false
 ---

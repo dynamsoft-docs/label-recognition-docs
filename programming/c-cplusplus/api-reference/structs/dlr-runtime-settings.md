@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C & C++ Struct - DLRRuntimeSettings
-description: This page shows the DLRRuntimeSettings struct of Dynamsoft Barcode Reader for C & C++ Language.
+title: Dynamsoft Label Recognition C & C++ Struct - DLRRuntimeSettings
+description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognition for C & C++ Language.
 keywords: DLRRuntimeSettings, struct, c, c++
 needAutoGenerateSidebar: false
 ---

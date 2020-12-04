@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Enumerations - Error Code
-description: This article shows Error Code of Dynamsoft Barcode Reader.
+title: Dynamsoft Label Recognition Enumerations - Error Code
+description: This article shows Error Code of Dynamsoft Label Recognition.
 keywords: error code, enumeration
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader - Error Code  
+# Dynamsoft Label Recognition - Error Code  
   
 ## Error code common to all programming languages
 

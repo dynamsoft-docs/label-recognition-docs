@@ -1,36 +1,26 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - BinarizationModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - BinarizationModes.
-keywords: BinarizationModes, LabelRecognitionParameter, image process control parameters, parameter reference, parameter
+title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - BinarizationModes
+description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - BinarizationModes.
+keywords: BinarizationModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
 
-# LabelRecognitionParameter Object - Image Process Control Parameters
+# LabelRecognitionParameter Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`LabelRecognitionParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
+ | [`LabelRecognitionParameter.Name`](parameter-control.md#name) | The name of the LabelRecognitionParameter object. |
+ | [`LabelRecognitionParameter.MaxThreadCount`](parameter-control.md#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
- | [`LabelRecognitionParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
- | [`LabelRecognitionParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`LabelRecognitionParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
- | [`LabelRecognitionParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
- | [`LabelRecognitionParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
- | [`LabelRecognitionParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
- | [`LabelRecognitionParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
- | [`LabelRecognitionParameter.ImagePreprocessingModes`](ImagePreprocessingModes.md#imagepreprocessingmodes) | Sets the mode and priority for image preprocessing algorithms. |
- | [`LabelRecognitionParameter.LocalizationModes`](LocalizationModes.md#localizationmodes) | 	Sets the mode and priority for localization algorithms. |
- | [`LabelRecognitionParameter.Pages`](image-process-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`LabelRecognitionParameter.PDFRasterDPI`](image-process-control.md#pdfrasterdpi) | Sets the output image resolution. |
- | [`LabelRecognitionParameter.PDFReadingMode`](image-process-control.md#pdfreadingmode) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
- | [`LabelRecognitionParameter.RegionPredetectionModes`](RegionPredetectionModes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ScaleDownThreshold`](image-process-control.md#scaledownthreshold) | Sets the threshold for the image shrinking. |
- | [`LabelRecognitionParameter.ScaleUpModes`](ScaleUpModes.md#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`LabelRecognitionParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
- | [`LabelRecognitionParameter.TextFilterModes`](TextFilterModes.md#textfiltermodes) | 	Sets the mode and priority for text filter. |
- | [`LabelRecognitionParameter.TextureDetectionModes`](TextureDetectionModes.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
+ | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
+ | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -38,14 +28,14 @@ needAutoGenerateSidebar: false
 ## BinarizationModes 
 
 ### Mode Properties
-`BinarizationModes` is a parameter for setting the mode  for binarization. It consisits of one or more `BinarizationMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`BinarizationModes` is a parameter for setting the mode  for binarization. It consisits of one or more `DLRBinarizationMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
+| *[`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array* | "DLR_BM_SKIP"<br>"DLR_BM_AUTO"<br>"DLR_BM_LOCAL_BLOCK" | ["DLR_BM_LOCAL_BLOCK", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP"] |
 
 - **See also**:   
-    [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+    [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
     
 #### Mode Arguments
 - [BlockSizeX](#blocksizex)
@@ -61,7 +51,7 @@ Sets the horizontal block size for the binarization process.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
+| *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
 
 - **Remarks**    
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
@@ -79,7 +69,7 @@ Sets the vertical block size for the binarization process.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
+| *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
@@ -95,7 +85,7 @@ Sets whether to enable binary vacancy filling.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 1 | "BM_LOCAL_BLOCK" |         
+| *int* | [0, 1] | 1 | "DLR_BM_LOCAL_BLOCK" |         
 
 - **Remarks**     
   0: disable.   
@@ -109,7 +99,7 @@ The index of a specific image preprocessing mode in the [ImagePreprocessingModes
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 0x7fffffff] | -1 | "BM_LOCAL_BLOCK" |         
+| *int* | [-1, 0x7fffffff] | -1 | "DLR_BM_LOCAL_BLOCK" |         
 
 - **Remarks**     
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
@@ -120,7 +110,7 @@ Constant subtracted from the mean or weighted mean. Normally, it is positive but
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 10 | "BM_LOCAL_BLOCK" |         
+| *int* | [-255, 255] | 10 | "DLR_BM_LOCAL_BLOCK" |         
 
 
 
@@ -129,11 +119,11 @@ Sets the file name of the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
+| *string* | A string value representing file name. | "" | All `DLRBinarizationMode` items except DLR_BM_SKIP and DLR_BM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  - The library must be in the same place with Dynamsoft Label Recognition Library.
 
 
 ##### LibraryParameters 
@@ -141,7 +131,7 @@ Sets the parameters passed to the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
+| *string* | A string value representing parameters. | "" | All `DLRBinarizationMode` items except DLR_BM_SKIP and DLR_BM_AUTO |         
 
 
 ### Setting Methods
@@ -159,7 +149,7 @@ Sets the parameters passed to the library to load dynamically.
 {
     "BinarizationModes": [
         {
-            "Mode": "BM_LOCAL_BLOCK",
+            "Mode": "DLR_BM_LOCAL_BLOCK",
             "BlockSizeX": 5,
             "BlockSizeY": 5,
         }
@@ -173,11 +163,11 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `PublicRuntimeSettings` Member
-`BinarizationModes` as a member of `PublicRuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
+`BinarizationModes` as a member of `PublicRuntimeSettings` struct is a [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`binarizationModes`]({{ site.structs }}PublicRuntimeSettings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
+| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`binarizationModes`]({{ site.structs }}PublicRuntimeSettings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
 
 **Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
@@ -185,4 +175,4 @@ Sets the parameters passed to the library to load dynamically.
 
 **See Also**    
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
-- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)

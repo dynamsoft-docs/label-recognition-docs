@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Enumerations - Main Page
-description: This article shows the main page of Dynamsoft Barcode Reader Enumerations.
+title: Dynamsoft Label Recognition Enumerations - Main Page
+description: This article shows the main page of Dynamsoft Label Recognition Enumerations.
 keywords: enumerations
 needAutoGenerateSidebar: false
 breadcrumbText: Enumerations
 ---
 
-# Dynamesoft Barcode Reader - Enumerations
+# Dynamesoft Label Recognition - Enumerations
 
 ## [Parameter Mode Enumeration](parameter-mode-enums.md)
 

@@ -1,37 +1,27 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes.
-keywords: GrayscaleTransformationModes, LabelRecognitionParameter, image process control parameters, parameter reference, parameter
+title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes
+description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes.
+keywords: GrayscaleTransformationModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
 
 
-# LabelRecognitionParameter Object - Image Process Control Parameters
+# LabelRecognitionParameter Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`LabelRecognitionParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`LabelRecognitionParameter.BinarizationModes`](BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
- | [`LabelRecognitionParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
- | [`LabelRecognitionParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`LabelRecognitionParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
- | [`LabelRecognitionParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
- | [`LabelRecognitionParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
- | [`LabelRecognitionParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
+ | [`LabelRecognitionParameter.Name`](parameter-control.md#name) | The name of the LabelRecognitionParameter object. |
+ | [`LabelRecognitionParameter.MaxThreadCount`](parameter-control.md#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
+ | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LabelRecognitionParameter.GrayscaleTransformationModes`](#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
- | [`LabelRecognitionParameter.ImagePreprocessingModes`](ImagePreprocessingModes.md#imagepreprocessingmodes) | Sets the mode and priority for image preprocessing algorithms. |
- | [`LabelRecognitionParameter.LocalizationModes`](LocalizationModes.md#localizationmodes) | 	Sets the mode and priority for localization algorithms. |
- | [`LabelRecognitionParameter.Pages`](image-process-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`LabelRecognitionParameter.PDFRasterDPI`](image-process-control.md#pdfrasterdpi) | Sets the output image resolution. |
- | [`LabelRecognitionParameter.PDFReadingMode`](image-process-control.md#pdfreadingmode) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
- | [`LabelRecognitionParameter.RegionPredetectionModes`](RegionPredetectionModes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ScaleDownThreshold`](image-process-control.md#scaledownthreshold) | Sets the threshold for the image shrinking. |
- | [`LabelRecognitionParameter.ScaleUpModes`](ScaleUpModes.md#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`LabelRecognitionParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
- | [`LabelRecognitionParameter.TextFilterModes`](TextFilterModes.md#textfiltermodes) | 	Sets the mode and priority for text filter. |
- | [`LabelRecognitionParameter.TextureDetectionModes`](TextureDetectionModes.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
+ | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -39,14 +29,14 @@ needAutoGenerateSidebar: false
 ## GrayscaleTransformationModes
 
 ### Mode Properties
-`GrayscaleTransformationModes` is a parameter for setting the mode for the grayscale image conversion. It consisits of one or more `GrayscaleTransformationMode` items. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`GrayscaleTransformationModes` is a parameter for setting the mode for the grayscale image conversion. It consisits of one or more `DLRGrayscaleTransformationMode` items. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) array* | "GTM_SKIP"<br>"GTM_INVERTED"<br>"GTM_ORIGINAL" | ["GTM_ORIGINAL", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP"] |
+| *[`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array* | "DLR_GTM_SKIP"<br>"DLR_GTM_INVERTED"<br>"DLR_GTM_ORIGINAL" | ["DLR_GTM_ORIGINAL", "DLR_GTM_SKIP", "DLR_GTM_SKIP", "DLR_GTM_SKIP", "DLR_GTM_SKIP", "DLR_GTM_SKIP", "DLR_GTM_SKIP", "DLR_GTM_SKIP"] |
 
 - **See also**:   
-    [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+    [`DLRGrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
     
 #### Mode Arguments
 - [LibraryFileName](#libraryfilename)
@@ -57,11 +47,11 @@ Sets the file name of the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `GrayscaleTransformationMode` items except GTM_SKIP |         
+| *string* | A string value representing file name. | "" | All `DLRGrayscaleTransformationMode` items except DLR_GTM_SKIP |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  - The library must be in the same place with Dynamsoft Label Recognition Library.
 
 
 ##### LibraryParameters 
@@ -69,7 +59,7 @@ Sets the parameters passed to the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `GrayscaleTransformationMode` items except GTM_SKIP |         
+| *string* | A string value representing parameters. | "" | All `DLRGrayscaleTransformationMode` items except DLR_GTM_SKIP |         
 
 
 ### Setting Methods
@@ -87,10 +77,10 @@ Sets the parameters passed to the library to load dynamically.
 {
     "GrayscaleTransformationModes": [
         {
-            "Mode": "GTM_INVERTED"
+            "Mode": "DLR_GTM_INVERTED"
         },
         {
-            "Mode": "GTM_ORIGINAL"
+            "Mode": "DLR_GTM_ORIGINAL"
         }
     ]
 }
@@ -100,13 +90,13 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `PublicRuntimeSettings` Member
-`GrayscaleTransformationModes` is a [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
+`GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)[8] |
+| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
 
 **See Also**    
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
-- [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [`DLRGrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)

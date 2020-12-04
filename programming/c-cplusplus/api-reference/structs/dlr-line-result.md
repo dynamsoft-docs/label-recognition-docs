@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C & C++ Struct - DLRLineResult
-description: This page shows the DLRLineResult struct of Dynamsoft Barcode Reader for C & C++ Language.
+title: Dynamsoft Label Recognition C & C++ Struct - DLRLineResult
+description: This page shows the DLRLineResult struct of Dynamsoft Label Recognition for C & C++ Language.
 keywords: DLRLineResult, struct, c, c++
 needAutoGenerateSidebar: false
 ---

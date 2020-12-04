@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C & C++ Struct - DLRCharacterResult
-description: This page shows the DLRCharacterResult struct of Dynamsoft Barcode Reader for C & C++ Language.
+title: Dynamsoft Label Recognition C & C++ Struct - DLRCharacterResult
+description: This page shows the DLRCharacterResult struct of Dynamsoft Label Recognition for C & C++ Language.
 keywords: DLRCharacterResult, struct, c, c++
 needAutoGenerateSidebar: false
 ---

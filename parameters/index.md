@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameters - Main Page
-description: Dynamsoft Barcode Reader provides flexible APIs for you to customize the scanning settings for different usage scenarios. 
+title: Dynamsoft Label Recognition Parameters - Main Page
+description: Dynamsoft Label Recognition provides flexible APIs for you to customize the scanning settings for different usage scenarios. 
 needAutoGenerateSidebar: false
 breadcrumbText: Parameters
 ---
 
 
-# Dynamsoft Barcode Reader - Parameters
+# Dynamsoft Label Recognition - Parameters
 
 ## Getting Started
 

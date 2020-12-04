@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference - ReferenceRegion Object
-description: This article shows ReferenceRegion Object of Dynamsoft Barcode Reader.
-keywords: parameter reference, parameters, ReferenceRegion
+title: Dynamsoft Label Recognition Parameter Reference - CharacterModel Object
+description: This article shows CharacterModel Object of Dynamsoft Label Recognition.
+keywords: parameter reference, parameters, CharacterModel
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - LabelRecognitionParameter Object
+# Dynamsoft Label Recognition SDK - CharacterModel Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameter.Name`](parameter-control.md#name) | The name of the LabelRecognitionParameter object. |
+ | [`CharacterModel.Name`](parameter-control.md#name) | The name of the CharacterModel object. |

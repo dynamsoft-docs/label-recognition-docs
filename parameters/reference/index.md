@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference - Main Page
-description: Dynamsoft Barcode Reader Parameter Reference - Main Page
+title: Dynamsoft Label Recognition Parameter Reference - Main Page
+description: Dynamsoft Label Recognition Parameter Reference - Main Page
 keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -9,7 +9,7 @@ breadcrumbText: Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Parameters
+# Dynamsoft Label Recognition SDK - Parameters
 
 
 ## LabelRecognitionParameter Object

@@ -1,36 +1,26 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes.
-keywords: RegionPredetectionModes, LabelRecognitionParameter, image process control parameters, parameter reference, parameter
+title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes
+description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes.
+keywords: RegionPredetectionModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
 
-# LabelRecognitionParameter Object - Image Process Control Parameters
+# LabelRecognitionParameter Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`LabelRecognitionParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`LabelRecognitionParameter.BinarizationModes`](BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
- | [`LabelRecognitionParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
- | [`LabelRecognitionParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`LabelRecognitionParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
- | [`LabelRecognitionParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
- | [`LabelRecognitionParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
- | [`LabelRecognitionParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
- | [`LabelRecognitionParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
- | [`LabelRecognitionParameter.ImagePreprocessingModes`](ImagePreprocessingModes.md#imagepreprocessingmodes) | Sets the mode and priority for image preprocessing algorithms. |
- | [`LabelRecognitionParameter.LocalizationModes`](LocalizationModes.md#localizationmodes) | 	Sets the mode and priority for localization algorithms. |
- | [`LabelRecognitionParameter.Pages`](image-process-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`LabelRecognitionParameter.PDFRasterDPI`](image-process-control.md#pdfrasterdpi) | Sets the output image resolution. |
- | [`LabelRecognitionParameter.PDFReadingMode`](image-process-control.md#pdfreadingmode) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
+ | [`LabelRecognitionParameter.Name`](parameter-control.md#name) | The name of the LabelRecognitionParameter object. |
+ | [`LabelRecognitionParameter.MaxThreadCount`](parameter-control.md#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
+ | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
+ | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`LabelRecognitionParameter.RegionPredetectionModes`](#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ScaleDownThreshold`](image-process-control.md#scaledownthreshold) | Sets the threshold for the image shrinking. |
- | [`LabelRecognitionParameter.ScaleUpModes`](ScaleUpModes.md#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`LabelRecognitionParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
- | [`LabelRecognitionParameter.TextFilterModes`](TextFilterModes.md#textfiltermodes) | 	Sets the mode and priority for text filter. |
- | [`LabelRecognitionParameter.TextureDetectionModes`](TextureDetectionModes.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -41,14 +31,14 @@ needAutoGenerateSidebar: false
 If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.   
 
 ### Mode Properties
-`RegionPredetectionModes` is a parameter for setting the mode for region pre-detection. It consisits of one or more `RegionPredetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`RegionPredetectionModes` is a parameter for setting the mode for region pre-detection. It consisits of one or more `DLRRegionPredetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) array* | "RPM_SKIP"<br>"RPM_AUTO"<br>"RPM_GENERAL"<br>"RPM_GENERAL_RGB_CONTRAST"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST" | ["RPM_GENERAL", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP"] |
+| *[`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array* | "DLR_RPM_SKIP"<br>"DLR_RPM_AUTO"<br>"DLR_RPM_GENERAL"<br>"DLR_RPM_GENERAL_RGB_CONTRAST"<br>"DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST" | ["DLR_RPM_GENERAL", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP"] |
 
 - **See also**:   
-    [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+    [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
     
 #### Mode Arguments
 - [MinImageDimension](#minimagedimension)
@@ -67,7 +57,7 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [16384, 0x7fffffff] | 262144 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| *int* | [16384, 0x7fffffff] | 262144 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
 - **Remarks**     
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
@@ -78,7 +68,7 @@ Sets the sensitivity used for region predetection algorithm.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 1 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| *int* | [1, 9] | 1 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
 - **Remarks**     
   A larger value means the library will take more effort to detect regions.  
@@ -89,7 +79,7 @@ Sets the sensitivity used for region predetection algorithm.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more regions. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing one or more regions. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
@@ -105,7 +95,7 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more colour sets. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing one or more colour sets. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
@@ -122,7 +112,7 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing aspect ratio range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing aspect ratio range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
@@ -137,7 +127,7 @@ Sets the height range of the bounding rectangle of the predetected region.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing height range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing height range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
@@ -150,7 +140,7 @@ Sets the width range of the bounding rectangle of the predetected region.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing width range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing width range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
@@ -163,7 +153,7 @@ Sets the spatial index block size used for region predetection algorithm.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 32] | 5 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| *int* | [1, 32] | 5 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
 - **Remarks**     
   The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
@@ -174,11 +164,11 @@ Sets the file name of the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+| *string* | A string value representing file name. | "" | All `DLRRegionPredetectionMode` items except DLR_RPM_SKIP and DLR_RPM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  - The library must be in the same place with Dynamsoft Label Recognition Library.
 
 
 ##### LibraryParameters 
@@ -186,7 +176,7 @@ Sets the parameters passed to the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+| *string* | A string value representing parameters. | "" | All `DLRRegionPredetectionMode` items except DLR_RPM_SKIP and DLR_RPM_AUTO |         
 
 
 
@@ -205,7 +195,7 @@ Sets the parameters passed to the library to load dynamically.
 {
     "RegionPredetectionModes": [
         {
-            "Mode": "RPM_GENERAL_GRAY_CONTRAST",
+            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
             "Sensitivity": 5,
             "MinImageDimension":262144
         }
@@ -219,11 +209,11 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `PublicRuntimeSettings` Member
-`RegionPredetectionModes` is a [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
+`RegionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)[8] |
+| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
 
 
 **Remarks**   
@@ -233,4 +223,4 @@ Sets the parameters passed to the library to load dynamically.
 **See Also**    
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
-- [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)

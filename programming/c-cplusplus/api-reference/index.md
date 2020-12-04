@@ -11,11 +11,11 @@ breadcrumbText: API Reference
 
 - [`CLabelRecognition` Class](#clabelrecognition-class) 
 - [C Functions](#c-functions)
+- [Enumerations](#enumerations)
 - [Error Code](#error-code)
 - [Structs](#structs)  
-- [Enumerations](#enumerations)
 
-## CBarcodeReader Class
+## CLabelRecognition Class
 
 ### General
    
@@ -45,6 +45,7 @@ breadcrumbText: API Reference
   | [`SetModeArgument`](clabelrecognition-class/settings.md#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`AppendSettingsFromString`](clabelrecognition-class/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](clabelrecognition-class/settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
+  | [`ClearAppendedSettings`](clabelrecognition-class/settings.md#clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
 
 &nbsp; 
    
@@ -85,7 +86,7 @@ breadcrumbText: API Reference
   |----------------------|-------------|
   | [`DLR_CreateInstance`](c-functions/initialization.md#createinstance) | Creates a Dynamsoft Label Recognition instance. |
   | [`DLR_DestroyInstance`](c-functions/initialization.md#destroyinstance) | Destroys an instance of Dynamsoft Label Recognition. |
-  | [`InitLicense`](c-functions/initialization.md#initlicense) | Sets the license and activates the SDK. |
+  | [`DLR_InitLicense`](c-functions/initialization.md#initlicense) | Sets the license and activates the SDK. |
 
 &nbsp; 
 
@@ -98,9 +99,9 @@ breadcrumbText: API Reference
   | [`DLR_ResetRuntimeSettings`](c-functions/settings.md#resetruntimesettings) | Resets the runtime settings. |
   | [`DLR_GetModeArgument`](c-functions/settings.md#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
   | [`DLR_SetModeArgument`](c-functions/settings.md#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
-  | [`DLR_ClearAppendedSettings`](c-functions/settings.md#appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
   | [`DLR_AppendSettingsFromString`](c-functions/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`DLR_OutputSettingsToFile`](c-functions/settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
+  | [`DLR_ClearAppendedSettings`](c-functions/settings.md#appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
 
 &nbsp; 
    
@@ -124,27 +125,26 @@ breadcrumbText: API Reference
    
 &nbsp; 
 
-## Enumerations
-- [`DLRImagePixelFormat`]()
-- [`DLRTextColourMode`]()
-- [`DLRRegionPredetectionMode`]()
-- [`DLRBinarizationMode`]()
-- [`DLRDenoisingMode`]()
-- [`DLRGrayscaleTransformationMode`]()
-- [`DLRCharacterSegmentationMode`]()
+## [Enumerations]({{ site.enumerations }})
+- [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
+- [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
+- [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
+- [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	
+- [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 
 
-## [Error Code](errorcode.md)
+## [Error Code]({{ site.enumerations }}error-code.html)
 		
-
-
 ## [Structs](structs/index.md)
-- [`DLRRuntimeSettings`](structs/dlrruntimesettings.md)	
-- [`DLRQuadrilateral`](structs/dlrquadrilateral.md)	
-- [`DLRRegion`](structs/dlrregion.md)	
-- [`DLRResultArray`](structs/dlrresultarray.md)		
-- [`DLRResult`](structs/dlrresult.md)		
-- [`DLRLineResult`](structs/dlrlineResult.md)	
-- [`DLRCharacterResult`](structs/dlrcharacterresult.md)		
-- [`DLRPoint`](structs/dlrpoint.md)		
-- [`DLRImageData`](structs/dlrimagedata.md)		
+- [`DLRRuntimeSettings`](structs/dlr-runtime-settings.md)	
+- [`DLRQuadrilateral`](structs/dlr-quadrilateral.md)	
+- [`DLRRegion`](structs/dlr-region.md)	
+- [`DLRResultArray`](structs/dlr-result-array.md)		
+- [`DLRResult`](structs/dlr-result.md)		
+- [`DLRLineResult`](structs/dlr-line-Result.md)	
+- [`DLRCharacterResult`](structs/dlr-character-result.md)		
+- [`DLRPoint`](structs/dlr-point.md)		
+- [`DLRImageData`](structs/dlr-image-data.md)		

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{%- include head.html -%}
+
+<body>
+    <div class="headWrapper">
+        {%- include page_header.html -%}
+    </div>
+    <div class="subHeadWrapper">
+        <div class="subHeader container">
+            <div class="row">
+                <ul class="subHeaderMenuUl col-xs-12 clearfix">
+                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx">Dynamsoft Barcode Reader</a> <span class="fc9">|</span> Developer's Center</li>
+                    <li class="on"><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
+                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
+                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx">Download 30-Day Free Trial</a></li>
+                </ul>
+            </div>
+            <div class="row mobileSubHeaderMenu">
+                <ul class="col-xs-12 show-xs">
+                    <li><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
+                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
+    <div class="container">
+        <div class="row">
+            <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
+                <div id="sideBarCnt">
+                    <div class="docSearchPart" style="margin-top: 30px;">
+                        <input id="txtSearch" class="search" type="text">
+                    </div>
+                    <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
+                        <li>
+                            <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
+                            <ul>
+                                {%- if page.url contains '/introduction/' or page.url contains '/introduction-v' -%}
+                                <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
+                                <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
+                                {%- include sidelist-introduction/introduction-how-to-guides.html -%}
+                                {%- include sidelist-introduction/introduction-comparison-tools.html -%}
+                                {%- comment -%}
+                                <li class="unavailableLink">Security Features</li>
+                                {%- endcomment -%}
+                                {%- endif -%}
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+                            <ul>
+                                {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
+                                {%- include sidelist-programming/programming-c.html -%}
+                                {%- include sidelist-programming/programming-cpp.html -%}
+                                {%- include sidelist-programming/programming-dotnet.html -%}
+                                {%- include sidelist-programming/programming-java.html -%}
+                                {%- include sidelist-programming/programming-python.html -%}
+                                {%- include sidelist-programming/programming-javascript.html -%}
+                                {%- include sidelist-programming/programming-android.html -%}
+                                {%- include sidelist-programming/programming-oc.html -%}                         
+                                {%- endif -%}
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+                            <ul>
+                                {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
+                                <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
+                                {%- include sidelist-parameters/parameters-references.html -%}
+                                {%- include sidelist-parameters/parameters-enumerations.html -%}
+                                {%- include sidelist-parameters/parameters-scenario-settings.html -%}
+                                {%- comment -%}
+                                <li class="unavailableLink">Example Image Settings</li>
+                                {%- endcomment -%}
+                                {%- endif -%}
+                            </ul>
+                        </li>
+                        <li><a href="{{ site.license_activation }}" class="otherLinkColour">License Activation</a>
+                            <ul>
+
+                                <li><a href="{{ site.license_activation }}set-trial-license.html" class="otherLinkColour">Set Trial License</a></li>
+                                <li><a href="{{ site.license_activation }}set-full-license.html" class="otherLinkColour">Set Full License in version 8</a></li>
+                                <li><a href="{{ site.license_activation }}set-full-license-7.html" class="otherLinkColour">Set Full License in version 7</a></li>
+                            </ul>
+                        </li>
+                        {%- comment -%}
+                        <li class="unavailableLink">Enhancements
+                            {%- if page.url contains '/enhancements/' or page.url contains '/enhancements-v' -%}
+                            <ul>
+                                <li class="unavailableLink">DPM Codes</li>
+                                <li class="unavailableLink">Intermediate Result</li>
+                                <li class="unavailableLink">Panorama</li>
+                                <li class="unavailableLink">PDF Vector</li>
+                            </ul>
+                            {%- endif -%}
+                        </li>
+                        {%- endcomment -%}
+                    </ul>
+                </div>
+            </div>
+            <div class="docContainer col-xs-12 col-md-9">
+                <div id="docHead" class = "head row hide-xs hide-sm">
+                    {%- include main-page-head.html -%}
+                </div>
+                <div class="main row">
+                    <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10" style="margin-bottom: 20px;">
+                        <div class="dbrThanksDownloading">
+                            <p class="thanksDownloadTitle">Thanks for downloading Dynamsoft Barcode Reader <span class="editionName"></span> Package!</p>
+                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
+                        </div>
+                        {{ content }}
+                        
+                    </div>
+                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
+                        <div id="compatibleInfo">
+                            <p>This page is compatible for:</p>
+                            <p class="compatibleCurVersion">Version 7.5</p>
+                        </div>
+                        <div id="feedbackFooter" style="color: #306877;">
+                            <p class="fontOswald">Is this page helpful? </p>
+                            <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
+                            <a href="javascript:void(0)" style="color: #306877;" class="recordLink sadLink" onclick="UsefulRecord(false)"><img class="icon-sad" src="{{ site.sad_icon }}" alt="No" />No</a>
+                        </div>
+                        <hr />
+                        {%- if page.needAutoGenerateSidebar -%}
+                        <p class="fontOswald" style="color: #306877;"> In this article: </p>
+                        <div id="AutoGenerateSidebar"></div>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="history list">
+        <div class="container">
+            <div class="col-xs-12">
+                {%- include liquid_autoGenerateHistoryList.html -%}
+                {%- include version-list.html -%}
+            </div>
+        </div>
+    </div>
+    <div id="footerWrapper">
+        {%- include page_footer.html -%}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+
+    <script>
+        UrlReplace();
+    </script>
+    {%- if page.needAutoGenerateSidebar -%}
+    {%- unless page.needGenerateH3Content -%}
+    <script>
+        FullTreeMenuList(true, false);
+    </script>
+    {%- else -%}
+    <script>
+        FullTreeMenuList(true);
+    </script>
+    {%- endunless -%}
+    {%- else -%}
+    <script>
+        FullTreeMenuList(false);
+    </script>
+    {%- endif -%}
+
+    <script>
+        UrlReplace();
+    </script>
+
+    <!-- dbr docs -->
+    <script type="text/javascript">
+        $('#txtSearch').keydown(function(e) { 
+            if (e.keyCode == 13) {
+                window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
+            }
+        })
+    </script>
+
+    <!-- for dbr downloads -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var download = getUrlParam('download')
+            if(download == 'true') {
+                var curHref = window.location.href.toLowerCase()
+                if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
+                    $('.editionName').html('C/C++');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip')
+                } else if (curHref.indexOf('/dotnet/') > -1) {
+                    $('.editionName').html('.NET');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip')
+                } else if (curHref.indexOf('/java/') > -1) {
+                    $('.editionName').html('Java');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip')
+                } else if (curHref.indexOf('/javascript/') > -1) {
+                    $('.editionName').html('Javascript');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip')
+                } else if (curHref.indexOf('/android/') > -1) {
+                    $('.editionName').html('Android');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/dbr-android-8.0.zip')
+                } else if (curHref.indexOf('/objectivec-swift/') > -1) {
+                    $('.editionName').html('iOS');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip');
+                    $('.dbrThanksDownloading').show();
+                    $('.downloadlink').click()
+                    // Download('https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip')
+                }
+            }
+        })
+    </script>
+
+    {%- include livehelp.html -%}
+
+  <!-- Google Code for Remarketing Tag -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1070358440;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070358440/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+  </noscript>
+
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538F83"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-538F83');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Marketo Asynchronous Tracking Code for www.dynamsoft.com -->
+  <script type="text/javascript">
+    (function() {
+    var didInit = false;
+    function initMunchkin() {
+      if(didInit === false) {
+        didInit = true;
+        Munchkin.init('465-JJI-384', { asyncOnly: true });
+      }
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://munchkin.marketo.net/munchkin.js';
+    s.onreadystatechange = function() {
+      if (this.readyState == 'complete' || this.readyState == 'loaded') {
+        initMunchkin();
+      }
+    };
+    s.onload = initMunchkin;
+    document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  </script>
+  
+  <!-- Marketo RTP tag --> 
+  <script type='text/javascript'>
+    (function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
+    g.src=f+'?aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
+    })(window,document,"rtp","https://sjrtp-cdn.marketo.com/rtp-api/v1/rtp.js","dynamsoftinc");
+
+    rtp('send','view');
+    rtp('get', 'campaign',true);
+  </script>
+  <!-- End of Marketo RTP tag -->
+</body>
+
+</html>

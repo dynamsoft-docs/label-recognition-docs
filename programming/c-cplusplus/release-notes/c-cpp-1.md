@@ -1,4 +1,4 @@
-# Release Notes for C++ - 1.x
+# Release Notes for C/C++ - 1.x
 
 ## 1.0 (12/10/2020)
 

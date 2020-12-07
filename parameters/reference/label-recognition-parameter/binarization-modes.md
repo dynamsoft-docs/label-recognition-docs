@@ -15,12 +15,12 @@ needAutoGenerateSidebar: false
  | [`LabelRecognitionParameter.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
- | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
- | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
- | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
- | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#referenceregionnamearray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#charactermodelname) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#linescount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -162,17 +162,17 @@ Sets the parameters passed to the library to load dynamically.
 
 
 
-#### As `PublicRuntimeSettings` Member
-`BinarizationModes` as a member of `PublicRuntimeSettings` struct is a [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
+#### As `DLRRuntimeSettings` Member
+`BinarizationModes` as a member of `DLRRuntimeSettings` struct is a [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`binarizationModes`]({{ site.structs }}PublicRuntimeSettings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.structs }}dlr-runtime-settings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
 
 **Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
 **See Also**    
-- [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
+- [`DLRRuntimeSettings` Struct]({{ site.structs }}dlr-runtime-settings.html)
 - [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)

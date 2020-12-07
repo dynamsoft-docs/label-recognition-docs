@@ -10,16 +10,16 @@ needAutoGenerateSidebar: false
 
 | Method               | Description |
 |----------------------|-------------|
-| [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
-| [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
+| [`GetErrorString`](#geterrorstring) | Returns the error string. |
+| [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
 
 
-## DLR_GetErrorString
+## GetErrorString
 
 Get error message by error code.
 
 ```c++
-static const char * GetErrorString (const int errorCode)	
+static const char* dynamsoft::dlr::CLabelRecognition::GetErrorString (const int errorCode)	
 ```   
    
 ### Parameters
@@ -34,17 +34,17 @@ The error message.
 ### Code Snippet
 
 ```c++
-const char* errorString = DLR_GetErrorString(errorCode);
+const char* errorString = GetErrorString(errorCode);
 ```
 
 &nbsp;
 
-## DLR_GetVersion
+## GetVersion
 
 Get version information of SDK.
 
 ```c++
-static const char* DLR_GetVersion ()
+static const char* dynamsoft::dlr::CLabelRecognition::GetVersion ()
 ```   
 
 ### Return value
@@ -53,6 +53,6 @@ The version information string.
 ### Code Snippet
 
 ```c++
-const char* versionInfo = DLR_GetVersion();
+const char* versionInfo = GetVersion();
 ```
 

@@ -15,12 +15,12 @@ needAutoGenerateSidebar: false
  | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`LabelRecognitionParameter.RegionPredetectionModes`](#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
- | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
- | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
- | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
- | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#referenceregionnamearray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#charactermodelname) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#linescount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -208,12 +208,12 @@ Sets the parameters passed to the library to load dynamically.
 
 
 
-#### As `PublicRuntimeSettings` Member
-`RegionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
+#### As `DLRRuntimeSettings` Member
+`RegionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
 
 
 **Remarks**   
@@ -221,6 +221,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 **See Also**    
-- [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
-- [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
+- [`DLRRuntimeSettings` Struct]({{ site.structs }}dlr-runtime-settings.html)
 - [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)

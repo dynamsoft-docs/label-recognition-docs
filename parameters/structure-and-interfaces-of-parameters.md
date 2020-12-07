@@ -222,13 +222,13 @@ For example, one of the functions in the decoding process is barcode localizatio
 
 ## Interfaces to change settings 
 
-Dynamsoft Label Recognition provides two ways to set parameters: `PublicRuntimeSettings` and JSON template files. 
-`PublicRuntimeSettings` is used to modify the Dynamsoft Label Recognition built-in template, and only supports commonly used parameters. The following are the steps to update Dynamsoft Label Recognition parameters through `PublicRuntimeSettings`:
+Dynamsoft Label Recognition provides two ways to set parameters: `DLRRuntimeSettings` and JSON template files. 
+`DLRRuntimeSettings` is used to modify the Dynamsoft Label Recognition built-in template, and only supports commonly used parameters. The following are the steps to update Dynamsoft Label Recognition parameters through `DLRRuntimeSettings`:
 
 1. (optional) Restore the parameter settings of the Dynamsoft Label Recognition built-in template to the default values through the `ResetRuntimeSettings` interface
-2. Call the `GetRuntimeSettings` interface to get the current `PublicRuntimeSettings` of the Dynamsoft Label Recognition object
-3. Modify the contents in `PublicRuntimeSettings` in the previous step
-4. Call the `UpdateRuntimeSettings` interface to apply the modified `PublicRuntimeSettings` in the previous step to the Dynamsoft Label Recognition object
+2. Call the `GetRuntimeSettings` interface to get the current `DLRRuntimeSettings` of the Dynamsoft Label Recognition object
+3. Modify the contents in `DLRRuntimeSettings` in the previous step
+4. Call the `UpdateRuntimeSettings` interface to apply the modified `DLRRuntimeSettings` in the previous step to the Dynamsoft Label Recognition object
 5. (optional) Call the `SetModeArgument` interface to set the optional argument for a specified mode in Modes parameters.
 
 

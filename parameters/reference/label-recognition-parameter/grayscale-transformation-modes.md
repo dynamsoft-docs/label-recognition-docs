@@ -16,12 +16,12 @@ needAutoGenerateSidebar: false
  | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LabelRecognitionParameter.GrayscaleTransformationModes`](#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#ReferenceRegionNameArray) | An array of the search base regions. |
- | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#TextRegExPattern) | Specifies the regular expression pattern of the text to recognize. |
- | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#LineStringRegExPattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
- | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#LetterHeightRange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#CharacterModelName) | Sets the name of a white list of recognizable characters. |
- | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#LinesCount) | Sets the text lines count of the text area. |
+ | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#referenceregionnamearray) | An array of the search base regions. |
+ | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#charactermodelname) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#linescount) | Sets the text lines count of the text area. |
 
 ---
 
@@ -89,14 +89,13 @@ Sets the parameters passed to the library to load dynamically.
 &nbsp;
 
 
-#### As `PublicRuntimeSettings` Member
-`GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
+#### As `DLRRuntimeSettings` Member
+`GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
 
 **See Also**    
-- [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
-- [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
+- [`DLRRuntimeSettings` Struct]({{ site.structs }}dlr-runtime-settings.html)
 - [`DLRGrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)

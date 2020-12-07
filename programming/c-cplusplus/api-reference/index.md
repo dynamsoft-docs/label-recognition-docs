@@ -9,7 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Label Recognition - C/C++ API Reference
 
-- [`CLabelRecognition` Class](#clabelrecognition-class) 
+- [`CLabelRecognition` Class](#c-label-recognition-class) 
 - [C Functions](#c-functions)
 - [Enumerations](#enumerations)
 - [Error Code](#error-code)
@@ -21,8 +21,8 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetErrorString`](clabelrecognition-class/general.md#dlr_geterrorstring) | Returns the error string. |
-  | [`GetVersion`](clabelrecognition-class/general.md#dlr_getversion) | Returns the version number string for the SDK. |
+  | [`GetErrorString`](c-label-recognition-class/general.md#dlr_geterrorstring) | Returns the error string. |
+  | [`GetVersion`](c-label-recognition-class/general.md#dlr_getversion) | Returns the version number string for the SDK. |
    
 &nbsp; 
 
@@ -30,7 +30,9 @@ breadcrumbText: API Reference
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitLicense`](clabelrecognition-class/initialization.md#dlr_initlicense) | Sets the license and activates the SDK. |
+  | [`InitLicense`](c-label-recognition-class/initialization.md#dlr_initlicense) | Sets the license and activates the SDK. |
+  | [`InitLTSConnectionParameters`](c-label-recognition-class/initialization.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](c-label-recognition-class/initialization.md#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
 &nbsp; 
 
@@ -38,14 +40,14 @@ breadcrumbText: API Reference
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetRuntimeSettings`](clabelrecognition-class/settings.md#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`UpdateRuntimeSettings`](clabelrecognition-class/settings.md#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`ResetRuntimeSettings`](clabelrecognition-class/settings.md#dlr_resetruntimesettings) | Resets the runtime settings. |
-  | [`GetModeArgument`](clabelrecognition-class/settings.md#dlr_getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
-  | [`SetModeArgument`](clabelrecognition-class/settings.md#dlr_setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
-  | [`AppendSettingsFromString`](clabelrecognition-class/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
-  | [`OutputSettingsToFile`](clabelrecognition-class/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
-  | [`ClearAppendedSettings`](clabelrecognition-class/settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
+  | [`GetRuntimeSettings`](c-label-recognition-class/settings.md#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
+  | [`UpdateRuntimeSettings`](c-label-recognition-class/settings.md#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
+  | [`ResetRuntimeSettings`](c-label-recognition-class/settings.md#dlr_resetruntimesettings) | Resets the runtime settings. |
+  | [`GetModeArgument`](c-label-recognition-class/settings.md#dlr_getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
+  | [`SetModeArgument`](c-label-recognition-class/settings.md#dlr_setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
+  | [`AppendSettingsFromString`](c-label-recognition-class/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`OutputSettingsToFile`](c-label-recognition-class/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
+  | [`ClearAppendedSettings`](c-label-recognition-class/settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
 
 &nbsp; 
    
@@ -53,10 +55,10 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`RecognizeByBuffer`](clabelrecognition-class/recognizing.md#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`RecognizeByFile`](clabelrecognition-class/recognizing.md#dlr_recognizebyfile) | Recognizes text from a specified image file. |
-  | [`RecognizeBasedOnDBRResultByBuffer`](clabelrecognition-class/recognizing.md#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
-  | [`RecognizeBasedOnDBRResultByFile`](clabelrecognition-class/recognizing.md#dlr_recognizebasedondbrresultbyfile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
+  | [`RecognizeByBuffer`](c-label-recognition-class/recognizing.md#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`RecognizeByFile`](c-label-recognition-class/recognizing.md#dlr_recognizebyfile) | Recognizes text from a specified image file. |
+  | [`RecognizeBasedOnDBRResultByBuffer`](c-label-recognition-class/recognizing.md#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultByFile`](c-label-recognition-class/recognizing.md#dlr_recognizebasedondbrresultbyfile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
    
 &nbsp; 
    
@@ -64,8 +66,8 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetAllDLRResults`](clabelrecognition-class/result.md#dlr_getalldlrresults) | Gets all recognized results. |
-  | [`FreeDLRResults`](clabelrecognition-class/result.md#dlr_freedlrresults) | Frees memory allocated for recognized results. |
+  | [`GetAllDLRResults`](c-label-recognition-class/result.md#dlr_getalldlrresults) | Gets all recognized results. |
+  | [`FreeDLRResults`](c-label-recognition-class/result.md#dlr_freedlrresults) | Frees memory allocated for recognized results. |
        
 &nbsp; 
 
@@ -87,6 +89,8 @@ breadcrumbText: API Reference
   | [`DLR_CreateInstance`](c-functions/initialization.md#dlr_createinstance) | Creates a Dynamsoft Label Recognition instance. |
   | [`DLR_DestroyInstance`](c-functions/initialization.md#dlr_destroyinstance) | Destroys an instance of Dynamsoft Label Recognition. |
   | [`DLR_InitLicense`](c-functions/initialization.md#dlr_initlicense) | Sets the license and activates the SDK. |
+  | [`DLR_InitLTSConnectionParameters`](c-functions/initialization.md#dlr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`DLR_InitLicenseFromLTS`](c-functions/initialization.md#dlr_initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
 &nbsp; 
 

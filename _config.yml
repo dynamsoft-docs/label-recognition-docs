@@ -1,9 +1,25 @@
 repositoryUrl: https://github.com/Dynamsoft/label-recognition/blob/master
-
+repository: Dynamsoft/label-recognition
+docFullPath: https://www.dynamsoft.com/label-recognition
+firstLevelUrl: /label-recognition
 docHomePage: /label-recognition
+
+parameters: /label-recognition/parameters/
+enumerations: /label-recognition/parameters/enum/
+parameters_reference: /label-recognition/parameters/reference/
 
 programming: /label-recognition/programming/
 
-c: /label-recognition/programming/c/
-cpp: /label-recognition/programming/cplusplus/
+c_cplusplus: /label-recognition/programming/c-cplusplus/
+c: /label-recognition/programming/c-cplusplus/
+cpp: /label-recognition/programming/c-cplusplus/
 c-cpp: /label-recognition/programming/c-cplusplus/
+structs: /label-recognition/programming/c-cplusplus/struct/
+
+c_api: /label-recognition/programming/c-cplusplus/api-reference/
+c_methods: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
+c_release_notes: /label-recognition/programming/c-cplusplus/release-notes/
+
+cpp_api: /label-recognition/programming/c-cplusplus/api-reference/
+cpp_methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
+cpp_release_notes: /label-recognition/programming/c-cplusplus/release-notes/

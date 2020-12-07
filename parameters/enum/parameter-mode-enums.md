@@ -42,7 +42,7 @@ Describes the binarization mode.
 | DLR_BM_THRESHOLD | 0x04 | Binarizes the image based on given threshold. |
 
 ### Remarks
-Check arguments of [`DLRBinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/DLRBinarizationModes.html#mode-arguments) for available argument settings.
+Check arguments of [`DLRBinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/DLRBinarizationModes.html#mode-arguments) for available argument settings.
 
 &nbsp;
 
@@ -101,7 +101,7 @@ Describes the region predetection mode.
 | DLR_RPM_GENERAL_HSV_CONTRAST | 0x10 | Detects region using the general algorithm based on HSV colour contrast. |
 
 ### Remarks
-Check arguments of [`DLRRegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/DLRRegionPredetectionModes.html#mode-arguments) for available argument settings.
+Check arguments of [`DLRRegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/DLRRegionPredetectionModes.html#mode-arguments) for available argument settings.
 
 &nbsp;
 

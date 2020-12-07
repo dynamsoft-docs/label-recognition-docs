@@ -15,6 +15,6 @@ breadcrumbText: Parameters
 
 ## Reference
 
-- [Reference of Parameters]({{ site.parameters_reference }})
+- [Reference of Parameters]({{ site.parameters-reference }})
 - [Reference of Enumerations]({{ site.enumerations }})
 

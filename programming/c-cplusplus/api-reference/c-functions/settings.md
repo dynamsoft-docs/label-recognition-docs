@@ -132,9 +132,9 @@ Returns error code. Possible return(s): DLR_OK; DLRERR_GET_MODE_ARGUMENT_ERROR.
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
-- [`GrayscaleTransformationModes`]({{ site.parameters_reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
+- [`BinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
+- [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
 
 #### Code Snippet
 ```c
@@ -176,9 +176,9 @@ Returns error code. Possible return(s): DLR_OK; DLRERR_SET_MODE_ARGUMENT_ERROR.
   
 #### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
-- [`GrayscaleTransformationModes`]({{ site.parameters_reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
+- [`BinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
+- [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
 
 #### Code Snippet
 ```c

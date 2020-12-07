@@ -10,8 +10,8 @@ description: Dynamsoft Label Recognition SDK Documentation Homepage
 
 
 - [Programming]({{ site.programming }})
-   - [C/C++]({{ site.c-cpp }})
+   - [C/C++]({{ site.c-cplusplus }})
 
 - [Parameters]({{ site.parameters }})
-   - [Reference]({{ site.parameters_reference }})
+   - [Reference]({{ site.parameters-reference }})
    - [Enumerations]({{ site.enumerations }})

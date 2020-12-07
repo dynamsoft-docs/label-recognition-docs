@@ -23,7 +23,7 @@ needAutoGenerateSidebar: false
 
 
 ## GetRuntimeSettings
-Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) struct.
+Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
 
 ```cpp
 int dynamsoft::dlr::CLabelRecognition::GetRuntimeSettings (DLRRuntimeSettings* settings)
@@ -48,7 +48,7 @@ delete recognizer;
 &nbsp;
 
 ## UpdateRuntimeSettings
-Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) struct.
+Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
 
 ```cpp
 int dynamsoft::dlr::CLabelRecognition::UpdateRuntimeSettings (DLRRuntimeSettings* settings, char errorMsgBuffer[], const int errorMsgBufferLen)

@@ -6,27 +6,15 @@ docHomePage: /label-recognition
 
 parameters: /label-recognition/parameters/
 enumerations: /label-recognition/parameters/enum/
-parameters_reference: /label-recognition/parameters/reference/
+parameters-reference: /label-recognition/parameters/reference/
 
 programming: /label-recognition/programming/
 
 c-cplusplus: /label-recognition/programming/c-cplusplus/
 c-cplusplus-api-reference: /label-recognition/programming/c-cplusplus/api-reference/
-c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 c-functions: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
 cpp-methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
 c-cplusplus-structs: /label-recognition/programming/c-cplusplus/structs/
 
+c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 
-c: /label-recognition/programming/c-cplusplus/
-cpp: /label-recognition/programming/c-cplusplus/
-c-cpp: /label-recognition/programming/c-cplusplus/
-structs: /label-recognition/programming/c-cplusplus/struct/
-
-c_api: /label-recognition/programming/c-cplusplus/api-reference/
-c_methods: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
-c_release_notes: /label-recognition/programming/c-cplusplus/release-notes/
-
-cpp_api: /label-recognition/programming/c-cplusplus/api-reference/
-cpp_methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
-cpp_release_notes: /label-recognition/programming/c-cplusplus/release-notes/

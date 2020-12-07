@@ -98,7 +98,7 @@ DLR_API int DLR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSCon
 ```   
 
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.structs }}dm-lts-connection-parameters.html).   
+`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -123,7 +123,7 @@ DLR_API int DLR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionPar
 ```   
 
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.structs }}dm-lts-connection-parameters.html) with customized settings.   
+`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 

@@ -23,7 +23,7 @@ needAutoGenerateSidebar: false
 
 
 ## DLR_GetRuntimeSettings
-Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) struct.
+Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
 
 ```c
 DLR_API int DLR_GetRuntimeSettings (void* recognizer, DLRRuntimeSettings* settings)
@@ -49,7 +49,7 @@ DLR_DestroyInstance(recognizer);
 &nbsp;
 
 ## DLR_UpdateRuntimeSettings
-Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) struct.
+Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
 
 ```c
 DLR_API int DLR_UpdateRuntimeSettings (void* recognizer, DLRRuntimeSettings* settings, char errorMsgBuffer[], const int errorMsgBufferLen)

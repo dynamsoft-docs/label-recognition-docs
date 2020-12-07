@@ -167,12 +167,12 @@ Sets the parameters passed to the library to load dynamically.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.structs }}dlr-runtime-settings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
 
 **Remarks**   
-[`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
+[`GetModeArgument`]({{ site.cpp-methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp-methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
 **See Also**    
-- [`DLRRuntimeSettings` Struct]({{ site.structs }}dlr-runtime-settings.html)
+- [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
 - [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)

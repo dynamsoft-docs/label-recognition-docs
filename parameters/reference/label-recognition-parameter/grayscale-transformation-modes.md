@@ -94,8 +94,8 @@ Sets the parameters passed to the library to load dynamically.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.c-cplusplus-structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
 
 **See Also**    
-- [`DLRRuntimeSettings` Struct]({{ site.structs }}dlr-runtime-settings.html)
+- [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
 - [`DLRGrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)

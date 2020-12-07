@@ -18,3 +18,15 @@ c-cplusplus-structs: /label-recognition/programming/c-cplusplus/structs/
 
 c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 
+assets: /label-recognition/assets/
+edit_icon: /label-recognition/assets/img-icon/edit-icon.png
+smile_icon: /label-recognition/assets/img-icon/icon-smile.png
+sad_icon: /label-recognition/assets/img-icon/icon-sad.png
+dbr_icon: /label-recognition/assets/img-icon/icon-dbr.svg
+dwt_icon: /label-recognition/assets/img-icon/icon-dwt.svg
+dnt_icon: /label-recognition/assets/img-icon/icon-dnt.svg
+
+baseurl: "/label-recognition"
+plugins:
+  - jemoji
+

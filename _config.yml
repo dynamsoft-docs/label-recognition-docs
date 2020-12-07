@@ -10,7 +10,14 @@ parameters_reference: /label-recognition/parameters/reference/
 
 programming: /label-recognition/programming/
 
-c_cplusplus: /label-recognition/programming/c-cplusplus/
+c-cplusplus: /label-recognition/programming/c-cplusplus/
+c-cplusplus-api-reference: /label-recognition/programming/c-cplusplus/api-reference/
+c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
+c-functions: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
+cpp-methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
+c-cplusplus-structs: /label-recognition/programming/c-cplusplus/structs/
+
+
 c: /label-recognition/programming/c-cplusplus/
 cpp: /label-recognition/programming/c-cplusplus/
 c-cpp: /label-recognition/programming/c-cplusplus/

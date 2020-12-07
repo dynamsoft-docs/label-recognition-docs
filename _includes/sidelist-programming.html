@@ -1,0 +1,7 @@
+<li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+    <ul>
+        {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
+        {%- include sidelist-programming/programming-c-cpp.html -%}
+        {%- endif -%}
+    </ul>
+</li>

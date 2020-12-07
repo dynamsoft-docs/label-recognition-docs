@@ -1,5 +1,6 @@
 <li><a href="{{ site.cpp }}" class="otherLinkColour">C++</a>
     <ul>
+        {%- if page.url contains '/cplusplus/' or page.url contains '/cplusplus-v' or page.url contains '/c-cplusplus/' or page.url contains '/c-cplusplus-v'-%}
         <li><a href="{{ site.cpp }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.cpp_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -32,10 +33,10 @@
                         <li><a href="{{ site.structs }}LocalizationResult.html?src=cpp" class="otherLinkColour">LocalizationResult</a></li>
                         <li><a href="{{ site.structs }}OneDCodeDetails.html?src=cpp" class="otherLinkColour">OneDCodeDetails</a></li>
                         <li><a href="{{ site.structs }}PDF417Details.html?src=cpp" class="otherLinkColour">PDF417Details</a></li>
-                        <li><a href="{{ site.structs }}dlr-runtime-settings.html?src=cpp" class="otherLinkColour">PublicRuntimeSettings</a></li>
+                        <li><a href="{{ site.structs }}PublicRuntimeSettings.html?src=cpp" class="otherLinkColour">PublicRuntimeSettings</a></li>
                         <li><a href="{{ site.structs }}QRCodeDetails.html?src=cpp" class="otherLinkColour">QRCodeDetails</a></li>
                         <li><a href="{{ site.structs }}Quadrilateral.html?src=cpp" class="otherLinkColour">Quadrilateral</a></li>
-                        <li><a href="{{ site.structs }}ReferenceRegion.html?src=cpp" class="otherLinkColour">ReferenceRegion</a></li>
+                        <li><a href="{{ site.structs }}RegionDefinition.html?src=cpp" class="otherLinkColour">RegionDefinition</a></li>
                         <li><a href="{{ site.structs }}RegionOfInterest.html?src=cpp" class="otherLinkColour">RegionOfInterest</a></li>
                         <li><a href="{{ site.structs }}SamplingImageData.html?src=cpp" class="otherLinkColour">SamplingImageData</a></li>
                         <li><a href="{{ site.structs }}TextResult.html?src=cpp" class="otherLinkColour">TextResult</a></li>
@@ -46,12 +47,12 @@
             </ul>
         </li>
 
-        <li><a href="{{ site.cpp_release_notes }}" class="otherLinkColour">Release Notes</a>
+        <li><a href="{{ site.c-cplusplus-release-notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
-                <li><a href="{{ site.cpp_release_notes }}cpp-8.html" class="otherLinkColour">Version 8.0</a></li>
-                <li><a href="{{ site.cpp_release_notes }}cpp-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
+                <li><a href="{{ site.c-cplusplus-release-notes }}cpp-8.html" class="otherLinkColour">Version 8.0</a></li>
+                <li><a href="{{ site.c-cplusplus-release-notes }}cpp-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

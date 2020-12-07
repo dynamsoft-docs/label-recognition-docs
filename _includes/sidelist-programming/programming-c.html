@@ -1,5 +1,6 @@
 <li><a href="{{ site.c }}" class="otherLinkColour">C</a>
     <ul>
+        {%- if page.url contains '/c/' or page.url contains '/c-v' or page.url contains '/c-cplusplus/' or page.url contains '/c-cplusplus-v' -%}
         <li><a href="{{ site.c }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.c_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -32,10 +33,10 @@
                         <li><a href="{{ site.structs }}LocalizationResult.html?src=c" class="otherLinkColour">LocalizationResult</a></li>
                         <li><a href="{{ site.structs }}OneDCodeDetails.html?src=c" class="otherLinkColour">OneDCodeDetails</a></li>
                         <li><a href="{{ site.structs }}PDF417Details.html?src=c" class="otherLinkColour">PDF417Details</a></li>
-                        <li><a href="{{ site.structs }}dlr-runtime-settings.html?src=c" class="otherLinkColour">DLRRuntimeSettings</a></li>
+                        <li><a href="{{ site.structs }}PublicRuntimeSettings.html?src=c" class="otherLinkColour">PublicRuntimeSettings</a></li>
                         <li><a href="{{ site.structs }}QRCodeDetails.html?src=c" class="otherLinkColour">QRCodeDetails</a></li>
                         <li><a href="{{ site.structs }}Quadrilateral.html?src=c" class="otherLinkColour">Quadrilateral</a></li>
-                        <li><a href="{{ site.structs }}ReferenceRegion.html?src=c" class="otherLinkColour">ReferenceRegion</a></li>
+                        <li><a href="{{ site.structs }}RegionDefinition.html?src=c" class="otherLinkColour">RegionDefinition</a></li>
                         <li><a href="{{ site.structs }}RegionOfInterest.html?src=c" class="otherLinkColour">RegionOfInterest</a></li>
                         <li><a href="{{ site.structs }}SamplingImageData.html?src=c" class="otherLinkColour">SamplingImageData</a></li>
                         <li><a href="{{ site.structs }}TextResult.html?src=c" class="otherLinkColour">TextResult</a></li>
@@ -52,6 +53,6 @@
                 <li><a href="{{ site.c_release_notes }}c-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

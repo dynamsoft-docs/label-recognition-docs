@@ -1,4 +1,4 @@
-# Dynamsoft Label Recognition - C++ User Guide
+# Dynamsoft Label Recognition - C/C++ User Guide
 
 Precisely read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
 
@@ -20,17 +20,18 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognition.h"
+    #include "<relative path>/Include/DynamsoftCommon.h"
     using namespace std;
-    using Dynamsoft::CLabelRecognition;
+    using namespace dynamsoft::dlr;
 
     #ifdef _WIN64
-    #pragma comment(lib, "<relative path>/Lib/DynamsoftLabelRecognitionx64.lib")
+    #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognitionx64.lib")
     #else
-    #pragma comment(lib, "<relative path>/Lib/DynamsoftLabelRecognitionx86.lib")
+    #pragma comment(lib, "<relative path>/Lib/Windows/x86/DynamsoftLabelRecognitionx86.lib")
     #endif
    ```
    
-  The `DynamsoftLabelRecognition.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\` or `[INSTALLATION FOLDER]\Redist\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
+  The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
  
 3. Update the main function in `DLRHelloWorld.cpp`.   
    ```cpp

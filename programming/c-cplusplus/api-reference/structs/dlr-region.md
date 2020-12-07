@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Label Recognition C & C++ Struct - Quadrilateral
 description: This page shows the DLRRegion struct of Dynamsoft Label Recognition for C & C++ Language.
 keywords: DLRRegion, struct, c, c++
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 

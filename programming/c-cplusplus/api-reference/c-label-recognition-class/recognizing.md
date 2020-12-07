@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Label Recognition C++ API Reference - Recognizing
 description: This is the recognizing functions of Dynamsoft Label Recognition for C++ API Reference.
 keywords: api reference, cpp
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # C++ API Reference - Recognizing

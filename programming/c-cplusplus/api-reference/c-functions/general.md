@@ -3,7 +3,7 @@ layout: default-layout
 title: Dynamsoft Label Recognition C API Reference - General
 description: This is the general functions of Dynamsoft Label Recognition for C API Reference.
 keywords: api reference, c
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # C API Reference - General

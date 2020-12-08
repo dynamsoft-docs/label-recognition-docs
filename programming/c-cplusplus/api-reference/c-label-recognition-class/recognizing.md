@@ -10,10 +10,10 @@ needAutoGenerateSidebar: true
 
 | Method               | Description |
 |----------------------|-------------|
-  | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from a specified image file. |
-  | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from an image file in memory. |
-  | [`RecognizeBasedOnDBRResultByBuffer`](#recognizebasedondbrresultbybuffer) | Recognizes text from raw buffer. |
-  | [`RecognizeBasedOnDBRResultByFile`](#recognizebasedondbrresultbyfile) | Recognizes text from a base64 encoded string. |
+  | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
+  | [`RecognizeBasedOnDBRResultsByBuffer`](#RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultsByFile`](#RecognizeBasedOnDBRResultsByFile) | Recognizes text from a specified image file according to barcode results from DBR SDK. |
 
 ---
 
@@ -70,11 +70,11 @@ delete recognizer;
 &nbsp;
 
 
-## RecognizeBasedOnDBRResultByBuffer
-Recognizes text from the memory buffer containing image pixels in defined format.
+## RecognizeBasedOnDBRResultsByBuffer
+Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK.
 
 ```cpp
-int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultByBuffer(const DLRImageData* imageData, TextResultArray* DBRTextResultArray)
+int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultsByBuffer(const DLRImageData* imageData, TextResultArray* DBRTextResultArray)
 ```   
    
 #### Parameters
@@ -89,11 +89,11 @@ Returns error code (returns 0 if the function operates successfully).
 &nbsp;
 
 
-## RecognizeBasedOnDBRResultByFile
-Recognizes text from a specified image file.
+## RecognizeBasedOnDBRResultsByFile
+Recognizes text from a specified image file according to barcode results from DBR SDK.
 
 ```cpp
-int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultByFile (const char* fileName, TextResultArray* DBRTextResultArray)	
+int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultsByFile (const char* fileName, TextResultArray* DBRTextResultArray)	
 ```   
    
 #### Parameters

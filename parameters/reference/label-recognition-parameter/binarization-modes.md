@@ -159,20 +159,3 @@ Sets the parameters passed to the library to load dynamically.
 
 
 &nbsp;
-
-
-
-#### As `DLRRuntimeSettings` Member
-`BinarizationModes` as a member of `DLRRuntimeSettings` struct is a [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
-
-| Struct |	Struct Member Name | Value Type |
-| ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#binarizationmodes) | [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)[8] |
-
-**Remarks**   
-[`GetModeArgument`]({{ site.cpp-methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp-methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
-
-
-**See Also**    
-- [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
-- [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)

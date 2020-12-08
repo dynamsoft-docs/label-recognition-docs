@@ -31,8 +31,6 @@ DLR_API void* DLR_CreateInstance ()
 Returns an instance of Dynamsoft Label Recognition. If failed, returns NULL.
 
 
-#### Remark
-Partial of the decoding result will be masked with "\*" without a valid license key.
 
 #### Code Snippet
 ```c

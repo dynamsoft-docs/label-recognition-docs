@@ -10,10 +10,10 @@ needAutoGenerateSidebar: true
 
 | Method               | Description |
 |----------------------|-------------|
-  | [`DLR_RecognizeByBuffer`](#dlr_recognizebybuffer) | Recognizes text from a specified image file. |
-  | [`DLR_RecognizeByFile`](#dlr_recognizebyfile) | Recognizes text from an image file in memory. |
-  | [`DLR_RecognizeBasedOnDBRResultByBuffer`](#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from raw buffer. |
-  | [`DLR_RecognizeBasedOnDBRResultByFile`](#dlr_recognizebasedondbrresultbyfile) | Recognizes text from a base64 encoded string. |
+  | [`DLR_RecognizeByBuffer`](#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`DLR_RecognizeByFile`](#dlr_recognizebyfile) | Recognizes text from a specified image file. |
+  | [`DLR_RecognizeBasedOnDBRResultsByBuffer`](#dlr_RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`DLR_RecognizeBasedOnDBRResultsByFile`](#dlr_RecognizeBasedOnDBRResultsByFile) | Recognizes text from a specified image file according to barcode results from DBR SDK.. |
 
 ---
 
@@ -76,11 +76,11 @@ DLR_DestroyInstance(recognizer);
 
 
 
-## DLR_RecognizeBasedOnDBRResultByBuffer
-Recognizes text from the memory buffer containing image pixels in defined format.
+## DLR_RecognizeBasedOnDBRResultsByBuffer
+Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK.
 
 ```c
-DLR_API int DLR_RecognizeBasedOnDBRResultByBuffer(void* recognizer, const DLRImageData* imageData, TextResultArray* DBRTextResultArray)
+DLR_API int DLR_RecognizeBasedOnDBRResultsByBuffer(void* recognizer, const DLRImageData* imageData, TextResultArray* DBRTextResultArray)
 ```   
    
 #### Parameters
@@ -96,11 +96,11 @@ Returns error code (returns 0 if the function operates successfully).
 &nbsp;
 
 
-## DLR_RecognizeBasedOnDBRResultByFile
+## DLR_RecognizeBasedOnDBRResultsByFile
 Recognizes text from a specified image file.
 
 ```c
-DLR_API int DLR_RecognizeBasedOnDBRResultByFile (void* recognizer, const char* fileName, TextResultArray* DBRTextResultArray)	
+DLR_API int DLR_RecognizeBasedOnDBRResultsByFile (void* recognizer, const char* fileName, TextResultArray* DBRTextResultArray)	
 ```   
    
 #### Parameters

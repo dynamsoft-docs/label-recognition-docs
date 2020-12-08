@@ -36,8 +36,6 @@ breadcrumbText: CLabelRecognition Class
   | [`GetRuntimeSettings`](settings.md#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`UpdateRuntimeSettings`](settings.md#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`ResetRuntimeSettings`](settings.md#dlr_resetruntimesettings) | Resets the runtime settings. |
-  | [`GetModeArgument`](settings.md#dlr_getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
-  | [`SetModeArgument`](settings.md#dlr_setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`AppendSettingsFromString`](settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
@@ -50,8 +48,8 @@ breadcrumbText: CLabelRecognition Class
   |----------------------|-------------|
   | [`RecognizeByBuffer`](recognizing.md#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](recognizing.md#dlr_recognizebyfile) | Recognizes text from a specified image file. |
-  | [`RecognizeBasedOnDBRResultByBuffer`](recognizing.md#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
-  | [`RecognizeBasedOnDBRResultByFile`](recognizing.md#dlr_recognizebasedondbrresultbyfile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultsByBuffer`](recognizing.md#dlr_RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultsByFile`](recognizing.md#dlr_RecognizeBasedOnDBRResultsByFile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
    
 &nbsp; 
    

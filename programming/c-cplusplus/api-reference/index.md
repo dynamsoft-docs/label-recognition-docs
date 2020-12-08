@@ -43,8 +43,6 @@ breadcrumbText: API Reference
   | [`GetRuntimeSettings`](c-label-recognition-class/settings.md#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`UpdateRuntimeSettings`](c-label-recognition-class/settings.md#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`ResetRuntimeSettings`](c-label-recognition-class/settings.md#dlr_resetruntimesettings) | Resets the runtime settings. |
-  | [`GetModeArgument`](c-label-recognition-class/settings.md#dlr_getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
-  | [`SetModeArgument`](c-label-recognition-class/settings.md#dlr_setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`AppendSettingsFromString`](c-label-recognition-class/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](c-label-recognition-class/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](c-label-recognition-class/settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
@@ -57,8 +55,8 @@ breadcrumbText: API Reference
   |----------------------|-------------|
   | [`RecognizeByBuffer`](c-label-recognition-class/recognizing.md#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](c-label-recognition-class/recognizing.md#dlr_recognizebyfile) | Recognizes text from a specified image file. |
-  | [`RecognizeBasedOnDBRResultByBuffer`](c-label-recognition-class/recognizing.md#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
-  | [`RecognizeBasedOnDBRResultByFile`](c-label-recognition-class/recognizing.md#dlr_recognizebasedondbrresultbyfile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultsByBuffer`](c-label-recognition-class/recognizing.md#dlr_RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`RecognizeBasedOnDBRResultsByFile`](c-label-recognition-class/recognizing.md#dlr_RecognizeBasedOnDBRResultsByFile) |Recognizes text from a specified image file according to barcode results from DBR SDK. |
    
 &nbsp; 
    
@@ -101,8 +99,6 @@ breadcrumbText: API Reference
   | [`DLR_GetRuntimeSettings`](c-functions/settings.md#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`DLR_UpdateRuntimeSettings`](c-functions/settings.md#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`DLR_ResetRuntimeSettings`](c-functions/settings.md#dlr_resetruntimesettings) | Resets the runtime settings. |
-  | [`DLR_GetModeArgument`](c-functions/settings.md#dlr_getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
-  | [`DLR_SetModeArgument`](c-functions/settings.md#dlr_setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`DLR_AppendSettingsFromString`](c-functions/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`DLR_OutputSettingsToFile`](c-functions/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](c-functions/settings.md#dlr_appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
@@ -113,10 +109,10 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`DLR_RecognizeByBuffer`](c-functions/recognizing.md#dlr_recognizebybuffer) | Recognizes text from a specified image file. |
-  | [`DLR_RecognizeByFile`](c-functions/recognizing.md#dlr_recognizebyfile) | Recognizes text from an image file in memory. |
-  | [`DLR_RecognizeBasedOnDBRResultByBuffer`](c-functions/recognizing.md#dlr_recognizebasedondbrresultbybuffer) | Recognizes text from raw buffer. |
-  | [`DLR_RecognizeBasedOnDBRResultByFile`](c-functions/recognizing.md#dlr_recognizebasedondbrresultbyfile) | Recognizes text from a base64 encoded string. |
+  | [`DLR_RecognizeByBuffer`](c-functions/recognizing.md#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`DLR_RecognizeByFile`](c-functions/recognizing.md#dlr_recognizebyfile) | Recognizes text from a specified image file. |
+  | [`DLR_RecognizeBasedOnDBRResultsByBuffer`](c-functions/recognizing.md#dlr_RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
+  | [`DLR_RecognizeBasedOnDBRResultsByFile`](c-functions/recognizing.md#dlr_RecognizeBasedOnDBRResultsByFile) | Recognizes text from a specified image file according to barcode results from DBR SDK. |
    
 &nbsp; 
    

@@ -13,8 +13,6 @@ needAutoGenerateSidebar: true
   | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
-  | [`GetModeArgument`](#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters. |
-  | [`SetModeArgument`](#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](#appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
@@ -104,91 +102,6 @@ delete recognizer;
 &nbsp;
 
 
-## GetModeArgument
-Get argument value for the specified mode parameter.
-
-```cpp
-int dynamsoft::dlr::CLabelRecognition::GetModeArgument (const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-   
-#### Parameters
-`[in]	modesName` The mode parameter name to get argument.  
-`[in]	index` The array index of mode parameter to indicate a specific mode.  
-`[in]	argumentName` The name of the argument to get.  
-`[in,out]	valueBuffer` The buffer is allocated by caller and the recommended length is 480. The argument value would be copied to the buffer.  
-`[in]	valueBufferLen` The length of allocated buffer.  
-`[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of the allocated buffer.  
-
-#### Return value
-Returns error code. Possible return(s): DLR_OK; DLRERR_GET_MODE_ARGUMENT_ERROR.  
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
-
-#### Remark
-Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
-- [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
-
-#### Code Snippet
-```cpp
-CLabelRecognition* recognizer = new CLabelRecognition();
-recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
-recognizer->GetRuntimeSettings(&settings);
-settings.binarizationModes[0] = BM_LOCAL_BLOCK;
-char errorMessage[256];
-char argumentValue[480];
-recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-recognizer->SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1", errorMessage, 256);
-recognizer->GetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", argumentValue, 480, errorMessage, 256);
-delete recognizer;
-```
-
-&nbsp;
-
-## SetModeArgument
-Set argument value for the specified mode parameter.
-
-
-```cpp
-int dynamsoft::dlr::CLabelRecognition::SetModeArgument (const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-   
-#### Parameters
-`[in]	modesName` The mode parameter name to set argument.  
-`[in]	index` The array index of mode parameter to indicate a specific mode.  
-`[in]	argumentName` The name of the argument to set.  
-`[in]	argumentValue` The value of the argument to set.  
-`[in,out]` errorMsgBuffer	The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
-`[in] errorMsgBufferLen` The length of the allocated buffer.
-
-#### Return value
-Returns error code. Possible return(s): DLR_OK; DLRERR_SET_MODE_ARGUMENT_ERROR.   
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
-  
-#### Remark
-Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments)
-- [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html#mode-arguments)  
-
-#### Code Snippet
-```cpp
-CLabelRecognition* recognizer = new CLabelRecognition();
-recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
-recognizer->GetRuntimeSettings(&settings);
-settings.binarizationModes[0] = BM_LOCAL_BLOCK;
-char errorMessage[256];
-recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-recognizer->SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1", errorMessage, 256);
-delete recognizer;
-```
-
-&nbsp;
-
-
 ## AppendSettingsFromString
 Append a new template string to the current label recognition instance.
 
@@ -239,7 +152,7 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", CM_IGNORE, errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
 recognizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 delete recognizer;
 ```

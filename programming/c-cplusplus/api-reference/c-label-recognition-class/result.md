@@ -23,7 +23,7 @@ int dynamsoft::dlr::CLabelRecognition::GetAllDLRResults (DLRResultArray** result
 ```   
    
 #### Parameters
-`[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](recognizing.md#recognizebybuffer) / [`RecognizeByFile`](recognizing.md#recognizebyfile) / [`RecognizeBasedOnDBRResultByBuffer`](recognizing.md#recognizebasedondbrresultbybuffer) / [`RecognizeBasedOnDBRResultByFile`](recognizing.md#recognizebasedondbrresultbyfile). The results is allocated by SDK and should be freed by calling function [`FreeDLRResults`](#freedlrresults).
+`[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](recognizing.md#recognizebybuffer) / [`RecognizeByFile`](recognizing.md#recognizebyfile) / [`RecognizeBasedOnDBRResultsByBuffer`](recognizing.md#RecognizeBasedOnDBRResultsByBuffer) / [`RecognizeBasedOnDBRResultsByFile`](recognizing.md#RecognizeBasedOnDBRResultsByFile). The results is allocated by SDK and should be freed by calling function [`FreeDLRResults`](#freedlrresults).
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    

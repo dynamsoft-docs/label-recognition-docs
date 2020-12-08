@@ -1,7 +1,7 @@
 # Dynamsoft Label Recognition - for C++ Documentation
 
 ## Getting Started
-- [User Guide for C++](user-guide.md)
+- [User Guide for C/C++](user-guide.md)
 
 - [API Reference](api-reference/index.md)
 

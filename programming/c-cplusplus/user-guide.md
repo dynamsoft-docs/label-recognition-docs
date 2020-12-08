@@ -80,7 +80,7 @@ To deploy your application, ensure the DLL/Lib files are in the same folder as t
 
 ## Features
 
-### Specify a reference region
+### Specify a reference region and text area
 
 There are two ways to set a single reference region - 1) through runtime settings and 2) JSON template. The following example demonstrates how to specify a single reference region using the first option - runtime settings. The second option is outlined in the next section [Specify multiple reference regions](#specify-multiple-reference-regions) for how to reference regions using a JSON template.
 
@@ -89,11 +89,9 @@ There are two ways to set a single reference region - 1) through runtime setting
 
 	DLRRuntimeSettings settings;
 	dlr.GetRuntimeSettings(&settings);
-	settings.referenceRegion.regionBottom = 90;
-	settings.referenceRegion.regionLeft = 30;
-	settings.referenceRegion.regionMeasuredByPercentage = 1;
-	settings.referenceRegion.regionRight = 70;
-	settings.referenceRegion.regionTop = 10;
+    
+    settings.referenceRegion= { { {0, 0}, { 50,0 }, { 50,100 }, { 0, 100 }}, 1 };
+    settings.textArea = { { {0,0}, {50,0},{50,100},{0,100} } };
 	dlr.UpdateRuntimeSettings(&settings, error, 512);
 ```
 
@@ -102,27 +100,64 @@ There are two ways to set a single reference region - 1) through runtime setting
 To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`](#).
 
 ```cpp
-    string ReferenceRegionArray = "\"ReferenceRegionArray\":[{\
-    \"Bottom\" : 60,\
-    \"Left\" : 30,\
-    \"MeasuredByPercentage\" : 1,\
-    \"Right\" : 70,\
-    \"Top\" : 30,\
-    \"Name\":\"R1\"\
+    string ReferenceRegionArray = 
+    "\"ReferenceRegionArray\":[{\
+        \"FirstPoint\" : [0,66],\
+        \"SecondPoint\" : [200,66],\
+        \"MeasuredByPercentage\" : 0,\
+        \"ThirdPoint\" : [200,125],\
+        \"FourthPoint\" : [0,125],\
+        \"Name\":\"R1\"\
     },{\
-    \"Bottom\" : 90,\
-    \"Left\" : 10,\
-    \"MeasuredByPercentage\" : 1,\
-    \"Right\" : 20,\
-    \"Top\" : 70,\
-    \"Name\":\"R2\"\
+        \"FirstPoint\" : [0,0],\
+        \"SecondPoint\" : [100,0],\
+        \"MeasuredByPercentage\" : 1,\
+        \"ThirdPoint\" : [100,50],\
+        \"FourthPoint\" : [0,50],\
+        \"Name\":\"R2\"\
+    }]";
+    string DLRParameterArray = 
+    "\"LabelRecognitionParameterArray\":[{\
+        \"Name\": \"l1\",\
+        \"LinesCount\":2,\
+        \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
+    }]";
+    dlr->AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+```
+
+### Specify one region with multiple text areas
+
+```cpp
+    string TextAreaArray = 
+    "\"TextAreaArray\":[{\
+        \"FirstPoint\" : [ -500, -500 ],\
+        \"SecondPoint\" : [500, -500],\
+        \"ThirdPoint\" : [500, 0],\
+        \"FourthPoint\" : [-500, 0],\
+        \"Name\" : \"t2\"\
+    },{\
+        \"FirstPoint\" : [ -500, 0 ],\
+        \"SecondPoint\" : [500, 0],\
+        \"ThirdPoint\" : [500, 500],\
+        \"FourthPoint\" : [-500, 500],\
+        \"Name\" : \"t1\"\
+    }]";
+    string ReferenceRegionArray = 
+    "\"ReferenceRegionArray\":[{\
+        \"FirstPoint\" : [ 103, 57 ], \
+        \"SecondPoint\" : [ 126, 57 ], \
+        \"ThirdPoint\" : [ 126, 70 ], \
+        \"FourthPoint\" : [103, 70],\
+        \"MeasuredByPercentage\" : 0,\
+        \"Name\":\"R1\",\
+        \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
     }]";
     string DLRParameterArray = "\"LabelRecognitionParameterArray\":[{\
-    \"Name\": \"l1\",\
-    \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
+        \"Name\": \"l1\",\
+        \"LinesCount\":2,\
+        \"ReferenceRegionNameArray\": [\"R1\"]\
     }]";
-    
-    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray +","+ TextAreaArray+ "}").c_str(), errorMessage, 256);
 ```
 
 ### Enable region autodetection 

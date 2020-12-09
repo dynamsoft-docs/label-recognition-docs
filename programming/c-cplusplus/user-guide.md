@@ -73,6 +73,10 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     }
    ```
 
+    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
+
+    In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
    

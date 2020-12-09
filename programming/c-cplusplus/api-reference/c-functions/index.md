@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition C++ API Reference - Main Page
+title: Dynamsoft Label Recognition C API Reference - C Functions
 description: This page shows all methods of Dynamsoft Label Recognition for C API Reference.
-keywords: api reference, c, c++
+keywords: api reference, c
 needAutoGenerateSidebar: false
 breadcrumbText: C Functions
 ---

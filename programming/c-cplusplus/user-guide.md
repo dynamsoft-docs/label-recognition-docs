@@ -85,14 +85,14 @@ To deploy your application, ensure the DLL/Lib files are in the same folder as t
 There are two ways to set a single reference region - 1) through runtime settings and 2) JSON template. The following example demonstrates how to specify a single reference region using the first option - runtime settings. The second option is outlined in the next section [Specify multiple reference regions](#specify-multiple-reference-regions) for how to reference regions using a JSON template.
 
 ```cpp
-	char error[512];
+    char error[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
     
     settings.referenceRegion= { { {0, 0}, { 50,0 }, { 50,100 }, { 0, 100 }}, 1 };
     settings.textArea = { { {0,0}, {50,0},{50,100},{0,100} } };
-	dlr.UpdateRuntimeSettings(&settings, error, 512);
+    dlr.UpdateRuntimeSettings(&settings, error, 512);
 ```
 
 ### Specify multiple reference regions
@@ -167,10 +167,10 @@ Dynamsoft Label Recognition SDK supports automatic region detection to extract t
 ```cpp
     char szErrorMsg[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
-	settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
-	dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
+    settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
+    dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
 ```
 
 Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`](#).

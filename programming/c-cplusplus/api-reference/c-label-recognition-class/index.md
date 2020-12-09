@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition C++ API Reference - Main Page
-description: This page shows CLabelRecognition methods of Dynamsoft Label Recognition for C/C++ API Reference.
-keywords: api reference, c, c++
+title: Dynamsoft Label Recognition C++ API Reference - CLabelRecognition Class
+description: This page shows CLabelRecognition methods of Dynamsoft Label Recognition for C++ API Reference.
+keywords: api reference, c++
 needAutoGenerateSidebar: false
 breadcrumbText: CLabelRecognition Class
 ---

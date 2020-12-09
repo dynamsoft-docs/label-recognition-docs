@@ -122,7 +122,7 @@ To reference multiple regions, we cannot follow the runtime settings example abo
         \"LinesCount\":2,\
         \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
     }]";
-    dlr->AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
 ```
 
 ### Specify one region with multiple text areas

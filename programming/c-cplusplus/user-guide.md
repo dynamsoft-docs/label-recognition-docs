@@ -1,4 +1,13 @@
-# Dynamsoft Label Recognition - C++ User Guide
+---
+layout: default-layout
+title: Dynamsoft Label Recognition - C/C++ User Guide
+description: This is the user guide page of Dynamsoft Label Recognition for C/C++ Language.
+keywords: c, c++, user guide
+needAutoGenerateSidebar: true
+breadcrumbText: C/C++
+---
+
+# Dynamsoft Label Recognition - C/C++ User Guide
 
 Precisely read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
 
@@ -20,17 +29,18 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognition.h"
+    #include "<relative path>/Include/DynamsoftCommon.h"
     using namespace std;
-    using Dynamsoft::CLabelRecognition;
+    using namespace dynamsoft::dlr;
 
     #ifdef _WIN64
-    #pragma comment(lib, "<relative path>/Lib/DynamsoftLabelRecognitionx64.lib")
+    #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognitionx64.lib")
     #else
-    #pragma comment(lib, "<relative path>/Lib/DynamsoftLabelRecognitionx86.lib")
+    #pragma comment(lib, "<relative path>/Lib/Windows/x86/DynamsoftLabelRecognitionx86.lib")
     #endif
    ```
    
-  The `DynamsoftLabelRecognition.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\` or `[INSTALLATION FOLDER]\Redist\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
+  The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
  
 3. Update the main function in `DLRHelloWorld.cpp`.   
    ```cpp
@@ -72,6 +82,10 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     }
    ```
 
+    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
+
+    In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
    
@@ -79,21 +93,19 @@ To deploy your application, ensure the DLL/Lib files are in the same folder as t
 
 ## Features
 
-### Specify a reference region
+### Specify a reference region and text area
 
 There are two ways to set a single reference region - 1) through runtime settings and 2) JSON template. The following example demonstrates how to specify a single reference region using the first option - runtime settings. The second option is outlined in the next section [Specify multiple reference regions](#specify-multiple-reference-regions) for how to reference regions using a JSON template.
 
 ```cpp
-	char error[512];
+    char error[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
-	settings.referenceRegion.regionBottom = 90;
-	settings.referenceRegion.regionLeft = 30;
-	settings.referenceRegion.regionMeasuredByPercentage = 1;
-	settings.referenceRegion.regionRight = 70;
-	settings.referenceRegion.regionTop = 10;
-	dlr.UpdateRuntimeSettings(&settings, error, 512);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
+    
+    settings.referenceRegion= { { {0, 0}, { 50,0 }, { 50,100 }, { 0, 100 }}, 1 };
+    settings.textArea = { { {0,0}, {50,0},{50,100},{0,100} } };
+    dlr.UpdateRuntimeSettings(&settings, error, 512);
 ```
 
 ### Specify multiple reference regions
@@ -101,27 +113,64 @@ There are two ways to set a single reference region - 1) through runtime setting
 To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`](#).
 
 ```cpp
-    string ReferenceRegionArray = "\"ReferenceRegionArray\":[{\
-    \"Bottom\" : 60,\
-    \"Left\" : 30,\
-    \"MeasuredByPercentage\" : 1,\
-    \"Right\" : 70,\
-    \"Top\" : 30,\
-    \"Name\":\"R1\"\
+    string ReferenceRegionArray = 
+    "\"ReferenceRegionArray\":[{\
+        \"FirstPoint\" : [0,66],\
+        \"SecondPoint\" : [200,66],\
+        \"MeasuredByPercentage\" : 0,\
+        \"ThirdPoint\" : [200,125],\
+        \"FourthPoint\" : [0,125],\
+        \"Name\":\"R1\"\
     },{\
-    \"Bottom\" : 90,\
-    \"Left\" : 10,\
-    \"MeasuredByPercentage\" : 1,\
-    \"Right\" : 20,\
-    \"Top\" : 70,\
-    \"Name\":\"R2\"\
+        \"FirstPoint\" : [0,0],\
+        \"SecondPoint\" : [100,0],\
+        \"MeasuredByPercentage\" : 1,\
+        \"ThirdPoint\" : [100,50],\
+        \"FourthPoint\" : [0,50],\
+        \"Name\":\"R2\"\
+    }]";
+    string DLRParameterArray = 
+    "\"LabelRecognitionParameterArray\":[{\
+        \"Name\": \"l1\",\
+        \"LinesCount\":2,\
+        \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
+    }]";
+    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+```
+
+### Specify one region with multiple text areas
+
+```cpp
+    string TextAreaArray = 
+    "\"TextAreaArray\":[{\
+        \"FirstPoint\" : [ -500, -500 ],\
+        \"SecondPoint\" : [500, -500],\
+        \"ThirdPoint\" : [500, 0],\
+        \"FourthPoint\" : [-500, 0],\
+        \"Name\" : \"t2\"\
+    },{\
+        \"FirstPoint\" : [ -500, 0 ],\
+        \"SecondPoint\" : [500, 0],\
+        \"ThirdPoint\" : [500, 500],\
+        \"FourthPoint\" : [-500, 500],\
+        \"Name\" : \"t1\"\
+    }]";
+    string ReferenceRegionArray = 
+    "\"ReferenceRegionArray\":[{\
+        \"FirstPoint\" : [ 103, 57 ], \
+        \"SecondPoint\" : [ 126, 57 ], \
+        \"ThirdPoint\" : [ 126, 70 ], \
+        \"FourthPoint\" : [103, 70],\
+        \"MeasuredByPercentage\" : 0,\
+        \"Name\":\"R1\",\
+        \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
     }]";
     string DLRParameterArray = "\"LabelRecognitionParameterArray\":[{\
-    \"Name\": \"l1\",\
-    \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
+        \"Name\": \"l1\",\
+        \"LinesCount\":2,\
+        \"ReferenceRegionNameArray\": [\"R1\"]\
     }]";
-    
-    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray +","+ TextAreaArray+ "}").c_str(), errorMessage, 256);
 ```
 
 ### Enable region autodetection 
@@ -131,10 +180,10 @@ Dynamsoft Label Recognition SDK supports automatic region detection to extract t
 ```cpp
     char szErrorMsg[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
-	settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
-	dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
+    settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
+    dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
 ```
 
 Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`](#).

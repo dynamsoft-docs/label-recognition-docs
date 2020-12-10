@@ -73,6 +73,10 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     }
    ```
 
+    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
+
+    In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
    
@@ -85,14 +89,14 @@ To deploy your application, ensure the DLL/Lib files are in the same folder as t
 There are two ways to set a single reference region - 1) through runtime settings and 2) JSON template. The following example demonstrates how to specify a single reference region using the first option - runtime settings. The second option is outlined in the next section [Specify multiple reference regions](#specify-multiple-reference-regions) for how to reference regions using a JSON template.
 
 ```cpp
-	char error[512];
+    char error[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
     
     settings.referenceRegion= { { {0, 0}, { 50,0 }, { 50,100 }, { 0, 100 }}, 1 };
     settings.textArea = { { {0,0}, {50,0},{50,100},{0,100} } };
-	dlr.UpdateRuntimeSettings(&settings, error, 512);
+    dlr.UpdateRuntimeSettings(&settings, error, 512);
 ```
 
 ### Specify multiple reference regions
@@ -122,7 +126,7 @@ To reference multiple regions, we cannot follow the runtime settings example abo
         \"LinesCount\":2,\
         \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
     }]";
-    dlr->AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
+    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
 ```
 
 ### Specify one region with multiple text areas
@@ -167,10 +171,10 @@ Dynamsoft Label Recognition SDK supports automatic region detection to extract t
 ```cpp
     char szErrorMsg[512];
 
-	DLRRuntimeSettings settings;
-	dlr.GetRuntimeSettings(&settings);
-	settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
-	dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
+    DLRRuntimeSettings settings;
+    dlr.GetRuntimeSettings(&settings);
+    settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
+    dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
 ```
 
 Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`](#).

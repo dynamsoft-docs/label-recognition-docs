@@ -247,10 +247,10 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
         "ReferenceRegionArray":[
         {
             "Name":"R1",
-            "Top":0,
-            "Left":0,
-            "Right":100,
-            "Bottom":100,
+            "FirstPoint":[0,0],
+            "SecondPoint":[100,0],
+            "ThirdPoint":[100,100],
+            "FourthPoint":[0,100],
             "MeasuredByPercentage":1,
             "TextAreaNameArray":["T1"]
         }

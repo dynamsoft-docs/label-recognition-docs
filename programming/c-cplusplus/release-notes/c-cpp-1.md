@@ -11,4 +11,4 @@ breadcrumbText: Release Notes
 
 ## 1.0 Beta (12/10/2020)
 
-- Supports recognition of `A-Z`, `a-z`, `0-9`, `.`, `-`, `_`, ` `, `/` and `:` characters. 
+- Supports recognition of `A-Z`, `a-z`, `0-9`, `.`, `-`, `_`, `(blank space)`, `/` and `:` characters. 

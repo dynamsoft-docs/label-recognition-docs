@@ -19,11 +19,11 @@ Precisely read alphanumeric characters and standard symbols from images of varyi
 
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and run the installer. The installer includes a free trial license valid for 30 days.   
+Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.   
 
 ## Getting Started: Hello World
 
-1. Start Visual Studio and create a new Win32 Console Application in C++. Let's name it `BarcodeReadDemo_CPP`.  
+1. Start Visual Studio and create a new Win32 Console Application in C++. 
    
 2. Add Dynamsoft Label Recognition headers and libs in `DLRHelloWorld.cpp`.   
    ```cpp

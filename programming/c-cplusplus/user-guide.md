@@ -1,3 +1,12 @@
+---
+layout: default-layout
+title: Dynamsoft Label Recognition - C/C++ User Guide
+description: This is the user guide page of Dynamsoft Label Recognition for C/C++ Language.
+keywords: c, c++, user guide
+needAutoGenerateSidebar: true
+breadcrumbText: C/C++
+---
+
 # Dynamsoft Label Recognition - C/C++ User Guide
 
 Precisely read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.

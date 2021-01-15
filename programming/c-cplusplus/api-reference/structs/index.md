@@ -16,7 +16,7 @@ breadcrumbText: Structs
 - [`DLRLineResult`](dlr-line-Result.md)	
 - [`DLRPoint`](dlr-point.md)		
 - [`DLRQuadrilateral`](dlr-quadrilateral.md)	
-- [`DLRRegion`](dlr-region.md)	
+- [`DLRReferenceRegion`](dlr-reference-region.md)	
 - [`DLRResultArray`](dlr-result-array.md)		
 - [`DLRResult`](dlr-result.md)		
 - [`DLRRuntimeSettings`](dlr-runtime-settings.md)	

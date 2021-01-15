@@ -141,7 +141,7 @@ breadcrumbText: API Reference
 ## [Structs](structs/index.md)
 - [`DLRRuntimeSettings`](structs/dlr-runtime-settings.md)	
 - [`DLRQuadrilateral`](structs/dlr-quadrilateral.md)	
-- [`DLRRegion`](structs/dlr-region.md)	
+- [`DLRReferenceRegion`](structs/dlr-reference-region.md)	
 - [`DLRResultArray`](structs/dlr-result-array.md)		
 - [`DLRResult`](structs/dlr-result.md)		
 - [`DLRLineResult`](structs/dlr-line-Result.md)	

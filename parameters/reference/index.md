@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Label Recognition Parameter Reference - Main Page
 description: Dynamsoft Label Recognition Parameter Reference - Main Page
-keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea
+keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea, LineSpecification, CharacterModel
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Reference
@@ -34,11 +34,7 @@ breadcrumbText: Reference
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`ReferenceRegion.Name`](reference-region/parameter-control.md#name) | The name of the ReferenceRegion object. |
- | [`ReferenceRegion.FirstPoint`](reference-region/parameter-control.md#firstpoint) | The first point of the reference region, which is usually the top-left corner. |
- | [`ReferenceRegion.SecondPoint`](reference-region/parameter-control.md#secondpoint) | The second point of the reference region, which is usually the top-right corner. |
- | [`ReferenceRegion.ThirdPoint`](reference-region/parameter-control.md#thirdpoint) | The third point of the reference region, which is usually the bottom-right corner. |
- | [`ReferenceRegion.FourthPoint`](reference-region/parameter-control.md#fourthpoint) | The fourth point of the reference region, which is usually the bottom-left  corner. |
- | [`ReferenceRegion.MeasuredByPercentage`](reference-region/parameter-control.md#measuredbypercentage) | Sets whether or not to use percentages to measure the coordinate. |
+ | [`ReferenceRegion.Localization`](reference-region/localization.md#localization) | The localization of the reference region(s). |
  | [`ReferenceRegion.TextAreaNameArray `](reference-region/parameter-control.md#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current reference region. |
 
 ## TextArea Object

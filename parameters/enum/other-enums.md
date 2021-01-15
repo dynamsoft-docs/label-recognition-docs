@@ -12,13 +12,135 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
+  | [`DLRBarcodeFormat`](#dlrbarcodeformat) | Describes the barcode formats in DLRBarcodeFormat group 1. |
+  | [`DLRBarcodeFormat_2`](#dlrbarcodeformat_2) | Describes the barcode formats in DLRBarcodeFormat group 2. |
+  | [`DLRImagePixelFormat`](#dlrimagepixelformat) | Describes the image pixel format. |
+  | [`DLRLocalizationSourceType`](#dlrlocalizationsourcetype) | Describes the source type used to localize the reference region(s). |
   | [`DM_ChargeWay`](#dm_chargeway) | Describes the charge way. |
   | [`DM_DeploymentType`](#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](#dm_licensemodule) | Describes Dynamsoft license modules. |
   | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes the UUID generation method. |
-  | [`DLRImagePixelFormat`](#dlrimagepixelformat) | Describes the image pixel format. |
   
 ---
+
+## DLRBarcodeFormat
+Describes the barcode types in DLRBarcodeFormat group 1. All the formats can be combined, such as DLR_BF_CODE_39 | DLR_BF_CODE_128. Note: The barcode format our library supported is composed of [DLRBarcodeFormat group 1](#dlrbarcodeformat) and [DLRBarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DLRBarcodeFormat` |
+| .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat ` |
+| Android | `class EnumDLRBarcodeFormat` |
+| ObjC / Swift | `enum EnumDLRBarcodeFormat` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| DLR_BF_ALL | EnumDLRBarcodeFormatALL | -31457281 | All supported formats in [DLRBarcodeFormat group 1](#dlrbarcodeformat). |
+| DLR_BF_ONED | EnumDLRBarcodeFormatONED  | 0x001007FF | Combined value of DLR_BF_CODABAR, DLR_BF_CODE_128, DLR_BF_CODE_39, DLR_BF_CODE_39_Extended, DLR_BF_CODE_93, DLR_BF_EAN_13, DLR_BF_EAN_8, INDUSTRIAL_25, DLR_BF_ITF, DLR_BF_UPC_A, DLR_BF_UPC_E, DLR_BF_MSI_CODE. |
+| DLR_BF_GS1_DATABAR | EnumDLRBarcodeFormatGS1DATABAR | 0x0003F800 | Combined value of DLR_BF_GS1_DATABAR_OMNIDIRECTIONAL, DLR_BF_GS1_DATABAR_TRUNCATED, DLR_BF_GS1_DATABAR_STACKED, DLR_BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, DLR_BF_GS1_DATABAR_EXPANDED, DLR_BF_GS1_DATABAR_EXPANDED_STACKED, DLR_BF_GS1_DATABAR_LIMITED. | 
+| DLR_BF_NULL | EnumDLRBarcodeFormatNULL | 0x00 | No barcode format in [DLRBarcodeFormat group 1](#dlrbarcodeformat). |
+| DLR_BF_CODE_39 | EnumDLRBarcodeFormatCODE39 | 0x01 | Code 39 |
+| DLR_BF_CODE_128 | EnumDLRBarcodeFormatCODE128 | 0x02 | Code 128 |
+| DLR_BF_CODE_93 | EnumDLRBarcodeFormatCODE93 | 0x04 | Code 93 |
+| DLR_BF_CODABAR | EnumDLRBarcodeFormatCODABAR | 0x08 | Codabar |
+| DLR_BF_ITF  | EnumDLRBarcodeFormatITF | 0x10 | ITF |
+| DLR_BF_EAN_13 | EnumDLRBarcodeFormatEAN13 | 0x20 | EAN-13 |
+| DLR_BF_EAN_8 | EnumDLRBarcodeFormatEAN8 | 0x40 | EAN-8 |
+| DLR_BF_UPC_A | EnumDLRBarcodeFormatUPCA | 0x80 | UPC-A |
+| DLR_BF_UPC_E | EnumDLRBarcodeFormatUPCE | 0x100 | UPC-E |
+| DLR_BF_INDUSTRIAL_25 | EnumDLRBarcodeFormatINDUSTRIAL | 0x200 | Industrial 2 of 5 |
+| DLR_BF_MSI_CODE | EnumDLRBarcodeFormatMSICODE | 0x100000 | MSI Code |
+| DLR_BF_CODE_39_EXTENDED | EnumDLRBarcodeFormatCODE39EXTENDED | 0x400 | Code 39 Extended |
+| DLR_BF_GS1_DATABAR_OMNIDIRECTIONAL | EnumDLRBarcodeFormatGS1DATABAROMNIDIRECTIONAL | 0x800 | GS1 Databar Omnidirectional |
+| DLR_BF_GS1_DATABAR_TRUNCATED | EnumDLRBarcodeFormatGS1DATABARTRUNCATED | 0x1000 | GS1 Databar Truncated |
+| DLR_BF_GS1_DATABAR_STACKED | EnumDLRBarcodeFormatGS1DATABARSTACKED | 0x2000 | GS1 Databar Stacked |
+| DLR_BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL | EnumDLRBarcodeFormatGS1DATABARSTACKEDOMNIDIRECTIONAL | 0x4000 | GS1 Databar Stacked Omnidirectional |
+| DLR_BF_GS1_DATABAR_EXPANDED | EnumDLRBarcodeFormatGS1DATABAREXPANDED | 0x8000 | GS1 Databar Expanded |
+| DLR_BF_GS1_DATABAR_EXPANDED_STACKED | EnumDLRBarcodeFormatGS1DATABAREXPANDEDSTACKED | 0x10000 | GS1 Databar Expaned Stacked |
+| DLR_BF_GS1_DATABAR_LIMITED | EnumDLRBarcodeFormatGS1DATABARLIMITED | 0x20000 | GS1 Databar Limited |
+| DLR_BF_PATCHCODE | EnumDLRBarcodeFormatPATCHCODE | 0x00040000 | Patch code |
+| DLR_BF_MICRO_PDF417 | EnumDLRBarcodeFormatMICROPDF417 | 0x00080000 | Micro PDF417 |
+| DLR_BF_PDF417 | EnumDLRBarcodeFormatPDF417 | 0x02000000 | PDF417 |
+| DLR_BF_QR_CODE | EnumDLRBarcodeFormatQRCODE | 0x04000000 | QRCode |
+| DLR_BF_DATAMATRIX | EnumDLRBarcodeFormatDATAMATRIX | 0x08000000 | DataMatrix |
+| DLR_BF_AZTEC | EnumDLRBarcodeFormatAZTEC | 0x10000000 | AZTEC |
+| DLR_BF_MAXICODE | EnumDLRBarcodeFormatMAXICODE | 0x20000000 | MAXICODE |
+| DLR_BF_MICRO_QR | EnumDLRBarcodeFormatMICROQR | 0x40000000 | Micro QR Code |
+| DLR_BF_GS1_COMPOSITE | EnumDLRBarcodeFormatGS1COMPOSITE | -2147483648 | GS1 Composite Code |
+
+
+&nbsp;
+
+
+## DLRBarcodeFormat_2
+Describes the barcode types in DLRBarcodeFormat group 2. Note: The barcode format our library supported is composed of [DLRBarcodeFormat group 1](#dlrbarcodeformat) and [DLRBarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DLRBarcodeFormat_2` |
+| .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat_2` |
+| Android | `class EnumDLRBarcodeFormat_2` |
+| ObjC / Swift | `enum EnumDLRBarcodeFormat_2` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| DLR_BF2_POSTALCODE | EnumDLRBarcodeFormat2POSTALCODE | 0x01F00000 | Combined value of DLR_BF2_USPSINTELLIGENTMAIL, DLR_BF2_POSTNET, DLR_BF2_PLANET, DLR_BF2_AUSTRALIANPOST, DLR_BF2_RM4SCC. |
+| DLR_BF2_NULL | EnumDLRBarcodeFormat2NULL | 0x00 | No barcode format in [DLRBarcodeFormat group 2](#dlrbarcodeformat_2). |
+| DLR_BF2_NONSTANDARD_BARCODE | EnumDLRBarcodeFormat2NONSTANDARDBARCODE | 0x01 | Nonstandard barcode |
+| DLR_BF2_USPSINTELLIGENTMAIL | EnumDLRBarcodeFormat2USPSINTELLIGENTMAIL | 0x00100000 | USPS Intelligent Mail |
+| DLR_BF2_POSTNET | EnumDLRBarcodeFormat2POSTNET | 0x00200000 | Postnet |
+| DLR_BF2_PLANET | EnumDLRBarcodeFormat2PLANET | 0x00400000 | Planet |
+| DLR_BF2_AUSTRALIANPOST | EnumDLRBarcodeFormat2AUSTRALIANPOST | 0x00800000 | Australian Post |
+| DLR_BF2_RM4SCC | EnumDLRBarcodeFormat2RM4SCC | 0x01000000 | Royal Mail 4-State Customer Barcode |
+| DLR_BF2_DOTCODE | EnumDLRBarcodeFormat2DOTCODE | 0x02 | DotCode |
+
+&nbsp;
+
+## DLRImagePixelFormat
+Describes the image pixel format.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DLRImagePixelFormat` |
+| .Net | `enum Dynamsoft.DLR.EnumDLRImagePixelFormat` |
+| Android | `class EnumDLRImagePixelFormat` |
+
+
+
+### Members
+   
+| Member | Value | Description |
+| -------------------------- | ----- | ----------- |
+| DLR_IPF_BINARY | 0 | 0: Black, 1: White |
+| DLR_IPF_BINARYINVERTED | 1 | 0: Black, 1: White |
+| DLR_IPF_GRAYSCALED | 2 | 8 bit gray |
+| DLR_IPF_NV21 | 3 | NV21 |
+| DLR_IPF_RGB_565 | 4 | 16bit with RGB channel order stored in memory from high to low address |
+| DLR_IPF_RGB_555 | 5 | 16bit with RGB channel order stored in memory from high to low address |
+| DLR_IPF_RGB_888 | 6 | 24bit with RGB channel order stored in memory from high to low address |
+| DLR_IPF_ARGB_8888 | 7 | 32bit with ARGB channel order stored in memory from high to low address |
+| DLR_IPF_RGB_161616 | 8 | 48bit with RGB channel order stored in memory from high to low address |
+| DLR_IPF_ARGB_16161616 | 9 | 64bit with ARGB channel order stored in memory from high to low address |
+| DLR_IPF_ABGR_8888 | 10 | 32bit with ABGR channel order stored in memory from high to low address |
+| DLR_IPF_ABGR_16161616 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
+| DLR_IPF_BGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
+
+
+&nbsp;
 
 
 ## DM_ChargeWay
@@ -44,7 +166,7 @@ Describes charge way.
 | DM_CW_CONCURRENT_DEVICE_COUNT | 3 | Charges by the count of concurrent devices. |
 | DM_CW_APP_DOMAIN_COUNT | 6 | Charges by the count of app domains. |
 | DM_CW_ACTIVE_DEVICE_COUNT | 8 | Charges by the count of active devices. |
-| DM_CW_INSTANCE_COUNT | 9 | Charges by the count of instances. |
+| DM_CW_INSTANCE_COUNT | 9 | Charges by the count of instances. Not supported yet. |
 | DM_CW_CONCURRENT_INSTANCE_COUNT | 10 | Charges by the count of concurrent instances. |
 
 
@@ -138,39 +260,4 @@ Describes UUID generation method.
 &nbsp;
 
 
-
-## DLRImagePixelFormat
-Describes the image pixel format.
-
-
-### Declarations
-   
-| Language | Declaration |
-| -------- | ----------- |
-| C / C++ | `enum DLRImagePixelFormat` |
-| .Net | `enum Dynamsoft.DLR.EnumDLRImagePixelFormat` |
-| Android | `class EnumDLRImagePixelFormat` |
-
-
-
-### Members
-   
-| Member | Value | Description |
-| -------------------------- | ----- | ----------- |
-| DLR_IPF_BINARY | 0 | 0: Black, 1: White |
-| DLR_IPF_BINARYINVERTED | 1 | 0: Black, 1: White |
-| DLR_IPF_GRAYSCALED | 2 | 8 bit gray |
-| DLR_IPF_NV21 | 3 | NV21 |
-| DLR_IPF_RGB_565 | 4 | 16bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_555 | 5 | 16bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_888 | 6 | 24bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_ARGB_8888 | 7 | 32bit with ARGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_161616 | 8 | 48bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_ARGB_16161616 | 9 | 64bit with ARGB channel order stored in memory from high to low address |
-| DLR_IPF_ABGR_8888 | 10 | 32bit with ABGR channel order stored in memory from high to low address |
-| DLR_IPF_ABGR_16161616 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
-| DLR_IPF_BGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
-
-
-&nbsp;
 

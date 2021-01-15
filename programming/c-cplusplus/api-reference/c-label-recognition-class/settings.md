@@ -15,10 +15,10 @@ needAutoGenerateSidebar: true
   | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
-  | [`ClearAppendedSettings`](#appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
+  | [`ClearAppendedSettings`](#clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
+  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
 
 ---
-
 
 ## GetRuntimeSettings
 Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
@@ -124,7 +124,7 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessage[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 delete recognizer;
 ```
 
@@ -173,3 +173,32 @@ CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 recognizer->ClearAppendedSettings(labelRecognizer);
 ```
+
+## UpdateReferenceRegionFromBarcodeResults
+Updates reference region which is defined with source type DLR_LST_BARCODE.  
+
+```cpp
+int dynamsoft::dlr::CLabelRecognition::UpdateReferenceRegionFromBarcodeResults (const TextResultArray* barcodeResults, const char* templateName)
+```   
+   
+#### Parameters
+`[in]	barcodeResults` The barcode results used to localize reference region.  
+`[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
+
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```cpp
+CLabelRecognition* recognizer = new CLabelRecognition();
+recognizer->InitLicense("t0260NwAAAHV***************");
+char errorMessageAppend[256];
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+//Get barcodeResults from Dynamsoft Barcode Reader SDK
+recognizer->UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
+delete recognizer;
+```
+
+&nbsp;

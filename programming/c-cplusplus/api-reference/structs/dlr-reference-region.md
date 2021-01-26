@@ -22,7 +22,7 @@ typedef struct tagDLRReferenceRegion  DLRReferenceRegion
 ## Attributes
   
 | Attribute | Type |
-|---------- | ---- |SourceType
+|---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}parameter-mode-enums.html#dlrlocalizationsourcetype) |
 | [`points`](#points) | [`DLRPoint`](dlr-point.md)[4] |
 | [`regionMeasuredByPercentage`](#regionMeasuredByPercentage) | *int* |

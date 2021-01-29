@@ -43,7 +43,6 @@ If the image is large and the barcode on the image is very small, it is recommen
 #### Mode Arguments
 - [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
-- [RelativeBarcodeRegions](#relativebarcoderegions)
 - [ForeAndBackgroundColours](#foreandbackgroundcolours )
 - [AspectRatioRange](#aspectratiorange )
 - [HeightRange](#heightrange)
@@ -72,23 +71,7 @@ Sets the sensitivity used for region predetection algorithm.
 
 - **Remarks**     
   A larger value means the library will take more effort to detect regions.  
-
-
-##### RelativeBarcodeRegions 
- Sets the barcode regions relative to the predetected region.  
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more regions. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
-
-
-- **Remarks**     
-  - Each region need to be defined as [`Left`, `Top`, `Right`, `Bottom`, `Index`]. If you want to define multiple regions, you can use a "";"" to separate them. If there is no region defined, the library will consider the predetected regions as barcode regions.    
-  - `Left`, `Top`, `Right`, `Bottom` are four percentage values relative to top-left corner of the predetected region. 
-  - `Index` means the index of a specific colour set in [`ForeAndBackgroundColours`](#foreandbackgroundcolours) which the current region is applied to. If the value of `index` is set to -1, the current region will be applied to all colour sets in [`ForeAndBackgroundColours`](#foreandbackgroundcolours).
-  - Value range of `Left`, `Top`, `Right`, `Bottom`: [-10000,10000]
-  - Value range of `Index`: [-1, 0x7fffffff]
-  
+ 
   
 ##### ForeAndBackgroundColours 
 Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm.

@@ -40,6 +40,8 @@ breadcrumbText: CLabelRecognition Class
   | [`OutputSettingsToFile`](settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
   | [`UpdateReferenceRegionFromBarcodeResults`](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`GetModeArgument`](settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`SetModeArgument`](settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
 
 &nbsp; 
    

@@ -42,6 +42,8 @@ breadcrumbText: C Functions
   | [`DLR_OutputSettingsToFile`](settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](settings.md#dlr_appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
   | [`DLR_UpdateReferenceRegionFromBarcodeResults`](settings.md#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`DLR_GetModeArgument`](settings.md#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`DLR_SetModeArgument`](settings.md#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
 
 &nbsp; 
    

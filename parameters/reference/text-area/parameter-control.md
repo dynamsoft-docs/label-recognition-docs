@@ -56,9 +56,10 @@ The first point of the text area, which is usually the top-left corner.
 
 **Remarks**    
 View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
-The allowed values for x/y:<br>
-MeasuredByPercentage=0:  [0, 0x7fffffff]
-MeasuredByPercentage=1: [0, 100]
+The ordinate origin is the top-left corner of the ReferenceRegion.<br>
+The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
+The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
+The allowed values for x/y: [-10000, 10000]<br>
 
 
 ### As Json Parameter
@@ -82,9 +83,10 @@ The second point of the text area, which is usually the top-right corner.
 
 **Remarks**    
 View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
-The allowed values for x/y:<br>
-MeasuredByPercentage=0:  [0, 0x7fffffff]
-MeasuredByPercentage=1: [0, 100]
+The ordinate origin is the top-left corner of the ReferenceRegion.<br>
+The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
+The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
+The allowed values for x/y: [-10000, 10000]<br>
 
 
 ### As Json Parameter
@@ -108,9 +110,10 @@ The third point of the text area, which is usually the bottom-right corner.
 
 **Remarks**    
 View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
-The allowed values for x/y:<br>
-MeasuredByPercentage=0:  [0, 0x7fffffff]
-MeasuredByPercentage=1: [0, 100]
+The ordinate origin is the top-left corner of the ReferenceRegion.<br>
+The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
+The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
+The allowed values for x/y: [-10000, 10000]<br>
 
 
 ### As Json Parameter
@@ -134,9 +137,10 @@ The fourth point of the text area, which is usually the bottom-left corner.
 
 **Remarks**    
 View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
-The allowed values for x/y:<br>
-MeasuredByPercentage=0:  [0, 0x7fffffff]
-MeasuredByPercentage=1: [0, 100]
+The ordinate origin is the top-left corner of the ReferenceRegion.<br>
+The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
+The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
+The allowed values for x/y: [-10000, 10000]<br>
 
 
 ### As Json Parameter

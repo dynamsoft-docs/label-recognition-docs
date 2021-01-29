@@ -46,6 +46,8 @@ breadcrumbText: API Reference
   | [`AppendSettingsFromString`](c-label-recognition-class/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`OutputSettingsToFile`](c-label-recognition-class/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](c-label-recognition-class/settings.md#dlr_clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
+  | [`GetModeArgument`](c-label-recognition-class/settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`SetModeArgument`](c-label-recognition-class/settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
 
 &nbsp; 
    
@@ -102,6 +104,8 @@ breadcrumbText: API Reference
   | [`DLR_AppendSettingsFromString`](c-functions/settings.md#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`DLR_OutputSettingsToFile`](c-functions/settings.md#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](c-functions/settings.md#dlr_appendsettingsfromstring) | Clears appended LabelRecognitionParameter settings. |
+  | [`DLR_GetModeArgument`](c-functions/settings.md#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`DLR_SetModeArgument`](c-functions/settings.md#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
 
 &nbsp; 
    

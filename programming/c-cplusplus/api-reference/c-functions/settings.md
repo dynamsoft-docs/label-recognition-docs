@@ -17,6 +17,8 @@ needAutoGenerateSidebar: true
   | [`DLR_OutputSettingsToFile`](#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](#dlr_clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
   | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`DLR_GetModeArgument`](#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`DLR_SetModeArgument`](#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
 
 ---
 
@@ -214,3 +216,89 @@ DLR_DestroyInstance(recognizer);
 ```
 
 &nbsp;
+
+## DLR_SetModeArgument
+
+Set argument value for the specified mode parameter.
+
+
+```c
+DLR_API int DLR_SetModeArgument (void* recognizer, const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[] = NULL,  const int errorMsgBufferLen = 0)	
+```   
+#### Parameters
+`[in] recognizer` Handle of the label recognition instance.  
+`[in]	modesName` The mode parameter name to set argument.  
+`[in]	index` The array index of mode parameter to indicate a specific mode.  
+`[in]	argumentName` The name of the argument to set.  
+`[in]	argumentValue` The value of the argument to set.  
+`[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen` The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).  
+*You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
+
+#### Remark
+Check follow link for available modes and arguments:
+- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+
+#### Code Snippet
+```c
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+DLRRuntimeSettings settings;
+int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
+settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+char errorMessage[256];
+DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
+DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
+DLR_DestroyInstance(recognizer);
+```
+
+&nbsp;
+
+
+## DLR_GetModeArgument
+
+Get argument value for the specified mode parameter.
+
+```c
+DLR_API int DLR_GetModeArgument (void* recognizer, const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
+```   
+   
+#### Parameters  
+`[in] recognizer` Handle of the label recognition instance.  
+`[in]	modesName` The mode parameter name to get argument.  
+`[in]	index` The array index of mode parameter to indicate a specific mode.  
+`[in]	argumentName` The name of the argument to get.  
+`[in,out]	valueBuffer` The buffer is allocated by caller and the recommended length is 480. The argument value would be copied to the buffer.  
+`[in]	valueBufferLen` The length of allocated buffer.  
+`[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen` The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).  
+*You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
+
+#### Remark
+Check follow link for available modes and arguments:
+- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+
+#### Code Snippet
+```c
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+DLRRuntimeSettings settings;
+int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
+settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+char errorMessage[256];
+DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
+DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
+DLR_GetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", argumentValue, 480, errorMessage, 256);
+DLR_DestroyInstance(recognizer);
+```
+
+&nbsp;
+

@@ -10,13 +10,15 @@ needAutoGenerateSidebar: true
 
 | Method               | Description |
 |----------------------|-------------|
-  | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
-  | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](#clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
+  | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
+  | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
+  | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
+  | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
 
 ---
 
@@ -202,3 +204,88 @@ delete recognizer;
 ```
 
 &nbsp;
+
+## SetModeArgument
+
+Set argument value for the specified mode parameter.
+
+
+```cpp
+int dynamsoft::dlr::CLabelRecognition::SetModeArgument (const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[] = NULL,  const int errorMsgBufferLen = 0)	
+```   
+#### Parameters
+`[in]	modesName` The mode parameter name to set argument.  
+`[in]	index` The array index of mode parameter to indicate a specific mode.  
+`[in]	argumentName` The name of the argument to set.  
+`[in]	argumentValue` The value of the argument to set.  
+`[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).  
+*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+
+#### Remark
+Check follow link for available modes and arguments:
+- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+
+#### Code Snippet
+```cpp
+CLabelRecognition* recognizer = new CLabelRecognition();
+recognizer->InitLicense("t0260NwAAAHV***************");
+DLRRuntimeSettings settings;
+int errorCode = recognizer->GetRuntimeSettings(&settings);
+settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+char errorMessage[256];
+recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
+delete recognizer;
+```
+
+&nbsp;
+
+
+## GetModeArgument
+
+Get argument value for the specified mode parameter.
+
+```cpp
+int dynamsoft::dlr::CLabelRecognition::GetModeArgument (const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
+```   
+   
+#### Parameters  
+`[in]	modesName` The mode parameter name to get argument.  
+`[in]	index` The array index of mode parameter to indicate a specific mode.  
+`[in]	argumentName` The name of the argument to get.  
+`[in,out]	valueBuffer` The buffer is allocated by caller and the recommended length is 480. The argument value would be copied to the buffer.  
+`[in]	valueBufferLen` The length of allocated buffer.  
+`[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).  
+*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+
+#### Remark
+Check follow link for available modes and arguments:
+- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+
+#### Code Snippet
+```cpp
+CLabelRecognition* recognizer = new CLabelRecognition();
+recognizer->InitLicense("t0260NwAAAHV***************");
+DLRRuntimeSettings settings;
+int errorCode = recognizer->GetRuntimeSettings(&settings);
+settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+char errorMessage[256];
+char argumentValue[480];
+recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
+recognizer->GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", argumentValue, 480, errorMessage, 256);
+delete recognizer;
+```
+
+&nbsp;
+

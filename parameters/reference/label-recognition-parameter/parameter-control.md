@@ -49,6 +49,9 @@ It must be a unique name.
 &nbsp;
 
 
+## [BinarizationModes](binarization-modes.md#binarizationmodes)
+&nbsp;
+
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
 
@@ -70,6 +73,9 @@ All TextArea Objects without CharacterModelName set will be set from this settin
 }
 ```
 
+&nbsp;
+
+## [GrayscaleTransformationModes](grayscale-transformation-modes.md#grayscaletransformationmodes)
 &nbsp;
 
 ## LetterHeightRange
@@ -188,6 +194,9 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
+&nbsp;
+
+## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)
 &nbsp;
 
 ## TextRegExPattern

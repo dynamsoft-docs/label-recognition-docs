@@ -183,7 +183,7 @@ Describes the deployment type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
-| .Net | `enum Dynamsoft.DLR.EnumDMDeploymentType` |
+| .Net | `enum EnumDMDeploymentType` |
 | Android | `N/A` |
 
 

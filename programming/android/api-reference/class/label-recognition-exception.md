@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - LabelRecognitionException Class
-description: This page shows the LabelRecognitionException Class of Dynamsoft Barcode Reader for Android SDK.
+title: Dynamsoft Label Recognition Android API Reference - LabelRecognitionException Class
+description: This page shows the LabelRecognitionException Class of Dynamsoft Label Recognition for Android SDK.
 keywords: LabelRecognitionException, class, api reference, android
 needAutoGenerateSidebar: false
 ---

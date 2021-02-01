@@ -7,6 +7,15 @@ needAutoGenerateSidebar: true
 ---
 
 # Dynamsoft Label Recognition - Error Code  
+ 
+## Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `#define` |
+| .Net | `enum Dynamsoft.DLR.EnumDLRErrorCode` |
+| Android | `class com.dynamsoft.dlr.EnumDLRErrorCode` |
+| ObjC / Swift | `enum EnumDLRErrorCode` |
   
 ## Error code common to all programming languages
 

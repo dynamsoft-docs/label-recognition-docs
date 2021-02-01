@@ -25,7 +25,7 @@ typedef struct tagDLRReferenceRegion  DLRReferenceRegion
 |---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}parameter-mode-enums.html#dlrlocalizationsourcetype) |
 | [`points`](#points) | [`DLRPoint`](dlr-point.md)[4] |
-| [`regionMeasuredByPercentage`](#regionMeasuredByPercentage) | *int* |
+| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`barcodeFormatIds`](#barcodeformatids) | *int* |
 | [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |

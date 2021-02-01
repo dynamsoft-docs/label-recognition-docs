@@ -21,7 +21,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`regionPredetectionModes`](#regionpredetectionmodes) | *int\[8\]* |
 | [`referenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
 | [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
-| [`grayscaleTransformationModes`](#grayscaleTransformationModes) | *int\[8\]* |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[8\]* |
 
 
 ### maxThreadCount

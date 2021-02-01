@@ -42,7 +42,7 @@ The class object of template settings.
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -68,7 +68,7 @@ recognizer.initLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.linesCount = 1;
 recognizer.updateRuntimeSettings(settings);
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -91,7 +91,7 @@ DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.linesCount = 1;
 recognizer.updateRuntimeSettings(settings);
 recognizer.resetRuntimeSettings();
-reader.destroy();
+recognizer.destroy();
 ```
 
 
@@ -118,7 +118,7 @@ void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromString (String content
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -146,7 +146,7 @@ LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -190,7 +190,7 @@ recognizer.initLicense("t0260NwAAAHV***************");
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -226,7 +226,7 @@ DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -265,7 +265,7 @@ settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 String argumentValue = recognizer.getModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");
-reader.destroy();
+recognizer.destroy();
 ```
 
 &nbsp;

@@ -74,14 +74,14 @@ Sets product key and activate the SDK.
 void com.dynamsoft.dlr.LabelRecognition.initLicense(String license) throws LabelRecognitionException
 ```   
 
-#### Parameters
+### Parameters
 `license`: The product keys.
 
-#### Exceptions
+### Exceptions
 
 [`LabelRecognitionException`](../class/LabelRecognitionException.md)
 
-#### Code Snippet
+### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -98,11 +98,11 @@ Initializes the label recognition license and connects to the specified server f
 void com.dynamsoft.dlr.LabelRecognition.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo, DLRLTSLicenseVerificationListener listener)
 ```   
 
-#### Parameters
+### Parameters
 - `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
 - `listener`: The delegate to handle callback when license server returns.
 
-#### Code Snippet
+### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DMLTSConnectionParameters info = new DMLTSConnectionParameters();

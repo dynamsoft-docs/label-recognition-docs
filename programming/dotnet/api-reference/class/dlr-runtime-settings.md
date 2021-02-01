@@ -1,42 +1,33 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition C & C++ Struct - DLRRuntimeSettings
-description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognition for C & C++ Language.
-keywords: DLRRuntimeSettings, struct, c, c++
+title: Dynamsoft Label Recognition .Net Class - DLR_RuntimeSettings
+description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognition for .Net Language.
+keywords: DLR_RuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true
 ---
 
 
-# DLRRuntimeSettings
+# DLR_RuntimeSettings
 Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
-
-## Typedefs
-
-```cpp
-typedef struct tagDLRRuntimeSettings  DLRRuntimeSettings
-```  
-  
----
   
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`maxThreadCount`](#maxthreadcount) | *int* |
-| [`characterModelName`](#charactermodelname) | *char\[64\]* |
-| [`linesCount`](#linescount) | *int* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)\[8\] |
-| [`referenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
-| [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
-| [`reserved`](#reserved) | *char\[64\]* |
+| [`MaxThreadCount`](#maxthreadcount) | *int* |
+| [`CharacterModelName`](#charactermodelname) | *string* |
+| [`LinesCount`](#linescount) | *int* |
+| [`RegionPredetectionModes`](#regionpredetectionmodes) | *int\[8\]* |
+| [`ReferenceRegion`](#referenceregion) | [`DLR_ReferenceRegion`](dlr-reference-region.md) |
+| [`TextArea`](#textarea) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
+| [`GrayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[8\]* |
 
 
-### maxThreadCount
+### MaxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
-```cpp
-int tagDLRRuntimeSettings::maxThreadCount
+```csharp
+int Dynamsoft.DLR.DLR_RuntimeSettings.MaxThreadCount
 ```
 - **Value range**   
     [1, 4]
@@ -47,16 +38,16 @@ int tagDLRRuntimeSettings::maxThreadCount
 - **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
-### characterModelName
+### CharacterModelName
 The name of the CharacterModel.
-```cpp
-char tagDLRRuntimeSettings::characterModelName[64]
+```csharp
+string Dynamsoft.DLR.DLR_RuntimeSettings.CharacterModelName
 ```
 
-### linesCount
+### LinesCount
 Sets the text lines count of the text area.
-```cpp
-int tagDLRRuntimeSettings::linesCount
+```csharp
+int Dynamsoft.DLR.DLR_RuntimeSettings.LinesCount
 ```
 - **Value range**   
     [0, 200]
@@ -68,10 +59,10 @@ int tagDLRRuntimeSettings::linesCount
     0: line count is not certain.
 
 
-### regionPredetectionModes
+### RegionPredetectionModes
 Sets the region pre-detection mode.
-```cpp
-DLRRegionPredetectionMode tagDLRRuntimeSettings::regionPredetectionModes[8]
+```csharp
+int[] Dynamsoft.DLR.DLR_RuntimeSettings.RegionPredetectionModes[8]
 ```
 - **Value range**   
     Each array item can be any one of the [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
@@ -83,22 +74,22 @@ DLRRegionPredetectionMode tagDLRRuntimeSettings::regionPredetectionModes[8]
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
-### referenceRegion
+### ReferenceRegion
 Sets the reference region to search for text.
-```cpp
-DLRReferenceRegion tagDLRRuntimeSettings::referenceRegion
+```csharp
+DLR_ReferenceRegion Dynamsoft.DLR.DLR_RuntimeSettings.ReferenceRegion
 ```
 
-### textArea
+### TextArea
 Sets the text area relative to the reference region.
-```cpp
-DLRQuadrilateral tagDLRRuntimeSettings::textArea
+```csharp
+DLR_Quadrilateral Dynamsoft.DLR.DLR_RuntimeSettings.TextArea
 ```
 
-### grayscaleTransformationModes
+### GrayscaleTransformationModes
 Sets the grayscale transformation mode.
-```cpp
-DLRGrayscaleTransformationMode tagDLRRuntimeSettings::grayscaleTransformationModes[8]
+```csharp
+int[] Dynamsoft.DLR.DLR_RuntimeSettings.GrayscaleTransformationModes[8]
 ```
 - **Value range**   
     Each array item can be any one of the [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
@@ -109,9 +100,4 @@ DLRGrayscaleTransformationMode tagDLRRuntimeSettings::grayscaleTransformationMod
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
   
-### reserved
-Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.
-```cpp
-char tagDLRRuntimeSettings::reserved[64]
-```
 

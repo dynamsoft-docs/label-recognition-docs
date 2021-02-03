@@ -23,7 +23,7 @@ int dynamsoft::dlr::CLabelRecognition::RecognizeByBuffer(const DLRImageData* ima
 ```   
    
 #### Parameters
-`[in]	imageData` A struct of [`DLRImageData`]({{ site.c-cplusplus-structs }}dlr-image-data.md) that represents an image.  
+`[in]	imageData` A struct of [`DLRImageData`]({{ site.c-cplusplus-structs }}dlr-image-data.html) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value

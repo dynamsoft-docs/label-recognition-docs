@@ -127,12 +127,12 @@ breadcrumbText: API Reference
 &nbsp; 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat)
-- [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat_2)
+- [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat)
+- [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2)
 - [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
 - [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
-- [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.md#dlrimagepixelformat)
-- [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.md#dlrlocalizationsourcetype)
+- [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
+- [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
 - [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
 - [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	

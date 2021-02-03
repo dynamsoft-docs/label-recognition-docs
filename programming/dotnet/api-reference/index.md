@@ -74,12 +74,12 @@ breadcrumbText: API Reference
 &nbsp; 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat)
-- [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat_2)
+- [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat)
+- [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2)
 - [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
 - [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
-- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.md#dlrimagepixelformat)
-- [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.md#dlrlocalizationsourcetype)
+- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
+- [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
 - [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dmchargeway)	
 - [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dmdeploymenttype)	

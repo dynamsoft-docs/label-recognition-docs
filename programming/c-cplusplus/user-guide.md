@@ -115,18 +115,18 @@ To reference multiple regions, we cannot follow the runtime settings example abo
 ```cpp
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
-        \"FirstPoint\" : [0,66],\
-        \"SecondPoint\" : [200,66],\
-        \"MeasuredByPercentage\" : 0,\
-        \"ThirdPoint\" : [200,125],\
-        \"FourthPoint\" : [0,125],\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\"\
     },{\
-        \"FirstPoint\" : [0,0],\
-        \"SecondPoint\" : [100,0],\
-        \"MeasuredByPercentage\" : 1,\
-        \"ThirdPoint\" : [100,50],\
-        \"FourthPoint\" : [0,50],\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R2\"\
     }]";
     string DLRParameterArray = 
@@ -157,11 +157,11 @@ To reference multiple regions, we cannot follow the runtime settings example abo
     }]";
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
-        \"FirstPoint\" : [ 103, 57 ], \
-        \"SecondPoint\" : [ 126, 57 ], \
-        \"ThirdPoint\" : [ 126, 70 ], \
-        \"FourthPoint\" : [103, 70],\
-        \"MeasuredByPercentage\" : 0,\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\",\
         \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
     }]";
@@ -186,7 +186,7 @@ Dynamsoft Label Recognition SDK supports automatic region detection to extract t
     dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
 ```
 
-Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`](#).
+Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode).
 
 ### Use a template to change settings
 
@@ -194,7 +194,7 @@ Easily manage recognition settings and reduce redundant lines of code by using t
 
 #### Change template settings using a string
 
-Use [`AppendSettingsFromString`](#) when changing template settings with a string. The following demonstrates how to use a string template to modify recognition settings.
+Use [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) when changing template settings with a string. The following demonstrates how to use a string template to modify recognition settings.
 
 ```cpp
     string characterModelArray = "\"CharacterModelArray\":[\
@@ -219,7 +219,7 @@ Use [`AppendSettingsFromString`](#) when changing template settings with a strin
 
 #### Change template settings using a JSON file
 
-As with using a string, we will use the same method [`AppendSettingsFromString`](#) to modify the template setting. When using a JSON file, we'll need to do a little more work to get the JSON file into an acceptable string.
+As with using a string, we will use the same method [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) to modify the template setting. When using a JSON file, we'll need to do a little more work to get the JSON file into an acceptable string.
 
 Let's take a look at the following JSON settings file, `DLRTemplate.json`. 
 
@@ -230,8 +230,8 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
             "Name":"locr",
             "MaxThreadCount":4,
             "LinesCount":1,
-            "TextColourModes":[{
-                "Mode":"DLR_TCM_DARK_ON_LIGHT"
+            "GrayscaleTransformationModes":[{
+                "Mode":"DLR_GTM_INVERTED"
             }],
             "RegionPredetectionModes":[
             {
@@ -247,11 +247,11 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
         "ReferenceRegionArray":[
         {
             "Name":"R1",
-            "FirstPoint":[0,0],
-            "SecondPoint":[100,0],
-            "ThirdPoint":[100,100],
-            "FourthPoint":[0,100],
-            "MeasuredByPercentage":1,
+            "Localization": 
+                {
+                    "SourceType": "DLR_LST_PREDETECTED_REGION",
+                    "RegionPredetectionModesIndex": 0
+                },
             "TextAreaNameArray":["T1"]
         }
         ],
@@ -276,7 +276,7 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
     }
 ```
 
-In the following cpp file, we'll demonstrate how to read the `DLRTemplate.json` file and use it in [`AppendSettingsFromString`](#) before recognizing the image. The `ReadJsonFile` function will convert the JSON object of the file parameter to an acceptable string. 
+In the following cpp file, we'll demonstrate how to read the `DLRTemplate.json` file and use it in [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) before recognizing the image. The `ReadJsonFile` function will convert the JSON object of the file parameter to an acceptable string. 
 
 ```cpp
     string ReadJsonFile(const string& pJsonFile) {

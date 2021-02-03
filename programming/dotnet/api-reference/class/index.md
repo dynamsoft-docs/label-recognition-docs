@@ -14,7 +14,7 @@ breadcrumbText: Structs
 - [`DLR_CharacterResult`](dlr-character-result.md)		
 - [`DLR_Exception`](label-recognition-exception.md)	
 - [`DLR_ImageData`](dlr-image-data.md)		
-- [`DLR_LineResult`](dlr-line-Result.md)	
+- [`DLR_LineResult`](dlr-line-result.md)	
 - [`DLR_Quadrilateral`](dlr-quadrilateral.md)	
 - [`DLR_ReferenceRegion`](dlr-reference-region.md)	
 - [`DLR_Result`](dlr-result.md)		

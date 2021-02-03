@@ -204,11 +204,11 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `DLRRuntimeSettings` Member
-`RegionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
+`regionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}FurtherModes.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
 
 
 **See Also**    

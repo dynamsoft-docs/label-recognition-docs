@@ -23,7 +23,7 @@ DLR_Result[] Dynamsoft.DLR.LabelRecognition.RecognizeByBuffer(DLR_ImageData imag
 ```   
    
 ### Parameters
-`[in]	imageData` An object of DLR_ImageData that represents an image.  
+`[in]	imageData` An object of [`DLR_ImageData`](../class/dlr-image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 ### Return value

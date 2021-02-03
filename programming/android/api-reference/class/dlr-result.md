@@ -20,7 +20,7 @@ Stores the recognized result.
 | [`textAreaName`](#textareaname) | *String* |
 | [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
 | [`confidence`](#confidence) | *int* |
-| [`lineResults`](#lineresults) | [`DLRLineResult\[\]`](dlr-line-result.md) |
+| [`lineResults`](#lineresults) | [`DLRLineResult[]`](dlr-line-result.md) |
 
 
 ### referenceRegionName

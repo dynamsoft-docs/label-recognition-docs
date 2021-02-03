@@ -79,7 +79,7 @@ void com.dynamsoft.dlr.LabelRecognition.initLicense(String license) throws Label
 
 ### Exceptions
 
-[`LabelRecognitionException`](../class/LabelRecognitionException.md)
+[`LabelRecognitionException`](../class/label-recognition-exception.md)
 
 ### Code Snippet
 ```java

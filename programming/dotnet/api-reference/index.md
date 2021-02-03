@@ -9,7 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Label Recognition - .Net API Reference
 
-- [`LabelRecognition` Methods](#label-recognition-methods) 
+- [`LabelRecognition` Methods](#labelrecognition-methods) 
 - [Classes](#classes)  
 - [Enumerations](#enumerations)
 - [Error Code](#error-code)
@@ -60,12 +60,12 @@ breadcrumbText: API Reference
    
 &nbsp; 
 
-## [Class](class/index.md)
+## [Classes](class/index.md)
 - [`DMLTSConnectionParameters`](class/dm-lts-connection-parameters.md)
 - [`DLR_CharacterResult`](class/dlr-character-result.md)		
 - [`DLR_Exception`](class/label-recognition-exception.md)	
 - [`DLR_ImageData`](class/dlr-image-data.md)		
-- [`DLR_LineResult`](class/dlr-line-Result.md)	
+- [`DLR_LineResult`](class/dlr-line-result.md)	
 - [`DLR_Quadrilateral`](class/dlr-quadrilateral.md)	
 - [`DLR_ReferenceRegion`](class/dlr-reference-region.md)	
 - [`DLR_Result`](class/dlr-result.md)		
@@ -74,14 +74,17 @@ breadcrumbText: API Reference
 &nbsp; 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#enumdlrimagepixelformat)
-- [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrregionpredetectionmode)
-- [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrbinarizationmode)
-- [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrgrayscaletransformationmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#enumdmchargeway)	
-- [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#enumdmdeploymenttype)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#enumdmlicensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#enumdmuuidgenerationmethod)	
+- [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat)
+- [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat_2)
+- [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
+- [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
+- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.md#dlrimagepixelformat)
+- [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.md#dlrlocalizationsourcetype)
+- [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dmchargeway)	
+- [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dmdeploymenttype)	
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dmlicensemodule)	
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dmuuidgenerationmethod)	
 
 &nbsp; 
 

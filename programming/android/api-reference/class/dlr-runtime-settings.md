@@ -18,10 +18,10 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`maxThreadCount`](#maxthreadcount) | *int* |
 | [`characterModelName`](#charactermodelname) | *String* |
 | [`linesCount`](#linescount) | *int* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | *int\[8\]* |
+| [`regionPredetectionModes`](#regionpredetectionmodes) | *int\[\]* |
 | [`referenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
 | [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[8\]* |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[\]* |
 
 
 ### maxThreadCount
@@ -62,7 +62,7 @@ int com.dynamsoft.dlr.DLRRuntimeSettings.linesCount
 ### regionPredetectionModes
 Sets the region pre-detection mode.
 ```java
-int[] com.dynamsoft.dlr.DLRRuntimeSettings.regionPredetectionModes[8]
+int[] com.dynamsoft.dlr.DLRRuntimeSettings.regionPredetectionModes[]
 ```
 - **Value range**   
     Each array item can be any one of the [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
@@ -89,7 +89,7 @@ DLRQuadrilateral com.dynamsoft.dlr.DLRRuntimeSettings.textArea
 ### grayscaleTransformationModes
 Sets the grayscale transformation mode.
 ```java
-int[] com.dynamsoft.dlr.DLRRuntimeSettings.grayscaleTransformationModes[8]
+int[] com.dynamsoft.dlr.DLRRuntimeSettings.grayscaleTransformationModes[]
 ```
 - **Value range**   
     Each array item can be any one of the [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.

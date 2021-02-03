@@ -13,7 +13,7 @@ breadcrumbText: Structs
 - [`DM_LTSConnectionParameters`](dm-lts-connection-parameters.md)
 - [`DLRCharacterResult`](dlr-character-result.md)		
 - [`DLRImageData`](dlr-image-data.md)		
-- [`DLRLineResult`](dlr-line-Result.md)	
+- [`DLRLineResult`](dlr-line-result.md)	
 - [`DLRPoint`](dlr-point.md)		
 - [`DLRQuadrilateral`](dlr-quadrilateral.md)	
 - [`DLRReferenceRegion`](dlr-reference-region.md)	

@@ -31,7 +31,7 @@ PublicRuntimeSettings Dynamsoft.DLR.LabelRecognition.GetRuntimeSettings ()
    
 ### Return value
 
-The class object of template settings.
+The class object of runtime settings.
 
 ### Exceptions
 [`DLR_Exception`](../class/label-recognition-exception.md)
@@ -54,7 +54,7 @@ void Dynamsoft.DLR.LabelRecognition.UpdateRuntimeSettings (DLR_RuntimeSettings s
 ```   
    
 ### Parameters
-`settings` The class object of template settings.  
+`settings` The class object of runtime settings.  
 
 ### Exceptions
 
@@ -115,7 +115,7 @@ void Dynamsoft.DLR.LabelRecognition.AppendSettingsFromString (string content)
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.Dispose();
 ```
 
@@ -141,7 +141,7 @@ void Dynamsoft.DLR.LabelRecognition.OutputSettingsToFile (string filePath, strin
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.OutputSettingsToFile("your saving file path", "currentRuntimeSettings");
 recognizer.Dispose();
 ```
@@ -185,7 +185,7 @@ void Dynamsoft.DLR.LabelRecognition.UpdateReferenceRegionFromBarcodeResults (Tex
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 recognizer.Dispose();
@@ -212,8 +212,7 @@ void Dynamsoft.DLR.LabelRecognition.SetModeArgument (string modesName, int index
 
 ### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 ### Code Snippet
 ```csharp
@@ -250,8 +249,7 @@ the optional argument for a specified mode in Modes parameters.
 
 ### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 ### Code Snippet
 ```csharp

@@ -94,11 +94,11 @@ void Dynamsoft.DLR.LabelRecognition.InitLicenseFromLTS(DMLTSConnectionParameters
 
 ### Code Snippet
 ```csharp
-LabelRecognition recognizer = new LabelRecognition();
 DMLTSConnectionParameters info = new DMLTSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
-recognizer.InitLicenseFromLTS(info);
+LabelRecognition.InitLicenseFromLTS(info);
+LabelRecognition recognizer = new LabelRecognition();
 recognizer.Dispose();
 ```
 

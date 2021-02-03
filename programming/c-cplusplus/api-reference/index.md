@@ -9,7 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Label Recognition - C/C++ API Reference
 
-- [`CLabelRecognition` Class](#c-label-recognition-class) 
+- [`CLabelRecognition` Class](#clabelrecognition-class) 
 - [C Functions](#c-functions)
 - [Enumerations](#enumerations)
 - [Error Code](#error-code)
@@ -21,8 +21,8 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetErrorString`](c-label-recognition-class/general.mdgeterrorstring) | Returns the error string. |
-  | [`GetVersion`](c-label-recognition-class/general.mdgetversion) | Returns the version number string for the SDK. |
+  | [`GetErrorString`](c-label-recognition-class/general.md#geterrorstring) | Returns the error string. |
+  | [`GetVersion`](c-label-recognition-class/general.md#getversion) | Returns the version number string for the SDK. |
    
 &nbsp; 
 
@@ -30,7 +30,7 @@ breadcrumbText: API Reference
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitLicense`](c-label-recognition-class/initialization.mdinitlicense) | Sets the license and activates the SDK. |
+  | [`InitLicense`](c-label-recognition-class/initialization.md#initlicense) | Sets the license and activates the SDK. |
   | [`InitLTSConnectionParameters`](c-label-recognition-class/initialization.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
   | [`InitLicenseFromLTS`](c-label-recognition-class/initialization.md#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
@@ -40,12 +40,12 @@ breadcrumbText: API Reference
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetRuntimeSettings`](c-label-recognition-class/settings.mdgetruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`UpdateRuntimeSettings`](c-label-recognition-class/settings.mdupdateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`ResetRuntimeSettings`](c-label-recognition-class/settings.mdresetruntimesettings) | Resets the runtime settings. |
-  | [`AppendSettingsFromString`](c-label-recognition-class/settings.mdappendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
-  | [`OutputSettingsToFile`](c-label-recognition-class/settings.mdoutputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
-  | [`ClearAppendedSettings`](c-label-recognition-class/settings.mdclearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
+  | [`GetRuntimeSettings`](c-label-recognition-class/settings.md#getruntimesettings) | Gets the current settings and saves it into a struct. |
+  | [`UpdateRuntimeSettings`](c-label-recognition-class/settings.md#updateruntimesettings) | Updates runtime settings with a given struct. |
+  | [`ResetRuntimeSettings`](c-label-recognition-class/settings.md#resetruntimesettings) | Resets the runtime settings. |
+  | [`AppendSettingsFromString`](c-label-recognition-class/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`OutputSettingsToFile`](c-label-recognition-class/settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
+  | [`ClearAppendedSettings`](c-label-recognition-class/settings.md#clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
   | [`UpdateReferenceRegionFromBarcodeResults`](c-label-recognition-class/settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
   | [`GetModeArgument`](c-label-recognition-class/settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`SetModeArgument`](c-label-recognition-class/settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
@@ -56,8 +56,8 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`RecognizeByBuffer`](c-label-recognition-class/recognizing.mdrecognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`RecognizeByFile`](c-label-recognition-class/recognizing.mdrecognizebyfile) | Recognizes text from a specified image file. |
+  | [`RecognizeByBuffer`](c-label-recognition-class/recognizing.md#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`RecognizeByFile`](c-label-recognition-class/recognizing.md#recognizebyfile) | Recognizes text from a specified image file. |
    
 &nbsp; 
    
@@ -65,7 +65,7 @@ breadcrumbText: API Reference
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetAllDLRResults`](c-label-recognition-class/result.mdgetalldlrresults) | Gets all recognized results. |
+  | [`GetAllDLRResults`](c-label-recognition-class/result.md#getalldlrresults) | Gets all recognized results. |
   | [`FreeDLRResults`](c-label-recognition-class/result.md#freedlrresults) | Frees memory allocated for recognized results. |
        
 &nbsp; 
@@ -127,10 +127,13 @@ breadcrumbText: API Reference
 &nbsp; 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
-- [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat)
+- [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat_2)
 - [`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
 - [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
+- [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.md#dlrimagepixelformat)
+- [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.md#dlrlocalizationsourcetype)
+- [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
 - [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	
 - [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
@@ -145,7 +148,7 @@ breadcrumbText: API Reference
 - [`DLRReferenceRegion`](structs/dlr-reference-region.md)	
 - [`DLRResultArray`](structs/dlr-result-array.md)		
 - [`DLRResult`](structs/dlr-result.md)		
-- [`DLRLineResult`](structs/dlr-line-Result.md)	
+- [`DLRLineResult`](structs/dlr-line-result.md)	
 - [`DLRCharacterResult`](structs/dlr-character-result.md)		
 - [`DLRPoint`](structs/dlr-point.md)		
 - [`DLRImageData`](structs/dlr-image-data.md)		

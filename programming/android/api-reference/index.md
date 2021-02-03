@@ -9,7 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Label Recognition - Android API Reference
 
-- [`LabelRecognition` Methods](#label-recognition-methods) 
+- [`LabelRecognition` Methods](#labelrecognition-methods) 
 - [Classes](#classes)  
 - [Enumerations](#enumerations)
 - [Error Code](#error-code)
@@ -60,12 +60,12 @@ breadcrumbText: API Reference
    
 &nbsp; 
 
-## [Class](class/index.md)
+## [Classes](class/index.md)
 - [`DLRRuntimeSettings`](class/dlr-runtime-settings.md)	
 - [`DLRQuadrilateral`](class/dlr-quadrilateral.md)	
 - [`DLRReferenceRegion`](class/dlr-reference-region.md)	
 - [`DLRResult`](class/dlr-result.md)		
-- [`DLRLineResult`](class/dlr-line-Result.md)	
+- [`DLRLineResult`](class/dlr-line-result.md)	
 - [`DLRCharacterResult`](class/dlr-character-result.md)		
 - [`DLRPoint`](class/dlr-point.md)		
 - [`DLRImageData`](class/dlr-image-data.md)		
@@ -73,10 +73,13 @@ breadcrumbText: API Reference
 &nbsp; 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#enumdlrimagepixelformat)
-- [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrregionpredetectionmode)
-- [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrbinarizationmode)
-- [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdlrgrayscaletransformationmode)
+- [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat)
+- [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.md#dlrbarcodeformat_2)
+- [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
+- [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
+- [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.md#dlrimagepixelformat)
+- [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.md#dlrlocalizationsourcetype)
+- [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#enumdmchargeway)	
 - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#enumdmlicensemodule)	
 - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#enumdmuuidgenerationmethod)	

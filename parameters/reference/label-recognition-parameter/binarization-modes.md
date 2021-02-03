@@ -41,7 +41,6 @@ needAutoGenerateSidebar: true
 - [BlockSizeX](#blocksizex)
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
-- [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
@@ -93,17 +92,6 @@ Sets whether to enable binary vacancy filling.
 
   For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. Better accuracy for images with a large module size.  
   
-
-##### ImagePreprocessingModesIndex 
-The index of a specific image preprocessing mode in the [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 0x7fffffff] | -1 | "DLR_BM_LOCAL_BLOCK" |         
-
-- **Remarks**     
-  -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
-
 
 ##### ThreshValueCoefficient 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.

@@ -15,13 +15,13 @@ Stores the reference region information.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}parameter-mode-enums.html#dlrlocalizationsourcetype) |
-| [`points`](#points) | [`DLRPoint\[\]`](dlr-point.md) |
+| [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) |
+| [`points`](#points) | [`DLRPoint[]`](dlr-point.md) |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`barcodeFormatIds`](#barcodeformatids) | *int* |
 | [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |
-| [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *byte\[\]* |
+| [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* |
 
 ### localizationSourceType
 The source type used to localize the reference region(s).
@@ -40,7 +40,7 @@ int com.dynamsoft.dlr.DLRReferenceRegion.localizationSourceType
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```java
-DLRPoint[4] com.dynamsoft.dlr.DLRReferenceRegion.points
+DLRPoint[] com.dynamsoft.dlr.DLRReferenceRegion.points
 ```
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
@@ -86,7 +86,7 @@ The formats of the barcode in BarcodeFormat group 1.
 int com.dynamsoft.dlr.DLRReferenceRegion.barcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`DLRBarcodeFormat`]({{ site.enumerations }}format-enums.html#dlrbarcodeformat) Enumeration items
+    A combined value of [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
       
 - **Default value**   
     DLR_BF_ALL
@@ -103,7 +103,7 @@ The formats of the barcode in BarcodeFormat group 2.
 int com.dynamsoft.dlr.DLRReferenceRegion.barcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`DLRBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#dlrbarcodeformat_2) Enumeration items
+    A combined value of [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
       
 - **Default value**   
     DLR_BF2_NULL
@@ -116,7 +116,7 @@ int com.dynamsoft.dlr.DLRReferenceRegion.barcodeFormatIds_2
 ### barcodeTextRegExPattern
 The regular express pattern of barcode text.
 ```java
-byte[] com.dynamsoft.dlr.DLRReferenceRegion.barcodeTextRegExPattern
+String com.dynamsoft.dlr.DLRReferenceRegion.barcodeTextRegExPattern
 ```
 
 - **Remarks**   

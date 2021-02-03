@@ -30,7 +30,7 @@ int dynamsoft::dlr::CLabelRecognition::GetRuntimeSettings (DLRRuntimeSettings* s
 ```   
    
 #### Parameters
-`[in,out]	settings` The struct of template settings.  
+`[in,out]	settings` The struct of runtime settings.  
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -51,13 +51,13 @@ delete recognizer;
 Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) struct.
 
 ```cpp
-int dynamsoft::dlr::CLabelRecognition::UpdateRuntimeSettings (DLRRuntimeSettings* settings, char errorMsgBuffer[], const int errorMsgBufferLen)
+int dynamsoft::dlr::CLabelRecognition::UpdateRuntimeSettings (DLRRuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
-`[in]	settings` The struct of template settings.  
-`[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of the allocated buffer.  
+`[in]	settings` The struct of runtime settings.  
+`[in,out]	errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen` <sub>Optional</sub> The length of the allocated buffer.  
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -108,13 +108,13 @@ delete recognizer;
 Append a new template string to the current label recognition instance.
 
 ```cpp
-int dynamsoft::dlr::CLabelRecognition::AppendSettingsFromString (const char* content, char errorMsgBuffer[], const int errorMsgBufferLen)
+int dynamsoft::dlr::CLabelRecognition::AppendSettingsFromString (const char* content, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
 `[in] content` A JSON string that represents the content of the settings.   
-`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
-`[in] errorMsgBufferLen` The length of allocated buffer.
+`[in,out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in] errorMsgBufferLen` <sub>Optional</sub> The length of allocated buffer.
 
 
 #### Return value
@@ -126,7 +126,7 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessage[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 delete recognizer;
 ```
 
@@ -154,7 +154,7 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\",\"RelativeTextAreaNames\":\"T1\"}]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
 recognizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 delete recognizer;
 ```
@@ -173,7 +173,7 @@ void dynamsoft::dlr::CLabelRecognition::ClearAppendedSettings ()
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
-recognizer->ClearAppendedSettings(labelRecognizer);
+recognizer->ClearAppendedSettings();
 ```
 
 ## UpdateReferenceRegionFromBarcodeResults
@@ -197,7 +197,7 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0}},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer->UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 delete recognizer;
@@ -227,8 +227,7 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 #### Code Snippet
 ```cpp
@@ -269,8 +268,7 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`BinarizationModes`]({{ site.parameters_reference }}label-recognition-parameter/binarization-modes.html#binarizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 #### Code Snippet
 ```cpp

@@ -142,6 +142,31 @@ Describes the image pixel format.
 
 &nbsp;
 
+## DLRLocalizationSourceType
+Describes the source type used to localize the reference region(s).
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DLRLocalizationSourceType` |
+| .Net | `enum EnumDLRLocalizationSourceType` |
+| Android | `class EnumDLRLocalizationSourceType` |
+| ObjC / Swift | `enum EnumDLRLocalizationSourceType` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| DLR_LST_MANUAL_SPECIFICATION | EnumDLRLocalizationSourceTypeManualSpecification | 0x01 | Define the reference region using the manually specified location. |
+| DLR_LST_PREDETECTED_REGION | EnumDLRLocalizationSourceTypePredetectedRegion | 0x02 | Define the reference region using the result(s) of region predetection process. |
+| DLR_LST_BARCODE | EnumDLRLocalizationSourceTypeBarcode | 0x04 | Define the reference region using the barcode info. |
+
+
+
+&nbsp;
+
 
 ## DM_ChargeWay
 Describes charge way.

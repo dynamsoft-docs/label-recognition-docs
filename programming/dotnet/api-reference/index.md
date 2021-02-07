@@ -81,10 +81,10 @@ breadcrumbText: API Reference
 - [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
 - [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
 - [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dmchargeway)	
-- [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dmdeploymenttype)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dmlicensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dmuuidgenerationmethod)	
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 
 &nbsp; 
 

@@ -59,7 +59,7 @@ InputStream isTxt = manager.open("CharacterModel/NumberLetter.txt");
 byte[] txt = new byte[isTxt.available()];
 isTxt.read(txt);
 isTxt.close();
-recognizer.appendCaffeModelBuffer("NumberLetter", prototxt, txt, characterModel);
+recognizer.appendCharacterModelBuffer("NumberLetter", prototxt, txt, characterModel);
 recognizer.destroy();
 ```
 

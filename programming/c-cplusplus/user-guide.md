@@ -110,7 +110,7 @@ There are two ways to set a single reference region - 1) through runtime setting
 
 ### Specify multiple reference regions
 
-To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`](#).
+To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`]({{ site.parameters-reference }}organizational-json-parameter.html#referenceregionarray).
 
 ```cpp
     string ReferenceRegionArray = 
@@ -125,7 +125,7 @@ To reference multiple regions, we cannot follow the runtime settings example abo
         \"Localization\": \
             {\
                 \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 1\
+                \"RegionPredetectionModesIndex\": 0\
             },\
         \"Name\":\"R2\"\
     }]";
@@ -200,11 +200,11 @@ Use [`AppendSettingsFromString`](api-reference/c-label-recognition-class/setting
     string characterModelArray = "\"CharacterModelArray\":[\
         {\
             \"Name\":\"Number\",\
-            \"DirectoryPath\" : \"CaffeModel\"\
+            \"DirectoryPath\" : \"CharacterModel\"\
         },\
         {\
             \"Name\":\"NumberLetter\",\
-            \"DirectoryPath\" : \"CaffeModel\"\
+            \"DirectoryPath\" : \"CharacterModel\"\
         }]";
     
     string TextAreaArray = "\"TextAreaArray\":[{\"CharacterModelName\" : \"NumberLetter\",\"Name\" : \"numberLetterArea\"}]";

@@ -14,6 +14,7 @@ needAutoGenerateSidebar: true
   | [`Dispose`](#dispose) | Destroys an instance of `LabelRecognition` object.|   
   | [`InitLicense`](#initlicense) | Sets product key and activates the SDK. |
   | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
 
   ---
 
@@ -78,12 +79,31 @@ recognizer.Dispose();
 
 &nbsp;
 
+## InitLTSConnectionParameters
+Initializes a DMLTSConnectionParameters struct with default values.
+
+```csharp
+static DMLTSConnectionParameters Dynamsoft.DLR.LabelRecognition.InitLTSConnectionParameters()
+```   
+
+#### Code Snippet
+```csharp
+DMLTSConnectionParameters ltsInfo = LabelRecognition.InitLTSConnectionParameters();
+ltsInfo.HandShake = "*****-hs-****";
+ltsInfo.SessionPassword = "******";
+LabelRecognition.InitLicenseFromLTS(info);
+LabelRecognition recognizer = new LabelRecognition();
+recognizer.Dispose();
+```
+
+&nbsp;
+
 
 ## InitLicenseFromLTS
 Initializes the label recognition license and connects to the specified server for online verification.
 
 ```csharp
-void Dynamsoft.DLR.LabelRecognition.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters)
+static void Dynamsoft.DLR.LabelRecognition.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters)
 ```   
 
 ### Parameters
@@ -94,7 +114,7 @@ void Dynamsoft.DLR.LabelRecognition.InitLicenseFromLTS(DMLTSConnectionParameters
 
 ### Code Snippet
 ```csharp
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMLTSConnectionParameters ltsInfo = LabelRecognition.InitLTSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
 LabelRecognition.InitLicenseFromLTS(info);

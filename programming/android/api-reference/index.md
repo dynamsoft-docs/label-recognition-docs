@@ -80,9 +80,9 @@ breadcrumbText: API Reference
 - [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
 - [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
 - [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#enumdmchargeway)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#enumdmlicensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#enumdmuuidgenerationmethod)	
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 
 &nbsp; 
 

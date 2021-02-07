@@ -20,7 +20,7 @@ Stores the line result.
 | [`CharacterModelName`](#charactermodelname) | *string* |
 | [`Location`](#location) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
 | [`Confidence`](#confidence) | *int* |
-| [`CharacterResults`](#characterresults) | [`DLR_CharacterResult\[\]`](dlr-character-result.md) |
+| [`CharacterResults`](#characterresults) | [`DLR_CharacterResult[]`](dlr-character-result.md) |
 
 
 ### LineSpecificationName

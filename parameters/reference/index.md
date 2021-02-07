@@ -74,3 +74,13 @@ breadcrumbText: Reference
  | [`CharacterModel.FilterFilePath`](character-model/parameter-control.md#filterfilepath) | The full path of the filter file which specifies the characters to be recognized. |
 
 
+
+## Organizational Json Parameter
+
+ | Parameter Name | Description |
+ | -------------- | ----------- | 
+ | [`LabelRecognitionParameterArray`](organizational-json-parameter.md#labelrecognitionparameterarray) | An array of LabelRecognitionParameter objects. |
+ | [`ReferenceRegionArray`](organizational-json-parameter.md#referenceregionarray) | An array of ReferenceRegionArray objects. |
+ | [`TextAreaArray `](organizational-json-parameter.md#textareaarray) | An array of TextArea objects. |
+ | [`LineSpecificationArray `](organizational-json-parameter.md#linespecificationarray) | An array of LineSpecification objects. |
+ | [`CharacterModelArray `](organizational-json-parameter.md#charactermodelarray) | An array of CharacterModel objects. |

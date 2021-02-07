@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition Android API Reference - Main Page
 description: This is the main page of Dynamsoft Label Recognition for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: false
-breadcrumbText: API Reference
 ---
 
 # Dynamsoft Label Recognition - Android API Reference

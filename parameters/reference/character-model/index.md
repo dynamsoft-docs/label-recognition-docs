@@ -5,7 +5,6 @@ description: This article shows CharacterModel Object of Dynamsoft Label Recogni
 keywords: parameter reference, parameters, CharacterModel
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Character Model
 ---
 
 

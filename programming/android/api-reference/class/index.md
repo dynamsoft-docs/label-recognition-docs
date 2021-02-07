@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition Android API Reference - Android Structs
 description: This page shows all Structs of Dynamsoft Label Recognition for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: false
-breadcrumbText: Classes
 ---
 
 

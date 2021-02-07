@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition for Android - Main Page
 description: This is the main page of Dynamsoft Label Recognition for Android Language.
 keywords: android
 needAutoGenerateSidebar: false
-breadcrumbText: Android
 ---
 
 # Dynamsoft Label Recognition - for Android Documentation

@@ -5,7 +5,6 @@ description: Dynamsoft Label Recognition Parameter Reference - Main Page
 keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea, LineSpecification, CharacterModel
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Reference
 ---
 
 

@@ -5,7 +5,6 @@ description: This article shows TextArea Object of Dynamsoft Label Recognition.
 keywords: parameter reference, parameters, TextArea
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Text Area
 ---
 
 

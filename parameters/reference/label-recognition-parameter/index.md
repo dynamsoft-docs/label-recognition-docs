@@ -5,7 +5,6 @@ description: This page shows Dynamsoft Label Recognition Parameter Reference - L
 keywords: parameter reference, parameters, LabelRecognitionParameter
 needAutoGenerateSidebar: false
 needGenerateH3Content: false
-breadcrumbText: Label Recognition Parameter
 ---
 
 

@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition - C/C++ User Guide
 description: This is the user guide page of Dynamsoft Label Recognition for C/C++ Language.
 keywords: c, c++, user guide
 needAutoGenerateSidebar: true
-breadcrumbText: C/C++
 ---
 
 # Dynamsoft Label Recognition - C/C++ User Guide

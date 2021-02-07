@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition for C/C++ - Main Page
 description: This is the main page of Dynamsoft Label Recognition for C/C++ Language.
 keywords: c, c++
 needAutoGenerateSidebar: false
-breadcrumbText: C/C++
 ---
 
 # Dynamsoft Label Recognition - for C/C++ Documentation

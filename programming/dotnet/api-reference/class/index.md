@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition .Net API Reference - .Net Structs
 description: This page shows all Structs of Dynamsoft Label Recognition for .Net API Reference.
 keywords: api reference, .Net
 needAutoGenerateSidebar: false
-breadcrumbText: Classes
 ---
 
 

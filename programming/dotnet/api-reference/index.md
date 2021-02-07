@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition .Net API Reference - Main Page
 description: This is the main page of Dynamsoft Label Recognition for .Net API Reference.
 keywords: api reference, .Net
 needAutoGenerateSidebar: false
-breadcrumbText: API Reference
 ---
 
 # Dynamsoft Label Recognition - .Net API Reference

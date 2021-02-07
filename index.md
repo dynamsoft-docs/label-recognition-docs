@@ -2,7 +2,6 @@
 layout: home-page
 title: Dynamsoft Label Recognition SDK Documentation
 keywords: dynamsoft label recognition, dlr, documentation
-breadcrumbText: HomePage
 description: Dynamsoft Label Recognition SDK Documentation Homepage
 ---
 

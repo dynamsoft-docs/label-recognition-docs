@@ -133,7 +133,7 @@ Sets the parameters passed to the library to load dynamically.
 | LabelRecognitionParameter | BinarizationModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "BinarizationModes": [
         {

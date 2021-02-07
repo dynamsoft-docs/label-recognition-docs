@@ -32,7 +32,7 @@ It must be a unique name.
 | LineSpecification | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Name":"LineSpecification1"
 }
@@ -56,7 +56,7 @@ The line number of the line targeted by the LineSpecification object.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineNumber": "1,3,5,7-10"
 }
@@ -79,7 +79,7 @@ If you set a character model, the result will only contain characters within the
 | LineSpecification | CharacterModelName | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "CharacterModelName":"CharacterModel_Name1"
 }
@@ -98,7 +98,7 @@ Specifies the regular expression pattern of the string within a line.
 | LineSpecification | LineStringRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringRegExPattern":""
 }

@@ -186,7 +186,7 @@ Sets the parameters passed to the library to load dynamically.
 | LabelRecognitionParameter | RegionPredetectionModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "RegionPredetectionModes": [
         {

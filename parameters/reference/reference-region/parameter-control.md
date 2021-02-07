@@ -31,7 +31,7 @@ It must be a unique name.
 | ReferenceRegion | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Name":"ReferenceRegion1"
 }
@@ -55,7 +55,7 @@ An array item is a name of any available `TextArea`.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextAreaNameArray":[
         "TextArea1",

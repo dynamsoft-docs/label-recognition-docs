@@ -41,7 +41,7 @@ It must be a unique name.
 | TextArea | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Name":"TextArea1"
 }
@@ -70,7 +70,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "FirstPoint":[0, 10]
 }
@@ -97,7 +97,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "SecondPoint":[10, 10]
 }
@@ -124,7 +124,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "ThirdPoint":[0, 10]
 }
@@ -151,7 +151,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "FourthPoint":[10, 20]
 }
@@ -173,7 +173,7 @@ If you set a character model, the result will only contain characters within the
 | TextArea | CharacterModelName | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "CharacterModelName":"CharacterModel_Name1"
 }
@@ -195,7 +195,7 @@ Sets the text lines count of the text area.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "LinesCount":1
 }
@@ -217,7 +217,7 @@ An array item is a name of any available `LinesSpecification`.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "LinesSpecificationNameArray":[
         "LinesSpecification1",
@@ -250,7 +250,7 @@ The allowed values for ByPercentage: [0,1]
 | TextArea | LetterHeightRange | *int array* | [1,100,1] |
 
 **Json Parameter Example**   
-```
+```json
 {
     "LetterHeightRange":[40,60,1]
 }
@@ -271,7 +271,7 @@ Specifies the regular expression pattern of the text to recognize.
 | TextArea | TextRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextRegExPattern":""
 }
@@ -291,7 +291,7 @@ Specifies the regular expression pattern of each line string text in current tex
 | TextArea | LineStringRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringRegExPattern":""
 }
@@ -314,7 +314,7 @@ An array item is a name of any available `TextArea`.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextAreaNameArray":[
         "TextArea1",

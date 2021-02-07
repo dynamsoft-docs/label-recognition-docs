@@ -41,7 +41,7 @@ Note: [Name] is current value and [***] can be customized by you own.
 | CharacterModel | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Name":"CharacterModel1"
 }
@@ -61,7 +61,7 @@ The path of the folder containing the character model files.
 | CharacterModel | DirectoryPath | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "DirectoryPath":"C:/CharacterModelFiles"
 }
@@ -80,7 +80,7 @@ The full path of the filter file which specifies the characters to be recognized
 | CharacterModel | FilterFilePath | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "FilterFilePath":"C:/CharacterModelFiles/CM1_F1.txt"
 }

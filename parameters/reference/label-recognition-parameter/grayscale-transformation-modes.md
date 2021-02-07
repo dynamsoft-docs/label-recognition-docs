@@ -73,7 +73,7 @@ Sets the parameters passed to the library to load dynamically.
 | LabelRecognitionParameter | GrayscaleTransformationModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "GrayscaleTransformationModes": [
         {

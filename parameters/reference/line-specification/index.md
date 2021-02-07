@@ -5,7 +5,7 @@ description: This article shows LineSpecification Object of Dynamsoft Label Reco
 keywords: parameter reference, parameters, LineSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Reference
+breadcrumbText: Line Specification
 ---
 
 

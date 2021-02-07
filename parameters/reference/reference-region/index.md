@@ -5,7 +5,7 @@ description: This article shows ReferenceRegion Object of Dynamsoft Label Recogn
 keywords: parameter reference, parameters, ReferenceRegion
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Reference
+breadcrumbText: Reference Region
 ---
 
 

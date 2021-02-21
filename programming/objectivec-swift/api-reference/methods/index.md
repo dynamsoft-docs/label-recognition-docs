@@ -27,7 +27,7 @@ needAutoGenerateSidebar: false
 
 &nbsp; 
 
-## Settings
+## Setting
 
   | Method               | Description |
   |----------------------|-------------|

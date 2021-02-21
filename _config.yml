@@ -26,6 +26,10 @@ dotnet: /label-recognition/programming/dotnet/
 dotnet_api: /label-recognition/programming/dotnet/api-reference/
 dotnet_release_notes: /label-recognition/programming/dotnet/release-notes/
 
+objectivec-swift: /label-recognition/programming/objectivec-swift/
+objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-reference/
+objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
+
 assets: /label-recognition/assets/
 edit_icon: /label-recognition/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/assets/img-icon/icon-smile.png

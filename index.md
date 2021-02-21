@@ -12,6 +12,7 @@ description: Dynamsoft Label Recognition SDK Documentation Homepage
    - [C/C++]({{ site.c-cplusplus }})
    - [.NET]({{ site.dotnet }})
    - [Android]({{ site.android }})
+   - [Objective-C & Swift]({{ site.objectivec-swift }})
 
 - [Parameters]({{ site.parameters }})
    - [Reference]({{ site.parameters-reference }})

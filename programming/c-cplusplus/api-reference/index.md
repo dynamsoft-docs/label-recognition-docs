@@ -35,7 +35,7 @@ needAutoGenerateSidebar: false
 
 &nbsp; 
 
-### Settings
+### Setting
 
   | Method               | Description |
   |----------------------|-------------|
@@ -92,7 +92,7 @@ needAutoGenerateSidebar: false
 
 &nbsp; 
 
-### Settings
+### Setting
 
   | Method               | Description |
   |----------------------|-------------|

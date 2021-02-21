@@ -40,11 +40,18 @@ Appends CharacterModel to the SDK object.
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 //construct prototxtBuffer, txtBuffer and characterModelBuffer
-[recognizer appendCharacterModel:@"your model name" prototxtBuffer: txtBuffer: characterModelBuffer: ];
+[recognizer appendCharacterModel:@"your model name" prototxtBuffer: prototxtBuffer txtBuffer: txtBuffer characterModelBuffer: characterModelBuffer];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+//construct prototxtBuffer, txtBuffer and characterModelBuffer
+recognizer.appendCharacterModel("your model name", prototxtBuffer: prototxtBuffer, txtBuffer: txtBuffer, characterModelBuffer: characterModelBuffer)
 ```
 
 &nbsp;
@@ -63,11 +70,18 @@ Append a new template string to the current label recognition instance.
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", error:&error)
 ```
 
 &nbsp;
@@ -84,13 +98,19 @@ Clear all appended parameter settings of the current label recognition instance.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 [recognizer clearAppendedSettings:&error];
 ```
-
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+recognizer.clearAppendedSettings(&error)
+```
 &nbsp;
 
 
@@ -102,10 +122,16 @@ Erases all CharacterModels the SDK object currently loaded.
 ```   
    
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 [recognizer eraseAllCharacterModels];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+recognizer.eraseAllCharacterModels()
 ```
 
 &nbsp;
@@ -122,10 +148,16 @@ Clear all appended parameter settings of the current label recognition instance.
 `name` A unique name representing the CharacterModel to erase.   
   
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 [recognizer eraseCharacterModelByName:@"your model name"];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+recognizer.eraseCharacterModelByName("your model name")
 ```
 
 &nbsp;
@@ -153,11 +185,18 @@ Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 NSString *argumentValue = [recognizer getModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+let argumentValue = recognizer.getModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", error:&error)
 ```
 
 &nbsp;
@@ -178,11 +217,18 @@ Get current settings and save them into a [`DLRRuntimeSettings`](../class/dlr-ru
 The class object of runtime settings.
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 iDLRRuntimeSettings* settings = [recognizer getRuntimeSettings:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+let settings = recognizer.getRuntimeSettings(&error)
 ```
 
 &nbsp;
@@ -201,12 +247,19 @@ Outputs runtime settings and save them into a settings file (JSON file).
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 NSString *settingsName;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 [recognizer outputSettingsToFile:@"your saving file path" templateName:@"currentRuntimeSettings" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+recognizer.outputSettingsToFile("your saving file path", templateName:"currentRuntimeSettings", error:&error)
 ```
 
 &nbsp;
@@ -223,11 +276,18 @@ Reset all runtime settings to default values.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing *  error;
 [recognizer resetRuntimeSettings:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+recognizer.resetRuntimeSettings(error:&error)
 ```
 
 
@@ -255,12 +315,19 @@ Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 iDLRRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;   
 [recognizer setModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" argumentValue:"100" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+recognizer.setModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", argumentValue:"100", error:&error)
 ```
 
 &nbsp;
@@ -280,6 +347,7 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -288,6 +356,15 @@ NSArray<iTextResult*> *textResults;
 NSError __autoreleasing *error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
 [recognizer updateReferenceRegionFromBarcodeResults:textResults templateName:@"P1" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+var textResults = [iTextResult]()
+//get textResults from Dynamsoft Barcode Reader SDK
+let error: NSError? = NSError()
+recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", error:&error)
+recognizer.updateReferenceRegionFromBarcodeResults(textResults, templateName:"P1", error:&error)
 ```
 
 &nbsp;
@@ -305,6 +382,7 @@ Update runtime settings with a given [`DLRRuntimeSettings`](../class/dlr-runtime
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -313,6 +391,13 @@ iDLRRuntimeSettings *settings;
 settings.linesCount = 1;
 [recognizer updateRuntimeSettings:settings error:&error];
 ```
-
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+let settings = recognizer.getRuntimeSettings(&error)
+settings.linesCount = 1;
+recognizer.updateRuntimeSettings(settings, error:&error);
+```
 &nbsp;
 

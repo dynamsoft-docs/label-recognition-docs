@@ -94,6 +94,16 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
     //TODO add your code for license verification
 }
 ```
-
+Swift:
+```Swift
+let lts = iDMLTSConnectionParameters()
+lts.handshakeCode = "200***001-1000*****"
+lts.sessionPassword = "******"
+let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSuccess : \(isSuccess) error : \(String(describing: error))")
+}
+```
 &nbsp;
 

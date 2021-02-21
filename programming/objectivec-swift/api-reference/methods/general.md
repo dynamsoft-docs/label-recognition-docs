@@ -25,9 +25,14 @@ Get version information of SDK.
 The version information string.
 
 ### Code Snippet
-
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSString* versionInfo = [recognizer getVersion];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let versionInfo = recognizer.getVersion();
 ```

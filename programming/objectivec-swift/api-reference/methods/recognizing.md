@@ -31,6 +31,7 @@ Recognizes text from the memory buffer containing image pixels in defined format
 All results recognized successfully.
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
@@ -40,7 +41,14 @@ iDLRImageData *imageData = [[iDLRImageData alloc] init];
 NSError __autoreleasing *  error;
 result = [recognizer recognizeByBuffer:imageData templateName:@"" error:&error];
 ```
-
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let imageData = iDLRImageData.init()
+let error: NSError? = NSError()
+//construct imageData
+let result = recognizer.recognizeByBuffer(imageData:imageData, templateName:"", error:&error)
+```
 &nbsp;
 
 
@@ -61,12 +69,20 @@ All results recognized successfully.
 
 
 ### Code Snippet
+Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 iDLRResult *result;
 NSError __autoreleasing *  error;
 result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
+```
+Swift:
+```Swift
+let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+//construct imageData
+let result = recognizer.recognizeByFile("your file path", templateName:"", error:&error)
 ```
 
 &nbsp;

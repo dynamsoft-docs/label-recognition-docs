@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android API Reference - LabelRecognition Class
-description: This page shows LabelRecognition methods of Dynamsoft Label Recognition for Android API Reference.
-keywords: api reference, android
+title: Dynamsoft Label Recognition Objective-C & Swift API Reference - LabelRecognition Class
+description: This page shows LabelRecognition methods of Dynamsoft Label Recognition for Objective-C & Swift API Reference.
+keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: false
 ---
 
 
-# Dynamsoft Label Recognition - CLabelRecognition Class
+# Dynamsoft Label Recognition - Objective-C & Swift Methods
 
 ## General
    
@@ -21,9 +21,8 @@ needAutoGenerateSidebar: false
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`LabelRecognition`](initialization.md#labelrecognition) | Initialization of `LabelRecognition` object.|
-  | [`destroy`](initialization.md#destroy) | Destroys an instance of `LabelRecognition` object.|   
-  | [`initLicense`](initialization.md#initlicense) | Sets the license and activates the SDK. |
+  | [`init`](initialization.md#init) | Create an instance of Dynamsoft Label Recognition. |
+  | [`initWithLicense`](initialization.md#initWithLicense) | Sets the license and activates the SDK. |
   | [`initLicenseFromLTS`](initialization.md#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
 &nbsp; 
@@ -32,8 +31,8 @@ needAutoGenerateSidebar: false
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getRuntimeSettings`](settings.md#getruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`updateRuntimeSettings`](settings.md#updateruntimesettings) | Updates runtime settings with a given struct. |
+  | [`getRuntimeSettings`](settings.md#getruntimesettings) | Gets the current settings and saves it into a class. |
+  | [`updateRuntimeSettings`](settings.md#updateruntimesettings) | Updates runtime settings with a given class. |
   | [`resetRuntimeSettings`](settings.md#resetruntimesettings) | Resets the runtime settings. |
   | [`appendSettingsFromString`](settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`outputSettingsToFile`](settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
@@ -41,9 +40,9 @@ needAutoGenerateSidebar: false
   | [`updateReferenceRegionFromBarcodeResults`](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
   | [`getModeArgument`](settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`setModeArgument`](settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`appendCharacterModelBuffer`](settings.md#appendcharactermodelbuffer) | Appends CharacterModel to the SDK object. |
-  | [`eraseAllCharacterModels`](settings.md#appendcharactermodelbuffer) | Erases all CharacterModels the SDK object currently loaded. |
-  | [`eraseCharacterModelByName`](settings.md#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
+  | [`appendCharacterModel`](settings.md#appendCharacterModel) | Appends CharacterModel to the SDK object. |
+  | [`eraseAllCharacterModels`](settings.md#appendCharacterModel) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](settings.md#appendCharacterModel) | Erases a name specified CharacterModel from the SDK object. |
 
 &nbsp; 
    

@@ -47,6 +47,9 @@ needAutoGenerateSidebar: false
   | [`updateReferenceRegionFromBarcodeResults`](label-recognition/settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
   | [`getModeArgument`](label-recognition/settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`setModeArgument`](label-recognition/settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`appendCharacterModelBuffer`](label-recognition/settings.md#appendcharactermodelbuffer) | Appends CharacterModel to the SDK object. |
+  | [`eraseAllCharacterModels`](label-recognition/settings.md#appendcharactermodelbuffer) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](label-recognition/settings.md#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
 
 &nbsp; 
    
@@ -60,14 +63,16 @@ needAutoGenerateSidebar: false
 &nbsp; 
 
 ## [Classes](class/index.md)
-- [`DLRRuntimeSettings`](class/dlr-runtime-settings.md)	
+- [`DMLTSConnectionParameters`](dm-lts-connection-parameters.md)
+- [`DLRCharacterResult`](class/dlr-character-result.md)		
+- [`DLRImageData`](class/dlr-image-data.md)		
+- [`DLRLineResult`](class/dlr-line-result.md)	
+- [`DLRPoint`](class/dlr-point.md)		
 - [`DLRQuadrilateral`](class/dlr-quadrilateral.md)	
 - [`DLRReferenceRegion`](class/dlr-reference-region.md)	
 - [`DLRResult`](class/dlr-result.md)		
-- [`DLRLineResult`](class/dlr-line-result.md)	
-- [`DLRCharacterResult`](class/dlr-character-result.md)		
-- [`DLRPoint`](class/dlr-point.md)		
-- [`DLRImageData`](class/dlr-image-data.md)		
+- [`DLRRuntimeSettings`](class/dlr-runtime-settings.md)	
+- [`LabelRecognitionException`](class/label-recognition-exception.md)	
 
 &nbsp; 
 

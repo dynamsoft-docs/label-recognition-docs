@@ -1,34 +1,34 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android Class - DMLTSConnectionParameters
-description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognition for Android Language.
-keywords: DMLTSConnectionParameters, struct, android
+title: Dynamsoft Label Recognition Objective-C & Swift Class - iDMLTSConnectionParameters
+description: This page shows the iDMLTSConnectionParameters class of Dynamsoft Label Recognition for iOS SDK.
+keywords: iDMLTSConnectionParameters, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 ---
 
 
-# DMLTSConnectionParameters
-Defines a struct to configure the parameters to connect to license tracking server.  
+# iDMLTSConnectionParameters
+Defines a class to configure the parameters to connect to license tracking server.  
 
 
 ## Attributes
     
 | Attribute | Type |
 |---------- | ---- |
-| [`mainServerURL`](#mainserverurl) | *String* |
-| [`standbyServerURL`](#standbyserverurl) | *String* |
-| [`handshakeCode`](#handshakecode) | *String* |
-| [`sessionPassword`](#sessionpassword) | *String* |
-| [`chargeWay`](#chargeway) | *int* |
-| [`UUIDGenerationMethod`](#uuidgenerationmethod) | *int* |
-| [`maxBufferDays`](#maxbufferdays) | *int* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | *List<Integer>* |
+| [`mainServerURL`](#mainserverurl) | *NSString\** |
+| [`standbyServerURL`](#standbyserverurl) | *NSString\** |
+| [`handshakeCode`](#handshakecode) | *NSString\** |
+| [`sessionPassword`](#sessionpassword) | *NSString\** |
+| [`chargeWay`](#chargeway) | *EnumDMChargeWay* |
+| [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
+| [`maxBufferDays`](#maxbufferdays) | *NSInteger* |
+| [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** |
 
 
 ### mainServerURL
 The URL of the license tracking server.
-```java
-String  com.dynamsoft.dlr.DMLTSConnectionParameters.mainServerURL
+```objc
+NSString*  mainServerURL
 ```
 - **Value range**   
     Any string value   
@@ -42,8 +42,8 @@ String  com.dynamsoft.dlr.DMLTSConnectionParameters.mainServerURL
 
 ### standbyServerURL
 The URL of the standby license tracking server.
-```java
-String  com.dynamsoft.dlr.DMLTSConnectionParameters.standbyServerURL
+```objc
+NSString*  standbyServerURL
 ```
 - **Value range**   
     Any string value   
@@ -57,8 +57,8 @@ String  com.dynamsoft.dlr.DMLTSConnectionParameters.standbyServerURL
 
 ### handshakeCode
 The handshake code.
-```java
-String  com.dynamsoft.dlr.DMLTSConnectionParameters.handshakeCode
+```objc
+NSString*  handshakeCode
 ```
 - **Value range**   
     Any string value   
@@ -68,8 +68,8 @@ String  com.dynamsoft.dlr.DMLTSConnectionParameters.handshakeCode
 
 ### sessionPassword
 The session password of the handshake code set in license tracking server.
-```java
-String  com.dynamsoft.dlr.DMLTSConnectionParameters.sessionPassword
+```objc
+NSString*  sessionPassword
 ```
 - **Value range**   
     Any string value   
@@ -79,14 +79,14 @@ String  com.dynamsoft.dlr.DMLTSConnectionParameters.sessionPassword
 
 ### chargeWay
 Sets the charge way.
-```java
-int com.dynamsoft.dlr.DMLTSConnectionParameters.chargeWay
+```objc
+EnumDMChargeWay chargeWay
 ```
 - **Value range**   
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
       
 - **Default value**   
-    `DM_CW_AUTO`
+    `EnumDMChargeWayAuto`
     
 - **See also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
@@ -94,14 +94,14 @@ int com.dynamsoft.dlr.DMLTSConnectionParameters.chargeWay
 
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
-```java
-int com.dynamsoft.dlr.DMLTSConnectionParameters.UUIDGenerationMethod
+```objc
+EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 - **Value range**   
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
       
 - **Default value**   
-    `DM_UUIDGM_RANDOM`
+    `EnumDMUUIDGenerationMethodRandom`
     
 - **See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
@@ -109,8 +109,8 @@ int com.dynamsoft.dlr.DMLTSConnectionParameters.UUIDGenerationMethod
 
 ### maxBufferDays
 Sets the max days to buffer the license info.
-```java
-int com.dynamsoft.dlr.DMLTSConnectionParameters.maxBufferDays
+```objc
+NSInteger maxBufferDays
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -120,14 +120,14 @@ int com.dynamsoft.dlr.DMLTSConnectionParameters.maxBufferDays
 
 ### limitedLicenseModules
 Sets the license modules to use.
-```java
-List<Integer>  com.dynamsoft.dlr.DMLTSConnectionParameters.limitedLicenseModules
+```objc
+NSArray*  limitedLicenseModules
 ```
 - **Value range**   
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
+    Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
       
 - **Default value**   
-    null
+    nil
     
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    

@@ -68,6 +68,7 @@ Describes the grayscale transformation mode.
 | DLR_GTM_SKIP  | 0x00 | Skips grayscale transformation. |
 | DLR_GTM_INVERTED  | 0x01 | Transforms to inverted grayscale. Recommended for light on dark images. |
 | DLR_GTM_ORIGINAL | 0x02 | Keeps the original grayscale. Recommended for dark on light images. |
+| DLR_GTM_AUTO | 0x04 | Lets the library choose an algorithm automatically for grayscale transformation. |
 
 
 

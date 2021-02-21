@@ -58,6 +58,7 @@ int com.dynamsoft.dlr.DLRReferenceRegion.regionMeasuredByPercentage
     1
     
 - **Remarks**   
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  

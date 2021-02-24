@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition - C/C++ User Guide
 
-Precisely read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
+Accurately read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
 
 ## System Requirements
 

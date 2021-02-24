@@ -62,14 +62,16 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
                     for (int i = 0; i < results.length; i++) {
                         String strCurResult = "["+i+"] :\n";
                         for (int j = 0; j < result[i].lineResults.length; j++) {
-                        strCurResult += result[i].lineResults[j].text + "\n";
+                            strCurResult += result[i].lineResults[j].text + "\n";
+                        }
                     }
+                    Log.i("DBR", strCurResult);
                 }
-                Log.i("DBR", strCurResult);
-                }else{
-                    Log.i("DBR", "No barcode found");
+                else {
+                        Log.i("DBR", "No barcode found");
                 }
-            } catch (Exception ex) {
+            } 
+            catch (Exception ex) {
                 ex.printStackTrace();
             }
         }

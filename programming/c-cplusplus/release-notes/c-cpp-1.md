@@ -10,7 +10,12 @@ needAutoGenerateSidebar: false
 
 ## 1.0 (02/24/2021)
 
-- 
+- Supports recognition from BMP, TIFF, JPEG, PNG and PDF files.
+- Supports three ways for OCR:
+    - Recognize texts from a full-sized image.
+    - Recognize texts from a specified region.
+    - Specify an area to recognize texts using a reference region. A common example would be a price tag, where the text of interest is always on a yellow square background, the yellow square can serve as the reference region.
+- Supports specifying a regular expression to improve recognition accuracy and robustness.
 
 ## 1.0 Beta (12/10/2020)
 

@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 ## 1.0 (02/24/2021)
 
-- Supports recognition from BMP, TIFF, JPEG, PNG and PDF files.
+- Supports recognition from BMP, JPEG, PNG and single-page TIFF files.
 - Supports three ways for OCR:
     - Recognize texts from a full-sized image.
     - Recognize texts from a specified region.

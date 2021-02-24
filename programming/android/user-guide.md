@@ -46,39 +46,37 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
 3. Add the following code to initiate and use the Dynamsoft Label Reader SDK.
 
-```java
-import com.dynamsoft.dlr.*;
-public class MainActivity extends AppCompatActivity { 
-    private LabelRecognition mRecognition;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        try {
-            mRecognition = new LabelRecognition("<insert DLR license key here>");
-            DLRResult[] results = mRecognition.recognizeByFile("<full image path>", "");
+    ```java
+    import com.dynamsoft.dlr.*;
+    public class MainActivity extends AppCompatActivity { 
+        private LabelRecognition mRecognition;
+        @Override
+        protected void onCreate(Bundle savedInstanceState)  {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            try {
+                mRecognition = new LabelRecognition("<insert DLR license key here>");
+                DLRResult[] results = mRecognition.recognizeByFile("<full image path>", "");
 
-            if (results != null && results.length > 0) {
-                for (int i = 0; i < results.length; i++) {
-                    String strCurResult = "["+i+"] :\n";
-                    for (int j = 0; j < result[i].lineResults.length; j++) {
+                if (results != null && results.length > 0) {
+                    for (int i = 0; i < results.length; i++) {
+                        String strCurResult = "["+i+"] :\n";
+                        for (int j = 0; j < result[i].lineResults.length; j++) {
                         strCurResult += result[i].lineResults[j].text + "\n";
                     }
                 }
                 Log.i("DBR", strCurResult);
-            }else{
-                Log.i("DBR", "No barcode found");
+                }else{
+                    Log.i("DBR", "No barcode found");
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
         }
     }
-}
-```
-
+    ```
     Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
 
     In line 9 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
-
 
 4. Run the project.

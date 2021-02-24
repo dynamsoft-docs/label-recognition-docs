@@ -29,49 +29,49 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    
 2. Add Dynamsoft Label Recognition namespace and libs to a new file, `DLRHelloWorld.cs`.  
 
-```cs
-using System;
-using Dynamsoft.DLR;
-```
+    ```cs
+    using System;
+    using Dynamsoft.DLR;
+    ```
 
-Please add the Dynamsoft Label Recognition ibraries (`Dynamsoft.LabelRecognition.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\`. Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
+    Please add the Dynamsoft Label Recognition ibraries (`Dynamsoft.LabelRecognition.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\`. Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
 
 3. Update the main function in `DLRHelloWorld.cs`. 
 
-```cs
-class Program
-{
-    static void Main(string[] args)
+    ```cs
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            LabelRecognition labelRecognition = new LabelRecognition();
-
-            // Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense
-            labelRecognition.InitLicense("<insert DLR license key here>");
-
-            DLR_Result[] results = labelRecognition.RecognizeByFile("<full image path>", "");
-
-            for (int i = 0; i < results.Length; ++i)
+            try
             {
-                Console.WriteLine("Result " + i.ToString() + ": ");
-                for (int j = 0; j < results[i].LineResults.Length; ++j)
+                LabelRecognition labelRecognition = new LabelRecognition();
+
+                // Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense
+                labelRecognition.InitLicense("<insert DLR license key here>");
+
+                DLR_Result[] results = labelRecognition.RecognizeByFile("<full image path>", "");
+
+                for (int i = 0; i < results.Length; ++i)
                 {
-                    Console.WriteLine(">>LineResult " + j.ToString() + ": " + results[i].LineResults[j].Text);
+                    Console.WriteLine("Result " + i.ToString() + ": ");
+                    for (int j = 0; j < results[i].LineResults.Length; ++j)
+                    {
+                        Console.WriteLine(">>LineResult " + j.ToString() + ": " + results[i].LineResults[j].Text);
+                    }
                 }
             }
-        }
-        catch (DLR_Exception exp)
-        {
-            Console.WriteLine(exp);
-        }
-        catch (Exception exp)
-        {
-            Console.WriteLine(exp);
+            catch (DLR_Exception exp)
+            {
+                Console.WriteLine(exp);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp);
+            }
         }
     }
-}
-```
+    ```
     Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
 
     In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
@@ -79,7 +79,7 @@ class Program
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file (usually in `\bin\Debug`). The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[.NET Framework version]`.
 
-To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
+    To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
 
 ## Features
 

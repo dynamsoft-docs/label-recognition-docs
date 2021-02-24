@@ -34,9 +34,9 @@ Returns an instance of Dynamsoft Label Recognition. If failed, returns NULL.
 
 #### Code Snippet
 ```c
-void* labelRecognizer = DLR_CreateInstance();
-DLR_InitLicense(labelRecognizer, "t0260NwAAAHV***************");
-DLR_DestroyInstance(labelRecognizer);
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+DLR_DestroyInstance(recognizer);
 ```
 
 
@@ -58,20 +58,20 @@ DLR_API void DLR_DestroyInstance (void* recognizer)
 
 #### Code Snippet
 ```c
-void* labelRecognizer = DLR_CreateInstance();
-DLR_InitLicense(labelRecognizer, "t0260NwAAAHV***************");
-DLR_DestroyInstance(labelRecognizer);
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+DLR_DestroyInstance(recognizer);
 ```
 
 ## DLR_InitLicense
 Sets product key and activate the SDK.
 
 ```c
-DLR_API int DLR_InitLicense (void* labelRecognizer, const char* pLicense)
+DLR_API int DLR_InitLicense (void* recognizer, const char* pLicense)
 ```   
    
 #### Parameters
-`[in] labelRecognizer` Handle of the label recognition instance.   
+`[in] recognizer` Handle of the label recognition instance.   
 `[in]	pLicense` The product keys.
 
 #### Return value
@@ -80,9 +80,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```c
-void* labelRecognizer = DLR_CreateInstance();
-DLR_InitLicense(labelRecognizer, "t0260NwAAAHV***************");
-DLR_DestroyInstance(labelRecognizer);
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+DLR_DestroyInstance(recognizer);
 ```
 
 &nbsp;

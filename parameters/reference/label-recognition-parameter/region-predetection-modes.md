@@ -41,53 +41,29 @@ If the image is large and the barcode on the image is very small, it is recommen
     [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
     
 #### Mode Arguments
-- [MinImageDimension](#minimagedimension)
-- [Sensitivity](#sensitivity)
-- [RelativeBarcodeRegions](#relativebarcoderegions)
-- [ForeAndBackgroundColours](#foreandbackgroundcolours )
 - [AspectRatioRange](#aspectratiorange )
+- [ForeAndBackgroundColours](#foreandbackgroundcolours )
 - [HeightRange](#heightrange)
-- [WidthRange](#widthrange)
+- [MinImageDimension](#minimagedimension)
+- [NeedFindAccurateBoundary](#needfindaccurateboundary)
+- [Sensitivity](#sensitivity)
 - [SpatialIndexBlockSize](#spatialindexblocksize)
+- [WidthRange](#widthrange)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
-##### MinImageDimension 
-Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
+##### AspectRatioRange 
+Sets the aspect ratio range of the bounding rectangle of the predetected region.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [16384, 0x7fffffff] | 262144 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
-
-- **Remarks**     
-  If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
-
-
-##### Sensitivity 
-Sets the sensitivity used for region predetection algorithm.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 1 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
-
-- **Remarks**     
-  A larger value means the library will take more effort to detect regions.  
-
-
-##### RelativeBarcodeRegions 
- Sets the barcode regions relative to the predetected region.  
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more regions. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| *string* | A string value representing aspect ratio range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
 - **Remarks**     
-  - Each region need to be defined as [`Left`, `Top`, `Right`, `Bottom`, `Index`]. If you want to define multiple regions, you can use a "";"" to separate them. If there is no region defined, the library will consider the predetected regions as barcode regions.    
-  - `Left`, `Top`, `Right`, `Bottom` are four percentage values relative to top-left corner of the predetected region. 
-  - `Index` means the index of a specific colour set in [`ForeAndBackgroundColours`](#foreandbackgroundcolours) which the current region is applied to. If the value of `index` is set to -1, the current region will be applied to all colour sets in [`ForeAndBackgroundColours`](#foreandbackgroundcolours).
-  - Value range of `Left`, `Top`, `Right`, `Bottom`: [-10000,10000]
-  - Value range of `Index`: [-1, 0x7fffffff]
+  -  The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
+  - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
+  - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
   
   
 ##### ForeAndBackgroundColours 
@@ -107,21 +83,6 @@ Specifies a set (or multiple sets) of the foreground and background colours used
   
  
  
-##### AspectRatioRange 
-Sets the aspect ratio range of the bounding rectangle of the predetected region.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing aspect ratio range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
-
-
-- **Remarks**     
-  -  The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
-  - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
-  - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
-  
-  
-  
 ##### HeightRange 
 Sets the height range of the bounding rectangle of the predetected region.
 
@@ -135,6 +96,51 @@ Sets the height range of the bounding rectangle of the predetected region.
   - Value range of `MinHeight`, `MaxHeight`: [1,0x7fffffff]
 
 
+  
+##### MinImageDimension 
+Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [16384, 0x7fffffff] | 262144 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+
+- **Remarks**     
+  If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
+
+
+##### NeedFindAccurateBoundary 
+Sets whether to enable finding accurate boundary.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [0, 1] | 0 | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+
+- **Remarks**     
+  0: disable.<br>
+  1: enable.
+ 
+##### Sensitivity 
+Sets the sensitivity used for region predetection algorithm.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [1, 9] | 1 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+
+- **Remarks**     
+  A larger value means the library will take more effort to detect regions.  
+ 
+##### SpatialIndexBlockSize 
+Sets the spatial index block size used for region predetection algorithm.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [1, 32] | 5 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+
+- **Remarks**     
+  The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
+
+
+  
 ##### WidthRange 
 Sets the width range of the bounding rectangle of the predetected region.
 
@@ -146,17 +152,6 @@ Sets the width range of the bounding rectangle of the predetected region.
 - **Remarks**     
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
-
-
-##### SpatialIndexBlockSize 
-Sets the spatial index block size used for region predetection algorithm.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 32] | 5 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
-
-- **Remarks**     
-  The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
 
 
 ##### LibraryFileName 
@@ -191,7 +186,7 @@ Sets the parameters passed to the library to load dynamically.
 | LabelRecognitionParameter | RegionPredetectionModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "RegionPredetectionModes": [
         {
@@ -209,11 +204,11 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `DLRRuntimeSettings` Member
-`RegionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
+`regionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}FurtherModes.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
 
 
 **See Also**    

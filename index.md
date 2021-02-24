@@ -2,7 +2,6 @@
 layout: home-page
 title: Dynamsoft Label Recognition SDK Documentation
 keywords: dynamsoft label recognition, dlr, documentation
-breadcrumbText: HomePage
 description: Dynamsoft Label Recognition SDK Documentation Homepage
 ---
 
@@ -11,6 +10,9 @@ description: Dynamsoft Label Recognition SDK Documentation Homepage
 
 - [Programming]({{ site.programming }})
    - [C/C++]({{ site.c-cplusplus }})
+   - [.NET]({{ site.dotnet }})
+   - [Android]({{ site.android }})
+   - [Objective-C & Swift]({{ site.objectivec-swift }})
 
 - [Parameters]({{ site.parameters }})
    - [Reference]({{ site.parameters-reference }})

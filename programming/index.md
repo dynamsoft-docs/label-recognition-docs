@@ -3,11 +3,12 @@ layout: default-layout
 title: Dynamsoft Label Recognition Programming - Main Page
 keywords: programming
 needAutoGenerateSidebar: false
-breadcrumbText: Programming
-description: Dynamsoft Label Recognition supports the following programming languages - C, C++
+description: Dynamsoft Label Recognition supports the following programming languages - C, C++, Objective-C & Swift, .NET, Android
 ---
 
 # Dynamsoft Label Recognition Documentation - Programming Section
 
-- [C/C++](./c-cplusplus/)
-
+- [C/C++]({{ site.c-cplusplus }})
+- [.NET]({{ site.dotnet }})
+- [Android]({{ site.android }})
+- [Objective-C & Swift]({{ site.objectivec-swift }})

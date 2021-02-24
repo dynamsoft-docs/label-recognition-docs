@@ -12,8 +12,6 @@ needAutoGenerateSidebar: true
 |----------------------|-------------|
   | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
-  | [`RecognizeBasedOnDBRResultsByBuffer`](#RecognizeBasedOnDBRResultsByBuffer) | Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK. |
-  | [`RecognizeBasedOnDBRResultsByFile`](#RecognizeBasedOnDBRResultsByFile) | Recognizes text from a specified image file according to barcode results from DBR SDK. |
 
 ---
 
@@ -25,8 +23,8 @@ int dynamsoft::dlr::CLabelRecognition::RecognizeByBuffer(const DLRImageData* ima
 ```   
    
 #### Parameters
-`[in]	imageData` A struct of DLRImageData that represents an image.  
-`[in]	templateName` The template name.
+`[in]	imageData` A struct of [`DLRImageData`]({{ site.c-cplusplus-structs }}dlr-image-data.html) that represents an image.  
+`[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -53,7 +51,7 @@ int dynamsoft::dlr::CLabelRecognition::RecognizeByFile (const char* fileName, co
    
 #### Parameters
 `[in]	fileName` A string defining the file name.  
-`[in]	templateName` The template name.
+`[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -68,46 +66,5 @@ delete recognizer;
 ```
 
 &nbsp;
-
-
-## RecognizeBasedOnDBRResultsByBuffer
-Recognizes text from memory buffer containing image pixels in defined format according to barcode results from DBR SDK.
-
-```cpp
-int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultsByBuffer(const DLRImageData* imageData, TextResultArray* DBRTextResultArray)
-```   
-   
-#### Parameters
-`[in]	imageData` A struct of DLRImageData that represents an image.  
-`[in]	DBRTextResultArray` Barcode Text result array returned by Dynamsoft Barcode Reader SDK.  
-
-#### Return value
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
-
-
-&nbsp;
-
-
-## RecognizeBasedOnDBRResultsByFile
-Recognizes text from a specified image file according to barcode results from DBR SDK.
-
-```cpp
-int dynamsoft::dlr::CLabelRecognition::RecognizeBasedOnDBRResultsByFile (const char* fileName, TextResultArray* DBRTextResultArray)	
-```   
-   
-#### Parameters
-`[in]	fileName` A string defining the file name.  
-`[in]	DBRTextResultArray` Barcode Text result array returned by Dynamsoft Barcode Reader SDK.  
-
-#### Return value
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
-
-
-&nbsp;
-
-
-
 
 

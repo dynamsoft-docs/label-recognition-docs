@@ -27,7 +27,7 @@ typedef struct tagDLRImageData  DLRImageData
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
-| [`format`](#format) | [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#DLRImagePixelFormat) |
+| [`format`](#format) | [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
 
 
 ### bytesLength

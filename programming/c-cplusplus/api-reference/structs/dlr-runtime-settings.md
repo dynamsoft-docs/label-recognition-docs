@@ -27,9 +27,9 @@ typedef struct tagDLRRuntimeSettings  DLRRuntimeSettings
 | [`characterModelName`](#charactermodelname) | *char\[64\]* |
 | [`linesCount`](#linescount) | *int* |
 | [`regionPredetectionModes`](#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)\[8\] |
-| [`referenceRegion`](#referenceregion) | [`DLRRegion`](dlr-region.md) |
+| [`referenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
 | [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
-| [`grayscaleTransformationModes`](#grayscaleTransformationModes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -86,7 +86,7 @@ DLRRegionPredetectionMode tagDLRRuntimeSettings::regionPredetectionModes[8]
 ### referenceRegion
 Sets the reference region to search for text.
 ```cpp
-DLRRegion tagDLRRuntimeSettings::referenceRegion
+DLRReferenceRegion tagDLRRuntimeSettings::referenceRegion
 ```
 
 ### textArea

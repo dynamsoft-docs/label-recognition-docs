@@ -4,7 +4,6 @@ title: Dynamsoft Label Recognition - C/C++ User Guide
 description: This is the user guide page of Dynamsoft Label Recognition for C/C++ Language.
 keywords: c, c++, user guide
 needAutoGenerateSidebar: true
-breadcrumbText: C/C++
 ---
 
 # Dynamsoft Label Recognition - C/C++ User Guide
@@ -26,6 +25,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 1. Start Visual Studio and create a new Win32 Console Application in C++. 
    
 2. Add Dynamsoft Label Recognition headers and libs in `DLRHelloWorld.cpp`.   
+   
    ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognition.h"
@@ -40,7 +40,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     #endif
    ```
    
-  The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
+    The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
  
 3. Update the main function in `DLRHelloWorld.cpp`.   
    ```cpp
@@ -89,7 +89,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
    
-To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
+    To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
 
 ## Features
 
@@ -110,23 +110,23 @@ There are two ways to set a single reference region - 1) through runtime setting
 
 ### Specify multiple reference regions
 
-To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`](#).
+To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`]({{ site.parameters-reference }}organizational-json-parameter.html#referenceregionarray).
 
 ```cpp
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
-        \"FirstPoint\" : [0,66],\
-        \"SecondPoint\" : [200,66],\
-        \"MeasuredByPercentage\" : 0,\
-        \"ThirdPoint\" : [200,125],\
-        \"FourthPoint\" : [0,125],\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\"\
     },{\
-        \"FirstPoint\" : [0,0],\
-        \"SecondPoint\" : [100,0],\
-        \"MeasuredByPercentage\" : 1,\
-        \"ThirdPoint\" : [100,50],\
-        \"FourthPoint\" : [0,50],\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 0\
+            },\
         \"Name\":\"R2\"\
     }]";
     string DLRParameterArray = 
@@ -157,11 +157,11 @@ To reference multiple regions, we cannot follow the runtime settings example abo
     }]";
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
-        \"FirstPoint\" : [ 103, 57 ], \
-        \"SecondPoint\" : [ 126, 57 ], \
-        \"ThirdPoint\" : [ 126, 70 ], \
-        \"FourthPoint\" : [103, 70],\
-        \"MeasuredByPercentage\" : 0,\
+        \"Localization\": \
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\",\
         \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
     }]";
@@ -186,7 +186,7 @@ Dynamsoft Label Recognition SDK supports automatic region detection to extract t
     dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
 ```
 
-Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`](#).
+Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode).
 
 ### Use a template to change settings
 
@@ -194,17 +194,17 @@ Easily manage recognition settings and reduce redundant lines of code by using t
 
 #### Change template settings using a string
 
-Use [`AppendSettingsFromString`](#) when changing template settings with a string. The following demonstrates how to use a string template to modify recognition settings.
+Use [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) when changing template settings with a string. The following demonstrates how to use a string template to modify recognition settings.
 
 ```cpp
     string characterModelArray = "\"CharacterModelArray\":[\
         {\
             \"Name\":\"Number\",\
-            \"DirectoryPath\" : \"CaffeModel\"\
+            \"DirectoryPath\" : \"CharacterModel\"\
         },\
         {\
             \"Name\":\"NumberLetter\",\
-            \"DirectoryPath\" : \"CaffeModel\"\
+            \"DirectoryPath\" : \"CharacterModel\"\
         }]";
     
     string TextAreaArray = "\"TextAreaArray\":[{\"CharacterModelName\" : \"NumberLetter\",\"Name\" : \"numberLetterArea\"}]";
@@ -219,7 +219,7 @@ Use [`AppendSettingsFromString`](#) when changing template settings with a strin
 
 #### Change template settings using a JSON file
 
-As with using a string, we will use the same method [`AppendSettingsFromString`](#) to modify the template setting. When using a JSON file, we'll need to do a little more work to get the JSON file into an acceptable string.
+As with using a string, we will use the same method [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) to modify the template setting. When using a JSON file, we'll need to do a little more work to get the JSON file into an acceptable string.
 
 Let's take a look at the following JSON settings file, `DLRTemplate.json`. 
 
@@ -230,8 +230,8 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
             "Name":"locr",
             "MaxThreadCount":4,
             "LinesCount":1,
-            "TextColourModes":[{
-                "Mode":"DLR_TCM_DARK_ON_LIGHT"
+            "GrayscaleTransformationModes":[{
+                "Mode":"DLR_GTM_INVERTED"
             }],
             "RegionPredetectionModes":[
             {
@@ -247,11 +247,11 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
         "ReferenceRegionArray":[
         {
             "Name":"R1",
-            "FirstPoint":[0,0],
-            "SecondPoint":[100,0],
-            "ThirdPoint":[100,100],
-            "FourthPoint":[0,100],
-            "MeasuredByPercentage":1,
+            "Localization": 
+                {
+                    "SourceType": "DLR_LST_PREDETECTED_REGION",
+                    "RegionPredetectionModesIndex": 0
+                },
             "TextAreaNameArray":["T1"]
         }
         ],
@@ -276,7 +276,7 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
     }
 ```
 
-In the following cpp file, we'll demonstrate how to read the `DLRTemplate.json` file and use it in [`AppendSettingsFromString`](#) before recognizing the image. The `ReadJsonFile` function will convert the JSON object of the file parameter to an acceptable string. 
+In the following cpp file, we'll demonstrate how to read the `DLRTemplate.json` file and use it in [`AppendSettingsFromString`](api-reference/c-label-recognition-class/settings.md#appendsettingsfromstring) before recognizing the image. The `ReadJsonFile` function will convert the JSON object of the file parameter to an acceptable string. 
 
 ```cpp
     string ReadJsonFile(const string& pJsonFile) {

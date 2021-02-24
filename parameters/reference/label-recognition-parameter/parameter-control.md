@@ -40,7 +40,7 @@ It must be a unique name.
 | LabelRecognitionParameter | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Name":"LabelRecognitionParameter1"
 }
@@ -48,6 +48,9 @@ It must be a unique name.
 
 &nbsp;
 
+
+## [BinarizationModes](binarization-modes.md#binarizationmodes)
+&nbsp;
 
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
@@ -64,12 +67,15 @@ All TextArea Objects without CharacterModelName set will be set from this settin
 | LabelRecognitionParameter | CharacterModelName | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "CharacterModelName":"CharacterModel_Name1"
 }
 ```
 
+&nbsp;
+
+## [GrayscaleTransformationModes](grayscale-transformation-modes.md#grayscaletransformationmodes)
 &nbsp;
 
 ## LetterHeightRange
@@ -91,7 +97,7 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 | LabelRecognitionParameter | LetterHeightRange | *int array* | [1,100,1] |
 
 **Json Parameter Example**   
-```
+```json
 {
     "LetterHeightRange":[40,60,1]
 }
@@ -116,7 +122,7 @@ All TextArea Objects without LinesCount set will be set from this setting.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "LinesCount":1
 }
@@ -138,7 +144,7 @@ All TextArea Objects without LineStringRegExPattern set will be set from this se
 | LabelRecognitionParameter | LineStringRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringRegExPattern":""
 }
@@ -158,7 +164,7 @@ Sets the maximum number of threads the algorithm will use to recognize text.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "MaxThreadCount":1
 }
@@ -180,7 +186,7 @@ An array item is a name of any available `ReferenceRegion`.
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "ReferenceRegionNameArray":[
         "Region1",
@@ -188,6 +194,9 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
+&nbsp;
+
+## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)
 &nbsp;
 
 ## TextRegExPattern
@@ -204,7 +213,7 @@ All TextArea Objects without TextRegExPattern set will be set from this setting.
 | LabelRecognitionParameter | TextRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextRegExPattern":""
 }

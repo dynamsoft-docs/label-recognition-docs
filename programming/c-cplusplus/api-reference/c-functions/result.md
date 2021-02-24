@@ -24,7 +24,7 @@ DLR_API int DLR_GetAllDLRResults (void* recognizer, DLRResultArray** results)
    
 #### Parameters
 `[in] recognizer` Handle of the label recognition instance.  
-`[out] results`	Recognized results returned by last calling function [`DLR_RecognizeByBuffer`](recognizing.md#dlr_recognizebybuffer) / [`DLR_RecognizeByFile`](recognizing.md#dlr_recognizebyfile) / [`DLR_RecognizeBasedOnDBRResultsByBuffer`](recognizing.md#dlr_RecognizeBasedOnDBRResultsByBuffer) / [`DLR_RecognizeBasedOnDBRResultsByFile`](recognizing.md#dlr_RecognizeBasedOnDBRResultsByFile). The results is allocated by SDK and should be freed by calling function [`DLR_FreeDLRResults`](#dlr_freedlrresults).
+`[out] results`	Recognized results returned by last calling function [`DLR_RecognizeByBuffer`](recognizing.md#dlr_recognizebybuffer) / [`DLR_RecognizeByFile`](recognizing.md#dlr_recognizebyfile). The results is allocated by SDK and should be freed by calling function [`DLR_FreeDLRResults`](#dlr_freedlrresults).
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -34,7 +34,7 @@ Returns error code (returns 0 if the function operates successfully).
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
-DLRResultArray * results;
+DLRResultArray * results = NULL;
 int errorCode = DLR_RecognizeByFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DLR_GetAllDLRResults(recognizer, &results);
 DLR_FreeDLRResults(&results);
@@ -57,7 +57,7 @@ DLR_API void DLR_FreeDLRResults (DLRResultArray ** results)
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
-DLRResultArray * results;
+DLRResultArray * results = NULL;
 int errorCode = DLR_RecognizeByFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DLR_GetAllDLRResults(recognizer, &results);
 DLR_FreeDLRResults(&results);

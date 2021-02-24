@@ -25,6 +25,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 1. Start Visual Studio and create a new Win32 Console Application in C++. 
    
 2. Add Dynamsoft Label Recognition headers and libs in `DLRHelloWorld.cpp`.   
+   
    ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognition.h"
@@ -39,7 +40,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     #endif
    ```
    
-  The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
+    The `DynamsoftLabelRecognition.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
  
 3. Update the main function in `DLRHelloWorld.cpp`.   
    ```cpp
@@ -88,7 +89,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 4. Run the project.   
    Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
    
-To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
+    To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
 
 ## Features
 

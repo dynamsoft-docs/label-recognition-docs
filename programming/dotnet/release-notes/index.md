@@ -8,3 +8,5 @@ needAutoGenerateSidebar: false
 
 # Dynamsoft Label Recognition .Net SDK - Release Notes
 
+- [1.0   (02/24/2021)](dotnet-1.md#10-02242021)
+

@@ -8,3 +8,6 @@ needAutoGenerateSidebar: false
 
 # Release Notes for Objective-C & Swift - 1.x
 
+## 1.0 (02/24/2021)
+
+- 

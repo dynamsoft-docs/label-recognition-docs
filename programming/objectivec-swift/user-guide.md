@@ -73,13 +73,15 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
         // Request a trial license here: https://www.dynamsoft.com/customer/license/trialLicense
         recognition = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0068MgAAAE4Y***kiJWrYg="];
 
-        iDLRResult *result;
+        NSArray<iDLRResult*> *result;
         NSError __autoreleasing *  error;
 
-        result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
-
+        result = [recognition recognizeByFile:@"your file path" templateName:@"" error:&error];
+        
+        NSString *msgText = @"";
+        
         for (NSInteger i = 0; i < [results count]; i++) {
-            for (iDLRLineResult* lineResult in results[i].lineResults) {
+            for (iDLRLineResult* lineResult in result[i].lineResults) {
                 msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nValue: %@\n",lineResult.text]];
             }
         }

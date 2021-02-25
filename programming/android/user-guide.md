@@ -12,7 +12,7 @@ needAutoGenerateSidebar: true
 
 - Operating systems:
    - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-   - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
+   - Supported ABI: armeabi-v7a, arm64-v8a
 
 ## Installation
 

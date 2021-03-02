@@ -109,6 +109,47 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		}
 		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
 	}
+
+Swift:
+
+```swift
+import DynamsoftLabelRecognition
+
+class ViewController {
+	
+	// MARK: - OCR the photo using DLR
+
+	@IBAction func readImageDLR(_ sender: Any) {
+		let provider = rectLayerImage.image.cgImage?.dataProvider
+		let data = CFBridgingRelease(provider?.data) as? Data
+		let bytesPerPixel = 4
+		let stride = bytesPerPixel * rectLayerImage.image.size.width // bytes per row
+
+		let DLRdata = iDLRImageData.init()
+		DLRdata?.bytes = data
+		DLRdata?.format = EnumDLRImagePixelFormatARGB8888
+		DLRdata?.width = rectLayerImage.image.size.width
+		DLRdata?.height = rectLayerImage.image.size.height
+		DLRdata?.stride = stride
+
+		let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
+
+		var error: Error?
+		let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)
+		var msgText = ""
+
+		for i in 0..<(results?.count ?? 0) {
+			if let lineResults = results?[i].lineResults {
+				for lineResult in lineResults {
+					guard let lineResult = lineResult as? iDLRLineResult else {
+						continue
+					}
+					msgText = msgText + "\nValue: \(lineResult.text)\n"
+				}
+			}
+		}
+		print("msgText.\(msgText)") // Printing the DLR result in the debugger console
+	}
+}
 ```
-   
-   
+

@@ -36,7 +36,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 3. Add the required `.tbd/.dylib` file to your project.
    Go to the `Build Phases` tab of your Xcode project, under `Link Binary with Libraries` section, click + button. Search for the file `libc++.tbd`, select it and click Add button. Then the libc++.tbd file will be copied to your project.
 
-4. Import the framework's header.
+4. Import the framework's header in the file ViewController.m. For a basic project, most of the operations will be defined there. Should you choose to use the Label Recognition API in another file, please include the import statement there as well.
 
    Objective-C:
 
@@ -48,11 +48,9 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    ```Swift
    import DynamsoftLabelRecognition
    ```   
-5. Add code for OCR
+5. After setting up the basic project, let's now move on to coding.
 
-   After setting up the basic project, you can now move on to coding.
-
-   The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process.
+    The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
 
    Objective-C:
 
@@ -63,35 +61,54 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     @interface ViewController ()
     @end
     @implementation ViewController
+    #pragma mark - OCR the photo using DLR
+	-(IBAction)readImageDLR:(id)sender
+	{
+		// First, image needs to be converted to a byte stream in order to generate the iDLRImageData for the recognizeByBuffer method.
+		
+		CGDataProviderRef provider = CGImageGetDataProvider(_rectLayerImage.image.CGImage);
+		NSData* data = (id)CFBridgingRelease(CGDataProviderCopyData(provider));
+		NSUInteger bytesPerPixel = 4;
+		NSUInteger stride = bytesPerPixel * _rectLayerImage.image.size.width; // bytes per row
+		
+		// Generating the iDLRImageData object for recognizeByBuffer using the image data
+		
+		iDLRImageData* DLRdata = [[iDLRImageData alloc] init];
+		DLRdata.bytes  = data;
+		DLRdata.format = EnumDLRImagePixelFormatARGB8888;
+		DLRdata.width  = _rectLayerImage.image.size.width;
+		DLRdata.height = _rectLayerImage.image.size.height;
+		DLRdata.stride = stride;
+		
+		/* If you choose to use the recognizeByFile method instead, extract the path of the image that was just loaded in.
+		
+		NSURL* _imageURL = [info valueForKey:(@"UIImagePickerControllerReferenceURL")]; // this line should be called in the callback function of UIImagePickerController
+		NSString *localFilePath = _imageURL.absoluteString;
+		NSLog(@"localFilePath: %@",localFilePath); // check that the path is valid via the console */
+		
+		// Initialize the DLR instance - using initLicense since we are using a trial key.
+		
+		DynamsoftLabelRecognition *recognizer;
+		recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0068MgAAAE4Y***kiJWrYg="];
+		
+		NSError __autoreleasing *  error;
+		
+		// Get the results using the recognizeByBuffer method
+		
+		NSArray<iDLRResult*>* results = [recognizer recognizeByBuffer:DLRdata templateName:@"" error:&error];
+		
+		//If using recognizeByFile instead, it's called as follows
+		//result = [recognizer recognizeByFile:localFilePath templateName:@"" error:&error];
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
+		NSString *msgText = @"";
 
-        DynamsoftLabelRecognition *recognition;
-        // Please replace "t0068MgAAAE4Y***kiJWrYg=" with your own license.
-        // Request a trial license here: https://www.dynamsoft.com/customer/license/trialLicense
-        recognition = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0068MgAAAE4Y***kiJWrYg="];
-
-        NSArray<iDLRResult*> *result;
-        NSError __autoreleasing *  error;
-
-        result = [recognition recognizeByFile:@"your file path" templateName:@"" error:&error];
-        
-        NSString *msgText = @"";
-        
-        for (NSInteger i = 0; i < [results count]; i++) {
-            for (iDLRLineResult* lineResult in result[i].lineResults) {
-                msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nValue: %@\n",lineResult.text]];
-            }
-        }
-
-   - (void)didReceiveMemoryWarning {
-      // Dispose of any resources that can be recreated.
-      [super didReceiveMemoryWarning];
-   }
-
-   @end
-   ```
+		for (NSInteger i = 0; i < [results count]; i++) {
+			for (iDLRLineResult* lineResult in results[i].lineResults) {
+				msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nValue: %@\n",lineResult.text]];
+			}
+		}
+		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
+	}
+```
    
    

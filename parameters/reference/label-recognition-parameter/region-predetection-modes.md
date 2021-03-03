@@ -45,7 +45,7 @@ If the image is large and the barcode on the image is very small, it is recommen
 - [ForeAndBackgroundColours](#foreandbackgroundcolours )
 - [HeightRange](#heightrange)
 - [MinImageDimension](#minimagedimension)
-- [NeedFindAccurateBoundary](#needfindaccurateboundary)
+- [FindAccurateBoundary](#findaccurateboundary)
 - [Sensitivity](#sensitivity)
 - [SpatialIndexBlockSize](#spatialindexblocksize)
 - [WidthRange](#widthrange)
@@ -108,7 +108,7 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
 
 
-##### NeedFindAccurateBoundary 
+##### FindAccurateBoundary 
 Sets whether to enable finding accurate boundary.
 
 | Value Type | Value Range | Default Value | Valid Modes | 

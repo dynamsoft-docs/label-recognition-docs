@@ -25,7 +25,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 2. Import the `DynamsoftLabelRecognitionAndroid.aar` package into the new project. To manually import the `.aar`:
 
     i. Locate `DynamsoftLabelRecognitionAndroid.aar` in the downloaded android zip.
-    ii. Put the .aar file under the directory libs in the project.
+    ii. Put the .aar file under the `libs` directory in the project.
     iii. In the project, open build.gradle(Module: app) and add the following code:
 
     ```
@@ -44,7 +44,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
     v. Click **Sync Now**. After the synchronization completes, `DynamsoftLabelRecognitionAndroid.aar` is added to the project.
 
-3. Add the following code to initiate and use the Dynamsoft Label Reader SDK.
+3. Add the following code to initiate and use the Dynamsoft Label Recognition SDK.
 
     ```java
     import com.dynamsoft.dlr.*;
@@ -59,16 +59,17 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
                 DLRResult[] results = mRecognition.recognizeByFile("<full image path>", "");
 
                 if (results != null && results.length > 0) {
+                    String strCurResult = "";
                     for (int i = 0; i < results.length; i++) {
-                        String strCurResult = "["+i+"] :\n";
-                        for (int j = 0; j < result[i].lineResults.length; j++) {
-                            strCurResult += result[i].lineResults[j].text + "\n";
+                        strCurResult += "["+i+"] :\n";
+                        for (int j = 0; j < results[i].lineResults.length; j++) {
+                            strCurResult += results[i].lineResults[j].text + "\n";
                         }
                     }
-                    Log.i("DBR", strCurResult);
+                    Log.i("DLR", strCurResult);
                 }
                 else {
-                        Log.i("DBR", "No barcode found");
+                    Log.i("DLR", "No results returned.");
                 }
             } 
             catch (Exception ex) {
@@ -79,6 +80,6 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     ```
     Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
 
-    In line 9 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+    In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
 
 4. Run the project.

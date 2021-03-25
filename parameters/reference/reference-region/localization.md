@@ -54,7 +54,7 @@ The first point of the reference region, which is usually the top-left corner.
 View the texts in 0 degree, the first point is the top-left point of the area defined by ReferenceRegion, and the other three points are in a clockwise direction.<br>
 
 When MeasuredByPercentage=0, the valid value range for x-coordinate/y-coordinate is [0, 0x7fffffff]
-When MeasuredByPercentage=1: the valid value range for x-coordinate/y-coordinate is [0, 100]
+When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate is [0, 100]
 
 It works only when [SourceType](#sourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION<br>
 
@@ -91,7 +91,7 @@ The second point of the reference region, which is usually the top-right corner.
 View the texts in 0 degree, the first point is the top-left point of the area defined by ReferenceRegion, and the other three points are in a clockwise direction.<br>
 
 When MeasuredByPercentage=0, the valid value range for x-coordinate/y-coordinate is [0, 0x7fffffff]
-When MeasuredByPercentage=1: the valid value range for x-coordinate/y-coordinate is [0, 100]
+When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate is [0, 100]
 
 It works only when [SourceType](#sourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION<br>
 
@@ -129,7 +129,7 @@ The third point of the reference region, which is usually the bottom-right corne
 View the texts in 0 degree, the first point is the top-left point of the area defined by ReferenceRegion, and the other three points are in a clockwise direction.<br>
 
 When MeasuredByPercentage=0, the valid value range for x-coordinate/y-coordinate is [0, 0x7fffffff]
-When MeasuredByPercentage=1: the valid value range for x-coordinate/y-coordinate is [0, 100]
+When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate is [0, 100]
 
 It works only when [SourceType](#sourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION<br>
 
@@ -167,7 +167,7 @@ The fourth point of the reference region, which is usually the bottom-left corne
 View the texts in 0 degree, the first point is the top-left point of the area defined by ReferenceRegion, and the other three points are in a clockwise direction.<br>
 
 When MeasuredByPercentage=0, the valid value range for x-coordinate/y-coordinate is [0, 0x7fffffff]
-When MeasuredByPercentage=1: the valid value range for x-coordinate/y-coordinate is [0, 100]
+When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate is [0, 100]
 
 It works only when [SourceType](#sourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION<br>
 

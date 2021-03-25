@@ -116,17 +116,17 @@ To reference multiple regions, we cannot follow the runtime settings example abo
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
         \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 1\
-            },\
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\"\
     },{\
         \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 0\
-            },\
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 0\
+            },\
         \"Name\":\"R2\"\
     }]";
     string DLRParameterArray = 
@@ -158,10 +158,10 @@ To reference multiple regions, we cannot follow the runtime settings example abo
     string ReferenceRegionArray = 
     "\"ReferenceRegionArray\":[{\
         \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 1\
-            },\
+            {\
+                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
+                \"RegionPredetectionModesIndex\": 1\
+            },\
         \"Name\":\"R1\",\
         \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
     }]";
@@ -248,10 +248,10 @@ Let's take a look at the following JSON settings file, `DLRTemplate.json`.
         {
             "Name":"R1",
             "Localization": 
-                {
-                    "SourceType": "DLR_LST_PREDETECTED_REGION",
-                    "RegionPredetectionModesIndex": 0
-                },
+                {
+                    "SourceType": "DLR_LST_PREDETECTED_REGION",
+                    "RegionPredetectionModesIndex": 0
+                },
             "TextAreaNameArray":["T1"]
         }
         ],

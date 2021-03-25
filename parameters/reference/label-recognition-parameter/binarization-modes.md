@@ -135,13 +135,13 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "BinarizationModes": [
-        {
-            "Mode": "DLR_BM_LOCAL_BLOCK",
-            "BlockSizeX": 5,
-            "BlockSizeY": 5,
-        }
-    ]
+    "BinarizationModes": [
+        {
+            "Mode": "DLR_BM_LOCAL_BLOCK",
+            "BlockSizeX": 5,
+            "BlockSizeY": 5,
+        }
+    ]
 }
 ```
 

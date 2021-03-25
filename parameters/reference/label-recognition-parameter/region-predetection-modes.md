@@ -188,13 +188,13 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "RegionPredetectionModes": [
-        {
-            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
-            "Sensitivity": 5,
-            "MinImageDimension":262144
-        }
-    ]
+    "RegionPredetectionModes": [
+        {
+            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
+            "Sensitivity": 5,
+            "MinImageDimension":262144
+        }
+    ]
 }
 ```
 

@@ -1,9 +1,9 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - ScaleUpModes 
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - ScaleUpModes.
-keywords: ScaleUpModes, ImageParameter, image process control parameters, parameter reference, parameter
-needAutoGenerateSidebar: false
+title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - ScaleUpModes
+description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - ScaleUpModes.
+keywords: ScaleUpModes, LabelRecognitionParameter, parameter reference, parameter
+needAutoGenerateSidebar: true
 ---
 # ImageParameter Object | ScaleUpModes
 
@@ -12,11 +12,11 @@ needAutoGenerateSidebar: false
 ## ScaleUpModes  
 
 ### Mode Properties
-`ScaleUpModes` is a parameter for setting the mode to control the scale-up process for text line with small letter height. It consisits of one or more `ScaleUpMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`ScaleUpModes` is a parameter for setting the mode to control the scale-up process for text line with small letter height. It consisits of one or more `DLRScaleUpMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) array* | "SUM_SKIP"<br>"SUM_AUTO"<br>"SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" | ["SUM_AUTO", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP"] |
+| *string array* or *[`DLRScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) array* | "DLR_SUM_SKIP"<br>"DLR_SUM_AUTO"<br>"DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" | ["DLR_SUM_AUTO", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP"] |
 
 - **See also**:   
     [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
@@ -32,7 +32,7 @@ Sets the letter height threshold for scale-up.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| *int* | [0, 0x7fffffff] | 0 | "DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
 - **Remarks**     
   0 : means automatically set by the library.
@@ -45,7 +45,7 @@ Sets the target letter height for scale-up.
 
 | Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| *int* | [0, 0x7fffffff] | 0 | "DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
 - **Remarks**     
   0 : means automatically set by the library.
@@ -65,7 +65,7 @@ Sets the target letter height for scale-up.
 {
     "ScaleUpModes": [
         {
-            "Mode": "SUM_AUTO",
+            "Mode": "DLR_SUM_AUTO",
             "LetterHeightThreshold": 10,
             "TargetLetterHeight": 50
         }

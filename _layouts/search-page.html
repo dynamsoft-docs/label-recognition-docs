@@ -90,12 +90,15 @@
   }
   @media (min-width: 992px) {
     #searchResult td.gsc-clear-button {display:none;}
-    .docContainer { min-height: calc(100vh - 285px); }
+    .docContainer { min-height: calc(100vh - 133px); }
   }
   @media (min-width: 1200px) {
     #searchResult { width: 960px; }
     #searchResult .gsc-results .gsc-cursor-box { margin-bottom: 25px; }
     #searchResult td.gsc-clear-button {display:none;}
+  }
+  @media (min-width: 1680px) {
+    .docContainer { min-height: calc(100vh - 155px); }
   }
   @media (max-width: 991px) {
     #searchContent { min-height: calc(100vh - 325px); }
@@ -109,22 +112,63 @@
         {%- include page_header.html -%}
     </div>
     <div class="subHeadWrapper">
-        <div class="subHeader container">
-            <div class="row">
-                <ul class="subHeaderMenuUl col-xs-12 clearfix">
-                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx">Dynamsoft Barcode Reader</a> <span class="fc9">|</span> Developer's Center</li>
-                    <li class="on"><a class="orangelink" href="{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
-                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx">Download 30-Day Free Trial</a></li>
-                </ul>
+        <div id="DLRMenu" class="productMenu">
+            <div class="container pcProductMenu">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="menuList">
+                            <li class="title">
+                                <a class="orangeLink" href="https://www.dynamsoft.com/label-recognition/overview">Dynamsoft Label Recognition</a>
+                            </li>
+                            <li class="item overview">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/overview">Overview</a>
+                            </li>
+                            <li class="item features">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/features">Features</a>
+                            </li>
+                            <li class="item on">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/">Documentation</a>
+                            </li>
+                            <li class="item useCases">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/use-cases">Use Cases</a>
+                            </li>
+                        </ul>
+                        <a href="https://www.dynamsoft.com/label-recognition/downloads" class="downloadBtn fr textUpperCase">Download Free Trial</a>
+                    </div>
+                </div>
             </div>
-            <div class="row mobileSubHeaderMenu">
-                <ul class="col-xs-12 show-xs">
-                    <li><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
-                </ul>
+            <div class="container mobileProductMenu">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="productLogo"><i class="dlt-logo"></i>Dynamsoft Label Recognition  <i class="icon-orange-angle"></i></div>
+                        <div id="dlrCurrentPage" class="fontOswald fr currentPage">Documentation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileProductDetailMenu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="menuList">
+                                <li class="item">
+                                    <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/overview">Overview</a>
+                                </li>
+                                <li class="item">
+                                    <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/features">Features</a>
+                                </li>
+                                <li class="item">
+                                    <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition">Documentation</a>
+                                </li>
+                                <li class="item">
+                                    <a class="textUpperCase" href="https://www.dynamsoft.com/label-recognition/use-cases">Use Cases</a>
+                                </li>
+                                <li class="item">
+                                    <a class="orangeLink textUpperCase" href="https://www.dynamsoft.com/label-recognition/downloads">Download Free Trial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -142,7 +186,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="content markdown-body headCounter col-xs-12" style="min-height: unset;">
+                  <div class="content markdown-body headCounter col-xs-12" style="min-height: unset;display: none;">
                       {{ content }}
                       
                   </div>
@@ -263,7 +307,7 @@
 
       $('#txtSearch').keydown(function(e) { 
           if (e.keyCode == 13) {
-              window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
+              window.location.href = '/label-recognition/search.html?q=' + $('#txtSearch').val()
           }
       })
 

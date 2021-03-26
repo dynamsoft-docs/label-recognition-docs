@@ -75,14 +75,14 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "GrayscaleTransformationModes": [
-        {
-            "Mode": "DLR_GTM_INVERTED"
-        },
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "DLR_GTM_INVERTED"
+        },
         {
             "Mode": "DLR_GTM_ORIGINAL"
         }
-    ]
+    ]
 }
 ```
 

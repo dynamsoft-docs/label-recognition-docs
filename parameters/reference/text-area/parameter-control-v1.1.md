@@ -21,8 +21,10 @@ needGenerateH3Content: false
  | [`TextArea.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
  | [`TextArea.LinesCount`](#linescount) | Sets the text lines count of the text area. |
  | [`TextArea.LinesSpecificationNameArray `](#linesspecificationnamearray ) | Specifies the name array of the LinesSpecification objects which is relative to current TextArea. |
+ | [`TextArea.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
  | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
+ | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
 
 ---
@@ -135,12 +137,12 @@ The allowed values for x/y: [-10000, 10000]<br>
 ## FourthPoint
 The fourth point of the text area, which is usually the bottom-left corner.
 
--**Remarks**    
- - View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
- - The ordinate origin is the top-left corner of the ReferenceRegion.<br>
- - The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
- - The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
- - The allowed values for x/y: [-10000, 10000]<br>
+**Remarks**    
+View the texts in 0 degree, the first point is the top-left point of the area defined by TextArea, and the other three points are in a clockwise direction.<br>
+The ordinate origin is the top-left corner of the ReferenceRegion.<br>
+The value of x is a percentage value relative to the width of the ReferenceRegion.<br>
+The value of y is a percentage value relative to the height of the ReferenceRegion.<br>
+The allowed values for x/y: [-10000, 10000]<br>
 
 
 ### As Json Parameter
@@ -180,6 +182,38 @@ If you set a character model, the result will only contain characters within the
 ```
 
 &nbsp;
+
+## GrayscaleTransformationModes
+Please check [LabelRecognitionParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#GrayscaleTransformationModes) for reference.
+
+&nbsp;
+
+## LetterHeightRange
+Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
+
+**Remarks**    
+Format: [MinHeight, MaxHeight, ByPercentage]  
+The allowed values for MinHeight/MaxHeight:  
+ByPercentage=0, [1, 0x7fffffff]  
+ByPercentage=1, [1, 100]  
+The allowed values for ByPercentage: [0,1]  
+
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | LetterHeightRange | *int array* | [1,100,1] |
+
+**Json Parameter Example**   
+```json
+{
+    "LetterHeightRange":[40,60,1]
+}
+```
+
+&nbsp;
+
 
 ## LinesCount
 Sets the text lines count of the text area.
@@ -227,53 +261,29 @@ An array item is a name of any available `LinesSpecification`.
 ```
 &nbsp;
 
-## GrayscaleTransformationModes
-Please check [LabelRecognitionParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#GrayscaleTransformationModes) for reference.
-
-&nbsp;
-
-## LetterHeightRange
-Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
-
-- **Remarks**    
- - Format: [MinHeight, MaxHeight, ByPercentage]  
- - The allowed values for MinHeight/MaxHeight:  
- - ByPercentage=0, [1, 0x7fffffff]  
- - ByPercentage=1, [1, 100]  
- - The allowed values for ByPercentage: [0,1]  
-
+## LineStringLengthRange
+Sets the range of string length for each recognized line.
 
 ### As Json Parameter
+`LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
+
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| TextArea | LetterHeightRange | *int array* | [1,100,1] |
+| TextArea | LineStringLengthRange | *JSON Object* | `null` |
+
+- **Remarks** 
+ - Value range of `MinValue` and `MaxValue`: [0, 0x7fffffff]<br>
+ - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```json
-{
-    "LetterHeightRange":[40,60,1]
-}
 ```
-
-&nbsp;
-
-
-
-## TextRegExPattern
-Specifies the regular expression pattern of the text to recognize.  
-
-
-### As Json Parameter
-
-| Json Object |	Json Parameter Name | Value Type | Default Value |
-| ----------- | ------------------- | ---------- | ------------- |
-| TextArea | TextRegExPattern | *string* | "" |
-
-**Json Parameter Example**   
-```json
 {
-    "TextRegExPattern":""
+    "LineStringLengthRange": 
+    {
+        "MinValue": 4,
+        "MaxValue": 200
+    }
 }
 ```
 
@@ -299,6 +309,53 @@ Specifies the regular expression pattern of each line string text in current tex
 
 &nbsp;
 
+## TextStringLengthRange
+Sets the range of string length for each recognized text area.
+
+### As Json Parameter
+`TextStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized text area. Default values will be used if there is no manual setting. 
+
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | TextStringLengthRange | *JSON Object* | `null` |
+
+- **Remarks** 
+ - Value range of `MinValue` and `MaxValue`: [0, 0x7fffffff]<br>
+ - MaxValue >= MinValue
+
+**Json Parameter Example**   
+```
+{
+    "TextStringLengthRange": 
+    {
+        "MinValue": 4,
+        "MaxValue": 200
+    }
+}
+```
+
+&nbsp;
+
+
+## TextRegExPattern
+Specifies the regular expression pattern of the text to recognize.  
+
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | TextRegExPattern | *string* | "" |
+
+**Json Parameter Example**   
+```json
+{
+    "TextRegExPattern":""
+}
+```
+
+&nbsp;
 
 ## TextAreaNameArray
 Specifies the name array of the TextArea objects which is relative to current text area. 

@@ -12,6 +12,7 @@ needAutoGenerateSidebar: true
 |----------------------|-------------|
   | [`appendCharacterModel`](#appendCharacterModel) | Appends CharacterModel to the SDK object. |
   | [`appendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`appendSettingsFromFile`](#appendsettingsfromFile) | Appends LabelRecognitionParameter settings from a file to the SDK object. |
   | [`clearAppendedSettings`](#clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
   | [`eraseAllCharacterModels`](#appendCharacterModel) | Erases all CharacterModels the SDK object currently loaded. |
   | [`eraseCharacterModelByName`](#appendCharacterModel) | Erases a name specified CharacterModel from the SDK object. |

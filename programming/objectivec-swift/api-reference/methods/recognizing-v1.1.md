@@ -53,7 +53,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let imageData = iDLRImageData.init()
 let error: NSError? = NSError()
 //construct imageData
@@ -99,7 +99,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 //construct imageData
 let result = recognizer.recognizeByFile("your file path", templateName:"", error:&error)

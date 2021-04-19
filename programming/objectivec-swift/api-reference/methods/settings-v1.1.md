@@ -60,7 +60,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 //construct prototxtBuffer, txtBuffer and characterModelBuffer
 recognizer.appendCharacterModel("your model name", prototxtBuffer: prototxtBuffer, txtBuffer: txtBuffer, characterModelBuffer: characterModelBuffer)
 ```
@@ -100,7 +100,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.appendSettingsFromFile("your file path", error:&error)
 ```
@@ -139,7 +139,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", error:&error)
 ```
@@ -177,7 +177,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.clearAppendedSettings(&error)
 ```
@@ -210,7 +210,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 recognizer.eraseAllCharacterModels()
 ```
 
@@ -246,7 +246,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 recognizer.eraseCharacterModelByName("your model name")
 ```
 
@@ -294,7 +294,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 let argumentValue = recognizer.getModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", error:&error)
 ```
@@ -336,7 +336,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 let settings = recognizer.getRuntimeSettings(&error)
 ```
@@ -377,7 +377,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.outputSettingsToFile("your saving file path", templateName:"currentRuntimeSettings", error:&error)
 ```
@@ -415,7 +415,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.resetRuntimeSettings(error:&error)
 ```
@@ -465,7 +465,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 recognizer.setModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", argumentValue:"100", error:&error)
 ```
@@ -509,7 +509,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 var textResults = [iTextResult]()
 //get textResults from Dynamsoft Barcode Reader SDK
 let error: NSError? = NSError()
@@ -553,7 +553,7 @@ Swift:
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognition.initLicenseFromLTS(lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 let settings = recognizer.getRuntimeSettings(&error)
 settings.linesCount = 1;

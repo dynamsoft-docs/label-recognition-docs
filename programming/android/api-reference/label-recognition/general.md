@@ -28,7 +28,7 @@ The version information string.
 ### Code Snippet
 
 ```java
-LabelRecognition recognizer = new LabelRecognition("t0260NwAAAHV***************");
+LabelRecognition recognizer = new LabelRecognition();
 String versionInfo = recognizer.getVersion();
 recognizer.destroy();
 ```

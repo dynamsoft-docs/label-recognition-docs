@@ -28,11 +28,11 @@ The version information string.
 Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
-recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
+recognizer = [[DynamsoftLabelRecognition alloc] init];
 NSString* versionInfo = [recognizer getVersion];
 ```
 Swift:
 ```Swift
-let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let recognizer = DynamsoftLabelRecognition.init()
 let versionInfo = recognizer.getVersion();
 ```

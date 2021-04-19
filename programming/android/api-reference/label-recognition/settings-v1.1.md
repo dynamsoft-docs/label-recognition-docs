@@ -123,7 +123,6 @@ void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromString (String content
 #### Parameters
 `content` A JSON string that represents the content of the settings.   
 
-
 ### Exceptions
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
@@ -147,7 +146,6 @@ recognizer.destroy();
 ```
 
 &nbsp;
-
 
 ## clearAppendedSettings
 Clear all appended parameter settings of the current label recognition instance.

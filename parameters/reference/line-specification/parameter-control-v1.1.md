@@ -235,6 +235,9 @@ Sets the range of string length for each recognized line.
 ## LineStringRegExPattern
 Specifies the regular expression pattern of the string within a line.  
 
+**Remarks**    
+Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}/label-recognition-parameter/parameter-control.html#textregexpattern).
+
 
 ### As Json Parameter
 

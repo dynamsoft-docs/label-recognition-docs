@@ -21,7 +21,7 @@ needGenerateH3Content: true
  | [`TextArea.GrayscaleTransformationModes`](parameter-control.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`TextArea.LetterHeightRange`](parameter-control.md#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
  | [`TextArea.LinesCount`](parameter-control.md#linescount) | Sets the text lines count of the text area. |
- | [`TextArea.LinesSpecificationNameArray `](parameter-control.md#linesspecificationnamearray ) | Specifies the name array of the LinesSpecification objects which is relative to current TextArea. |
+ | [`TextArea.LineSpecificationNameArray `](parameter-control.md#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
  | [`TextArea.TextAreaNameArray `](parameter-control.md#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |

@@ -24,6 +24,7 @@ needGenerateH3Content: true
  | [`TextArea.LineSpecificationNameArray `](parameter-control.md#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringLengthRange`](parameter-control.md#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
+ | [`TextArea.MaxLineCharacterSpacing`](parameter-control.md#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`TextArea.TextAreaNameArray `](parameter-control.md#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextStringLengthRange`](parameter-control.md#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |

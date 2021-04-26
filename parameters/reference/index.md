@@ -80,6 +80,6 @@ needGenerateH3Content: true
  | -------------- | ----------- | 
  | [`LabelRecognitionParameterArray`](organizational-json-parameter.md#labelrecognitionparameterarray) | An array of LabelRecognitionParameter objects. |
  | [`ReferenceRegionArray`](organizational-json-parameter.md#referenceregionarray) | An array of ReferenceRegionArray objects. |
- | [`TextAreaArray `](organizational-json-parameter.md#textareaarray) | An array of TextArea objects. |
- | [`LineSpecificationArray `](organizational-json-parameter.md#linespecificationarray) | An array of LineSpecification objects. |
- | [`CharacterModelArray `](organizational-json-parameter.md#charactermodelarray) | An array of CharacterModel objects. |
+ | [`TextAreaArray`](organizational-json-parameter.md#textareaarray) | An array of TextArea objects. |
+ | [`LineSpecificationArray`](organizational-json-parameter.md#linespecificationarray) | An array of LineSpecification objects. |
+ | [`CharacterModelArray`](organizational-json-parameter.md#charactermodelarray) | An array of CharacterModel objects. |

@@ -20,6 +20,7 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.LinesCount`](parameter-control.md#linescount) | Sets the text lines count of the text area. |
  | [`LabelRecognitionParameter.LineStringLengthRange`](parameter-control.md#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`LabelRecognitionParameter.LineStringRegExPattern`](parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.MaxLineCharacterSpacing`](parameter-control.md#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`LabelRecognitionParameter.MaxThreadCount`](parameter-control.md#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.Pages`](parameter-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |

@@ -19,6 +19,7 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.LinesCount`](#linescount) | Sets the text lines count of the text area. |
  | [`LabelRecognitionParameter.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`LabelRecognitionParameter.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`LabelRecognitionParameter.MaxThreadCount`](#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.Pages`](#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
@@ -114,8 +115,8 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 Sets the text lines count of the text area.
 
 **Remarks**   
-0: line count is not certain.  
-All TextArea Objects without LinesCount set will be set from this setting.
+- 0: line count is not certain.  
+- All TextArea Objects without LinesCount set will be set from this setting.
 
 
 ### As Json Parameter
@@ -182,6 +183,30 @@ Specifies the regular expression pattern of each line string text in current ima
 ```json
 {
     "LineStringRegExPattern":""
+}
+```
+
+&nbsp;
+
+## MaxLineCharacterSpacing
+Sets the maximum spacing between characters treated as one line.
+
+**Remarks**   
+- 0: means automatically set by the library.
+- It is a percentage value relative to the average letter height of each line.
+- All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
+| ----------- | ------------------- | ---------- | ----------- | ------------- |
+| LabelRecognitionParameter | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
+
+
+**Json Parameter Example**   
+```json
+{
+    "MaxLineCharacterSpacing":200
 }
 ```
 

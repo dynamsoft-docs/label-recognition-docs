@@ -23,6 +23,7 @@ needGenerateH3Content: false
  | [`TextArea.LineSpecificationNameArray `](#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
+ | [`TextArea.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
@@ -308,6 +309,29 @@ Specifies the regular expression pattern of each line string text in current tex
 ```json
 {
     "LineStringRegExPattern":""
+}
+```
+
+&nbsp;
+
+## MaxLineCharacterSpacing
+Sets the maximum spacing between characters treated as one line.
+
+**Remarks**   
+- 0: means automatically set by the library.
+- It is a percentage value relative to the average letter height of each line.
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
+| ----------- | ------------------- | ---------- | ----------- | ------------- |
+| TextArea | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
+
+
+**Json Parameter Example**   
+```json
+{
+    "MaxLineCharacterSpacing":200
 }
 ```
 

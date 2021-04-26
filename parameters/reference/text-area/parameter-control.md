@@ -20,7 +20,7 @@ needGenerateH3Content: false
  | [`TextArea.GrayscaleTransformationModes`](#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`TextArea.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
  | [`TextArea.LinesCount`](#linescount) | Sets the text lines count of the text area. |
- | [`TextArea.LinesSpecificationNameArray `](#linesspecificationnamearray ) | Specifies the name array of the LinesSpecification objects which is relative to current TextArea. |
+ | [`TextArea.LineSpecificationNameArray `](#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
  | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
@@ -203,25 +203,25 @@ Sets the text lines count of the text area.
 
 &nbsp;
 
-## LinesSpecificationNameArray
-Specifies the name array of the LinesSpecification objects which is relative to current text area. 
+## LineSpecificationNameArray
+Specifies the name array of the LineSpecification objects which is relative to current text area. 
 
 **Remarks**   
-An array item is a name of any available `LinesSpecification`.    
+An array item is a name of any available `LineSpecification`.    
 
 ### As Json Parameter
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| TextArea | LinesSpecificationNameArray | *string Array* | `null` |
+| TextArea | LineSpecificationNameArray | *string Array* | `null` |
 
 
 **Json Parameter Example**   
 ```json
 {
-    "LinesSpecificationNameArray":[
-        "LinesSpecification1",
-        "LinesSpecification2"
+    "LineSpecificationNameArray":[
+        "LineSpecification1",
+        "LineSpecification2"
     ]
 }
 ```

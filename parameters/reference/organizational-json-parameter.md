@@ -89,11 +89,11 @@ An array of [TextArea objects](text-area/parameter-control.md).
     "TextAreaArray": [
       {
         "Name": "TextArea1", 
-        "LinesSpecificationNameArray": ["LinesSpecification1"]
+        "LineSpecificationNameArray": ["LineSpecification1"]
       },
       {
         "Name": "TextArea2", 
-        "LinesSpecificationNameArray": ["LinesSpecification2"]
+        "LineSpecificationNameArray": ["LineSpecification2"]
       }
     ]
 }

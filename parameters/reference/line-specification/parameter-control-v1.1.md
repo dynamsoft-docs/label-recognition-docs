@@ -77,7 +77,8 @@ View the texts in 0 degree, the first point is the top-left point of the area de
 The ordinate origin is the top-left corner of the TextArea.<br>
 The value of x is a percentage value relative to the width of the TextArea.<br>
 The value of y is a percentage value relative to the height of the TextArea.<br>
-The allowed values for x/y: [-10000, 10000]<br>
+The allowed values for x/y: [0, 100].<br>
+It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
 ### As Json Parameter
@@ -104,7 +105,8 @@ View the texts in 0 degree, the first point is the top-left point of the area de
 The ordinate origin is the top-left corner of the TextArea.<br>
 The value of x is a percentage value relative to the width of the TextArea.<br>
 The value of y is a percentage value relative to the height of the TextArea.<br>
-The allowed values for x/y: [-10000, 10000]<br>
+The allowed values for x/y: [0, 100].<br>
+It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
 ### As Json Parameter
@@ -131,7 +133,8 @@ View the texts in 0 degree, the first point is the top-left point of the area de
 The ordinate origin is the top-left corner of the TextArea.<br>
 The value of x is a percentage value relative to the width of the TextArea.<br>
 The value of y is a percentage value relative to the height of the TextArea.<br>
-The allowed values for x/y: [-10000, 10000]<br>
+The allowed values for x/y: [0, 100].<br>
+It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
 ### As Json Parameter
@@ -158,7 +161,8 @@ View the texts in 0 degree, the first point is the top-left point of the area de
 The ordinate origin is the top-left corner of the TextArea.<br>
 The value of x is a percentage value relative to the width of the TextArea.<br>
 The value of y is a percentage value relative to the height of the TextArea.<br>
-The allowed values for x/y: [-10000, 10000]<br>
+The allowed values for x/y: [0, 100].<br>
+It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
 ### As Json Parameter
@@ -230,6 +234,9 @@ Sets the range of string length for each recognized line.
 
 ## LineStringRegExPattern
 Specifies the regular expression pattern of the string within a line.  
+
+**Remarks**    
+Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}/label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
 ### As Json Parameter

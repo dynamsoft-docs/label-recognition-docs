@@ -19,6 +19,7 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.LinesCount`](#linescount) | Sets the text lines count of the text area. |
  | [`LabelRecognitionParameter.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`LabelRecognitionParameter.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognitionParameter.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`LabelRecognitionParameter.MaxThreadCount`](#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.Pages`](#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
@@ -114,8 +115,8 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 Sets the text lines count of the text area.
 
 **Remarks**   
-0: line count is not certain.  
-All TextArea Objects without LinesCount set will be set from this setting.
+- 0: line count is not certain.  
+- All TextArea Objects without LinesCount set will be set from this setting.
 
 
 ### As Json Parameter
@@ -168,7 +169,8 @@ Sets the range of string length for each recognized line.
 Specifies the regular expression pattern of each line string text in current image to recognize.  
 
 **Remarks**    
-All TextArea Objects without LineStringRegExPattern set will be set from this setting.
+ - All TextArea Objects without LineStringRegExPattern set will be set from this setting.
+ - Supported regular expressions pattern syntax is same as [`TextRegExPattern`](#textregexpattern).
 
 
 ### As Json Parameter
@@ -181,6 +183,30 @@ All TextArea Objects without LineStringRegExPattern set will be set from this se
 ```json
 {
     "LineStringRegExPattern":""
+}
+```
+
+&nbsp;
+
+## MaxLineCharacterSpacing
+Sets the maximum spacing between characters treated as one line.
+
+**Remarks**   
+- 0: means automatically set by the library.
+- It is a percentage value relative to the average letter height of each line.
+- All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
+| ----------- | ------------------- | ---------- | ----------- | ------------- |
+| LabelRecognitionParameter | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
+
+
+**Json Parameter Example**   
+```json
+{
+    "MaxLineCharacterSpacing":200
 }
 ```
 
@@ -269,7 +295,7 @@ Sets the range of string length for each recognized text area.
 | ----------- | ------------------- | ---------- | ------------- |
 | LabelRecognitionParameter | TextStringLengthRange | *JSON Object* | `null` |
 
-- **Remarks** 
+**Remarks** 
  - Value range of `MinValue` and `MaxValue`: [0, 0x7fffffff]<br>
  - MaxValue >= MinValue
 
@@ -291,7 +317,33 @@ Sets the range of string length for each recognized text area.
 Specifies the regular expression pattern of the text to recognize.  
 
 **Remarks**    
-All TextArea Objects without TextRegExPattern set will be set from this setting.
+ - All TextArea Objects without TextRegExPattern set will be set from this setting.
+ - Supported regular expressions pattern syntax：
+
+| characters | matches |
+| ---------- | ------- |
+| \d         | a decimal digit character (same as "[0-9]"). |
+| \D         | any character that is not a decimal digit character (same as "[^0-9]"). |
+| \s         | a whitespace character (same as " " or "[ ]"). |
+| \S         | any character that is not a whitespace character (same as "[^ ]"). |
+| \w         | an alphanumeric or underscore character (same as "[0-9A-z_]"). |
+| \W         | any character that is not an alphanumeric or underscore character (same as "[^0-9A-z_]"). |
+| [class]    | any character that is part of the class. |
+| [^class]   | any character that is not part of the class. |
+| *          | The preceding atom is matched 0 or more times. |
+| +          | The preceding atom is matched 1 or more times. |
+| ?          | The preceding atom is optional (matched either 0 times or once). |
+| (subpattern) | Groups a sequence of subpatterns as a matching atom. |
+| {`n`}        | The preceding atom is matched exactly `n` times. |
+| {`min`,}     | The preceding atom is matched `min` or more times. |
+| {,`max`}     | The preceding atom is matched at least 0 times, but not more than `max`. |
+| {`min`,`max`}  | The preceding atom is matched at least `min` times, but not more than `max`. |
+| {(`n`)}       | The preceding atom matches exactly `n` characters. |
+| {(`min`,)}    | The preceding atom matches `min` or more characters. |
+| {(,`max`)}    | The preceding atom matches at least 0 characters, but not more than `max`. |
+| {(`min`,`max`)} | The preceding atom matches at least `min` characters, but not more than `max`. |
+| [(`string1`,`string2`,...)] | any case insensitive string that is one of the listed strings separated by commas (,). For example: [(CAN,USA)] matches CAN, USA or can. |
+| [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12). |
 
 
 ### As Json Parameter

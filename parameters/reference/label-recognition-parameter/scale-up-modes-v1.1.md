@@ -30,9 +30,9 @@ needAutoGenerateSidebar: true
 Sets the letter height threshold for scale-up.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
   0 : means automatically set by the library.
@@ -43,9 +43,9 @@ Sets the letter height threshold for scale-up.
 Sets the target letter height for scale-up.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
   0 : means automatically set by the library.

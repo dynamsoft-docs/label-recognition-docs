@@ -20,9 +20,10 @@ needGenerateH3Content: false
  | [`TextArea.GrayscaleTransformationModes`](#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`TextArea.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
  | [`TextArea.LinesCount`](#linescount) | Sets the text lines count of the text area. |
- | [`TextArea.LinesSpecificationNameArray `](#linesspecificationnamearray ) | Specifies the name array of the LinesSpecification objects which is relative to current TextArea. |
+ | [`TextArea.LineSpecificationNameArray `](#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
+ | [`TextArea.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
@@ -237,25 +238,25 @@ Sets the text lines count of the text area.
 
 &nbsp;
 
-## LinesSpecificationNameArray
-Specifies the name array of the LinesSpecification objects which is relative to current text area. 
+## LineSpecificationNameArray
+Specifies the name array of the LineSpecification objects which is relative to current text area. 
 
 **Remarks**   
-An array item is a name of any available `LinesSpecification`.    
+An array item is a name of any available `LineSpecification`.    
 
 ### As Json Parameter
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| TextArea | LinesSpecificationNameArray | *string Array* | `null` |
+| TextArea | LineSpecificationNameArray | *string Array* | `null` |
 
 
 **Json Parameter Example**   
 ```json
 {
-    "LinesSpecificationNameArray":[
-        "LinesSpecification1",
-        "LinesSpecification2"
+    "LineSpecificationNameArray":[
+        "LineSpecification1",
+        "LineSpecification2"
     ]
 }
 ```
@@ -293,6 +294,10 @@ Sets the range of string length for each recognized line.
 ## LineStringRegExPattern
 Specifies the regular expression pattern of each line string text in current text area to recognize.  
 
+**Remarks**    
+ - All LineSpecification Objects without LineStringRegExPattern set will be set from this setting.
+ - Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}/label-recognition-parameter/parameter-control.html#textregexpattern).
+
 
 ### As Json Parameter
 
@@ -304,6 +309,29 @@ Specifies the regular expression pattern of each line string text in current tex
 ```json
 {
     "LineStringRegExPattern":""
+}
+```
+
+&nbsp;
+
+## MaxLineCharacterSpacing
+Sets the maximum spacing between characters treated as one line.
+
+**Remarks**   
+- 0: means automatically set by the library.
+- It is a percentage value relative to the average letter height of each line.
+
+### As Json Parameter
+
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
+| ----------- | ------------------- | ---------- | ----------- | ------------- |
+| TextArea | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
+
+
+**Json Parameter Example**   
+```json
+{
+    "MaxLineCharacterSpacing":200
 }
 ```
 
@@ -340,6 +368,9 @@ Sets the range of string length for each recognized text area.
 
 ## TextRegExPattern
 Specifies the regular expression pattern of the text to recognize.  
+
+**Remarks**    
+Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}/label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
 ### As Json Parameter

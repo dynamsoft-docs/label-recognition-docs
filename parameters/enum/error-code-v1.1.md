@@ -6,8 +6,8 @@ keywords: error code, enumeration
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - Error Code  
-   
+# Dynamsoft Label Recognition - Error Code
+
 ## Error code common to all programming languages
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
@@ -46,7 +46,6 @@ needAutoGenerateSidebar: true
   | `DMERR_INSTANCE_COUNT_OVER_LIMIT`       | `EnumErrorCode_Instance_Count_Over_Limit`       | -20008 | The number of instances used has exceeded the limit. |
   | `DMERR_LICENSE_INIT_SEQUENCE_FAILED`    | `EnumErrorCode_License_Init_Sequence_Failed`    | -20009 | Interface InitLicenseFromLTS has to be called before creating any SDK objects. |
   | `DMERR_TRIAL_LICENSE`                   | `EnumErrorCode_Trial_License`                   | -20010 | Using a trial license. |
-
 
 ## Error code for specific programming languages  
 

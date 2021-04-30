@@ -8,6 +8,8 @@ parameters: /label-recognition/parameters/
 enumerations: /label-recognition/parameters/enum/
 parameters-reference: /label-recognition/parameters/reference/
 label-recognition-parameter-control: /label-recognition/parameters/reference/label-recognition-parameter/
+parameter-text-area: /label-recognition/parameters/reference/text-area/
+parameter-line-specification: /label-recognition/parameters/reference/line-specification/
 
 programming: /label-recognition/programming/
 
@@ -16,20 +18,26 @@ c-cplusplus-api-reference: /label-recognition/programming/c-cplusplus/api-refere
 c-functions: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
 cpp-methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
 c-cplusplus-structs: /label-recognition/programming/c-cplusplus/api-reference/structs/
-
+c-cplusplus-api-methods: /label-recognition/programming/c-cplusplus/api-reference/methods/
 c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 
 android: /label-recognition/programming/android/
 android_api: /label-recognition/programming/android/api-reference/
 android_release_notes: /label-recognition/programming/android/release-notes/
+android-api-methods: /label-recognition/programming/android/api-reference/methods/
+android-structs: /label-recognition/programming/android/api-reference/structs/
 
 dotnet: /label-recognition/programming/dotnet/
 dotnet_api: /label-recognition/programming/dotnet/api-reference/
 dotnet_release_notes: /label-recognition/programming/dotnet/release-notes/
+dotnet-api-methods: /label-recognition/programming/dotnet/api-reference/methods/
+dotnet-structs: /label-recognition/programming/dotnet/api-reference/structs/
 
 objectivec-swift: /label-recognition/programming/objectivec-swift/
 objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-reference/
 objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
+objectivec-api-methods: /label-recognition/programming/objectivec/api-reference/methods/
+objectivec-structs: /label-recognition/programming/objectivec/api-reference/structs/
 
 assets: /label-recognition/assets/
 edit_icon: /label-recognition/assets/img-icon/edit-icon.png

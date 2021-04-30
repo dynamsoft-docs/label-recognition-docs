@@ -265,12 +265,12 @@ An array item is a name of any available `ReferenceRegion`.
 
 ### As Json Parameter
 
-| Json Object |	Json Parameter Name |	Value Type | Default Value |
+| Json Object | Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
 | LabelRecognitionParameter | ReferenceRegionNameArray | *string Array* | `null` |
 
 
-**Json Parameter Example**   
+**Json Parameter Example**
 ```json
 {
     "ReferenceRegionNameArray":[
@@ -285,6 +285,7 @@ An array item is a name of any available `ReferenceRegion`.
 &nbsp;
 
 ## TextStringLengthRange
+
 Sets the range of string length for each recognized text area.
 
 ### As Json Parameter
@@ -345,14 +346,14 @@ Specifies the regular expression pattern of the text to recognize.
 | [(`string1`,`string2`,...)] | any case insensitive string that is one of the listed strings separated by commas (,). For example: [(CAN,USA)] matches CAN, USA or can. |
 | [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12). |
 
-
 ### As Json Parameter
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
 | LabelRecognitionParameter | TextRegExPattern | *string* | "" |
 
-**Json Parameter Example**   
+**Json Parameter Example**
+
 ```json
 {
     "TextRegExPattern":""
@@ -362,18 +363,19 @@ Specifies the regular expression pattern of the text to recognize.
 &nbsp;
 
 ## Timeout
-Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
 
-**Remarks**   
+Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.
+
+**Remarks**
 If you want to stop searching for labels after a specified amount of time, you can use this parameter to set a timeout.
 
 ### As Json Parameter
 
-| Json Object |	Json Parameter Name |	Value Type | Value Range | Default Value |
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | LabelRecognitionParameter | Timeout | *int* | [0,0x7fffffff] | 10000 |
 
-**Json Parameter Example**   
+**Json Parameter Example**
 ```
 {
     "Timeout":10000

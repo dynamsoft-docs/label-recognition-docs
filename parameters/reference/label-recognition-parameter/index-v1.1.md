@@ -11,9 +11,9 @@ needGenerateH3Content: false
 # Dynamsoft Label Recognition SDK - LabelRecognitionParameter Object
 
  | Parameter Name | Description |
- | -------------- | ----------- | 
+ | -------------- | ----------- |
  | [`LabelRecognitionParameter.Name`](parameter-control.md#name) | The name of the LabelRecognitionParameter object. |
- | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
+ | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | Sets the mode and priority for binarization. |
  | [`LabelRecognitionParameter.CharacterModelName`](parameter-control.md#charactermodelname) | Sets the name of a white list of recognizable characters. |
  | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`LabelRecognitionParameter.LetterHeightRange`](parameter-control.md#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
@@ -29,4 +29,3 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.TextStringLengthRange`](parameter-control.md#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
  | [`LabelRecognitionParameter.Timeout`](parameter-control.md#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |
-

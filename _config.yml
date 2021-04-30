@@ -7,6 +7,7 @@ docHomePage: /label-recognition
 parameters: /label-recognition/parameters/
 enumerations: /label-recognition/parameters/enum/
 parameters-reference: /label-recognition/parameters/reference/
+label-recognition-parameter-control: /label-recognition/parameters/reference/label-recognition-parameter/
 
 programming: /label-recognition/programming/
 

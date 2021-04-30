@@ -4,6 +4,8 @@ title: Dynamsoft Label Recognition C/C++ SDK - Release Notes 1.x
 description: This is the release notes page of Dynamsoft Label Recognition for C/C++ SDK version 1.x.
 keywords: release notes, c, c++
 needAutoGenerateSidebar: false
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Release Notes for C/C++ - 1.x
@@ -12,12 +14,11 @@ needAutoGenerateSidebar: false
 
 - Supports text recognition from BMP, JPEG, PNG and single-page TIFF files.
 - Supports zonal OCR and provides three ways to localize text areas:
-    - Pre-define an area manually in pixel or percentage.
-    - Specify an area relative to the barcode zone, which allows you to recognize accompanying texts near the barcode. 
-    - Specify an area relative to blocks which share the same colour or uses the same font colour. A common example would be a price tag, where the text of interest is always on a yellow square background, the yellow square can serve as the reference region.
+  - Pre-define an area manually in pixel or percentage.
+  - Specify an area relative to the barcode zone, which allows you to recognize accompanying texts near the barcode.
+  - Specify an area relative to blocks which share the same colour or uses the same font colour. A common example would be a price tag, where the text of interest is always on a yellow square background, the yellow square can serve as the reference region.
 - Supports specifying a regular expression to improve recognition accuracy and robustness.
-
 
 ## 1.0 Beta (12/10/2020)
 
-- Supports recognition of `A-Z`, `a-z`, `0-9`, `.`, `-`, `_`, `(blank space)`, `/` and `:` characters. 
+- Supports recognition of `A-Z`, `a-z`, `0-9`, `.`, `-`, `_`, `(blank space)`, `/` and `:` characters.

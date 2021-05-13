@@ -2,32 +2,28 @@
 layout: default-layout
 title: Dynamsoft Label Recognition Introduction - Architecture
 description: This is the architecture page of DynamsoftLabel Recognition Introduction.
-keywords: architecture, principles
+keywords: architecture, architecture
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Principles of Dynamsoft Label Recognition Algorithm
+# Architecture of Dynamsoft Label Recognition Algorithm
 
 Dynamsoft Label Recognition (DLR) is a flexible SDK used to implement zonal OCR functionality in cross-platform applications. 
 
 DLR powers your software development from the following aspects: 
-(1) performance of zonal text recognizing, 
-(2) integration of multipurpose image processing, 
-(3) extensibility of deployment. 
+- (1) performance of zonal text recognizing 
+- (2) integration of multipurpose image processing 
+- (3) flexible algorithm flow and versatile parameters  
 
-In this article, we will present the architectures and their corresponding contributions to the above advantages.
-
-## Flexible Algorithm Flow & Versatile Parameters
-
-The algorithm of DLR includes a flow of 4 stages at the top level, as illustrated in Figure 1, where extract, segmentation and recognition are the two core stages. DLR is designed to deal with a variety of zonal text recognition scenarios and offers many customizable parameters to increase its versatility. Furthermore, the architecture of the algorithm and its parameters solidifies the agility to meet new requirements. 
+The algorithm of DLR includes a flow of 4 stages at the top level, as illustrated in Figure 1, where extracting text line(s), character segmentation and recognition are the two core stages. DLR is designed to deal with a variety of zonal text recognition scenarios and offers many customizable parameters to increase its versatility. Furthermore, the architecture of the algorithm and its parameters solidifies the agility to meet new requirements. 
 
 <div align="center">
    <p><img src="assets/architecture/top-level-flow-of-dlr-algorithm.png" alt="Top Level Flow of DLR Algorithm" width="30%" /></p>
    <p>Figure 1 – Top Level Flow of DLR Algorithm</p>
 </div> 
 
-### Stage 1. Specify regions of interest (ROI). 
+## Stage 1. Specify regions of interest (ROI). 
 
 This stage begins with how to specify a ROI for a variety of sources, including image files, videos, or buffers of other applications. A ROI in DLR consists two parts: reference region and text area. A reference region could be specified by three ways now:
 - set by absolute or relative coordinates directly
@@ -54,7 +50,7 @@ Table 1 – Parameters of DLR Algorithm in the Stage 1
 | [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#GrayscaleTransformationModes) | To emphasize the features of regions of interest with processing of the grayscale image.  | Available |
 
 
-### Stage 2. Extract text line(s). 
+## Stage 2. Extract text line(s). 
 
  Before extracting text line(s), some optional steps can be taken to speed up, such as preprocessing candidate text region, binarization, setting hints about text line count, letter height, text line length etc. These steps are related to the respective parameters listed in the Table 2.
 
@@ -70,7 +66,7 @@ Table 2 – Parameters of DLR Algorithm in the Stage 2
 | [`LinesCount`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LinesCount) | . | Available |
 
 
-### Stage 3. Character segmentation and recognition.
+## Stage 3. Character segmentation and recognition.
 
 This is the most complicated stage. In order to get more accurate results, multiple iterations are used to segement and recognize characters from each text line. There are a few methods to deal with varying text quality situations. Table 4 lists the parameters to customize the key step.
 
@@ -82,7 +78,7 @@ Table 3 – Parameters of DLR Algorithm in the Stage 3
 | [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#TextRegExPattern) | . | Available |
 | [`LineStringRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringRegExPattern) | . | Available |
 
-### Stage 4. Output the recognition results. 
+## Stage 4. Output the recognition results. 
 
 This stage organizes the text recognition results. DLR would check all results and filter them according to the following parameters.
 

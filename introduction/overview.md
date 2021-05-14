@@ -31,7 +31,7 @@ DLR SDK supports reading content from video streams. For a specified frame, the 
 
 ## Use cases
 
-### [VIN Scanning[({{ site.docFullPath }}/use-cases/#VinScan)
+### [VIN Scanning]({{ site.docFullPath }}/use-cases/#VinScan)
 ### [Retail]({{ site.docFullPath }}/use-cases/#Retail)
 ### [Inventory and Warehouse Management]({{ site.docFullPath }}/use-cases/#Inventory)
 ### [ID Cards in Air Travel]({{ site.docFullPath }}/use-cases/#IDCards)

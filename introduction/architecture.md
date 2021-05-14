@@ -32,7 +32,7 @@ This stage begins with how to specify a ROI for a variety of sources, including 
 
 A text area is specified by percentage coordinates relative to the reference region. Their relationship is shown in the figure below.
 <div align="center">
-   <p><img src="assets/architecture/dlr_roi.png" alt="ROI definition" width="80%" /></p>
+   <p><img src="assets/architecture/dlr_roi.png" alt="ROI definition" width="100%" /></p>
    <p>Figure 2 – ROI definition</p>
 </div> 
 
@@ -60,10 +60,8 @@ Table 2 – Parameters of DLR Algorithm in the Stage 2
 |--------------------|--------------------------------|------------|
 | [`ImagePreprocessingModes`]({{ site.parameters-reference }}label-recognition-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes) | To enhance/keep features of text zones by processing colour or grayscale images. | Available, Extensible |
 | [`BinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/BinarizationModes.html#binarizationmodes) | To enhance/keep features of text zones by applying different binarization methods and arguments. | Available, Extensible |
-| [`LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LetterHeightRange) | . | Available |
-| [`LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringLengthRange) | . | Available |
-| [`MaxLineCharacterSpacing`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#MaxLineCharacterSpacing) | . | Available |
-| [`LinesCount`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LinesCount) | . | Available |
+| [`LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LetterHeightRange) | To improve speed and accuracy by setting the range of letter height. | Available |
+| [`MaxLineCharacterSpacing`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#MaxLineCharacterSpacing) | To improve speed and accuracy by setting the maximum spacing between characters treated as one line. | Available |
 
 
 ## Stage 3. Character segmentation and recognition.
@@ -74,9 +72,11 @@ Table 3 – Parameters of DLR Algorithm in the Stage 3
 
 | **Parameter Name** | **Intent and Functionalities** | **Status** |
 |--------------------|--------------------------------|------------|
-| [`CharacterModelName`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#CharacterModelName) | . | Available |
-| [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#TextRegExPattern) | . | Available |
-| [`LineStringRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringRegExPattern) | . | Available |
+| [`CharacterModelName`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#CharacterModelName) | To get better OCR results by setting the name of a white list of recognizable characters. | Available |
+| [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#TextRegExPattern) | To improve accuracy and robustness by applying the regular expression pattern of text in each text area to recognize. | Available |
+| [`LineStringRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringRegExPattern) | To improve accuracy and robustness by applying the regular expression pattern of text in each text line to recognize.| Available |
+| [`TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringLengthRange) | To improve speed and accuracy by setting the range of string length for each recognized line in text area(s). | Available |
+| [`LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringLengthRange) | To improve speed and accuracy by setting the range of string length for each recognized line. | Available |
 
 ## Stage 4. Output the recognition results. 
 
@@ -86,6 +86,6 @@ Table 4 – Parameters to Organize the Results
 
 | **Parameter Name** | **Intent and Functionalities** | **Status** |
 |--------------------|--------------------------------|------------|
-| [`LinesCount`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LinesCount) | To filter text results with given lines count. | Available |
-| [`LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringLengthRange) | To filter text results with length limitations of text line. | Available |
 | [`TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#TextStringLengthRange)  | To filter text results with length limitations of text area. | Available |
+| [`LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LineStringLengthRange) | To filter text results with length limitations of text line. | Available |
+| [`LinesCount`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#LinesCount) | To filter text results with given lines count. | Available |

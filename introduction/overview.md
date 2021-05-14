@@ -14,11 +14,33 @@ Dynamsoft Label Recognition (DLR) is a SDK specially designed to recognize label
 
 ## Key Features
 
-### Sophisticated Image Pre-Processing Algorithms
-### Use a Regular Expression to Improve Accuracy and Robustness
-### Stitch Content Results from Neighboring Video Frames
+### Extract and Recognize Characters from Various Image Formats
+DLR is capable of reading of alphanumeric characters and standard symbols, including period, commas, and dashes, of varying colours, font sizes and styles.
 
-## User Scenarios
+### Specify an Area to OCR Text Using a Reference Region
+DLR does not have to recognize texts from a full-sized image. Users have the option to run a zonal OCR feature for a text area. The OCR SDK allows you to specify the relative position of texts to a reference region.
+
+### Sophisticated Image Pre-Processing Algorithms
+For images of poor quality, sophisticated algorithms built into DLR SDK are applied to improve contrast, remove noise, and so on. The characteristics of texts can also be used to improve the image quality.
+
+### Use Regular Expression to Improve Accuracy and Robustness
+Developers can also specify a Regular Expression to indicate to DLR the assumption about the texts. The semantics of a Regular Expression, to specify alphanumeric values that are expected to be scanned, can give DLR more context for better OCR results.
+
+### Stitch Content Results from Neighboring Video Frames
+DLR SDK supports reading content from video streams. For a specified frame, the SDK extracts texts using OCR and cross references the result with neighbor frames for verifiable accuracy. The SDK can also intelligently decide if the text results are a partial or full match and overlap the partial results from sequential frames together.
+
+## Use cases
+
+### [VIN Scanning[({{ site.docFullPath }}/use-cases/#VinScan)
+### [Retail]({{ site.docFullPath }}/use-cases/#Retail)
+### [Inventory and Warehouse Management]({{ site.docFullPath }}/use-cases/#Inventory)
+### [ID Cards in Air Travel]({{ site.docFullPath }}/use-cases/#IDCards)
+### [Lot No. on Drug Bottles in Healthcare]({{ site.docFullPath }}/use-cases/#Healthcare)
+### [Parts Tracking and Maintenance]({{ site.docFullPath }}/use-cases/#Tracking)
+### [Parcel Labels in Transport and Logistics]({{ site.docFullPath }}/use-cases/#Transport)
+### [Voucher Code Scanning]({{ site.docFullPath }}/use-cases/#Voucher)
+### [Automatic Data Extraction]({{ site.docFullPath }}/use-cases/#Automatic)
+### [Checks in Banking]({{ site.docFullPath }}/use-cases/#Banking)
 
 ## Programming Language
 

@@ -8,4 +8,5 @@ needAutoGenerateSidebar: false
 
 # Dynamsoft Label Recognition iOS SDK - Release Notes
 
+- [1.2   (05/18/2021)](ios-1.md#12-05182021)
 - [1.0   (02/24/2021)](ios-1.md#10-02242021)

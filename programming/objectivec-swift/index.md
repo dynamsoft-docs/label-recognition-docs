@@ -15,4 +15,4 @@ needAutoGenerateSidebar: false
 
 ## Release Notes
 
-- [Version 1.0](release-notes/ios-1.md)
+- [Version 1.x](release-notes/ios-1.md)

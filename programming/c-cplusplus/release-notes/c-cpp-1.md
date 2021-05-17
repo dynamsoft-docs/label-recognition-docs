@@ -31,13 +31,7 @@ needAutoGenerateSidebar: false
 
 - Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
-#### C++
-
-- Add a new API [`AppendSettingsFromFile`]({{ site.cpp-methods }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
-
-#### C
-
-- Add a new API [`DLR_AppendSettingsFromFile`]({{ site.c-functions }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Add a new API [`AppendSettingsFromFile`]({{ site.cpp-methods }}settings.html#appendsettingsfromfile)/[`DLR_AppendSettingsFromFile`]({{ site.c-functions }}settings.html#dlr_appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 ### Improved
 

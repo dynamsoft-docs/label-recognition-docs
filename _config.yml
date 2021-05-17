@@ -19,8 +19,8 @@ c-cplusplus-structs: /label-recognition/programming/c-cplusplus/api-reference/st
 c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 
 android: /label-recognition/programming/android/
-android_api: /label-recognition/programming/android/api-reference/
-android_release_notes: /label-recognition/programming/android/release-notes/
+android-api: /label-recognition/programming/android/api-reference/
+android-release-notes: /label-recognition/programming/android/release-notes/
 
 dotnet: /label-recognition/programming/dotnet/
 dotnet_api: /label-recognition/programming/dotnet/api-reference/

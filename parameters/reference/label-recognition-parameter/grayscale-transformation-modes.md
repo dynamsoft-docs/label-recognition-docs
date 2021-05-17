@@ -38,29 +38,6 @@ needAutoGenerateSidebar: true
 - **See also**:   
     [`DLRGrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
     
-#### Mode Arguments
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
-
-##### LibraryFileName 
-Sets the file name of the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `DLRGrayscaleTransformationMode` items except DLR_GTM_SKIP |         
-
-
-- **Remarks**     
-  - The library must be in the same place with Dynamsoft Label Recognition Library.
-
-
-##### LibraryParameters 
-Sets the parameters passed to the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `DLRGrayscaleTransformationMode` items except DLR_GTM_SKIP |         
-
 
 ### Setting Methods
 
@@ -75,14 +52,14 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "GrayscaleTransformationModes": [
-        {
-            "Mode": "DLR_GTM_INVERTED"
-        },
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "DLR_GTM_INVERTED"
+        },
         {
             "Mode": "DLR_GTM_ORIGINAL"
         }
-    ]
+    ]
 }
 ```
 
@@ -90,11 +67,11 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `DLRRuntimeSettings` Member
-`GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
+`GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `DLRRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.c-cplusplus-structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
 
 **See Also**    
 - [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)

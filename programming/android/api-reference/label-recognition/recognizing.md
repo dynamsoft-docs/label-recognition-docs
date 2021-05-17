@@ -36,7 +36,17 @@ All results recognized successfully.
 ### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 //Generate imageData from somewhere else
 DLRResult[] result = recognizer.recognizeByBuffer(imageData, "");
 recognizer.destroy();
@@ -66,7 +76,17 @@ All results recognized successfully.
 ### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRResult[] result = recognizer.recognizeByFile("full file path", "");
 recognizer.destroy();
 ```

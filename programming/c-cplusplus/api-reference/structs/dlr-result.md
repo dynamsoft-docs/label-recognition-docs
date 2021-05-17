@@ -30,7 +30,8 @@ typedef struct tagDLRResult*  PDLRResult
 | [`confidence`](#confidence) | *int* |
 | [`lineResultsCount`](#lineresultscount) | *int* |
 | [`lineResults`](#lineresults) | [`PDLRLineResult`](dlr-line-result.md)\* |
-| [`reserved`](#reserved) | *char\[64\]* |
+| [`pageNumber`](#pagenumber) | *int* |
+| [`reserved`](#reserved) | *char\[60\]* |
 
 
 ### referenceRegionName
@@ -71,8 +72,16 @@ The line results array.
 PDLRLineResult* tagDLRResult::lineResults
 ```
 
+
+### pageNumber
+The page number the result located in. The index is 0-based.
+```cpp
+int tagDLRResult::pageNumber
+```
+
+
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagDLRResult::reserved[64]
+char tagDLRResult::reserved[60]
 ```

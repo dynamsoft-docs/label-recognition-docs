@@ -30,6 +30,10 @@ needAutoGenerateSidebar: true
   | `DLRERR_CHARACTER_MODEL_FILE_NOT_FOUND` | `EnumErrorCode_Character_Model_File_Not_Found`  | -10014 | The character model file is not found. |
   | `DLRERR_SET_MODE_ARGUMENT_ERROR`        | `EnumErrorCode_Set_Mode_Argument_Error`         | -10015 | Failed to set mode's argument. |
   | `DLRERR_GET_MODE_ARGUMENT_ERROR`        | `EnumErrorCode_Get_MODE_Argument_Error`         | -10016 | Failed to set mode's argument. |
+  | `DLRERR_TIFF_READ_FAILED`               | `EnumErrorCode_TIFF_Read_Failed`                | -10017 | Failed to read the TIFF image. |
+  | `DLRERR_PDF_READ_FAILED`                | `EnumErrorCode_PDF_Read_Failed`                 | -10021 | Failed to read the PDF image. |
+  | `DLRERR_PDF_DLL_MISSING`                | `EnumErrorCode_PDF_DLL_Missing`                 | -10022 | The PDF DLL is missing. |
+  | `DLRERR_RECOGNITION_TIMEOUT`            | `EnumErrorCode_Recognition_Timeout`             | -10026 | Recognition timeout. |
   | `DLRERR_REQUESTED_FAILED`               | `EnumErrorCode_Requested_Failed`                | -10044 | Failed to request the license file. |
   | `DMERR_NO_LICENSE`                      | `EnumErrorCode_No_License`                      | -20000 | No license specified. |
   | `DMERR_HANDSHAKE_CODE_INVALID`          | `EnumErrorCode_Handshake_Code_Invalid`          | -20001 | The handshake code is invalid. |

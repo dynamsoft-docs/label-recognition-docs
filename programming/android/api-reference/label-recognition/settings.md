@@ -11,10 +11,11 @@ needAutoGenerateSidebar: true
 | Method               | Description |
 |----------------------|-------------|
   | [`appendCharacterModelBuffer`](#appendcharactermodelbuffer) | Appends CharacterModel to the SDK object. |
+  | [`appendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognitionParameter settings in a file to the SDK object. |
   | [`appendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`clearAppendedSettings`](#clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
-  | [`eraseAllCharacterModels`](#appendcharactermodelbuffer) | Erases all CharacterModels the SDK object currently loaded. |
-  | [`eraseCharacterModelByName`](#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
+  | [`eraseAllCharacterModels`](#eraseallcharactermodels) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](#erasecharactermodelbyname) | Erases a name specified CharacterModel from the SDK object. |
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`getRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a class object. |
   | [`outputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
@@ -45,7 +46,17 @@ void com.dynamsoft.dlr.LabelRecognition.appendCharacterModelBuffer (String name,
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 AssetManager manager = getAssets();
 InputStream isPrototxt = manager.open("CharacterModel/NumberLetter.prototxt");
 byte[] prototxt = new byte[isPrototxt.available()];
@@ -66,6 +77,42 @@ recognizer.destroy();
 &nbsp;
 
 
+## appendSettingsFromFile
+Appends LabelRecognitionParameter settings in a file to the SDK object.
+
+```java
+void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromFile (String filePath) throws LabelRecognitionException
+```   
+   
+#### Parameters
+`filePath` The settings file path.   
+
+
+### Exceptions
+
+[`LabelRecognitionException`](../class/label-recognition-exception.md)
+
+#### Code Snippet
+```java
+LabelRecognition recognizer = new LabelRecognition();
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
+recognizer.appendSettingsFromFile("your file path");
+recognizer.destroy();
+```
+
+&nbsp;
+
+
 ## appendSettingsFromString
 Append a new template string to the current label recognition instance.
 
@@ -76,7 +123,6 @@ void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromString (String content
 #### Parameters
 `content` A JSON string that represents the content of the settings.   
 
-
 ### Exceptions
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
@@ -84,13 +130,22 @@ void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromString (String content
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.destroy();
 ```
 
 &nbsp;
-
 
 ## clearAppendedSettings
 Clear all appended parameter settings of the current label recognition instance.
@@ -102,7 +157,17 @@ void com.dynamsoft.dlr.LabelRecognition.clearAppendedSettings () throws LabelRec
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.clearAppendedSettings();
 ```
 
@@ -119,7 +184,17 @@ void com.dynamsoft.dlr.LabelRecognition.eraseAllCharacterModels () throws LabelR
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.eraseAllCharacterModels();
 ```
 
@@ -127,7 +202,7 @@ recognizer.eraseAllCharacterModels();
 
 
 ## eraseCharacterModelByName
-Clear all appended parameter settings of the current label recognition instance.
+Erases a name specified CharacterModel from the SDK object.
 
 ```java
 void com.dynamsoft.dlr.LabelRecognition.eraseCharacterModelByName(String name) throws LabelRecognitionException
@@ -139,7 +214,17 @@ void com.dynamsoft.dlr.LabelRecognition.eraseCharacterModelByName(String name) t
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.eraseCharacterModelByName("NumberLetter");
 ```
 
@@ -172,7 +257,17 @@ Check follow link for available modes and arguments:
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
@@ -202,7 +297,17 @@ The class object of template settings.
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 recognizer.destroy();
 ```
@@ -228,7 +333,17 @@ void com.dynamsoft.dlr.LabelRecognition.outputSettingsToFile (String filePath, S
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
 recognizer.destroy();
@@ -250,7 +365,17 @@ void com.dynamsoft.dlr.LabelRecognition.resetRuntimeSettings () throws LabelReco
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.linesCount = 1;
 recognizer.updateRuntimeSettings(settings);
@@ -287,7 +412,17 @@ Check follow link for available modes and arguments:
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
@@ -318,7 +453,17 @@ void com.dynamsoft.dlr.LabelRecognition.updateReferenceRegionFromBarcodeResults 
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
@@ -344,7 +489,17 @@ void com.dynamsoft.dlr.LabelRecognition.updateRuntimeSettings (DLRRuntimeSetting
 #### Code Snippet
 ```java
 LabelRecognition recognizer = new LabelRecognition();
-recognizer.initLicense("t0260NwAAAHV***************");
+DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
+parameters.organizationID = "200001";
+recognizer.initLicenseFromLTS(parameters, new DLRLTSLicenseVerificationListener() {
+                @Override
+                public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                    if (!isSuccess) {
+                        error.printStackTrace();
+                    }
+                }
+            });
+
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.linesCount = 1;
 recognizer.updateRuntimeSettings(settings);

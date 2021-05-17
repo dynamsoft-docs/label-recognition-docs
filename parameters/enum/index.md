@@ -15,6 +15,7 @@ needAutoGenerateSidebar: false
   | [`DLRBinarizationMode`](parameter-mode-enums.md#dlrbinarizationmode) | Describes the binarization mode. |
   | [`DLRGrayscaleTransformationMode`](parameter-mode-enums.md#dlrgrayscaletransformationmode) | Describes the grayscale transformation mode. |
   | [`DLRRegionPredetectionMode`](parameter-mode-enums.md#dlrregionpredetectionmode) | Describes the region predetection mode. |
+  | [`DLRScaleUpMode`](parameter-mode-enums.md#dlrscaleupmode) | Describes the scale up mode. |
 
   
 ## [Other Enumeration](other-enums.md)

@@ -14,6 +14,7 @@ needAutoGenerateSidebar: true
   | [`DLR_UpdateRuntimeSettings`](#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`DLR_ResetRuntimeSettings`](#dlr_resetruntimesettings) | Resets the runtime settings. |
   | [`DLR_AppendSettingsFromString`](#dlr_appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`DLR_AppendSettingsFromFile`](#dlr_appendsettingsfromfile) | Appends LabelRecognitionParameter settings in a file to the SDK object. |
   | [`DLR_OutputSettingsToFile`](#dlr_outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](#dlr_clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
   | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
@@ -134,6 +135,36 @@ void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 char errorMessage[256];
 DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
+DLR_DestroyInstance(recognizer);
+```
+
+&nbsp;
+
+
+## DLR_AppendSettingsFromFile
+Appends LabelRecognitionParameter settings in a file to the SDK object.
+
+```c
+DLR_API int DLR_AppendSettingsFromFile (void* recognizer, const char* filePath, char errorMsgBuffer[], const int errorMsgBufferLen)
+```   
+   
+#### Parameters
+`[in] recognizer` Handle of the label recognition instance.  
+`[in] filePath` The settings file path.   
+`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in] errorMsgBufferLen` The length of allocated buffer.
+
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```c
+void* recognizer = DLR_CreateInstance();
+DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+char errorMessage[256];
+DLR_AppendSettingsFromFile(recognizer, "your file path", errorMessage, 256);
 DLR_DestroyInstance(recognizer);
 ```
 

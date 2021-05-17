@@ -42,6 +42,7 @@ needAutoGenerateSidebar: false
   | [`updateRuntimeSettings`](label-recognition/settings.md#updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`resetRuntimeSettings`](label-recognition/settings.md#resetruntimesettings) | Resets the runtime settings. |
   | [`appendSettingsFromString`](label-recognition/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`appendSettingsFromFile`](label-recognition/settings.md#appendsettingsfromFile) | Appends LabelRecognitionParameter settings from a file to the SDK object. |
   | [`outputSettingsToFile`](label-recognition/settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`clearAppendedSettings`](label-recognition/settings.md#clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
   | [`updateReferenceRegionFromBarcodeResults`](label-recognition/settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |

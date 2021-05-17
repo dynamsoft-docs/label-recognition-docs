@@ -12,32 +12,32 @@ needAutoGenerateSidebar: false
 
 ### New
 
-- Added a new parameter `LabelRecognitionParameter.Timeout`({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#timeout). Should the recognition time pass the value of this parameter, a new error code `DLRERR_RECOGNITION_TIMEOUT`({{ site.enumerations }}error-code.html) will be returned.
+- Added a new parameter [`LabelRecognitionParameter.Timeout`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#timeout). Should the recognition time pass the value of this parameter, a new error code [`DLRERR_RECOGNITION_TIMEOUT`]({{ site.enumerations }}error-code.html) will be returned.
 
-- Added a new parameter `LabelRecognitionParameter.Pages`({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#page) that specifies a page or a subset of pages of a single file to run the recognition process on.
+- Added a new parameter [`LabelRecognitionParameter.Pages`]{{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#page) that specifies a page or a subset of pages of a single file to run the recognition process on.
 
-- Added a new parameter `LabelRecognitionParameter.ScaleUpModes`({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#page) and enum `DLRScaleUpMode`({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) to control the scale-up process for text lines with a small letter height.
+- Added a new parameter [`LabelRecognitionParameter.ScaleUpModes`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#page) and enum [`DLRScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) to control the scale-up process for text lines with a small letter height.
 
-- Added the following error codes: `DLRERR_TIFF_READ_FAILED`({{ site.enumerations }}error-code.html) , `DLRERR_PDF_READ_FAILED`({{ site.enumerations }}error-code.html) and `DLRERR_PDF_DLL_MISSING`({{ site.enumerations }}error-code.html). These error codes will be returned when the recognizer fails to read a TIFF file, a PDF file, or if the PDF DLL is missing, respectively.
+- Added the following error codes: [`DLRERR_TIFF_READ_FAILED`]({{ site.enumerations }}error-code.html) , [`DLRERR_PDF_READ_FAILED`]({{ site.enumerations }}error-code.html) and [`DLRERR_PDF_DLL_MISSING`]({{ site.enumerations }}error-code.html). These error codes will be returned when the recognizer fails to read a TIFF file, a PDF file, or if the PDF DLL is missing, respectively.
 
-- Added a new property `pageNumber`({{ site.c-cplusplus-structs }}dlr-result.html#pagenumber) to `DLRResult` to identify the page on which the result is located.
+- Added a new property [`pageNumber`]({{ site.c-cplusplus-structs }}dlr-result.html#pagenumber) to `DLRResult` to identify the page on which the result is located.
 
 - Added parameters `TextStringLengthRange` and `LineStringLengthRange` that can be used t to define the minimum and maximum string length when running the recognition process on a text area or a specific line, respectively. They are available as:
-  - `LabelRecognitionParameter.TextStringLengthRange`({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textstringlengthrange)
-  - `LabelRecognitionParameter.LineStringLengthRange`({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#linestringlengthrange)
-  - `TextArea.TextStringLengthRange`({{ site.parameters-reference }}text-area/parameter-control.html#textstringlengthrange)
-  - `TextArea.LineStringLengthRange`({{ site.parameters-reference }}text-area/parameter-control.html#linestringlengthrange)
-  - `LineSpecification.LineStringLengthRange`({{ site.parameters-reference }}line-specification/parameter-control.html#linestringlengthrange)
+  - [`LabelRecognitionParameter.TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textstringlengthrange)
+  - [`LabelRecognitionParameter.LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#linestringlengthrange)
+  - [`TextArea.TextStringLengthRange`]({{ site.parameters-reference }}text-area/parameter-control.html#textstringlengthrange)
+  - [`TextArea.LineStringLengthRange`]({{ site.parameters-reference }}text-area/parameter-control.html#linestringlengthrange)
+  - [`LineSpecification.LineStringLengthRange`]({{ site.parameters-reference }}line-specification/parameter-control.html#linestringlengthrange)
 
-- Added parameters `LineSpecification.FirstPoint`({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), `LineSpecification.SecondPoint`({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), `LineSpecification.ThirdPoint`({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and `LineSpecification.FourthPoint`({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
+- Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
 #### C++
 
-- Add a new API `AppendSettingsFromFile`({{ site.cpp-methods }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Add a new API [`AppendSettingsFromFile`]({{ site.cpp-methods }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 #### C
 
-- Add a new API `DLR_AppendSettingsFromFile`({{ site.c-functions }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Add a new API [`DLR_AppendSettingsFromFile`]({{ site.c-functions }}settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 ### Improved
 

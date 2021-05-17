@@ -14,7 +14,7 @@ needAutoGenerateSidebar: false
 
 - Added a new parameter [`LabelRecognitionParameter.Timeout`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#timeout). Should the recognition time pass the value of this parameter, a new error code [`DLRERR_RECOGNITION_TIMEOUT`]({{ site.enumerations }}error-code.html) will be returned.
 
-- Added a new parameter [`LabelRecognitionParameter.Pages`]{{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#page) that specifies a page or a subset of pages of a single file to run the recognition process on.
+- Added a new parameter [`LabelRecognitionParameter.Pages`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#page) that specifies a page or a subset of pages of a single file to run the recognition process on.
 
 - Added a new parameter [`LabelRecognitionParameter.ScaleUpModes`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#page) and enum [`DLRScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) to control the scale-up process for text lines with a small letter height.
 

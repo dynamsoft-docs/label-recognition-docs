@@ -16,8 +16,6 @@ needAutoGenerateSidebar: false
 
 - Added a new parameter [`LabelRecognitionParameter.Pages`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#page) that specifies a page or a subset of pages of a single file to run the recognition process on.
 
-- Added a new parameter [`LabelRecognitionParameter.ScaleUpModes`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#page) and enum [`DLRScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) to control the scale-up process for text lines with a small letter height.
-
 - Added the following error codes: [`DLRERR_TIFF_READ_FAILED`]({{ site.enumerations }}error-code.html) , [`DLRERR_PDF_READ_FAILED`]({{ site.enumerations }}error-code.html) and [`DLRERR_PDF_DLL_MISSING`]({{ site.enumerations }}error-code.html). These error codes will be returned when the recognizer fails to read a TIFF file, a PDF file, or if the PDF DLL is missing, respectively.
 
 - Added a new property [`pageNumber`]({{ site.c-cplusplus-structs }}dlr-result.html#pagenumber) to `DLRResult` to identify the page on which the result is located.

@@ -22,7 +22,7 @@ needAutoGenerateSidebar: false
 
 - Added a new property [`PageNumber`]({{ site.dotnet-structs }}dlr-result.html#pagenumber) to `DLR_Result` to identify the page on which the result is located.
 
-- Added parameters `TextStringLengthRange` and `LineStringLengthRange` that can be used t to define the minimum and maximum string length when running the recognition process on a text area or a specific line, respectively. They are available as:
+- Added parameters `TextStringLengthRange` and `LineStringLengthRange` that can be used to define the minimum and maximum string length when running the recognition process on a text area or a specific line, respectively. They are available as:
   - [`LabelRecognitionParameter.TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textstringlengthrange)
   - [`LabelRecognitionParameter.LineStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#linestringlengthrange)
   - [`TextArea.TextStringLengthRange`]({{ site.parameters-reference }}text-area/parameter-control.html#textstringlengthrange)
@@ -31,15 +31,17 @@ needAutoGenerateSidebar: false
 
 - Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
-- Add a new API [`AppendSettingsFromFile`]({{ site.dotnet_api }}label-recognition/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Added a new API [`AppendSettingsFromFile`]({{ site.dotnet_api }}label-recognition/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 ### Improved
 
-- Improved recognition performance.
+- Improved the recognition performance.
 
-- Improved the Regular expression parameter by supporting more [RegEx pattern syntaxes]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
+- Improved the regular expression parameter by supporting more [RegEx pattern syntaxes]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
-- Improved the SDK’s performance when dealing with skewed and italics characters.
+- Improved the recognition accuracy when dealing with skewed and italics characters.
+
+- Improved the recognition accuracy for serif fonts.
 
 
 ## 1.0 (02/24/2021)

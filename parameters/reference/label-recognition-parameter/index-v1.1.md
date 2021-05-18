@@ -25,7 +25,6 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.Pages`](parameter-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](parameter-control.md#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
  | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for label recognition. |
- | [`LabelRecognitionParameter.ScaleUpModes`](scale-up-modes.md#scaleupmodes) | Sets the mode and priority to control the scale-up process for text line with small letter height. |
  | [`LabelRecognitionParameter.TextStringLengthRange`](parameter-control.md#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`LabelRecognitionParameter.TextRegExPattern`](parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
  | [`LabelRecognitionParameter.Timeout`](parameter-control.md#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |

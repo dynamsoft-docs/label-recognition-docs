@@ -15,4 +15,4 @@ needAutoGenerateSidebar: false
 
 ## Release Notes
 
-- [Version 1.0](release-notes/dotnet-1.md)
+- [Version 1.x](release-notes/dotnet-1.md)

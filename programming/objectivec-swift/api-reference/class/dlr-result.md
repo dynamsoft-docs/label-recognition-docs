@@ -21,6 +21,7 @@ Stores the recognized result.
 | [`location`](#location) | [`iDLRQuadrilateral`](dlr-quadrilateral.md)\* |
 | [`confidence`](#confidence) | *NSInteger* |
 | [`lineResults`](#lineresults) | NSArray<[`iDLRLineResult`](dlr-line-result.md)\*>\* |
+| [`pageNumber`](#pagenumber) | *NSInteger* |
 
 
 ### referenceRegionName
@@ -55,3 +56,8 @@ The line results array.
 NSArray<iDLRLineResult*>* lineResults
 ```
 
+### pageNumber
+The page number the result located in. The index is 0-based.
+```objc
+NSInteger pageNumber
+```

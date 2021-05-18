@@ -41,23 +41,21 @@ If the image is large and the barcode on the image is very small, it is recommen
     [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
     
 #### Mode Arguments
-- [AspectRatioRange](#aspectratiorange )
-- [ForeAndBackgroundColours](#foreandbackgroundcolours )
+- [AspectRatioRange](#aspectratiorange)
+- [ForeAndBackgroundColours](#foreandbackgroundcolours)
 - [HeightRange](#heightrange)
 - [MinImageDimension](#minimagedimension)
 - [FindAccurateBoundary](#findaccurateboundary)
 - [Sensitivity](#sensitivity)
 - [SpatialIndexBlockSize](#spatialindexblocksize)
 - [WidthRange](#widthrange)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
  
 ##### AspectRatioRange 
 Sets the aspect ratio range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing aspect ratio range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing aspect ratio range. | "" |         
 
 
 - **Remarks**     
@@ -69,9 +67,9 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 ##### ForeAndBackgroundColours 
 Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more colour sets. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing one or more colour sets. | "" |         
 
 
 - **Remarks**     
@@ -86,9 +84,9 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 ##### HeightRange 
 Sets the height range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing height range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing height range. | "" |         
 
 
 - **Remarks**     
@@ -100,9 +98,9 @@ Sets the height range of the bounding rectangle of the predetected region.
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [16384, 0x7fffffff] | 262144 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [16384, 0x7fffffff] | 262144 |         
 
 - **Remarks**     
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
@@ -111,9 +109,9 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 ##### FindAccurateBoundary 
 Sets whether to enable finding accurate boundary.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 0 | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1] | 0 |         
 
 - **Remarks**     
   0: disable.<br>
@@ -122,9 +120,9 @@ Sets whether to enable finding accurate boundary.
 ##### Sensitivity 
 Sets the sensitivity used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 1 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 1 |         
 
 - **Remarks**     
   A larger value means the library will take more effort to detect regions.  
@@ -132,9 +130,9 @@ Sets the sensitivity used for region predetection algorithm.
 ##### SpatialIndexBlockSize 
 Sets the spatial index block size used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 32] | 5 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 32] | 5 |         
 
 - **Remarks**     
   The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
@@ -144,35 +142,14 @@ Sets the spatial index block size used for region predetection algorithm.
 ##### WidthRange 
 Sets the width range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing width range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing width range. | "" |         
 
 
 - **Remarks**     
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
-
-
-##### LibraryFileName 
-Sets the file name of the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `DLRRegionPredetectionMode` items except DLR_RPM_SKIP and DLR_RPM_AUTO |         
-
-
-- **Remarks**     
-  - The library must be in the same place with Dynamsoft Label Recognition Library.
-
-
-##### LibraryParameters 
-Sets the parameters passed to the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `DLRRegionPredetectionMode` items except DLR_RPM_SKIP and DLR_RPM_AUTO |         
-
 
 
 ### Setting Methods
@@ -188,13 +165,13 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "RegionPredetectionModes": [
-        {
-            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
-            "Sensitivity": 5,
-            "MinImageDimension":262144
-        }
-    ]
+    "RegionPredetectionModes": [
+        {
+            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
+            "Sensitivity": 5,
+            "MinImageDimension":262144
+        }
+    ]
 }
 ```
 

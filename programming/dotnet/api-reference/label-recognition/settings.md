@@ -10,6 +10,7 @@ needAutoGenerateSidebar: true
 
 | Method               | Description |
 |----------------------|-------------|
+  | [`AppendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognitionParameter settings in a file to the SDK object. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
   | [`ClearAppendedSettings`](#clearappendedsettings) | Clears appended LabelRecognitionParameter settings. |
   | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
@@ -116,6 +117,31 @@ void Dynamsoft.DLR.LabelRecognition.AppendSettingsFromString (string content)
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.Dispose();
+```
+
+&nbsp;
+
+
+## AppendSettingsFromFile
+Appends LabelRecognitionParameter settings in a file to the SDK object.
+
+```csharp
+void Dynamsoft.DLR.LabelRecognition.AppendSettingsFromFile (string filePath)
+```   
+   
+### Parameters
+`filePath` The settings file path.   
+
+
+### Exceptions
+[`DLR_Exception`](../class/label-recognition-exception.md)
+
+### Code Snippet
+```csharp
+LabelRecognition recognizer = new LabelRecognition();
+recognizer.InitLicense("t0260NwAAAHV***************");
+recognizer.AppendSettingsFromFile("your file path");
 recognizer.Dispose();
 ```
 

@@ -29,6 +29,10 @@ needAutoGenerateSidebar: false
   - [`TextArea.LineStringLengthRange`]({{ site.parameters-reference }}text-area/parameter-control.html#linestringlengthrange)
   - [`LineSpecification.LineStringLengthRange`]({{ site.parameters-reference }}line-specification/parameter-control.html#linestringlengthrange)
 
+- Added a new parameter `MaxLineCharacterSpacing` to limit the spacing between characters treated as one line. They are available as:
+  - [`LabelRecognitionParameter.MaxLineCharacterSpacing`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#maxlinecharacterspacing)
+  - [`TextArea.MaxLineCharacterSpacing`]({{ site.parameters-reference }}text-area/parameter-control.html#maxlinecharacterspacing)
+
 - Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
 - Added a new API [`appendSettingsFromFile`]({{ site.android_api }}label-recognition/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.

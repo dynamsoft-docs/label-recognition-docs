@@ -12,7 +12,7 @@ needGenerateH3Content: true
 Dynamsoft Label Recognition (DLR) is a flexible SDK used to implement zonal OCR functionality in cross-platform applications. 
 
 DLR powers your software development from the following aspects: 
-- (1) performance of zonal text recognizing 
+- (1) performance of zonal text and symbols recognizing 
 - (2) integration of multipurpose image processing 
 - (3) flexible algorithm flow and versatile parameters  
 
@@ -25,7 +25,7 @@ The algorithm of DLR includes a flow of 4 stages at the top level, as illustrate
 
 ## Stage 1. Specify regions of interest (ROI). 
 
-This stage begins with how to specify a ROI for a variety of sources, including image files, videos, or buffers of other applications. A ROI in DLR consists two parts: reference region and text area. A reference region could be specified by three ways now:
+This stage begins with how to specify a ROI for a variety of sources, including image files, videos, or buffers of other applications. A ROI in DLR consists two parts generally: reference region and text area. A reference region could be specified by three ways now:
 - set by absolute or relative coordinates directly
 - set by barcode region which detected by DBR
 - set by predetect region according background colour, foreground colour etc. 
@@ -42,10 +42,10 @@ Table 1 – Parameters of DLR Algorithm in the Stage 1
 
 | **Parameter Name** | **Functionality** | **Status** |
 | ------------------ | ---------------------------- | ---------- |
-| [`ReferenceRegionNameArray`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#ReferenceRegionNameArray) | The name array of the ReferenceRegion object(s). | Available |
-| [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/RegionPredetectionModes.html#regionpredetectionmodes) | To limit the subsequent stages in special areas to speed up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
+| [`ReferenceRegionNameArray`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#ReferenceRegionNameArray) | The name array of the ReferenceRegion object(s) defined in th root node of template json. | Available |
 | [`ReferenceRegion`]({{ site.parameters-reference }}reference-region/parameter-control.html) | To specify a reference region for text area(s). | Available |
 | [`TextArea`]({{ site.parameters-reference }}text-area/parameter-control.html) | To specify a target area for text recognition. | Available |
+| [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/RegionPredetectionModes.html#regionpredetectionmodes) | To limit the subsequent stages in special areas to speed up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
 | [`Pages`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#Pages) | To specify pages or the range of pages of a file (.tiff or .pdf) for label recognition. | Available |
 | [`GrayscaleTransformationModes`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#GrayscaleTransformationModes) | To emphasize the features of regions of interest with processing of the grayscale image.  | Available |
 

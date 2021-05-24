@@ -9,27 +9,25 @@ needGenerateH3Content: true
 
 # Overview of Dynamsoft Label Recognition
 
-Dynamsoft Label Recognition (DLR) is a SDK specially designed to recognize labels which are some meaningful zonal text in the image. Popular scenarios include price tags in supermarkets, inventory labels in warehouses, VIN code on cars, driver licenses and ID cards, etc. DLR enables you to efficiently read alphanumeric characters and standard symbols from image files, videos regardless of background colour, text colour, font or size. With our SDK, you can create reliable text detection and recognition software with enterprise-grade performance to meet your business needs.
+Dynamsoft Label Recognition (DLR) is an SDK specially designed to recognize labels, which are some meaningful zonal text or symbols in an image. Popular scenarios include price tags in supermarkets, inventory labels in warehouses, VIN code on cars, driver licenses and ID cards, etc. DLR enables you to efficiently read alphanumeric characters and standard symbols from image files, videos regardless of background colour, text colour, font or size. With our SDK, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
 
 ## Key Features
 
-### Extract and Recognize Characters from Various Image Formats
+### Extract and Recognize Characters and Symbols
 DLR is capable of reading of alphanumeric characters and standard symbols, including period, commas, and dashes, of varying colours, font sizes and styles.
 
-### Specify an Area to OCR Text Using a Reference Region
-DLR does not have to recognize texts from a full-sized image. Users have the option to run a zonal OCR feature for a text area. The OCR SDK allows you to specify the relative position of texts to a reference region.
+### Various ways to Specify the target zones.
+DLR does not aim to recognize texts from a full-sized image. The SDK allows you to specify the target zones in multiple ways, including manually specified, reference to barcode region/special background region/other text zones.
 
 ### Sophisticated Image Pre-Processing Algorithms
 For images of poor quality, sophisticated algorithms built into DLR SDK are applied to improve contrast, remove noise, and so on. The characteristics of texts can also be used to improve the image quality.
 
-### Use Regular Expression to Improve Accuracy and Robustness
-Developers can also specify a Regular Expression to indicate to DLR the assumption about the texts. The semantics of a Regular Expression, to specify alphanumeric values that are expected to be scanned, can give DLR more context for better OCR results.
+### Regular Expression to Improve Accuracy and Robustness
+Developers can specify a Regular Expression to indicate DLR the assumption about the texts. The semantics of a Regular Expression, to specify alphanumeric values that are expected to be scanned, can give DLR more context for better OCR results.
 
-### Stitch Content Results from Neighboring Video Frames
-DLR SDK supports reading content from video streams. For a specified frame, the SDK extracts texts using OCR and cross references the result with neighbor frames for verifiable accuracy. The SDK can also intelligently decide if the text results are a partial or full match and overlap the partial results from sequential frames together.
 
-## Use cases
+## Usage scenarios
 
 ### [VIN Scanning]({{ site.docFullPath }}/use-cases/#VinScan)
 ### [Retail]({{ site.docFullPath }}/use-cases/#Retail)
@@ -48,7 +46,7 @@ Cross-platform application development is now the new trend. The core of DLR is 
 
 | OS            | Programming Language |
 |---------------|----------------------|
-|Windows/Linux  | C/C++                |
-|Windows        | C\#/VB.NET           |
+|Windows        | C/C++/C\#/VB.NET     |
+|Linux          | C/C++                |
 |Android        | Java                 |
 |iOS            | Swift/Objective-C    |

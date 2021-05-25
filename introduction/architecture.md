@@ -66,7 +66,7 @@ Table 2 – Parameters of DLR Algorithm in the Stage 2
 
 ## Stage 3. Character segmentation and recognition.
 
-This is the most complicated stage. In order to get accurate results, algorithm try to segment and recognize characters from each text line iteratively. There are a few methods to deal with varying text quality situations. The parameters are listed in table 3 .
+This is the most complicated stage. To get accurate results, algorithm try to segment and recognize characters from each text line iteratively. There are a few methods to deal with varying text quality situations. The parameters are listed in table 3 .
 
 Table 3 – Parameters of DLR Algorithm in the Stage 3
 

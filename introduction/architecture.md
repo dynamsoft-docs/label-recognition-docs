@@ -16,7 +16,7 @@ DLR powers your software development from the following aspects:
 - (2) integration of multipurpose image processing 
 - (3) flexible algorithm flow and versatile parameters  
 
-The algorithm of DLR includes a flow of 4 stages at the top level, as illustrated in Figure 1, where extracting text line(s), character segmentation and recognition are the two core stages. DLR is designed to deal with a variety of zonal text recognition scenarios and offers many customizable parameters to increase its versatility. Furthermore, the architecture of the algorithm and its parameters solidifies the agility to meet new requirements. 
+The algorithm of DLR includes a flow of 4 stages at the top level. As illustrated in Figure 1, where extracting text line(s), character segmentation and recognition are the two core stages. DLR is designed to deal with a variety of zonal text recognition scenarios and offers many customizable parameters to increase its versatility. Furthermore, fully integrated algorithm architecture and variety parameters solidifies the agility to meet any new requirements. 
 
 <div align="center">
    <p><img src="assets/architecture/top-level-flow-of-dlr-algorithm.png" alt="Top Level Flow of DLR Algorithm" width="30%" /></p>
@@ -25,10 +25,10 @@ The algorithm of DLR includes a flow of 4 stages at the top level, as illustrate
 
 ## Stage 1. Specify regions of interest (ROI). 
 
-This stage begins with how to specify a ROI for a variety of sources, including image files, videos, or buffers of other applications. A ROI in DLR consists two parts generally: reference region and text area. A reference region could be specified by three ways now:
-- set by absolute or relative coordinates directly
-- set by barcode region which detected by DBR
-- set by predetect region according background colour, foreground colour etc. 
+This phase begins with how to specify a ROI from a variety of sources, including image files, videos, or buffers of other applications. A ROI in DLR consists two parts generally: reference region and text area. A reference region could be:
+- An predefined region with absolute or relative coordinates known in advance
+- A barcode region which detected by [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/?urlsource=navigation)
+- A predetect region according background colour, foreground colour etc. 
 
 A text area is specified by percentage coordinates relative to the reference region. Their relationship is shown in the figure below.
 <div align="center">
@@ -52,7 +52,7 @@ Table 1 – Parameters of DLR Algorithm in the Stage 1
 
 ## Stage 2. Extract text line(s). 
 
- Before extracting text line(s), some optional steps can be taken to speed up, such as preprocessing candidate text region, binarization, setting hints about text line count, letter height, text line length etc. These steps are related to the respective parameters listed in the Table 2.
+ Before extracting text line(s), some optional steps can be taken to speed up. Such as preprocessing candidate text region, binarization, setting hints about text line count, letter height, text line length etc. These steps are related to the respective parameters listed in the Table 2.
 
 Table 2 – Parameters of DLR Algorithm in the Stage 2
 
@@ -66,7 +66,7 @@ Table 2 – Parameters of DLR Algorithm in the Stage 2
 
 ## Stage 3. Character segmentation and recognition.
 
-This is the most complicated stage. In order to get more accurate results, multiple iterations are used to segement and recognize characters from each text line. There are a few methods to deal with varying text quality situations. Table 3 lists the parameters to customize the key step.
+This is the most complicated stage. In order to get accurate results, algorithm try to segment and recognize characters from each text line iteratively. There are a few methods to deal with varying text quality situations. The parameters are listed in table 3 .
 
 Table 3 – Parameters of DLR Algorithm in the Stage 3
 
@@ -80,7 +80,7 @@ Table 3 – Parameters of DLR Algorithm in the Stage 3
 
 ## Stage 4. Output the recognition results. 
 
-This stage organizes the text recognition results. DLR would check all results and filter them according to the following parameters.
+This stage main focus on the text recognition results. Algorithm would check all available results, and filter unwanted results according to the following parameters.
 
 Table 4 – Parameters to Organize the Results
 

@@ -199,7 +199,7 @@ char* DM_LTSConnectionParameters::organizationID
 ### products
 Sets the products to get the license for. Product values can be combined.
 ```cpp
-int products
+int DM_LTSConnectionParameters::products
 ```
 - **Value range**   
     A combine value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items.

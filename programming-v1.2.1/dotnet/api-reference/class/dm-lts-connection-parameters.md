@@ -177,10 +177,10 @@ string Dynamsoft.DMLTSConnectionParameters.OrganizationID
     Any string value   
       
 - **Default value**   
-    NULL
+    ""
 
 ### products
-Sets the products.
+Sets the products to get the license for. Product values can be combined.
 ```csharp
 int Dynamsoft.DMLTSConnectionParameters.Products
 ```

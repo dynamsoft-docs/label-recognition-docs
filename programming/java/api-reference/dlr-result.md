@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognition Java Class - DLRResult
 description: This page shows the DLRResult struct of Dynamsoft Label Recognition for Java Language.
 keywords: DLRResult, struct, java
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognition Java Class - DMLTSConnectionParameters
 description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognition for Java Language.
 keywords: DMLTSConnectionParameters, struct, java
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

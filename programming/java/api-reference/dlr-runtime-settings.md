@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognition Java Class - DLRRuntimeSettings
 description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognition for Java Language.
 keywords: DLRRuntimeSettings, struct, java
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

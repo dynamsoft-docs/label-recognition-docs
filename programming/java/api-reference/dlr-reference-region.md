@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognition Java Class - DLRReferenceRegion
 description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Recognition for Java Language.
 keywords: DLRReferenceRegion, struct, java
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

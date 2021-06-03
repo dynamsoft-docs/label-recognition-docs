@@ -60,7 +60,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     @interface ViewController ()
     @end
     @implementation ViewController
-    #pragma mark - OCR the photo using DLR
+    
 	-(IBAction)readImageDLR:(id)sender
 	{
 		// First, image needs to be converted to a byte stream in order to generate the iDLRImageData for the recognizeByBuffer method.
@@ -108,6 +108,8 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		}
 		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
 	}
+	
+	@end
 	```
 
 	Swift:

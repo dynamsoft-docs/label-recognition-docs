@@ -137,7 +137,7 @@ recognizer.initLicenseFromLTS(info);
 
 &nbsp; 
 
-## Setting
+## Settings
 
   | Method               | Description |
   |----------------------|-------------|

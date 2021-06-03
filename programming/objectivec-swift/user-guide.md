@@ -40,10 +40,11 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    Objective-C:
 
    ```objc
-    #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+	#import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
    ```
 
    Swift:
+
    ```Swift
    import DynamsoftLabelRecognition
    ```   

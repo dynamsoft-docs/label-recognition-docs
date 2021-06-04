@@ -52,7 +52,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
     The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
 
-   	Objective-C:
+    Objective-C:
 
     ```objc
     #import "ViewController.h"

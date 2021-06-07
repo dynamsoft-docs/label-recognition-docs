@@ -2,17 +2,27 @@
 layout: default-layout
 title: Dynamsoft Label Recognition Introcution - Main Page
 description: This is the main page of Dynamsoft Label Recognition Introduction. 
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Overview of Dynamsoft Label Recognition
 
-Dynamsoft Label Recognition (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshield, driver licenses and ID cards, etc. DLR enables you to efficiently read alphanumeric characters and standard symbols from image files, videos regardless of background colour, text colour, font or size. With our SDK, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
+Dynamsoft Label Recognition (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshield, driver licenses and ID cards, etc. 
+
+DLR powers your software development from the following aspects:
+- (1) introduce Reference Region feature to reduce the difficulty specifying ROI,
+- (2) create Inferece Area concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks,
+- (3) innovate a text recognition engine combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction to obtain the most accurate and robust results,
+- (4) support setting regular expressions to improve the accuracy of text recognition,
+- (5) design a variety of processing modes at different algorithm stages to maintain great scalability.
+
+With our SDK, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
 ## Key Features
 
-### Reference Region
-How to specify the label position is not a simple problem. The label is generally not fixed in a certain position, but may be located in or around some characteristic areas. DLR introduces the concept of reference region, which uses the features such as foreground and background colors, straight lines, textures, or barcodes around the label.
+### Reference Region 
+The `Reference Region` is an important feature of DLR. It can greatly reduce the difficulty specifying ROI of label recognition for users. Generally, a label is not fixed in a certain position, but may be located in or around some characteristic areas. The reference region may utilize the features such as foreground and background colors, straight lines, textures, or barcodes around the label.
 
 A reference region could be:
 - A predefined region with absolute or relative coordinates known in advance.
@@ -31,7 +41,7 @@ On the right, the background color of the reference region is specified as red, 
 
 ### Inference Area
 
-In some scenarios, there are no features such as color, texture, and barcode in the image that can be used directly. However, there are structural features between the text blocks in the label. Therefore, DLR will introduce the concept of Inference Area in version 2.0, which uses text-based features. 
+The `Inference Area` feature in DLR is based on the relative position characteristics between text blocks in an image. It will be introduced to quickly and effectively calculate the target label position in version 2.0.
 
 As shown in the figure below, the text blocks L0 and T1 inside the label T0 meet the form of key-value pairs. 
 
@@ -40,18 +50,15 @@ As shown in the figure below, the text blocks L0 and T1 inside the label T0 meet
    <p>Figure 2 – text-based region inference</p>
 </div> 
 
-T0 is not only a label, but also an inference area with appropriate inference parameters. DLR can find the text line L0 that meets the parameters in T0, then calculate more accurate reference coordinates for the target label T1.
+T0 is not only a label, but also an inference area with appropriate inference parameters. DLR can find the text line L0 that meets the condition in T0, then calculate more accurate reference coordinates for the target label T1.
 
-### Text recognition model
-Machine learning is very popular in text recognition. However, in some scenarios, there are still misreading of certain characters. In order to improve the accuracy and robustness of character recognition, DLR's text recognition engine uses a combination of deep neural networks and traditional feature extraction. 
+### Text recognition engine
+In order to obtain the most accurate and robust text recognition results, DLR has innovated a `text recognition engine`. It combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction.
 
-The DLR installation package contains 4 sets of preset character recognition models, which correspond to different supported character sets. It also supports training to generate customized recognition models through specific data sets. 
-
-DLR's recognition model supports both the primary model and the auxiliary model. The auxiliary model is mainly trained for some confusing characters.
-In some cases, when the primary model cannot determine which candidate character is more accurate, the auxiliary model will further try to distinguish.
+The text recognition engine of DLR supports one primary model and multiple auxiliary models. In the iterative recognition process, DLR will automatically select the smallest CNN-model according to the character sets to be recognized. For example, the text of a label contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results. Additionaly, DLR also supports training to generate customized recognition models through specific data sets. In some cases, there are still misreading of certain characters. Then traditional image feature of each character will be captured to further distinguish.
 
 ### Regular Expression
-In order to improve the accuracy of text recognition, DLR supports setting different regular expressions for different regions including label or text line. Through regular expressions, DLR can quickly find recognition errors and perform effective error correction to improve accuracy. For example, if a character that does not conform to a regular expression is recognized at a specific position in a string, DLR will perform multiple iteration attempts on the character to obtain the best result.
+In order to improve the accuracy of text recognition, DLR supports setting different `regular expressions` for different regions including label or text line. Through regular expressions, DLR can quickly find recognition errors and perform effective error correction to improve accuracy. For example, if a character that does not conform to a regular expression is recognized at a specific position in a string, DLR will perform multiple iteration attempts on the character to obtain the best result.
 
 ### Various processing modes
 In order to cope with various scenarios, DLR has designed a variety of processing modes at different stages of the algorithm to maintain great scalability. For example, the `BinarizationModes` provide different image binarization methods, and the `RegionPredetectionModes` provide different pre-detection methods for the reference region. These Modes can be configured not only through API, but also through a template file. Furthermore, the implementation of these modes can be customized according to customer scenarios and seamlessly integrated with SDK.
@@ -60,16 +67,35 @@ In order to cope with various scenarios, DLR has designed a variety of processin
 
 ## Usage scenarios
 
-### [VIN Scanning]({{ site.docFullPath }}/use-cases/#VinScan)
-### [Retail]({{ site.docFullPath }}/use-cases/#Retail)
-### [Inventory and Warehouse Management]({{ site.docFullPath }}/use-cases/#Inventory)
-### [ID Cards in Air Travel]({{ site.docFullPath }}/use-cases/#IDCards)
-### [Lot No. on Drug Bottles in Healthcare]({{ site.docFullPath }}/use-cases/#Healthcare)
-### [Parts Tracking and Maintenance]({{ site.docFullPath }}/use-cases/#Tracking)
-### [Parcel Labels in Transport and Logistics]({{ site.docFullPath }}/use-cases/#Transport)
-### [Voucher Code Scanning]({{ site.docFullPath }}/use-cases/#Voucher)
-### [Automatic Data Extraction]({{ site.docFullPath }}/use-cases/#Automatic)
-### [Checks in Banking]({{ site.docFullPath }}/use-cases/#Banking)
+### VIN Scanning
+Automotive industry professionals use Vehicle Identification Numbers (VINs) to identify vehicles. With the help of DLR, users can identify vehicles anywhere, anytime by scanning VINs.
+
+### Retail
+In retail, DLR ensures accurate price label recognition. Multiple price labels can be easily scanned at once, reducing chances of errors. Even when a barcode is damaged, the store employees can make use of the label recognition feature on their mobile phones to perform price verification.
+
+### Inventory and Warehouse Management
+With OCR, warehouse crew and staff can capture content that isn’t necessarily barcoded. Even if the barcodes are damaged, every item of inventory can be easily scanned with the help of the accompanying text to make sure that everything is in its place and to determine which items need to be restocked. Warehouse staff also make use of pallet ID labels, also known as box labels to make sure that the products are stored at the correct location in the warehouse.
+
+### ID Cards in Air Travel
+Smart devices equipped with OCR software and technology help airports and airline employees to scan machine-readable ID cards and passports easily and instantly. With mobile devices equipped with OCR capability, employees can verify IDs anywhere in the airport. Passengers can scan their passports while checking-in online, thereby eliminating errors when entering the data and responding to alerts such as one for an out-of-date passport.
+
+### Lot No. on Drug Bottles in Healthcare
+Incorporating data capture and text recognition technologies into healthcare software adds remarkable value to their applications. As an example, for pharmaceutical products that do not have data encoded within a barcode, OCR helps by instantly scanning ref or lot numbers. Staff ID badges do not need to have barcodes on them because the text printed on the badges (name, number, etc.) can be scanned for identity verification.
+
+### Parts Tracking and Maintenance
+OCR software helps maintenance operators to easily track and find different parts in a warehouse. Smart device scanning solutions equipped with OCR software can easily replace dedicated scanning hardware that contributes to reducing the total cost of ownership. Employees can scan text and barcodes on different parts, saving time in the process and decreasing the chances of errors in tracking a large number of parts. When video cameras and OCR software are combined, they can capture difficult-to-read information such as serial numbers on parts in the automotive industry. This further ensures that parts are correctly labeled and nothing is lost.
+
+### Parcel Labels in Transport and Logistics
+OCR technology helps in reducing the errors, energy, and time associated with manual data entry processes in the transport and logistics industries. With an OCR solution, it becomes easier to read optical marks, text, and laser print, which can then index documents with data contained within the document and dispatch system. When a barcode on a parcel or package is damaged and cannot be scanned, OCR software helps by reading the accompanying text instead. Advanced OCR software can scan multiple lines of text in a single scan on a smart device.
+
+### Voucher Code Scanning
+With the help of text recognition technology, companies can enable their customers to scan voucher codes on the back of gift cards using their mobile phones. To make this happen, companies need to integrate serial number scanning into an app or website. Because vouchers benefit customers in many ways, this will be a good way to promote engagement with the company.
+
+### Automatic Data Extraction
+Businesses that have high volume scanning and document inflow can benefit by having a method to quickly search through volumes of content with the help of OCR. Automatic data extraction with OCR increases productivity by facilitating fast and accurate data retrieval. Users can search for documents by typing names, addresses, numbers, or unique codes, etc. Moreover, automated sorting makes the entire process more streamlined and manageable.
+
+### Checks in Banking
+Accurate data capture helps to simplify banking processes, making them more efficient and faster. A recent OCR innovation allows customers to easily scan and deposit checks from their mobile phones. Every part of the check is processed, including the signature, the account number, and the amount. Numbers on checks are printed with a special font that can be easily recognized by a computer. Any document, form numbers, or alphanumeric text such as IBAN (International Bank Account Numbers), can be quickly scanned with the help of OCR software.
 
 ## Programming Language
 

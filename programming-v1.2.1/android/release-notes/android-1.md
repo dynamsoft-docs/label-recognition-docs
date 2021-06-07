@@ -11,10 +11,11 @@ needAutoGenerateSidebar: false
 ## 1.2.1 (06/08/2021)
 
 ### New
-- Added a new property [`products`]({{ site.objectivec-structs }}dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
+- Added a new property [`products`]({{ site.android }}class/dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
+- Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}otherenums.html#Product).
 
 ### Fixed
-- Fixed a bug when initializing licenses between different dynamsoft products.
+- Fixed a bug of license client.
 
 ## 1.2 (05/18/2021)
 

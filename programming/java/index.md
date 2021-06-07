@@ -11,7 +11,8 @@ needAutoGenerateSidebar: false
 ## Getting Started
 
 - [User Guide for Java](user-guide.md)
-- [API Reference](api-reference/index.md)
+- [Primay API](label-recognition.md)
+- [Auxiliary API](auxiliary-api/index.md)
 
 ## Release Notes
 

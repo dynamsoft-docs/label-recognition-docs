@@ -11,9 +11,9 @@ needGenerateH3Content: true
 Dynamsoft Label Recognition (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshield, driver licenses and ID cards, etc. 
 
 DLR powers your software development from the following aspects:
-- (1) introduce Reference Region feature to reduce the difficulty specifying ROI,
-- (2) create Inferece Area concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks,
-- (3) innovate a text recognition engine combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction to obtain the most accurate and robust results,
+- (1) introduce `Reference Region` feature to reduce the difficulty of specifying ROI,
+- (2) create `Inferece Area` concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks,
+- (3) innovate a text recognition engine combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction,
 - (4) support setting regular expressions to improve the accuracy of text recognition,
 - (5) design a variety of processing modes at different algorithm stages to maintain great scalability.
 
@@ -22,7 +22,7 @@ With our SDK, you can create customizable text detection and recognition softwar
 ## Key Features
 
 ### Reference Region 
-The `Reference Region` is an important feature of DLR. It can greatly reduce the difficulty specifying ROI of label recognition for users. Generally, a label is not fixed in a certain position, but may be located in or around some characteristic areas. The reference region may utilize the features such as foreground and background colors, straight lines, textures, or barcodes around the label.
+The `Reference Region` is an important feature of DLR. It can greatly reduce the difficulty of specifying ROI for users. Generally, a label is not fixed in a certain position, but may be located in or around some characteristic areas. The reference region may utilize the features such as foreground and background colors, straight lines, textures, or barcodes around the label.
 
 A reference region could be:
 - A predefined region with absolute or relative coordinates known in advance.

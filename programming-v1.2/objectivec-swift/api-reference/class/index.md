@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # Dynamsoft Label Recognition - Classes
 
-- [`iDLRLTSConnectionParameters`](dlr-lts-connection-parameters.md)
+- [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.md)
 - [`iDLRCharacterResult`](dlr-character-result.md)		
 - [`iDLRImageData`](dlr-image-data.md)		
 - [`iDLRLineResult`](dlr-line-result.md)	

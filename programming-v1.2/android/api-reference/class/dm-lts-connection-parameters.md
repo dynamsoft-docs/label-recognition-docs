@@ -23,8 +23,6 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *int* |
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *List<Integer>* |
-| [`organizationID`](#organizationid) | *String* |
-| [`products`](#products) | *int* |
 
 
 ### mainServerURL
@@ -134,28 +132,3 @@ List<Integer>  com.dynamsoft.dlr.DMLTSConnectionParameters.limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
       
-
-### organizationID
-The organization ID got from Dynamsoft.
-```java
-String com.dynamsoft.dlr.DMLTSConnectionParameters.organizationID
-```
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
-    ""
-
-### products
-Sets the products to get the license for. Product values can be combined.
-```java
-int com.dynamsoft.dlr.DMLTSConnectionParameters.products
-```
-- **Value range**   
-    A combine value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items.
-      
-- **Default value**   
-    `PROD_ALL`
-    
-- **See also**  
-    [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)

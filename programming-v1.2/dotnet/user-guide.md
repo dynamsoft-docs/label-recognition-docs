@@ -8,6 +8,8 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition - .Net User Guide
 
+Accurately read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
+
 ## System Requirements
 
 - Operating systems:

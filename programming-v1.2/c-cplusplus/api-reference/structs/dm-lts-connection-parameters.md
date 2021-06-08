@@ -22,10 +22,10 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
     
 | Attribute | Type |
 |---------- | ---- |
-| [`mainServerURL`](#mainserverurl) | *char\** |
-| [`standbyServerURL`](#standbyserverurl) | *char\** |
-| [`handshakeCode`](#handshakecode) | *char\** |
-| [`sessionPassword`](#sessionpassword) | *char\** |
+| [`mainServerURL`](#mainserverurl) | *const char\** |
+| [`standbyServerURL`](#standbyserverurl) | *const char\** |
+| [`handshakeCode`](#handshakecode) | *const char\** |
+| [`sessionPassword`](#sessionpassword) | *const char\** |
 | [`deploymentType`](#deploymenttype) | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) |
 | [`chargeWay`](#chargeway) | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) |
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) |
@@ -33,67 +33,65 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 | [`limitedLicenseModulesCount`](#limitedlicensemodulescount) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
 | [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
-| [`organizationID`](#organizationID) | *char\** |
-| [`products`](#products) | *int* |
-| [`reserved`](#reserved) | *char\[52\]* |
+| [`reserved`](#reserved) | *char\[60\]* |
 
 
 ### mainServerURL
 The URL of the license tracking server.
 ```cpp
-char*  DM_LTSConnectionParameters::mainServerURL
+const char*  tagDM_LTSConnectionParameters::mainServerURL
 ```
 - **Value range**   
     Any string value   
       
 - **Default value**   
-    NULL
+    ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### standbyServerURL
 The URL of the standby license tracking server.
 ```cpp
-char*  DM_LTSConnectionParameters::standbyServerURL
+const char*  tagDM_LTSConnectionParameters::standbyServerURL
 ```
 - **Value range**   
     Any string value   
       
 - **Default value**   
-    NULL
+    ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### handshakeCode
 The handshake code.
 ```cpp
-char*  DM_LTSConnectionParameters::handshakeCode
+const char*  tagDM_LTSConnectionParameters::handshakeCode
 ```
 - **Value range**   
     Any string value   
       
 - **Default value**   
-    NULL
+    ""
 
 ### sessionPassword
 The session password of the handshake code set in license tracking server.
 ```cpp
-char*  DM_LTSConnectionParameters::sessionPassword
+const char*  tagDM_LTSConnectionParameters::sessionPassword
 ```
 - **Value range**   
     Any string value   
       
 - **Default value**   
-    NULL
+    ""
 
 ### deploymentType
 Sets the deployment type.
 ```cpp
-DM_DeploymentType DM_LTSConnectionParameters::deploymentType
+DM_DeploymentType tagDM_LTSConnectionParameters::deploymentType
 ```
 - **Value range**   
     A value of [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.
@@ -108,7 +106,7 @@ DM_DeploymentType DM_LTSConnectionParameters::deploymentType
 ### chargeWay
 Sets the charge way.
 ```cpp
-DM_ChargeWay DM_LTSConnectionParameters::chargeWay
+DM_ChargeWay tagDM_LTSConnectionParameters::chargeWay
 ```
 - **Value range**   
     A value of [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
@@ -123,7 +121,7 @@ DM_ChargeWay DM_LTSConnectionParameters::chargeWay
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
 ```cpp
-DM_UUIDGenerationMethod DM_LTSConnectionParameters::UUIDGenerationMethod
+DM_UUIDGenerationMethod tagDM_LTSConnectionParameters::UUIDGenerationMethod
 ```
 - **Value range**   
     A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
@@ -138,7 +136,7 @@ DM_UUIDGenerationMethod DM_LTSConnectionParameters::UUIDGenerationMethod
 ### maxBufferDays
 Sets the max days to buffer the license info.
 ```cpp
-int DM_LTSConnectionParameters::maxBufferDays
+int tagDM_LTSConnectionParameters::maxBufferDays
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -149,7 +147,7 @@ int DM_LTSConnectionParameters::maxBufferDays
 ### limitedLicenseModulesCount
 Sets the count of license modules to use.
 ```cpp
-int DM_LTSConnectionParameters::limitedLicenseModulesCount
+int tagDM_LTSConnectionParameters::limitedLicenseModulesCount
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -160,7 +158,7 @@ int DM_LTSConnectionParameters::limitedLicenseModulesCount
 ### limitedLicenseModules
 Sets the license modules to use.
 ```cpp
-DM_LicenseModule* DM_LTSConnectionParameters::limitedLicenseModules
+DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
 ```
 - **Value range**   
     Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
@@ -170,11 +168,19 @@ DM_LicenseModule* DM_LTSConnectionParameters::limitedLicenseModules
     
 - **See also**  
     [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+      
+
+### reserved
+Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
+```cpp
+char tagDM_LTSConnectionParameters::reserved[64]
+```
+
 
 ### maxConcurrentInstanceCount
 Sets the max concurrent instance count.
 ```cpp
-int DM_LTSConnectionParameters::maxConcurrentInstanceCount
+int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
 ```
 - **Value range**   
     [1,0x7fffffff]   
@@ -184,34 +190,3 @@ int DM_LTSConnectionParameters::maxConcurrentInstanceCount
 - **Remarks**   
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT.<br>
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
-
-### organizationID
-The organization ID got from Dynamsoft.
-```cpp
-char* DM_LTSConnectionParameters::organizationID
-```
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
-    NULL
-
-### products
-Sets the products to get the license for. Product values can be combined.
-```cpp
-int DM_LTSConnectionParameters::products
-```
-- **Value range**   
-    A combine value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items.
-      
-- **Default value**   
-    `PROD_ALL`
-    
-- **See also**  
-    [`Product`]({{ site.enumerations }}other-enums.html#product)
-
-### reserved
-Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
-```cpp
-char DM_LTSConnectionParameters::reserved[52]
-```

@@ -39,7 +39,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    Objective-C:
 
    ```objc
-    #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+	#import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
    ```
 
    Swift:
@@ -108,9 +108,10 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		}
 		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
 	}
+	
+    @end
+    ```
 
-	@end
-	```
 
 	Swift:
 

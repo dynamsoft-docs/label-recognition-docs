@@ -31,7 +31,7 @@ objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-refere
 objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
 
 java: /label-recognition/programming/java/
-java-api: /label-recognition/programming/java/api-reference/
+java-api: /label-recognition/programming/java/auxiliary-api/
 java-release-notes: /label-recognition/programming/java/release-notes/
 
 assets: /label-recognition/assets/

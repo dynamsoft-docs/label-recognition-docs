@@ -6,10 +6,9 @@ keywords: api reference, java
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognition - Java API Reference
+# Dynamsoft Label Recognition - Auxiliary API
 
 ## Classes
-- [LabelRecognition](label-recognition.md)
 - [LabelRecognitionException](label-recognition-exception.md)
 - [DLRRuntimeSettings](dlr-runtime-settings.md)
 - [DLRReferenceRegion](dlr-reference-region.md)

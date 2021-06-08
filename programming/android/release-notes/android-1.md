@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 
 ### New
 
-- Added a new property [`products`]({{ site.android }}class/dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
+- Added a new property [`products`]({{ site.android-api }}class/dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}otherenums.html#Product).
 
 ### Fixed

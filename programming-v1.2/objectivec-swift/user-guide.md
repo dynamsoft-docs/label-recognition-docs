@@ -8,8 +8,6 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition - Objective-C & Swift User Guide
 
-Accurately read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
-
 ## System Requirements
 
 - Operating systems:
@@ -45,16 +43,18 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    ```
 
    Swift:
+
    ```Swift
    import DynamsoftLabelRecognition
    ```   
+
 5. After setting up the basic project, let's now move on to coding.
 
     The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
 
-   Objective-C:
+    Objective-C:
 
-   ```objc
+    ```objc
     #import "ViewController.h"
     #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
 
@@ -110,46 +110,49 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
 	}
 
-Swift:
+    @end
+    ```
 
-```swift
-import DynamsoftLabelRecognition
+	Swift:
 
-class ViewController {
-	
-	// MARK: - OCR the photo using DLR
+    ```swift
+    import DynamsoftLabelRecognition
 
-	@IBAction func readImageDLR(_ sender: Any) {
-		let provider = rectLayerImage.image.cgImage?.dataProvider
-		let data = CFBridgingRelease(provider?.data) as? Data
-		let bytesPerPixel = 4
-		let stride = bytesPerPixel * rectLayerImage.image.size.width // bytes per row
+	class ViewController {
+		
+		// MARK: - OCR the photo using DLR
 
-		let DLRdata = iDLRImageData.init()
-		DLRdata?.bytes = data
-		DLRdata?.format = EnumDLRImagePixelFormatARGB8888
-		DLRdata?.width = rectLayerImage.image.size.width
-		DLRdata?.height = rectLayerImage.image.size.height
-		DLRdata?.stride = stride
+		@IBAction func readImageDLR(_ sender: Any) {
+			let provider = rectLayerImage.image.cgImage?.dataProvider
+			let data = CFBridgingRelease(provider?.data) as? Data
+			let bytesPerPixel = 4
+			let stride = bytesPerPixel * rectLayerImage.image.size.width // bytes per row
 
-		let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
+			let DLRdata = iDLRImageData.init()
+			DLRdata?.bytes = data
+			DLRdata?.format = EnumDLRImagePixelFormatARGB8888
+			DLRdata?.width = rectLayerImage.image.size.width
+			DLRdata?.height = rectLayerImage.image.size.height
+			DLRdata?.stride = stride
 
-		var error: Error?
-		let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)
-		var msgText = ""
+			let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
 
-		for i in 0..<(results?.count ?? 0) {
-			if let lineResults = results?[i].lineResults {
-				for lineResult in lineResults {
-					guard let lineResult = lineResult as? iDLRLineResult else {
-						continue
+			var error: Error?
+			let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)
+			var msgText = ""
+
+			for i in 0..<(results?.count ?? 0) {
+				if let lineResults = results?[i].lineResults {
+					for lineResult in lineResults {
+						guard let lineResult = lineResult as? iDLRLineResult else {
+							continue
+						}
+						msgText = msgText + "\nValue: \(lineResult.text)\n"
 					}
-					msgText = msgText + "\nValue: \(lineResult.text)\n"
 				}
 			}
+			print("msgText.\(msgText)") // Printing the DLR result in the debugger console
 		}
-		print("msgText.\(msgText)") // Printing the DLR result in the debugger console
 	}
-}
-```
+    ```
 

@@ -88,6 +88,7 @@ needAutoGenerateSidebar: false
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)	
 
 &nbsp; 
 

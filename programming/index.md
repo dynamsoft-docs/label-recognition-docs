@@ -12,3 +12,4 @@ description: Dynamsoft Label Recognition supports the following programming lang
 - [.NET]({{ site.dotnet }})
 - [Android]({{ site.android }})
 - [Objective-C & Swift]({{ site.objectivec-swift }})
+- [Java]({{ site.java }})

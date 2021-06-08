@@ -20,7 +20,8 @@ needGenerateH3Content: false
   | [`DM_DeploymentType`](#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](#dm_licensemodule) | Describes Dynamsoft license modules. |
   | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes the UUID generation method. |
-  
+  | [`Product`](#product) | Describes Dynamsoft products.   |
+
 ---
 
 ## DLRBarcodeFormat
@@ -286,6 +287,30 @@ Describes UUID generation method.
 | DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 2 | Generates UUID based on hardware info. |
 
 
+
+## Product
+Describes Dynamsoft products.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum Product` |
+| .Net | `enum Dynamsoft.EnumProduct` |
+| Java / Android | `class EnumProduct` |
+| ObjC / Swift | `enum EnumProduct` |
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| PROD_DBR | EnumProductDBR | 0x0001 | Dynamsoft Barcode Reader |
+| PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognition |
+| PROD_DWT | EnumProductDWT | 0x0004 | Dynamic Web Twain |
+| PROD_DCE | EnumProductDCE | 0x0008 | Dynamsoft Camera Enhancer |
+| PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
+| PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 
 &nbsp;
 

@@ -8,7 +8,6 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition - Objective-C & Swift User Guide
 
-
 ## System Requirements
 
 - Operating systems:
@@ -112,6 +111,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 	
     @end
     ```
+
 
 	Swift:
 

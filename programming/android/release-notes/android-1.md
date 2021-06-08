@@ -8,6 +8,17 @@ needAutoGenerateSidebar: false
 
 # Release Notes for Android - 1.x
 
+## 1.2.1 (06/08/2021)
+
+### New
+
+- Added a new property [`products`]({{ site.android-api }}class/dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
+- Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}otherenums.html#Product).
+
+### Fixed
+
+- Fixed a bug of license client.
+
 ## 1.2 (05/18/2021)
 
 ### New

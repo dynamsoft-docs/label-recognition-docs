@@ -63,7 +63,7 @@ needAutoGenerateSidebar: false
 &nbsp; 
 
 ## [Classes](class/index.md)
-- [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.md)
+- [`iDLRLTSConnectionParameters`](dlr-lts-connection-parameters.md)
 - [`iDLRCharacterResult`](class/dlr-character-result.md)		
 - [`iDLRImageData`](class/dlr-image-data.md)		
 - [`iDLRLineResult`](class/dlr-line-result.md)	
@@ -85,6 +85,7 @@ needAutoGenerateSidebar: false
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)	
 
 &nbsp; 
 

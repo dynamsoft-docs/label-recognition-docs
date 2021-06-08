@@ -11,11 +11,11 @@ needGenerateH3Content: true
 Dynamsoft Label Recognition (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshield, driver licenses and ID cards, etc. 
 
 DLR powers your software development from the following aspects:
-- (1) introduce `Reference Region` feature to reduce the difficulty of specifying ROI,
-- (2) create `Inferece Area` concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks,
-- (3) innovate a text recognition engine combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction,
-- (4) support setting regular expressions to improve the accuracy of text recognition,
-- (5) design a variety of processing modes at different algorithm stages to maintain great scalability.
+- introduces `Reference Region` feature to reduce the difficulty of specifying ROI.
+- creates `Inferece Area` concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks, particularlly for key-value pairs.
+- innovates a text recognition engine combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction.
+- supports extensible regular expressions to improve the accuracy of text recognition.
+- designs a variety of processing modes at different algorithm stages to maintain great scalability.
 
 With our SDK, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
@@ -57,8 +57,8 @@ In order to obtain the most accurate and robust text recognition results, DLR ha
 
 The text recognition engine of DLR supports one primary model and multiple auxiliary models. In the iterative recognition process, DLR will automatically select the smallest CNN-model according to the character sets to be recognized. For example, the text of a label contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results. Additionaly, DLR also supports training to generate customized recognition models through specific data sets. In some cases, there are still misreading of certain characters. Then traditional image feature of each character will be captured to further distinguish.
 
-### Regular Expression
-In order to improve the accuracy of text recognition, DLR supports setting different `regular expressions` for different regions including label or text line. Through regular expressions, DLR can quickly find recognition errors and perform effective error correction to improve accuracy. For example, if a character that does not conform to a regular expression is recognized at a specific position in a string, DLR will perform multiple iteration attempts on the character to obtain the best result.
+### Extensible Regular Expression
+In order to improve the accuracy of text recognition, DLR supports `extensible regular expressions` to correct the misrecognized characters. According to the matching result, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Then it reduces the size of the candidate recognition character set as much as possible via the partial matching results. Finally, it will perform multiple iteration attempts to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
 
 ### Various processing modes
 In order to cope with various scenarios, DLR has designed a variety of processing modes at different stages of the algorithm to maintain great scalability. For example, the `BinarizationModes` provide different image binarization methods, and the `RegionPredetectionModes` provide different pre-detection methods for the reference region. These Modes can be configured not only through API, but also through a template file. Furthermore, the implementation of these modes can be customized according to customer scenarios and seamlessly integrated with SDK.

@@ -35,6 +35,7 @@ Describes the barcode types in DLRBarcodeFormat group 1. All the formats can be 
 | .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat ` |
 | Android | `class EnumDLRBarcodeFormat` |
 | ObjC / Swift | `enum EnumBarcodeFormat` |
+| Java | `class EnumDLRBarcodeFormat` |
 
 
 ### Members
@@ -90,6 +91,7 @@ Describes the barcode types in DLRBarcodeFormat group 2. Note: The barcode forma
 | .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat_2` |
 | Android | `class EnumDLRBarcodeFormat_2` |
 | ObjC / Swift | `enum EnumBarcodeFormat_2` |
+| Java | `class EnumDLRBarcodeFormat_2` |
 
 
 ### Members
@@ -120,6 +122,7 @@ Describes the image pixel format.
 | .Net | `enum Dynamsoft.DLR.EnumDLRImagePixelFormat` |
 | Android | `class EnumDLRImagePixelFormat` |
 | ObjC / Swift | `enum EnumDLRImagePixelFormat` |
+| Java | `class EnumDLRImagePixelFormat` |
 
 
 
@@ -155,6 +158,7 @@ Describes the source type used to localize the reference region(s).
 | .Net | `enum EnumDLRLocalizationSourceType` |
 | Android | `class EnumDLRLocalizationSourceType` |
 | ObjC / Swift | `enum EnumDLRLocalizationSourceType` |
+| Java | `class EnumDLRLocalizationSourceType` |
 
 
 ### Members
@@ -182,6 +186,7 @@ Describes charge way.
 | .Net | `enum Dynamsoft.DLR.EnumDMChargeWay` |
 | Android | `class EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
+| Java | `class EnumDMChargeWay` |
 
 
 ### Members
@@ -214,6 +219,7 @@ Describes the deployment type.
 | .Net | `enum EnumDMDeploymentType` |
 | Android | `N/A` |
 | ObjC / Swift | `N/A` |
+| Java | `N/A` |
 
 
 ### Members
@@ -241,6 +247,7 @@ Describes Dynamsoft license modules.
 | .Net | `enum Dynamsoft.DLR.EnumDMLicenseModule` |
 | Android | `class EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
+| Java | `class EnumDMLicenseModule` |
 
 
 ### Members
@@ -277,6 +284,7 @@ Describes UUID generation method.
 | .Net | `enum Dynamsoft.DLR.EnumDMUUIDGenerationMethod` |
 | Android | `class EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |
+| Java | `class EnumDMUUIDGenerationMethod` |
 
 
 ### Members
@@ -298,8 +306,9 @@ Describes Dynamsoft products.
 | -------- | ----------- |
 | C / C++ | `enum Product` |
 | .Net | `enum Dynamsoft.EnumProduct` |
-| Java / Android | `class EnumProduct` |
+| Android | `class EnumProduct` |
 | ObjC / Swift | `enum EnumProduct` |
+| Java | `class EnumProduct` |
 
 ### Members
    

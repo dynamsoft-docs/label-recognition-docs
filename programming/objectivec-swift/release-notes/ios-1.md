@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 ### New
 
 - Added a new property [`products`]({{ site.objectivec-swift-api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
-- Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}otherenums.html#Product).
+- Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}other-enums.html#product).
 
 ### Fixed
 

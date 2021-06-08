@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 ### New
 
 - Added a new property [`products`]({{ site.c-cplusplus-api-reference }}class/dm-lts-connection-parameters.html#products) to `DMLTSConnectionParameters`.
-- Added a new enumeration [`Product`] ({{ site.enumerations }}otherenums.html#Product).
+- Added a new enumeration [`Product`] ({{ site.enumerations }}other-enums.html#product).
 
 ### Fixed
 

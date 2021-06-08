@@ -27,7 +27,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
 2. Add the required JAR file to your project.
     Click File > Properties > Java Build Path > Libraries > Add external JARs, add dynamsoft-labelrecognition-{version number}.jar and click Apply.
-    The JAR file can be found at `dlr-java-{version number}\DynamsoftBarcodeReader\lib`.
+    The JAR file can be found at `dlr-java-{version number}\DynamsoftLabelRecognition\lib`.
 
 3. Import the package.
     ```java

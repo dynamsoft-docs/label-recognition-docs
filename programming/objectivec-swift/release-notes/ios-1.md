@@ -11,10 +11,12 @@ needAutoGenerateSidebar: false
 ## 1.2.1 (06/08/2021)
 
 ### New
+
 - Added a new property [`products`]({{ site.objectivec-swift-api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`] ({{ site.enumerations }}otherenums.html#Product).
 
 ### Fixed
+
 - Fixed a bug of license client.
 
 

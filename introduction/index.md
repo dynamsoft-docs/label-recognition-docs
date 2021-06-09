@@ -65,7 +65,7 @@ In order to cope with various scenarios, DLR has designed a variety of processin
 
 
 
-## Usage scenarios
+## [Usage scenarios]({{ site.docFullPath }}/use-cases)
 
 ### VIN Scanning
 Automotive industry professionals use Vehicle Identification Numbers (VINs) to identify vehicles. With the help of DLR, users can identify vehicles anywhere, anytime by scanning VINs.

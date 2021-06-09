@@ -37,7 +37,7 @@ The position of a label (also called text area) is specified by percentage coord
 
 On the left side of the above figure, the position of the reference region could be determined by barcode. The barcode can be localized and recognized through [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/?urlsource=navigation). In addition, if there are multiple barcodes in an image, we can further determine the target barcode region by specifying the barcode formats and barcode text. 
 
-On the right, the background color of the reference region is specified as red, then DLR searches the detected reference region to locate and read the target label.
+On the right, the background color of the reference region is specified as red, then DLR can automatically detect it through algorithms.
 
 ### Inference Area
 
@@ -55,13 +55,13 @@ T0 is not only a label but also an inference area with appropriate inference par
 ### Text recognition engine
 In order to obtain the most accurate and robust text recognition results, DLR has innovated a `text recognition engine`. It combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction.
 
-The text recognition engine of DLR supports one primary model and multiple auxiliary models. In the iterative recognition process, DLR will automatically select the smallest CNN-model according to the character sets. For example, the text of a label contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results. Additionally, DLR also supports data sets training in order to generate customized recognition models.  
+The text recognition engine of DLR supports one primary model and multiple auxiliary models. In the iterative recognition process, DLR will automatically select the smallest CNN-model according to the character sets. For example, the text of a label contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results. Additionally, DLR also supports data sets training in order to generate customized recognition models. In some cases, there are still misreading of certain characters. Then traditional image feature of each character will be captured to further distinguish.
 
 ### Extensible Regular Expression
 In order to improve the accuracy of text recognition, DLR supports `extensible regular expressions` to correct the misrecognized characters. According to the matching result, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Then DLR attempt to reduces as much size of the candidate recognition character set as possible via the partial matching results. Finally, DLR will perform multiple iteration attempts to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
 
 ### Various processing modes
-In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm. For example, the `BinarizationModes` provides several image binarization methods; The `RegionPredetectionModes` provides different pre-detection methods for the reference region. These modes can be configured not only through API but also through a configuration template. Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
+In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm to maintain great scalability. For example, the `BinarizationModes` provides several image binarization methods; The `RegionPredetectionModes` provides different pre-detection methods for the reference region. These modes can be configured not only through API but also through a configuration template. Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
 
 
@@ -100,8 +100,8 @@ DLR supports cross-platform. The core of DLR is written in C/C++ for performance
 
 | OS            | Programming Language |
 |---------------|----------------------|
-|Windows        | C/C++/C\#/VB.NET     |
-|Linux          | C/C++                |
+|Windows        | C/C++/C\#/VB.NET/Java |
+|Linux          | C/C++/Java            |
 |Android        | Java                 |
 |iOS            | Swift/Objective-C    |
 

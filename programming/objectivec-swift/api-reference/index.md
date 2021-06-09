@@ -40,7 +40,8 @@ needAutoGenerateSidebar: false
   | [`getRuntimeSettings`](methods/settings.md#getruntimesettings) | Gets the current settings and saves it into a class. |
   | [`updateRuntimeSettings`](methods/settings.md#updateruntimesettings) | Updates runtime settings with a given class. |
   | [`resetRuntimeSettings`](methods/settings.md#resetruntimesettings) | Resets the runtime settings. |
-  | [`appendSettingsFromString`](methods/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`appendSettingsFromString`](methods/settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. | 
+  | [`appendSettingsFromFile`](methods/settings.md#appendsettingsfromFile) | Appends LabelRecognitionParameter settings from a file to the SDK object. |
   | [`outputSettingsToFile`](methods/settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`clearAppendedSettings`](methods/settings.md#clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
   | [`updateReferenceRegionFromBarcodeResults`](methods/settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
@@ -62,7 +63,7 @@ needAutoGenerateSidebar: false
 &nbsp; 
 
 ## [Classes](class/index.md)
-- [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.md)
+- [`iDLRLTSConnectionParameters`](dlr-lts-connection-parameters.md)
 - [`iDLRCharacterResult`](class/dlr-character-result.md)		
 - [`iDLRImageData`](class/dlr-image-data.md)		
 - [`iDLRLineResult`](class/dlr-line-result.md)	
@@ -84,6 +85,7 @@ needAutoGenerateSidebar: false
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)	
 
 &nbsp; 
 

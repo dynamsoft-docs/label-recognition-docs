@@ -35,15 +35,12 @@ Describes the binarization mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| DLR_BM_SKIP | EnumDLRBinarizationModeSkip | 0x00 | Skips the binarization. |
-| DLR_BM_AUTO | EnumDLRBinarizationModeAuto | 0x01 | **Not supported yet.** |
-| DLR_BM_LOCAL_BLOCK | EnumDLRBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. |
-| DLR_BM_THRESHOLD | EnumDLRBinarizationModeThreshold | 0x04 | Binarizes the image based on given threshold. |
-
-### Remarks
-Check arguments of [`DLRBinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments) for available argument settings.
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| DLR_BM_SKIP | EnumDLRBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
+| DLR_BM_AUTO | EnumDLRBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| DLR_BM_LOCAL_BLOCK | EnumDLRBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#enablefillbinaryvacancy)<br>[`ThreshValueCoefficient`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#threshvaluecoefficient)<br> |
+| DLR_BM_THRESHOLD | EnumDLRBinarizationModeThreshold | 0x04 | Binarizes the image based on given threshold. | [`BinarizationThreshold`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#binarizationThreshold) |
 
 &nbsp;
 
@@ -94,17 +91,41 @@ Describes the region predetection mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| DLR_RPM_SKIP | EnumDLRRegionPredetectionModeSkip | 0x00 | Skips region detection. |
-| DLR_RPM_AUTO | EnumDLRRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. |
-| DLR_RPM_GENERAL | EnumDLRRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. |
-| DLR_RPM_GENERAL_RGB_CONTRAST | EnumDLRRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. |
-| DLR_RPM_GENERAL_GRAY_CONTRAST | EnumDLRRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. |
-| DLR_RPM_GENERAL_HSV_CONTRAST | EnumDLRRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| DLR_RPM_SKIP | EnumDLRRegionPredetectionModeSkip | 0x00 | Skips region detection. | `N/A` |
+| DLR_RPM_AUTO | EnumDLRRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. | `N/A` |
+| DLR_RPM_GENERAL | EnumDLRRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. | `N/A` |
+| DLR_RPM_GENERAL_RGB_CONTRAST | EnumDLRRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`MinImageDimension`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#spatialindexblocksize) |
+| DLR_RPM_GENERAL_GRAY_CONTRAST | EnumDLRRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. | [`MinImageDimension`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#spatialindexblocksize) |
+| DLR_RPM_GENERAL_HSV_CONTRAST | EnumDLRRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. | [`AspectRatioRange`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#aspectratiorange)<br>[`FindAccurateBoundary`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#findaccurateboundary)<br>[`ForeAndBackgroundColours`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#foreandbackgroundcolours)<br>[`HeightRange`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#heightrange)<br>[`MinImageDimension`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#spatialindexblocksize)<br>[`WidthRange`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#widthrange) |
 
-### Remarks
-Check arguments of [`DLRRegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments) for available argument settings.
+
+&nbsp;
+
+## DLRScaleUpMode
+Describes the scale up mode. 
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DLRScaleUpMode` |
+| .Net | `enum Dynamsoft.DLR.EnumDLRScaleUpMode` |
+| Android | `class EnumDLRScaleUpMode` |
+| ObjC / Swift | `enum EnumDLRScaleUpMode` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| DLR_SUM_SKIP | EnumDLRScaleUpModeSkip | 0x00 | Skip the scale-up process. | `N/A` |
+| DLR_SUM_AUTO | EnumDLRScaleUpModeAuto | 0x01 | The library chooses an interpolation method automatically to scale up. | `N/A` |
+| DLR_SUM_LINEAR_INTERPOLATION | EnumDLRScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. | [`LetterHeightThreshold`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#letterheightthreshold)<br>[`TargetLetterHeight`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#targetletterheight) |
+| DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumDLRScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. | [`LetterHeightThreshold`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#letterheightthreshold)<br>[`TargetLetterHeight`]({{ site.parameters-reference }}label-recognition-parameter/scale-up-modes.html#targetletterheight) |
+
 
 &nbsp;
 

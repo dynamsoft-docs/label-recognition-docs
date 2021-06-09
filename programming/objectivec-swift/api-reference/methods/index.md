@@ -35,6 +35,7 @@ needAutoGenerateSidebar: false
   | [`updateRuntimeSettings`](settings.md#updateruntimesettings) | Updates runtime settings with a given class. |
   | [`resetRuntimeSettings`](settings.md#resetruntimesettings) | Resets the runtime settings. |
   | [`appendSettingsFromString`](settings.md#appendsettingsfromstring) | Appends LabelRecognitionParameter settings in a string to the SDK object. |
+  | [`appendSettingsFromFile`](settings.md#appendsettingsfromFile) | Appends LabelRecognitionParameter settings from a file to the SDK object. |
   | [`outputSettingsToFile`](settings.md#outputsettingstofile) | Outputs LabelRecognitionParameter settings into a file (JSON file). |
   | [`clearAppendedSettings`](settings.md#clearappendedsettings) | Clear all appended LabelRecognitionParameter settings in the SDK object. |
   | [`updateReferenceRegionFromBarcodeResults`](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |

@@ -8,8 +8,6 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition - Objective-C & Swift User Guide
 
-Accurately read alphanumeric characters and standard symbols from images of varying background colour, font, or text size. Additional characters can be trained.
-
 ## System Requirements
 
 - Operating systems:
@@ -41,10 +39,11 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
    Objective-C:
 
    ```objc
-    #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+	#import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
    ```
 
    Swift:
+
    ```Swift
    import DynamsoftLabelRecognition
    ```   
@@ -52,16 +51,16 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
     The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
 
-   Objective-C:
+    Objective-C:
 
-   ```objc
+    ```objc
     #import "ViewController.h"
     #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
 
     @interface ViewController ()
     @end
     @implementation ViewController
-    #pragma mark - OCR the photo using DLR
+    
 	-(IBAction)readImageDLR:(id)sender
 	{
 		// First, image needs to be converted to a byte stream in order to generate the iDLRImageData for the recognizeByBuffer method.
@@ -109,47 +108,51 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		}
 		NSLog(@"msgText.%@",msgText); // Printing the DLR result in the debugger console
 	}
-
-Swift:
-
-```swift
-import DynamsoftLabelRecognition
-
-class ViewController {
 	
-	// MARK: - OCR the photo using DLR
+    @end
+    ```
 
-	@IBAction func readImageDLR(_ sender: Any) {
-		let provider = rectLayerImage.image.cgImage?.dataProvider
-		let data = CFBridgingRelease(provider?.data) as? Data
-		let bytesPerPixel = 4
-		let stride = bytesPerPixel * rectLayerImage.image.size.width // bytes per row
 
-		let DLRdata = iDLRImageData.init()
-		DLRdata?.bytes = data
-		DLRdata?.format = EnumDLRImagePixelFormatARGB8888
-		DLRdata?.width = rectLayerImage.image.size.width
-		DLRdata?.height = rectLayerImage.image.size.height
-		DLRdata?.stride = stride
+	Swift:
 
-		let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
+	```swift
+	import DynamsoftLabelRecognition
 
-		var error: Error?
-		let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)
-		var msgText = ""
+	class ViewController {
+		
+		// MARK: - OCR the photo using DLR
 
-		for i in 0..<(results?.count ?? 0) {
-			if let lineResults = results?[i].lineResults {
-				for lineResult in lineResults {
-					guard let lineResult = lineResult as? iDLRLineResult else {
-						continue
+		@IBAction func readImageDLR(_ sender: Any) {
+			let provider = rectLayerImage.image.cgImage?.dataProvider
+			let data = CFBridgingRelease(provider?.data) as? Data
+			let bytesPerPixel = 4
+			let stride = bytesPerPixel * rectLayerImage.image.size.width // bytes per row
+
+			let DLRdata = iDLRImageData.init()
+			DLRdata?.bytes = data
+			DLRdata?.format = EnumDLRImagePixelFormatARGB8888
+			DLRdata?.width = rectLayerImage.image.size.width
+			DLRdata?.height = rectLayerImage.image.size.height
+			DLRdata?.stride = stride
+
+			let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
+
+			var error: Error?
+			let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)
+			var msgText = ""
+
+			for i in 0..<(results?.count ?? 0) {
+				if let lineResults = results?[i].lineResults {
+					for lineResult in lineResults {
+						guard let lineResult = lineResult as? iDLRLineResult else {
+							continue
+						}
+						msgText = msgText + "\nValue: \(lineResult.text)\n"
 					}
-					msgText = msgText + "\nValue: \(lineResult.text)\n"
 				}
 			}
+			print("msgText.\(msgText)") // Printing the DLR result in the debugger console
 		}
-		print("msgText.\(msgText)") // Printing the DLR result in the debugger console
 	}
-}
-```
+	```
 

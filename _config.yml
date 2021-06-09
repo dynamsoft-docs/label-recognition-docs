@@ -20,8 +20,8 @@ c-cplusplus-structs: /label-recognition/programming/c-cplusplus/api-reference/st
 c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
 
 android: /label-recognition/programming/android/
-android_api: /label-recognition/programming/android/api-reference/
-android_release_notes: /label-recognition/programming/android/release-notes/
+android-api: /label-recognition/programming/android/api-reference/
+android-release-notes: /label-recognition/programming/android/release-notes/
 
 dotnet: /label-recognition/programming/dotnet/
 dotnet_api: /label-recognition/programming/dotnet/api-reference/
@@ -30,6 +30,10 @@ dotnet_release_notes: /label-recognition/programming/dotnet/release-notes/
 objectivec-swift: /label-recognition/programming/objectivec-swift/
 objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-reference/
 objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
+
+java: /label-recognition/programming/java/
+java-api: /label-recognition/programming/java/auxiliary-api/
+java-release-notes: /label-recognition/programming/java/release-notes/
 
 assets: /label-recognition/assets/
 edit_icon: /label-recognition/assets/img-icon/edit-icon.png

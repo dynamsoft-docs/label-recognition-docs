@@ -34,7 +34,14 @@ All results recognized successfully.
 Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
-recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
+{
+    //TODO add your code for license verification
+}
 iDLRResult *result;
 iDLRImageData *imageData = [[iDLRImageData alloc] init];
 //construct imageData
@@ -43,7 +50,10 @@ result = [recognizer recognizeByBuffer:imageData templateName:@"" error:&error];
 ```
 Swift:
 ```Swift
-let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let imageData = iDLRImageData.init()
 let error: NSError? = NSError()
 //construct imageData
@@ -72,14 +82,24 @@ All results recognized successfully.
 Objective-C:
 ```objc
 DynamsoftLabelRecognition *recognizer;
-recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
+{
+    //TODO add your code for license verification
+}
 iDLRResult *result;
 NSError __autoreleasing *  error;
 result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
 ```
 Swift:
 ```Swift
-let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 //construct imageData
 let result = recognizer.recognizeByFile("your file path", templateName:"", error:&error)

@@ -20,7 +20,8 @@ needGenerateH3Content: false
   | [`DM_DeploymentType`](#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](#dm_licensemodule) | Describes Dynamsoft license modules. |
   | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes the UUID generation method. |
-  
+  | [`Product`](#product) | Describes Dynamsoft products.   |
+
 ---
 
 ## DLRBarcodeFormat
@@ -34,6 +35,7 @@ Describes the barcode types in DLRBarcodeFormat group 1. All the formats can be 
 | .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat ` |
 | Android | `class EnumDLRBarcodeFormat` |
 | ObjC / Swift | `enum EnumBarcodeFormat` |
+| Java | `class EnumDLRBarcodeFormat` |
 
 
 ### Members
@@ -89,6 +91,7 @@ Describes the barcode types in DLRBarcodeFormat group 2. Note: The barcode forma
 | .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat_2` |
 | Android | `class EnumDLRBarcodeFormat_2` |
 | ObjC / Swift | `enum EnumBarcodeFormat_2` |
+| Java | `class EnumDLRBarcodeFormat_2` |
 
 
 ### Members
@@ -119,6 +122,7 @@ Describes the image pixel format.
 | .Net | `enum Dynamsoft.DLR.EnumDLRImagePixelFormat` |
 | Android | `class EnumDLRImagePixelFormat` |
 | ObjC / Swift | `enum EnumDLRImagePixelFormat` |
+| Java | `class EnumDLRImagePixelFormat` |
 
 
 
@@ -154,6 +158,7 @@ Describes the source type used to localize the reference region(s).
 | .Net | `enum EnumDLRLocalizationSourceType` |
 | Android | `class EnumDLRLocalizationSourceType` |
 | ObjC / Swift | `enum EnumDLRLocalizationSourceType` |
+| Java | `class EnumDLRLocalizationSourceType` |
 
 
 ### Members
@@ -181,6 +186,7 @@ Describes charge way.
 | .Net | `enum Dynamsoft.DLR.EnumDMChargeWay` |
 | Android | `class EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
+| Java | `class EnumDMChargeWay` |
 
 
 ### Members
@@ -213,6 +219,7 @@ Describes the deployment type.
 | .Net | `enum EnumDMDeploymentType` |
 | Android | `N/A` |
 | ObjC / Swift | `N/A` |
+| Java | `N/A` |
 
 
 ### Members
@@ -240,6 +247,7 @@ Describes Dynamsoft license modules.
 | .Net | `enum Dynamsoft.DLR.EnumDMLicenseModule` |
 | Android | `class EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
+| Java | `class EnumDMLicenseModule` |
 
 
 ### Members
@@ -276,6 +284,7 @@ Describes UUID generation method.
 | .Net | `enum Dynamsoft.DLR.EnumDMUUIDGenerationMethod` |
 | Android | `class EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |
+| Java | `class EnumDMUUIDGenerationMethod` |
 
 
 ### Members
@@ -286,6 +295,31 @@ Describes UUID generation method.
 | DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 2 | Generates UUID based on hardware info. |
 
 
+
+## Product
+Describes Dynamsoft products.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum Product` |
+| .Net | `enum Dynamsoft.EnumProduct` |
+| Android | `class EnumProduct` |
+| ObjC / Swift | `enum EnumProduct` |
+| Java | `class EnumProduct` |
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| PROD_DBR | EnumProductDBR | 0x0001 | Dynamsoft Barcode Reader |
+| PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognition |
+| PROD_DWT | EnumProductDWT | 0x0004 | Dynamic Web Twain |
+| PROD_DCE | EnumProductDCE | 0x0008 | Dynamsoft Camera Enhancer |
+| PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
+| PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 
 &nbsp;
 

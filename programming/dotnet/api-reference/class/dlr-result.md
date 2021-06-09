@@ -21,6 +21,7 @@ Stores the recognized result.
 | [`Location`](#location) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
 | [`Confidence`](#confidence) | *int* |
 | [`LineResults`](#lineresults) | [`DLR_LineResult[]`](dlr-line-result.md) |
+| [`PageNumber`](#pagenumber) | *int* |
 
 
 ### ReferenceRegionName
@@ -55,3 +56,8 @@ The line results array.
 DLR_LineResult[] Dynamsoft.DLR.DLR_Result.LineResults
 ```
 
+### PageNumber
+The page number the result located in. The index is 0-based.
+```csharp
+int Dynamsoft.DLR.DLR_Result.PageNumber
+```

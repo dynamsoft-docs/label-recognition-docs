@@ -15,4 +15,4 @@ needAutoGenerateSidebar: false
 
 ## Release Notes
 
-- [Version 1.0](release-notes/android-1.md)
+- [Version 1.x](release-notes/android-1.md)

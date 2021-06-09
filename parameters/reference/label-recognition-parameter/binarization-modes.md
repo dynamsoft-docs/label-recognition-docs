@@ -42,15 +42,14 @@ needAutoGenerateSidebar: true
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+- [BinarizationThreshold](#binarizationThreshold)
  
 ##### BlockSizeX 
 Sets the horizontal block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000] | 0 |         
 
 - **Remarks**    
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
@@ -66,9 +65,9 @@ Sets the horizontal block size for the binarization process.
 ##### BlockSizeY 
 Sets the vertical block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000] | 0 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
@@ -82,9 +81,9 @@ Sets the vertical block size for the binarization process.
 ##### EnableFillBinaryVacancy 
 Sets whether to enable binary vacancy filling.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 1 | "DLR_BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1] | 1 |         
 
 - **Remarks**     
   0: disable.   
@@ -96,30 +95,16 @@ Sets whether to enable binary vacancy filling.
 ##### ThreshValueCoefficient 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 10 | "DLR_BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-255, 255] | 10 |         
 
+##### BinarizationThreshold
+Sets the binarization threshold.
 
-
-##### LibraryFileName 
-Sets the file name of the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `DLRBinarizationMode` items except DLR_BM_SKIP and DLR_BM_AUTO |         
-
-
-- **Remarks**     
-  - The library must be in the same place with Dynamsoft Label Recognition Library.
-
-
-##### LibraryParameters 
-Sets the parameters passed to the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | All `DLRBinarizationMode` items except DLR_BM_SKIP and DLR_BM_AUTO |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 255] | -1 |   
 
 
 ### Setting Methods
@@ -135,13 +120,13 @@ Sets the parameters passed to the library to load dynamically.
 **Json Parameter Example**   
 ```json
 {
-    "BinarizationModes": [
-        {
-            "Mode": "DLR_BM_LOCAL_BLOCK",
-            "BlockSizeX": 5,
-            "BlockSizeY": 5,
-        }
-    ]
+    "BinarizationModes": [
+        {
+            "Mode": "DLR_BM_LOCAL_BLOCK",
+            "BlockSizeX": 5,
+            "BlockSizeY": 5,
+        }
+    ]
 }
 ```
 

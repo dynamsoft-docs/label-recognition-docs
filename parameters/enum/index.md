@@ -15,6 +15,7 @@ needAutoGenerateSidebar: false
   | [`DLRBinarizationMode`](parameter-mode-enums.md#dlrbinarizationmode) | Describes the binarization mode. |
   | [`DLRGrayscaleTransformationMode`](parameter-mode-enums.md#dlrgrayscaletransformationmode) | Describes the grayscale transformation mode. |
   | [`DLRRegionPredetectionMode`](parameter-mode-enums.md#dlrregionpredetectionmode) | Describes the region predetection mode. |
+  | [`DLRScaleUpMode`](parameter-mode-enums.md#dlrscaleupmode) | Describes the scale up mode. |
 
   
 ## [Other Enumeration](other-enums.md)
@@ -29,6 +30,7 @@ needAutoGenerateSidebar: false
   | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |
   | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
+  | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
 
 ## [Error Code](error-code.md)
   

@@ -8,8 +8,6 @@ description: Dynamsoft Label Recognition SDK Documentation Homepage
 # Dynamsoft Label Recognition Documentation
 
 - [Introduction]({{ site.introduction }})
-   - [Overview]({{ site.introduction }}overview.html)
-   - [Algorithm Architecture]({{ site.introduction }}architecture.html)
 
 - [Programming]({{ site.programming }})
    - [C/C++]({{ site.c-cplusplus }})

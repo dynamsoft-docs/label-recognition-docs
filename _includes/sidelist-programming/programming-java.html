@@ -1,11 +1,16 @@
 <li><a href="{{ site.java }}" class="otherLinkColour">Java</a>
     <ul>
-        {%- if page.url contains '/java/' or page.url contains '/java-v'-%}
         <li><a href="{{ site.java }}user-guide.html" class="otherLinkColour">User Guide</a></li>
-        <li><a href="{{ site.java }}label-recognition.html" class="otherLinkColour">Primary API</a></li>        
+        
+        {%- if page.url contains '/java/' or page.url contains '/java-v'-%}
+        <li><a href="{{ site.java }}label-recognizer.html" class="otherLinkColour">Primary API</a></li>        
+        {%- else -%}
+        <li><a href="{{ site.java-api }}label-recognizer.html" class="otherLinkColour">Primary API</a></li>        
+        {%- endif -%}
+
         <li><a href="{{ site.java-api }}" class="otherLinkColour">Auxiliary API</a>
             <ul>
-                <li><a href="{{ site.java-api }}label-recognition-exception.html" class="otherLinkColour">LabelRecognitionException</a></li>
+                <li><a href="{{ site.java-api }}label-recognizer-exception.html" class="otherLinkColour">LabelRecognizerException</a></li>
                 <li><a href="{{ site.java-api }}dlr-runtime-settings.html" class="otherLinkColour">DLRRuntimeSettings</a></li>
                 <li><a href="{{ site.java-api }}dlr-reference-region.html" class="otherLinkColour">DLRReferenceRegion</a></li>
                 <li><a href="{{ site.java-api }}dlr-quadrilateral.html" class="otherLinkColour">DLRQuadrilateral</a></li>
@@ -18,9 +23,9 @@
         </li>
         <li><a href="{{ site.java-release-notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
+                <li><a href="{{ site.java-release-notes }}java-2.html" class="otherLinkColour">Version 2.x</a></li>
                 <li><a href="{{ site.java-release-notes }}java-1.html" class="otherLinkColour">Version 1.x</a></li>
             </ul>
         </li>
-        {%- endif -%}
     </ul>
 </li>

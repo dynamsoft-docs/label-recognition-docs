@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - Objective-C & Swift User Guide
-description: This is the user guide page of Dynamsoft Label Recognition for iOS SDK.
+title: Dynamsoft Label Recognizer - Objective-C & Swift User Guide
+description: This is the user guide page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: a, user guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - Objective-C & Swift User Guide
+# Dynamsoft Label Recognizer - Objective-C & Swift User Guide
 
 ## System Requirements
 
@@ -20,42 +20,42 @@ needAutoGenerateSidebar: true
 
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The trial package includes a free trial license valid for 30 days.   
+Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The trial package includes a free trial license valid for 30 days.   
 
 ## Getting Started: HelloWorld
 
 1. Create a new iOS project in Xcode.
-2. Add the Dynamsoft Label Recognition framework to your project
+2. Add the Dynamsoft Label Recognizer framework to your project
 
-   - Unzip the downloaded ZIP file `dlr-ios-1.0.zip` and you'll see `DynamsoftLabelRecognition.framework`.
+   - Unzip the downloaded ZIP file `dlr-ios-1.0.zip` and you'll see `DynamsoftLabelRecognizer.framework`.
 
    - Drag and drop the framework into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
    
 3. Add the required `.tbd/.dylib` file to your project.
    Go to the `Build Phases` tab of your Xcode project, under `Link Binary with Libraries` section, click + button. Search for the file `libc++.tbd`, select it and click Add button. Then the libc++.tbd file will be copied to your project.
 
-4. Import the framework's header in the file ViewController.m. For a basic project, most of the operations will be defined there. Should you choose to use the Label Recognition API in another file, please include the import statement there as well.
+4. Import the framework's header in the file ViewController.m. For a basic project, most of the operations will be defined there. Should you choose to use the Label Recognizer API in another file, please include the import statement there as well.
 
    Objective-C:
 
    ```objc
-	#import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+	#import <DynamsoftLabelRecognizer/DynamsoftLabelRecognizer.h>
    ```
 
    Swift:
 
    ```Swift
-   import DynamsoftLabelRecognition
+   import DynamsoftLabelRecognizer
    ```   
 5. After setting up the basic project, let's now move on to coding.
 
-    The following code demonstrates initializing DynamsoftLabelRecognition and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
+    The following code demonstrates initializing DynamsoftLabelRecognizer and starting the text recognition process. Overall, this piece of code will not do anything as is, but once integrated with an image viewer and a few buttons in the view controller, you can easily set up a simple iOS app that allows the user to OCR any image from their photo gallery. If you are interested in the larger code snippet, please refer to [User Guide Code Snippets](user-guide-code-snippets.md).
 
     Objective-C:
 
     ```objc
     #import "ViewController.h"
-    #import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+    #import <DynamsoftLabelRecognizer/DynamsoftLabelRecognizer.h>
 
     @interface ViewController ()
     @end
@@ -87,8 +87,8 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 		
 		// Initialize the DLR instance - using initLicense since we are using a trial key.
 		
-		DynamsoftLabelRecognition *recognizer;
-		recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0068MgAAAE4Y***kiJWrYg="];
+		DynamsoftLabelRecognizer *recognizer;
+		recognizer = [[DynamsoftLabelRecognizer alloc] initWithLicense:@"t0068MgAAAE4Y***kiJWrYg="];
 		
 		NSError __autoreleasing *  error;
 		
@@ -116,7 +116,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 	Swift:
 
 	```swift
-	import DynamsoftLabelRecognition
+	import DynamsoftLabelRecognizer
 
 	class ViewController {
 		
@@ -135,7 +135,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 			DLRdata?.height = rectLayerImage.image.size.height
 			DLRdata?.stride = stride
 
-			let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
+			let recognizer = DynamsoftLabelRecognizer.initWithLicense(license: "t0068MgAAAE4Y***kiJWrYg=")
 
 			var error: Error?
 			let result = recognizer.recognizeByBuffer(imageData:DLRdata, templateName:"", error:&error)

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - Objective-C & Swift User Guide
-description: This is a supplement to the user guide page of Dynamsoft Label Recognition for iOS SDK.
+title: Dynamsoft Label Recognizer - Objective-C & Swift User Guide
+description: This is a supplement to the user guide page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: a, user guide supplement
 needAutoGenerateSidebar: true
 ---
 
-#  Dynamsoft Label Recognition - Objective-C & Swift User Guide Code Snippets
+#  Dynamsoft Label Recognizer - Objective-C & Swift User Guide Code Snippets
 
 ## Load Photo from Photo Gallery and OCR
 The following code snippet showcases a simple application that contains three main components: an image viewer, a button to load a photo from the photo gallery, and another button to OCR the photo.
@@ -15,7 +15,7 @@ Objective-C
 
 ```objc
 #import "ViewController.h"
-#import <DynamsoftLabelRecognition/DynamsoftLabelRecognition.h>
+#import <DynamsoftLabelRecognizer/DynamsoftLabelRecognizer.h>
 #import <UIKit/UIKit.h>
 
 @interface ViewController ()
@@ -57,8 +57,8 @@ Objective-C
 	NSLog(@"localFilePath: %@",localFilePath); // check that the path is valid via the console*/
 	
 	// Initialize the DLR instance - using initLicense since we are using a trial key.
-	DynamsoftLabelRecognition *recognizer;
-	recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0068UwAAAJJAsvaTWDbWVqODE9awtia4Ijv6yoby/tlUTABTvsGsjlZzcANX3FAvxZdCFOAWdH0YzkDLH34F047k39kB8F8="];
+	DynamsoftLabelRecognizer *recognizer;
+	recognizer = [[DynamsoftLabelRecognizer alloc] initWithLicense:@"t0068UwAAAJJAsvaTWDbWVqODE9awtia4Ijv6yoby/tlUTABTvsGsjlZzcANX3FAvxZdCFOAWdH0YzkDLH34F047k39kB8F8="];
 	
 	NSError __autoreleasing *  error;
 	

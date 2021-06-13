@@ -1,13 +1,40 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net API Reference - Main Page
-description: This is the main page of Dynamsoft Label Recognition for .Net API Reference.
+title: Dynamsoft Label Recognizer .Net API Reference - .Net Structs
+description: This page shows all Structs of Dynamsoft Label Recognizer for .Net API Reference.
 keywords: api reference, .Net
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognition - .Net API Reference
 
-- [`LabelRecognition` Class](label-recognition/index.md) 
-- [Other Classes](class/index.md)  
-- [Enumerations]({{ site.enumerations }})
+# Dynamsoft Label Recognizer - Auxiliary API
+
+## Classes
+- [DLR_Exception](label-recognizer-exception.md)
+- [DLR_RuntimeSettings](dlr-runtime-settings.md)
+- [DLR_ReferenceRegion](dlr-reference-region.md)
+- [DLR_Quadrilateral](dlr-quadrilateral.md)
+- [DLR_Result](dlr-result.md)
+- [DLR_LineResult](dlr-line-result.md)
+- [DLR_CharacterResult](dlr-character-result.md)	
+- [DLR_ImageData](dlr-image-data.md)
+- [DMLTSConnectionParameters](dm-lts-connection-parameters.md)
+
+
+## Enumerations
+
+- [EnumDLRBarcodeFormat]({{ site.enumerations }}other-enums.html#dlrbarcodeformat)
+- [EnumDLRBarcodeFormat_2]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2)
+- [EnumDLRBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
+- [EnumDLRGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
+- [EnumDLRImagePixelFormat]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
+- [EnumDLRLocalizationSourceType]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
+- [EnumDLRRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
+
+## Error Code
+
+- [Error Code]({{ site.enumerations }}error-code.html)

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - Java User Guide
-description: This is the user guide page of Dynamsoft Label Recognition for Java Language.
+title: Dynamsoft Label Recognizer - Java User Guide
+description: This is the user guide page of Dynamsoft Label Recognizer for Java Language.
 keywords: java, user guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - Java User Guide
+# Dynamsoft Label Recognizer - Java User Guide
 
 ## System Requirements
 
@@ -18,7 +18,7 @@ needAutoGenerateSidebar: true
 
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
+Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
 
 ## Getting Started: Hello World
 
@@ -26,7 +26,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
 2. Add the required JAR file to your project.
     Click File > Properties > Java Build Path > Libraries > Add external JARs, add dynamsoft-labelrecognition-{version number}.jar and click Apply.
-    The JAR file can be found at `dlr-java-{version number}\DynamsoftLabelRecognition\lib`.
+    The JAR file can be found at `dlr-java-{version number}\DynamsoftLabelRecognizer\lib`.
 
 3. Import the package.
     ```java
@@ -38,7 +38,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     public class HelloDLR {
         public static void main(String[] args) {
             try {
-                LabelRecognition dlr = new LabelRecognition();
+                LabelRecognizer dlr = new LabelRecognizer();
                 dlr.initLicense("<Put your license key here>");
                 
                 String file = "<your image file full path>";

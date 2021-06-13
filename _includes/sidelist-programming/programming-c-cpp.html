@@ -1,26 +1,8 @@
 <li><a href="{{ site.c-cplusplus }}" class="otherLinkColour">C/C++</a>
     <ul>
+        {%- if page.url contains '/programming-v1' -%}
+
         <li><a href="{{ site.c-cplusplus }}user-guide.html" class="otherLinkColour">User Guide</a></li>
-
-        {%- if page.url contains '/c-cplusplus/' or page.url contains '/c-cplusplus-v2'-%}
-        <li><a href="{{ site.c-cplusplus-api-reference }}label-recognize-functions.html" class="otherLinkColour">C Primary API</a></li>
-        <li><a href="{{ site.c-cplusplus-api-reference }}label-recognizer.html" class="otherLinkColour">C++ Primary API</a></li>
-        <li><a href="{{ site.c-cplusplus-api-reference }}" class="otherLinkColour">Auxiliary API</a>
-            <ul>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-character-result.html" class="otherLinkColour">DLRCharacterResult</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-image-data.html" class="otherLinkColour">DLRImageData</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-line-result.html" class="otherLinkColour">DLRLineResult</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-point.html" class="otherLinkColour">DLRPoint</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-quadrilateral.html" class="otherLinkColour">DLRQuadrilateral</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-reference-region.html" class="otherLinkColour">DLRReferenceRegion</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-result.html" class="otherLinkColour">DLRResult</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-result-array.html" class="otherLinkColour">DLRResultArray</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html" class="otherLinkColour">DLRRuntimeSettings</a></li>
-                <li><a href="{{ site.c-cplusplus-api-reference }}dm-lts-connection-parameters.html" class="otherLinkColour">DM_LTSConnectionParameters</a></li>
-            </ul>
-        </li>
-
-        {%- else -%}
         <li><a href="{{ site.c-cplusplus-api-reference }}" class="otherLinkColour">API Reference</a>
             <ul>
                 <li><a href="{{ site.c-functions }}" class="otherLinkColour">C Functions</a>
@@ -55,6 +37,27 @@
                         <li><a href="{{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html" class="otherLinkColour">DM_LTSConnectionParameters</a></li>
                     </ul>
                 </li>
+            </ul>
+        </li>
+
+        {%- else -%}
+
+        <li><a href="{{ site.c-cplusplus }}c-user-guide.html" class="otherLinkColour">User Guide for C</a></li>
+        <li><a href="{{ site.c-cplusplus }}cpp-user-guide.html" class="otherLinkColour">User Guide for C++</a></li>
+        <li><a href="{{ site.c-cplusplus-api-reference }}label-recognize-functions.html" class="otherLinkColour">Primary API for C</a></li>
+        <li><a href="{{ site.c-cplusplus-api-reference }}label-recognizer.html" class="otherLinkColour">Primary API for C++</a></li>
+        <li><a href="{{ site.c-cplusplus-api-reference }}" class="otherLinkColour">Auxiliary API</a>
+            <ul>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-character-result.html" class="otherLinkColour">DLRCharacterResult</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-image-data.html" class="otherLinkColour">DLRImageData</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-line-result.html" class="otherLinkColour">DLRLineResult</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-point.html" class="otherLinkColour">DLRPoint</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-quadrilateral.html" class="otherLinkColour">DLRQuadrilateral</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-reference-region.html" class="otherLinkColour">DLRReferenceRegion</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-result.html" class="otherLinkColour">DLRResult</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-result-array.html" class="otherLinkColour">DLRResultArray</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html" class="otherLinkColour">DLRRuntimeSettings</a></li>
+                <li><a href="{{ site.c-cplusplus-api-reference }}dm-lts-connection-parameters.html" class="otherLinkColour">DM_LTSConnectionParameters</a></li>
             </ul>
         </li>
 

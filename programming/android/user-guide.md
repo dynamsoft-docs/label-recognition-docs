@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - Android User Guide
-description: This is the user guide page of Dynamsoft Label Recognition for Android Language.
+title: Dynamsoft Label Recognizer - Android User Guide
+description: This is the user guide page of Dynamsoft Label Recognizer for Android Language.
 keywords: a, user guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - Android User Guide
+# Dynamsoft Label Recognizer - Android User Guide
 
 ## System Requirements
 
@@ -16,15 +16,15 @@ needAutoGenerateSidebar: true
 
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
+Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
 
 ## Getting Started: Hello World
 
 1. Create a new Android project in Android Studio.
 
-2. Import the `DynamsoftLabelRecognitionAndroid.aar` package into the new project. To manually import the `.aar`:
+2. Import the `DynamsoftLabelRecognizerAndroid.aar` package into the new project. To manually import the `.aar`:
 
-    i. Locate `DynamsoftLabelRecognitionAndroid.aar` in the downloaded android zip.
+    i. Locate `DynamsoftLabelRecognizerAndroid.aar` in the downloaded android zip.
     ii. Put the .aar file under the `libs` directory in the project.
     iii. In the project, open build.gradle(Module: app) and add the following code:
 
@@ -39,24 +39,24 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     iv. Add `.aar` reference in the dependencies:
 
     ```
-    implementation(name: 'DynamsoftLabelRecognitionAndroid', ext: 'aar')
+    implementation(name: 'DynamsoftLabelRecognizerAndroid', ext: 'aar')
     ```
 
-    v. Click **Sync Now**. After the synchronization completes, `DynamsoftLabelRecognitionAndroid.aar` is added to the project.
+    v. Click **Sync Now**. After the synchronization completes, `DynamsoftLabelRecognizerAndroid.aar` is added to the project.
 
-3. Add the following code to initiate and use the Dynamsoft Label Recognition SDK.
+3. Add the following code to initiate and use the Dynamsoft Label Recognizer SDK.
 
     ```java
     import com.dynamsoft.dlr.*;
     public class MainActivity extends AppCompatActivity { 
-        private LabelRecognition mRecognition;
+        private LabelRecognizer mRecognizer;
         @Override
         protected void onCreate(Bundle savedInstanceState)  {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             try {
-                mRecognition = new LabelRecognition("<insert DLR license key here>");
-                DLRResult[] results = mRecognition.recognizeByFile("<full image path>", "");
+                mRecognizer = new LabelRecognizer("<insert DLR license key here>");
+                DLRResult[] results = mRecognizer.recognizeByFile("<full image path>", "");
 
                 if (results != null && results.length > 0) {
                     String strCurResult = "";

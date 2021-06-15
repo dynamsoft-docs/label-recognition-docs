@@ -23,7 +23,7 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`TextArea`](#textarea) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
 | [`GrayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[8\]* |
 | [`DictionaryPath`](#dictionarypath) | *string* |
-| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | *int* |
+| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 
 ### MaxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
@@ -111,13 +111,5 @@ string DictionaryPath
 ### DictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```csharp
-int DictionaryCorrectionThreshold
+DLR_DictionaryCorrectionThreshold DictionaryCorrectionThreshold
 ```
-- **Value range**   
-    [0,100]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: select the appropriate threshold automatically.

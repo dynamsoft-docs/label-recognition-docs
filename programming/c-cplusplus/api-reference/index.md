@@ -21,6 +21,7 @@ needAutoGenerateSidebar: false
 - [DLRResultArray](dlr-result-array.md)		
 - [DLRResult](dlr-result.md)		
 - [DLRRuntimeSettings](dlr-runtime-settings.md)	
+- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 
 ## Enumerations
 

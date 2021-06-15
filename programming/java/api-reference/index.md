@@ -18,7 +18,7 @@ needAutoGenerateSidebar: false
 - [DLRCharacterResult](dlr-character-result.md)	
 - [DLRImageData](dlr-image-data.md)
 - [DMLTSConnectionParameters](dm-lts-connection-parameters.md)
-
+- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 
 ## Enumerations
 

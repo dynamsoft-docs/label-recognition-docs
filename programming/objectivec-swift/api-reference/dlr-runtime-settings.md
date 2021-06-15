@@ -23,7 +23,7 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`textArea`](#textarea) | [`iDLRQuadrilateral`](dlr-quadrilateral.md)\* |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray \** |
 | [`dictionaryPath`](#dictionarypath) | *NSString\** |
-| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | *NSInteger* |
+| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`iDLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md)\* |
 
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
@@ -112,13 +112,5 @@ NSString* dictionaryPath
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```objc
-NSInteger dictionaryCorrectionThreshold
+iDLRDictionaryCorrectionThreshold* dictionaryCorrectionThreshold
 ```
-- **Value range**   
-    [0,100]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: select the appropriate threshold automatically.

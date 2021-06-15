@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LineSpecification Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for LineSpecification Object.
+title: Dynamsoft Label Recognizer Parameter Reference for LineSpecification Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for LineSpecification Object.
 keywords: LineSpecification, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

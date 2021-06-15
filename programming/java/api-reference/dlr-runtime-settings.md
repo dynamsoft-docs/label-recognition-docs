@@ -24,7 +24,7 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[\]* |
 | [`dictionaryPath`](#dictionarypath) | *String* |
-| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | *int* |
+| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 
 
 ### maxThreadCount
@@ -113,13 +113,5 @@ String dictionaryPath
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```java
-int dictionaryCorrectionThreshold
+DLRDictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
-- **Value range**   
-    [0,100]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: select the appropriate threshold automatically.

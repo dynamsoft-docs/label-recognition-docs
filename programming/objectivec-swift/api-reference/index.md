@@ -18,6 +18,7 @@ needAutoGenerateSidebar: false
 - [iDLRReferenceRegion](dlr-reference-region.md)	
 - [iDLRResult](dlr-result.md)		
 - [iDLRRuntimeSettings](dlr-runtime-settings.md)	
+- [iDLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 
 &nbsp; 
 

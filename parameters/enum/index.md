@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Enumerations - Main Page
-description: This article shows the main page of Dynamsoft Label Recognition Enumerations.
+title: Dynamsoft Label Recognizer Enumerations - Main Page
+description: This article shows the main page of Dynamsoft Label Recognizer Enumerations.
 keywords: enumerations
 needAutoGenerateSidebar: false
 ---
 
-# Dynamesoft Label Recognition - Enumerations
+# Dynamesoft Label Recognizer - Enumerations
 
 ## [Parameter Mode Enumeration](parameter-mode-enums.md)
 

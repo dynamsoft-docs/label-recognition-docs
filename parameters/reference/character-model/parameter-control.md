@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for CharacterModel Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for CharacterModel Object.
+title: Dynamsoft Label Recognizer Parameter Reference for CharacterModel Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for CharacterModel Object.
 keywords: CharacterModel, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

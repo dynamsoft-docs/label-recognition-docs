@@ -31,7 +31,7 @@ typedef struct tagDLRRuntimeSettings  DLRRuntimeSettings
 | [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
 | [`dictionaryPath`](#dictionarypath) | *char\** |
-| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | *int* |
+| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -121,16 +121,8 @@ char* dictionaryPath
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```cpp
-int dictionaryCorrectionThreshold
+DLRDictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
-- **Value range**   
-    [0,100]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: select the appropriate threshold automatically.
 
 
 ### reserved

@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android Class - DLRResult
 description: This page shows the DLRResult struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRResult, struct, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android API Reference - LabelRecognizer Class
 description: This page shows LabelRecognizer methods of Dynamsoft Label Recognizer for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -460,7 +461,7 @@ recognizer.destroy();
 &nbsp;
 
 
-## updateReferenceRegionFromBarcodeResults
+### updateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type DLR_LST_BARCODE.  
 
 ```java
@@ -472,7 +473,7 @@ void updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, Strin
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-### Exceptions
+#### Exceptions
 
 [`LabelRecognizerException`](label-Recognizer-exception.md)
 

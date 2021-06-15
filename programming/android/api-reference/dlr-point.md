@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android Class - DLRPoint
 description: This page shows the DLRPoint struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRPoint, struct, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDLRResult
 description: This page shows the iDLRResult class of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRResult, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

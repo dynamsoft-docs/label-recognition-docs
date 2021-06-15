@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer .Net Class - DLR_RuntimeSettings
 description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognizer for .Net Language.
 keywords: DLR_RuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

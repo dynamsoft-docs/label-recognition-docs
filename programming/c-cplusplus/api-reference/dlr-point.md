@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer C & C++ Struct - DLRPoint
 description: This page shows the DLRPoint struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLRPoint, struct, c, c++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

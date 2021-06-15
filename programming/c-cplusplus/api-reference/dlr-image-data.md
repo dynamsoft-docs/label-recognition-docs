@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer C & C++ Struct - DLRImageData
 description: This page shows the DLRImageData struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLRImageData, struct, c, c++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

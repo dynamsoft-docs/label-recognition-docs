@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android Class - DLRReferenceRegion
 description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRReferenceRegion, struct, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

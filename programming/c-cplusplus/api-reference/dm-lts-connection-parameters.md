@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer C & C++ Struct - DM_LTSConnectionParameters
 description: This page shows the DM_LTSConnectionParameters struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DM_LTSConnectionParameters, struct, c, c++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

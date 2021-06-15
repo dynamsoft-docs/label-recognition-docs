@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer C & C++ Struct - DLRRuntimeSettings
 description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLRRuntimeSettings, struct, c, c++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

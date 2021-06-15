@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android API Reference - LabelRecognizerExcepti
 description: This page shows the LabelRecognizerException Class of Dynamsoft Label Recognizer for Android SDK.
 keywords: LabelRecognizerException, class, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

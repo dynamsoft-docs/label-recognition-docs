@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Label Recognizer .Net API Reference - LabelRecognizer Class
 description: This page shows LabelRecognizer methods of Dynamsoft Label Recognizer for .Net API Reference.
 keywords: api reference, .Net
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

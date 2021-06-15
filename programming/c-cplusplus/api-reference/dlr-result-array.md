@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer C & C++ Struct - DLRResultArray
 description: This page shows the DLRResultArray struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLRResultArray, struct, c, c++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # DLRResultArray

@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Label Recognizer C API Reference - C Functions
 description: This page shows all methods of Dynamsoft Label Recognizer for C API Reference.
 keywords: api reference, c
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

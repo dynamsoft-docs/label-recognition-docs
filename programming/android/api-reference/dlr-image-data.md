@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Android Class - DLRImageData
 description: This page shows the DLRImageData struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRImageData, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

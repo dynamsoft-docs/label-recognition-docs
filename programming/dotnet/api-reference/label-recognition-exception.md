@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Label Recognizer .Net API Reference - DLR_Exception Class
 description: This page shows the DLR_Exception Class of Dynamsoft Label Recognizer for .Net SDK.
 keywords: DLR_Exception, class, api reference, .Net
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

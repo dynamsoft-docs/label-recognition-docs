@@ -4,6 +4,7 @@ title: Dynamsoft Label RecognizerC & C++ Struct - DLRDictionaryCorrectionThresho
 description: This page shows the DLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLRDictionaryCorrectionThreshold, C, C++
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

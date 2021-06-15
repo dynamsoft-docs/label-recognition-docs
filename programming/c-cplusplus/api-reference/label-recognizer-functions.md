@@ -516,7 +516,7 @@ DLR_DestroyInstance(recognizer);
 
 &nbsp; 
    
-### Recognizing
+## Recognizing
    
   | Method               | Description |
   |----------------------|-------------|

@@ -29,6 +29,7 @@ needGenerateH3Content: false
  | [`TextArea.InferenceSettingName`](#inferencesettingname) | Specifies the name of the Inference Setting object. |
  | [`TextArea.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
  | [`TextArea.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
+ 
 ---
 
 

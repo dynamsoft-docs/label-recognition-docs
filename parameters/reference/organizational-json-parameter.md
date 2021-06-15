@@ -17,6 +17,7 @@ needGenerateH3Content: false
  | [`LineSpecificationArray `](#linespecificationarray) | An array of LineSpecification objects. |
  | [`CharacterModelArray `](#charactermodelarray) | An array of CharacterModel objects. |
  | [`InferenceSettings `](#inferencesettings) | An array of InferenceSetting objects. |
+ 
 ---
 
 

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRPoint
+# Class com.dynamsoft.dlr.DLRPoint
 Stores an x- and y-coordinate pair in two-dimensional space.
 
 

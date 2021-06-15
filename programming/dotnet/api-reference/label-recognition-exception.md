@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft.DLR.DLR_Exception
+# class Dynamsoft.DLR.DLR_Exception
 The exception class of Dynamsoft.LabelRecognizer.
 
 ```csharp

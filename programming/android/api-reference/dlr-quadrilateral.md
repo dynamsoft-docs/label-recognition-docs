@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRQuadrilateral
+# Class com.dynamsoft.dlr.DLRQuadrilateral
 Stores the quadrilateral.  
 
 

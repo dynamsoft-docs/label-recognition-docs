@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRReferenceRegion
+# Class com.dynamsoft.dlr.DLRReferenceRegion
 Stores the reference region information.  
   
 

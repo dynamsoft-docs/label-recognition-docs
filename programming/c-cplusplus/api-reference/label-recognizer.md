@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# dynamsoft::dlr::CLabelRecognizer
+# class dynamsoft::dlr::CLabelRecognizer
 
 ## General
    

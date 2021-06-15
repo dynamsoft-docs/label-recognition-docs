@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft.DLR.DLR_DictionaryCorrectionThreshold
+# class Dynamsoft.DLR.DLR_DictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
 
 ## Attributes

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft.DLR.LabelRecognizer
+# class Dynamsoft.DLR.LabelRecognizer
 
 ## General
    

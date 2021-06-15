@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRCharacterResult
+# Class com.dynamsoft.dlr.DLRCharacterResult
 Stores the character result.
   
 

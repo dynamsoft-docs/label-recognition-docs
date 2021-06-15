@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRLineResult
+# Class com.dynamsoft.dlr.DLRLineResult
 Stores the line result.
   
 

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# com.dynamsoft.dlr.DLRRuntimeSettings
+# Class com.dynamsoft.dlr.DLRRuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
   

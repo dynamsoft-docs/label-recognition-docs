@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft.DLR.DLR_ImageData
+# class Dynamsoft.DLR.DLR_ImageData
 Stores the image data.  
 
 

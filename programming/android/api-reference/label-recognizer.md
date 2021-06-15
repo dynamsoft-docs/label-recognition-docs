@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-
 # Class com.dynamsoft.dlr.LabelRecognizer
 
 ## General

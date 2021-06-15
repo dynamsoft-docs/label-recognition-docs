@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 
 - [User Guide for C](c-user-guide.md)
 - [User Guide for C++](cpp-user-guide.md)
-- [Primay API for C](api-reference/label-recognize-functions.md)
+- [Primay API for C](api-reference/label-recognizer-functions.md)
 - [Primay API for C++](api-reference/label-recognizer.md)
 - [Auxiliary API](api-reference/index.md)
 

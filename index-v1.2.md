@@ -17,3 +17,4 @@ description: Dynamsoft Label Recognition SDK Documentation Homepage
 - [Parameters]({{ site.parameters }})
    - [Reference]({{ site.parameters-reference }})
    - [Enumerations]({{ site.enumerations }})
+   - 

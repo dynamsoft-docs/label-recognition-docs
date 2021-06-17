@@ -1,4 +1,4 @@
-repositoryUrl: https://github.com/Dynamsoft/label-recognition-docs/blob/master
+repositoryUrl: https://github.com/Dynamsoft/label-recognition-docs/blob/preview
 repository: Dynamsoft/label-recognition-docs
 docFullPath: https://www.dynamsoft.com/label-recognition
 firstLevelUrl: /label-recognition
@@ -13,6 +13,7 @@ programming: /label-recognition/programming/
 
 c-cplusplus: /label-recognition/programming/c-cplusplus/
 c-cplusplus-api-reference: /label-recognition/programming/c-cplusplus/api-reference/
+
 c-functions: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
 cpp-methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
 c-cplusplus-structs: /label-recognition/programming/c-cplusplus/api-reference/structs/
@@ -32,7 +33,7 @@ objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-refere
 objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
 
 java: /label-recognition/programming/java/
-java-api: /label-recognition/programming/java/auxiliary-api/
+java-api: /label-recognition/programming/java/api-reference/
 java-release-notes: /label-recognition/programming/java/release-notes/
 
 assets: /label-recognition/assets/

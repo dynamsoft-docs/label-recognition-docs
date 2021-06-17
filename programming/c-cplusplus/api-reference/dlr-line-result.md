@@ -1,0 +1,86 @@
+---
+layout: default-layout
+title: Dynamsoft Label Recognizer C & C++ Struct - DLRLineResult
+description: This page shows the DLRLineResult struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLRLineResult, struct, c, c++
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+---
+
+
+# DLRLineResult
+Stores the line result.
+
+## Typedefs
+
+```cpp
+typedef struct tagDLRLineResult  DLRLineResult
+typedef struct tagDLRLineResult*  PDLRLineResult
+```  
+  
+---
+  
+
+## Attributes
+  
+| Attribute | Type |
+|---------- | ---- |
+| [`lineSpecificationName`](#linespecificationname) | *const char \** |
+| [`text`](#text) | *const char \** |
+| [`characterModelName`](#charactermodelname) | *const char \** |
+| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`confidence`](#confidence) | *int* |
+| [`characterResultsCount`](#characterresultscount) | *int* |
+| [`characterResults`](#characterresults) | [`PDLRCharacterResult`](dlr-character-result.md)\* |
+| [`reserved`](#reserved) | *char\[64\]* |
+
+
+### lineSpecificationName
+The name of the line specification used to recognize current line result.
+```cpp
+const char* lineSpecificationName
+```
+
+### text
+The recognized text, ends by '\0'.
+```cpp
+const char* text
+```
+
+### characterModelName
+The character model used to recognize the text.
+```cpp
+const char* characterModelName
+```
+
+### location
+The location of current line.
+```cpp
+DLRQuadrilateral* location
+```
+
+
+### confidence
+The confidence of the result. It ranges from 0 to 100.
+```cpp
+int confidence
+```
+
+
+### characterResultsCount
+The character result count.
+```cpp
+int characterResultsCount
+```
+
+### characterResults
+The character results array.
+```cpp
+PDLRCharacterResult* characterResults
+```
+
+### reserved
+Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
+```cpp
+char reserved[64]
+```

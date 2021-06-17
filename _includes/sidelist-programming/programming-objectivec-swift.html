@@ -1,6 +1,7 @@
 <li><a href="{{ site.objectivec-swift }}" class="otherLinkColour">Objective-C & Swift</a>
     <ul>
-        {%- if page.url contains '/objectivec-swift/' or page.url contains '/objectivec-swift-v'-%}
+        {%- if page.url contains '/programming-v1' -%}
+
         <li><a href="{{ site.objectivec-swift }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.objectivec-swift-api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -27,11 +28,32 @@
             </ul>
         </li>
 
+
+        {%- else -%}
+
+        <li><a href="{{ site.objectivec-swift }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+        <li><a href="{{ site.objectivec-swift-api }}label-recognizer.html" class="otherLinkColour">Primary API</a>
+        <li><a href="{{ site.objectivec-swift-api }}" class="otherLinkColour">Auxiliary API</a>
+            <ul>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-character-result.html" class="otherLinkColour">iDLRCharacterResult</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-image-data.html" class="otherLinkColour">iDLRImageData</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-line-result.html" class="otherLinkColour">iDLRLineResult</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-quadrilateral.html" class="otherLinkColour">iDLRQuadrilateral</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-reference-region.html" class="otherLinkColour">iDLRReferenceRegion</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-result.html" class="otherLinkColour">iDLRResult</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-runtime-settings.html" class="otherLinkColour">iDLRRuntimeSettings</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-lts-connection-parameters.html" class="otherLinkColour">iDLRLTSConnectionParameters</a></li>
+                <li><a href="{{ site.objectivec-swift-api }}dlr-dictionary-correction-threshold.html" class="otherLinkColour">iDLRDictionaryCorrectionThreshold</a></li>
+            </ul>
+        </li>
+
+        {%- endif -%}
+
         <li><a href="{{ site.objectivec-swift-release-notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
+                <li><a href="{{ site.objectivec-swift-release-notes }}ios-2.html" class="otherLinkColour">Version 2.x</a></li>
                 <li><a href="{{ site.objectivec-swift-release-notes }}ios-1.html" class="otherLinkColour">Version 1.x</a></li>
             </ul>
         </li>
-        {%- endif -%}
     </ul>
 </li>

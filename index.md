@@ -1,11 +1,12 @@
 ---
 layout: home-page
-title: Dynamsoft Label Recognition SDK Documentation
-keywords: dynamsoft label recognition, dlr, documentation
-description: Dynamsoft Label Recognition SDK Documentation Homepage
+title: Dynamsoft Label Recognizer SDK Documentation
+keywords: dynamsoft label recognizer, dlr, documentation
+description: Dynamsoft Label Recognizer SDK Documentation Homepage
+needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition Documentation
+# Dynamsoft Label Recognizer Documentation
 
 - [Introduction]({{ site.introduction }})
 

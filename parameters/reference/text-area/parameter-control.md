@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for TextArea Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for TextArea Object.
+title: Dynamsoft Label Recognizer Parameter Reference for TextArea Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for TextArea Object.
 keywords: TextArea, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
@@ -24,10 +24,12 @@ needGenerateH3Content: false
  | [`TextArea.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
  | [`TextArea.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
- | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
-
+ | [`TextArea.InferenceSettingName`](#inferencesettingname) | Specifies the name of the Inference Setting object. |
+ | [`TextArea.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
+ | [`TextArea.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
+ 
 ---
 
 
@@ -185,7 +187,7 @@ If you set a character model, the result will only contain characters within the
 &nbsp;
 
 ## GrayscaleTransformationModes
-Please check [LabelRecognitionParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#GrayscaleTransformationModes) for reference.
+Please check [LabelRecognizerParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#GrayscaleTransformationModes) for reference.
 
 &nbsp;
 
@@ -388,26 +390,85 @@ Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ 
 
 &nbsp;
 
-## TextAreaNameArray
-Specifies the name array of the TextArea objects which is relative to current text area. 
+## InferenceSettingName
+Specifies the name of the Inference Setting object.
+
+**Remarks**
+It is the name of the [`InferenceSetting`](../inference-setting/index.md) object. 
+
+### As Json Parameter
+
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | InferenceSettingName | *string* | "" |
+
+**Json Parameter Example**   
+```json
+{
+    "InferenceSettingName":"IS0"
+}
+```
+
+&nbsp;
+
+
+## DictionaryPath
+Sets the path of the dictionary file.
+
+### As Json Parameter
+
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | DictionaryPath | *string* | "" |
+
+**Json Parameter Example**   
+```json
+{
+    "DictionaryPath":"D:\\DictModel\\nutrition.txt"
+}
+```
+
+
+&nbsp;
+
+## DictionaryCorrectionThresholds
+Sets the threshold of dictionary error correction.
 
 **Remarks**   
-An array item is a name of any available `TextArea`.    
+It supports segmentation threshold. 
 
 ### As Json Parameter
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| TextArea | TextAreaNameArray | *string Array* | `null` |
+| TextArea | DictionaryCorrectionThresholds | *Array* | `null` |
 
+- MinWordLength: The minimum value of word length. 
+- MaxWordLength: The maximum value of word length.
+- Threshold: The threshold for the number of error correction characters.
 
 **Json Parameter Example**   
 ```json
 {
-    "TextAreaNameArray":[
-        "TextArea1",
-        "TextArea2"
+    "DictionaryCorrectionThresholds": [
+        {
+            "MinWordLength": 3,
+            "MaxWordLength": 5,
+            "Threshold": 1
+        },
+        {
+            "MinWordLength": 6,
+            "MaxWordLength": 10,
+            "Threshold": 2
+        },
+        {
+            "MinWordLength": 11,
+            "Threshold": 3
+        }
     ]
+
 }
 ```
 &nbsp;

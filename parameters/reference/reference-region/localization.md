@@ -1,21 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for ReferenceRegion Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for ReferenceRegion Object.
+title: Dynamsoft Label Recognizer Parameter Reference for ReferenceRegion Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for ReferenceRegion Object.
 keywords: ReferenceRegion, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
 # ReferenceRegion Object
-
- | Parameter Name | Description |
- | -------------- | ----------- | 
- | [`ReferenceRegion.Name`](parameter-control.md#name) | The name of the ReferenceRegion object. |
- | [`ReferenceRegion.Localization`](#localization) | The localization of the reference region(s). |
- | [`ReferenceRegion.TextAreaNameArray `](parameter-control.md#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current reference region. |
-
----
 
 ## Localization
 A JSON object containing the following settings.

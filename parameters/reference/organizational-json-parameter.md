@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LineSpecification Object
-description: This page shows Dynamsoft Label Recognition Json Parameters for organization.
+title: Dynamsoft Label Recognizer Parameter Reference for LineSpecification Object
+description: This page shows Dynamsoft Label Recognizer Json Parameters for organization.
 keywords: parameter reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
@@ -11,34 +11,35 @@ needGenerateH3Content: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameterArray`](#labelrecognitionparameterarray) | An array of LabelRecognitionParameter objects. |
+ | [`LabelRecognizerParameterArray`](#labelrecognizerparameterarray) | An array of LabelRecognizerParameter objects. |
  | [`ReferenceRegionArray`](#referenceregionarray) | An array of ReferenceRegionArray objects. |
  | [`TextAreaArray `](#textareaarray) | An array of TextArea objects. |
  | [`LineSpecificationArray `](#linespecificationarray) | An array of LineSpecification objects. |
  | [`CharacterModelArray `](#charactermodelarray) | An array of CharacterModel objects. |
-
+ | [`InferenceSettings `](#inferencesettings) | An array of InferenceSetting objects. |
+ 
 ---
 
 
-## LabelRecognitionParameterArray
-An array of [LabelRecognitionParameter objects](label-recognition-parameter/parameter-control.md).  
+## LabelRecognizerParameterArray
+An array of [LabelRecognizerParameter objects](label-recognizer-parameter/parameter-control.md).  
 
 ### As Json Parameter
 
 |	Json Key Name | Value Type |
 | --------------- | ---------- |
-| LabelRecognitionParameterArray | *Object array* |
+| LabelRecognizerParameterArray | *Object array* |
 
 **Json Parameter Example**   
 ```json
 {
-    "LabelRecognitionParameterArray": [
+    "LabelRecognizerParameterArray": [
       {
-        "Name": "LabelRecognitionParameter1", 
+        "Name": "LabelRecognizerParameter1", 
         "ReferenceRegionNameArray": ["Region1"]
       },
       {
-        "Name": "LabelRecognitionParameter2", 
+        "Name": "LabelRecognizerParameter2", 
         "ReferenceRegionNameArray": ["Region2"]
       }
     ]
@@ -155,3 +156,30 @@ An array of [CharacterModel objects](character-model/parameter-control.md).
 
 &nbsp;
 
+
+## InferenceSettings
+An array of [InferenceSetting objects](inference-setting/index.md).  
+
+### As Json Parameter
+
+|	Json Key Name | Value Type |
+| --------------- | ---------- |
+| InferenceSettings | *Object array* |
+
+**Json Parameter Example**   
+```json
+{
+    "InferenceSettings": [
+      {
+        "Name": "InferenceSettings1", 
+        ......
+      },
+      {
+        "Name": "InferenceSettings2", 
+        ......
+      }
+    ]
+}
+```
+
+&nbsp;

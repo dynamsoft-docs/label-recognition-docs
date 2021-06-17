@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Enumerations - Other Enumerations
-description: This article shows other Enumerations of Dynamsoft Label Recognition.
+title: Dynamsoft Label Recognizer Enumerations - Other Enumerations
+description: This article shows other Enumerations of Dynamsoft Label Recognizer.
 keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, DLRImagePixelFormat, other enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Label Recognition Enumeration - Other Enumeration
+# Dynamsoft Label Recognizer Enumeration - Other Enumeration
 
   | Enumeration | Description |
   |-------------|-------------|
@@ -315,7 +315,7 @@ Describes Dynamsoft products.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | PROD_DBR | EnumProductDBR | 0x0001 | Dynamsoft Barcode Reader |
-| PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognition |
+| PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognizer |
 | PROD_DWT | EnumProductDWT | 0x0004 | Dynamic Web Twain |
 | PROD_DCE | EnumProductDCE | 0x0008 | Dynamsoft Camera Enhancer |
 | PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |

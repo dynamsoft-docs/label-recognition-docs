@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - .Net User Guide
-description: This is the user guide page of Dynamsoft Label Recognition for .Net Language.
+title: Dynamsoft Label Recognizer - .Net User Guide
+description: This is the user guide page of Dynamsoft Label Recognizer for .Net Language.
 keywords: a, user guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - .Net User Guide
+# Dynamsoft Label Recognizer - .Net User Guide
 
 ## System Requirements
 
@@ -19,20 +19,20 @@ needAutoGenerateSidebar: true
 
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
+Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
 
 ## Getting Started: Hello World
 
 1. Start Visual Studio and create a new Console Application (.NET Framework) in C#. 
    
-2. Add Dynamsoft Label Recognition namespace and libs to a new file, `DLRHelloWorld.cs`.  
+2. Add Dynamsoft Label Recognizer namespace and libs to a new file, `DLRHelloWorld.cs`.  
 
     ```cs
     using System;
     using Dynamsoft.DLR;
     ```
 
-    Please add the Dynamsoft Label Recognition ibraries (`Dynamsoft.LabelRecognition.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\`. Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
+    Please add the Dynamsoft Label Recognizer ibraries (`Dynamsoft.LabelRecognizer.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\`. Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
 
 3. Update the main function in `DLRHelloWorld.cs`. 
 
@@ -43,12 +43,12 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
         {
             try
             {
-                LabelRecognition labelRecognition = new LabelRecognition();
+                LabelRecognizer labelRecognizer = new LabelRecognizer();
 
                 // Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense
-                labelRecognition.InitLicense("<insert DLR license key here>");
+                labelRecognizer.InitLicense("<insert DLR license key here>");
 
-                DLR_Result[] results = labelRecognition.RecognizeByFile("<full image path>", "");
+                DLR_Result[] results = labelRecognizer.RecognizeByFile("<full image path>", "");
 
                 for (int i = 0; i < results.Length; ++i)
                 {
@@ -83,14 +83,14 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
 ### Specify a reference region using results from Dynamsoft Barcode Reader
 
-Assuming Dynamsoft Barcode Reader has been set up within the project, the following code will allow you to use the barcode results as the reference region for Dynamsoft Label Reader. 
+Assuming Dynamsoft Barcode Reader has been set up within the project, the following code will allow you to use the barcode results as the reference region for Dynamsoft Label Recognizer. 
 
 ```cs
 TextResult[] dbr_result = dbr.DecodeFile("<insert image path>", "");
              
-LabelRecognition dlr = new LabelRecognition();
+LabelRecognizer dlr = new LabelRecognizer();
 dlr.InitLicense("<insert DLR license>");
-dlr.AppendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+dlr.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 dlr.UpdateReferenceRegionFromBarcodeResults(dbr_result, "P1");
 DLR_Result[] dlr_result = dlr.RecognizeByFile("<insert image path>", "P1");
 ```

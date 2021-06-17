@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference - LineSpecification Object
-description: This article shows LineSpecification Object of Dynamsoft Label Recognition.
+title: Dynamsoft Label Recognizer Parameter Reference - LineSpecification Object
+description: This article shows LineSpecification Object of Dynamsoft Label Recognizer.
 keywords: parameter reference, parameters, LineSpecification
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Label Recognition SDK - LineSpecification Object
+# Dynamsoft Label Recognizer SDK - LineSpecification Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 

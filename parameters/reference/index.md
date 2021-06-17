@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference - Main Page
-description: Dynamsoft Label Recognition Parameter Reference - Main Page
-keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea, LineSpecification, CharacterModel
+title: Dynamsoft Label Recognizer Parameter Reference - Main Page
+description: Dynamsoft Label Recognizer Parameter Reference - Main Page
+keywords: parameter reference, parameters, LabelRecognizerParameter, ReferenceRegion, TextArea, LineSpecification, CharacterModel, InferenceSetting
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Label Recognition SDK - Parameters
+# Dynamsoft Label Recognizer SDK - Parameters
 
-## [LabelRecognitionParameter Object](label-recognition-parameter/index.md)
+## [LabelRecognizerParameter Object](label-recognizer-parameter/index.md)
 
 ## [ReferenceRegion Object](reference-region/index.md)
 
@@ -19,6 +19,8 @@ needGenerateH3Content: true
 ## [LineSpecification Object](line-specification/index.md)
 
 ## [CharacterModel Object](character-model/index.md)
+
+## [InferenceSetting Object](inference-setting/index.md)
 
 ## [Organizational Json Parameter](organizational-json-parameter.md)
 

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameters - Main Page
-description: Dynamsoft Label Recognition provides flexible APIs for you to customize the settings for different usage scenarios. 
+title: Dynamsoft Label Recognizer Parameters - Main Page
+description: Dynamsoft Label Recognizer provides flexible APIs for you to customize the settings for different usage scenarios. 
 needAutoGenerateSidebar: false
 ---
 
 
-# Dynamsoft Label Recognition - Parameters
+# Dynamsoft Label Recognizer - Parameters
 
 ## Reference
 

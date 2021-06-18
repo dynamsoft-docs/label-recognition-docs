@@ -100,26 +100,26 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 2. Initialize the license key
 
     ```c
-    int errorcode = 0;
-    
-    errorcode = DLR_InitLicense(dlr, "<insert DLR license key here>");
-
-    if(errorcode != DLR_OK)
-        printf("%s\r\n", DLR_GetErrorString(errorcode));
+    DLR_InitLicense(dlr, "<insert DLR license key here>");
     ```    
     
     >Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
 
 
-### Recognizing text
+### Recognizing and output results
 
 1. Recognizing text in an image 
     
     ```c
     errorcode = DLR_RecognizeByFile(dlr, "<full image path>", "");
+    
+    if(errorcode != DLR_OK)
+        printf("%s\r\n", DLR_GetErrorString(errorcode));
     ```
 
     >In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+
+    >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
 2. Get and output the recognition results
 
@@ -131,7 +131,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     // Get all recognized results.
     DLR_GetAllResults(dlr, &pDLRResults);
 
-    if (pDLRResults != NULL && pDLRResults->resultsCount == 0)
+    if (pDLRResults != NULL && pDLRResults->resultsCount > 0)
     {
         rCount = pDLRResults->resultsCount;
         printf("Recognized %d results\r\n", rCount);
@@ -172,7 +172,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
     ```c
     if(pDLRResults != NULL)           
-        DLR_FreeDLRResults(dlr, &pDLRResults);
+        DLR_FreeResults(&pDLRResults);
     
     DLR_DestroyInstance(dlr);
     ```
@@ -200,3 +200,8 @@ You can find the similar complete source code for this application in `dlr-c_cpp
     >./DLRSample
     ```
 
+## Next Steps
+
+- [How to specify ROI](c-advanced-features.md#specify-roi)
+- [How to change recognizer model](c-advanced-features.md#change-the-recognizer-model)
+- [How to use regular expressions](c-advanced-features.md#use-regular-expressions)

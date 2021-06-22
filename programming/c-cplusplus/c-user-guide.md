@@ -21,7 +21,7 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
 
@@ -34,7 +34,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 2. Add a new source file named `DLRCSample.c` into the project.
 
 #### For Linux
-1. Create a new source file named `DLRCSample.c`.
+1. Create a new source file named `DLRCSample.c` and place it into the folder `[INSTALLATION FOLDER]\Samples`.
 
 2. Create a file named `Makefile` and put it in the same directory as the file `DLRCSample.c`. The content of `Makefile` is as follows:
 
@@ -42,8 +42,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     CC=gcc
     CCFLAGS=-c
 
-    # TODO: Replace it with the correct DLR library directory.
-    DLRLIB_PATH=../../Lib/Linux
+    DLRLIB_PATH=../Lib/Linux
 
     LDFLAGS=-L $(DLRLIB_PATH) -Wl,-rpath=$(DLRLIB_PATH) -Wl,-rpath=./
     DLRLIB=-lDynamsoftLabelRecognizer
@@ -103,7 +102,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     DLR_InitLicense(dlr, "<insert DLR license key here>");
     ```    
     
-    >Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
+    >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
+    >- Find the license in the sample code of the installation package;
+    >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
 
 
 ### Recognizing and output results
@@ -111,13 +112,13 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 1. Recognizing text in an image 
     
     ```c
-    errorcode = DLR_RecognizeByFile(dlr, "<full image path>", "");
+    errorcode = DLR_RecognizeByFile(dlr, "test.png", "");
     
     if(errorcode != DLR_OK)
         printf("%s\r\n", DLR_GetErrorString(errorcode));
     ```
 
-    >In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
 
     >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
@@ -162,7 +163,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     The structure is shown in the figure below:
 
     <div align="center">
-    <img src="assets/dlr_result.png" alt="DLR Result Structure" width="80%"/>
+    <img src="../assets/dlr_result.png" alt="DLR Result Structure" width="80%"/>
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
@@ -177,7 +178,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     DLR_DestroyInstance(dlr);
     ```
 
-You can find the similar complete source code for this application in `dlr-c_cpp-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorld`.
+You can find the similar complete source code for this application in `dlr-c_cpp-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorldC`.
 
 ### Build and run the project
 
@@ -185,8 +186,7 @@ You can find the similar complete source code for this application in `dlr-c_cpp
 
 1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
 
-2. Run the program `DLRCSample.exe`.
-
+2. Run the program `DLRSample.exe`. The executable files can be downloaded [here](). 
 #### For Linux
 
 1. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
@@ -195,13 +195,8 @@ You can find the similar complete source code for this application in `dlr-c_cpp
     >make
     ```
 
-2. Run the program:
+2. Run the program `DLRCSample`. The executable files can be downloaded [here](). 
     ```
     >./DLRCSample
     ```
 
-## Next Steps
-
-- [How to specify ROI](c-advanced-features.md#specify-roi)
-- [How to change recognizer model](c-advanced-features.md#change-the-recognizer-model)
-- [How to use Json template](c-advanced-features.md#use-json-template)

@@ -29,14 +29,14 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
 #### For Windows
 
-1. Open Visual Studio. Go to File > New > Project, select Empty App and enter `DLRSample` in the `name` text box.
+1. Open Visual Studio. Go to File > New > Project, select Empty App and enter `DLRCSample` in the `name` text box.
 
-2. Add a new source file named `DLRSample.c` into the project.
+2. Add a new source file named `DLRCSample.c` into the project.
 
 #### For Linux
-1. Create a new source file named `DLRSample.c`.
+1. Create a new source file named `DLRCSample.c`.
 
-2. Create a file named `Makefile` and put it in the same directory as the file `DLRSample.c`. The content of `Makefile` is as follows:
+2. Create a file named `Makefile` and put it in the same directory as the file `DLRCSample.c`. The content of `Makefile` is as follows:
 
     ```makefile
     CC=gcc
@@ -48,9 +48,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     LDFLAGS=-L $(DLRLIB_PATH) -Wl,-rpath=$(DLRLIB_PATH) -Wl,-rpath=./
     DLRLIB=-lDynamsoftLabelRecognizer
 
-    TARGET=DLRSample
-    OBJECT=DLRSample.o
-    SOURCE=DLRSample.c
+    TARGET=DLRCSample
+    OBJECT=DLRCSample.o
+    SOURCE=DLRCSample.c
 
     # build rule for target.
     $(TARGET): $(OBJECT)
@@ -70,7 +70,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
 ### Include the library
 
-1. Add headers and libs in `DLRSample.c`.   
+1. Add headers and libs in `DLRCSample.c`.   
    
     ```c
     #include <stdio.h>
@@ -87,7 +87,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     #endif
     ```
    
-    >Please replace `<relative path>` in the above code with the relative path to the `DLRSample.c` file. The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
     
 ### Initialize the Dynamsoft Label Recognizer
 
@@ -185,7 +185,7 @@ You can find the similar complete source code for this application in `dlr-c_cpp
 
 1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
 
-2. Run the program `DLRSample.exe`.
+2. Run the program `DLRCSample.exe`.
 
 #### For Linux
 
@@ -197,11 +197,11 @@ You can find the similar complete source code for this application in `dlr-c_cpp
 
 2. Run the program:
     ```
-    >./DLRSample
+    >./DLRCSample
     ```
 
 ## Next Steps
 
 - [How to specify ROI](c-advanced-features.md#specify-roi)
 - [How to change recognizer model](c-advanced-features.md#change-the-recognizer-model)
-- [How to use regular expressions](c-advanced-features.md#use-regular-expressions)
+- [How to use Json template](c-advanced-features.md#use-json-template)

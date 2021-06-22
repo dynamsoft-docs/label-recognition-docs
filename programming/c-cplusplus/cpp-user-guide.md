@@ -4,288 +4,207 @@ title: Dynamsoft Label Recognizer - C++ User Guide
 description: This is the user guide page of Dynamsoft Label Recognizer for C++ Language.
 keywords: c++, user guide
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - C++ User Guide
+# Dynamsoft Label Recognizer - User Guide for C++
 
-## System Requirements
+## Requirements
+   
+### Windows 
+- Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012.
+- Visual Studio 2003 or above
 
-- Operating systems:
-   - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012.
-   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;   
+### Linux
+- Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
+- GCC 4.2+  
 
 ## Installation
 
-Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.   
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package.
 
-## Getting Started: Hello World
+## Build your first application
 
-1. Start Visual Studio and create a new Win32 Console Application in C++. 
+### Create a new project 
+
+#### For Windows
+
+1. Open Visual Studio. Go to File > New > Project, select Empty App and enter `DLRCppSample` in the `name` text box.
+
+2. Add a new source file named `DLRCppSample.cpp` into the project.
+
+#### For Linux
+1. Create a new source file named `DLRCppSample.cpp`.
+
+2. Create a file named `Makefile` and put it in the same directory as the file `DLRCppSample.cpp`. The content of `Makefile` is as follows:
+
+    ```makefile
+    CC=gcc
+    CCFLAGS=-c
+
+    # TODO: Replace it with the correct DLR library directory.
+    DLRLIB_PATH=../../Lib/Linux
+
+    LDFLAGS=-L $(DLRLIB_PATH) -Wl,-rpath=$(DLRLIB_PATH) -Wl,-rpath=./
+    DLRLIB=-lDynamsoftLabelRecognizer
+
+    STDLIB=-lstdc++
+
+    TARGET=DLRCppSample
+    OBJECT=DLRCppSample.o
+    SOURCE=DLRCppSample.cpp
+
+    # build rule for target.
+    $(TARGET): $(OBJECT)
+        $(CC) -o $(TARGET) $(OBJECT) $(STDLIB) $(DLRLIB) $(LDFLAGS)
+
+    # target to build an object file
+    $(OBJECT): $(SOURCE)
+        $(CC) $(CCFLAGS) $(SOURCE)
+
+    # the clean target
+    .PHONY : clean
+    clean: 
+        rm -f $(OBJECT) $(TARGET)
+    ```
+
+    >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Linux`.
+
+### Include the library
+
+1. Add headers and libs in `DLRCppSample.cpp`.   
    
-2. Add Dynamsoft Label Recognizer headers and libs in `DLRHelloWorld.cpp`.   
-   
-   ```cpp
+    ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognizer.h"
     #include "<relative path>/Include/DynamsoftCommon.h"
+
     using namespace std;
     using namespace dynamsoft::dlr;
 
-    #ifdef _WIN64
-    #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognizerx64.lib")
-    #else
-    #pragma comment(lib, "<relative path>/Lib/Windows/x86/DynamsoftLabelRecognizerx86.lib")
+    // The following code is only applies to Windows.
+    #ifdef _WINDOWS
+        #ifdef _WIN64
+            #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognizerx64.lib")
+        #else
+            #pragma comment(lib, "<relative path>/Lib/Windows/x86/DynamsoftLabelRecognizerx86.lib")
+        #endif
     #endif
-   ```
+    ```
    
-    The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The other necessary folder and files, including DLL/LIB files, can be found in `[INSTALLATION FOLDER]\Lib\`.  Please replace `<relative path>` in the above code with the relative path to the `DLRHelloWorld.cpp` file. 
- 
-3. Update the main function in `DLRHelloWorld.cpp`.   
-   ```cpp
-    int main()
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCppSample.cpp` file. The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    
+### Initialize the Dynamsoft Label Recognizer
+
+1. Create an instance of Dynamsoft Label Recognizer
+
+    ```cpp
+    CLabelRecognizer dlr;
+    ```
+
+2. Initialize the license key
+
+    ```cpp
+    dlr.InitLicense("<insert DLR license key here>");
+    ```    
+    
+    >Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
+
+
+### Recognizing and output results
+
+1. Recognizing text in an image 
+    
+    ```cpp
+    errorcode = dlr.RecognizeByFile("<full image path>", "");
+    
+    if(errorcode != DLR_OK)
+        printf("%s\r\n", DLR_GetErrorString(errorcode));
+    ```
+
+    >In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+
+    >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
+
+2. Get and output the recognition results
+
+    ```cpp
+    DLRResultArray *pDLRResults = NULL;
+    DLRResult* result = NULL;
+    int lCount, rCount, li, ri;
+
+    // Get all recognized results.
+    dlr.GetAllResults(&pDLRResults);
+
+    if (pDLRResults != NULL && pDLRResults->resultsCount > 0)
     {
-        CLabelRecognizer dlr;
-        dlr.InitLicense("<insert DLR license key here>");
-
-        int errorcode = dlr.RecognizeByFile("<full image path>", "");
-
-        if (errorcode != DLR_OK)
-            printf("\r\nFailed to recognize label\r\n");
-        else
+        rCount = pDLRResults->resultsCount;
+        printf("Recognized %d results\r\n", rCount);
+        for (ri = 0; ri < rCount; ++ri)
         {
-            DLRResultArray* pDLRResults = nullptr;
-            dlr.GetAllDLRResults(&pDLRResults);
-
-            if (pDLRResults != nullptr)
+            // Get result of each text area (also called label).
+            result = pDLRResults->results[ri];
+            lCount = result->lineResultsCount;
+            for (li = 0; li < lCount; ++li)
             {
-                int rCount = pDLRResults->resultsCount;
-                printf("\r\nRecognized %d results\r\n", rCount);
-                for (int ri = 0; ri < rCount; ++ri)
-                {
-                    DLRResult* result = pDLRResults->results[ri];
-                    int lCount = result->lineResultsCount;
-                    for (int li = 0; li < lCount; ++li)
-                    {
-                        printf("Line result %d: %s\r\n", li, result->lineResults[li]->text);
-                    }
-                }
+                // Get the result of each text line in the label.
+                printf("Line result %d: %s\r\n", li, result->lineResults[li]->text);
             }
-            else
-            {
-                printf("\r\nNo data detected.\r\n");
-            }
-            dlr.FreeDLRResults(&pDLRResults);
         }
-        return 0;
     }
-   ```
-
-    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
-
-    In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
-
-4. Run the project.   
-   Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[OPERATING SYSTEM]\`.
-   
-    To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
-
-## Features
-
-### Specify a reference region and text area
-
-There are two ways to set a single reference region - 1) through runtime settings and 2) JSON template. The following example demonstrates how to specify a single reference region using the first option - runtime settings. The second option is outlined in the next section [Specify multiple reference regions](#specify-multiple-reference-regions) for how to reference regions using a JSON template.
-
-```cpp
-    char error[512];
-
-    DLRRuntimeSettings settings;
-    dlr.GetRuntimeSettings(&settings);
-    
-    settings.referenceRegion= { { {0, 0}, { 50,0 }, { 50,100 }, { 0, 100 }}, 1 };
-    settings.textArea = { { {0,0}, {50,0},{50,100},{0,100} } };
-    dlr.UpdateRuntimeSettings(&settings, error, 512);
-```
-
-### Specify multiple reference regions
-
-To reference multiple regions, we cannot follow the runtime settings example above. Below is an example of how to define multiple reference regions of interest, `R1` and `R2`, using a template string. Learn more about [`ReferenceRegionArray`]({{ site.parameters-reference }}organizational-json-parameter.html#referenceregionarray).
-
-```cpp
-    string ReferenceRegionArray = 
-    "\"ReferenceRegionArray\":[{\
-        \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 1\
-            },\
-        \"Name\":\"R1\"\
-    },{\
-        \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 0\
-            },\
-        \"Name\":\"R2\"\
-    }]";
-    string DLRParameterArray = 
-    "\"LabelRecognizerParameterArray\":[{\
-        \"Name\": \"l1\",\
-        \"LinesCount\":2,\
-        \"ReferenceRegionNameArray\": [\"R1\",\"R2\"]\
-    }]";
-    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray + "}").c_str(), errorMessage, 256);
-```
-
-### Specify one region with multiple text areas
-
-```cpp
-    string TextAreaArray = 
-    "\"TextAreaArray\":[{\
-        \"FirstPoint\" : [ -500, -500 ],\
-        \"SecondPoint\" : [500, -500],\
-        \"ThirdPoint\" : [500, 0],\
-        \"FourthPoint\" : [-500, 0],\
-        \"Name\" : \"t2\"\
-    },{\
-        \"FirstPoint\" : [ -500, 0 ],\
-        \"SecondPoint\" : [500, 0],\
-        \"ThirdPoint\" : [500, 500],\
-        \"FourthPoint\" : [-500, 500],\
-        \"Name\" : \"t1\"\
-    }]";
-    string ReferenceRegionArray = 
-    "\"ReferenceRegionArray\":[{\
-        \"Localization\": \
-            {\
-                \"SourceType\": \"DLR_LST_PREDETECTED_REGION\",\
-                \"RegionPredetectionModesIndex\": 1\
-            },\
-        \"Name\":\"R1\",\
-        \"TextAreaNameArray\" : [ \"t1\", \"t2\" ]\
-    }]";
-    string DLRParameterArray = "\"LabelRecognizerParameterArray\":[{\
-        \"Name\": \"l1\",\
-        \"LinesCount\":2,\
-        \"ReferenceRegionNameArray\": [\"R1\"]\
-    }]";
-    dlr.AppendSettingsFromString(("{" + DLRParameterArray + ", " + ReferenceRegionArray +","+ TextAreaArray+ "}").c_str(), errorMessage, 256);
-```
-
-### Enable region autodetection 
-
-Dynamsoft Label Recognizer SDK supports automatic region detection to extract text.
-
-```cpp
-    char szErrorMsg[512];
-
-    DLRRuntimeSettings settings;
-    dlr.GetRuntimeSettings(&settings);
-    settings.regionPredetectionModes[0] = DLRRegionPredetectionMode::DLR_RPM_AUTO;
-    dlr.UpdateRuntimeSettings(&settings, szErrorMsg, 512);
-```
-
-Setting the predetection mode option to `DLR_RPM_AUTO` will allow the library to automatically detect a region. Learn more about other predetection mode options available in [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode).
-
-### Use a template to change settings
-
-Easily manage recognition settings and reduce redundant lines of code by using templates. Templates can be used to customize and manage all runtime settings. Templates can be used in either string or JSON file format. 
-
-#### Change template settings using a string
-
-Use [`AppendSettingsFromString`](api-reference/label-recognizer.md#appendsettingsfromstring) when changing template settings with a string. The following demonstrates how to use a string template to modify recognition settings.
-
-```cpp
-    string characterModelArray = "\"CharacterModelArray\":[\
-        {\
-            \"Name\":\"Number\",\
-            \"DirectoryPath\" : \"CharacterModel\"\
-        },\
-        {\
-            \"Name\":\"NumberLetter\",\
-            \"DirectoryPath\" : \"CharacterModel\"\
-        }]";
-    
-    string TextAreaArray = "\"TextAreaArray\":[{\"CharacterModelName\" : \"NumberLetter\",\"Name\" : \"numberLetterArea\"}]";
-
-    string ReferenceRegionArray = "\"ReferenceRegionArray\":[{\"TextAreaNameArray\" : [ \"numberLetterArea\" ],\"Name\":\"numberletterregion\"}]";
-
-    string DLRParameterArray = "\"LabelRecognizerParameterArray\":[{\"Name\": \"l1\",\"LetterHeightRange\" : [ 8, 30, 1 ],\"ReferenceRegionNameArray\": [\"numberletterregion\"]}]";
-    
-    dlr.AppendSettingsFromString(("{" + characterModelArray + "," + DLRParameterArray + "," + ReferenceRegionArray  +", "+ TextAreaArray+ "}").c_str(), errorMessage, 256);
-
-```
-
-#### Change template settings using a JSON file
-
-When using a JSON file, we will use another method [`AppendSettingsFromFile`](api-reference/label-recognition.md#appendsettingsfromfile).
-
-The following demonstrates how to use a template file(`DLRTemplate.json`) to modify recognition settings.
-
-```json
+    else
     {
-        "LabelRecognizerParameterArray" : [
-        {
-            "Name":"locr",
-            "MaxThreadCount":4,
-            "LinesCount":1,
-            "GrayscaleTransformationModes":[{
-                "Mode":"DLR_GTM_INVERTED"
-            }],
-            "RegionPredetectionModes":[
-            {
-                "ForeAndBackgroundColours" : "[20,-1,20]",
-                "Mode" : "DLR_RPM_GENERAL_HSV_CONTRAST",
-                "SpatialIndexBlockSize" : 3
-            }
-            ],
-            "CharacterModelName":"Number"
-        }
-        ],
-
-        "ReferenceRegionArray":[
-        {
-            "Name":"R1",
-            "Localization": 
-                {
-                    "SourceType": "DLR_LST_PREDETECTED_REGION",
-                    "RegionPredetectionModesIndex": 0
-                },
-            "TextAreaNameArray":["T1"]
-        }
-        ],
-        
-        "TextAreaArray":[
-        {
-            "Name":"T1",
-            "FirstPoint":[0,0],
-            "SecondPoint":[100,0],
-            "ThirdPoint":[100,100],
-            "FourthPoint":[0,100],
-            "LetterHeightRange":[15,100,1]
-        }
-        ],
-        
-        "CharacterModelArray":[
-        {
-            "Name":"Number",
-            "DirectoryPath":"../CharacterModel"
-        }
-        ]
+        printf("No data detected.\r\n");
     }
-```
-```cpp
-    int main() {
-        char error[512];
-        string ocrTemplate;
-        string templateName;
+    ```
 
-        ocrTemplate = "<relative_path>/DLRTemplate.json";
-        templateName = "dlrtemplate"
+    The recognition results of SDK are organized into a four-tier structure: 
+    - `DLRResultArray` corresponds to the results of an `image`
+    - `DLRResult` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLRLineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
-        dlr.AppendSettingsFromFile(ocrTemplate.c_str(), error, 512);
+    The structure is shown in the figure below:
 
-        ret = ocr.RecognizeByFile("<full image path>", templateName.c_str());
+    <div align="center">
+    <img src="assets/dlr_result.png" alt="DLR Result Structure" width="80%"/>
+    <p>Figure 1 – DLR Result Structure</p>
+    </div> 
 
-        ...
-    }
-```
+### Release allocated memory
+
+1. Release the allocated memory for the recognition results
+
+    ```cpp
+    if(pDLRResults != NULL)           
+        CLabelRecognizer::FreeResults(&pDLRResults);
+    ```
+
+You can find the similar complete source code for this application in `dlr-c_cpp-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorld`.
+
+### Build and run the project
+
+#### For windows
+
+1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
+
+2. Run the program `DLRCppSample.exe`.
+
+#### For Linux
+
+1. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
+
+    ```
+    >make
+    ```
+
+2. Run the program:
+    ```
+    >./DLRCppSample
+    ```
+
+## Next Steps
+
+- [How to specify ROI](cpp-advanced-features.md#specify-roi)
+- [How to change recognizer model](cpp-advanced-features.md#change-the-recognizer-model)
+- [How to use Json template](cpp-advanced-features.md#use-json-template)

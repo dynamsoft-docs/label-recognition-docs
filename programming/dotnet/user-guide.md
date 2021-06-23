@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognizer - .Net User Guide
 
-## System Requirements
+## Requirements
 
 - Operating systems:
    - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012.
@@ -19,79 +19,98 @@ needAutoGenerateSidebar: true
 
 ## Installation
 
-Download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. The package includes a free trial license valid for 30 days.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
-## Getting Started: Hello World
+## Build your first application
 
-1. Start Visual Studio and create a new Console Application (.NET Framework) in C#. 
-   
-2. Add Dynamsoft Label Recognizer namespace and libs to a new file, `DLRHelloWorld.cs`.  
+### Create a new project 
 
+1. Open Visual Studio. Go to File > New > Project, select `Visual C#` template, create a new Console Application (.NET Framework) named `DLRCSharpSample`.
+
+### Include the library
+
+1. Add the Dynamsoft Label Recognizer libraries (`Dynamsoft.LabelRecognizer.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\[dotNetVersion]`.
+    >Note: Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
+
+2. Import the namespace in the file `Program.cs`
+    
     ```cs
-    using System;
     using Dynamsoft.DLR;
     ```
 
-    Please add the Dynamsoft Label Recognizer ibraries (`Dynamsoft.LabelRecognizer.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\`. Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
+### Initialize the Dynamsoft Label Recognizer
 
-3. Update the main function in `DLRHelloWorld.cs`. 
+1. Create an instance of Dynamsoft Label Recognizer
 
     ```cs
-    class Program
+    LabelRecognizer dlr = new LabelRecognizer();
+    ```
+
+2. Initialize the license key
+
+    ```cs
+    dlr.InitLicense("<insert DLR license key here>");
+    ```    
+    
+    >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
+    >- Find the license in the sample code of the installation package;
+    >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
+
+### Recognizing and output results
+
+1. Recognizing text in an image 
+    
+    ```cs
+    DLR_Result[] results = null;
+
+    try
     {
-        static void Main(string[] args)
+        results = dlr.RecognizeByFile("dlr_test.png", "");
+    }
+    catch (DLR_Exception exp)
+    {
+        Console.WriteLine(exp);
+    }
+    ```
+
+    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
+
+    >For the error handling mechanism, when an error occurs during the recognition process, an exception will be thrown. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
+
+2. Get and output the recognition results
+
+    ```cs
+    if(results != null)
+    {
+        for (int i = 0; i < results.Length; ++i)
         {
-            try
+            Console.WriteLine("Result " + i.ToString() + ": ");
+            for (int j = 0; j < results[i].LineResults.Length; ++j)
             {
-                LabelRecognizer labelRecognizer = new LabelRecognizer();
-
-                // Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense
-                labelRecognizer.InitLicense("<insert DLR license key here>");
-
-                DLR_Result[] results = labelRecognizer.RecognizeByFile("<full image path>", "");
-
-                for (int i = 0; i < results.Length; ++i)
-                {
-                    Console.WriteLine("Result " + i.ToString() + ": ");
-                    for (int j = 0; j < results[i].LineResults.Length; ++j)
-                    {
-                        Console.WriteLine(">>LineResult " + j.ToString() + ": " + results[i].LineResults[j].Text);
-                    }
-                }
-            }
-            catch (DLR_Exception exp)
-            {
-                Console.WriteLine(exp);
-            }
-            catch (Exception exp)
-            {
-                Console.WriteLine(exp);
+                Console.WriteLine(">>LineResult " + j.ToString() + ": " + results[i].LineResults[j].Text);
             }
         }
     }
     ```
-    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
 
-    In line 6 of the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
+    The recognition results of SDK are organized into a four-tier structure: 
+    - `DLR_Result[]` corresponds to the results of an `image`
+    - `DLR_Result` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLR_LineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLR_CharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
-4. Run the project.   
-   Build the application and copy the related DLL files to the same folder as the EXE file (usually in `\bin\Debug`). The DLLs can be found in `[INSTALLATION FOLDER]\Lib\[.NET Framework version]`.
+    The structure is shown in the figure below:
 
-    To deploy your application, ensure the DLL/Lib files are in the same folder as the EXE file. 
+    <div align="center">
+    <img src="../assets/dlr_result2.png" alt="DLR Result Structure" width="80%"/>
+    <p>Figure 1 – DLR Result Structure</p>
+    </div> 
 
-## Features
+You can find the similar complete source code for this application in `dlr-dotnet-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorld`.
 
-### Specify a reference region using results from Dynamsoft Barcode Reader
+### Build and run the project
 
-Assuming Dynamsoft Barcode Reader has been set up within the project, the following code will allow you to use the barcode results as the reference region for Dynamsoft Label Recognizer. 
+1. Build the application through Visual Studio and copy the related folders to the same folder as the EXE file. The related folders includes `[INSTALLATION FOLDER]\Lib\[dotNetVersion]\x86` and `[INSTALLATION FOLDER]\Lib\[dotNetVersion]\x64`.
+    >Note: Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
 
-```cs
-TextResult[] dbr_result = dbr.DecodeFile("<insert image path>", "");
-             
-LabelRecognizer dlr = new LabelRecognizer();
-dlr.InitLicense("<insert DLR license>");
-dlr.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
-dlr.UpdateReferenceRegionFromBarcodeResults(dbr_result, "P1");
-DLR_Result[] dlr_result = dlr.RecognizeByFile("<insert image path>", "P1");
-```
-
+2. Run the program `DLRCSharpSample.exe`.

@@ -65,7 +65,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
         rm -f $(OBJECT) $(TARGET)
     ```
 
-    >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Linux`.
+    >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]/Lib/Linux`.
 
 ### Include the library
 
@@ -112,7 +112,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 1. Recognizing text in an image 
     
     ```c
-    errorcode = DLR_RecognizeByFile(dlr, "test.png", "");
+    errorcode = DLR_RecognizeByFile(dlr, "dlr_test.png", "");
     
     if(errorcode != DLR_OK)
         printf("%s\r\n", DLR_GetErrorString(errorcode));

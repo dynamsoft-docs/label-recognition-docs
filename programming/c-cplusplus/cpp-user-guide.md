@@ -117,7 +117,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 1. Recognizing text in an image 
     
     ```cpp
-    errorcode = dlr.RecognizeByFile("test.png", "");
+    errorcode = dlr.RecognizeByFile("dlr_test.png", "");
     
     if(errorcode != DLR_OK)
         printf("%s\r\n", DLR_GetErrorString(errorcode));

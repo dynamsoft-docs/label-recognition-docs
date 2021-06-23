@@ -16,6 +16,8 @@ needAutoGenerateSidebar: true
    - Linux x64 (Ubuntu 14.04.4+ LTS, Debian 8+, etc.)
    - JDK 1.7 and above
 
+- Environment: Eclipse 3.7 and above.
+
 ## Installation
 
 If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.

@@ -76,13 +76,11 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     ```cpp
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognizer.h"
-    #include "<relative path>/Include/DynamsoftCommon.h"
 
-    using namespace std;
     using namespace dynamsoft::dlr;
 
     // The following code is only applies to Windows.
-    #ifdef _WINDOWS
+    #if defined(_WIN64) || defined(_WIN32)
         #ifdef _WIN64
             #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognizerx64.lib")
         #else
@@ -91,7 +89,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     #endif
     ```
    
-    >Please replace `<relative path>` in the above code with the relative path to the `DLRCppSample.cpp` file. The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCppSample.cpp` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
     
 ### Initialize the Dynamsoft Label Recognizer
 
@@ -120,7 +118,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     errorcode = dlr.RecognizeByFile("dlr_test.png", "");
     
     if(errorcode != DLR_OK)
-        printf("%s\r\n", DLR_GetErrorString(errorcode));
+        printf("%s\n", DLR_GetErrorString(errorcode));
     ```
 
     >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
@@ -181,13 +179,14 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
         CLabelRecognizer::FreeResults(&pDLRResults);
     ```
 
-You can find the similar complete source code for this application in `dlr-c_cpp-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorldCpp`.
+You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorldCpp`.
 
 ### Build and run the project
 
 #### For windows
 
 1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
+    >Note: Select the corresponding folder (x86 or x64) based on your project's platform setting.
 
 2. Run the program `DLRCppSample.exe`. The executable files can be downloaded [here](). 
 

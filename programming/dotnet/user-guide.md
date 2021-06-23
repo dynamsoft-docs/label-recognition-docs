@@ -80,16 +80,25 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 2. Get and output the recognition results
 
     ```cs
-    if(results != null)
+    if (results != null && results.Length > 0)
     {
         for (int i = 0; i < results.Length; ++i)
         {
-            Console.WriteLine("Result " + i.ToString() + ": ");
-            for (int j = 0; j < results[i].LineResults.Length; ++j)
+            Console.WriteLine("Result " + i.ToString() + ":");
+
+            // Get result of each text area (also called label).
+            DLR_Result result = results[i];
+            for (int j = 0; j < result.LineResults.Length; ++j)
             {
-                Console.WriteLine(">>LineResult " + j.ToString() + ": " + results[i].LineResults[j].Text);
+                // Get the result of each text line in the label.
+                DLR_LineResult lineResult = result.LineResults[j];
+                Console.WriteLine(">>LineResult " + j.ToString() + ": " + lineResult.Text);
             }
         }
+    }
+    else
+    {
+        Console.WriteLine("No data detected.\n");
     }
     ```
 
@@ -106,7 +115,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
-You can find the similar complete source code for this application in `dlr-dotnet-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorld`.
+You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorld`.
 
 ### Build and run the project
 

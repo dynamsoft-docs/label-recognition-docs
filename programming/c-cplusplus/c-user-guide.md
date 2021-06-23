@@ -74,10 +74,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     ```c
     #include <stdio.h>
     #include "<relative path>/Include/DynamsoftLabelRecognizer.h"
-    #include "<relative path>/Include/DynamsoftCommon.h"
 
     // The following code is only applies to Windows.
-    #ifdef _WINDOWS
+    #if defined(_WIN64) || defined(_WIN32)
         #ifdef _WIN64
             #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognizerx64.lib")
         #else
@@ -86,7 +85,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     #endif
     ```
    
-    >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
     
 ### Initialize the Dynamsoft Label Recognizer
 
@@ -115,7 +114,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     errorcode = DLR_RecognizeByFile(dlr, "dlr_test.png", "");
     
     if(errorcode != DLR_OK)
-        printf("%s\r\n", DLR_GetErrorString(errorcode));
+        printf("%s\n", DLR_GetErrorString(errorcode));
     ```
 
     >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
@@ -127,6 +126,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     ```c
     DLRResultArray *pDLRResults = NULL;
     DLRResult* result = NULL;
+    DLRLineResult *lineResult = NULL;
     int lCount, rCount, li, ri;
 
     // Get all recognized results.
@@ -135,22 +135,24 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     if (pDLRResults != NULL && pDLRResults->resultsCount > 0)
     {
         rCount = pDLRResults->resultsCount;
-        printf("Recognized %d results\r\n", rCount);
         for (ri = 0; ri < rCount; ++ri)
         {
+            printf("Result %d:\n", ri);
+
             // Get result of each text area (also called label).
             result = pDLRResults->results[ri];
             lCount = result->lineResultsCount;
             for (li = 0; li < lCount; ++li)
             {
                 // Get the result of each text line in the label.
-                printf("Line result %d: %s\r\n", li, result->lineResults[li]->text);
+                lineResult = result->lineResults[li];
+                printf("Line result %d: %s\n", li, lineResult->text);
             }
         }
     }
     else
     {
-        printf("No data detected.\r\n");
+        printf("No data detected.\n");
     }
     ```
 
@@ -178,15 +180,17 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     DLR_DestroyInstance(dlr);
     ```
 
-You can find the similar complete source code for this application in `dlr-c_cpp-{version number}\DynamsoftLabelRecognizer\Samples\HelloWorldC`.
+You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorldC`.
 
 ### Build and run the project
 
 #### For windows
 
 1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
+    >Note: Select the corresponding folder (x86 or x64) based on your project's platform setting.
 
-2. Run the program `DLRSample.exe`. The executable files can be downloaded [here](). 
+2. Run the program `DLRSample.exe`.
+
 #### For Linux
 
 1. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
@@ -195,7 +199,7 @@ You can find the similar complete source code for this application in `dlr-c_cpp
     >make
     ```
 
-2. Run the program `DLRCSample`. The executable files can be downloaded [here](). 
+2. Run the program `DLRCSample`.
     ```
     >./DLRCSample
     ```

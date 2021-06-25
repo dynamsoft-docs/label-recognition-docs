@@ -11,17 +11,17 @@ needGenerateH3Content: true
 
 ## Requirements
    
-### Windows 
-- Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012.
-- Visual Studio 2003 or above
+- Windows 
+    - Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012.
+    - Visual Studio 2008 or above
 
-### Linux
-- Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
-- GCC 4.2+  
+- Linux
+    - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
+    - GCC 4.2+ 
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
 
@@ -79,7 +79,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
     using namespace dynamsoft::dlr;
 
-    // The following code is only applies to Windows.
+    // The following code only applies to Windows.
     #if defined(_WIN64) || defined(_WIN32)
         #ifdef _WIN64
             #pragma comment(lib, "<relative path>/Lib/Windows/x64/DynamsoftLabelRecognizerx64.lib")
@@ -107,7 +107,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     
     >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
     >- Find the license in the sample code of the installation package;
-    >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs). 
+    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
 
 ### Recognizing and output results
@@ -123,7 +123,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
     >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
     
-    >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
+    >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DLR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
 2. Get and output the recognition results
 

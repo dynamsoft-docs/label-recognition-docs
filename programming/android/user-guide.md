@@ -21,11 +21,11 @@ needGenerateH3Content: true
 
 If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
-## Build your first application
+## Build Your First Application
 
 The following sample will demonstrate how to take a picture and recognize it.
 
-### Create a new project 
+### Create a New Project 
 
 1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
 
@@ -35,11 +35,11 @@ The following sample will demonstrate how to take a picture and recognize it.
     >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 
-### Include the library
+### Include the Library
 
 There are two ways to include the Dynamsoft Label Recognizer SDK into your project：
 
-#### Local binary dependency
+#### Local Binary Dependency
 
 1. Copy the file `[INSTALLATION FOLDER]\DynamsoftLabelRecognizerAndroid.aar` to the target directory `DLRAndroidSample\app\libs`
 
@@ -57,7 +57,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     import com.dynamsoft.dlr.*;
     ```
 
-#### Remote binary dependency
+#### Remote Binary Dependency
 
 1. Open the file `DLRAndroidSample\app\build.gradle`, and add the remote repository:
     ```
@@ -113,7 +113,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs).
 
 
-### Recognizing and output results
+### Recognizing and Output Results
 
 1. Recognizing text
     
@@ -301,6 +301,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     </provider>
     ```
     >Note: Make sure that the authorities string matches the second argument to `getUriForFile`. In the meta-data section of the provider definition, you can see that the provider expects eligible paths to be configured in a dedicated resource file, res/xml/file_paths.xml. Here is the content required for this particular example:
+
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <paths xmlns:android="http://schemas.android.com/apk/res/android">
@@ -310,7 +311,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 
 The complete source code can be found [here](MainActivity.java).
 
-### Build and run the project
+### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 

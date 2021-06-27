@@ -44,11 +44,11 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 1. Copy the file `[INSTALLATION FOLDER]\DynamsoftLabelRecognizerAndroid.aar` to the target directory `DLRAndroidSample\app\libs`
 
 2. Open the file `DLRAndroidSample\app\build.gradle`, and add reference in the dependencies:
-```
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-}
-```
+    ```
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.aar'])
+    }
+    ```
 
 3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
 
@@ -60,26 +60,25 @@ dependencies {
 #### Remote binary dependency
 
 1. Open the file `DLRAndroidSample\app\build.gradle`, and add the remote repository:
-
-```
-repositories {
-    maven {
-        url "http://download2.dynamsoft.com/maven/dlr/aar"
+    ```
+    repositories {
+        maven {
+            url "http://download2.dynamsoft.com/maven/dlr/aar"
+        }
     }
-}
-```
+    ```
 
 2. Add reference in the dependencies:
-```
-dependencies {
-    implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}@aar'
-}
-```
+    ```
+    dependencies {
+        implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}@aar'
+    }
+    ```
 >Note:Please replace {version-number} with the correct version number.
 
 3. Click `Sync Now`. After the synchronization completes, the SDK is added to the project.
 
-4. import the package int the file `MainActivity.java`
+4. import the package in the file `MainActivity.java`
     ```java
     import com.dynamsoft.dlr.*;
     ```
@@ -90,7 +89,6 @@ dependencies {
 
     ```java
     LabelRecognizer dlr = new LabelRecognizer();
-
     ```
 
 2. Initialize the license

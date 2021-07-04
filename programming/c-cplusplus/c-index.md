@@ -7,15 +7,15 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - for C Language
+# Dynamsoft Label Recognizer - for C
 
 ## Getting Started
 
-- [User Guide](user-guide.md)
+- [User Guide](c-user-guide.md)
 
 ## API Reference
 
-- [API Reference](api-reference/index.md)
+- [API Reference](api-reference/c-index.md)
 
 ## Release Notes
 

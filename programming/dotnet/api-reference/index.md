@@ -1,15 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net API Reference - .Net Structs
-description: This page shows all Structs of Dynamsoft Label Recognizer for .Net API Reference.
+title: Dynamsoft Label Recognizer .Net API Reference
+description: This page shows .Net API Reference of Dynamsoft Label Recognizer.
 keywords: api reference, .Net
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - Auxiliary API
+# Dynamsoft Label Recognizer - .Net API Reference
 
-## Classes
+## Primary Classes
+
+- [LabelRecognizer](label-recognizer.md)
+
+## Auxiliary Classes
 - [DLR_Exception](label-recognizer-exception.md)
 - [DLR_RuntimeSettings](dlr-runtime-settings.md)
 - [DLR_ReferenceRegion](dlr-reference-region.md)

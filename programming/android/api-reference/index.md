@@ -1,15 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - Android Structs
-description: This page shows all Structs of Dynamsoft Label Recognizer for Android API Reference.
+title: Dynamsoft Label Recognizer Android API Reference
+description: This page shows Android API Reference of Dynamsoft Label Recognizer.
 keywords: api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - Auxiliary API
+# Dynamsoft Label Recognizer - Android API Reference
 
-## Classes
+## Primary Classes
+
+- [LabelRecognizer](label-recognizer.md)
+  
+## Auxiliary Classes
+
 - [LabelRecognizerException](label-recognizer-exception.md)
 - [DLRRuntimeSettings](dlr-runtime-settings.md)
 - [DLRReferenceRegion](dlr-reference-region.md)

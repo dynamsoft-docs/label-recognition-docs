@@ -1,15 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C/C++ API Reference - C and C++ Structs
-description: This page shows all Structs of Dynamsoft Label Recognizer for C/C++ API Reference.
-keywords: api reference, c, c++
-needAutoGenerateSidebar: false
+title: Dynamsoft Label Recognizer C++ API Reference
+description: This page shows C++ API Reference of Dynamsoft Label Recognizer.
+keywords: api reference, c++
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - Auxiliary API
+# Dynamsoft Label Recognizer - C++ API Reference
 
-## Structs
+## Primary Classes
+
+- [CLabelRecognizer](label-recognizer.md)
+  
+## Auxiliary Structs
 
 - [DM_LTSConnectionParameters](dm-lts-connection-parameters.md)
 - [DLRCharacterResult](dlr-character-result.md)		

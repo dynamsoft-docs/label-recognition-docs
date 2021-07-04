@@ -1,18 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer for Objective-C & Swift - Main Page
+title: Dynamsoft Label Recognizer for iOS - Main Page
 description: This is the main page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - for Objective-C & Swift Documentation
+# Dynamsoft Label Recognizer - for iOS
 
 ## Getting Started
 
-- [User Guide for Objective-C & Swift](user-guide.md)
-- [Primay API](api-reference/label-recognizer.md)
-- [Auxiliary API](api-reference/index.md)
+- [User Guide](user-guide.md)
+
+## API Reference
+
+- [API Reference](api-reference/index.md)
 
 ## Release Notes
 

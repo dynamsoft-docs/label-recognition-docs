@@ -3,16 +3,19 @@ layout: default-layout
 title: Dynamsoft Label Recognizer for Java - Main Page
 description: This is the main page of Dynamsoft Label Recognizer for Java Language.
 keywords: java
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - for Java Documentation
+# Dynamsoft Label Recognizer - for Java
 
 ## Getting Started
 
-- [User Guide for Java](user-guide.md)
-- [Primay API](api-reference/label-recognition.md)
-- [Auxiliary API](api-reference/index.md)
+- [User Guide](user-guide.md)
+
+## API Reference
+
+- [API Reference](api-reference/index.md)
 
 ## Release Notes
 

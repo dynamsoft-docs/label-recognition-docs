@@ -1,28 +1,31 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java API Reference - Main Page
-description: This is the main page of Dynamsoft Label Recognizer for Java API Reference.
-keywords: api reference, java
+title: Dynamsoft Label Recognizer C API Reference
+description: This page shows C API Reference of Dynamsoft Label Recognizer.
+keywords: api reference, c
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - Java API Reference
 
-## Primary Classes
+# Dynamsoft Label Recognizer - C API Reference
 
-- [LabelRecognizer](label-recognizer.md)
+## Primary API
 
-## Auxiliary Classes
-- [LabelRecognizerException](label-recognizer-exception.md)
-- [DLRRuntimeSettings](dlr-runtime-settings.md)
-- [DLRReferenceRegion](dlr-reference-region.md)
-- [DLRQuadrilateral](dlr-quadrilateral.md)
-- [DLRResult](dlr-result.md)
-- [DLRLineResult](dlr-line-result.md)
-- [DLRCharacterResult](dlr-character-result.md)	
-- [DLRImageData](dlr-image-data.md)
-- [DMLTSConnectionParameters](dm-lts-connection-parameters.md)
+- [Functions](label-recognizer-functions.md)
+
+## Auxiliary Structs
+
+- [DM_LTSConnectionParameters](dm-lts-connection-parameters.md)
+- [DLRCharacterResult](dlr-character-result.md)		
+- [DLRImageData](dlr-image-data.md)		
+- [DLRLineResult](dlr-line-result.md)	
+- [DLRPoint](dlr-point.md)		
+- [DLRQuadrilateral](dlr-quadrilateral.md)	
+- [DLRReferenceRegion](dlr-reference-region.md)	
+- [DLRResultArray](dlr-result-array.md)		
+- [DLRResult](dlr-result.md)		
+- [DLRRuntimeSettings](dlr-runtime-settings.md)	
 - [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 
 ## Enumerations
@@ -42,4 +45,3 @@ needGenerateH3Content: true
 ## Error Code
 
 - [Error Code]({{ site.enumerations }}error-code.html)
-		

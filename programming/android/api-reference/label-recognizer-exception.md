@@ -16,7 +16,7 @@ Exception for signalling label recognition errors.
   
 | Method | Type |
 |---------- | ----------- | 
-| [`getErrorCode`][#geterrorcode]| *int* |
+| [`getErrorCode`](#geterrorcode)| *int* |
 
 ### getErrorCode
 

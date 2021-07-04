@@ -19,5 +19,5 @@ needGenerateH3Content: true
 
 ## Release Notes
 
-- [Version 2.x](../c-cplusplus/release-notes/c-cpp-2.md)
-- [Version 1.x](../c-cplusplus/release-notes/c-cpp-1.md)
+- [Version 2.x](release-notes/c-cpp-2.md)
+- [Version 1.x](release-notes/c-cpp-1.md)

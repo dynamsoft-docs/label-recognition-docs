@@ -44,7 +44,7 @@ recognizer.destroy();
   | [`LabelRecognizer`](#labelRecognizer) | Initialization of `LabelRecognizer` object.|
   | [`destroy`](#destroy) | Destroys an instance of `LabelRecognizer` object.|   
   | [`initLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the label Recognizer license and connects to the specified server for online verification. |
+  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label Recognizer license and connects to the specified server for online verification. |
 
 
 ### LabelRecognizer
@@ -121,25 +121,25 @@ recognizer.destroy();
 &nbsp;
 
 
-### initLicenseFromLTS
+### initLicenseFromDLS
 Initializes the label Recognizer license and connects to the specified server for online verification.
 
 ```java
-void initLicenseFromLTS(DMLTSConnectionParameters ltsInfo, DLRLTSLicenseVerificationListener listener)
+void initLicenseFromDLS(DMDLSConnectionParameters ltsInfo, DLRDLSLicenseVerificationListener listener)
 ```   
 
 #### Parameters
-- `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
+- `ltsInfo`: The struct DMDLSConnectionParameters with customized settings.  
 - `listener`: The delegate to handle callback when license server returns.
 
 #### Code Snippet
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
-DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+DMDLSConnectionParameters info = new DMDLSConnectionParameters();
 info.organiztionID = "<your organization id got from Dynamsoft>";
-recognizer.initLicenseFromLTS(info, new DLRLTSLicenseVerificationListener() {
+recognizer.initLicenseFromDLS(info, new DLRDLSLicenseVerificationListener() {
    @Override
-   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+   public void DLSLicenseVerificationCallback(boolean b, Exception e) {
       if (!b && e != null) {
          e.printStackTrace();
       }

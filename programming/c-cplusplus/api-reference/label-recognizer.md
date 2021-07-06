@@ -67,8 +67,8 @@ const char* versionInfo = GetVersion();
   | Method               | Description |
   |----------------------|-------------|
   | [`InitLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognizer license and connects to the specified server for online verification. |
+  | [`InitDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -95,15 +95,15 @@ recognizer->InitLicense("t0260NwAAAHV***************");
 delete recognizer;
 ```
 
-### InitLTSConnectionParameters
-Initializes a DM_LTSConnectionParameters struct with default values.
+### InitDLSConnectionParameters
+Initializes a DM_DLSConnectionParameters struct with default values.
 
 ```cpp
-static int InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
+static int InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`](dm-lts-connection-parameters.md).   
+`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -112,23 +112,23 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```cpp
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
-CLabelRecognizer::InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+CLabelRecognizer::InitDLSConnectionParameters(&paramters);
 paramters.organizationID = "Your organization ID";
-CLabelRecognizer::InitLicenseFromLTS(&paramters, errorBuf, 512);
+CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 &nbsp;
 
-### InitLicenseFromLTS
+### InitLicenseFromDLS
 Initializes the label recognizer license and connects to the specified server for online verification.
 
 ```cpp
-static int InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
+static int InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
+`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
@@ -139,10 +139,10 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```cpp
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
-CLabelRecognizer::InitLTSConnectionParameters(&paramters);
+DMDLSConnectionParameters paramters;
+CLabelRecognizer::InitDLSConnectionParameters(&paramters);
 paramters.organizationID = "Your organization ID";
-CLabelRecognizer::InitLicenseFromLTS(&paramters, errorBuf, 512);
+CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 &nbsp; 

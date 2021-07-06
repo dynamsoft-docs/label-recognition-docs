@@ -22,7 +22,7 @@ needGenerateH3Content: true
 - [DLRLineResult](dlr-line-result.md)
 - [DLRCharacterResult](dlr-character-result.md)	
 - [DLRImageData](dlr-image-data.md)
-- [DMLTSConnectionParameters](dm-lts-connection-parameters.md)
+- [DMDLSConnectionParameters](dm-lts-connection-parameters.md)
 - [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 
 ## Enumerations

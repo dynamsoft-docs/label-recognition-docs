@@ -68,8 +68,8 @@ const char* versionInfo = DLR_GetVersion();
   | [`DLR_CreateInstance`](#dlr_createinstance) | Creates a Dynamsoft Label Recognizer instance. |
   | [`DLR_DestroyInstance`](#dlr_destroyinstance) | Destroys an instance of Dynamsoft Label Recognizer. |
   | [`DLR_InitLicense`](#dlr_initlicense) | Sets the license and activates the SDK. |
-  | [`DLR_InitLTSConnectionParameters`](#dlr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`DLR_InitLicenseFromLTS`](#dlr_initlicensefromlts) | Initializes the label recognizer license and connects to the specified server for online verification. |
+  | [`DLR_InitDLSConnectionParameters`](#dlr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`DLR_InitLicenseFromDLS`](#dlr_initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -140,15 +140,15 @@ DLR_DestroyInstance(recognizer);
 &nbsp;
 
 
-### DLR_InitLTSConnectionParameters
-Initializes a DM_LTSConnectionParameters struct with default values.
+### DLR_InitDLSConnectionParameters
+Initializes a DM_DLSConnectionParameters struct with default values.
 
 ```c
-int DLR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
+int DLR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`](dm-lts-connection-parameters.md).   
+`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -157,23 +157,23 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
-DLR_InitLTSConnectionParameters(&paramters);
+DMDLSConnectionParameters paramters;
+DLR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DLR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DLR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 &nbsp;
 
-### DLR_InitLicenseFromLTS
+### DLR_InitLicenseFromDLS
 Initializes the label recognition license and connects to the specified server for online verification.
 
 ```c
-int DLR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
+int DLR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
+`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
@@ -184,10 +184,10 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
-DLR_InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+DLR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DLR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DLR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 &nbsp; 

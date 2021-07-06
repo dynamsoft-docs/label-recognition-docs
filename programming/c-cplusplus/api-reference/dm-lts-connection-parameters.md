@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DM_LTSConnectionParameters
-description: This page shows the DM_LTSConnectionParameters struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DM_LTSConnectionParameters, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DM_DLSConnectionParameters
+description: This page shows the DM_DLSConnectionParameters struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DM_DLSConnectionParameters, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DM_LTSConnectionParameters
+# DM_DLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
+typedef struct tagDM_DLSConnectionParameters  DM_DLSConnectionParameters
 ```
 
 ---

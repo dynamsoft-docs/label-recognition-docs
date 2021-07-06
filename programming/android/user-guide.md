@@ -94,12 +94,12 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 2. Initialize the license
 
     ```java
-    DMLTSConnectionParameters licenseInfo = new DMLTSConnectionParameters();
+    DMDLSConnectionParameters licenseInfo = new DMDLSConnectionParameters();
 
     licenseInfo.organizationID = "200001";
-    dlr.initLicenseFromLTS(licenseInfo, new DLRLTSLicenseVerificationListener() {
+    dlr.initLicenseFromDLS(licenseInfo, new DLRDLSLicenseVerificationListener() {
         @Override
-        public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
             if(!isSuccess){
                 error.printStackTrace();
             }

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - DMLTSConnectionParameters
-description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognizer for Java Language.
-keywords: DMLTSConnectionParameters, struct, java
+title: Dynamsoft Label Recognizer Java Class - DMDLSConnectionParameters
+description: This page shows the DMDLSConnectionParameters struct of Dynamsoft Label Recognizer for Java Language.
+keywords: DMDLSConnectionParameters, struct, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class com.dynamsoft.dlr.DMLTSConnectionParameters
+# class com.dynamsoft.dlr.DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 

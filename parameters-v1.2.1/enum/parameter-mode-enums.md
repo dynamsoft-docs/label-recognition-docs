@@ -31,6 +31,7 @@ Describes the binarization mode.
 | .Net | `enum Dynamsoft.DLR.EnumDLRBinarizationMode` |
 | Android | `class EnumDLRBinarizationMode` |
 | ObjC / Swift | `enum EnumDLRBinarizationMode` |
+| Java | `class EnumDLRBinarizationMode` |
 
 
 ### Members
@@ -58,6 +59,7 @@ Describes the grayscale transformation mode.
 | .Net | `enum Dynamsoft.DLR.EnumDLRGrayscaleTransformationMode` |
 | Android | `class EnumDLRGrayscaleTransformationMode` |
 | ObjC / Swift | `enum EnumDLRGrayscaleTransformationMode` |
+| Java | `class EnumDLRGrayscaleTransformationMode` |
 
 
 ### Members
@@ -87,6 +89,7 @@ Describes the region predetection mode.
 | .Net | `enum Dynamsoft.DLR.EnumDLRRegionPredetectionMode` |
 | Android | `class EnumDLRRegionPredetectionMode` |
 | ObjC / Swift | `enum EnumDLRRegionPredetectionMode` |
+| Java | `class EnumDLRRegionPredetectionMode` |
 
 
 ### Members
@@ -115,6 +118,7 @@ Describes the scale up mode.
 | .Net | `enum Dynamsoft.DLR.EnumDLRScaleUpMode` |
 | Android | `class EnumDLRScaleUpMode` |
 | ObjC / Swift | `enum EnumDLRScaleUpMode` |
+| Java | `class EnumDLRScaleUpMode` |
 
 
 ### Members

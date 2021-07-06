@@ -46,7 +46,7 @@ recognizer.Dispose();
   | [`LabelRecognizer`](#labelrecognizer) | Initialization of `LabelRecognizer` object.|
   | [`Dispose`](#dispose) | Destroys an instance of `LabelRecognizer` object.|   
   | [`InitLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognizer license and connects to the specified server for online verification. |
+  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -111,18 +111,18 @@ recognizer.Dispose();
 
 &nbsp;
 
-### InitLTSConnectionParameters
-Initializes a DMLTSConnectionParameters struct with default values.
+### InitDLSConnectionParameters
+Initializes a DMDLSConnectionParameters struct with default values.
 
 ```csharp
-static DMLTSConnectionParameters InitLTSConnectionParameters()
+static DMDLSConnectionParameters InitDLSConnectionParameters()
 ```   
 
 #### Code Snippet
 ```csharp
-DMLTSConnectionParameters ltsInfo = LabelRecognizer.InitLTSConnectionParameters();
+DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
 ltsInfo.organizationID = '200005';
-LabelRecognizer.InitLicenseFromLTS(info);
+LabelRecognizer.InitLicenseFromDLS(info);
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.Dispose();
 ```
@@ -130,24 +130,24 @@ recognizer.Dispose();
 &nbsp;
 
 
-### InitLicenseFromLTS
+### InitLicenseFromDLS
 Initializes the label Recognizer license and connects to the specified server for online verification.
 
 ```csharp
-static void InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters)
+static void InitLicenseFromDLS(DMDLSConnectionParameters ltsConnectionParameters)
 ```   
 
 #### Parameters
-- `ltsConnectionParameters`: The struct DMLTSConnectionParameters with customized settings.  
+- `ltsConnectionParameters`: The struct DMDLSConnectionParameters with customized settings.  
 
 #### Exceptions
 [`DLR_Exception`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
-DMLTSConnectionParameters ltsInfo = LabelRecognizer.InitLTSConnectionParameters();
+DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
 info.organizationID = '200005';
-LabelRecognizer.InitLicenseFromLTS(info);
+LabelRecognizer.InitLicenseFromDLS(info);
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.Dispose();
 ```

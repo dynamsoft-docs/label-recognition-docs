@@ -69,13 +69,13 @@ The following sample will demonstrate how to take a picture and recognize it.
     - Objective-C
 
     ```objc
-    iDLRLTSConnectionParameters* lts = [[iDLRLTSConnectionParameters alloc] init];
+    iDLRDLSConnectionParameters* lts = [[iDLRDLSConnectionParameters alloc] init];
     lts.organizationID = @"200001";
     ```
     - Swift
 
     ```swift
-    let lts:iDLRLTSConnectionParameters = iDLRLTSConnectionParameters()
+    let lts:iDLRDLSConnectionParameters = iDLRDLSConnectionParameters()
     lts.organizationID = "200001"
     ```       
 
@@ -89,13 +89,13 @@ The following sample will demonstrate how to take a picture and recognize it.
     - Objective-C
 
     ```objc
-    DynamsoftLabelRecognizer *dlr = [[DynamsoftLabelRecognizer alloc] initLicenseFromLTS:lts verificationDelegate:self];
+    DynamsoftLabelRecognizer *dlr = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
     ```
 
     - Swift
 
     ```swift
-    let dlr = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDelegate: self)
+    let dlr = DynamsoftLabelRecognition(licenseFromDLS: lts, verificationDelegate: self)
     ```
 
 ### Recognizing and Output Results

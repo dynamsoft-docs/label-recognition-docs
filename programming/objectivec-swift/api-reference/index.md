@@ -15,7 +15,7 @@ needGenerateH3Content: true
 - [DynamsoftLabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
-- [iDLRLTSConnectionParameters](dlr-lts-connection-parameters.md)
+- [iDLRDLSConnectionParameters](dlr-lts-connection-parameters.md)
 - [iDLRCharacterResult](dlr-character-result.md)		
 - [iDLRImageData](dlr-image-data.md)		
 - [iDLRLineResult](dlr-line-result.md)	

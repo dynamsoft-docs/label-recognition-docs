@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DMLTSConnectionParameters
-description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DMLTSConnectionParameters, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DMDLSConnectionParameters
+description: This page shows the DMDLSConnectionParameters struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DMDLSConnectionParameters, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DMLTSConnectionParameters
+# class Dynamsoft.DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 

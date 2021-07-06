@@ -45,8 +45,8 @@ recognizer.destroy();
   | [`LabelRecognizer`](#labelrecognizer) | Initialization of `LabelRecognizer` object.|
   | [`destroy`](#destroy) | Destroys an instance of `LabelRecognizer` object.|   
   | [`initLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |  
-  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognizer license and connects to the specified server for online verification. |
+  | [`initDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |  
+  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -117,16 +117,16 @@ recognizer.initLicense("t0260NwAAAHV***************");
 &nbsp;
 
 
-### initLTSConnectionParameters
-Initializes a DMLTSConnectionParameters struct with default values.
+### initDLSConnectionParameters
+Initializes a DMDLSConnectionParameters struct with default values.
 
 ```java
-static DMLTSConnectionParameters initLTSConnectionParameters() throws LabelRecognizerException
+static DMDLSConnectionParameters initDLSConnectionParameters() throws LabelRecognizerException
 ```   
 
 #### Return value
 
-An instance of DMLTSConnectionParameters.
+An instance of DMDLSConnectionParameters.
 
 #### Exceptions
 
@@ -134,21 +134,21 @@ An instance of DMLTSConnectionParameters.
 
 #### Code Snippet
 ```java
-DMLTSConnectionParameters info = LabelRecognizer.initLTSConnectionParameters();
+DMDLSConnectionParameters info = LabelRecognizer.initDLSConnectionParameters();
 info.organiztionID = "<your organization id got from Dynamsoft>";
-LabelRecognizer.initLicenseFromLTS(info);
+LabelRecognizer.initLicenseFromDLS(info);
 ```
 
 
-### initLicenseFromLTS
+### initLicenseFromDLS
 Initializes the label recognizer license and connects to the specified server for online verification.
 
 ```java
-static void initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws LabelRecognizerException
+static void initLicenseFromDLS(DMDLSConnectionParameters ltsInfo) throws LabelRecognizerException
 ```   
 
 #### Parameters
-- `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
+- `ltsInfo`: The struct DMDLSConnectionParameters with customized settings.  
 
 #### Exceptions
 
@@ -156,9 +156,9 @@ static void initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws LabelRe
 
 #### Code Snippet
 ```java
-DMLTSConnectionParameters info = LabelRecognizer.initLTSConnectionParameters();
+DMDLSConnectionParameters info = LabelRecognizer.initDLSConnectionParameters();
 info.organiztionID = "<your organization id got from Dynamsoft>";
-LabelRecognizer.initLicenseFromLTS(info);
+LabelRecognizer.initLicenseFromDLS(info);
 ```
 
 &nbsp; 

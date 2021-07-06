@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDLRLTSConnectionParameters
-description: This page shows the iDLRLTSConnectionParameters class of Dynamsoft Label Recognizer for iOS SDK.
-keywords: iDLRLTSConnectionParameters, class, objective-c, oc, swift
+title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDLRDLSConnectionParameters
+description: This page shows the iDLRDLSConnectionParameters class of Dynamsoft Label Recognizer for iOS SDK.
+keywords: iDLRDLSConnectionParameters, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# iDLRLTSConnectionParameters
+# iDLRDLSConnectionParameters
 Defines a class to configure the parameters to connect to license tracking server.  
 
 

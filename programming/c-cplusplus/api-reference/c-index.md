@@ -16,7 +16,7 @@ needGenerateH3Content: true
 
 ## Auxiliary Structs
 
-- [DM_LTSConnectionParameters](dm-lts-connection-parameters.md)
+- [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
 - [DLRCharacterResult](dlr-character-result.md)		
 - [DLRImageData](dlr-image-data.md)		
 - [DLRLineResult](dlr-line-result.md)	

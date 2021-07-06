@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - DMLTSConnectionParameters
-description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognizer for Android Language.
-keywords: DMLTSConnectionParameters, struct, android
+title: Dynamsoft Label Recognizer Android Class - DMDLSConnectionParameters
+description: This page shows the DMDLSConnectionParameters struct of Dynamsoft Label Recognizer for Android Language.
+keywords: DMDLSConnectionParameters, struct, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.DMLTSConnectionParameters
+# Class com.dynamsoft.dlr.DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 

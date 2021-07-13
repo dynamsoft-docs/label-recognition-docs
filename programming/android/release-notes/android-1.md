@@ -3,10 +3,13 @@ layout: default-layout
 title: Dynamsoft Label Recognition Android SDK - Release Notes 1.x
 description: This is the release notes page of Dynamsoft Label Recognition for Android SDK version 1.x.
 keywords: release notes, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Release Notes for Android - 1.x
+
 
 ## 1.2.1 (06/08/2021)
 
@@ -55,8 +58,6 @@ needAutoGenerateSidebar: false
 - Improved the recognition accuracy when dealing with skewed and italics characters.
 
 - Improved the recognition accuracy for serif fonts.
-
-
 
 ## 1.0 (02/24/2021)
 

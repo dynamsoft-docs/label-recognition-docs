@@ -1,7 +1,9 @@
 <li><a href="{{ site.android }}" class="otherLinkColour">Android</a>
     <ul>
-        {%- if page.url contains '-v1' -%}
         <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+
+        {%- if page.url contains '-v1' -%}
+
         <li><a href="{{ site.android-api }}" class="otherLinkColour">API Reference</a>
             <ul>
                 <li><a href="{{ site.android-api }}label-recognition/" class="otherLinkColour">LabelRecognition Methods</a>
@@ -29,7 +31,7 @@
         </li>
 
         {%- else -%}
-        <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+
         <li><a href="{{ site.android-api }}" class="otherLinkColour">API Reference</a>
             <ul>
                 <li><a href="{{ site.android-api }}label-recognizer.html" class="otherLinkColour">LabelRecognizer</a></li> 
@@ -49,7 +51,7 @@
                     </ul>
                 </li>
             </ul>
-    </li>
+        </li>
         {%- endif -%}
 
         <li><a href="{{ site.android-release-notes }}" class="otherLinkColour">Release Notes</a>

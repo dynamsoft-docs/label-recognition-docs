@@ -8,6 +8,7 @@ needGenerateH3Content: false
 
 # Release Notes for Android - 1.x
 
+
 ## 1.2.1 (06/08/2021)
 
 ### New

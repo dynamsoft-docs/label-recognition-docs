@@ -3,14 +3,17 @@ layout: default-layout
 title: Dynamsoft Label Recognition for Android - Main Page
 description: This is the main page of Dynamsoft Label Recognition for Android Language.
 keywords: android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognition - for Android Documentation
+# Dynamsoft Label Recognition - for Android
 
 ## Getting Started
 
-- [User Guide for Android](user-guide.md)
+- [User Guide](user-guide.md)
+
+## API Reference
 - [API Reference](api-reference/index.md)
 
 ## Release Notes

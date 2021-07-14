@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - C/C++ User Guide
-description: This is the user guide page of Dynamsoft Label Recognition for C/C++ Language.
-keywords: c, c++, user guide
+title: Dynamsoft Label Recognition - C++ User Guide
+description: This is the user guide page of Dynamsoft Label Recognition for C++ Language.
+keywords: c++, user guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition - C/C++ User Guide
+# Dynamsoft Label Recognition - C++ User Guide
 
 ## System Requirements
 

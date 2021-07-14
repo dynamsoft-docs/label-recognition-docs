@@ -1,18 +1,10 @@
 <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
     <ul>
-        {%- if page.url contains '-v1' -%}
-        {%- include sidelist-programming/programming-android.html -%}
-        {%- include sidelist-programming/programming-objectivec-swift.html -%}
-        {%- include sidelist-programming/programming-dotnet.html -%}
-        {%- include sidelist-programming/programming-java.html -%}
-        {%- include sidelist-programming/programming-c-cpp.html -%}
-        {%- else -%}
         {%- include sidelist-programming/programming-android.html -%}
         {%- include sidelist-programming/programming-objectivec-swift.html -%}
         {%- include sidelist-programming/programming-dotnet.html -%}
         {%- include sidelist-programming/programming-java.html -%}
         {%- include sidelist-programming/programming-c.html -%}
         {%- include sidelist-programming/programming-cpp.html -%}
-        {%- endif -%}
     </ul>
 </li>

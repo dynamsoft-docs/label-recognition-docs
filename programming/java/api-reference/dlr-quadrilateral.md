@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - DLRQuadrilateral
-description: This page shows the DLRQuadrilateral struct of Dynamsoft Label Recognizer for Java Language.
+title: Dynamsoft Label Recognition Java Class - DLRQuadrilateral
+description: This page shows the DLRQuadrilateral struct of Dynamsoft Label Recognition for Java Language.
 keywords: DLRQuadrilateral, struct, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

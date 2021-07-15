@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Java Class - DLRImageData
-description: This page shows the DLRImageData struct of Dynamsoft Label Recognition for Java Language.
-keywords: DLRImageData, java
+title: Dynamsoft Label Recognizer Java Class - ImageData
+description: This page shows the ImageData struct of Dynamsoft Label Recognizer for Java Language.
+keywords: ImageData, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRImageData
+# class com.dynamsoft.core.ImageData
 Stores the image data.  
 
 
@@ -20,7 +20,7 @@ Stores the image data.
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
-| [`format`](#format) | [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
 
 ### bytes
@@ -50,7 +50,7 @@ int stride
 ### format
 The image pixel format used in the image byte array. 
 ```java
-DLRImagePixelFormat format
+EnumImagePixelFormat format
 ```
   
 

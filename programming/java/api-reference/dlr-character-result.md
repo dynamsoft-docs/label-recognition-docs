@@ -22,7 +22,7 @@ Stores the character result.
 | [`characterHConfidence`](#characterhconfidence) | *int* |
 | [`characterMConfidence`](#charactermconfidence) | *int* |
 | [`characterLConfidence`](#characterlconfidence) | *int* |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 
 
 ### characterH
@@ -64,5 +64,5 @@ int characterLConfidence
 ### location
 The location of current character.
 ```java
-DLRQuadrilateral location
+Quadrilateral location
 ```

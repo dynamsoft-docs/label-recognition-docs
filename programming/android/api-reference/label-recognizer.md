@@ -522,6 +522,7 @@ recognizer.destroy();
   |----------------------|-------------|
   | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
+  | [`recognizeByImage`](#recognizebyimage) | Recognizes text from a bitmap. |
 
 
 ### recognizeByBuffer
@@ -577,6 +578,33 @@ All results recognized successfully.
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRResult[] result = recognizer.recognizeByFile("full file path", "");
+recognizer.destroy();
+```
+
+### recognizeByImage
+Recognizes text from a bitmap.
+
+```java
+DLRResult[] recognizeByImage (Bitmap image, String templateName) throws LabelRecognizerException	
+```   
+   
+#### Parameters
+`image` A bitmap image.  
+`templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
+
+#### Return value
+All results recognized successfully.
+
+#### Exceptions
+
+[`LabelRecognizerException`](label-recognizer-exception.md)
+
+#### Code Snippet
+```java
+LabelRecognizer recognizer = new LabelRecognizer();
+
+Bitmap img = BitmapFactory.decodeFile("full file path");
+DLRResult[] result = recognizer.recognizeByImage(img, "");
 recognizer.destroy();
 ```
  

@@ -23,7 +23,7 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`textArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
 | [`dictionaryPath`](#dictionarypath) | *String* |
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
-| [`binarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
+| [`binarizationModes`](#binarizationmodes) | *int\[\]* |
 | [`furtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
 | [`lineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 

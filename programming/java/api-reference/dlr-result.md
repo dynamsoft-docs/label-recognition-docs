@@ -19,7 +19,7 @@ Stores the recognized result.
 |---------- | ---- |
 | [`referenceRegionName`](#referenceregionname) | *String* |
 | [`textAreaName`](#textareaname) | *String* |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`confidence`](#confidence) | *int* |
 | [`lineResults`](#lineresults) | [`DLRLineResult[]`](dlr-line-result.md) |
 | [`pageNumber`](#pagenumber) | *int* |
@@ -40,7 +40,7 @@ String textAreaName
 ### location
 The location of current recognized text.
 ```java
-DLRQuadrilateral location
+Quadrilateral location
 ```
 
 

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.DMDLSConnectionParameters
+# class com.dynamsoft.core.DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 

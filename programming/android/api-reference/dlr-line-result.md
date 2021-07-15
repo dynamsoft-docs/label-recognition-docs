@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.DLRLineResult
+# class com.dynamsoft.dlr.DLRLineResult
 Stores the line result.
   
 
@@ -19,7 +19,7 @@ Stores the line result.
 | [`lineSpecificationName`](#linespecificationname) | *String* |
 | [`text`](#text) | *String* |
 | [`characterModelName`](#charactermodelname) | *String* |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`confidence`](#confidence) | *int* |
 | [`characterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
 
@@ -45,7 +45,7 @@ String characterModelName
 ### location
 The location of current line.
 ```java
-DLRQuadrilateral location
+com.dynamsoft.core.Quadrilateral location
 ```
 
 

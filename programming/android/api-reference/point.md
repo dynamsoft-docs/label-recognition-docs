@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - DLRPoint
-description: This page shows the DLRPoint struct of Dynamsoft Label Recognizer for Android Language.
-keywords: DLRPoint, struct, android
+title: Dynamsoft Label Recognizer Android Class - Point
+description: This page shows the Point struct of Dynamsoft Label Recognizer for Android Language.
+keywords: Point, struct, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.DLRPoint
+# class com.dynamsoft.core.Point
 Stores an x- and y-coordinate pair in two-dimensional space.
 
 

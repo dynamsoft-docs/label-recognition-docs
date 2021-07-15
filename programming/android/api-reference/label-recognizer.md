@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Class com.dynamsoft.dlr.LabelRecognizer
+# class com.dynamsoft.dlr.LabelRecognizer
 
 ## General
    
@@ -251,7 +251,7 @@ void appendSettingsFromString(String content) throws LabelRecognizerException
 #### Code Snippet
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.destroy();
 ```
 
@@ -336,7 +336,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 String argumentValue = recognizer.getModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");
@@ -391,7 +391,7 @@ void outputSettingsToFile (String filePath, String templateName) throws LabelRec
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
 
-recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
 recognizer.destroy();
 ```
@@ -451,7 +451,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 recognizer.destroy();
@@ -461,7 +461,7 @@ recognizer.destroy();
 
 
 ### updateReferenceRegionFromBarcodeResults
-Updates reference region which is defined with source type DLR_LST_BARCODE.  
+Updates reference region which is defined with source type LST_BARCODE.  
 
 ```java
 void updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, String templateName) throws LabelRecognizerException
@@ -481,7 +481,7 @@ void updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, Strin
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
 
-recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 recognizer.destroy();
@@ -528,11 +528,11 @@ recognizer.destroy();
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```java
-DLRResult[] recognizeByBuffer(DLRImageData imageData, String templateName) throws LabelRecognizerException
+DLRResult[] recognizeByBuffer(ImageData imageData, String templateName) throws LabelRecognizerException
 ```   
    
 #### Parameters
-`[in]	imageData` An object of DLRImageData that represents an image.  
+`[in]	imageData` An object of ImageData that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value

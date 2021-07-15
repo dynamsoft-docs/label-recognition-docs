@@ -50,7 +50,7 @@ int Stride
 ### Format
 The image pixel format used in the image byte array. 
 ```csharp
-EnumDLRImagePixelFormat Format
+EnumImagePixelFormat Format
 ```
   
 

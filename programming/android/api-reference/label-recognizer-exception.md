@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.LabelRecognizerException 
+# class com.dynamsoft.dlr.LabelRecognizerException 
 Exception for signalling label recognition errors.
   
 

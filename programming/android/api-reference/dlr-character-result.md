@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Class com.dynamsoft.dlr.DLRCharacterResult
+# class com.dynamsoft.dlr.DLRCharacterResult
 Stores the character result.
   
 
@@ -22,7 +22,7 @@ Stores the character result.
 | [`characterHConfidence`](#characterhconfidence) | *int* |
 | [`characterMConfidence`](#charactermconfidence) | *int* |
 | [`characterLConfidence`](#characterlconfidence) | *int* |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 
 
 ### characterH
@@ -65,5 +65,5 @@ int characterLConfidence
 ### location
 The location of current character.
 ```java
-DLRQuadrilateral location
+com.dynamsoft.core.Quadrilateral location
 ```

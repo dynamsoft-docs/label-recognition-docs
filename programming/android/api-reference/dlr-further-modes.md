@@ -1,32 +1,32 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRFurtherModes Struct
-description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRFurtherModes, .Net
+title: Dynamsoft Label Recognizer Android API Reference - DLRFurtherModes Struct
+description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for Android SDK.
+keywords: DLRFurtherModes, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_FurtherModes
+# class com.dynamsoft.dlr.DLRFurtherModes
 Stores the FurtherModes. 
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`ColourConversionModes`](#colourconversionmodes) | [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)[ ] |
-| [`GrayscaleTransformationModes`](#grayscaletransformationmodes) | [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)[ ] |
-| [`RegionPredetectionModes`](#regionpredetectionmodes) | [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)[ ] |
-| [`GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)[] | 
-| [`TextureDetectionModes`](#texturedetectionmodes) | [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)[ ] |
+| [`colourConversionModes`](#colourconversionmodes) |  *int\[\]* |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) |  *int\[\]* |
+| [`regionPredetectionModes`](#regionpredetectionmodes) |  *int\[\]* |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) |  *int\[\]* | 
+| [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* |
 
 
-### ColourConversionModes
+### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
-```csharp
-EnumColourConversionMode[] ColourConversionModes
+```java
+int[] colourConversionModes
 ```
 
 - **Value range**  
@@ -38,11 +38,11 @@ EnumColourConversionMode[] ColourConversionModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
-### GrayscaleTransformationModes
+### grayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
 
 ```csharp
-EnumGrayscaleTransformationMode[] GrayscaleTransformationModes
+int[] grayscaleTransformationModes
 ```
 
 - **Value range**  
@@ -54,11 +54,11 @@ EnumGrayscaleTransformationMode[] GrayscaleTransformationModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
-### RegionPredetectionModes
+### regionPredetectionModes
 Sets the region pre-detection mode.
 
-```csharp
-EnumRegionPredetectionMode[] RegionPredetectionModes
+```java
+int[] regionPredetectionModes
 ```
 
 - **Value range**  
@@ -70,11 +70,11 @@ EnumRegionPredetectionMode[] RegionPredetectionModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-### GrayscaleEnhancementModes
+### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
-```csharp
-EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes
+```java
+int[] grayscaleEnhancementModes
 ```
 
 - **Value range**  
@@ -86,11 +86,11 @@ EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-### TextureDetectionModes
+### textureDetectionModes
 Sets the mode and priority for texture detection. 
 
-```csharp
-EnumTextureDetectionMode[] TextureDetectionModes
+```java
+int[] textureDetectionModes
 ```
 
 - **Value range**  

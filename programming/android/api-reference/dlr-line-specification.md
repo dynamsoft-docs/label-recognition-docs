@@ -1,29 +1,29 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRLineSpecification Struct
-description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRLineSpecification, .Net
+title: Dynamsoft Label Recognizer Android API Reference - DLRLineSpecification Struct
+description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for Android SDK.
+keywords: DLRLineSpecification, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLRLineSpecification
+# class com.dynamsoft.dlr.DLRLineSpecification
 Stores the FurtherModes. 
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)[] | 
-| [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *int\[\]* | 
+| [`binarizationModes`](#binarizationmodes) | *int\[\]*  |
 
 
-### GrayscaleEnhancementModes
+### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
-```csharp
-EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes
+```java
+int[] grayscaleEnhancementModes
 ```
 
 - **Value range**  
@@ -37,11 +37,11 @@ EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes
 
 
 
-### BinarizationModes
+### binarizationModes
 Sets the mode and priority for binarization.
 
-```csharp
-EnumBinarizationMode[] BinarizationModes
+```java
+int[] binarizationModes
 ```
 
 - **Value range**   

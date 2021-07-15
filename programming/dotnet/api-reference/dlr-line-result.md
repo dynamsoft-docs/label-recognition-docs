@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_LineResult
-description: This page shows the DLR_LineResult struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLR_LineResult, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLRLineResult
+description: This page shows the DLRLineResult struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLRLineResult, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_LineResult
+# class Dynamsoft.DLR.DLRLineResult
 Stores the line result.
   
 
@@ -19,9 +19,9 @@ Stores the line result.
 | [`LineSpecificationName`](#linespecificationname) | *string* |
 | [`Text`](#text) | *string* |
 | [`CharacterModelName`](#charactermodelname) | *string* |
-| [`Location`](#location) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
+| [`Location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`Confidence`](#confidence) | *int* |
-| [`CharacterResults`](#characterresults) | [`DLR_CharacterResult[]`](dlr-character-result.md) |
+| [`CharacterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
 
 
 ### LineSpecificationName
@@ -45,7 +45,7 @@ string CharacterModelName
 ### Location
 The location of current line.
 ```csharp
-DLR_Quadrilateral Location
+Quadrilateral Location
 ```
 
 
@@ -58,6 +58,6 @@ int Confidence
 ### CharacterResults
 The character results array.
 ```csharp
-DLR_CharacterResult[] CharacterResults
+DLRCharacterResult[] CharacterResults
 ```
 

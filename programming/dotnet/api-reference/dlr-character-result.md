@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_CharacterResult
-description: This page shows the DLR_CharacterResult struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLR_CharacterResult, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLRCharacterResult
+description: This page shows the DLRCharacterResult struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLRCharacterResult, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_CharacterResult
+# class Dynamsoft.DLR.DLRCharacterResult
 Stores the character result.
   
 
@@ -22,7 +22,7 @@ Stores the character result.
 | [`CharacterHConfidence`](#characterhconfidence) | *int* |
 | [`CharacterMConfidence`](#charactermconfidence) | *int* |
 | [`CharacterLConfidence`](#characterlconfidence) | *int* |
-| [`Location`](#location) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
+| [`Location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 
 
 ### CharacterH
@@ -64,5 +64,5 @@ int CharacterLConfidence
 ### Location
 The location of current character.
 ```csharp
-DLR_Quadrilateral Location
+Quadrilateral Location
 ```

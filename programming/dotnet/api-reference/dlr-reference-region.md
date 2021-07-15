@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_ReferenceRegion
+# class Dynamsoft.DLR.DLRReferenceRegion
 Stores the reference region information.  
   
 
@@ -16,7 +16,7 @@ Stores the reference region information.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`LocalizationSourceType`](#localizationsourcetype) | [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) |
+| [`LocalizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) |
 | [`Points`](#points) | *Point\[\]* |
 | [`RegionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`RegionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
@@ -30,10 +30,10 @@ The source type used to localize the reference region(s).
 int LocalizationSourceType
 ```
 - **Value range**   
-    A value of [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
+    A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
       
 - **Default value**   
-    `DLR_LST_MANUAL_SPECIFICATION`
+    `LST_MANUAL_SPECIFICATION`
     
 - **Remarks**  
     
@@ -44,7 +44,7 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 DLRPoint[] Points
 ```
 - **Remarks**   
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
 ### RegionMeasuredByPercentage
@@ -59,7 +59,7 @@ int RegionMeasuredByPercentage
     1
     
 - **Remarks**   
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  
@@ -77,7 +77,7 @@ int RegionPredetectionModesIndex
     -1
     
 - **Remarks**   
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_PREDETECTED_REGION.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
@@ -95,7 +95,7 @@ int BarcodeFormatIds
     
 - **Remarks**   
     Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
@@ -112,7 +112,7 @@ int BarcodeFormatIds_2
     
 - **Remarks**   
     Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
 ### BarcodeTextRegExPattern
@@ -122,5 +122,5 @@ string BarcodeTextRegExPattern
 ```
 
 - **Remarks**   
-    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.

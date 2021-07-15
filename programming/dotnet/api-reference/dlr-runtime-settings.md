@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_RuntimeSettings
-description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLR_RuntimeSettings, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLRRuntimeSettings
+description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLRRuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_RuntimeSettings
+# class Dynamsoft.DLR.DLRRuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 
@@ -18,13 +18,14 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 |---------- | ---- |
 | [`MaxThreadCount`](#maxthreadcount) | *int* |
 | [`CharacterModelName`](#charactermodelname) | *string* |
-| [`LinesCount`](#linescount) | *int* |
-| [`RegionPredetectionModes`](#regionpredetectionmodes) | *int\[8\]* |
-| [`ReferenceRegion`](#referenceregion) | [`DLR_ReferenceRegion`](dlr-reference-region.md) |
-| [`TextArea`](#textarea) | [`DLR_Quadrilateral`](dlr-quadrilateral.md) |
-| [`GrayscaleTransformationModes`](#grayscaletransformationmodes) | *int\[8\]* |
+| [`ReferenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
+| [`TextArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
 | [`DictionaryPath`](#dictionarypath) | *string* |
-| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
+| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
+| [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
+| [`FurtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
+| [`LineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
+
 
 ### MaxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
@@ -42,66 +43,23 @@ int MaxThreadCount
 
 ### CharacterModelName
 The name of the CharacterModel.
+
 ```csharp
 string CharacterModelName
 ```
-
-### LinesCount
-Sets the text lines count of the text area.
-```csharp
-int LinesCount
-```
-- **Value range**   
-    [0, 200]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: line count is not certain.
-
-
-### RegionPredetectionModes
-Sets the region pre-detection mode.
-```csharp
-int[] RegionPredetectionModes
-```
-- **Value range**   
-    Each array item can be any one of the [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
-      
-- **Default value**   
-    `[DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
 ### ReferenceRegion
 Sets the reference region to search for text.
 ```csharp
-DLR_ReferenceRegion ReferenceRegion
+DLRReferenceRegion ReferenceRegion
 ```
 
 ### TextArea
 Sets the text area relative to the reference region.
 ```csharp
-DLR_Quadrilateral TextArea
+Quadrilateral TextArea
 ```
-
-### GrayscaleTransformationModes
-Sets the grayscale transformation mode.
-```csharp
-int[] GrayscaleTransformationModes
-```
-- **Value range**   
-    Each array item can be any one of the [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
-      
-- **Default value**   
-    `[DLR_GTM_ORIGINAL,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
-  
 
 ### DictionaryPath
 Sets the path of the dictionary file.
@@ -112,5 +70,43 @@ string DictionaryPath
 ### DictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```csharp
-DLR_DictionaryCorrectionThreshold DictionaryCorrectionThreshold
+DLRDictionaryCorrectionThreshold DictionaryCorrectionThreshold
 ```
+
+### BinarizationModes
+Sets the mode and priority for binarization.
+
+```csharp
+EnumBinarizationMode[] BinarizationModes
+```
+
+- **Value range**   
+    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+      
+- **Default value**   
+    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+
+### FurtherModes
+Sets further modes.
+
+```csharp
+DLRFurtherModes FurtherModes
+```
+
+- **See also**  
+    [`DLRFurtherModes`](dlr-further-modes.md)
+
+
+### LineSpecification
+Sets line specification.
+
+```csharp
+DLRLineSpecification LineSpecification
+```
+
+- **See also**  
+    [`DLRLineSpecification`](dlr-line-specification.md)

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_ImageData
-description: This page shows the DLR_ImageData struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLR_ImageData, .Net
+title: Dynamsoft Label Recognizer .Net Class - ImageData
+description: This page shows the ImageData struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: ImageData, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_ImageData
+# class Dynamsoft.Core.ImageData
 Stores the image data.  
 
 
@@ -20,7 +20,7 @@ Stores the image data.
 | [`Width`](#width) | *int* |
 | [`Height`](#height) | *int* |
 | [`Stride`](#stride) | *int* |
-| [`Format`](#format) | [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
+| [`Format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
 
 ### Bytes

@@ -60,7 +60,7 @@ LabelRecognizer()
 
 #### Exceptions
 
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 
 #### Code Snippet
@@ -100,7 +100,7 @@ void InitLicense(string license)
 
 #### Exceptions
 
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
@@ -141,7 +141,7 @@ static void InitLicenseFromDLS(DMDLSConnectionParameters ltsConnectionParameters
 - `ltsConnectionParameters`: The struct DMDLSConnectionParameters with customized settings.  
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
@@ -165,16 +165,16 @@ recognizer.Dispose();
   | [`AppendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognizerParameter settings in a file to the SDK object. |
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
-  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
 
 
 ### GetRuntimeSettings
-Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-settings.html) class object.
+Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
 
 ```csharp
-DLR_RuntimeSettings GetRuntimeSettings()
+DLRRuntimeSettings GetRuntimeSettings()
 ```   
    
 #### Return value
@@ -182,23 +182,23 @@ DLR_RuntimeSettings GetRuntimeSettings()
 The class object of runtime settings.
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 recognizer.Dispose();
 ```
 
 &nbsp;
 
 ### UpdateRuntimeSettings
-Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-settings.html) class object.
+Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
 
 ```csharp
-void UpdateRuntimeSettings(DLR_RuntimeSettings settings)
+void UpdateRuntimeSettings(DLRRuntimeSettings settings)
 ```   
    
 #### Parameters
@@ -206,13 +206,13 @@ void UpdateRuntimeSettings(DLR_RuntimeSettings settings)
 
 #### Exceptions
 
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.linesCount = 1;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.Dispose();
@@ -228,13 +228,13 @@ void ResetRuntimeSettings ()
 ```   
    
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.linesCount = 1;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.ResetRuntimeSettings();
@@ -257,13 +257,13 @@ void AppendSettingsFromString (string content)
 
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.Dispose();
 ```
 
@@ -282,7 +282,7 @@ void AppendSettingsFromFile (string filePath)
 
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
@@ -308,13 +308,13 @@ void OutputSettingsToFile(string filePath, string templateName)
 
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.OutputSettingsToFile("your saving file path", "currentRuntimeSettings");
 recognizer.Dispose();
 ```
@@ -339,7 +339,7 @@ recognizer.ClearAppendedSettings();
 &nbsp;
 
 ### UpdateReferenceRegionFromBarcodeResults
-Updates reference region which is defined with source type DLR_LST_BARCODE.  
+Updates reference region which is defined with source type LST_BARCODE.  
 
 ```csharp
 void UpdateReferenceRegionFromBarcodeResults(TextResult[] barcodeResults, string templateName)
@@ -351,14 +351,14 @@ void UpdateReferenceRegionFromBarcodeResults(TextResult[] barcodeResults, string
 
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
+recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 recognizer.Dispose();
@@ -380,7 +380,7 @@ void SetModeArgument(string modesName, int index, string argumentName, string ar
 - `argumentValue`: The value of the argument to set. 
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 
 #### Remark
@@ -391,8 +391,8 @@ Check follow link for available modes and arguments:
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
+DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 recognizer.Dispose();
@@ -418,7 +418,7 @@ string GetModeArgument (string modesName, int index, string argumentName)
 the optional argument for a specified mode in Modes parameters.
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -428,8 +428,8 @@ Check follow link for available modes and arguments:
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.DLR_RPM_GENERAL_RGB_CONTRAST;
+DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 string argumentValue = recognizer.GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");
@@ -450,25 +450,25 @@ recognizer.Dispose();
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```csharp
-DLR_Result[] RecognizeByBuffer(DLR_ImageData imageData, string templateName)
+DLRResult[] RecognizeByBuffer(ImageData imageData, string templateName)
 ```   
    
 #### Parameters
-`[in]	imageData` An object of [`DLR_ImageData`](dlr-image-data.md) that represents an image.  
+`[in]	imageData` An object of [`ImageData`](dlr-image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value
 All results recognized successfully.
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 //Generate imageData from somewhere else
-DLR_Result[] result = recognizer.RecognizeByBuffer(imageData, "");
+DLRResult[] result = recognizer.RecognizeByBuffer(imageData, "");
 recognizer.Dispose();
 ```
 
@@ -479,7 +479,7 @@ recognizer.Dispose();
 Recognizes text from a specified image file.
 
 ```csharp
-DLR_Result[] RecognizeByFile (string fileName, string templateName)	
+DLRResult[] RecognizeByFile (string fileName, string templateName)	
 ```   
    
 #### Parameters
@@ -490,13 +490,13 @@ DLR_Result[] RecognizeByFile (string fileName, string templateName)
 All results recognized successfully.
 
 #### Exceptions
-[`DLR_Exception`](label-recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Code Snippet
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
-DLR_Result[] result = recognizer.RecognizeByFile("full file path", "");
+DLRResult[] result = recognizer.RecognizeByFile("full file path", "");
 recognizer.Dispose();
 ```
 

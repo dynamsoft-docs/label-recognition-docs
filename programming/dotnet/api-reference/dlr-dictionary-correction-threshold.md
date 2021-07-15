@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_DictionaryCorrectionThreshold
-description: This page shows the DLR_DictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLR_DictionaryCorrectionThreshold, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLRDictionaryCorrectionThreshold
+description: This page shows the DLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLRDictionaryCorrectionThreshold, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_DictionaryCorrectionThreshold
+# class Dynamsoft.DLR.DLRDictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
 
 ## Attributes

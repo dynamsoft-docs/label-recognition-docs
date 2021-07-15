@@ -30,12 +30,13 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 
 ### Include the library
 
-1. Add the Dynamsoft Label Recognizer libraries (`Dynamsoft.LabelRecognizer.dll` and `DynamsoftCommon.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\[dotNetVersion]`.
+1. Add the Dynamsoft Label Recognizer libraries (`Dynamsoft.LabelRecognizer.dll` and `Dynamsoft.Core.dll`) to the project references. The lib files can be found in `[INSTALLATION FOLDER]\Lib\[dotNetVersion]`.
     >Note: Select the corresponding folder (2.0 or 4.0) based on your project's .NET Framework version.
 
 2. Import the namespace in the file `Program.cs`
     
     ```cs
+    using Dynamsoft.Core;
     using Dynamsoft.DLR;
     ```
 
@@ -62,13 +63,13 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 1. Recognizing text in an image 
     
     ```cs
-    DLR_Result[] results = null;
+    DLRResult[] results = null;
 
     try
     {
         results = dlr.RecognizeByFile("dlr_test.png", "");
     }
-    catch (DLR_Exception exp)
+    catch (LabelRecognizerException exp)
     {
         Console.WriteLine(exp);
     }
@@ -88,11 +89,11 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
             Console.WriteLine("Result " + i.ToString() + ":");
 
             // Get result of each text area (also called label).
-            DLR_Result result = results[i];
+            DLRResult result = results[i];
             for (int j = 0; j < result.LineResults.Length; ++j)
             {
                 // Get the result of each text line in the label.
-                DLR_LineResult lineResult = result.LineResults[j];
+                DLRLineResult lineResult = result.LineResults[j];
                 Console.WriteLine(">>LineResult " + j.ToString() + ": " + lineResult.Text);
             }
         }
@@ -104,10 +105,10 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     ```
 
     The recognition results of SDK are organized into a four-tier structure: 
-    - `DLR_Result[]` corresponds to the results of an `image`
-    - `DLR_Result` corresponds to the result of a `TextArea` (also called Label) 
-    - `DLR_LineResult` corresponds to the result of each `TextLine` in the Label
-    - `DLR_CharacterResult` corresponds to the result of each `Character` in the `TextLine`
+    - `DLRResult[]` corresponds to the results of an `image`
+    - `DLRResult` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLRLineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
     The structure is shown in the figure below:
 

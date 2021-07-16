@@ -1,24 +1,27 @@
 <li><a href="{{ site.parameters-reference }}" class="otherLinkColour">Reference</a>
     <ul>
-        {%- if page.url contains '/reference/' or page.url contains '/reference-v' -%}
-        {%- if page.url contains 'parameters-v1' -%}
+        {%- if page.url contains '/reference/' -%}
+        {%- if page.url contains '-v1' -%}
         <li><a href="{{ site.parameters-reference }}label-recognition-parameter/" class="otherLinkColour">LabelRecognitionParameter Object</a>
             <ul>
                 {%- if page.url contains '/label-recognition-parameter/' or page.url contains '/label-recognition-parameter-v' -%}
                 <li><a href="{{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html" class="otherLinkColour">BinarizationModes</a></li>
                 <li><a href="{{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html" class="otherLinkColour">GrayscaleTransformationModes</a></li>
-                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/parameter-control.html" class="otherLinkColour">LabelRecognitionParameter Parameters</a></li>
                 <li><a href="{{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html" class="otherLinkColour">RegionPredetectionModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/parameter-control.html" class="otherLinkColour">LabelRecognitionParameter Parameters</a></li>
                 {%- endif -%}
             </ul>
         </li>
         {%- else -%}
-        <li><a href="{{ site.parameters-reference }}label-recognizer-parameter/" class="otherLinkColour">LabelRecognizerParameter Object</a>
+        <li><a href="{{ site.parameters-reference }}label-recognition-parameter/" class="otherLinkColour">LabelRecognizerParameter Object</a>
             <ul>
-                <li><a href="{{ site.parameters-reference }}label-recognizer-parameter/binarization-modes.html" class="otherLinkColour">BinarizationModes</a></li>
-                <li><a href="{{ site.parameters-reference }}label-recognizer-parameter/grayscale-transformation-modes.html" class="otherLinkColour">GrayscaleTransformationModes</a></li>
-                <li><a href="{{ site.parameters-reference }}label-recognizer-parameter/parameter-control.html" class="otherLinkColour">LabelRecognizerParameter Parameters</a></li>
-                <li><a href="{{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html" class="otherLinkColour">RegionPredetectionModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html" class="otherLinkColour">BinarizationModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/colour-conversion-modes.html" class="otherLinkColour">ColourConversionModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/grayscale-enhancement-modes.html" class="otherLinkColour">GrayscaleEnhancementModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/grayscale-transformation-modes.html" class="otherLinkColour">GrayscaleTransformationModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html" class="otherLinkColour">RegionPredetectionModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/texture-detection-modes.html" class="otherLinkColour">TextureDetectionModes</a></li>
+                <li><a href="{{ site.parameters-reference }}label-recognition-parameter/parameter-control.html" class="otherLinkColour">LabelRecognizerParameter Parameters</a></li>
             </ul>
         </li>
         {%- endif -%}

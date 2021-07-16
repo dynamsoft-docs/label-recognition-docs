@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference - ReferenceRegion Object
 description: This article shows ReferenceRegion Object of Dynamsoft Label Recognizer.
 keywords: parameter reference, parameters, ReferenceRegion
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 

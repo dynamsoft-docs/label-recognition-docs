@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LineSpecification Obje
 description: This page shows Dynamsoft Label Recognizer Json Parameters for organization.
 keywords: parameter reference
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # Organizational Json Parameter
@@ -22,7 +22,7 @@ needGenerateH3Content: false
 
 
 ## LabelRecognizerParameterArray
-An array of [LabelRecognizerParameter objects](label-recognizer-parameter/parameter-control.md).  
+An array of [LabelRecognizerParameter objects](label-recognition-parameter/parameter-control.md).  
 
 ### As Json Parameter
 

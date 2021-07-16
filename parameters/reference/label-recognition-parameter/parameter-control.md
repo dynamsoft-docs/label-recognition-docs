@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParamet
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object.
 keywords: LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # LabelRecognizerParameter Object
@@ -13,8 +13,9 @@ needGenerateH3Content: false
  | -------------- | ----------- | 
  | [`LabelRecognizerParameter.Name`](#name) | The name of the LabelRecognizerParameter object. |
  | [`LabelRecognizerParameter.CharacterModelName`](#charactermodelname) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognizerParameter.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
+ | [`LabelRecognizerParameter.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
  | [`LabelRecognizerParameter.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`LabelRecognizerParameter.LinesCount`](#linescount) | Sets the text lines count of the text area. |
  | [`LabelRecognizerParameter.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`LabelRecognizerParameter.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
  | [`LabelRecognizerParameter.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
@@ -24,8 +25,6 @@ needGenerateH3Content: false
  | [`LabelRecognizerParameter.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`LabelRecognizerParameter.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
  | [`LabelRecognizerParameter.Timeout`](#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |
- | [`LabelRecognizerParameter.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
- | [`LabelRecognizerParameter.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
 
 ---
 
@@ -49,11 +48,6 @@ It must be a unique name.
 }
 ```
 
-&nbsp;
-
-
-## [BinarizationModes](binarization-modes.md#binarizationmodes)
-&nbsp;
 
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
@@ -76,10 +70,6 @@ All TextArea Objects without CharacterModelName set will be set from this settin
 }
 ```
 
-&nbsp;
-
-## [GrayscaleTransformationModes](grayscale-transformation-modes.md#grayscaletransformationmodes)
-&nbsp;
 
 ## LetterHeightRange
 Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
@@ -106,32 +96,6 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 }
 ```
 
-&nbsp;
-
-
-## LinesCount
-Sets the text lines count of the text area.
-
-**Remarks**   
-- 0: line count is not certain.  
-- All TextArea Objects without LinesCount set will be set from this setting.
-
-
-### As Json Parameter
-
-| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
-| ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognizerParameter | LinesCount | *int* | [0, 200] | 0 |
-
-
-**Json Parameter Example**   
-```json
-{
-    "LinesCount":1
-}
-```
-
-&nbsp;
 
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
@@ -159,7 +123,7 @@ Sets the range of string length for each recognized line.
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -184,7 +148,7 @@ Specifies the regular expression pattern of each line string text in current ima
 }
 ```
 
-&nbsp;
+
 
 ## MaxLineCharacterSpacing
 Sets the maximum spacing between characters treated as one line.
@@ -208,7 +172,7 @@ Sets the maximum spacing between characters treated as one line.
 }
 ```
 
-&nbsp;
+
 
 ## MaxThreadCount
 Sets the maximum number of threads the algorithm will use to recognize text.
@@ -228,7 +192,7 @@ Sets the maximum number of threads the algorithm will use to recognize text.
 }
 ```
 
-&nbsp;
+
 
 ## Pages
 Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition.
@@ -252,7 +216,7 @@ Sets the specific pages or the range of pages of a file (.tiff or .pdf) for labe
 }
 ```
 
-&nbsp;
+
 
 
 ## ReferenceRegionNameArray
@@ -277,10 +241,6 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
-&nbsp;
-
-## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)
-&nbsp;
 
 ## TextStringLengthRange
 Sets the range of string length for each recognized text area.
@@ -308,7 +268,7 @@ Sets the range of string length for each recognized text area.
 }
 ```
 
-&nbsp;
+
 
 
 ## TextRegExPattern
@@ -357,7 +317,7 @@ Specifies the regular expression pattern of the text to recognize.
 }
 ```
 
-&nbsp;
+
 
 ## Timeout
 Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
@@ -378,7 +338,7 @@ If you want to stop searching for labels after a specified amount of time, you c
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -403,7 +363,7 @@ If the parameter is not defined in `TextArea`, it will be inherited. Otherwise, 
 ```
 
 
-&nbsp;
+
 
 ## DictionaryCorrectionThresholds
 Sets the threshold of dictionary error correction.
@@ -443,4 +403,3 @@ It supports segmentation threshold. If the parameter is not defined in `TextArea
 
 }
 ```
-&nbsp;

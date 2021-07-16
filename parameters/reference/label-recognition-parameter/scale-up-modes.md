@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParamet
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - ScaleUpModes.
 keywords: ScaleUpModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
@@ -12,11 +13,11 @@ needAutoGenerateSidebar: true
 ## ScaleUpModes  
 
 ### Mode Properties
-`ScaleUpModes` is a parameter for setting the mode to control the scale-up process for text line with small letter height. It consisits of one or more `DLRScaleUpMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`ScaleUpModes` is a parameter for setting the mode to control the scale-up process for text line with small letter height. It consisits of one or more `ScaleUpMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`DLRScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) array* | "DLR_SUM_SKIP"<br>"DLR_SUM_AUTO"<br>"DLR_SUM_LINEAR_INTERPOLATION"<br>"DLR_SUM_NEAREST_NEIGHBOUR_INTERPOLATION" | ["DLR_SUM_AUTO", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP", "DLR_SUM_SKIP"] |
+| *string array* or *[`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrscaleupmode) array* | "SUM_SKIP"<br>"SUM_AUTO"<br>"SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" | ["SUM_AUTO", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP"] |
 
 - **See also**:   
     [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
@@ -65,16 +66,11 @@ Sets the target letter height for scale-up.
 {
     "ScaleUpModes": [
         {
-            "Mode": "DLR_SUM_AUTO",
+            "Mode": "SUM_AUTO",
             "LetterHeightThreshold": 10,
             "TargetLetterHeight": 50
         }
 ]
 }
 ```
-
-
-&nbsp;
-
-
 

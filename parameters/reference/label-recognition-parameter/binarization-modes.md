@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParamet
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - BinarizationModes.
 keywords: BinarizationModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # LabelRecognizerParameter Object
@@ -12,14 +12,14 @@ needGenerateH3Content: false
 ## BinarizationModes 
 
 ### Mode Properties
-`BinarizationModes` is a parameter for setting the mode  for binarization. It consisits of one or more `DLRBinarizationMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`BinarizationModes` is a parameter for setting the mode  for binarization. It consisits of one or more `BinarizationMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *[`DLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode) array* | "DLR_BM_SKIP"<br>"DLR_BM_AUTO"<br>"DLR_BM_LOCAL_BLOCK" | ["DLR_BM_LOCAL_BLOCK", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP", "DLR_BM_SKIP"] |
+| *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
 
 - **See also**:   
-    [`DLRBinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
+    [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
     
 #### Mode Arguments
 - [BlockSizeX](#blocksizex)
@@ -106,7 +106,7 @@ Sets the binarization threshold.
 {
     "BinarizationModes": [
         {
-            "Mode": "DLR_BM_LOCAL_BLOCK",
+            "Mode": "BM_LOCAL_BLOCK",
             "BlockSizeX": 5,
             "BlockSizeY": 5,
         }
@@ -115,4 +115,14 @@ Sets the binarization threshold.
 ```
 
 
-&nbsp;
+#### As `DLR_RuntimeSettings` Member
+`BinarizationModes` as a member of `PublicRuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
+
+| Struct |	Struct Member Name | Value Type |
+| ------ | ------------------ | ---------- |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
+
+**See Also**    
+- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-structs }}PublicRuntimeSettings.html)
+- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+

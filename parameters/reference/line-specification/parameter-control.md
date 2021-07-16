@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LineSpecification Obje
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LineSpecification Object.
 keywords: LineSpecification, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # LineSpecification Object
@@ -20,7 +20,8 @@ needGenerateH3Content: false
  | [`LineSpecification.CharacterModelName`](#charactermodelname) | Sets the name of a white list of recognizable characters. |
  | [`LineSpecification.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`LineSpecification.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of the string within a line. |
-
+ | [`LineSpecification.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
+ | [`LineSpecification.GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
 ---
 
 
@@ -43,7 +44,7 @@ It must be a unique name.
 }
 ```
 
-&nbsp;
+
 
 ## LineNumber
 The line number of the line targeted by the LineSpecification object.
@@ -67,7 +68,7 @@ The line number of the line targeted by the LineSpecification object.
 }
 ```
 
-&nbsp;
+
 
 ## FirstPoint
 The first point of the line, which is usually the top-left corner.
@@ -95,7 +96,7 @@ It is valid only when 'LineNumber' is setting to one specified line number.<br>
 }
 ```
 
-&nbsp;
+
 
 ## SecondPoint
 The second point of the line, which is usually the top-right corner.
@@ -123,7 +124,7 @@ It is valid only when 'LineNumber' is setting to one specified line number.<br>
 }
 ```
 
-&nbsp;
+
 
 ## ThirdPoint
 The third point of the line, which is usually the bottom-right corner.
@@ -151,7 +152,7 @@ It is valid only when 'LineNumber' is setting to one specified line number.<br>
 }
 ```
 
-&nbsp;
+
 
 ## FourthPoint
 The fourth point of the line, which is usually the bottom-left corner.
@@ -179,7 +180,7 @@ It is valid only when 'LineNumber' is setting to one specified line number.<br>
 }
 ```
 
-&nbsp;
+
 
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
@@ -201,7 +202,7 @@ If you set a character model, the result will only contain characters within the
 }
 ```
 
-&nbsp;
+
 
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
@@ -229,7 +230,7 @@ Sets the range of string length for each recognized line.
 }
 ```
 
-&nbsp;
+
 
 
 ## LineStringRegExPattern
@@ -252,5 +253,10 @@ Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ 
 }
 ```
 
-&nbsp;
+
+## BinarizationModes
+Please check [LabelRecognizerParameter.BinarizationModes](../label-recognition-parameter/binarization-modes.md#binarizationmodes) for reference.
+
+## GrayscaleEnhancementModes
+Please check [LabelRecognizerParameter.GrayscaleEnhancementModes](../label-recognition-parameter/grayscale-enhancement-modes.md#grayscaleenhancementmodes) for reference.
 

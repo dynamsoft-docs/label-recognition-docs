@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParamet
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - RegionPredetectionModes.
 keywords: RegionPredetectionModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # LabelRecognizerParameter Object
@@ -14,14 +15,14 @@ needAutoGenerateSidebar: true
 If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.   
 
 ### Mode Properties
-`RegionPredetectionModes` is a parameter for setting the mode for region pre-detection. It consisits of one or more `DLRRegionPredetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`RegionPredetectionModes` is a parameter for setting the mode for region pre-detection. It consisits of one or more `RegionPredetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *[`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array* | "DLR_RPM_SKIP"<br>"DLR_RPM_AUTO"<br>"DLR_RPM_GENERAL"<br>"DLR_RPM_GENERAL_RGB_CONTRAST"<br>"DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST" | ["DLR_RPM_GENERAL", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP", "DLR_RPM_SKIP"] |
+| *[`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array* | "RPM_SKIP"<br>"RPM_AUTO"<br>"RPM_GENERAL"<br>"RPM_GENERAL_RGB_CONTRAST"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST" | ["RPM_GENERAL", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP"] |
 
 - **See also**:   
-    [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+    [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
     
 #### Mode Arguments
 - [AspectRatioRange](#aspectratiorange)
@@ -150,7 +151,7 @@ Sets the width range of the bounding rectangle of the predetected region.
 {
     "RegionPredetectionModes": [
         {
-            "Mode": "DLR_RPM_GENERAL_GRAY_CONTRAST",
+            "Mode": "RPM_GENERAL_GRAY_CONTRAST",
             "Sensitivity": 5,
             "MinImageDimension":262144
         }
@@ -159,18 +160,16 @@ Sets the width range of the bounding rectangle of the predetected region.
 ```
 
 
-&nbsp;
 
 
-
-#### As `DLRRuntimeSettings` Member
-`regionPredetectionModes` is a [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `DLRRuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
+#### As `DLR_RuntimeSettings` Member
+`regionPredetectionModes` is a [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) array defines in `DLR_RuntimeSettings`. It is used for setting the modes and the priority for region pre-detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#furthermodes) | [`regionPredetectionModes`]({{ site.c-cplusplus-structs }}dlr-further-modes.html#regionpredetectionmodes) | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)[8] |
 
 
 **See Also**    
-- [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
-- [`DLRRegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
+- [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)

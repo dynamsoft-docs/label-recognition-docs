@@ -4,7 +4,7 @@ title: Dynamsoft Label Recognizer Parameter Reference - CharacterModel Object
 description: This article shows CharacterModel Object of Dynamsoft Label Recognizer.
 keywords: parameter reference, parameters, CharacterModel
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 

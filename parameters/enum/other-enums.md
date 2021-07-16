@@ -2,9 +2,9 @@
 layout: default-layout
 title: Dynamsoft Label Recognizer Enumerations - Other Enumerations
 description: This article shows other Enumerations of Dynamsoft Label Recognizer.
-keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, DLRImagePixelFormat, other enumeration, enumeration
+keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, ImagePixelFormat, other enumeration, enumeration
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 
@@ -12,10 +12,10 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DLRBarcodeFormat`](#dlrbarcodeformat) | Describes the barcode formats in DLRBarcodeFormat group 1. |
-  | [`DLRBarcodeFormat_2`](#dlrbarcodeformat_2) | Describes the barcode formats in DLRBarcodeFormat group 2. |
-  | [`DLRImagePixelFormat`](#dlrimagepixelformat) | Describes the image pixel format. |
-  | [`DLRLocalizationSourceType`](#dlrlocalizationsourcetype) | Describes the source type used to localize the reference region(s). |
+  | [`BarcodeFormat`](#dlrbarcodeformat) | Describes the barcode formats in BarcodeFormat group 1. |
+  | [`BarcodeFormat_2`](#dlrbarcodeformat_2) | Describes the barcode formats in BarcodeFormat group 2. |
+  | [`ImagePixelFormat`](#dlrimagepixelformat) | Describes the image pixel format. |
+  | [`LocalizationSourceType`](#dlrlocalizationsourcetype) | Describes the source type used to localize the reference region(s). |
   | [`DM_ChargeWay`](#dm_chargeway) | Describes the charge way. |
   | [`DM_DeploymentType`](#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](#dm_licensemodule) | Describes Dynamsoft license modules. |
@@ -24,93 +24,93 @@ needGenerateH3Content: false
 
 ---
 
-## DLRBarcodeFormat
-Describes the barcode types in DLRBarcodeFormat group 1. All the formats can be combined, such as DLR_BF_CODE_39 | DLR_BF_CODE_128. Note: The barcode format our library supported is composed of [DLRBarcodeFormat group 1](#dlrbarcodeformat) and [DLRBarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+## BarcodeFormat
+Describes the barcode types in BarcodeFormat group 1. All the formats can be combined, such as BF_CODE_39 | BF_CODE_128. Note: The barcode format our library supported is composed of [BarcodeFormat group 1](#dlrbarcodeformat) and [BarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
 ### Declarations
    
 | Language | Declaration |
 | -------- | ----------- |
-| C / C++ | `enum DLRBarcodeFormat` |
-| .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat ` |
-| Android | `class EnumDLRBarcodeFormat` |
+| C / C++ | `enum BarcodeFormat` |
+| .Net | `enum Dynamsoft.Core.EnumBarcodeFormat ` |
+| Android | `class com.dynamsoft.core.EnumBarcodeFormat` |
 | ObjC / Swift | `enum EnumBarcodeFormat` |
-| Java | `class EnumDLRBarcodeFormat` |
+| Java | `class com.dynamsoft.core.EnumBarcodeFormat` |
 
 
 ### Members
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DLR_BF_ALL | EnumBarcodeFormatALL | -31457281 | All supported formats in [DLRBarcodeFormat group 1](#dlrbarcodeformat). |
-| DLR_BF_ONED | EnumBarcodeFormatONED  | 0x001007FF | Combined value of DLR_BF_CODABAR, DLR_BF_CODE_128, DLR_BF_CODE_39, DLR_BF_CODE_39_Extended, DLR_BF_CODE_93, DLR_BF_EAN_13, DLR_BF_EAN_8, INDUSTRIAL_25, DLR_BF_ITF, DLR_BF_UPC_A, DLR_BF_UPC_E, DLR_BF_MSI_CODE. |
-| DLR_BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | 0x0003F800 | Combined value of DLR_BF_GS1_DATABAR_OMNIDIRECTIONAL, DLR_BF_GS1_DATABAR_TRUNCATED, DLR_BF_GS1_DATABAR_STACKED, DLR_BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, DLR_BF_GS1_DATABAR_EXPANDED, DLR_BF_GS1_DATABAR_EXPANDED_STACKED, DLR_BF_GS1_DATABAR_LIMITED. | 
-| DLR_BF_NULL | EnumBarcodeFormatNULL | 0x00 | No barcode format in [DLRBarcodeFormat group 1](#dlrbarcodeformat). |
-| DLR_BF_CODE_39 | EnumBarcodeFormatCODE39 | 0x01 | Code 39 |
-| DLR_BF_CODE_128 | EnumBarcodeFormatCODE128 | 0x02 | Code 128 |
-| DLR_BF_CODE_93 | EnumBarcodeFormatCODE93 | 0x04 | Code 93 |
-| DLR_BF_CODABAR | EnumBarcodeFormatCODABAR | 0x08 | Codabar |
-| DLR_BF_ITF  | EnumBarcodeFormatITF | 0x10 | ITF |
-| DLR_BF_EAN_13 | EnumBarcodeFormatEAN13 | 0x20 | EAN-13 |
-| DLR_BF_EAN_8 | EnumBarcodeFormatEAN8 | 0x40 | EAN-8 |
-| DLR_BF_UPC_A | EnumBarcodeFormatUPCA | 0x80 | UPC-A |
-| DLR_BF_UPC_E | EnumBarcodeFormatUPCE | 0x100 | UPC-E |
-| DLR_BF_INDUSTRIAL_25 | EnumBarcodeFormatINDUSTRIAL | 0x200 | Industrial 2 of 5 |
-| DLR_BF_MSI_CODE | EnumBarcodeFormatMSICODE | 0x100000 | MSI Code |
-| DLR_BF_CODE_39_EXTENDED | EnumBarcodeFormatCODE39EXTENDED | 0x400 | Code 39 Extended |
-| DLR_BF_GS1_DATABAR_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABAROMNIDIRECTIONAL | 0x800 | GS1 Databar Omnidirectional |
-| DLR_BF_GS1_DATABAR_TRUNCATED | EnumBarcodeFormatGS1DATABARTRUNCATED | 0x1000 | GS1 Databar Truncated |
-| DLR_BF_GS1_DATABAR_STACKED | EnumBarcodeFormatGS1DATABARSTACKED | 0x2000 | GS1 Databar Stacked |
-| DLR_BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABARSTACKEDOMNIDIRECTIONAL | 0x4000 | GS1 Databar Stacked Omnidirectional |
-| DLR_BF_GS1_DATABAR_EXPANDED | EnumBarcodeFormatGS1DATABAREXPANDED | 0x8000 | GS1 Databar Expanded |
-| DLR_BF_GS1_DATABAR_EXPANDED_STACKED | EnumBarcodeFormatGS1DATABAREXPANDEDSTACKED | 0x10000 | GS1 Databar Expaned Stacked |
-| DLR_BF_GS1_DATABAR_LIMITED | EnumBarcodeFormatGS1DATABARLIMITED | 0x20000 | GS1 Databar Limited |
-| DLR_BF_PATCHCODE | EnumBarcodeFormatPATCHCODE | 0x00040000 | Patch code |
-| DLR_BF_MICRO_PDF417 | EnumBarcodeFormatMICROPDF417 | 0x00080000 | Micro PDF417 |
-| DLR_BF_PDF417 | EnumBarcodeFormatPDF417 | 0x02000000 | PDF417 |
-| DLR_BF_QR_CODE | EnumBarcodeFormatQRCODE | 0x04000000 | QRCode |
-| DLR_BF_DATAMATRIX | EnumBarcodeFormatDATAMATRIX | 0x08000000 | DataMatrix |
-| DLR_BF_AZTEC | EnumBarcodeFormatAZTEC | 0x10000000 | AZTEC |
-| DLR_BF_MAXICODE | EnumBarcodeFormatMAXICODE | 0x20000000 | MAXICODE |
-| DLR_BF_MICRO_QR | EnumBarcodeFormatMICROQR | 0x40000000 | Micro QR Code |
-| DLR_BF_GS1_COMPOSITE | EnumBarcodeFormatGS1COMPOSITE | -2147483648 | GS1 Composite Code |
+| BF_ALL | EnumBarcodeFormatALL | -31457281 | All supported formats in [BarcodeFormat group 1](#dlrbarcodeformat). |
+| BF_ONED | EnumBarcodeFormatONED  | 0x001007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE. |
+| BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | 0x0003F800 | Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. | 
+| BF_NULL | EnumBarcodeFormatNULL | 0x00 | No barcode format in [BarcodeFormat group 1](#dlrbarcodeformat). |
+| BF_CODE_39 | EnumBarcodeFormatCODE39 | 0x01 | Code 39 |
+| BF_CODE_128 | EnumBarcodeFormatCODE128 | 0x02 | Code 128 |
+| BF_CODE_93 | EnumBarcodeFormatCODE93 | 0x04 | Code 93 |
+| BF_CODABAR | EnumBarcodeFormatCODABAR | 0x08 | Codabar |
+| BF_ITF  | EnumBarcodeFormatITF | 0x10 | ITF |
+| BF_EAN_13 | EnumBarcodeFormatEAN13 | 0x20 | EAN-13 |
+| BF_EAN_8 | EnumBarcodeFormatEAN8 | 0x40 | EAN-8 |
+| BF_UPC_A | EnumBarcodeFormatUPCA | 0x80 | UPC-A |
+| BF_UPC_E | EnumBarcodeFormatUPCE | 0x100 | UPC-E |
+| BF_INDUSTRIAL_25 | EnumBarcodeFormatINDUSTRIAL | 0x200 | Industrial 2 of 5 |
+| BF_MSI_CODE | EnumBarcodeFormatMSICODE | 0x100000 | MSI Code |
+| BF_CODE_39_EXTENDED | EnumBarcodeFormatCODE39EXTENDED | 0x400 | Code 39 Extended |
+| BF_GS1_DATABAR_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABAROMNIDIRECTIONAL | 0x800 | GS1 Databar Omnidirectional |
+| BF_GS1_DATABAR_TRUNCATED | EnumBarcodeFormatGS1DATABARTRUNCATED | 0x1000 | GS1 Databar Truncated |
+| BF_GS1_DATABAR_STACKED | EnumBarcodeFormatGS1DATABARSTACKED | 0x2000 | GS1 Databar Stacked |
+| BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABARSTACKEDOMNIDIRECTIONAL | 0x4000 | GS1 Databar Stacked Omnidirectional |
+| BF_GS1_DATABAR_EXPANDED | EnumBarcodeFormatGS1DATABAREXPANDED | 0x8000 | GS1 Databar Expanded |
+| BF_GS1_DATABAR_EXPANDED_STACKED | EnumBarcodeFormatGS1DATABAREXPANDEDSTACKED | 0x10000 | GS1 Databar Expaned Stacked |
+| BF_GS1_DATABAR_LIMITED | EnumBarcodeFormatGS1DATABARLIMITED | 0x20000 | GS1 Databar Limited |
+| BF_PATCHCODE | EnumBarcodeFormatPATCHCODE | 0x00040000 | Patch code |
+| BF_MICRO_PDF417 | EnumBarcodeFormatMICROPDF417 | 0x00080000 | Micro PDF417 |
+| BF_PDF417 | EnumBarcodeFormatPDF417 | 0x02000000 | PDF417 |
+| BF_QR_CODE | EnumBarcodeFormatQRCODE | 0x04000000 | QRCode |
+| BF_DATAMATRIX | EnumBarcodeFormatDATAMATRIX | 0x08000000 | DataMatrix |
+| BF_AZTEC | EnumBarcodeFormatAZTEC | 0x10000000 | AZTEC |
+| BF_MAXICODE | EnumBarcodeFormatMAXICODE | 0x20000000 | MAXICODE |
+| BF_MICRO_QR | EnumBarcodeFormatMICROQR | 0x40000000 | Micro QR Code |
+| BF_GS1_COMPOSITE | EnumBarcodeFormatGS1COMPOSITE | -2147483648 | GS1 Composite Code |
 
 
 &nbsp;
 
 
-## DLRBarcodeFormat_2
-Describes the barcode types in DLRBarcodeFormat group 2. Note: The barcode format our library supported is composed of [DLRBarcodeFormat group 1](#dlrbarcodeformat) and [DLRBarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+## BarcodeFormat_2
+Describes the barcode types in BarcodeFormat group 2. Note: The barcode format our library supported is composed of [BarcodeFormat group 1](#dlrbarcodeformat) and [BarcodeFormat group 2](#dlrbarcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
 
 ### Declarations
    
 | Language | Declaration |
 | -------- | ----------- |
-| C / C++ | `enum DLRBarcodeFormat_2` |
-| .Net | `enum Dynamsoft.DLR.EnumDLRBarcodeFormat_2` |
-| Android | `class EnumDLRBarcodeFormat_2` |
+| C / C++ | `enum BarcodeFormat_2` |
+| .Net | `enum Dynamsoft.Core.EnumBarcodeFormat_2` |
+| Android | `class com.dynamsoft.core.EnumBarcodeFormat_2` |
 | ObjC / Swift | `enum EnumBarcodeFormat_2` |
-| Java | `class EnumDLRBarcodeFormat_2` |
+| Java | `class com.dynamsoft.core.EnumBarcodeFormat_2` |
 
 
 ### Members
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DLR_BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | 0x01F00000 | Combined value of DLR_BF2_USPSINTELLIGENTMAIL, DLR_BF2_POSTNET, DLR_BF2_PLANET, DLR_BF2_AUSTRALIANPOST, DLR_BF2_RM4SCC. |
-| DLR_BF2_NULL | EnumBarcodeFormat2NULL | 0x00 | No barcode format in [DLRBarcodeFormat group 2](#dlrbarcodeformat_2). |
-| DLR_BF2_NONSTANDARD_BARCODE | EnumBarcodeFormat2NONSTANDARDBARCODE | 0x01 | Nonstandard barcode |
-| DLR_BF2_USPSINTELLIGENTMAIL | EnumBarcodeFormat2USPSINTELLIGENTMAIL | 0x00100000 | USPS Intelligent Mail |
-| DLR_BF2_POSTNET | EnumBarcodeFormat2POSTNET | 0x00200000 | Postnet |
-| DLR_BF2_PLANET | EnumBarcodeFormat2PLANET | 0x00400000 | Planet |
-| DLR_BF2_AUSTRALIANPOST | EnumBarcodeFormat2AUSTRALIANPOST | 0x00800000 | Australian Post |
-| DLR_BF2_RM4SCC | EnumBarcodeFormat2RM4SCC | 0x01000000 | Royal Mail 4-State Customer Barcode |
-| DLR_BF2_DOTCODE | EnumBarcodeFormat2DOTCODE | 0x02 | DotCode |
+| BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | 0x01F00000 | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC. |
+| BF2_NULL | EnumBarcodeFormat2NULL | 0x00 | No barcode format in [BarcodeFormat group 2](#dlrbarcodeformat_2). |
+| BF2_NONSTANDARD_BARCODE | EnumBarcodeFormat2NONSTANDARDBARCODE | 0x01 | Nonstandard barcode |
+| BF2_USPSINTELLIGENTMAIL | EnumBarcodeFormat2USPSINTELLIGENTMAIL | 0x00100000 | USPS Intelligent Mail |
+| BF2_POSTNET | EnumBarcodeFormat2POSTNET | 0x00200000 | Postnet |
+| BF2_PLANET | EnumBarcodeFormat2PLANET | 0x00400000 | Planet |
+| BF2_AUSTRALIANPOST | EnumBarcodeFormat2AUSTRALIANPOST | 0x00800000 | Australian Post |
+| BF2_RM4SCC | EnumBarcodeFormat2RM4SCC | 0x01000000 | Royal Mail 4-State Customer Barcode |
+| BF2_DOTCODE | EnumBarcodeFormat2DOTCODE | 0x02 | DotCode |
 
 &nbsp;
 
-## DLRImagePixelFormat
+## ImagePixelFormat
 Describes the image pixel format.
 
 
@@ -118,11 +118,11 @@ Describes the image pixel format.
    
 | Language | Declaration |
 | -------- | ----------- |
-| C / C++ | `enum DLRImagePixelFormat` |
-| .Net | `enum Dynamsoft.DLR.EnumDLRImagePixelFormat` |
-| Android | `class EnumDLRImagePixelFormat` |
-| ObjC / Swift | `enum EnumDLRImagePixelFormat` |
-| Java | `class EnumDLRImagePixelFormat` |
+| C / C++ | `enum ImagePixelFormat` |
+| .Net | `enum Dynamsoft.Core.EnumImagePixelFormat` |
+| Android | `class com.dynamsoft.core.EnumImagePixelFormat` |
+| ObjC / Swift | `enum EnumImagePixelFormat` |
+| Java | `class com.dynamsoft.core.EnumImagePixelFormat` |
 
 
 
@@ -130,44 +130,44 @@ Describes the image pixel format.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DLR_IPF_BINARY | EnumDLRImagePixelFormatBinary | 0 | 0: Black, 1: White |
-| DLR_IPF_BINARYINVERTED | EnumDLRImagePixelFormatBinaryInverted | 1 | 0: Black, 1: White |
-| DLR_IPF_GRAYSCALED | EnumDLRImagePixelFormatGrayScaled | 2 | 8 bit gray |
-| DLR_IPF_NV21 | EnumDLRImagePixelFormatNV21 | 3 | NV21 |
-| DLR_IPF_RGB_565 | EnumDLRImagePixelFormatRGB_565 | 4 | 16bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_555 | EnumDLRImagePixelFormatRGB_555 | 5 | 16bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_888 | EnumDLRImagePixelFormatRGB_888 | 6 | 24bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_ARGB_8888 | EnumDLRImagePixelFormatARGB_8888 | 7 | 32bit with ARGB channel order stored in memory from high to low address |
-| DLR_IPF_RGB_161616 | EnumDLRImagePixelFormatRGB_161616 | 8 | 48bit with RGB channel order stored in memory from high to low address |
-| DLR_IPF_ARGB_16161616 | EnumDLRImagePixelFormatARGB_16161616 | 9 | 64bit with ARGB channel order stored in memory from high to low address |
-| DLR_IPF_ABGR_8888 | EnumDLRImagePixelFormatABGR_8888 | 10 | 32bit with ABGR channel order stored in memory from high to low address |
-| DLR_IPF_ABGR_16161616 | EnumDLRImagePixelFormatABGR_8888 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
-| DLR_IPF_BGR_888 | EnumDLRImagePixelFormatBGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
+| IPF_BINARY | EnumImagePixelFormatBinary | 0 | 0: Black, 1: White |
+| IPF_BINARYINVERTED | EnumImagePixelFormatBinaryInverted | 1 | 0: Black, 1: White |
+| IPF_GRAYSCALED | EnumImagePixelFormatGrayScaled | 2 | 8 bit gray |
+| IPF_NV21 | EnumImagePixelFormatNV21 | 3 | NV21 |
+| IPF_RGB_565 | EnumImagePixelFormatRGB_565 | 4 | 16bit with RGB channel order stored in memory from high to low address |
+| IPF_RGB_555 | EnumImagePixelFormatRGB_555 | 5 | 16bit with RGB channel order stored in memory from high to low address |
+| IPF_RGB_888 | EnumImagePixelFormatRGB_888 | 6 | 24bit with RGB channel order stored in memory from high to low address |
+| IPF_ARGB_8888 | EnumImagePixelFormatARGB_8888 | 7 | 32bit with ARGB channel order stored in memory from high to low address |
+| IPF_RGB_161616 | EnumImagePixelFormatRGB_161616 | 8 | 48bit with RGB channel order stored in memory from high to low address |
+| IPF_ARGB_16161616 | EnumImagePixelFormatARGB_16161616 | 9 | 64bit with ARGB channel order stored in memory from high to low address |
+| IPF_ABGR_8888 | EnumImagePixelFormatABGR_8888 | 10 | 32bit with ABGR channel order stored in memory from high to low address |
+| IPF_ABGR_16161616 | EnumImagePixelFormatABGR_8888 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
+| IPF_BGR_888 | EnumImagePixelFormatBGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
 
 
 &nbsp;
 
-## DLRLocalizationSourceType
+## LocalizationSourceType
 Describes the source type used to localize the reference region(s).
 
 ### Declarations
    
 | Language | Declaration |
 | -------- | ----------- |
-| C / C++ | `enum DLRLocalizationSourceType` |
-| .Net | `enum EnumDLRLocalizationSourceType` |
-| Android | `class EnumDLRLocalizationSourceType` |
-| ObjC / Swift | `enum EnumDLRLocalizationSourceType` |
-| Java | `class EnumDLRLocalizationSourceType` |
+| C / C++ | `enum LocalizationSourceType` |
+| .Net | `enum Dynamsoft.DLR.EnumLocalizationSourceType` |
+| Android | `class com.dynamsoft.dlr.EnumLocalizationSourceType` |
+| ObjC / Swift | `enum EnumLocalizationSourceType` |
+| Java | `class com.dynamsoft.dlr.EnumLocalizationSourceType` |
 
 
 ### Members
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DLR_LST_MANUAL_SPECIFICATION | EnumDLRLocalizationSourceTypeManualSpecification | 0x01 | Define the reference region using the manually specified location. |
-| DLR_LST_PREDETECTED_REGION | EnumDLRLocalizationSourceTypePredetectedRegion | 0x02 | Define the reference region using the result(s) of region predetection process. |
-| DLR_LST_BARCODE | EnumDLRLocalizationSourceTypeBarcode | 0x04 | Define the reference region using the barcode info. |
+| LST_MANUAL_SPECIFICATION | EnumLocalizationSourceTypeManualSpecification | 0x01 | Define the reference region using the manually specified location. |
+| LST_PREDETECTED_REGION | EnumLocalizationSourceTypePredetectedRegion | 0x02 | Define the reference region using the result(s) of region predetection process. |
+| LST_BARCODE | EnumLocalizationSourceTypeBarcode | 0x04 | Define the reference region using the barcode info. |
 
 
 
@@ -183,10 +183,10 @@ Describes charge way.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
-| .Net | `enum Dynamsoft.DLR.EnumDMChargeWay` |
-| Android | `class EnumDMChargeWay` |
+| .Net | `enum Dynamsoft.Core.EnumDMChargeWay` |
+| Android | `class com.dynamsoft.core.EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
-| Java | `class EnumDMChargeWay` |
+| Java | `class com.dynamsoft.core.EnumDMChargeWay` |
 
 
 ### Members
@@ -244,10 +244,10 @@ Describes Dynamsoft license modules.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
-| .Net | `enum Dynamsoft.DLR.EnumDMLicenseModule` |
-| Android | `class EnumDMLicenseModule` |
+| .Net | `enum Dynamsoft.Core.EnumDMLicenseModule` |
+| Android | `class com.dynamsoft.core.EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
-| Java | `class EnumDMLicenseModule` |
+| Java | `class com.dynamsoft.core.EnumDMLicenseModule` |
 
 
 ### Members
@@ -281,10 +281,10 @@ Describes UUID generation method.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
-| .Net | `enum Dynamsoft.DLR.EnumDMUUIDGenerationMethod` |
-| Android | `class EnumDMUUIDGenerationMethod` |
+| .Net | `enum Dynamsoft.Core.EnumDMUUIDGenerationMethod` |
+| Android | `class com.dynamsoft.core.EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |
-| Java | `class EnumDMUUIDGenerationMethod` |
+| Java | `class com.dynamsoft.core.EnumDMUUIDGenerationMethod` |
 
 
 ### Members
@@ -305,10 +305,10 @@ Describes Dynamsoft products.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum Product` |
-| .Net | `enum Dynamsoft.EnumProduct` |
-| Android | `class EnumProduct` |
+| .Net | `enum Dynamsoft.Core.EnumProduct` |
+| Android | `class com.dynamsoft.core.EnumProduct` |
 | ObjC / Swift | `enum EnumProduct` |
-| Java | `class EnumProduct` |
+| Java | `class com.dynamsoft.core.EnumProduct` |
 
 ### Members
    

@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Enumerations - Error Code
 description: This article shows Error Code of Dynamsoft Label Recognizer.
 keywords: error code, enumeration
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Dynamsoft Label Recognizer - Error Code  

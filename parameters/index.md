@@ -2,7 +2,8 @@
 layout: default-layout
 title: Dynamsoft Label Recognizer Parameters - Main Page
 description: Dynamsoft Label Recognizer provides flexible APIs for you to customize the settings for different usage scenarios. 
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

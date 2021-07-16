@@ -116,13 +116,13 @@ Sets the binarization threshold.
 
 
 #### As `DLR_RuntimeSettings` Member
-`BinarizationModes` as a member of `PublicRuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
+`BinarizationModes` as a member of `DLR_RuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
 | [`DLR_RuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
 
 **See Also**    
-- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-structs }}PublicRuntimeSettings.html)
+- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
 - [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
 

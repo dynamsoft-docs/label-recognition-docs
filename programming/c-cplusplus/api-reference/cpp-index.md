@@ -15,18 +15,20 @@ needGenerateH3Content: true
 - [CLabelRecognizer](label-recognizer.md)
   
 ## Auxiliary Structs
-
+- [DM_Point](point.md)		
+- [Quadrilateral](quadrilateral.md)	
+- [ImageData](image-data.md)	
 - [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
-- [DLRCharacterResult](dlr-character-result.md)		
-- [DLRImageData](dlr-image-data.md)		
-- [DLRLineResult](dlr-line-result.md)	
-- [DLRPoint](dlr-point.md)		
-- [DLRQuadrilateral](dlr-quadrilateral.md)	
-- [DLRReferenceRegion](dlr-reference-region.md)	
-- [DLRResultArray](dlr-result-array.md)		
-- [DLRResult](dlr-result.md)		
-- [DLRRuntimeSettings](dlr-runtime-settings.md)	
-- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
+
+- [DLR_RuntimeSettings](dlr-runtime-settings.md)	
+- [DLR_ReferenceRegion](dlr-reference-region.md)	
+- [DLR_ResultArray](dlr-result-array.md)		
+- [DLR_Result](dlr-result.md)		
+- [DLR_LineResult](dlr-line-result.md)	
+- [DLR_CharacterResult](dlr-character-result.md)
+- [DLR_DictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
+- [DLR_FurtherModes](dlr-further-modes.md)
+- [DLR_LineSpecification](dlr-line-specification.md)
 
 ## Enumerations
 
@@ -41,6 +43,7 @@ needGenerateH3Content: true
 - [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
+- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
 
 ## Error Code
 

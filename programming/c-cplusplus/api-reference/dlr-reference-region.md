@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRReferenceRegion
-description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRReferenceRegion, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_ReferenceRegion
+description: This page shows the DLR_ReferenceRegion struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_ReferenceRegion, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRReferenceRegion
+# DLR_ReferenceRegion
 Stores the reference region information.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRReferenceRegion  DLRReferenceRegion 
+typedef struct tagDLR_ReferenceRegion  DLR_ReferenceRegion 
 ```  
   
 ---
@@ -24,8 +24,8 @@ typedef struct tagDLRReferenceRegion  DLRReferenceRegion
   
 | Attribute | Type |
 |---------- | ---- |
-| [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) |
-| [`points`](#points) | [`DLRPoint`](dlr-point.md)[4] |
+| [`localizationSourceType`](#localizationsourcetype) | [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) |
+| [`points[4]`](#points) | [`DM_Point`](point.md) |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`barcodeFormatIds`](#barcodeformatids) | *int* |
@@ -36,13 +36,13 @@ typedef struct tagDLRReferenceRegion  DLRReferenceRegion
 ### localizationSourceType
 The source type used to localize the reference region(s).
 ```cpp
-DLRLocalizationSourceType localizationSourceType
+LocalizationSourceType localizationSourceType
 ```
 - **Value range**   
-    A value of [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
+    A value of [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
       
 - **Default value**   
-    `DLR_LST_MANUAL_SPECIFICATION`
+    `LST_MANUAL_SPECIFICATION`
     
 - **Remarks**  
     
@@ -50,10 +50,10 @@ DLRLocalizationSourceType localizationSourceType
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```cpp
-DLRPoint points[4]
+DM_Point points[4]
 ```
 - **Remarks**   
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
 ### regionMeasuredByPercentage
@@ -68,7 +68,7 @@ int regionMeasuredByPercentage
     1
     
 - **Remarks**   
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  
@@ -86,7 +86,7 @@ int regionPredetectionModesIndex
     -1
     
 - **Remarks**   
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_PREDETECTED_REGION.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
@@ -97,14 +97,14 @@ The formats of the barcode in BarcodeFormat group 1.
 int barcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
+    A combined value of [`BarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
       
 - **Default value**   
     DLR_BF_ALL
     
 - **Remarks**   
-    Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    Barcode formats in BarcodeFormat group 1 can be combined.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
@@ -114,14 +114,14 @@ The formats of the barcode in BarcodeFormat group 2.
 int barcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
+    A combined value of [`BarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
       
 - **Default value**   
     DLR_BF2_NULL
     
 - **Remarks**   
-    Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    Barcode formats in BarcodeFormat group 2 can be combined.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
 ### barcodeTextRegExPattern
@@ -131,7 +131,7 @@ char barcodeTextRegExPattern[64]
 ```
 
 - **Remarks**   
-    It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
+    It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.
 
 

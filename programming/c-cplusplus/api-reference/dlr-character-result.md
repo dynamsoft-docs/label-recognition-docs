@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRCharacterResult
-description: This page shows the DLRCharacterResult struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRCharacterResult, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_CharacterResult
+description: This page shows the DLR_CharacterResult struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_CharacterResult, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRCharacterResult
+# DLR_CharacterResult
 Stores the character result.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRCharacterResult  DLRCharacterResult
-typedef struct tagDLRCharacterResult*  PDLRCharacterResult
+typedef struct tagDLR_CharacterResult  DLR_CharacterResult
+typedef struct tagDLR_CharacterResult*  PDLR_CharacterResult
 ```  
   
 ---
@@ -31,7 +31,7 @@ typedef struct tagDLRCharacterResult*  PDLRCharacterResult
 | [`characterHConfidence`](#characterhconfidence) | *int* |
 | [`characterMConfidence`](#charactermconfidence) | *int* |
 | [`characterLConfidence`](#characterlconfidence) | *int* |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md)\* |
 | [`reserved`](#reserved) | *char\[32\]* |
 
 
@@ -56,7 +56,7 @@ char characterL
 ### location
 The location of current character.
 ```cpp
-DLRQuadrilateral* location
+Quadrilateral location
 ```
 
 ### characterHConfidence

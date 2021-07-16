@@ -41,7 +41,7 @@ The error message.
 const char* errorString = GetErrorString(errorCode);
 ```
 
-&nbsp;
+
 
 ### GetVersion
 
@@ -60,7 +60,7 @@ The version information string.
 const char* versionInfo = GetVersion();
 ```
 
-&nbsp; 
+ 
 
 ## Initialization
   
@@ -118,7 +118,7 @@ paramters.organizationID = "Your organization ID";
 CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
-&nbsp;
+
 
 ### InitLicenseFromDLS
 Initializes the label recognizer license and connects to the specified server for online verification.
@@ -145,7 +145,7 @@ paramters.organizationID = "Your organization ID";
 CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
-&nbsp; 
+ 
 
 ## Settings
 
@@ -165,10 +165,10 @@ CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 
 
 ### GetRuntimeSettings
-Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.md) struct.
+Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
 
 ```cpp
-int GetRuntimeSettings (DLRRuntimeSettings* settings)
+int GetRuntimeSettings (DLR_RuntimeSettings* settings)
 ```   
    
 #### Parameters
@@ -182,18 +182,18 @@ Returns error code (returns 0 if the function operates successfully).
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
+DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 delete recognizer;
 ```
 
-&nbsp;
+
 
 ### UpdateRuntimeSettings
-Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.md) struct.
+Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
 
 ```cpp
-int UpdateRuntimeSettings (DLRRuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+int UpdateRuntimeSettings (DLR_RuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
@@ -209,7 +209,7 @@ Returns error code (returns 0 if the function operates successfully).
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
+DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.linesCount = 1;
 char errorMessage[256];
@@ -217,7 +217,7 @@ recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 delete recognizer;
 ```
 
-&nbsp;
+
 
 ### ResetRuntimeSettings
 Reset all runtime settings to default values.
@@ -234,7 +234,7 @@ Returns error code (returns 0 if the function operates successfully).
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
+DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.linesCount = 1;
 recognizer->UpdateRuntimeSettings(&settings);
@@ -243,7 +243,7 @@ delete recognizer;
 ```
 
 
-&nbsp;
+
 
 
 ### AppendSettingsFromString
@@ -261,18 +261,18 @@ int AppendSettingsFromString (const char* content, char errorMsgBuffer[] = NULL,
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessage[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 delete recognizer;
 ```
 
-&nbsp;
+
 
 ### AppendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
@@ -300,7 +300,7 @@ recognizer->AppendSettingsFromString("your file path", errorMessage, 256);
 delete recognizer;
 ```
 
-&nbsp;
+
 
 
 ### OutputSettingsToFile
@@ -324,12 +324,12 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
 recognizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 delete recognizer;
 ```
 
-&nbsp;
+
 
 
 ### ClearAppendedSettings
@@ -350,7 +350,7 @@ recognizer->ClearAppendedSettings();
 Updates reference region which is defined with source type DLR_LST_BARCODE.  
 
 ```cpp
-int UpdateReferenceRegionFromBarcodeResults (const TextResultArray* barcodeResults, const char* templateName)
+int UpdateReferenceRegionFromBarcodeResults (const BarcodeResultArray* barcodeResults, const char* templateName)
 ```   
    
 #### Parameters
@@ -367,13 +367,13 @@ Returns error code (returns 0 if the function operates successfully).
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer->UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 delete recognizer;
 ```
 
-&nbsp;
+
 
 ### SetModeArgument
 
@@ -403,7 +403,7 @@ Check follow link for available modes and arguments:
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
+DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
 char errorMessage[256];
@@ -412,7 +412,7 @@ recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "1
 delete recognizer;
 ```
 
-&nbsp;
+
 
 
 ### GetModeArgument
@@ -444,9 +444,9 @@ Check follow link for available modes and arguments:
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRRuntimeSettings settings;
+DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
-settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
 char errorMessage[256];
 char argumentValue[480];
 recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
@@ -455,7 +455,7 @@ recognizer->GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", ar
 delete recognizer;
 ```
 
-&nbsp; 
+ 
    
 ## Recognizing
    
@@ -468,16 +468,16 @@ delete recognizer;
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```cpp
-int RecognizeByBuffer(const DLRImageData* imageData, const char* templateName)
+int RecognizeByBuffer(const ImageData* imageData, const char* templateName)
 ```   
    
 #### Parameters
-`[in]	imageData` A struct of [`DLRImageData`](dlr-image-data.md) that represents an image.  
+`[in]	imageData` A struct of [`ImageData`](image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```cpp
@@ -488,7 +488,7 @@ int errorCode = recognizer->RecognizeByBuffer(imageData, "");
 delete recognizer;
 ```
 
-&nbsp;
+
 
 
 ### RecognizeByFile
@@ -504,7 +504,7 @@ int RecognizeByFile (const char* fileName, const char* templateName)
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```cpp
@@ -514,28 +514,28 @@ int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\
 delete recognizer;
 ```
 
-&nbsp; 
+ 
    
 ## Result
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetAllDLRResults`](#getalldlrresults) | Gets all recognized results. |
-  | [`FreeDLRResults`](#freedlrresults) | Frees memory allocated for recognized results. |
+  | [`GetAllResults`](#getallresults) | Gets all recognized results. |
+  | [`FreeResults`](#freeresults) | Frees memory allocated for recognized results. |
 
-### GetAllDLRResults
+### GetAllResults
 Get all recognized results.
 
 ```cpp
-int GetAllDLRResults (DLRResultArray** results)	
+int GetAllResults (DLR_ResultArray** results)	
 ```   
    
 #### Parameters
-`[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](recognizing.md#recognizebybuffer) / [`RecognizeByFile`](recognizing.md#recognizebyfile). The results is allocated by SDK and should be freed by calling function [`FreeDLRResults`](#freedlrresults).
+`[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](#recognizebybuffer) / [`RecognizeByFile`](#recognizebyfile). The results is allocated by SDK and should be freed by calling function [`FreeResults`](#freeresults).
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```cpp
@@ -548,7 +548,7 @@ dynamsoft::dlr::CLabelRecognizer::FreeDLRResults(&results);
 delete recognizer;
 ```
 
-&nbsp;
+
 
 ### FreeDLRResults
 Free memory allocated for text results.
@@ -571,5 +571,5 @@ dynamsoft::dlr::CLabelRecognizer::FreeDLRResults(&results);
 delete recognizer;
 ```
 
-&nbsp; 
+ 
 

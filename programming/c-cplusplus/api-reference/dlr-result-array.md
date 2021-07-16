@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRResultArray
-description: This page shows the DLRResultArray struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRResultArray, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_ResultArray
+description: This page shows the DLR_ResultArray struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_ResultArray, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# DLRResultArray
-Stores the DLRRresult array.  
+# DLR_ResultArray
+Stores the DLR_ResultArray array.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRResultArray  DLRResultArray
+typedef struct tagDLR_ResultArray  DLR_ResultArray
 ```  
   
 ---
@@ -23,19 +23,19 @@ typedef struct tagDLRResultArray  DLRResultArray
   
 | Attribute | Type |
 |---------- | ---- |
-| [`results`](#results) | [`PDLRResult`](dlr-result.md)\* |
+| [`results`](#results) | [`PDLR_Result`](dlr-result.md)\* |
 | [`resultsCount`](#resultscount) | *int* |
 
 
 
 ### results
-The DLRResult array.
+The DLR_Result array.
 ```cpp
-PDLRResult* results
+PDLR_Result* results
 ```
 
 ### resultsCount
-The total count of DLRResult.
+The total count of DLR_Result.
 ```cpp
 int resultsCount
 ```

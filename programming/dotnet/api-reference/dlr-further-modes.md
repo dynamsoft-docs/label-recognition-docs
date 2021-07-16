@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLR_FurtherModes
+# class Dynamsoft.DLR.DLRFurtherModes
 Stores the FurtherModes. 
 
 ## Attributes

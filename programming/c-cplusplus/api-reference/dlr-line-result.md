@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRLineResult
-description: This page shows the DLRLineResult struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRLineResult, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_LineResult
+description: This page shows the DLR_LineResult struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_LineResult, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRLineResult
+# DLR_LineResult
 Stores the line result.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRLineResult  DLRLineResult
-typedef struct tagDLRLineResult*  PDLRLineResult
+typedef struct tagDLR_LineResult  DLR_LineResult
+typedef struct tagDLR_LineResult*  PDLR_LineResult
 ```  
   
 ---
@@ -28,10 +28,10 @@ typedef struct tagDLRLineResult*  PDLRLineResult
 | [`lineSpecificationName`](#linespecificationname) | *const char \** |
 | [`text`](#text) | *const char \** |
 | [`characterModelName`](#charactermodelname) | *const char \** |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md)\* |
 | [`confidence`](#confidence) | *int* |
 | [`characterResultsCount`](#characterresultscount) | *int* |
-| [`characterResults`](#characterresults) | [`PDLRCharacterResult`](dlr-character-result.md)\* |
+| [`characterResults`](#characterresults) | [`PDLR_CharacterResult`](dlr-character-result.md)\* |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -56,7 +56,7 @@ const char* characterModelName
 ### location
 The location of current line.
 ```cpp
-DLRQuadrilateral* location
+Quadrilateral location
 ```
 
 
@@ -76,7 +76,7 @@ int characterResultsCount
 ### characterResults
 The character results array.
 ```cpp
-PDLRCharacterResult* characterResults
+PDLR_CharacterResult* characterResults
 ```
 
 ### reserved

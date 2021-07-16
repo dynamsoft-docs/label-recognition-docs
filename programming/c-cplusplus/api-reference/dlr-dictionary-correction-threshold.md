@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label RecognizerC & C++ Struct - DLRDictionaryCorrectionThreshold
-description: This page shows the DLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRDictionaryCorrectionThreshold, C, C++
+title: Dynamsoft Label RecognizerC & C++ Struct - DLR_DictionaryCorrectionThreshold
+description: This page shows the DLR_DictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_DictionaryCorrectionThreshold, C, C++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRDictionaryCorrectionThreshold
+# DLR_DictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRDictionaryCorrectionThreshold  DLRDictionaryCorrectionThreshold
+typedef struct tagDLR_DictionaryCorrectionThreshold  DLR_DictionaryCorrectionThreshold
 ```  
 
 ## Attributes

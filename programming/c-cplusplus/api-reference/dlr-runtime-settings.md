@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRRuntimeSettings
-description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRRuntimeSettings, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_RuntimeSettings
+description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_RuntimeSettings, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRRuntimeSettings
+# DLR_RuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRRuntimeSettings  DLRRuntimeSettings
+typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 ```  
   
 ---
@@ -25,14 +25,14 @@ typedef struct tagDLRRuntimeSettings  DLRRuntimeSettings
 | Attribute | Type |
 |---------- | ---- |
 | [`maxThreadCount`](#maxthreadcount) | *int* |
-| [`characterModelName`](#charactermodelname) | *char\[64\]* |
-| [`linesCount`](#linescount) | *int* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)\[8\] |
-| [`referenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
-| [`textArea`](#textarea) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
-| [`dictionaryPath`](#dictionarypath) | *char\** |
+| [`characterModelName[64]`](#charactermodelname) | *char* |
+| [`referenceRegion`](#referenceregion) | [`DLR_ReferenceRegion`](dlr-reference-region.md) |
+| [`textArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
+| [`dictionaryPath[256]`](#dictionarypath) | *char* |
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
+| [`binarizationModes[8]`](#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) |
+| [`furtherModes`](#furthermodes) | [`DLR_FurtherModes`](dlr-further-modes.md)|
+| [`lineSpecification`](#linespecification) | [`DLR_LineSpecification`](dlr-line-specification.md) |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -55,36 +55,6 @@ The name of the CharacterModel.
 ```cpp
 char characterModelName[64]
 ```
-
-### linesCount
-Sets the text lines count of the text area.
-```cpp
-int linesCount
-```
-- **Value range**   
-    [0, 200]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: line count is not certain.
-
-
-### regionPredetectionModes
-Sets the region pre-detection mode.
-```cpp
-DLRRegionPredetectionMode regionPredetectionModes[8]
-```
-- **Value range**   
-    Each array item can be any one of the [`DLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
-      
-- **Default value**   
-    `[DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP,DLR_RPM_SKIP]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
-
 
 ### referenceRegion
 Sets the reference region to search for text.
@@ -116,14 +86,52 @@ DLRGrayscaleTransformationMode grayscaleTransformationModes[8]
 ### dictionaryPath
 Sets the path of the dictionary file.
 ```cpp
-char* dictionaryPath
+char dictionaryPath[256]
 ```
 
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```cpp
-DLRDictionaryCorrectionThreshold dictionaryCorrectionThreshold
+DLR_DictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
+
+### binarizationModes
+Sets the mode and priority for binarization.
+
+```cpp
+BinarizationMode binarizationModes[8]
+```
+
+- **Value range**   
+    Each array item can be any one of the [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+      
+- **Default value**   
+    `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+
+### furtherModes
+Sets further modes.
+
+```cpp
+DLR_FurtherModes furtherModes
+```
+
+- **See also**  
+    [`DLR_FurtherModes`](dlr-further-modes.md)
+
+
+### lineSpecification
+Sets line specification.
+
+```cpp
+DLR_LineSpecification lineSpecification
+```
+
+- **See also**  
+    [`DLR_LineSpecification`](dlr-line-specification.md)
 
 
 ### reserved

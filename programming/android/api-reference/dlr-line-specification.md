@@ -9,7 +9,7 @@ needGenerateH3Content: true
 
 
 # class com.dynamsoft.dlr.DLRLineSpecification
-Stores the FurtherModes. 
+Stores the settings of text line.
 
 ## Attributes
   

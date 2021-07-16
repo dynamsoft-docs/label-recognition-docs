@@ -12,39 +12,47 @@ needGenerateH3Content: true
 
 ## Primary Classes
 
-- [Dynamsoft.DLR.LabelRecognizer](label-recognizer.md)
+### namespace Dynamsoft.DLR
+
+- [LabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
 
-- [Dynamsoft.Core.Quadrilateral](quadrilateral.md)
-- [Dynamsoft.Core.ImageData](image-data.md)
-- [Dynamsoft.Core.DMDLSConnectionParameters](dm-lts-connection-parameters.md)
+### namespace Dynamsoft.Core
 
-- [Dynamsoft.DLR.LabelRecognizerException](label-recognizer-exception.md)
-- [Dynamsoft.DLR.DLRRuntimeSettings](dlr-runtime-settings.md)
-- [Dynamsoft.DLR.DLRReferenceRegion](dlr-reference-region.md)
-- [Dynamsoft.DLR.DLRResult](dlr-result.md)
-- [Dynamsoft.DLR.DLRLineResult](dlr-line-result.md)
-- [Dynamsoft.DLR.DLRCharacterResult](dlr-character-result.md)	
-- [Dynamsoft.DLR.DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
-- [Dynamsoft.DLR.DLRFurtherModes](dlr-further-modes.md)
-- [Dynamsoft.DLR.DLRLineSpecification](dlr-line-specification.md)
+- [Quadrilateral](quadrilateral.md)
+- [ImageData](image-data.md)
+- [DMDLSConnectionParameters](dm-lts-connection-parameters.md)
+
+### namespace Dynamsoft.DLR
+- [LabelRecognizerException](label-recognizer-exception.md)
+- [DLRRuntimeSettings](dlr-runtime-settings.md)
+- [DLRReferenceRegion](dlr-reference-region.md)
+- [DLRResult](dlr-result.md)
+- [DLRLineResult](dlr-line-result.md)
+- [DLRCharacterResult](dlr-character-result.md)	
+- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
+- [DLRFurtherModes](dlr-further-modes.md)
+- [DLRLineSpecification](dlr-line-specification.md)
 
 ## Enumerations
 
-- [Dynamsoft.Core.EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
-- [Dynamsoft.Core.EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
-- [Dynamsoft.Core.EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [Dynamsoft.Core.EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
-- [Dynamsoft.Core.EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)
-- [Dynamsoft.Core.EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
-- [Dynamsoft.Core.EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [Dynamsoft.Core.EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [Dynamsoft.Core.EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [Dynamsoft.Core.EnumProduct]({{ site.enumerations }}other-enums.html#product)	
-- [Dynamsoft.Core.EnumGrayscaleEnhanceMentMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+### namespace Dynamsoft.Core
 
-- [Dynamsoft.DLR.EnumLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
+- [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
+- [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
+- [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)
+- [EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
+- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+
+### namespace Dynamsoft.DLR
+- [EnumLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
 
 ## Error Code
 

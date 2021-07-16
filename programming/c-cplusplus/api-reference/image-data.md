@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRImageData
-description: This page shows the DLRImageData struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRImageData, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - ImageData
+description: This page shows the ImageData struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: ImageData, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRImageData
+# ImageData
 Stores the image data.  
 
 ## Typedefs
@@ -28,7 +28,7 @@ typedef struct tagDLRImageData  DLRImageData
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
-| [`format`](#format) | [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
+| [`format`](#format) | [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
 
 ### bytesLength
@@ -63,7 +63,7 @@ int stride
 ### format
 The image pixel format used in the image byte array. 
 ```cpp
-DLRImagePixelFormat format
+ImagePixelFormat format
 ```
   
 

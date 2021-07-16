@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRPoint
-description: This page shows the DLRPoint struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRPoint, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DM_Point
+description: This page shows the DM_Point struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DM_Point, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRPoint
+# DM_Point
 Stores an x- and y-coordinate pair in two-dimensional space.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRPoint  DLRPoint
-typedef struct tagDLRPoint*  PDLRPoint
+typedef struct tagDM_Point  DM_Point
+typedef struct tagDM_Point*  PDM_Point
 ``` 
 
 ---

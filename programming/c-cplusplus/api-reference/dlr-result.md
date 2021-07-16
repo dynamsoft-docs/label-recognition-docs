@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRResult
-description: This page shows the DLRResult struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRResult, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - DLR_Result
+description: This page shows the DLR_Result struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: DLR_Result, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRResult
+# DLR_Result
 Stores the recognized result.
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRResult  DLRResult
-typedef struct tagDLRResult*  PDLRResult
+typedef struct tagDLR_Result  DLR_Result
+typedef struct tagDLR_Result*  PDLR_Result
 ```  
   
 ---
@@ -25,12 +25,12 @@ typedef struct tagDLRResult*  PDLRResult
   
 | Attribute | Type |
 |---------- | ---- |
-| [`referenceRegionName`](#referenceregionname) | *char \** |
-| [`textAreaName`](#textareaname) | *char \** |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md) |
+| [`referenceRegionName`](#referenceregionname) | *const char \** |
+| [`textAreaName`](#textareaname) | *const char \** |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`confidence`](#confidence) | *int* |
 | [`lineResultsCount`](#lineresultscount) | *int* |
-| [`lineResults`](#lineresults) | [`PDLRLineResult`](dlr-line-result.md)\* |
+| [`lineResults`](#lineresults) | [`PDLR_LineResult`](dlr-line-result.md)\* |
 | [`pageNumber`](#pagenumber) | *int* |
 | [`reserved`](#reserved) | *char\[60\]* |
 
@@ -38,19 +38,19 @@ typedef struct tagDLRResult*  PDLRResult
 ### referenceRegionName
 The name of the reference region which is used to recognize the current result.
 ```cpp
-char* referenceRegionName
+const char* referenceRegionName
 ```
 
 ### textAreaName
 The name of the text area used to recognize current result.
 ```cpp
-char* textAreaName
+const char* textAreaName
 ```
 
 ### location
 The location of current recognized text.
 ```cpp
-DLRQuadrilateral location
+Quadrilateral location
 ```
 
 
@@ -70,7 +70,7 @@ int lineResultsCount
 ### lineResults
 The line results array.
 ```cpp
-PDLRLineResult* lineResults
+PDLR_LineResult* lineResults
 ```
 
 

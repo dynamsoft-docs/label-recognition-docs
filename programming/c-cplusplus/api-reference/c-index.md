@@ -19,8 +19,8 @@ needGenerateH3Content: true
 - [DM_Point](point.md)	
 - [Quadrilateral](quadrilateral.md)	
 - [ImageData](image-data.md)
-
 - [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
+
 - [DLR_RuntimeSettings](dlr-runtime-settings.md)
 - [DLR_ReferenceRegion](dlr-reference-region.md)	
 - [DLR_ResultArray](dlr-result-array.md)		
@@ -32,18 +32,20 @@ needGenerateH3Content: true
 - [DLR_LineSpecification](dlr-line-specification.md)
 
 ## Enumerations
+- [RegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [ColourConversionMode]({{ site.enumerations }}other-enums.html#colourconversionmode)
+- [GrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [GrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+- [BinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [TextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#textdetectionmode)
 
-- [EnumDLRBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
-- [EnumDLRBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
-- [EnumDLRBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [EnumDLRGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
-- [EnumDLRLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
-- [EnumDLRRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
-- [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
-- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+- [BarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
+- [BarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
+- [DM_ChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [DM_LicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [DM_UUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [Product]({{ site.enumerations }}other-enums.html#product)	
+- [LocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
 
 ## Error Code
 

@@ -39,17 +39,19 @@ needGenerateH3Content: true
 ## Enumerations
 
 ### Package com.dynamsoft.core
+- [EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [EnumColourConversionMode]({{ site.enumerations }}other-enums.html#colourconversionmode)
+- [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+- [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [EnumTextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#textdetectionmode)
 - [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
 - [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
-- [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)
-- [EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
 - [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
-- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
 
 ### Package com.dynamsoft.dlr
 - [EnumLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)

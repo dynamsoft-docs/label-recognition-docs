@@ -19,7 +19,7 @@ Stores the line result.
 | [`lineSpecificationName`](#linespecificationname) | *NSString\** |
 | [`text`](#text) | *NSString\** |
 | [`characterModelName`](#charactermodelname) | *NSString\** |
-| [`location`](#location) | [`DLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md)\* |
 | [`confidence`](#confidence) | *NSInteger* |
 | [`characterResults`](#characterresults) | NSArray<[`iDLRCharacterResult`](dlr-character-result.md)\*>\*|
 
@@ -45,7 +45,7 @@ NSString* characterModelName
 ### location
 The location of current line.
 ```objc
-iDLRQuadrilateral* location
+iQuadrilateral* location
 ```
 
 

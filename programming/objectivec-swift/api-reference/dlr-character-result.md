@@ -22,7 +22,7 @@ Stores the character result.
 | [`characterHConfidence`](#characterhconfidence) | *NSInteger* |
 | [`characterMConfidence`](#charactermconfidence) | *NSInteger* |
 | [`characterLConfidence`](#characterlconfidence) | *NSInteger* |
-| [`location`](#location) | [`iDLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`location`](#location) | [`iQuadrilateral`](quadrilateral.md)\* |
 
 
 ### characterH
@@ -65,5 +65,5 @@ NSInteger characterLConfidence
 ### location
 The location of current character.
 ```objc
-iDLRQuadrilateral* location
+iQuadrilateral* location
 ```

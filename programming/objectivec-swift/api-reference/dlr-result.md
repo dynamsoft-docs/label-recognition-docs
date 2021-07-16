@@ -19,7 +19,7 @@ Stores the recognized result.
 |---------- | ---- |
 | [`referenceRegionName`](#referenceregionname) | *NSString\** |
 | [`textAreaName`](#textareaname) | *NSString\** |
-| [`location`](#location) | [`iDLRQuadrilateral`](dlr-quadrilateral.md)\* |
+| [`location`](#location) | [`iQuadrilateral`](quadrilateral.md)\* |
 | [`confidence`](#confidence) | *NSInteger* |
 | [`lineResults`](#lineresults) | NSArray<[`iDLRLineResult`](dlr-line-result.md)\*>\* |
 | [`pageNumber`](#pagenumber) | *NSInteger* |
@@ -40,7 +40,7 @@ NSString* textAreaName
 ### location
 The location of current recognized text.
 ```objc
-iDLRQuadrilateral* location
+iQuadrilateral* location
 ```
 
 

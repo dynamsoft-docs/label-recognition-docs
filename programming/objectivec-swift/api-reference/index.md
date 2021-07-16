@@ -15,30 +15,35 @@ needGenerateH3Content: true
 - [DynamsoftLabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
-- [iDLRDLSConnectionParameters](dlr-lts-connection-parameters.md)
-- [iDLRCharacterResult](dlr-character-result.md)		
-- [iDLRImageData](dlr-image-data.md)		
-- [iDLRLineResult](dlr-line-result.md)	
-- [iDLRQuadrilateral](dlr-quadrilateral.md)	
+
+- [iQuadrilateral](quadrilateral.md)
+- [iImageData](image-data.md)		
+- [iDMDLSConnectionParameters](dm-lts-connection-parameters.md)
+- [iDLRRuntimeSettings](dlr-runtime-settings.md)	
 - [iDLRReferenceRegion](dlr-reference-region.md)	
 - [iDLRResult](dlr-result.md)		
-- [iDLRRuntimeSettings](dlr-runtime-settings.md)	
+- [iDLRLineResult](dlr-line-result.md)	
+- [iDLRCharacterResult](dlr-character-result.md)		
 - [iDLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
-
+- [iDLRFurtherModes](dlr-further-modes.md)	
+- [iDLRLineSpecification](dlr-line-specification.md)
 
 ## Enumerations
-- [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#dlrbarcodeformat)
-- [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2)
-- [EnumDLRBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
-- [EnumDLRGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)
-- [EnumDLRImagePixelFormat]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
-- [EnumDLRLocalizationSourceType]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
-- [EnumDLRRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
+- [EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [EnumColourConversionMode]({{ site.enumerations }}other-enums.html#colourconversionmode)
+- [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
+- [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [EnumTextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#textdetectionmode)
+- [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
+- [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
+- [EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)
 - [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
 - [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
 - [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
 
+- [EnumLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
 
 ## Error Code
 

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDLRImageData
-description: This page shows the iDLRImageData class of Dynamsoft Label Recognizer for iOS SDK.
-keywords: iDLRImageData, objective-c, oc, swift
+title: Dynamsoft Label Recognizer Objective-C & Swift Class - iImageData
+description: This page shows the iImageData class of Dynamsoft Label Recognizer for iOS SDK.
+keywords: iImageData, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# iDLRImageData
+# iImageData
 Stores the image data.  
 
 
@@ -20,7 +20,7 @@ Stores the image data.
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`format`](#format) | [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
 
 ### bytes
@@ -50,7 +50,7 @@ NSInteger stride
 ### format
 The image pixel format used in the image byte array. 
 ```objc
-EnumDLRImagePixelFormat format
+EnumImagePixelFormat format
 ```
   
 

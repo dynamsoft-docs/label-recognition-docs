@@ -18,13 +18,13 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 |---------- | ---- |
 | [`maxThreadCount`](#maxthreadcount) | *NSInteger* |
 | [`characterModelName`](#charactermodelname) | *NSString\** |
-| [`linesCount`](#linescount) | *NSInteger* |
-| [`regionPredetectionModes`](#regionpredetectionmodes) | *NSArray \** |
 | [`referenceRegion`](#referenceregion) | [`iDLRReferenceRegion`](dlr-reference-region.md)\* |
-| [`textArea`](#textarea) | [`iDLRQuadrilateral`](dlr-quadrilateral.md)\* |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray \** |
+| [`textArea`](#textarea) | [`iQuadrilateral`](quadrilateral.md)\* |
 | [`dictionaryPath`](#dictionarypath) | *NSString\** |
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`iDLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md)\* |
+| [`binarizationModes`](#binarizationmodes) | *NSArray\** |
+| [`furtherModes`](#furthermodes) | [`iDLRFurtherModes`](dlr-further-modes.md)\*|
+| [`lineSpecification`](#linespecification) | [`iDLRLineSpecification`](dlr-line-specification.md)\* |
 
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
@@ -46,36 +46,6 @@ The name of the CharacterModel.
 NSString* characterModelName
 ```
 
-### linesCount
-Sets the text lines count of the text area.
-```objc
-NSInteger linesCount
-```
-- **Value range**   
-    [0, 200]
-      
-- **Default value**   
-    0
-    
-- **Remarks**   
-    0: line count is not certain.
-
-
-### regionPredetectionModes
-Sets the region pre-detection mode.
-```objc
-NSArray * regionPredetectionModes
-```
-- **Value range**   
-    Each array item can be any one of the [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
-      
-- **Default value**   
-    `[EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
-
-
 ### referenceRegion
 Sets the reference region to search for text.
 ```objc
@@ -85,24 +55,8 @@ iDLRReferenceRegion* referenceRegion
 ### textArea
 Sets the text area relative to the reference region.
 ```objc
-iDLRQuadrilateral* textArea
+iQuadrilateral* textArea
 ```
-
-### grayscaleTransformationModes
-Sets the grayscale transformation mode.
-```objc
-NSArray * grayscaleTransformationModes
-```
-- **Value range**   
-    Each array item can be any one of the [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
-      
-- **Default value**   
-    `[EnumDLRGrayscaleTransformationModeOriginal,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
-  
-
 
 ### dictionaryPath
 Sets the path of the dictionary file.
@@ -115,3 +69,42 @@ Sets the threshold of dictionary error correction.
 ```objc
 iDLRDictionaryCorrectionThreshold* dictionaryCorrectionThreshold
 ```
+
+
+### binarizationModes
+Sets the mode and priority for binarization.
+
+```objc
+NSArray* binarizationModes
+```
+
+- **Value range**   
+    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+      
+- **Default value**   
+    `[EnumBinarizationModeLocalBlock, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+
+### furtherModes
+Sets further modes.
+
+```objc
+iDLRFurtherModes* furtherModes
+```
+
+- **See also**  
+    [`iDLRFurtherModes`](dlr-further-modes.md)
+
+
+### lineSpecification
+Sets line specification.
+
+```objc
+iDLRLineSpecification* lineSpecification
+```
+
+- **See also**  
+    [`iDLRLineSpecification`](dlr-line-specification.md)

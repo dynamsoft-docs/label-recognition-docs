@@ -193,9 +193,9 @@ Default values will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#furthermodes) | [`imagePreprocessingModes`]({{ site.c-cplusplus-structs }}dlr-futher-modes.html#grayscaleenhancementmodes) | [`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`imagePreprocessingModes`]({{ site.c-cplusplus-api-reference }}dlr-futher-modes.html#grayscaleenhancementmodes) | [`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)[8] |
 
 **See Also**    
-- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)
-- [`DLR_FurtherModes` Struct]({{ site.c-cplusplus-structs }}dlr-futher-modes.html)
+- [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)
+- [`DLR_FurtherModes` Struct]({{ site.c-cplusplus-api-reference }}dlr-futher-modes.html)
 - [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)

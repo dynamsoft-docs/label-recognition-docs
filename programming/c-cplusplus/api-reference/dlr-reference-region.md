@@ -39,7 +39,7 @@ The source type used to localize the reference region(s).
 LocalizationSourceType localizationSourceType
 ```
 - **Value range**   
-    A value of [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
+    A value of [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) Enumeration items.
       
 - **Default value**   
     `LST_MANUAL_SPECIFICATION`

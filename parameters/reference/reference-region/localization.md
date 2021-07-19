@@ -266,7 +266,7 @@ The library will localize reference region(s) based on the barcodes whose format
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| Localization | BarcodeFormatIds | *string Array* | An array item can be any one of the [`DLRBarcodeFormat` Enumeration]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) items | "DLR_BF_ALL" |
+| Localization | BarcodeFormatIds | *string Array* | An array item can be any one of the [`DLRBarcodeFormat` Enumeration]({{ site.enumerations }}other-enums.html#barcodeformat) items | "DLR_BF_ALL" |
 
 **Json Parameter Example**   
 ```
@@ -299,7 +299,7 @@ The library will localize reference region(s) based on the barcodes whose format
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| Localization | BarcodeFormatIds_2 | *string Array* | An array item can be any one of the [`DLRBarcodeFormat_2` Enumeration]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) items | "DLR_BF2_NULL" |
+| Localization | BarcodeFormatIds_2 | *string Array* | An array item can be any one of the [`DLRBarcodeFormat_2` Enumeration]({{ site.enumerations }}other-enums.html#barcodeformat_2) items | "DLR_BF2_NULL" |
 
 **Json Parameter Example**   
 ```

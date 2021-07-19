@@ -46,7 +46,7 @@ Sets the grayscale transformation mode.
 NSArray * grayscaleTransformationModes
 ```
 - **Value range**   
-    Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
+    Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
       
 - **Default value**   
     `[EnumGrayscaleTransformationModeOriginal,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip,EnumGrayscaleTransformationModeSkip]`
@@ -62,7 +62,7 @@ Sets the region pre-detection mode.
 NSArray * regionPredetectionModes
 ```
 - **Value range**   
-    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
+    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.
       
 - **Default value**   
     `[EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip,EnumRegionPredetectionModeSkip]`

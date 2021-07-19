@@ -29,7 +29,7 @@ needGenerateH3Content: true
   | [`BarcodeFormat`](other-enums.md#barcodeformat) | Describes the barcode formats in BarcodeFormat group 1. |
   | [`BarcodeFormat_2`](other-enums.md#barcodeformat_2) | Describes the barcode formats in BarcodeFormat group 2. |
   | [`ImagePixelFormat`](other-enums.md#imagepixelformat) | Describes the image pixel format. |
-  | [`LocalizationSourceType`](other-enums.md#dlrlocalizationsourcetype) | Describes the source type used to localize the reference region(s). |
+  | [`LocalizationSourceType`](other-enums.md#localizationsourcetype) | Describes the source type used to localize the reference region(s). |
   | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | Describes the charge way. |
   | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |

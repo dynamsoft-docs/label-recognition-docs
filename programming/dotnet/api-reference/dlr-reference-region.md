@@ -30,7 +30,7 @@ The source type used to localize the reference region(s).
 int LocalizationSourceType
 ```
 - **Value range**   
-    A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
+    A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) Enumeration items.
       
 - **Default value**   
     `LST_MANUAL_SPECIFICATION`
@@ -88,7 +88,7 @@ The formats of the barcode in BarcodeFormat group 1.
 int BarcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
+    A combined value of [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
       
 - **Default value**   
     DLR_BF_ALL
@@ -105,7 +105,7 @@ The formats of the barcode in BarcodeFormat group 2.
 int BarcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
+    A combined value of [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
       
 - **Default value**   
     DLR_BF2_NULL

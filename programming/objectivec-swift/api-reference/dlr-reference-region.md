@@ -16,7 +16,7 @@ Stores the reference region information.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) |
+| [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) |
 | [`points`](#points) | *NSArray\** |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *NSInteger* |

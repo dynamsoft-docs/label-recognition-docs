@@ -100,7 +100,7 @@ int barcodeFormatIds
     A combined value of [`BarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
       
 - **Default value**   
-    DLR_BF_ALL
+    BF_ALL
     
 - **Remarks**   
     Barcode formats in BarcodeFormat group 1 can be combined.<br>
@@ -117,7 +117,7 @@ int barcodeFormatIds_2
     A combined value of [`BarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
       
 - **Default value**   
-    DLR_BF2_NULL
+    BF2_NULL
     
 - **Remarks**   
     Barcode formats in BarcodeFormat group 2 can be combined.<br>

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRFurtherModes Struct
-description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRFurtherModes, .Net
+title: Dynamsoft Label Recognizer iOS API Reference - iDLRFurtherModes
+description: This page shows the iDLRFurtherModes of Dynamsoft Label Recognizer for iOS SDK.
+keywords: iDLRFurtherModes, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# class Dynamsoft.DLR.DLRFurtherModes
+# iDLRFurtherModes
 Stores the FurtherModes. 
 
 ## Attributes
@@ -33,7 +33,7 @@ NSArray * colourConversionModes
    Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items. 
      
 - **Default value**  
-   `[EnumColourConversionModeGENERAL, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip]`  
+   `[EnumColourConversionModeGeneral, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip]`  
      
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
@@ -82,7 +82,7 @@ NSArray * GrayscaleEnhancementModes
    Each array item can be any one of the [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode) Enumeration items.  
      
 - **Default value**  
-   `[EnumGrayscaleEnhancementModeGENERAL, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip]`  
+   `[EnumGrayscaleEnhancementModeGeneral, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip]`  
      
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.

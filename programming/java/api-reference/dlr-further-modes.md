@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - DLRFurtherModes Struct
-description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for Android SDK.
-keywords: DLRFurtherModes, Android
+title: Dynamsoft Label Recognizer Java API Reference - DLRFurtherModes Struct
+description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for Java SDK.
+keywords: DLRFurtherModes, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

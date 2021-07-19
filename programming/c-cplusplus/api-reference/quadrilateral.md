@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLRQuadrilateral
-description: This page shows the DLRQuadrilateral struct of Dynamsoft Label Recognizer for C & C++ Language.
-keywords: DLRQuadrilateral, struct, c, c++
+title: Dynamsoft Label Recognizer C & C++ Struct - Quadrilateral
+description: This page shows the Quadrilateral struct of Dynamsoft Label Recognizer for C & C++ Language.
+keywords: Quadrilateral, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# DLRQuadrilateral
+# Quadrilateral
 Stores the quadrilateral.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRQuadrilateral  DLRQuadrilateral 
+typedef struct tagQuadrilateral  Quadrilateral 
 ```  
   
 ---
@@ -24,13 +24,13 @@ typedef struct tagDLRQuadrilateral  DLRQuadrilateral
   
 | Attribute | Type |
 |---------- | ---- |
-| [`points`](#points) | [`DLRPoint`](dlr-point.md)[4] |
+| [`points`](#points) | [`DM_Point`](point.md)[4] |
 
 
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```cpp
-DLRPoint points[4]
+DM_Point points[4]
 ```
 
 

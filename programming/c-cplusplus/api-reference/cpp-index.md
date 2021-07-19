@@ -19,7 +19,6 @@ needGenerateH3Content: true
 - [Quadrilateral](quadrilateral.md)	
 - [ImageData](image-data.md)	
 - [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
-
 - [DLR_RuntimeSettings](dlr-runtime-settings.md)	
 - [DLR_ReferenceRegion](dlr-reference-region.md)	
 - [DLR_ResultArray](dlr-result-array.md)		
@@ -37,8 +36,7 @@ needGenerateH3Content: true
 - [GrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [GrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
 - [BinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [TextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#textdetectionmode)
-
+- [TextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [BarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
 - [BarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
 - [DM_ChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	

@@ -14,7 +14,7 @@ Stores the image data.
 ## Typedefs
 
 ```cpp
-typedef struct tagDLRImageData  DLRImageData
+typedef struct tagImageData  ImageData
 ```
 
 ---

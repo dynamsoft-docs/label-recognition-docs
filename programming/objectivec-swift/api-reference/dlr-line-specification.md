@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRLineSpecification Struct
-description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRLineSpecification, .Net
+title: Dynamsoft Label Recognizer iOS API Reference - iDLRLineSpecification Struct
+description: This page shows the iDLRLineSpecification Struct of Dynamsoft Label Recognizer for iOS SDK.
+keywords: iDLRLineSpecification, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
@@ -29,7 +29,7 @@ NSArray * grayscaleEnhancementModes
    Each array item can be any one of the [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode) Enumeration items.  
      
 - **Default value**  
-   `[EnumGrayscaleEnhancementModeGENERAL, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip]`  
+   `[EnumGrayscaleEnhancementModeGeneral, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip, EnumGrayscaleEnhancementModeSkip]`  
      
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.

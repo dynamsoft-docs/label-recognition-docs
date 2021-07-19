@@ -158,7 +158,7 @@ CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
   | [`AppendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognizerParameter settings in a file to the SDK object. |
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
   | [`ClearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
-  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
 
@@ -347,7 +347,7 @@ recognizer->ClearAppendedSettings();
 ```
 
 ### UpdateReferenceRegionFromBarcodeResults
-Updates reference region which is defined with source type DLR_LST_BARCODE.  
+Updates reference region which is defined with source type LST_BARCODE.  
 
 ```cpp
 int UpdateReferenceRegionFromBarcodeResults (const BarcodeResultArray* barcodeResults, const char* templateName)
@@ -405,7 +405,7 @@ CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
-settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
 char errorMessage[256];
 recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
@@ -541,20 +541,20 @@ Returns error code (returns 0 if the function operates successfully).
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRResultArray * results;
+DLR_ResultArray * results;
 int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
-recognizer->GetAllDLRResults(&results);
-dynamsoft::dlr::CLabelRecognizer::FreeDLRResults(&results);
+recognizer->GetAllResults(&results);
+dynamsoft::dlr::CLabelRecognizer::FreeResults(&results);
 delete recognizer;
 ```
 
 
 
-### FreeDLRResults
+### FreeResults
 Free memory allocated for text results.
 
 ```cpp
-static void FreeDLRResults (DLRResultArray ** results)	
+static void FreeResults (DLR_ResultArray ** results)	
 ```   
    
 #### Parameters
@@ -564,10 +564,10 @@ static void FreeDLRResults (DLRResultArray ** results)
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
-DLRResultArray * results;
+DLR_ResultArray * results;
 int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
-recognizer->GetAllDLRResults(&results);
-dynamsoft::dlr::CLabelRecognizer::FreeDLRResults(&results);
+recognizer->GetAllResults(&results);
+dynamsoft::dlr::CLabelRecognizer::FreeResults(&results);
 delete recognizer;
 ```
 

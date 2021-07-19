@@ -45,7 +45,7 @@ needGenerateH3Content: true
 - [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
 - [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [EnumTextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#textdetectionmode)
+- [EnumTextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
 - [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
 - [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
 - [EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)

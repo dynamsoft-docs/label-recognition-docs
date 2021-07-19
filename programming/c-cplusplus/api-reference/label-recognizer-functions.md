@@ -189,7 +189,7 @@ DLR_InitLicenseFromDLS(&paramters, errorBuf, 512);
   | [`DLR_AppendSettingsFromFile`](#dlr_appendsettingsfromfile) | Appends LabelRecognizerParameter settings in a file to the SDK object. |
   | [`DLR_OutputSettingsToFile`](#dlr_outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
   | [`DLR_ClearAppendedSettings`](#dlr_appendsettingsfromstring) | Clears appended LabelRecognizerParameter settings. |
-  | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+  | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`DLR_GetModeArgument`](#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
   | [`DLR_SetModeArgument`](#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
 
@@ -450,7 +450,7 @@ void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
-settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
 char errorMessage[256];
 DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
@@ -492,7 +492,7 @@ void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
-settings.regionPredetectionModes[0] = DLR_RPM_GENERAL_RGB_CONTRAST;
+settings.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
 char errorMessage[256];
 DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);

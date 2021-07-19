@@ -29,7 +29,7 @@ typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 | [`referenceRegion`](#referenceregion) | [`DLR_ReferenceRegion`](dlr-reference-region.md) |
 | [`textArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
 | [`dictionaryPath[256]`](#dictionarypath) | *char* |
-| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
+| [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`binarizationModes[8]`](#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) |
 | [`furtherModes`](#furthermodes) | [`DLR_FurtherModes`](dlr-further-modes.md)|
 | [`lineSpecification`](#linespecification) | [`DLR_LineSpecification`](dlr-line-specification.md) |
@@ -59,25 +59,25 @@ char characterModelName[64]
 ### referenceRegion
 Sets the reference region to search for text.
 ```cpp
-DLRReferenceRegion referenceRegion
+DLR_ReferenceRegion referenceRegion
 ```
 
 ### textArea
 Sets the text area relative to the reference region.
 ```cpp
-DLRQuadrilateral textArea
+Quadrilateral textArea
 ```
 
 ### grayscaleTransformationModes
 Sets the grayscale transformation mode.
 ```cpp
-DLRGrayscaleTransformationMode grayscaleTransformationModes[8]
+DLR_GrayscaleTransformationMode grayscaleTransformationModes[8]
 ```
 - **Value range**   
-    Each array item can be any one of the [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
+    Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
       
 - **Default value**   
-    `[DLR_GTM_ORIGINAL,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP,DLR_GTM_SKIP]`
+    `[GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]`
     
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.

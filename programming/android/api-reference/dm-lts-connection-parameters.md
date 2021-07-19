@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - DMDLSConnectionParameters
-description: This page shows the DMDLSConnectionParameters struct of Dynamsoft Label Recognizer for Android Language.
-keywords: DMDLSConnectionParameters, struct, android
+title: Dynamsoft Core Android Class - DMDLSConnectionParameters
+description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Core for Android Language.
+keywords: DMDLSConnectionParameters, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

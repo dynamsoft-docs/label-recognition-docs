@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DMDLSConnectionParameters
-description: This page shows the DMDLSConnectionParameters struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DMDLSConnectionParameters, struct, .Net
+title: Dynamsoft Core .Net Class - DMDLSConnectionParameters
+description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Core for .Net Language.
+keywords: DMDLSConnectionParameters, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

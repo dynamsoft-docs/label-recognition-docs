@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - ImageData
-description: This page shows the ImageData struct of Dynamsoft Label Recognizer for C & C++ Language.
+title: Dynamsoft Core C & C++ Struct - ImageData
+description: This page shows the ImageData struct of Dynamsoft Core for C & C++ Language.
 keywords: ImageData, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

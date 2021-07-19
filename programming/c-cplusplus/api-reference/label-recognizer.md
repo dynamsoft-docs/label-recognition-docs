@@ -354,7 +354,7 @@ int UpdateReferenceRegionFromBarcodeResults (const BarcodeResultArray* barcodeRe
 ```   
    
 #### Parameters
-`[in]	barcodeResults` The barcode results used to localize reference region.  
+`[in]	barcodeResults` The barcode results used to localize reference region.  See also [`BarcodeResultArray`](barcode-result-array.md).
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 

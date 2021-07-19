@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - ImageData
-description: This page shows the ImageData struct of Dynamsoft Label Recognizer for Android Language.
+title: Dynamsoft Core Android Class - ImageData
+description: This page shows the ImageData Class of Dynamsoft Core for Android Language.
 keywords: ImageData, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

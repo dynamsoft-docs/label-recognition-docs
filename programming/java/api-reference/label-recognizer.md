@@ -424,11 +424,11 @@ recognizer.destroy();
 Updates reference region which is defined with source type DLR_LST_BARCODE.  
 
 ```java
-void updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, String templateName) throws LabelRecognizerException
+void updateReferenceRegionFromBarcodeResults (BarcodeResult[] barcodeResults, String templateName) throws LabelRecognizerException
 ```   
    
 #### Parameters
-`barcodeResults` The barcode results used to localize reference region.  
+`barcodeResults` The barcode results used to localize reference region. See also [`BarcodeResult`](barcode-result.md).
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 

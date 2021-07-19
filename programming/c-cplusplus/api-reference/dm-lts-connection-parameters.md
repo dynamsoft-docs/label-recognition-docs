@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DM_DLSConnectionParameters
-description: This page shows the DM_DLSConnectionParameters struct of Dynamsoft Label Recognizer for C & C++ Language.
+title: Dynamsoft Core C & C++ Struct - DM_DLSConnectionParameters
+description: This page shows the DM_DLSConnectionParameters struct of Dynamsoft Core for C & C++ Language.
 keywords: DM_DLSConnectionParameters, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

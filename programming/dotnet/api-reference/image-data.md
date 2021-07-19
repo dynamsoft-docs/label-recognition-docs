@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - ImageData
-description: This page shows the ImageData struct of Dynamsoft Label Recognizer for .Net Language.
+title: Dynamsoft Core .Net Class - ImageData
+description: This page shows the ImageData Class of Dynamsoft Core for .Net Language.
 keywords: ImageData, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

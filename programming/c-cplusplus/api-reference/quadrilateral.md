@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - Quadrilateral
-description: This page shows the Quadrilateral struct of Dynamsoft Label Recognizer for C & C++ Language.
+title: Dynamsoft Core C & C++ Struct - Quadrilateral
+description: This page shows the Quadrilateral struct of Dynamsoft Core for C & C++ Language.
 keywords: Quadrilateral, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

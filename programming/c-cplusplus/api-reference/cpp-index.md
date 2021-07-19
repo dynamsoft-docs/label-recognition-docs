@@ -19,6 +19,8 @@ needGenerateH3Content: true
 - [Quadrilateral](quadrilateral.md)	
 - [ImageData](image-data.md)	
 - [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
+- [BarcodeResultArray](barcode-result-array.md)
+- [BarcodeResult](barcode-result.md)
 - [DLR_RuntimeSettings](dlr-runtime-settings.md)	
 - [DLR_ReferenceRegion](dlr-reference-region.md)	
 - [DLR_ResultArray](dlr-result-array.md)		

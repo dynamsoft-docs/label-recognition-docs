@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - Quadrilateral
-description: This page shows the Quadrilateral struct of Dynamsoft Label Recognizer for Android Language.
-keywords: Quadrilateral, struct, android
+title: Dynamsoft Core Android Class - Quadrilateral
+description: This page shows the Quadrilateral Class of Dynamsoft Core for Android Language.
+keywords: Quadrilateral, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

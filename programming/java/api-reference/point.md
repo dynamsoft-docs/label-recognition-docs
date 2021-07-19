@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - Point
-description: This page shows the Point struct of Dynamsoft Label Recognizer for Java Language.
-keywords: Point, struct, Java
+title: Dynamsoft Core Java Class - Point
+description: This page shows the Point Class of Dynamsoft Core for Java Language.
+keywords: Point, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

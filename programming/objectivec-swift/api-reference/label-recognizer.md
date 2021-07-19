@@ -604,11 +604,11 @@ recognizer.setModeArgument("RegionPredetectionModes", index:0, argumentName:"Asp
 Updates reference region which is defined with source type LST_BARCODE.  
 
 ```objc
-- (void)updateReferenceRegionFromBarcodeResults:(NSArray<iTextResult*>*)barcodeResults templateName:(NSString *)templateName error:(NSError**)error
+- (void)updateReferenceRegionFromBarcodeResults:(NSArray<iBarcodeResult*>*)barcodeResults templateName:(NSString *)templateName error:(NSError**)error
 ```   
    
 #### Parameters
-`barcodeResults` The barcode results used to localize reference region.  
+`barcodeResults` The barcode results used to localize reference region.  See also [`iBarcodeResult`](barcode-result.md).
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 

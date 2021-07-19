@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDMDLSConnectionParameters
-description: This page shows the iDMDLSConnectionParameters class of Dynamsoft Label Recognizer for iOS SDK.
+title: Dynamsoft Core Objective-C & Swift Class - iDMDLSConnectionParameters
+description: This page shows the iDMDLSConnectionParameters class of Dynamsoft Core for iOS SDK.
 keywords: iDMDLSConnectionParameters, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

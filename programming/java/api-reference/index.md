@@ -23,6 +23,7 @@ needGenerateH3Content: true
 - [Quadrilateral](quadrilateral.md)
 - [ImageData](image-data.md)
 - [DMDLSConnectionParameters](dm-lts-connection-parameters.md)
+- [BarcodeResult](barcode-result.md)
 
 ### Package com.dynamsoft.dlr
 

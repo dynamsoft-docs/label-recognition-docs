@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DM_Point
-description: This page shows the DM_Point struct of Dynamsoft Label Recognizer for C & C++ Language.
+title: Dynamsoft Core C & C++ Struct - DM_Point
+description: This page shows the DM_Point struct of Dynamsoft Core for C & C++ Language.
 keywords: DM_Point, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

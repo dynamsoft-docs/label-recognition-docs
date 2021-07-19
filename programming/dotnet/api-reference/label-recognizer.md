@@ -37,7 +37,7 @@ string versionInfo = recognizer.GetVersion();
 recognizer.Dispose();
 ```
 
-&nbsp; 
+ 
 
 ## Initialization
   
@@ -69,7 +69,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 ```
 
-&nbsp;
+
 
 
 ### Dispose
@@ -109,7 +109,7 @@ recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 ### InitDLSConnectionParameters
 Initializes a DMDLSConnectionParameters struct with default values.
@@ -127,7 +127,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### InitLicenseFromDLS
@@ -152,7 +152,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.Dispose();
 ```
 
-&nbsp; 
+ 
 
 ## Settings
 
@@ -192,7 +192,7 @@ DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 ### UpdateRuntimeSettings
 Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -218,7 +218,7 @@ recognizer.UpdateRuntimeSettings(settings);
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 ### ResetRuntimeSettings
 Reset all runtime settings to default values.
@@ -242,7 +242,7 @@ recognizer.Dispose();
 ```
 
 
-&nbsp;
+
 
 
 ### AppendSettingsFromString
@@ -267,7 +267,7 @@ recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### AppendSettingsFromFile
@@ -292,7 +292,7 @@ recognizer.AppendSettingsFromFile("your file path");
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### OutputSettingsToFile
@@ -319,7 +319,7 @@ recognizer.OutputSettingsToFile("your saving file path", "currentRuntimeSettings
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### ClearAppendedSettings
@@ -336,17 +336,17 @@ recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.ClearAppendedSettings();
 ```
 
-&nbsp;
+
 
 ### UpdateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
 
 ```csharp
-void UpdateReferenceRegionFromBarcodeResults(TextResult[] barcodeResults, string templateName)
+void UpdateReferenceRegionFromBarcodeResults(BarcodeResult[] barcodeResults, string templateName)
 ```   
    
 #### Parameters
-`barcodeResults` The barcode results used to localize reference region.  
+`barcodeResults` The barcode results used to localize reference region. See also [`BarcodeResult`](barcode-result.md).
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
@@ -364,7 +364,7 @@ recognizer.UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 ### SetModeArgument
 
@@ -398,7 +398,7 @@ recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "10
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### GetModeArgument
@@ -436,7 +436,7 @@ string argumentValue = recognizer.GetModeArgument("RegionPredetectionModes", 0, 
 recognizer.Dispose();
 ```
 
-&nbsp; 
+ 
    
 ## Recognizing
    
@@ -472,7 +472,7 @@ DLRResult[] result = recognizer.RecognizeByBuffer(imageData, "");
 recognizer.Dispose();
 ```
 
-&nbsp;
+
 
 
 ### RecognizeByFile
@@ -500,5 +500,5 @@ DLRResult[] result = recognizer.RecognizeByFile("full file path", "");
 recognizer.Dispose();
 ```
 
-&nbsp; 
+ 
    

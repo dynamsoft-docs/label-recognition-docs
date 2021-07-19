@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - Point
-description: This page shows the Point struct of Dynamsoft Label Recognizer for Android Language.
-keywords: Point, struct, android
+title: Dynamsoft Class Android Class - Point
+description: This page shows the Point Class of Dynamsoft Class for Android Language.
+keywords: Point, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---

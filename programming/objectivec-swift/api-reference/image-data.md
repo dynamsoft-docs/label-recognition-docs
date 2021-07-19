@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift Class - iImageData
-description: This page shows the iImageData class of Dynamsoft Label Recognizer for iOS SDK.
+title: Dynamsoft Core Objective-C & Swift Class - iImageData
+description: This page shows the iImageData class of Dynamsoft Core for iOS SDK.
 keywords: iImageData, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -19,6 +19,7 @@ needGenerateH3Content: true
 - [iQuadrilateral](quadrilateral.md)
 - [iImageData](image-data.md)		
 - [iDMDLSConnectionParameters](dm-lts-connection-parameters.md)
+- [iBarcodeResult](barcode-result.md)
 - [iDLRRuntimeSettings](dlr-runtime-settings.md)	
 - [iDLRReferenceRegion](dlr-reference-region.md)	
 - [iDLRResult](dlr-result.md)		

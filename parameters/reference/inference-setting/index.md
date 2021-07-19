@@ -49,19 +49,19 @@ Sets the condition level of the inference area.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FilteringConditions | AreaType | *string* | "DLR_AT_ENTIRE"<br>"DLR_AT_LINE_ALL"<br>"DLR_AT_LINE_ANY"<br>"DLR_AT_LINE_N"| "DLR_AT_ENTIRE" |
+| FilteringConditions | AreaType | *string* | "AT_ENTIRE"<br>"AT_LINE_ALL"<br>"AT_LINE_ANY"<br>"AT_LINE_N"| "AT_ENTIRE" |
 
-- DLR_AT_ENTIRE: conditions on the oncatenated string
-- DLR_AT_LINE_ALL: conditions on each of the line string
-- DLR_AT_LINE_ANY: conditions on any of the line string
-- DLR_AT_LINE_N: conditions on each specified line string
+- AT_ENTIRE: conditions on the oncatenated string
+- AT_LINE_ALL: conditions on each of the line string
+- AT_LINE_ANY: conditions on any of the line string
+- AT_LINE_N: conditions on each specified line string
 
 **Json Parameter Example**   
 ```json
 {
     "FilteringConditions":
     {
-        "AreaType": "DLR_AT_ENTIRE",
+        "AreaType": "AT_ENTIRE",
         "RegEx": ".*b.*b.*b.*"
     },
 
@@ -71,7 +71,7 @@ Sets the condition level of the inference area.
 &nbsp;
 
 ### RegEx
-Sets the regular expression condition on the specified area. This parameter only takes effect when the `AreaType` parameter is specified as "DLR_AT_ENTIRE" OR "DLR_AT_LINE_ALL" OR "DLR_AT_LINE_ANY".
+Sets the regular expression condition on the specified area. This parameter only takes effect when the `AreaType` parameter is specified as "AT_ENTIRE" OR "AT_LINE_ALL" OR "AT_LINE_ANY".
 
 #### As Json Parameter
 
@@ -84,7 +84,7 @@ Sets the regular expression condition on the specified area. This parameter only
 {
     "FilteringConditions":
     {
-        "AreaType": "DLR_AT_ENTIRE",
+        "AreaType": "AT_ENTIRE",
         "RegEx": ".*b.*b.*b.*"
     },
 
@@ -96,7 +96,7 @@ Sets the regular expression condition on the specified area. This parameter only
 
 
 ### LineArray
-Sets the condition on each specified line. This parameter only takes effect when the `AreaType` parameter is specified as "DLR_AT_LINE_N".
+Sets the condition on each specified line. This parameter only takes effect when the `AreaType` parameter is specified as "AT_LINE_N".
 
 - LineNumber: A string of one or more of the following data,separated by commas:<br>1. One int value which represents a specified line index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified line index range;<br>3. The value is 1-based.
 - LineRegEx: The regular regression on the lines sepcified by `LineNumber`.
@@ -112,7 +112,7 @@ Sets the condition on each specified line. This parameter only takes effect when
 {
     "FilteringConditions":
     {
-        "AreaType": "DLR_AT_LINE_N",
+        "AreaType": "AT_LINE_N",
         "LineArray":
         [
             {
@@ -148,7 +148,7 @@ Sets the target area where the coordinates need to be inferred.
     [
         {
             "TargetTextAreaNameArray":["TA_1"],
-            "ReferenceAreaType": "DLR_RAT_TEXT_LINE",
+            "ReferenceAreaType": "RAT_TEXT_LINE",
             "LineNumber": "1,3-5",	
             "LineRegEx": "Sodium[(\w| )]*",	
             "RestrictedInInferenceArea": 1  
@@ -167,10 +167,10 @@ Sets the reference source type.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| ReferenceSettings | ReferenceAreaType | *string* | "DLR_RAT_TEXT_AREA"<br>"DLR_RAT_TEXT_LINE"| "DLR_RAT_TEXT_AREA" |
+| ReferenceSettings | ReferenceAreaType | *string* | "RAT_TEXT_AREA"<br>"RAT_TEXT_LINE"| "RAT_TEXT_AREA" |
 
-- DLR_RAT_TEXT_AREA: The source postion is the quadrilateral coordinates of the text area.
-- DLR_RAT_TEXT_LINE: The source postion is the quadrilateral coordinates of the specified line(s).
+- RAT_TEXT_AREA: The source postion is the quadrilateral coordinates of the text area.
+- RAT_TEXT_LINE: The source postion is the quadrilateral coordinates of the specified line(s).
 
 **Json Parameter Example**   
 ```json
@@ -179,7 +179,7 @@ Sets the reference source type.
     [
         {
             "TargetTextAreaNameArray":["TA_1"],
-            "ReferenceAreaType": "DLR_RAT_TEXT_LINE",
+            "ReferenceAreaType": "RAT_TEXT_LINE",
             "LineNumber": "1,3-5",	
             "LineRegEx": "Sodium[(\w| )]*",	
             "RestrictedInInferenceArea": 1  
@@ -192,7 +192,7 @@ Sets the reference source type.
 &nbsp;
 
 ### LineNumber
-Sets the source line(s) by specifying the line numbers. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "DLR_RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
+Sets the source line(s) by specifying the line numbers. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
 
 #### As Json Parameter
 
@@ -208,7 +208,7 @@ Sets the source line(s) by specifying the line numbers. It is optional and only 
     [
         {
             "TargetTextAreaNameArray":["TA_1"],
-            "ReferenceAreaType": "DLR_RAT_TEXT_LINE",
+            "ReferenceAreaType": "RAT_TEXT_LINE",
             "LineNumber": "1,3-5",	
             "LineRegEx": "Sodium[(\w| )]*",	
             "RestrictedInInferenceArea": 1  
@@ -221,7 +221,7 @@ Sets the source line(s) by specifying the line numbers. It is optional and only 
 
 
 ### LineRegEx
-Sets the source line(s) where the text satisfies the regular expression. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "DLR_RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
+Sets the source line(s) where the text satisfies the regular expression. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
 
 #### As Json Parameter
 
@@ -237,7 +237,7 @@ Sets the source line(s) where the text satisfies the regular expression. It is o
     [
         {
             "TargetTextAreaNameArray":["TA_1"],
-            "ReferenceAreaType": "DLR_RAT_TEXT_LINE",
+            "ReferenceAreaType": "RAT_TEXT_LINE",
             "LineNumber": "1,3-5",	
             "LineRegEx": "Sodium[(\w| )]*",	
             "RestrictedInInferenceArea": 1  
@@ -266,7 +266,7 @@ Set whether the target text area(s) is located inside the Inference Area or not.
     [
         {
             "TargetTextAreaNameArray":["TA_1"],
-            "ReferenceAreaType": "DLR_RAT_TEXT_LINE",
+            "ReferenceAreaType": "RAT_TEXT_LINE",
             "LineNumber": "1,3-5",	
             "LineRegEx": "Sodium[(\w| )]*",	
             "RestrictedInInferenceArea": 1  

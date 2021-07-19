@@ -22,7 +22,7 @@ Stores the FurtherModes.
 | [`textureDetectionModes[8]`](#texturedetectionmodes) | [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) |
 
 
-### ColourConversionModes
+### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
 ```cpp
@@ -38,7 +38,7 @@ ColourConversionMode colourConversionModes[8]
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
-### GrayscaleTransformationModes
+### grayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
 
 ```cpp
@@ -54,7 +54,7 @@ GrayscaleTransformationMode grayscaleTransformationModes[8]
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
-### RegionPredetectionModes
+### regionPredetectionModes
 Sets the region pre-detection mode.
 
 ```cpp
@@ -70,7 +70,7 @@ RegionPredetectionMode regionPredetectionModes[8]
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-### GrayscaleEnhancementModes
+### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
 ```cpp
@@ -86,7 +86,7 @@ GrayscaleEnhancementMode grayscaleEnhancementModes[8]
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-### TextureDetectionModes
+### textureDetectionModes
 Sets the mode and priority for texture detection. 
 
 ```cpp

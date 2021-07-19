@@ -88,10 +88,10 @@ The formats of the barcode in BarcodeFormat group 1.
 int BarcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
+    A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
       
 - **Default value**   
-    DLR_BF_ALL
+    BF_ALL
     
 - **Remarks**   
     Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
@@ -105,10 +105,10 @@ The formats of the barcode in BarcodeFormat group 2.
 int BarcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
+    A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
       
 - **Default value**   
-    DLR_BF2_NULL
+    BF2_NULL
     
 - **Remarks**   
     Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>

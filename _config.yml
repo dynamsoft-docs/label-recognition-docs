@@ -44,6 +44,8 @@ dbr_icon: /label-recognition/assets/img-icon/icon-dbr.svg
 dwt_icon: /label-recognition/assets/img-icon/icon-dwt.svg
 dnt_icon: /label-recognition/assets/img-icon/icon-dnt.svg
 
+useVersionTree: true
+
 baseurl: "/label-recognition"
 plugins:
   - jemoji

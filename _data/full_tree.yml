@@ -1,5 +1,5 @@
 tree_file_list:
-    - sidelist_fullTree.html
+    - sidelist-fullTree.html
     - sidelist-introduction.html
     - sidelist-parameters/parameters-enumerations.html
     - sidelist-parameters/parameters-references-v1.2.1.html

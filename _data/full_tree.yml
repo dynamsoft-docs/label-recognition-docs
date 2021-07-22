@@ -1,6 +1,7 @@
 tree_file_list:
     - sidelist-full-tree.html
     - sidelist-introduction.html
+    - sidelist-parameters/parameters-enumerations-v1.2.1.html
     - sidelist-parameters/parameters-enumerations.html
     - sidelist-parameters/parameters-references-v1.2.1.html
     - sidelist-parameters/parameters-references.html

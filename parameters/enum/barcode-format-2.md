@@ -9,7 +9,8 @@ noTitleIndex: true
 ---
 
 # BarcodeFormat_2
-Describes the barcode types in BarcodeFormat group 2. Note: The barcode format our library supported is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+Describes the barcode types in BarcodeFormat group 2. 
+>Note: The barcode format our library supported is composed of [BarcodeFormat group 1](barcode-format.md) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
 
 ## Declarations

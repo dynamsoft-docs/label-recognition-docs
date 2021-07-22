@@ -25,8 +25,8 @@ typedef struct tagBarcodeResult*  PBarcodeResult
   
 | Attribute | Type |
 |---------- | ---- |
-| [`barcodeFormat`](#barcodeformat) | [`BarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`BarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) |
+| [`barcodeFormat`](#barcodeformat) | [`BarcodeFormat`]({{ site.enumerations }}barcode-format.html) |
+| [`barcodeFormat_2`](#barcodeformat_2) | [`BarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html) |
 | [`text`](#text) | *const char \** |
 | [`bytes`](#bytes) | *unsigned char \** |
 | [`bytesLength`](#byteslength) | *int* |

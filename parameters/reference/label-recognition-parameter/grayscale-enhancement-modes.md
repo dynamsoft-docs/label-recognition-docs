@@ -16,10 +16,10 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode) array* | "GEM_SKIP"<br>"GEM_AUTO"<br>"GEM_GENERAL"<br>"GEM_GRAY_EQUALIZE"<br>"GEM_GRAY_SMOOTH"<br>"GEM_SHARPEN_SMOOTH"<br>"GEM_MORPHOLOGY" | ["GEM_GENERAL", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP"] |
+| *string array* or *[`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) array* | "GEM_SKIP"<br>"GEM_AUTO"<br>"GEM_GENERAL"<br>"GEM_GRAY_EQUALIZE"<br>"GEM_GRAY_SMOOTH"<br>"GEM_SHARPEN_SMOOTH"<br>"GEM_MORPHOLOGY" | ["GEM_GENERAL", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP"] |
 
 - **See also**:   
-    [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)
+    [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}grayscale-enhancement-mode.html)
     
 #### Mode Arguments
 - [Sensitivity](#sensitivity)
@@ -189,13 +189,13 @@ Default values will be used if there is no manual setting.
 
 
 #### As `DLR_RuntimeSettings` Member
-`GrayscaleEnhancementModes` is a [`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority for image preprocessing algorithms. Default value will be used if there is no manual setting.
+`GrayscaleEnhancementModes` is a [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority for image preprocessing algorithms. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`grayscaleEnhancementModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#grayscaleenhancementmodes) | [`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`grayscaleEnhancementModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#grayscaleenhancementmodes) | [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html)[8] |
 
 **See Also**    
 - [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)
 - [`DLR_FurtherModes` Struct]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html)
-- [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)
+- [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}grayscale-enhancement-mode.html)

@@ -22,7 +22,7 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`TextArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
 | [`DictionaryPath`](#dictionarypath) | *string* |
 | [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
-| [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
+| [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)[ ] |
 | [`FurtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
 | [`LineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 
@@ -81,7 +81,7 @@ EnumBinarizationMode[] BinarizationModes
 ```
 
 - **Value range**   
-    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
       
 - **Default value**   
     `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`

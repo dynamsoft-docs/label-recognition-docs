@@ -266,7 +266,7 @@ The library will localize reference region(s) based on the barcodes whose format
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| Localization | BarcodeFormatIds | *string Array* | An array item can be any one of the [`BarcodeFormat` Enumeration]({{ site.enumerations }}other-enums.html#barcodeformat) items | "BF_ALL" |
+| Localization | BarcodeFormatIds | *string Array* | An array item can be any one of the [`BarcodeFormat` Enumeration]({{ site.enumerations }}barcode-format.html) items | "BF_ALL" |
 
 **Json Parameter Example**   
 ```
@@ -299,7 +299,7 @@ The library will localize reference region(s) based on the barcodes whose format
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| Localization | BarcodeFormatIds_2 | *string Array* | An array item can be any one of the [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}other-enums.html#barcodeformat_2) items | "BF2_NULL" |
+| Localization | BarcodeFormatIds_2 | *string Array* | An array item can be any one of the [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}barcode-format-2.html) items | "BF2_NULL" |
 
 **Json Parameter Example**   
 ```

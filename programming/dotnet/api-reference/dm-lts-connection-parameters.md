@@ -91,13 +91,13 @@ EnumDMDeploymentType DeploymentType
 ```
 
 - **Value range**   
-    Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.   
+    Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.   
       
 - **Default value**   
     DM_DT_DESKTOP   
     
 - **See also**  
-    [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)    
+    [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html)    
 
 ### ChargeWay
 Sets the charge way.
@@ -105,13 +105,13 @@ Sets the charge way.
 int ChargeWay
 ```
 - **Value range**   
-    A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
+    A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
 - **Default value**   
     `DM_CW_AUTO`
     
 - **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+    [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
 ### UUIDGenerationMethod
@@ -120,13 +120,13 @@ Sets the method to generate UUID.
 int UUIDGenerationMethod
 ```
 - **Value range**   
-    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
 - **Default value**   
     `DM_UUIDGM_RANDOM`
     
 - **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
 ### MaxBufferDays
@@ -146,13 +146,13 @@ Sets the license modules to use.
 List<Integer>  LimitedLicenseModules
 ```
 - **Value range**   
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
+    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
       
 - **Default value**   
     null
     
 - **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
+    [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 
 ### MaxConcurrentInstanceCount
@@ -186,10 +186,10 @@ Sets the products to get the license for. Product values can be combined.
 int Products
 ```
 - **Value range**   
-    A combine value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items.
+    A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
       
 - **Default value**   
     `PROD_ALL`
     
 - **See also**  
-    [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
+    [`EnumProduct`]({{ site.enumerations }}product.html)

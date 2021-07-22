@@ -27,12 +27,12 @@ typedef struct tagDM_DLSConnectionParameters  DM_DLSConnectionParameters
 | [`standbyServerURL`](#standbyserverurl) | *char\** |
 | [`handshakeCode`](#handshakecode) | *char\** |
 | [`sessionPassword`](#sessionpassword) | *char\** |
-| [`deploymentType`](#deploymenttype) | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) |
-| [`chargeWay`](#chargeway) | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) |
-| [`UUIDGenerationMethod`](#uuidgenerationmethod) | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) |
+| [`deploymentType`](#deploymenttype) | [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html) |
+| [`chargeWay`](#chargeway) | [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html) |
+| [`UUIDGenerationMethod`](#uuidgenerationmethod) | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) |
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModulesCount`](#limitedlicensemodulescount) | *int* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
+| [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}dm-license-module.html) |
 | [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
 | [`organizationID`](#organizationID) | *char\** |
 | [`products`](#products) | *int* |
@@ -97,13 +97,13 @@ Sets the deployment type.
 DM_DeploymentType deploymentType
 ```
 - **Value range**   
-    A value of [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.
+    A value of [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.
       
 - **Default value**   
     `DM_DT_DESKTOP`
     
 - **See also**  
-    [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)
+    [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html)
       
 
 ### chargeWay
@@ -112,13 +112,13 @@ Sets the charge way.
 DM_ChargeWay chargeWay
 ```
 - **Value range**   
-    A value of [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
+    A value of [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
 - **Default value**   
     `DM_CW_AUTO`
     
 - **See also**  
-    [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+    [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
 ### UUIDGenerationMethod
@@ -127,13 +127,13 @@ Sets the method to generate UUID.
 DM_UUIDGenerationMethod UUIDGenerationMethod
 ```
 - **Value range**   
-    A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+    A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
 - **Default value**   
     `DM_UUIDGM_RANDOM`
     
 - **See also**  
-    [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+    [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
 ### maxBufferDays
@@ -164,13 +164,13 @@ Sets the license modules to use.
 DM_LicenseModule* limitedLicenseModules
 ```
 - **Value range**   
-    Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+    Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.
       
 - **Default value**   
     NULL
     
 - **See also**  
-    [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+    [`DM_LicenseModule`]({{ site.enumerations }}dm-license-module.html)
 
 ### maxConcurrentInstanceCount
 Sets the max concurrent instance count.
@@ -203,13 +203,13 @@ Sets the products to get the license for. Product values can be combined.
 int products
 ```
 - **Value range**   
-    A combine value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items.
+    A combine value of [`Product`]({{ site.enumerations }}product.html) Enumeration items.
       
 - **Default value**   
     `PROD_ALL`
     
 - **See also**  
-    [`Product`]({{ site.enumerations }}other-enums.html#product)
+    [`Product`]({{ site.enumerations }}product.html)
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.

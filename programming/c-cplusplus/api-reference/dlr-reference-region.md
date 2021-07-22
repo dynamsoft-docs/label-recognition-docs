@@ -24,7 +24,7 @@ typedef struct tagDLR_ReferenceRegion  DLR_ReferenceRegion
   
 | Attribute | Type |
 |---------- | ---- |
-| [`localizationSourceType`](#localizationsourcetype) | [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) |
+| [`localizationSourceType`](#localizationsourcetype) | [`LocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
 | [`points[4]`](#points) | [`DM_Point`](point.md) |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
@@ -39,7 +39,7 @@ The source type used to localize the reference region(s).
 LocalizationSourceType localizationSourceType
 ```
 - **Value range**   
-    A value of [`LocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) Enumeration items.
+    A value of [`LocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) Enumeration items.
       
 - **Default value**   
     `LST_MANUAL_SPECIFICATION`
@@ -97,7 +97,7 @@ The formats of the barcode in BarcodeFormat group 1.
 int barcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`BarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
+    A combined value of [`BarcodeFormat`]({{ site.enumerations }}barcode-format.html) Enumeration items
       
 - **Default value**   
     BF_ALL
@@ -114,7 +114,7 @@ The formats of the barcode in BarcodeFormat group 2.
 int barcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`BarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
+    A combined value of [`BarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html) Enumeration items
       
 - **Default value**   
     BF2_NULL

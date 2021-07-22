@@ -86,13 +86,13 @@ Sets the charge way.
 EnumDMChargeWay chargeWay
 ```
 - **Value range**   
-    A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
+    A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
 - **Default value**   
     `EnumDMChargeWayAuto`
     
 - **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+    [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
 ### UUIDGenerationMethod
@@ -101,13 +101,13 @@ Sets the method to generate UUID.
 EnumDMUUIDGenerationMethod UUIDGenerationMethod
 ```
 - **Value range**   
-    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
 - **Default value**   
     `EnumDMUUIDGenerationMethodRandom`
     
 - **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
 ### maxBufferDays
@@ -127,13 +127,13 @@ Sets the license modules to use.
 NSArray*  limitedLicenseModules
 ```
 - **Value range**   
-    Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
+    Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
       
 - **Default value**   
     nil
     
 - **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
+    [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 ### organizationID
 The organization ID got from Dynamsoft.
@@ -152,11 +152,11 @@ Sets the products to get the license for. Product values can be combined.
 NSInteger products
 ```
 - **Value range**   
-    A combine value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items.
+    A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
       
 - **Default value**   
     `EnumProductALL`
     
 - **See also**  
-    [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)
+    [`EnumProduct`]({{ site.enumerations }}product.html)
   

@@ -11,7 +11,8 @@ noTitleIndex: true
 
 # BarcodeFormat
 
-Describes the barcode types in BarcodeFormat group 1. All the formats can be combined, such as BF_CODE_39 | BF_CODE_128. Note: The barcode format our library supported is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+Describes the barcode types in BarcodeFormat group 1. All the formats can be combined, such as BF_CODE_39 | BF_CODE_128. 
+>Note: The barcode format our library supported is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](barcode-format-2.md), so you need to specify the barcode format in group 1 and group 2 individually.
 
 ## Declarations
    

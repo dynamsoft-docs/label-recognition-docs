@@ -20,7 +20,7 @@ Stores the image data.
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
 
 
 ### bytes

@@ -17,10 +17,10 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) array* | "CICM_SKIP"<br>"CICM_GENERAL" | ["CICM_GENERAL", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP"] |
+| *string array* or *[`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) array* | "CICM_SKIP"<br>"CICM_GENERAL" | ["CICM_GENERAL", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP"] |
 
 - **See also**:   
-    [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+    [`ColourConversionMode` Enumeration]({{ site.enumerations }}colour-conversion-mode.html)
     
 #### Mode Arguments
 - [BlueChannelWeight](#bluechannelweight)
@@ -106,15 +106,15 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `DLR_RuntimeSettings` Member
-`ColourConversionModes` is a [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority for converting a colour image to a grayscale image. Default value will be used if there is no manual setting.
+`ColourConversionModes` is a [`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority for converting a colour image to a grayscale image. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`colourConversionModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#colourconversionmodes) | [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`colourConversionModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#colourconversionmodes) | [`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html)[8] |
 
 
 **See Also**    
 - [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)
 - [`DLR_FurtherModes` Struct]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html)
-- [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+- [`ColourConversionMode` Enumeration]({{ site.enumerations }}colour-conversion-mode.html)
 

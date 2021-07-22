@@ -16,7 +16,7 @@ Stores the reference region information.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) |
+| [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
 | [`points`](#points) | *NSArray\** |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *NSInteger* |
@@ -30,7 +30,7 @@ The source type used to localize the reference region(s).
 NSInteger localizationSourceType
 ```
 - **Value range**   
-    A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}other-enums.html#localizationsourcetype) Enumeration items.
+    A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) Enumeration items.
       
 - **Default value**   
     `EnumLocalizationSourceTypeManualSpecification`
@@ -88,7 +88,7 @@ The formats of the barcode in BarcodeFormat group 1.
 NSInteger barcodeFormatIds
 ```
 - **Value range**   
-    A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) Enumeration items
+    A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html) Enumeration items
       
 - **Default value**   
     EnumBarcodeFormatALL
@@ -105,7 +105,7 @@ The formats of the barcode in BarcodeFormat group 2.
 NSInteger barcodeFormatIds_2
 ```
 - **Value range**   
-    A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) Enumeration items
+    A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html) Enumeration items
       
 - **Default value**   
     EnumBarcodeFormat2NULL

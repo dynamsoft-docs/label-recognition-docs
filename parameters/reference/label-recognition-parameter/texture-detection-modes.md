@@ -16,10 +16,10 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) array* | "TDM_SKIP"<br>"TDM_AUTO"<br>"TDM_GENERAL_WIDTH_CONCENTRATION" | ["TDM_GENERAL_WIDTH_CONCENTRATION", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP"] |
+| *string array* or *[`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array* | "TDM_SKIP"<br>"TDM_AUTO"<br>"TDM_GENERAL_WIDTH_CONCENTRATION" | ["TDM_GENERAL_WIDTH_CONCENTRATION", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP", "TDM_SKIP"] |
 
 - **See also**:   
-    [`TextureDetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+    [`TextureDetectionMode` Enumeration]({{ site.enumerations }}texture-detection-mode.html)
     
 #### Mode Arguments
 - [Sensitivity](#sensitivity)
@@ -81,14 +81,14 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `DLR_RuntimeSettings` Member
-`TextureDetectionModes` is a [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority  for texture detection. Default value will be used if there is no manual setting.
+`TextureDetectionModes` is a [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array defines in `furtherModes` which is a struct member of `DLR_RuntimeSettings`. It is used for setting the modes and the priority  for texture detection. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`textureDetectionModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#texturedetectionmodes) | [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)->[`furtherModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#furthermodes) | [`textureDetectionModes`]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html#texturedetectionmodes) | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html)[8] |
 
 
 **See Also**    
 - [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)
 - [`DLR_FurtherModes` Struct]({{ site.c-cplusplus-api-reference }}dlr-further-modes.html)
-- [`TextureDetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+- [`TextureDetectionMode` Enumeration]({{ site.enumerations }}texture-detection-mode.html)

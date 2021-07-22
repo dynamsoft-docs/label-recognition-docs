@@ -16,8 +16,8 @@ Stores the barcode result.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`BarcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}other-enums.html#barcodeformat) |
-| [`BarcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#barcodeformat_2) |
+| [`BarcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html) |
+| [`BarcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html) |
 | [`Text`](#text) | *string* |
 | [`Bytes`](#bytes) | *byte[]* |
 | [`Location`](#location) | [`Quadrilateral`](quadrilateral.md)\* |

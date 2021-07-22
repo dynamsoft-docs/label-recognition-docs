@@ -16,10 +16,10 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
+| *[`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
 
 - **See also**:   
-    [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+    [`BinarizationMode` Enumeration]({{ site.enumerations }}binarization-mode.html)
     
 #### Mode Arguments
 - [BlockSizeX](#blocksizex)
@@ -116,13 +116,13 @@ Sets the binarization threshold.
 
 
 #### As `DLR_RuntimeSettings` Member
-`BinarizationModes` as a member of `DLR_RuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
+`BinarizationModes` as a member of `DLR_RuntimeSettings` struct is a [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) array for setting the modes and the priority  for binarization. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
+| [`DLR_RuntimeSettings`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html) | [`binarizationModes`]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html)[8] |
 
 **See Also**    
 - [`DLR_RuntimeSettings` Struct]({{ site.c-cplusplus-api-reference }}dlr-runtime-settings.html)
-- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- [`BinarizationMode` Enumeration]({{ site.enumerations }}binarization-mode.html)
 

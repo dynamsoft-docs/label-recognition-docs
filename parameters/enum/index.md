@@ -27,7 +27,7 @@ needGenerateH3Content: true
   | Enumeration | Description |
   |-------------|-------------|
   | [`BarcodeFormat`](barcode-format.md) | Describes the barcode formats in BarcodeFormat group 1. |
-  | [`BarcodeFormat_2`](barcode-format_2.md) | Describes the barcode formats in BarcodeFormat group 2. |
+  | [`BarcodeFormat_2`](barcode-format-2.md) | Describes the barcode formats in BarcodeFormat group 2. |
   | [`ImagePixelFormat`](image-pixel-format.md) | Describes the image pixel format. |
   | [`LocalizationSourceType`](localization-source-type.md) | Describes the source type used to localize the reference region(s). |
   | [`DM_ChargeWay`](dm-charge-way.md) | Describes the charge way. |

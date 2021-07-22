@@ -40,23 +40,22 @@ needGenerateH3Content: true
 ## Enumerations
 
 ### Package com.dynamsoft.core
-
-- [EnumRegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
-- [EnumColourConversionMode]({{ site.enumerations }}other-enums.html#colourconversionmode)
-- [EnumGrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
-- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
-- [EnumBinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [EnumTextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-- [EnumBarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
-- [EnumBarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
-- [EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)
-- [EnumDMChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [EnumDMLicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [EnumProduct]({{ site.enumerations }}other-enums.html#product)	
+- [EnumRegionPredetectionMode]({{ site.enumerations }}region-predetection-mode.html)
+- [EnumColourConversionMode]({{ site.enumerations }}colour-conversion-mode.html)
+- [EnumGrayscaleTransformationMode]({{ site.enumerations }}grayscale-transformation-mode.html)
+- [EnumGrayscaleEnhancementMode]({{ site.enumerations }}grayscale-enhancement-mode.html)
+- [EnumBinarizationMode]({{ site.enumerations }}binarization-mode.html)
+- [EnumTextureDetectionMode]({{ site.enumerations }}texture-detection-mode.html)
+- [EnumBarcodeFormat]({{ site.enumerations }}barcode-format.html)
+- [EnumBarcodeFormat_2]({{ site.enumerations }}barcode-format-2.html)
+- [EnumImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
+- [EnumDMChargeWay]({{ site.enumerations }}dm-charge-way.html)	
+- [EnumDMLicenseModule]({{ site.enumerations }}dm-license-module.html)	
+- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)	
+- [EnumProduct]({{ site.enumerations }}product.html)	
 
 ### Package com.dynamsoft.dlr
-- [EnumLocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
+- [EnumLocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
 
 ## Error Code
 

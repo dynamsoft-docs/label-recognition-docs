@@ -33,19 +33,22 @@ needGenerateH3Content: true
 - [DLR_LineSpecification](dlr-line-specification.md)
 
 ## Enumerations
-- [RegionPredetectionMode]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
-- [ColourConversionMode]({{ site.enumerations }}other-enums.html#colourconversionmode)
-- [GrayscaleTransformationMode]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
-- [GrayscaleEnhancementMode]({{ site.enumerations }}other-enums.html#grayscaleenhancementmode)
-- [BinarizationMode]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [TextureDetectionMode]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-- [BarcodeFormat]({{ site.enumerations }}other-enums.html#barcodeformat)
-- [BarcodeFormat_2]({{ site.enumerations }}other-enums.html#barcodeformat_2)
-- [DM_ChargeWay]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [DM_LicenseModule]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [DM_UUIDGenerationMethod]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [Product]({{ site.enumerations }}other-enums.html#product)	
-- [LocalizationSourceType]({{ site.enumerations }}other-enums.html#localizationsourcetype)
+
+- [RegionPredetectionMode]({{ site.enumerations }}region-predetection-mode.html)
+- [ColourConversionMode]({{ site.enumerations }}colour-conversion-mode.html)
+- [GrayscaleTransformationMode]({{ site.enumerations }}grayscale-transformation-mode.html)
+- [GrayscaleEnhancementMode]({{ site.enumerations }}grayscale-enhancement-mode.html)
+- [BinarizationMode]({{ site.enumerations }}binarization-mode.html)
+- [TextureDetectionMode]({{ site.enumerations }}texture-detection-mode.html)
+- [BarcodeFormat]({{ site.enumerations }}barcode-format.html)
+- [BarcodeFormat_2]({{ site.enumerations }}barcode-format-2.html)
+- [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
+- [DMChargeWay]({{ site.enumerations }}dm-charge-way.html)	
+- [DMLicenseModule]({{ site.enumerations }}dm-license-module.html)	
+- [DMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)	
+- [Product]({{ site.enumerations }}product.html)	
+- [LocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
+
 
 ## Error Code
 

@@ -32,16 +32,22 @@ typedef struct tagImageData  ImageData
 | [`format`](#format) | [`ImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
 
 
+&nbsp;
+
 ### bytesLength
 The length of the image data byte array. 
 ```cpp
 int bytesLength
 ```
+&nbsp;
+
 ### bytes
 The image data content in a byte array. 
 ```cpp
 unsigned char* bytes
 ```
+
+&nbsp;
 
 ### width
 The width of the image in pixels.  
@@ -49,17 +55,23 @@ The width of the image in pixels.
 int width
 ```
 
+&nbsp;
+
 ### height
 The height of the image in pixels.  
 ```cpp
 int height
 ```
 
+&nbsp;
+
 ### stride
 The stride (or scan width) of the image. 
 ```cpp
 int stride
 ```
+
+&nbsp;
 
 ### format
 The image pixel format used in the image byte array. 

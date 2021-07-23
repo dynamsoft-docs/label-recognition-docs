@@ -29,11 +29,15 @@ typedef struct tagDLR_ResultArray  DLR_ResultArray
 
 
 
+&nbsp;
+
 ### results
 The DLR_Result array.
 ```cpp
 PDLR_Result* results
 ```
+
+&nbsp;
 
 ### resultsCount
 The total count of DLR_Result.

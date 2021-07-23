@@ -28,6 +28,8 @@ typedef struct tagQuadrilateral  Quadrilateral
 | [`points`](#points) | [`DM_Point`](point.md)[4] |
 
 
+&nbsp;
+
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```cpp

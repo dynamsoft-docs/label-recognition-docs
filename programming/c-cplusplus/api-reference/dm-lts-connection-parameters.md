@@ -40,6 +40,8 @@ typedef struct tagDM_DLSConnectionParameters  DM_DLSConnectionParameters
 | [`reserved`](#reserved) | *char\[52\]* |
 
 
+&nbsp;
+
 ### mainServerURL
 The URL of the license tracking server.
 ```cpp
@@ -54,6 +56,8 @@ char*  mainServerURL
 - **Remarks**   
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
+
+&nbsp;
 
 ### standbyServerURL
 The URL of the standby license tracking server.
@@ -70,6 +74,8 @@ char*  standbyServerURL
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
+&nbsp;
+
 ### handshakeCode
 The handshake code.
 ```cpp
@@ -81,6 +87,8 @@ char*  handshakeCode
 - **Default value**   
     NULL
 
+&nbsp;
+
 ### sessionPassword
 The session password of the handshake code set in license tracking server.
 ```cpp
@@ -91,6 +99,8 @@ char*  sessionPassword
       
 - **Default value**   
     NULL
+
+&nbsp;
 
 ### deploymentType
 Sets the deployment type.
@@ -107,6 +117,8 @@ DM_DeploymentType deploymentType
     [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html)
       
 
+&nbsp;
+
 ### chargeWay
 Sets the charge way.
 ```cpp
@@ -121,6 +133,8 @@ DM_ChargeWay chargeWay
 - **See also**  
     [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
+
+&nbsp;
 
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
@@ -137,6 +151,8 @@ DM_UUIDGenerationMethod UUIDGenerationMethod
     [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
+&nbsp;
+
 ### maxBufferDays
 Sets the max days to buffer the license info.
 ```cpp
@@ -148,6 +164,8 @@ int maxBufferDays
 - **Default value**   
     0
 
+&nbsp;
+
 ### limitedLicenseModulesCount
 Sets the count of license modules to use.
 ```cpp
@@ -158,6 +176,8 @@ int limitedLicenseModulesCount
       
 - **Default value**   
     0
+
+&nbsp;
 
 ### limitedLicenseModules
 Sets the license modules to use.
@@ -173,6 +193,8 @@ DM_LicenseModule* limitedLicenseModules
 - **See also**  
     [`DM_LicenseModule`]({{ site.enumerations }}dm-license-module.html)
 
+&nbsp;
+
 ### maxConcurrentInstanceCount
 Sets the max concurrent instance count.
 ```cpp
@@ -187,6 +209,8 @@ int maxConcurrentInstanceCount
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT.<br>
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
+&nbsp;
+
 ### organizationID
 The organization ID got from Dynamsoft.
 ```cpp
@@ -197,6 +221,8 @@ char* organizationID
       
 - **Default value**   
     NULL
+
+&nbsp;
 
 ### products
 Sets the products to get the license for. Product values can be combined.
@@ -211,6 +237,8 @@ int products
     
 - **See also**  
     [`Product`]({{ site.enumerations }}product.html)
+
+&nbsp;
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.

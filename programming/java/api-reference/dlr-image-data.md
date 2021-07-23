@@ -24,11 +24,15 @@ Stores the image data.
 | [`format`](#format) | [`DLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat) |
 
 
+&nbsp;
+
 ### bytes
 The image data content in a byte array. 
 ```java
 byte[] bytes
 ```
+
+&nbsp;
 
 ### width
 The width of the image in pixels.  
@@ -36,17 +40,23 @@ The width of the image in pixels.
 int width
 ```
 
+&nbsp;
+
 ### height
 The height of the image in pixels.  
 ```java
 int height
 ```
 
+&nbsp;
+
 ### stride
 The stride (or scan width) of the image. 
 ```java
 int stride
 ```
+
+&nbsp;
 
 ### format
 The image pixel format used in the image byte array. 

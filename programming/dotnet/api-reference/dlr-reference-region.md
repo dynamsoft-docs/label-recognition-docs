@@ -25,6 +25,8 @@ Stores the reference region information.
 | [`BarcodeFormatIds_2`](#barcodeformatids_2) | *int* |
 | [`BarcodeTextRegExPattern`](#barcodetextregexpattern) | *string* |
 
+&nbsp;
+
 ### LocalizationSourceType
 The source type used to localize the reference region(s).
 ```csharp
@@ -39,6 +41,8 @@ int LocalizationSourceType
 - **Remarks**  
     
 
+&nbsp;
+
 ### Points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```csharp
@@ -47,6 +51,8 @@ DLRPoint[] Points
 - **Remarks**   
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
+
+&nbsp;
 
 ### RegionMeasuredByPercentage
 Whether or not to use percentage to measure the coordinate.
@@ -66,6 +72,8 @@ int RegionMeasuredByPercentage
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  
 
 
+&nbsp;
+
 ### RegionPredetectionModesIndex
 The index of a specific region predetection mode in the regionPredetectionModes parameter.
 ```csharp
@@ -82,6 +90,8 @@ int RegionPredetectionModesIndex
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
+
+&nbsp;
 
 ### BarcodeFormatIds
 The formats of the barcode in BarcodeFormat group 1.
@@ -100,6 +110,8 @@ int BarcodeFormatIds
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
+&nbsp;
+
 ### BarcodeFormatIds_2
 The formats of the barcode in BarcodeFormat group 2.
 ```csharp
@@ -116,6 +128,8 @@ int BarcodeFormatIds_2
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
+&nbsp;
+
 ### BarcodeTextRegExPattern
 The regular express pattern of barcode text.
 ```csharp

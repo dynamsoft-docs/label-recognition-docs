@@ -29,12 +29,16 @@ typedef struct tagDM_Point*  PDM_Point
 | [`y`](#y) | *int* |
 
 
+&nbsp;
+
 ### x
 The X coordinate of the point.
 ```cpp
 int x
 ```
 
+
+&nbsp;
 
 ### y
 The Y coordinate of the point.

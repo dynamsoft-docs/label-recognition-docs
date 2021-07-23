@@ -12,11 +12,15 @@ needGenerateH3Content: true
 
 ## Primary Classes
 
+&nbsp;
+
 ### namespace Dynamsoft.DLR
 
 - [LabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
+
+&nbsp;
 
 ### namespace Dynamsoft.Core
 
@@ -24,6 +28,8 @@ needGenerateH3Content: true
 - [ImageData](image-data.md)
 - [DMDLSConnectionParameters](dm-lts-connection-parameters.md)
 - [BarcodeResult](barcode-result.md)
+
+&nbsp;
 
 ### namespace Dynamsoft.DLR
 - [LabelRecognizerException](label-recognizer-exception.md)
@@ -37,6 +43,8 @@ needGenerateH3Content: true
 - [DLRLineSpecification](dlr-line-specification.md)
 
 ## Enumerations
+
+&nbsp;
 
 ### namespace Dynamsoft.Core
 
@@ -53,6 +61,8 @@ needGenerateH3Content: true
 - [EnumDMLicenseModule]({{ site.enumerations }}dm-license-module.html)	
 - [EnumDMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)	
 - [EnumProduct]({{ site.enumerations }}product.html)	
+
+&nbsp;
 
 ### namespace Dynamsoft.DLR
 - [EnumLocalizationSourceType]({{ site.enumerations }}localization-source-type.html)

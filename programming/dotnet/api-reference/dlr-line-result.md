@@ -25,11 +25,15 @@ Stores the line result.
 | [`CharacterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
 
 
+&nbsp;
+
 ### LineSpecificationName
 The name of the line specification used to recognize current line result.
 ```csharp
 string LineSpecificationName
 ```
+
+&nbsp;
 
 ### Text
 The recognized text, ends by '\0'.
@@ -37,11 +41,15 @@ The recognized text, ends by '\0'.
 string Text
 ```
 
+&nbsp;
+
 ### CharacterModelName
 The character model used to recognize the text.
 ```csharp
 string CharacterModelName
 ```
+
+&nbsp;
 
 ### Location
 The location of current line.
@@ -50,11 +58,15 @@ Quadrilateral Location
 ```
 
 
+&nbsp;
+
 ### Confidence
 The confidence of the result. It ranges from 0 to 100.
 ```csharp
 int Confidence
 ```
+
+&nbsp;
 
 ### CharacterResults
 The character results array.

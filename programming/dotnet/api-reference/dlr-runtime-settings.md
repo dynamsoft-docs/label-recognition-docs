@@ -28,6 +28,8 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`LineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 
 
+&nbsp;
+
 ### MaxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
 ```csharp
@@ -42,6 +44,8 @@ int MaxThreadCount
 - **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
+&nbsp;
+
 ### CharacterModelName
 The name of the CharacterModel.
 
@@ -50,11 +54,15 @@ string CharacterModelName
 ```
 
 
+&nbsp;
+
 ### ReferenceRegion
 Sets the reference region to search for text.
 ```csharp
 DLRReferenceRegion ReferenceRegion
 ```
+
+&nbsp;
 
 ### TextArea
 Sets the text area relative to the reference region.
@@ -62,17 +70,23 @@ Sets the text area relative to the reference region.
 Quadrilateral TextArea
 ```
 
+&nbsp;
+
 ### DictionaryPath
 Sets the path of the dictionary file.
 ```csharp
 string DictionaryPath
 ```
 
+&nbsp;
+
 ### DictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```csharp
 DLRDictionaryCorrectionThreshold DictionaryCorrectionThreshold
 ```
+
+&nbsp;
 
 ### BinarizationModes
 Sets the mode and priority for binarization.
@@ -91,6 +105,8 @@ EnumBinarizationMode[] BinarizationModes
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+&nbsp;
+
 ### FurtherModes
 Sets further modes.
 
@@ -101,6 +117,8 @@ DLRFurtherModes FurtherModes
 - **See also**  
     [`DLRFurtherModes`](dlr-further-modes.md)
 
+
+&nbsp;
 
 ### LineSpecification
 Sets line specification.

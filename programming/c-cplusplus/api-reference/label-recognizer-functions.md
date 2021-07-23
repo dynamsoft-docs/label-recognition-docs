@@ -24,6 +24,8 @@ noTitleIndex: true
 
 
 
+&nbsp;
+
 ### DLR_CreateInstance
 Create an instance of Dynamsoft Label Recognizer.
 
@@ -46,6 +48,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+&nbsp;
+
 ### DLR_DestroyInstance
 Destroy the instance of Dynamsoft Label Recognizer.
 
@@ -62,6 +66,8 @@ void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_DestroyInstance(recognizer);
 ```
+
+&nbsp;
 
 ### DLR_InitLicense
 Sets product key and activate the SDK.
@@ -85,6 +91,8 @@ DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_DestroyInstance(recognizer);
 ```
 
+&nbsp;
+
 ### DLR_InitDLSConnectionParameters
 Initializes a DM_DLSConnectionParameters struct with default values.
 
@@ -105,6 +113,8 @@ char errorBuf[512];
 DMDLSConnectionParameters paramters;
 DLR_InitDLSConnectionParameters(&paramters);
 ```
+
+&nbsp;
 
 ### DLR_InitLicenseFromDLS
 Initializes the label recognition license and connects to the specified server for online verification.
@@ -149,6 +159,8 @@ DLR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 
 
 
+&nbsp;
+
 ### DLR_GetRuntimeSettings
 Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
 
@@ -174,6 +186,8 @@ DLR_DestroyInstance(recognizer);
 ```
 
 
+
+&nbsp;
 
 ### DLR_UpdateRuntimeSettings
 Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
@@ -206,6 +220,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+&nbsp;
+
 ### DLR_ResetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -235,6 +251,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+
+&nbsp;
 
 ### DLR_AppendSettingsFromString
 Append a new template string to the current label recognition instance.
@@ -266,6 +284,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+&nbsp;
+
 ### DLR_AppendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
 
@@ -295,6 +315,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+
+&nbsp;
 
 ### DLR_OutputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -326,6 +348,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+&nbsp;
+
 ### DLR_ClearAppendedSettings
 Clear all appended parameter settings of the current label recognition instance.
 
@@ -342,6 +366,8 @@ void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_ClearAppendedSettings(recognizer);
 ```
+
+&nbsp;
 
 ### DLR_UpdateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type DLR_LST_BARCODE.  
@@ -373,6 +399,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+&nbsp;
+
 ### DLR_SetModeArgument
 
 Set argument value for the specified mode parameter.
@@ -394,6 +422,8 @@ int DLR_SetModeArgument (void* recognizer, const char* modesName, const int inde
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
+&nbsp;
+
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
@@ -413,6 +443,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+
+&nbsp;
 
 ### DLR_GetModeArgument
 
@@ -435,6 +467,8 @@ int DLR_GetModeArgument (void* recognizer, const char* modesName, const int inde
 **Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -465,6 +499,8 @@ DLR_DestroyInstance(recognizer);
    
 
 
+&nbsp;
+
 ### DLR_RecognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
 
@@ -492,6 +528,8 @@ DLR_DestroyInstance(recognizer);
 
 
 
+
+&nbsp;
 
 ### DLR_RecognizeByFile
 Recognizes text from a specified image file.
@@ -527,6 +565,8 @@ DLR_DestroyInstance(recognizer);
   | [`DLR_FreeResults`](#dlr_freeresults) | Frees memory allocated for recognized results. |
    
 
+&nbsp;
+
 ### DLR_GetAllResults
 Get all recognized results.
 
@@ -554,6 +594,8 @@ DLR_DestroyInstance(recognizer);
 ```
 
 
+
+&nbsp;
 
 ### DLR_FreeResults
 Free memory allocated for text results.
@@ -583,6 +625,8 @@ DLR_DestroyInstance(recognizer);
   | [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
   | [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
    
+&nbsp;
+
 ### DLR_GetErrorString
 
 Get error message by error code.
@@ -605,6 +649,8 @@ The error message.
 ```c
 const char* errorString = DLR_GetErrorString(errorCode);
 ```
+
+&nbsp;
 
 ### DLR_GetVersion
 

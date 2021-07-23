@@ -27,6 +27,8 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`furtherModes`](#furthermodes) | [`iDLRFurtherModes`](dlr-further-modes.md)\*|
 | [`lineSpecification`](#linespecification) | [`iDLRLineSpecification`](dlr-line-specification.md)\* |
 
+&nbsp;
+
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
 ```objc
@@ -41,11 +43,15 @@ NSInteger maxThreadCount
 - **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
+&nbsp;
+
 ### characterModelName
 The name of the CharacterModel.
 ```objc
 NSString* characterModelName
 ```
+
+&nbsp;
 
 ### referenceRegion
 Sets the reference region to search for text.
@@ -53,11 +59,15 @@ Sets the reference region to search for text.
 iDLRReferenceRegion* referenceRegion
 ```
 
+&nbsp;
+
 ### textArea
 Sets the text area relative to the reference region.
 ```objc
 iQuadrilateral* textArea
 ```
+
+&nbsp;
 
 ### dictionaryPath
 Sets the path of the dictionary file.
@@ -65,12 +75,16 @@ Sets the path of the dictionary file.
 NSString* dictionaryPath
 ```
 
+&nbsp;
+
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```objc
 iDLRDictionaryCorrectionThreshold* dictionaryCorrectionThreshold
 ```
 
+
+&nbsp;
 
 ### binarizationModes
 Sets the mode and priority for binarization.
@@ -89,6 +103,8 @@ NSArray* binarizationModes
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+&nbsp;
+
 ### furtherModes
 Sets further modes.
 
@@ -99,6 +115,8 @@ iDLRFurtherModes* furtherModes
 - **See also**  
     [`iDLRFurtherModes`](dlr-further-modes.md)
 
+
+&nbsp;
 
 ### lineSpecification
 Sets line specification.

@@ -21,17 +21,23 @@ Stores the dictionary correction threshold.
 | [`threshold`](#threshold) | *NSInteger* |
 
 
+&nbsp;
+
 ### minWordLength
 The minimum value of word length.
 ```objc
 NSInteger minWordLength
 ```
 
+&nbsp;
+
 ### maxWordLength
 The maximum value of word length.
 ```objc
 NSInteger maxWordLength
 ```
+
+&nbsp;
 
 ### threshold
 The threshold for the number of error correction characters.

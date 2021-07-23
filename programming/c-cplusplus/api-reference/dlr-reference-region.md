@@ -34,6 +34,8 @@ typedef struct tagDLR_ReferenceRegion  DLR_ReferenceRegion
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *char\[64\]* |
 | [`reserved`](#reserved) | *char\[64\]* |
 
+&nbsp;
+
 ### localizationSourceType
 The source type used to localize the reference region(s).
 ```cpp
@@ -48,6 +50,8 @@ LocalizationSourceType localizationSourceType
 - **Remarks**  
     
 
+&nbsp;
+
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```cpp
@@ -56,6 +60,8 @@ DM_Point points[4]
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
+
+&nbsp;
 
 ### regionMeasuredByPercentage
 Whether or not to use percentage to measure the coordinate.
@@ -75,6 +81,8 @@ int regionMeasuredByPercentage
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  
 
 
+&nbsp;
+
 ### regionPredetectionModesIndex
 The index of a specific region predetection mode in the regionPredetectionModes parameter.
 ```cpp
@@ -91,6 +99,8 @@ int regionPredetectionModesIndex
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
+
+&nbsp;
 
 ### barcodeFormatIds
 The formats of the barcode in BarcodeFormat group 1.
@@ -109,6 +119,8 @@ int barcodeFormatIds
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
+&nbsp;
+
 ### barcodeFormatIds_2
 The formats of the barcode in BarcodeFormat group 2.
 ```cpp
@@ -125,6 +137,8 @@ int barcodeFormatIds_2
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
+&nbsp;
+
 ### barcodeTextRegExPattern
 The regular express pattern of barcode text.
 ```cpp
@@ -135,6 +149,8 @@ char barcodeTextRegExPattern[64]
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.
 
+
+&nbsp;
 
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.

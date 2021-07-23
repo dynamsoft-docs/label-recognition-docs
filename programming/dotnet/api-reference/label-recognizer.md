@@ -24,6 +24,8 @@ noTitleIndex: true
 
 
 
+&nbsp;
+
 ### LabelRecognizer()
 
 Initialization of `LabelRecognizer` object.
@@ -46,6 +48,8 @@ recognizer.InitLicense("t0260NwAAAHV***************");
 
 
 
+&nbsp;
+
 ### Dispose
 Destroys an instance of Dynamsoft Label Recognizer.
 
@@ -61,6 +65,8 @@ recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.Dispose();
 ```
 
+
+&nbsp;
 
 ### InitLicense
 Sets product key and activate the SDK.
@@ -85,6 +91,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### InitDLSConnectionParameters
 Initializes a DMDLSConnectionParameters struct with default values.
 
@@ -103,6 +111,8 @@ recognizer.Dispose();
 
 
 
+
+&nbsp;
 
 ### InitLicenseFromDLS
 Initializes the label Recognizer license and connects to the specified server for online verification.
@@ -144,6 +154,8 @@ recognizer.Dispose();
   | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
 
 
+&nbsp;
+
 ### GetRuntimeSettings
 Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
 
@@ -167,6 +179,8 @@ recognizer.Dispose();
 ```
 
 
+
+&nbsp;
 
 ### UpdateRuntimeSettings
 Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -194,6 +208,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### ResetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -218,6 +234,8 @@ recognizer.Dispose();
 
 
 
+
+&nbsp;
 
 ### AppendSettingsFromString
 Append a new template string to the current label Recognizer instance.
@@ -244,6 +262,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### AppendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
 
@@ -268,6 +288,8 @@ recognizer.Dispose();
 
 
 
+
+&nbsp;
 
 ### OutputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -296,6 +318,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### ClearAppendedSettings
 Clear all appended parameter settings of the current label Recognizer instance.
 
@@ -311,6 +335,8 @@ recognizer.ClearAppendedSettings();
 ```
 
 
+
+&nbsp;
 
 ### UpdateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
@@ -340,6 +366,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### SetModeArgument
 
 Set argument value for the specified mode parameter.
@@ -356,6 +384,8 @@ void SetModeArgument(string modesName, int index, string argumentName, string ar
 **Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -375,6 +405,8 @@ recognizer.Dispose();
 
 
 
+&nbsp;
+
 ### GetModeArgument
 
 Get argument value for the specified mode parameter.
@@ -393,6 +425,8 @@ the optional argument for a specified mode in Modes parameters.
 
 **Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -419,6 +453,8 @@ recognizer.Dispose();
   | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
 
+
+&nbsp;
 
 ### RecognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
@@ -448,6 +484,8 @@ recognizer.Dispose();
 
 
 
+
+&nbsp;
 
 ### RecognizeByFile
 Recognizes text from a specified image file.
@@ -480,6 +518,8 @@ recognizer.Dispose();
   |----------------------|-------------|
   | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
    
+&nbsp;
+
 ### GetVersion
 
 Get version information of SDK.

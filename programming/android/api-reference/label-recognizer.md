@@ -22,6 +22,8 @@ noTitleIndex: true
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label Recognizer license and connects to the specified server for online verification. |
 
 
+&nbsp;
+
 ### LabelRecognizer
 
 Initialization of `LabelRecognizer` object without a license.
@@ -58,6 +60,8 @@ LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 
 
 
+&nbsp;
+
 ### destroy
 
 ```java
@@ -71,6 +75,8 @@ LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 recognizer.destroy();
 ```
 
+
+&nbsp;
 
 ### initLicense
 Sets product key and activate the SDK.
@@ -95,6 +101,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### initLicenseFromDLS
 Initializes the label Recognizer license and connects to the specified server for online verification.
@@ -143,6 +151,8 @@ recognizer.initLicenseFromDLS(info, new DLRDLSLicenseVerificationListener() {
   | [`eraseCharacterModelByName`](#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
 
 
+&nbsp;
+
 ### appendCharacterModelBuffer
 Appends CharacterModel to the SDK object.
 
@@ -184,6 +194,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### appendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
 
@@ -209,6 +221,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### appendSettingsFromString
 Append a new template string to the current label Recognizer instance.
 
@@ -232,6 +246,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### clearAppendedSettings
 Clear all appended parameter settings of the current label recognizer instance.
 
@@ -248,6 +264,8 @@ recognizer.clearAppendedSettings();
 
 
 
+&nbsp;
+
 ### eraseAllCharacterModels
 Erases all CharacterModels the SDK object currently loaded.
 
@@ -263,6 +281,8 @@ recognizer.eraseAllCharacterModels();
 
 
 
+
+&nbsp;
 
 ### eraseCharacterModelByName
 Erases a name specified CharacterModel from the SDK object.
@@ -283,6 +303,8 @@ recognizer.eraseCharacterModelByName("NumberLetter");
 
 
 
+&nbsp;
+
 ### getModeArgument
 
 Get argument value for the specified mode parameter.
@@ -302,6 +324,8 @@ the optional argument for a specified mode in Modes parameters.
 **Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
+&nbsp;
+
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
@@ -320,6 +344,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### getRuntimeSettings
 Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -345,6 +371,8 @@ recognizer.destroy();
 ```
 
 
+
+&nbsp;
 
 ### outputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -374,6 +402,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### resetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -399,6 +429,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### setModeArgument
 
 Set argument value for the specified mode parameter.
@@ -417,6 +449,8 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
+&nbsp;
+
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
@@ -434,6 +468,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### updateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
@@ -463,6 +499,8 @@ recognizer.destroy();
 ```
 
 
+
+&nbsp;
 
 ### updateRuntimeSettings
 Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -500,6 +538,8 @@ recognizer.destroy();
   | [`recognizeByImage`](#recognizebyimage) | Recognizes text from a bitmap. |
 
 
+&nbsp;
+
 ### recognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
 
@@ -530,6 +570,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### recognizeByFile
 Recognizes text from a specified image file.
 
@@ -555,6 +597,8 @@ LabelRecognizer recognizer = new LabelRecognizer();
 DLRResult[] result = recognizer.recognizeByFile("full file path", "");
 recognizer.destroy();
 ```
+
+&nbsp;
 
 ### recognizeByImage
 Recognizes text from a bitmap.
@@ -591,6 +635,8 @@ recognizer.destroy();
   |----------------------|-------------|
   | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
    
+&nbsp;
+
 ### getVersion
 
 Get version information of SDK.

@@ -26,11 +26,15 @@ Stores the barcode result.
 | [`pageNumber`](#pagenumber) | *int* |
 
 
+&nbsp;
+
 ### barcodeFormat
 Barcode type in BarcodeFormat group 1.
 ```objc
 EnumBarcodeFormat barcodeFormat
 ```
+
+&nbsp;
 
 ### barcodeFormat_2
 Barcode type in BarcodeFormat group 2.
@@ -38,11 +42,15 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat_2 barcodeFormat_2
 ```
 
+&nbsp;
+
 ### text
 The barcode text, ends by '\0'.
 ```objc
 NSString* text
 ```
+
+&nbsp;
 
 ### bytes
 The barcode content in a byte array.
@@ -50,17 +58,23 @@ The barcode content in a byte array.
 NSData* bytes
 ```
 
+&nbsp;
+
 ### location
 The location of current recognized text.
 ```objc
 iQuadrilateral* location
 ```
 
+&nbsp;
+
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
 ```objc
 int moduleSize
 ```
+
+&nbsp;
 
 ### pageNumber
 The page number the barcode located in. The index is 0-based.

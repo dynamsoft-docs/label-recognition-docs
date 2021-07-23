@@ -23,6 +23,8 @@ Stores the FurtherModes.
 | [`textureDetectionModes`](#texturedetectionmodes) | *NSArray\** |
 
 
+&nbsp;
+
 ### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
@@ -41,6 +43,8 @@ NSArray * colourConversionModes
 
 
 
+&nbsp;
+
 ### grayscaleTransformationModes
 Sets the grayscale transformation mode.
 ```objc
@@ -57,6 +61,8 @@ NSArray * grayscaleTransformationModes
   
 
 
+&nbsp;
+
 ### regionPredetectionModes
 Sets the region pre-detection mode.
 ```objc
@@ -71,6 +77,8 @@ NSArray * regionPredetectionModes
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
+
+&nbsp;
 
 ### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
@@ -88,6 +96,8 @@ NSArray * GrayscaleEnhancementModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
+
+&nbsp;
 
 ### TextureDetectionModes
 Sets the mode and priority for texture detection. 

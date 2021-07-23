@@ -29,11 +29,15 @@ typedef struct tagBarcodeResultArray  BarcodeResultArray
 
 
 
+&nbsp;
+
 ### results
 The BarcodeResult array.
 ```cpp
 PBarcodeResult* results
 ```
+
+&nbsp;
 
 ### resultsCount
 The total count of BarcodeResult.

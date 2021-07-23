@@ -37,6 +37,8 @@ typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
+&nbsp;
+
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
 ```cpp
@@ -51,11 +53,15 @@ int maxThreadCount
 - **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
+&nbsp;
+
 ### characterModelName
 The name of the CharacterModel.
 ```cpp
 char characterModelName[64]
 ```
+
+&nbsp;
 
 ### referenceRegion
 Sets the reference region to search for text.
@@ -63,11 +69,15 @@ Sets the reference region to search for text.
 DLR_ReferenceRegion referenceRegion
 ```
 
+&nbsp;
+
 ### textArea
 Sets the text area relative to the reference region.
 ```cpp
 Quadrilateral textArea
 ```
+
+&nbsp;
 
 ### dictionaryPath
 Sets the path of the dictionary file.
@@ -75,11 +85,15 @@ Sets the path of the dictionary file.
 char dictionaryPath[256]
 ```
 
+&nbsp;
+
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```cpp
 DLR_DictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
+
+&nbsp;
 
 ### binarizationModes
 Sets the mode and priority for binarization.
@@ -98,6 +112,8 @@ BinarizationMode binarizationModes[8]
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+&nbsp;
+
 ### furtherModes
 Sets further modes.
 
@@ -109,6 +125,8 @@ DLR_FurtherModes furtherModes
     [`DLR_FurtherModes`](dlr-further-modes.md)
 
 
+&nbsp;
+
 ### lineSpecification
 Sets line specification.
 
@@ -119,6 +137,8 @@ DLR_LineSpecification lineSpecification
 - **See also**  
     [`DLR_LineSpecification`](dlr-line-specification.md)
 
+
+&nbsp;
 
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.

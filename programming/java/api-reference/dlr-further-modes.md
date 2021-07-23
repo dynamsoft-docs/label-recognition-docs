@@ -23,6 +23,8 @@ Stores the FurtherModes.
 | [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* |
 
 
+&nbsp;
+
 ### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
@@ -38,6 +40,8 @@ int[] colourConversionModes
      
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
+
+&nbsp;
 
 ### grayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
@@ -55,6 +59,8 @@ int[] grayscaleTransformationModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
+&nbsp;
+
 ### regionPredetectionModes
 Sets the region pre-detection mode.
 
@@ -71,6 +77,8 @@ int[] regionPredetectionModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
+&nbsp;
+
 ### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
@@ -86,6 +94,8 @@ int[] grayscaleEnhancementModes
      
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+&nbsp;
 
 ### textureDetectionModes
 Sets the mode and priority for texture detection. 

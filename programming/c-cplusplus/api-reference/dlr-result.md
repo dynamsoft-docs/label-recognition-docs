@@ -36,17 +36,23 @@ typedef struct tagDLR_Result*  PDLR_Result
 | [`reserved`](#reserved) | *char\[60\]* |
 
 
+&nbsp;
+
 ### referenceRegionName
 The name of the reference region which is used to recognize the current result.
 ```cpp
 const char* referenceRegionName
 ```
 
+&nbsp;
+
 ### textAreaName
 The name of the text area used to recognize current result.
 ```cpp
 const char* textAreaName
 ```
+
+&nbsp;
 
 ### location
 The location of current recognized text.
@@ -55,6 +61,8 @@ Quadrilateral location
 ```
 
 
+&nbsp;
+
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
 ```cpp
@@ -62,11 +70,15 @@ int confidence
 ```
 
 
+&nbsp;
+
 ### lineResultsCount
 The line result count.
 ```cpp
 int lineResultsCount
 ```
+
+&nbsp;
 
 ### lineResults
 The line results array.
@@ -75,12 +87,16 @@ PDLR_LineResult* lineResults
 ```
 
 
+&nbsp;
+
 ### pageNumber
 The page number the result located in. The index is 0-based.
 ```cpp
 int pageNumber
 ```
 
+
+&nbsp;
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.

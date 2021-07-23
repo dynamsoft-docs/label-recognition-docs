@@ -25,6 +25,8 @@ Stores the reference region information.
 | [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* |
 
+&nbsp;
+
 ### localizationSourceType
 The source type used to localize the reference region(s).
 ```java
@@ -39,6 +41,8 @@ int localizationSourceType
 - **Remarks**  
     
 
+&nbsp;
+
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```java
@@ -47,6 +51,8 @@ com.dynamsoft.core.Point[] points
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
+
+&nbsp;
 
 ### regionMeasuredByPercentage
 Whether or not to use percentage to measure the coordinate.
@@ -66,6 +72,8 @@ int regionMeasuredByPercentage
     When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.  
 
 
+&nbsp;
+
 ### regionPredetectionModesIndex
 The index of a specific region predetection mode in the regionPredetectionModes parameter.
 ```java
@@ -82,6 +90,8 @@ int regionPredetectionModesIndex
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
+
+&nbsp;
 
 ### barcodeFormatIds
 The formats of the barcode in BarcodeFormat group 1.
@@ -100,6 +110,8 @@ int barcodeFormatIds
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
+&nbsp;
+
 ### barcodeFormatIds_2
 The formats of the barcode in BarcodeFormat group 2.
 ```java
@@ -116,6 +128,8 @@ int barcodeFormatIds_2
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
+&nbsp;
+
 ### barcodeTextRegExPattern
 The regular express pattern of barcode text.
 ```java

@@ -25,6 +25,8 @@ Stores the reference region information.
 | [`barcodeFormatIds_2`](#barcodeformatids_2) | *NSInteger* |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString\** |
 
+&nbsp;
+
 ### localizationSourceType
 The source type used to localize the reference region(s).
 ```objc
@@ -39,6 +41,8 @@ NSInteger localizationSourceType
 - **Remarks**  
     
 
+&nbsp;
+
 ### points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```objc
@@ -47,6 +51,8 @@ NSArray* points
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeManualSpecification.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
+
+&nbsp;
 
 ### regionMeasuredByPercentage
 Whether or not to use percentage to measure the coordinate.
@@ -66,6 +72,8 @@ NSInteger regionMeasuredByPercentage
     It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeManualSpecification.<br>
 
 
+&nbsp;
+
 ### regionPredetectionModesIndex
 The index of a specific region predetection mode in the regionPredetectionModes parameter.
 ```objc
@@ -82,6 +90,8 @@ NSInteger regionPredetectionModesIndex
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
     
+
+&nbsp;
 
 ### barcodeFormatIds
 The formats of the barcode in BarcodeFormat group 1.
@@ -100,6 +110,8 @@ NSInteger barcodeFormatIds
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
 
+&nbsp;
+
 ### barcodeFormatIds_2
 The formats of the barcode in BarcodeFormat group 2.
 ```objc
@@ -116,6 +128,8 @@ NSInteger barcodeFormatIds_2
     It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeBarcode.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     
+&nbsp;
+
 ### barcodeTextRegExPattern
 The regular express pattern of barcode text.
 ```objc

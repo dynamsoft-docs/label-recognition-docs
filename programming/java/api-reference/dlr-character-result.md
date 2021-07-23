@@ -26,11 +26,15 @@ Stores the character result.
 | [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 
 
+&nbsp;
+
 ### characterH
 The recognized character with highest confidence.
 ```java
 char characterH
 ```
+
+&nbsp;
 
 ### characterM
 The recognized character with middle confidence.
@@ -38,11 +42,15 @@ The recognized character with middle confidence.
 char characterM
 ```
 
+&nbsp;
+
 ### characterL
 The recognized character with lowest confidence.
 ```java
 char characterL
 ```
+
+&nbsp;
 
 ### characterHConfidence
 The confidence of the recognized character with the highest confidence.
@@ -50,17 +58,23 @@ The confidence of the recognized character with the highest confidence.
 int characterHConfidence
 ```
 
+&nbsp;
+
 ### characterMConfidence
 The confidence of the recognized character with the middle confidence.
 ```java
 int characterMConfidence
 ```
 
+&nbsp;
+
 ### characterLConfidence
 The confidence of the recognized character with the lowest confidence.
 ```java
 int characterLConfidence
 ```
+
+&nbsp;
 
 ### location
 The location of current character.

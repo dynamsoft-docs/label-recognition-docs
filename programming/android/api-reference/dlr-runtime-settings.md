@@ -28,6 +28,8 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`furtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
 | [`lineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 
+&nbsp;
+
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
 ```java
@@ -42,6 +44,8 @@ int maxThreadCount
 - **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
+&nbsp;
+
 ### characterModelName
 The name of the CharacterModel.
 ```java
@@ -49,11 +53,15 @@ String characterModelName
 ```
 
 
+&nbsp;
+
 ### referenceRegion
 Sets the reference region to search for text.
 ```java
 DLRReferenceRegion referenceRegion
 ```
+
+&nbsp;
 
 ### textArea
 Sets the text area relative to the reference region.
@@ -61,11 +69,15 @@ Sets the text area relative to the reference region.
 com.dynamsoft.core.Quadrilateral textArea
 ```
 
+&nbsp;
+
 ### dictionaryPath
 Sets the path of the dictionary file.
 ```java
 String dictionaryPath
 ```
+
+&nbsp;
 
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
@@ -73,6 +85,8 @@ Sets the threshold of dictionary error correction.
 DLRDictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
 
+
+&nbsp;
 
 ### binarizationModes
 Sets the mode and priority for binarization.
@@ -91,6 +105,8 @@ int[] binarizationModes
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+&nbsp;
+
 ### furtherModes
 Sets further modes.
 
@@ -101,6 +117,8 @@ DLRFurtherModes furtherModes
 - **See also**  
     [`DLRFurtherModes`](dlr-further-modes.md)
 
+
+&nbsp;
 
 ### lineSpecification
 Sets line specification.

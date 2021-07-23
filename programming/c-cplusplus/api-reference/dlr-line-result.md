@@ -36,11 +36,15 @@ typedef struct tagDLR_LineResult*  PDLR_LineResult
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
+&nbsp;
+
 ### lineSpecificationName
 The name of the line specification used to recognize current line result.
 ```cpp
 const char* lineSpecificationName
 ```
+
+&nbsp;
 
 ### text
 The recognized text, ends by '\0'.
@@ -48,11 +52,15 @@ The recognized text, ends by '\0'.
 const char* text
 ```
 
+&nbsp;
+
 ### characterModelName
 The character model used to recognize the text.
 ```cpp
 const char* characterModelName
 ```
+
+&nbsp;
 
 ### location
 The location of current line.
@@ -61,6 +69,8 @@ Quadrilateral location
 ```
 
 
+&nbsp;
+
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
 ```cpp
@@ -68,17 +78,23 @@ int confidence
 ```
 
 
+&nbsp;
+
 ### characterResultsCount
 The character result count.
 ```cpp
 int characterResultsCount
 ```
 
+&nbsp;
+
 ### characterResults
 The character results array.
 ```cpp
 PDLR_CharacterResult* characterResults
 ```
+
+&nbsp;
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.

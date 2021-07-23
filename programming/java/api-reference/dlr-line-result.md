@@ -25,11 +25,15 @@ Stores the line result.
 | [`characterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
 
 
+&nbsp;
+
 ### lineSpecificationName
 The name of the line specification used to recognize current line result.
 ```java
 String lineSpecificationName
 ```
+
+&nbsp;
 
 ### text
 The recognized text, ends by '\0'.
@@ -37,11 +41,15 @@ The recognized text, ends by '\0'.
 String text
 ```
 
+&nbsp;
+
 ### characterModelName
 The character model used to recognize the text.
 ```java
 String characterModelName
 ```
+
+&nbsp;
 
 ### location
 The location of current line.
@@ -50,11 +58,15 @@ Quadrilateral location
 ```
 
 
+&nbsp;
+
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
 ```java
 int confidence
 ```
+
+&nbsp;
 
 ### characterResults
 The character results array.

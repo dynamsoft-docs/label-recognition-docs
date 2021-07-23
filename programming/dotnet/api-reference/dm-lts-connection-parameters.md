@@ -31,6 +31,8 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`Products`](#products) | *int* |
 
 
+&nbsp;
+
 ### MainServerURL
 The URL of the license tracking server.
 ```csharp
@@ -45,6 +47,8 @@ string  MainServerURL
 - **Remarks**   
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
+
+&nbsp;
 
 ### StandbyServerURL
 The URL of the standby license tracking server.
@@ -61,6 +65,8 @@ string  StandbyServerURL
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
+&nbsp;
+
 ### HandshakeCode
 The handshake code.
 ```csharp
@@ -72,6 +78,8 @@ string  HandshakeCode
 - **Default value**   
     ""
 
+&nbsp;
+
 ### SessionPassword
 The session password of the handshake code set in license tracking server.
 ```csharp
@@ -82,6 +90,8 @@ string  SessionPassword
       
 - **Default value**   
     ""
+
+&nbsp;
 
 ### DeploymentType
 
@@ -100,6 +110,8 @@ EnumDMDeploymentType DeploymentType
 - **See also**  
     [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html)    
 
+&nbsp;
+
 ### ChargeWay
 Sets the charge way.
 ```csharp
@@ -114,6 +126,8 @@ int ChargeWay
 - **See also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
+
+&nbsp;
 
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
@@ -130,6 +144,8 @@ int UUIDGenerationMethod
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
+&nbsp;
+
 ### MaxBufferDays
 Sets the max days to buffer the license info.
 ```csharp
@@ -140,6 +156,8 @@ int MaxBufferDays
       
 - **Default value**   
     7
+
+&nbsp;
 
 ### LimitedLicenseModules
 Sets the license modules to use.
@@ -156,6 +174,8 @@ List<Integer>  LimitedLicenseModules
     [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 
+&nbsp;
+
 ### MaxConcurrentInstanceCount
 Sets the max concurrent instance count.
 ```csharp
@@ -170,6 +190,8 @@ int MaxConcurrentInstanceCount
     It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set MaxConcurrentInstanceCount to 20.
 
+&nbsp;
+
 ### OrganizationID
 The organization ID got from Dynamsoft.
 ```csharp
@@ -180,6 +202,8 @@ string OrganizationID
       
 - **Default value**   
     ""
+
+&nbsp;
 
 ### Products
 Sets the products to get the license for. Product values can be combined.

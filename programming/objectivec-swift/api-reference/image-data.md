@@ -24,11 +24,15 @@ Stores the image data.
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
 
 
+&nbsp;
+
 ### bytes
 The image data content in a byte array. 
 ```objc
 NSData* bytes
 ```
+
+&nbsp;
 
 ### width
 The width of the image in pixels.  
@@ -36,17 +40,23 @@ The width of the image in pixels.
 NSInteger width
 ```
 
+&nbsp;
+
 ### height
 The height of the image in pixels.  
 ```objc
 NSInteger height
 ```
 
+&nbsp;
+
 ### stride
 The stride (or scan width) of the image. 
 ```objc
 NSInteger stride
 ```
+
+&nbsp;
 
 ### format
 The image pixel format used in the image byte array. 

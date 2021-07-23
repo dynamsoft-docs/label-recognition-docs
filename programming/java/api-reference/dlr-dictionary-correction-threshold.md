@@ -21,17 +21,23 @@ Stores the dictionary correction threshold.
 | [`threshold`](#threshold) | *int* |
 
 
+&nbsp;
+
 ### minWordLength
 The minimum value of word length.
 ```java
 int minWordLength
 ```
 
+&nbsp;
+
 ### maxWordLength
 The maximum value of word length.
 ```java
 int maxWordLength
 ```
+
+&nbsp;
 
 ### threshold
 The threshold for the number of error correction characters.

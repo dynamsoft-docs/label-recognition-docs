@@ -21,6 +21,8 @@ needGenerateH3Content: true
 
 
 
+&nbsp;
+
 ### InitLicense
 Sets product key and activate the SDK.
 
@@ -43,6 +45,8 @@ CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 delete recognizer;
 ```
+
+&nbsp;
 
 ### InitDLSConnectionParameters
 Initializes a DM_DLSConnectionParameters struct with default values.
@@ -68,6 +72,8 @@ CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 
+
+&nbsp;
 
 ### InitLicenseFromDLS
 Initializes the label recognizer license and connects to the specified server for online verification.
@@ -113,6 +119,8 @@ CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
 
 
 
+&nbsp;
+
 ### GetRuntimeSettings
 Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
 
@@ -137,6 +145,8 @@ delete recognizer;
 ```
 
 
+
+&nbsp;
 
 ### UpdateRuntimeSettings
 Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-settings.md) struct.
@@ -168,6 +178,8 @@ delete recognizer;
 
 
 
+&nbsp;
+
 ### ResetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -194,6 +206,8 @@ delete recognizer;
 
 
 
+
+&nbsp;
 
 ### AppendSettingsFromString
 Append a new template string to the current label recognizer instance.
@@ -222,6 +236,8 @@ delete recognizer;
 ```
 
 
+
+&nbsp;
 
 ### AppendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
@@ -252,6 +268,8 @@ delete recognizer;
 
 
 
+&nbsp;
+
 ### OutputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
 
@@ -281,6 +299,8 @@ delete recognizer;
 
 
 
+&nbsp;
+
 ### ClearAppendedSettings
 Clear all appended parameter settings of the current label recognizer instance.
 
@@ -294,6 +314,8 @@ CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
 recognizer->ClearAppendedSettings();
 ```
+
+&nbsp;
 
 ### UpdateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
@@ -324,6 +346,8 @@ delete recognizer;
 
 
 
+&nbsp;
+
 ### SetModeArgument
 
 Set argument value for the specified mode parameter.
@@ -343,6 +367,8 @@ int SetModeArgument (const char* modesName, const int index, const char* argumen
 **Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -364,6 +390,8 @@ delete recognizer;
 
 
 
+&nbsp;
+
 ### GetModeArgument
 
 Get argument value for the specified mode parameter.
@@ -384,6 +412,8 @@ int GetModeArgument (const char* modesName, const int index, const char* argumen
 **Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -413,6 +443,8 @@ delete recognizer;
   | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
    
+&nbsp;
+
 ### RecognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
 
@@ -439,6 +471,8 @@ delete recognizer;
 
 
 
+
+&nbsp;
 
 ### RecognizeByFile
 Recognizes text from a specified image file.
@@ -472,6 +506,8 @@ delete recognizer;
   | [`GetAllResults`](#getallresults) | Gets all recognized results. |
   | [`FreeResults`](#freeresults) | Frees memory allocated for recognized results. |
 
+&nbsp;
+
 ### GetAllResults
 Get all recognized results.
 
@@ -498,6 +534,8 @@ delete recognizer;
 ```
 
 
+
+&nbsp;
 
 ### FreeResults
 Free memory allocated for text results.
@@ -531,6 +569,8 @@ delete recognizer;
   | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
 
 
+&nbsp;
+
 ### GetErrorString
 
 Get error message by error code.
@@ -555,6 +595,8 @@ const char* errorString = GetErrorString(errorCode);
 ```
 
 
+
+&nbsp;
 
 ### GetVersion
 

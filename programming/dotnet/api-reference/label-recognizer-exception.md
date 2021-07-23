@@ -21,6 +21,8 @@ The exception class of Dynamsoft.DBR.LabelRecognizer.
 | [`StackTrace`](#stacktrace) | *string* |
   
   
+&nbsp;
+
 ### Code
 Gets or sets the error code. 
 
@@ -30,12 +32,16 @@ EnumDLRErrorCode Code
 - **See also**  
     [`EnumDLRErrorCode`]({{ site.enumerations }}error-code.html)    
 
+&nbsp;
+
 ### Message
 Gets the message that describes the current exception. 
 
 ```csharp
 override string Message
 ```  
+
+&nbsp;
 
 ### StackTrace
 Gets the string representation of the frames on the call stack at the time the current exception was thrown. 

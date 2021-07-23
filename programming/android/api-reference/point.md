@@ -21,12 +21,16 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 | [`y`](#y) | *int* |
 
 
+&nbsp;
+
 ### x
 The X coordinate of the point.
 ```java
 int x
 ```
 
+
+&nbsp;
 
 ### y
 The Y coordinate of the point.

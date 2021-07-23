@@ -26,17 +26,23 @@ Stores the character result.
 | [`location`](#location) | [`iQuadrilateral`](quadrilateral.md)\* |
 
 
+&nbsp;
+
 ### characterH
 The recognized character with highest confidence.
 ```objc
 NSString* characterH
 ```
 
+&nbsp;
+
 ### characterM
 The recognized character with middle confidence.
 ```objc
 NSString* characterM
 ```
+
+&nbsp;
 
 ### characterL
 The recognized character with lowest confidence.
@@ -45,11 +51,15 @@ NSString* characterL
 ```
 
 
+&nbsp;
+
 ### characterHConfidence
 The confidence of the recognized character with the highest confidence.
 ```objc
 NSInteger characterHConfidence
 ```
+
+&nbsp;
 
 ### characterMConfidence
 The confidence of the recognized character with the middle confidence.
@@ -57,11 +67,15 @@ The confidence of the recognized character with the middle confidence.
 NSInteger characterMConfidence
 ```
 
+&nbsp;
+
 ### characterLConfidence
 The confidence of the recognized character with the lowest confidence.
 ```objc
 NSInteger characterLConfidence
 ```
+
+&nbsp;
 
 ### location
 The location of current character.

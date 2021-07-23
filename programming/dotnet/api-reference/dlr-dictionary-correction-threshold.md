@@ -21,17 +21,23 @@ Stores the dictionary correction threshold.
 | [`Threshold`](#threshold) | *int* |
 
 
+&nbsp;
+
 ### MinWordLength
 The minimum value of word length.
 ```csharp
 int MinWordLength
 ```
 
+&nbsp;
+
 ### MaxWordLength
 The maximum value of word length.
 ```csharp
 int MaxWordLength
 ```
+
+&nbsp;
 
 ### Threshold
 The threshold for the number of error correction characters.

@@ -27,11 +27,15 @@ Stores the barcode result.
 
 
 
+&nbsp;
+
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 ```csharp
 EnumBarcodeFormat barcodeFormat
 ```
+
+&nbsp;
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
@@ -39,11 +43,15 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat_2 BarcodeFormat_2
 ```
 
+&nbsp;
+
 ### Text
 The barcode text, ends by '\0'.
 ```csharp
 string Text
 ```
+
+&nbsp;
 
 ### Bytes
 The barcode content in a byte array.
@@ -51,17 +59,23 @@ The barcode content in a byte array.
 byte[] Bytes
 ```
 
+&nbsp;
+
 ### Location
 The location of current recognized barcode.
 ```csharp
 Quadrilateral Location
 ```
 
+&nbsp;
+
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 ```csharp
 int ModuleSize
 ```
+
+&nbsp;
 
 ### PageNumber
 The page number the barcode located in. The index is 0-based.

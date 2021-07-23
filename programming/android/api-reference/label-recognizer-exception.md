@@ -19,6 +19,8 @@ Exception for signalling label recognition errors.
 |---------- | ----------- | 
 | [`getErrorCode`](#geterrorcode)| *int* |
 
+&nbsp;
+
 ### getErrorCode
 
 Gets the error code.

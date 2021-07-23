@@ -25,11 +25,15 @@ Stores the line result.
 | [`characterResults`](#characterresults) | NSArray<[`iDLRCharacterResult`](dlr-character-result.md)\*>\*|
 
 
+&nbsp;
+
 ### lineSpecificationName
 The name of the line specification used to recognize current line result.
 ```objc
 NSString* lineSpecificationName
 ```
+
+&nbsp;
 
 ### text
 The recognized text, ends by '\0'.
@@ -37,11 +41,15 @@ The recognized text, ends by '\0'.
 NSString* text
 ```
 
+&nbsp;
+
 ### characterModelName
 The character model used to recognize the text.
 ```objc
 NSString* characterModelName
 ```
+
+&nbsp;
 
 ### location
 The location of current line.
@@ -50,11 +58,15 @@ iQuadrilateral* location
 ```
 
 
+&nbsp;
+
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
 ```objc
 NSInteger confidence
 ```
+
+&nbsp;
 
 ### characterResults
 The character results array.

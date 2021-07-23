@@ -38,11 +38,15 @@ typedef struct tagBarcodeResult*  PBarcodeResult
 
 
 
+&nbsp;
+
 ### barcodeFormat
 Barcode type in BarcodeFormat group 1.
 ```cpp
 BarcodeFormat barcodeFormat
 ```
+
+&nbsp;
 
 ### barcodeFormat_2
 Barcode type in BarcodeFormat group 2.
@@ -50,11 +54,15 @@ Barcode type in BarcodeFormat group 2.
 BarcodeFormat_2 barcodeFormat_2
 ```
 
+&nbsp;
+
 ### text
 The barcode text, ends by '\0'.
 ```cpp
 const char* text
 ```
+
+&nbsp;
 
 ### bytes
 The barcode content in a byte array.
@@ -62,11 +70,15 @@ The barcode content in a byte array.
 unsigned char* bytes
 ```
 
+&nbsp;
+
 ### bytesLength
 The length of the byte array.
 ```cpp
 int bytesLength
 ```
+
+&nbsp;
 
 ### location
 The location of current recognized text.
@@ -74,17 +86,23 @@ The location of current recognized text.
 Quadrilateral location
 ```
 
+&nbsp;
+
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
 ```cpp
 int moduleSize
 ```
 
+&nbsp;
+
 ### pageNumber
 The page number the barcode located in. The index is 0-based.
 ```cpp
 int pageNumber
 ```
+
+&nbsp;
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.

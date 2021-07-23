@@ -27,17 +27,23 @@ typedef struct tagDLR_DictionaryCorrectionThreshold  DLR_DictionaryCorrectionThr
 | [`threshold`](#threshold) | *int* |
 
 
+&nbsp;
+
 ### minWordLength
 The minimum value of word length.
 ```cpp
 int minWordLength
 ```
 
+&nbsp;
+
 ### maxWordLength
 The maximum value of word length.
 ```cpp
 int maxWordLength
 ```
+
+&nbsp;
 
 ### threshold
 The threshold for the number of error correction characters.

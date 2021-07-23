@@ -19,6 +19,8 @@ noTitleIndex: true
   | [`initWithLicense`](#initwithlicense) | Sets the license and activates the SDK. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label Recognizer license and connects to the specified server for online verification. |
 
+&nbsp;
+
 ### init
 
 Initializes DynamsoftLabelRecognizer.
@@ -48,6 +50,8 @@ let recognizer = DynamsoftLabelRecognizer.init()
 
 
 
+&nbsp;
+
 ### initWithLicense
 Sets the license and activates the SDK.
 
@@ -73,6 +77,8 @@ let recognizer = DynamsoftLabelRecognizer.initWithLicense(license: "t0260NwAAAHV
 
 
 
+
+&nbsp;
 
 ### initLicenseFromDLS
 Initializes the label Recognizer license and connects to the specified server for online verification.
@@ -131,6 +137,8 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   | [`eraseCharacterModelByName`](#appendCharacterModel) | Erases a name specified CharacterModel from the SDK object. |
 
 
+&nbsp;
+
 ### appendCharacterModel
 Appends CharacterModel to the SDK object.
 
@@ -172,6 +180,8 @@ recognizer.appendCharacterModel("your model name", prototxtBuffer: prototxtBuffe
 
 
 
+&nbsp;
+
 ### appendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
 
@@ -209,6 +219,8 @@ recognizer.appendSettingsFromFile("your file path", error:&error)
 ```
 
 
+
+&nbsp;
 
 ### appendSettingsFromString
 Append a new template string to the current label Recognizer instance.
@@ -249,6 +261,8 @@ recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P
 
 
 
+&nbsp;
+
 ### clearAppendedSettings
 Clear all appended parameter settings of the current label Recognizer instance.
 
@@ -285,6 +299,8 @@ recognizer.clearAppendedSettings(&error)
 
 
 
+&nbsp;
+
 ### eraseAllCharacterModels
 Erases all CharacterModels the SDK object currently loaded.
 
@@ -316,6 +332,8 @@ recognizer.eraseAllCharacterModels()
 
 
 
+
+&nbsp;
 
 ### eraseCharacterModelByName
 Erases a name specified CharacterModel from the SDK object.
@@ -353,6 +371,8 @@ recognizer.eraseCharacterModelByName("your model name")
 
 
 
+&nbsp;
+
 ### getModeArgument
 
 Get argument value for the specified mode parameter.
@@ -369,6 +389,8 @@ Get argument value for the specified mode parameter.
 
 **Return value**
 the optional argument for a specified mode in Modes parameters.
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -400,6 +422,8 @@ let argumentValue = recognizer.getModeArgument("RegionPredetectionModes", index:
 
 
 
+
+&nbsp;
 
 ### getRuntimeSettings
 Get current settings and save them into a [`iDLRRuntimeSettings`](dlr-runtime-settings.md) class object.
@@ -440,6 +464,8 @@ let settings = recognizer.getRuntimeSettings(&error)
 ```
 
 
+
+&nbsp;
 
 ### outputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -482,6 +508,8 @@ recognizer.outputSettingsToFile("your saving file path", templateName:"currentRu
 
 
 
+&nbsp;
+
 ### resetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -519,6 +547,8 @@ recognizer.resetRuntimeSettings(error:&error)
 
 
 
+&nbsp;
+
 ### setModeArgument
 
 Set argument value for the specified mode parameter.
@@ -534,6 +564,8 @@ Set argument value for the specified mode parameter.
 `argumentValue`: The value of the argument to set. 
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -566,6 +598,8 @@ recognizer.setModeArgument("RegionPredetectionModes", index:0, argumentName:"Asp
 
 
 
+
+&nbsp;
 
 ### updateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
@@ -611,6 +645,8 @@ recognizer.updateReferenceRegionFromBarcodeResults(textResults, templateName:"P1
 ```
 
 
+
+&nbsp;
 
 ### updateRuntimeSettingsi
 Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-settings.md) class object.
@@ -662,6 +698,8 @@ recognizer.updateRuntimeSettings(settings, error:&error);
   | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
   | [`recognizeByImage`](#recognizebyimage) | Recognizes text from an image in memory. |
 
+&nbsp;
+
 ### recognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
 
@@ -708,6 +746,8 @@ let result = recognizer.recognizeByBuffer(imageData:imageData, templateName:"", 
 ```
 
 
+&nbsp;
+
 ### recognizeByFile
 Recognizes text from a specified image file.
 
@@ -750,6 +790,8 @@ let result = recognizer.recognizeByFile("your file path", templateName:"", error
 ```
 
  
+&nbsp;
+
 ### recognizeByImage
 Recognizes text from an image in memory.
 
@@ -805,6 +847,8 @@ let result = recognizer.recognizeByImage(image:image withTemplate:"" error:&erro
   |----------------------|-------------|
   | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
    
+&nbsp;
+
 ### getVersion
 
 Get version information of SDK.

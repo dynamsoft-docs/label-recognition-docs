@@ -20,6 +20,8 @@ Stores the settings of text line.
 | [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)[ ] |
 
 
+&nbsp;
+
 ### GrayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
@@ -37,6 +39,8 @@ EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+
+&nbsp;
 
 ### BinarizationModes
 Sets the mode and priority for binarization.

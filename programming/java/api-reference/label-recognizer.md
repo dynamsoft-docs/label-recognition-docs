@@ -25,6 +25,8 @@ noTitleIndex: true
 
 
 
+&nbsp;
+
 ### LabelRecognizer
 
 Initialization of `LabelRecognizer` object without or with a license.
@@ -53,6 +55,8 @@ LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 
 
 
+&nbsp;
+
 ### destroy
 
 Destroys an instance of `LabelRecognizer` object.
@@ -68,6 +72,8 @@ LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 recognizer.destroy();
 ```
 
+
+&nbsp;
 
 ### initLicense
 Sets product key and activate the SDK.
@@ -92,6 +98,8 @@ recognizer.initLicense("t0260NwAAAHV***************");
 
 
 
+&nbsp;
+
 ### initDLSConnectionParameters
 Initializes a DMDLSConnectionParameters struct with default values.
 
@@ -114,6 +122,8 @@ info.organiztionID = "<your organization id got from Dynamsoft>";
 LabelRecognizer.initLicenseFromDLS(info);
 ```
 
+
+&nbsp;
 
 ### initLicenseFromDLS
 Initializes the label recognizer license and connects to the specified server for online verification.
@@ -155,6 +165,8 @@ LabelRecognizer.initLicenseFromDLS(info);
 
 
 
+&nbsp;
+
 ### getRuntimeSettings
 Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
 
@@ -178,6 +190,8 @@ recognizer.destroy();
 ```
 
 
+
+&nbsp;
 
 ### updateRuntimeSettings
 Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -206,6 +220,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### resetRuntimeSettings
 Reset all runtime settings to default values.
 
@@ -228,6 +244,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### outputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -257,6 +275,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### appendSettingsFromFile
 Appends LabelRecognizerParameter settings in a file to the SDK object.
 
@@ -282,6 +302,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### appendSettingsFromString
 Append a new template string to the current label recognizer instance.
 
@@ -305,6 +327,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### clearAppendedSettings
 Clear all appended parameter settings of the current label recognizer instance.
 
@@ -320,6 +344,8 @@ recognizer.clearAppendedSettings();
 
 
 
+
+&nbsp;
 
 ### getModeArgument
 
@@ -339,6 +365,8 @@ the optional argument for a specified mode in Modes parameters.
 
 **Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
+
+&nbsp;
 
 #### Remark
 Check follow link for available modes and arguments:
@@ -360,6 +388,8 @@ recognizer.destroy();
 
 
 
+&nbsp;
+
 ### setModeArgument
 
 Set argument value for the specified mode parameter.
@@ -378,6 +408,8 @@ void setModeArgument (String modesName, int index, String argumentName, String a
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
+&nbsp;
+
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
@@ -394,6 +426,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### updateReferenceRegionFromBarcodeResults
 Updates reference region which is defined with source type LST_BARCODE.  
@@ -435,6 +469,8 @@ recognizer.destroy();
   | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
    
 
+&nbsp;
+
 ### recognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
 
@@ -464,6 +500,8 @@ recognizer.destroy();
 
 
 
+
+&nbsp;
 
 ### recognizeByFile
 Recognizes text from a specified image file.
@@ -500,6 +538,8 @@ recognizer.destroy();
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
+
+&nbsp;
 
 ### getVersion
 

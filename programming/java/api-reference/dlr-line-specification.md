@@ -20,6 +20,8 @@ Stores the settings of text line.
 | [`binarizationModes`](#binarizationmodes) | *int\[\]*  |
 
 
+&nbsp;
+
 ### grayscaleEnhancementModes
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
@@ -37,6 +39,8 @@ int[] grayscaleEnhancementModes
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
+
+&nbsp;
 
 ### binarizationModes
 Sets the mode and priority for binarization.

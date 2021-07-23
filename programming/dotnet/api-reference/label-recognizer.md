@@ -11,34 +11,7 @@ noTitleIndex: true
 
 # class Dynamsoft.DLR.LabelRecognizer
 
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
-   
-### GetVersion
 
-Get version information of SDK.
-
-```csharp
-string GetVersion()	
-```
-
-**Return value**
-
-The version information string.
-
-**Code Snippet**
-
-```csharp
-LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
-string versionInfo = recognizer.GetVersion();
-recognizer.Dispose();
-```
-
- 
 
 ## Initialization
   
@@ -501,5 +474,32 @@ DLRResult[] result = recognizer.RecognizeByFile("full file path", "");
 recognizer.Dispose();
 ```
 
- 
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
+   
+### GetVersion
+
+Get version information of SDK.
+
+```csharp
+string GetVersion()	
+```
+
+**Return value**
+
+The version information string.
+
+**Code Snippet**
+
+```csharp
+LabelRecognizer recognizer = new LabelRecognizer();
+recognizer.InitLicense("t0260NwAAAHV***************");
+string versionInfo = recognizer.GetVersion();
+recognizer.Dispose();
+```
+
+  
    

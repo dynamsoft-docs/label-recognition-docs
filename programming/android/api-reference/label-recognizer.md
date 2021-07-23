@@ -10,33 +10,7 @@ noTitleIndex: true
 
 # class com.dynamsoft.dlr.LabelRecognizer
 
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
-   
-### getVersion
 
-Get version information of SDK.
-
-```java
-String getVersion()	
-```
-
-**Return value**
-
-The version information string.
-
-**Code Snippet**
-
-```java
-LabelRecognizer recognizer = new LabelRecognizer();
-String versionInfo = recognizer.getVersion();
-recognizer.destroy();
-```
-
- 
 
 ## Initialization
   
@@ -611,3 +585,30 @@ recognizer.destroy();
  
  
    
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
+   
+### getVersion
+
+Get version information of SDK.
+
+```java
+String getVersion()	
+```
+
+**Return value**
+
+The version information string.
+
+**Code Snippet**
+
+```java
+LabelRecognizer recognizer = new LabelRecognizer();
+String versionInfo = recognizer.getVersion();
+recognizer.destroy();
+```
+
+ 

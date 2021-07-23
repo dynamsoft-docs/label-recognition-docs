@@ -11,40 +11,6 @@ noTitleIndex: true
 
 # DynamsoftLabelRecognizer
 
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
-   
-### getVersion
-
-Get version information of SDK.
-
-```objc
-- (NSString*)getVersion;
-```
-
-**Return value**
-The version information string.
-
-**Code Snippet**
-Objective-C:
-```objc
-DynamsoftLabelRecognizer *recognizer;
-recognizer = [[DynamsoftLabelRecognizer alloc] init];
-NSString* versionInfo = [recognizer getVersion];
-```
-
-Swift:
-
-```Swift
-let recognizer = DynamsoftLabelRecognizer.init()
-let versionInfo = recognizer.getVersion();
-```
-
- 
-
 ## Initialization
   
   | Method               | Description |
@@ -831,3 +797,38 @@ let image: UIImage? = UIImage()
 let result = recognizer.recognizeByImage(image:image withTemplate:"" error:&error)
 ```
    
+
+
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
+   
+### getVersion
+
+Get version information of SDK.
+
+```objc
+- (NSString*)getVersion;
+```
+
+**Return value**
+The version information string.
+
+**Code Snippet**
+Objective-C:
+```objc
+DynamsoftLabelRecognizer *recognizer;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+NSString* versionInfo = [recognizer getVersion];
+```
+
+Swift:
+
+```Swift
+let recognizer = DynamsoftLabelRecognizer.init()
+let versionInfo = recognizer.getVersion();
+```
+
+ 

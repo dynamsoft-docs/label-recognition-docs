@@ -11,53 +11,6 @@ noTitleIndex: true
 
 # C Functions
   
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
-  | [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
-   
-### DLR_GetErrorString
-
-Get error message by error code.
-
-```c
-const char* DLR_GetErrorString (int errorCode)	
-```   
-   
-**Parameters**
-
-`[in]	errorCode` The error code.
- 
-
-**Return value**
-
-The error message.
-
-**Code Snippet**
-
-```c
-const char* errorString = DLR_GetErrorString(errorCode);
-```
-
-### DLR_GetVersion
-
-Get version information of SDK.
-
-```c
-const char* DLR_GetVersion ()
-```   
-
-**Return value**
-The version information string.
-
-**Code Snippet**
-
-```c
-const char* versionInfo = DLR_GetVersion();
-```
-
 
 ## Initialization
   
@@ -621,6 +574,53 @@ int errorCode = DLR_RecognizeByFile(recognizer, "C:\\Program Files (x86)\\Dynams
 DLR_GetAllResults(recognizer, &results);
 DLR_FreeResults(&results);
 DLR_DestroyInstance(recognizer);
+```
+
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
+  | [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
+   
+### DLR_GetErrorString
+
+Get error message by error code.
+
+```c
+const char* DLR_GetErrorString (int errorCode)	
+```   
+   
+**Parameters**
+
+`[in]	errorCode` The error code.
+ 
+
+**Return value**
+
+The error message.
+
+**Code Snippet**
+
+```c
+const char* errorString = DLR_GetErrorString(errorCode);
+```
+
+### DLR_GetVersion
+
+Get version information of SDK.
+
+```c
+const char* DLR_GetVersion ()
+```   
+
+**Return value**
+The version information string.
+
+**Code Snippet**
+
+```c
+const char* versionInfo = DLR_GetVersion();
 ```
 
  

@@ -11,33 +11,7 @@ noTitleIndex: true
 
 # class com.dynamsoft.dlr.LabelRecognizer
 
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
 
-### getVersion
-
-Get version information of SDK.
-
-```java
-String getVersion()	
-```
-
-**Return value**
-
-The version information string.
-
-**Code Snippet**
-
-```java
-LabelRecognizer recognizer = new LabelRecognizer();
-String versionInfo = recognizer.getVersion();
-recognizer.destroy();
-``` 
-
-&nbsp; 
 
 ## Initialization
   
@@ -76,7 +50,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 ```
 
-&nbsp;
+
 
 
 ### destroy
@@ -115,7 +89,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.initLicense("t0260NwAAAHV***************");
 ```
 
-&nbsp;
+
 
 
 ### initDLSConnectionParameters
@@ -162,7 +136,7 @@ info.organiztionID = "<your organization id got from Dynamsoft>";
 LabelRecognizer.initLicenseFromDLS(info);
 ```
 
-&nbsp; 
+
 
 ## Settings
 
@@ -203,7 +177,7 @@ DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 ### updateRuntimeSettings
 Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
@@ -229,7 +203,7 @@ recognizer.updateRuntimeSettings(settings);
 recognizer.destroy();
 ```
 
-&nbsp; 
+
 
 
 ### resetRuntimeSettings
@@ -253,7 +227,7 @@ recognizer.destroy();
 ```
 
 
-&nbsp;
+
 
 ### outputSettingsToFile
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -279,7 +253,7 @@ recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -305,7 +279,7 @@ recognizer.appendSettingsFromFile("your file path");
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
 ### appendSettingsFromString
@@ -329,7 +303,7 @@ recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 ### clearAppendedSettings
 Clear all appended parameter settings of the current label recognizer instance.
@@ -344,7 +318,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.clearAppendedSettings();
 ```
 
-&nbsp;
+
 
 
 ### getModeArgument
@@ -381,7 +355,7 @@ String argumentValue = recognizer.getModeArgument("RegionPredetectionModes", 0, 
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -418,7 +392,7 @@ recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "10
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
 ### updateReferenceRegionFromBarcodeResults
@@ -449,7 +423,7 @@ recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
    
@@ -488,7 +462,7 @@ DLRResult[] result = recognizer.recognizeByBuffer(imageData, "");
 recognizer.destroy();
 ```
 
-&nbsp;
+
 
 
 ### recognizeByFile
@@ -517,5 +491,32 @@ DLRResult[] result = recognizer.recognizeByFile("full file path", "");
 recognizer.destroy();
 ```
 
-&nbsp; 
+
    
+
+   
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
+
+### getVersion
+
+Get version information of SDK.
+
+```java
+String getVersion()	
+```
+
+**Return value**
+
+The version information string.
+
+**Code Snippet**
+
+```java
+LabelRecognizer recognizer = new LabelRecognizer();
+String versionInfo = recognizer.getVersion();
+recognizer.destroy();
+``` 

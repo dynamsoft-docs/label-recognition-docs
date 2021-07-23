@@ -10,57 +10,6 @@ needGenerateH3Content: true
 
 # class dynamsoft::dlr::CLabelRecognizer
 
-## General
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`GetErrorString`](#geterrorstring) | Returns the error string. |
-  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
-
-
-### GetErrorString
-
-Get error message by error code.
-
-```c++
-static const char* GetErrorString (const int errorCode)	
-```   
-   
-**Parameters**
-
-`[in]	errorCode` The error code.
- 
-
-**Return value**
-
-The error message.
-
-**Code Snippet**
-
-```c++
-const char* errorString = GetErrorString(errorCode);
-```
-
-
-
-### GetVersion
-
-Get version information of SDK.
-
-```c++
-static const char* GetVersion ()
-```   
-
-**Return value**
-The version information string.
-
-**Code Snippet**
-
-```c++
-const char* versionInfo = GetVersion();
-```
-
- 
 
 ## Initialization
   
@@ -573,3 +522,55 @@ delete recognizer;
 
  
 
+
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`GetErrorString`](#geterrorstring) | Returns the error string. |
+  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
+
+
+### GetErrorString
+
+Get error message by error code.
+
+```c++
+static const char* GetErrorString (const int errorCode)	
+```   
+   
+**Parameters**
+
+`[in]	errorCode` The error code.
+ 
+
+**Return value**
+
+The error message.
+
+**Code Snippet**
+
+```c++
+const char* errorString = GetErrorString(errorCode);
+```
+
+
+
+### GetVersion
+
+Get version information of SDK.
+
+```c++
+static const char* GetVersion ()
+```   
+
+**Return value**
+The version information string.
+
+**Code Snippet**
+
+```c++
+const char* versionInfo = GetVersion();
+```
+
+ 

@@ -6,7 +6,7 @@ keywords: release notes, java
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognizer Java SDK - Release Notes
+# Release Notes - Java
 
 - [2.0 (xx/xx/2021)](java-2.md#20-xxxx2021)
 - [1.2.1 (06/08/2021)](java-1.md#121-06082021)

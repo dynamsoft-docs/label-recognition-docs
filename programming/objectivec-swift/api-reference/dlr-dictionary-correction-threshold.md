@@ -5,6 +5,7 @@ description: This page shows the iDLRDictionaryCorrectionThreshold struct of Dyn
 keywords: iDLRDictionaryCorrectionThreshold, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

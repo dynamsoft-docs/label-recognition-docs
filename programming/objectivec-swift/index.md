@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - for iOS
+# iOS Documentation
 
 ## Getting Started
 

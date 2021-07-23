@@ -5,6 +5,7 @@ description: This page shows the DLRResult struct of Dynamsoft Label Recognizer 
 keywords: DLRResult, struct, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

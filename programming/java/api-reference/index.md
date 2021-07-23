@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - Java API Reference
+# API Reference - Java
 
 ## Primary Classes
 

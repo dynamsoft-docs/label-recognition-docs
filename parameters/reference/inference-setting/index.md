@@ -24,7 +24,7 @@ The name of the InferenceSetting object.
 It must be a unique name. If it is referenced in a `TextArea` object through parameter [InferenceSettingName](../text-area/parameter-control.md#inferencesettingname), the TextArea object became a inference area, then DLR will use the relative position characteristics between text blocks to calculate the target label position. 
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -37,7 +37,7 @@ It must be a unique name. If it is referenced in a `TextArea` object through par
 }
 ```
 
-&nbsp;
+
 
 ## FilteringConditions
 The filtering conditions of the InferenceSetting object. It is used to determine whether the inference area is valid or not.
@@ -45,7 +45,7 @@ The filtering conditions of the InferenceSetting object. It is used to determine
 ### AreaType
 Sets the condition level of the inference area.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -68,12 +68,12 @@ Sets the condition level of the inference area.
 }
 ```
 
-&nbsp;
+
 
 ### RegEx
 Sets the regular expression condition on the specified area. This parameter only takes effect when the `AreaType` parameter is specified as "AT_ENTIRE" OR "AT_LINE_ALL" OR "AT_LINE_ANY".
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -92,7 +92,7 @@ Sets the regular expression condition on the specified area. This parameter only
 ```
 
 
-&nbsp;
+
 
 
 ### LineArray
@@ -101,7 +101,7 @@ Sets the condition on each specified line. This parameter only takes effect when
 - LineNumber: A string of one or more of the following data,separated by commas:<br>1. One int value which represents a specified line index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified line index range;<br>3. The value is 1-based.
 - LineRegEx: The regular regression on the lines sepcified by `LineNumber`.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -126,7 +126,7 @@ Sets the condition on each specified line. This parameter only takes effect when
 ```
 
 
-&nbsp;
+
 
 
 ## ReferenceSettings
@@ -135,7 +135,7 @@ The reference settings of the InferenceSetting object. It is used to indicate wh
 ### TargetTextAreaNameArray
 Sets the target area where the coordinates need to be inferred.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -158,12 +158,12 @@ Sets the target area where the coordinates need to be inferred.
 }
 ```
 
-&nbsp;
+
 
 ### ReferenceAreaType
 Sets the reference source type.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -189,12 +189,12 @@ Sets the reference source type.
 }
 ```
 
-&nbsp;
+
 
 ### LineNumber
 Sets the source line(s) by specifying the line numbers. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -217,13 +217,13 @@ Sets the source line(s) by specifying the line numbers. It is optional and only 
 
 }
 ```
-&nbsp;
+
 
 
 ### LineRegEx
 Sets the source line(s) where the text satisfies the regular expression. It is optional and only takes effect when the `ReferenceAreaType` parameter is specified as "RAT_TEXT_LINE". If both `LineNumber` and `LineRegEx` are specified, `LineNumber` has a higher priority than `LineRegEx`.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -247,12 +247,12 @@ Sets the source line(s) where the text satisfies the regular expression. It is o
 }
 ```
 
-&nbsp;
+
 
 ### RestrictedInInferenceArea
 Set whether the target text area(s) is located inside the Inference Area or not. If the value is specified as 1, the target text area coordinates will be calculated by intersecting with the inference area.
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -276,4 +276,3 @@ Set whether the target text area(s) is located inside the Inference Area or not.
 }
 ```
 
-&nbsp;

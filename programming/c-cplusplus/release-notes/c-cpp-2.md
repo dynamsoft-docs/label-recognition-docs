@@ -6,7 +6,7 @@ keywords: release notes, c, c++
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for C/C++ - 2.x
+# Release Notes - C/C++ 2.x
 
 ## 2.0 (xx/xx/2021)
 

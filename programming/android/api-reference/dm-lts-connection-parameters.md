@@ -5,6 +5,7 @@ description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Co
 keywords: DMDLSConnectionParameters, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

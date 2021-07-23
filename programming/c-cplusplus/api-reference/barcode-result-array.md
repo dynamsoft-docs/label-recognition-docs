@@ -5,6 +5,7 @@ description: This page shows the BarcodeResultArray struct of Dynamsoft Core for
 keywords: BarcodeResultArray, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # BarcodeResultArray

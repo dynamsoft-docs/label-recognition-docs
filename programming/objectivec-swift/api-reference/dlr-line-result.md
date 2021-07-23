@@ -5,6 +5,7 @@ description: This page shows the iDLRLineResult class of Dynamsoft Label Recogni
 keywords: iDLRLineResult, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

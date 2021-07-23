@@ -5,6 +5,7 @@ description: This page shows the DM_Point struct of Dynamsoft Core for C & C++ L
 keywords: DM_Point, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

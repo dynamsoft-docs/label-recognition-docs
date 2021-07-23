@@ -5,6 +5,7 @@ description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Re
 keywords: DLRReferenceRegion, struct, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

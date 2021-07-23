@@ -62,7 +62,7 @@ Sets the target letter height for scale-up.
 | ImageParameter | ScaleUpModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "ScaleUpModes": [
         {

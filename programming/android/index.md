@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - for Android
+# Android Documentation
 
 ## Getting Started
 

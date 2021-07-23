@@ -6,7 +6,7 @@ keywords: release notes, android
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for Android - 1.x
+# Release Notes - Android 1.x
 
 ## 1.2.1 (06/08/2021)
 

@@ -5,6 +5,7 @@ description: This page shows the DLRQuadrilateral struct of Dynamsoft Label Reco
 keywords: DLRQuadrilateral, struct, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

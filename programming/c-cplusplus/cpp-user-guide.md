@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - User Guide for C++
+# User Guide - C++
 
 ## Requirements
    

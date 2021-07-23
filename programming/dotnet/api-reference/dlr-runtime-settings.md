@@ -5,6 +5,7 @@ description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Re
 keywords: DLRRuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

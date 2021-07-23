@@ -5,6 +5,7 @@ description: This page shows the Quadrilateral Class of Dynamsoft Core for .Net 
 keywords: Quadrilateral, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

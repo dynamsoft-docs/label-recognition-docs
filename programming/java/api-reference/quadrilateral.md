@@ -5,6 +5,7 @@ description: This page shows the Quadrilateral Class of Dynamsoft Core for Java 
 keywords: Quadrilateral, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -42,7 +42,7 @@ The name of the TextArea object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -70,7 +70,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -97,7 +97,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -124,7 +124,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -151,7 +151,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -174,7 +174,7 @@ Sets the name of a white list of recognizable characters.
 If you set a character model, the result will only contain characters within the model.  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -205,7 +205,7 @@ ByPercentage=1, [1, 100]
 The allowed values for ByPercentage: [0,1]  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -226,7 +226,7 @@ Specifies the name array of the LineSpecification objects which is relative to c
 **Remarks**   
 An array item is a name of any available `LineSpecification`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -247,7 +247,7 @@ An array item is a name of any available `LineSpecification`.
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
 
-### As Json Parameter
+**As Json Parameter**
 `LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
 
 
@@ -260,7 +260,7 @@ Sets the range of string length for each recognized line.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringLengthRange": 
     {
@@ -281,7 +281,7 @@ Specifies the regular expression pattern of each line string text in current tex
  - Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -303,7 +303,7 @@ Sets the maximum spacing between characters treated as one line.
 - 0: means automatically set by the library.
 - It is a percentage value relative to the average letter height of each line.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -322,7 +322,7 @@ Sets the maximum spacing between characters treated as one line.
 ## TextStringLengthRange
 Sets the range of string length for each recognized text area.
 
-### As Json Parameter
+**As Json Parameter**
 `TextStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized text area. Default values will be used if there is no manual setting. 
 
 
@@ -335,7 +335,7 @@ Sets the range of string length for each recognized text area.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextStringLengthRange": 
     {
@@ -355,7 +355,7 @@ Specifies the regular expression pattern of the text to recognize.
 Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -376,7 +376,7 @@ Specifies the name of the Inference Setting object.
 **Remarks**
 It is the name of the [`InferenceSetting`](../inference-setting/index.md) object. 
 
-### As Json Parameter
+**As Json Parameter**
 
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
@@ -396,7 +396,7 @@ It is the name of the [`InferenceSetting`](../inference-setting/index.md) object
 ## DictionaryPath
 Sets the path of the dictionary file.
 
-### As Json Parameter
+**As Json Parameter**
 
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
@@ -419,7 +419,7 @@ Sets the threshold of dictionary error correction.
 **Remarks**   
 It supports segmentation threshold. 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |

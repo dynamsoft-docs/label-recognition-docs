@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - iOS API Reference
+# API Reference - iOS
 
 ## Primary Classes
 

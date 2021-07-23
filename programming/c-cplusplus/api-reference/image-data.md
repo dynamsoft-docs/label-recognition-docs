@@ -5,6 +5,7 @@ description: This page shows the ImageData struct of Dynamsoft Core for C & C++ 
 keywords: ImageData, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

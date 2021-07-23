@@ -5,6 +5,7 @@ description: This page shows the DLR_LineSpecification Struct of Dynamsoft Label
 keywords: DLR_LineSpecification, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

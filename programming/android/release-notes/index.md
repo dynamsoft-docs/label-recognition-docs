@@ -6,7 +6,7 @@ keywords: release notes, android
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognizer Android SDK - Release Notes
+# Release Notes - Android
 
 - [2.0 (xx/xx/2021)](android-2.md#20-xxxx2021)
 - [1.2.1 (06/08/2021)](android-1.md#121-06082021)

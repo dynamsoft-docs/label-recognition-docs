@@ -6,7 +6,7 @@ keywords: release notes, objective-c, oc, swift
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognizer iOS SDK - Release Notes
+# Release Notes - iOS
 
 - [2.0   (xx/xx/2021)](ios-2.md#20-xxxx2021)
 - [1.2.1 (06/08/2021)](ios-1.md#121-06082021)

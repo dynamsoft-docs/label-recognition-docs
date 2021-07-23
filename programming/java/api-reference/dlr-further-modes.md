@@ -5,6 +5,7 @@ description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recog
 keywords: DLRFurtherModes, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

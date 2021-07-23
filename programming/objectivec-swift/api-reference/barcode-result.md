@@ -5,6 +5,7 @@ description: This page shows the iBarcodeResult Class of Dynamsoft Core for iOS 
 keywords: iBarcodeResult, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Label Recognizer - .Net User Guide
+# User Guide - .Net 
 
 ## Requirements
 

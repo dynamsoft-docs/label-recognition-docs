@@ -6,7 +6,7 @@ keywords: release notes, .Net
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for .Net - 1.x
+# Release Notes - .Net 1.x
 
 ## 1.2.1 (06/08/2021)
 

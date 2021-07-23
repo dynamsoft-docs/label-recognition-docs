@@ -93,7 +93,7 @@ Sets the parameters passed to the library to load dynamically.
 | ImageParameter | ColourConversionModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "ColourConversionModes": [
         {

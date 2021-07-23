@@ -5,6 +5,7 @@ description: This page shows the iDLRReferenceRegion class of Dynamsoft Label Re
 keywords: iDLRReferenceRegion, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows the DLRLineResult struct of Dynamsoft Label Recogni
 keywords: DLRLineResult, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

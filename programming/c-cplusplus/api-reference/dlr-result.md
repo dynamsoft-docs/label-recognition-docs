@@ -5,6 +5,7 @@ description: This page shows the DLR_Result struct of Dynamsoft Label Recognizer
 keywords: DLR_Result, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

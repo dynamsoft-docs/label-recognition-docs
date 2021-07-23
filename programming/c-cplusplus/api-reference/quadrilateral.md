@@ -5,6 +5,7 @@ description: This page shows the Quadrilateral struct of Dynamsoft Core for C & 
 keywords: Quadrilateral, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

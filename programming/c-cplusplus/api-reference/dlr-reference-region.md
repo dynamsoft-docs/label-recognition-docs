@@ -5,6 +5,7 @@ description: This page shows the DLR_ReferenceRegion struct of Dynamsoft Label R
 keywords: DLR_ReferenceRegion, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows the BarcodeResult Class of Dynamsoft Core for Java 
 keywords: BarcodeResult, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

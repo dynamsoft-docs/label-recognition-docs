@@ -5,6 +5,7 @@ description: This page shows the DLRCharacterResult struct of Dynamsoft Label Re
 keywords: DLRCharacterResult, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

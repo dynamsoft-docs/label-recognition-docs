@@ -5,6 +5,7 @@ description: This page shows the iDMDLSConnectionParameters class of Dynamsoft C
 keywords: iDMDLSConnectionParameters, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

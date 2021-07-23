@@ -5,6 +5,7 @@ description: This page shows the BarcodeResult Class of Dynamsoft Core for .Net 
 keywords: BarcodeResult, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

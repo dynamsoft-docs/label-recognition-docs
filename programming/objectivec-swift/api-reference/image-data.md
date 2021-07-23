@@ -5,6 +5,7 @@ description: This page shows the iImageData class of Dynamsoft Core for iOS SDK.
 keywords: iImageData, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows LabelRecognizer methods of Dynamsoft Label Recogniz
 keywords: api reference, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
@@ -24,11 +25,11 @@ Get version information of SDK.
 string GetVersion()	
 ```
 
-#### Return value
+**Return value**
 
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
@@ -58,12 +59,12 @@ Initialization of `LabelRecognizer` object.
 LabelRecognizer()
 ```
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -79,7 +80,7 @@ Destroys an instance of Dynamsoft Label Recognizer.
 void Dispose()	
 ```
 
-#### Code Snippet
+**Code Snippet**
 
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
@@ -95,14 +96,14 @@ Sets product key and activate the SDK.
 void InitLicense(string license)
 ```   
 
-#### Parameters
+**Parameters**
 `license`: The product keys.
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -118,7 +119,7 @@ Initializes a DMDLSConnectionParameters struct with default values.
 static DMDLSConnectionParameters InitDLSConnectionParameters()
 ```   
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
 ltsInfo.organizationID = '200005';
@@ -137,13 +138,13 @@ Initializes the label Recognizer license and connects to the specified server fo
 static void InitLicenseFromDLS(DMDLSConnectionParameters ltsConnectionParameters)
 ```   
 
-#### Parameters
+**Parameters**
 - `ltsConnectionParameters`: The struct DMDLSConnectionParameters with customized settings.  
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
 info.organizationID = '200005';
@@ -177,14 +178,14 @@ Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-set
 DLRRuntimeSettings GetRuntimeSettings()
 ```   
    
-#### Return value
+**Return value**
 
 The class object of runtime settings.
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -201,14 +202,14 @@ Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings
 void UpdateRuntimeSettings(DLRRuntimeSettings settings)
 ```   
    
-#### Parameters
+**Parameters**
 `settings` The class object of runtime settings.  
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -227,10 +228,10 @@ Reset all runtime settings to default values.
 void ResetRuntimeSettings ()
 ```   
    
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -252,14 +253,14 @@ Append a new template string to the current label Recognizer instance.
 void AppendSettingsFromString (string content)
 ```   
    
-#### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -277,14 +278,14 @@ Appends LabelRecognizerParameter settings in a file to the SDK object.
 void AppendSettingsFromFile (string filePath)
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The settings file path.   
 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -302,15 +303,15 @@ Outputs runtime settings and save them into a settings file (JSON file).
 void OutputSettingsToFile(string filePath, string templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -329,7 +330,7 @@ Clear all appended parameter settings of the current label Recognizer instance.
 void ClearAppendedSettings ()
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -345,16 +346,16 @@ Updates reference region which is defined with source type LST_BARCODE.
 void UpdateReferenceRegionFromBarcodeResults(BarcodeResult[] barcodeResults, string templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `barcodeResults` The barcode results used to localize reference region. See also [`BarcodeResult`](barcode-result.md).
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -373,13 +374,13 @@ Set argument value for the specified mode parameter.
 ```csharp
 void SetModeArgument(string modesName, int index, string argumentName, string argumentValue)	
 ```   
-#### Parameters
+**Parameters**
 - `modesName`: The mode parameter name to set argument.
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to set.  
 - `argumentValue`: The value of the argument to set. 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
@@ -387,7 +388,7 @@ void SetModeArgument(string modesName, int index, string argumentName, string ar
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -409,22 +410,22 @@ Get argument value for the specified mode parameter.
 string GetModeArgument (string modesName, int index, string argumentName)	
 ```   
    
-#### Parameters  
+**Parameters**  
 - `modesName`: The mode parameter name to get argument.  
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to get.
 
-#### Return value
+**Return value**
 the optional argument for a specified mode in Modes parameters.
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -453,17 +454,17 @@ Recognizes text from the memory buffer containing image pixels in defined format
 DLRResult[] RecognizeByBuffer(ImageData imageData, string templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	imageData` An object of [`ImageData`](dlr-image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 All results recognized successfully.
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -482,17 +483,17 @@ Recognizes text from a specified image file.
 DLRResult[] RecognizeByFile (string fileName, string templateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `fileName` A string defining the file name.  
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 All results recognized successfully.
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");

@@ -5,6 +5,7 @@ description: This page shows the iDLRRuntimeSettings class of Dynamsoft Label Re
 keywords: iDLRRuntimeSettings, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - Android API Reference
+# API Reference - Android 
 
 ## Primary Classes
 

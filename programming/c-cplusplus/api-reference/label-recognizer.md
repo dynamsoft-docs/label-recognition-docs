@@ -26,16 +26,16 @@ Get error message by error code.
 static const char* GetErrorString (const int errorCode)	
 ```   
    
-#### Parameters
+**Parameters**
 
 `[in]	errorCode` The error code.
  
 
-#### Return value
+**Return value**
 
 The error message.
 
-#### Code Snippet
+**Code Snippet**
 
 ```c++
 const char* errorString = GetErrorString(errorCode);
@@ -51,10 +51,10 @@ Get version information of SDK.
 static const char* GetVersion ()
 ```   
 
-#### Return value
+**Return value**
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 
 ```c++
 const char* versionInfo = GetVersion();
@@ -79,16 +79,16 @@ Sets product key and activate the SDK.
 int InitLicense (const char *license)
 ```   
 
-#### Parameters
+**Parameters**
 `[in]	license`	The product key.
 
-#### Return value
+**Return value**
 Returns error code. Returns 0 if the function completed successfully, otherwise call [`GetErrorString`](#geterrorstring) to get detailed message. 
 
 Possible returns are:
 `DLR_OK`;
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -102,14 +102,14 @@ Initializes a DM_DLSConnectionParameters struct with default values.
 static int InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
-#### Parameters
+**Parameters**
 `[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 char errorBuf[512];
 DM_DLSConnectionParameters paramters;
@@ -127,16 +127,16 @@ Initializes the label recognizer license and connects to the specified server fo
 static int InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
-#### Parameters
+**Parameters**
 `[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 char errorBuf[512];
 DMDLSConnectionParameters paramters;
@@ -171,14 +171,14 @@ Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-se
 int GetRuntimeSettings (DLR_RuntimeSettings* settings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out]	settings` The struct of runtime settings.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -196,16 +196,16 @@ Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-setting
 int UpdateRuntimeSettings (DLR_RuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	settings` The struct of runtime settings.  
 `[in,out]	errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` <sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -226,11 +226,11 @@ Reset all runtime settings to default values.
 int ResetRuntimeSettings ()
 ```   
    
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -253,17 +253,17 @@ Append a new template string to the current label recognizer instance.
 int AppendSettingsFromString (const char* content, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] content` A JSON string that represents the content of the settings.   
 `[in,out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of allocated buffer.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -281,17 +281,17 @@ Appends LabelRecognizerParameter settings in a file to the SDK object.
 int AppendSettingsFromFile (const char* filePath, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] filePath` The settings file path.   
 `[in,out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of allocated buffer.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -310,16 +310,16 @@ Outputs runtime settings and save them into a settings file (JSON file).
 int OutputSettingsToFile (const char* filePath, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	filePath` The path of the output file which stores current settings.  
 `[in]	templateName` A unique name for declaring current runtime settings.  
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -339,7 +339,7 @@ Clear all appended parameter settings of the current label recognizer instance.
 void ClearAppendedSettings ()	
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -353,16 +353,16 @@ Updates reference region which is defined with source type LST_BARCODE.
 int UpdateReferenceRegionFromBarcodeResults (const BarcodeResultArray* barcodeResults, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	barcodeResults` The barcode results used to localize reference region.  See also [`BarcodeResultArray`](barcode-result-array.md).
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -383,7 +383,7 @@ Set argument value for the specified mode parameter.
 ```cpp
 int SetModeArgument (const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[] = NULL,  const int errorMsgBufferLen = 0)	
 ```   
-#### Parameters
+**Parameters**
 `[in]	modesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` The name of the argument to set.  
@@ -391,7 +391,7 @@ int SetModeArgument (const char* modesName, const int index, const char* argumen
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
@@ -399,7 +399,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -423,7 +423,7 @@ Get argument value for the specified mode parameter.
 int GetModeArgument (const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	modesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` The name of the argument to get.  
@@ -432,7 +432,7 @@ int GetModeArgument (const char* modesName, const int index, const char* argumen
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
@@ -440,7 +440,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -471,15 +471,15 @@ Recognizes text from the memory buffer containing image pixels in defined format
 int RecognizeByBuffer(const ImageData* imageData, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	imageData` A struct of [`ImageData`](image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -498,15 +498,15 @@ Recognizes text from a specified image file.
 int RecognizeByFile (const char* fileName, const char* templateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	fileName` A string defining the file name.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -530,14 +530,14 @@ Get all recognized results.
 int GetAllResults (DLR_ResultArray** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](#recognizebybuffer) / [`RecognizeByFile`](#recognizebyfile). The results is allocated by SDK and should be freed by calling function [`FreeResults`](#freeresults).
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -557,10 +557,10 @@ Free memory allocated for text results.
 static void FreeResults (DLR_ResultArray ** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	results` Recognized results.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->InitLicense("t0260NwAAAHV***************");

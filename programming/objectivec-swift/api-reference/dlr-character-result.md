@@ -5,6 +5,7 @@ description: This page shows the DLRCharacterResult class of Dynamsoft Label Rec
 keywords: iDLRCharacterResult, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

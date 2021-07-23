@@ -6,7 +6,7 @@ keywords: release notes, c, c++
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recoginizer C/C++ SDK - Release Notes
+# Release Notes - C/C++
 
 - [2.0   (xx/xx/2021)](c-cpp-2.md#20-xxxx2021)
 - [1.2.1 (06/08/2021)](c-cpp-1.md#121-06082021)

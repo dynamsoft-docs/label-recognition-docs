@@ -5,6 +5,7 @@ description: This page shows the iDLRFurtherModes of Dynamsoft Label Recognizer 
 keywords: iDLRFurtherModes, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

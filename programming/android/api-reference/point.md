@@ -5,6 +5,7 @@ description: This page shows the Point Class of Dynamsoft Class for Android Lang
 keywords: Point, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

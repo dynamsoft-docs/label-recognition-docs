@@ -5,6 +5,7 @@ description: This page shows the DLRImageData struct of Dynamsoft Label Recognit
 keywords: DLRImageData, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

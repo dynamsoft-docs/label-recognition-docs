@@ -35,7 +35,7 @@ The name of the LabelRecognizerParameter object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -57,7 +57,7 @@ If you set a character model, the result will only contain characters within the
 All TextArea Objects without CharacterModelName set will be set from this setting.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -83,7 +83,7 @@ The allowed values for ByPercentage: [0,1]
 All TextArea Objects without LetterHeightRange set will be set from this setting.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -100,7 +100,7 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
 
-### As Json Parameter
+**As Json Parameter**
 `LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
 
 
@@ -113,7 +113,7 @@ Sets the range of string length for each recognized line.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringLengthRange": 
     {
@@ -135,7 +135,7 @@ Specifies the regular expression pattern of each line string text in current ima
  - Supported regular expressions pattern syntax is same as [`TextRegExPattern`](#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -158,7 +158,7 @@ Sets the maximum spacing between characters treated as one line.
 - It is a percentage value relative to the average letter height of each line.
 - All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -178,7 +178,7 @@ Sets the maximum spacing between characters treated as one line.
 Sets the maximum number of threads the algorithm will use to recognize text.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -202,7 +202,7 @@ Sets the specific pages or the range of pages of a file (.tiff or .pdf) for labe
 2. "" represents all pages.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -210,7 +210,7 @@ Sets the specific pages or the range of pages of a file (.tiff or .pdf) for labe
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "Pages": "0,3,5,7-10"
 }
@@ -225,7 +225,7 @@ The name array of the ReferenceRegion object(s).
 **Remarks**   
 An array item is a name of any available `ReferenceRegion`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -245,7 +245,7 @@ An array item is a name of any available `ReferenceRegion`.
 ## TextStringLengthRange
 Sets the range of string length for each recognized text area.
 
-### As Json Parameter
+**As Json Parameter**
 `TextStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized text area. Default values will be used if there is no manual setting. 
 
 
@@ -258,7 +258,7 @@ Sets the range of string length for each recognized text area.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextStringLengthRange": 
     {
@@ -304,7 +304,7 @@ Specifies the regular expression pattern of the text to recognize.
 | [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12). |
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -325,14 +325,14 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 **Remarks**   
 If you want to stop searching for labels after a specified amount of time, you can use this parameter to set a timeout.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | LabelRecognizerParameter | Timeout | *int* | [0,0x7fffffff] | 10000 |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Timeout":10000
 }
@@ -348,7 +348,7 @@ Sets the path of the dictionary file.
 **Remarks**
 If the parameter is not defined in `TextArea`, it will be inherited. Otherwise, the value will be overwritten.
 
-### As Json Parameter
+**As Json Parameter**
 
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
@@ -371,7 +371,7 @@ Sets the threshold of dictionary error correction.
 **Remarks**   
 It supports segmentation threshold. If the parameter is not defined in `TextArea`, it will be inherited. Otherwise, the value will be overwritten.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |

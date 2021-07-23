@@ -5,6 +5,7 @@ description: This page shows the iDLRLineSpecification Struct of Dynamsoft Label
 keywords: iDLRLineSpecification, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

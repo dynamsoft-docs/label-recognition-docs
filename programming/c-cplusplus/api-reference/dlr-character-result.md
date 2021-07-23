@@ -5,6 +5,7 @@ description: This page shows the DLR_CharacterResult struct of Dynamsoft Label R
 keywords: DLR_CharacterResult, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

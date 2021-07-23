@@ -5,6 +5,7 @@ description: This page shows the ImageData Class of Dynamsoft Core for Android L
 keywords: ImageData, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

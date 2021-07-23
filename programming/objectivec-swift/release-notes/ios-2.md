@@ -6,7 +6,7 @@ keywords: release notes, objective-c, oc, swift
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for Objective-C & Swift - 2.x
+# Release Notes - iOS 2.x
 
 ## 2.0 (xx/xx/2021)
 

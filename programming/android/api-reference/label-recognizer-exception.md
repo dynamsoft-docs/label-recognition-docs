@@ -5,6 +5,7 @@ description: This page shows the LabelRecognizerException Class of Dynamsoft Lab
 keywords: LabelRecognizerException, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

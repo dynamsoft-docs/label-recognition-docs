@@ -5,6 +5,7 @@ description: This page shows the iDLRResult class of Dynamsoft Label Recognizer 
 keywords: iDLRResult, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

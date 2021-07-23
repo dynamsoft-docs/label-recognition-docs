@@ -23,7 +23,7 @@ The name of the ReferenceRegion object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -36,7 +36,7 @@ It must be a unique name.
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -46,7 +46,7 @@ Specifies the name array of the TextArea objects which is relative to current re
 **Remarks**   
 An array item is a name of any available `TextArea`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -62,5 +62,5 @@ An array item is a name of any available `TextArea`.
     ]
 }
 ```
-&nbsp;
+
 

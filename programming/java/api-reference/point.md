@@ -5,6 +5,7 @@ description: This page shows the Point Class of Dynamsoft Core for Java Language
 keywords: Point, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

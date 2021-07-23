@@ -5,10 +5,11 @@ description: This page shows all methods of Dynamsoft Label Recognizer for C API
 keywords: api reference, c
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 
-# Dynamsoft Label Recognizer - C Functions
+# C Functions
   
 ## General
    
@@ -25,16 +26,16 @@ Get error message by error code.
 const char* DLR_GetErrorString (int errorCode)	
 ```   
    
-#### Parameters
+**Parameters**
 
 `[in]	errorCode` The error code.
  
 
-#### Return value
+**Return value**
 
 The error message.
 
-#### Code Snippet
+**Code Snippet**
 
 ```c
 const char* errorString = DLR_GetErrorString(errorCode);
@@ -48,10 +49,10 @@ Get version information of SDK.
 const char* DLR_GetVersion ()
 ```   
 
-#### Return value
+**Return value**
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 
 ```c
 const char* versionInfo = DLR_GetVersion();
@@ -78,12 +79,12 @@ Create an instance of Dynamsoft Label Recognizer.
 void* DLR_CreateInstance ()	
 ```   
 
-#### Return value
+**Return value**
 Returns an instance of Dynamsoft Label Recognizer. If failed, returns NULL.
 
 
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -99,10 +100,10 @@ Destroy the instance of Dynamsoft Label Recognizer.
 void DLR_DestroyInstance (void* recognizer)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	recognizer` Handle of the Dynamsoft Label Recognizer instance.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -116,15 +117,15 @@ Sets product key and activate the SDK.
 int DLR_InitLicense (void* recognizer, const char* pLicense)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label Recognizer instance.   
 `[in]	pLicense` The product keys.
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -138,14 +139,14 @@ Initializes a DM_DLSConnectionParameters struct with default values.
 int DLR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
-#### Parameters
+**Parameters**
 `[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DMDLSConnectionParameters paramters;
@@ -159,16 +160,16 @@ Initializes the label recognition license and connects to the specified server f
 int DLR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
-#### Parameters
+**Parameters**
 `[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DM_DLSConnectionParameters paramters;
@@ -202,15 +203,15 @@ Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-se
 int DLR_GetRuntimeSettings (void* recognizer, DLR_RuntimeSettings* settings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in,out]	settings` The struct of runtime settings.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -228,17 +229,17 @@ Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-setting
 int DLR_UpdateRuntimeSettings (void* recognizer, DLR_RuntimeSettings* settings, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	settings` The struct of runtime settings.  
 `[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -259,14 +260,14 @@ Reset all runtime settings to default values.
 int DLR_ResetRuntimeSettings (void* recognizer)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -289,18 +290,18 @@ Append a new template string to the current label recognition instance.
 int DLR_AppendSettingsFromString (void* recognizer, const char* content, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in] content` A JSON string that represents the content of the settings.   
 `[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -319,18 +320,18 @@ Appends LabelRecognizerParameter settings in a file to the SDK object.
 int DLR_AppendSettingsFromFile (void* recognizer, const char* filePath, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in] filePath` The settings file path.   
 `[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -349,17 +350,17 @@ Outputs runtime settings and save them into a settings file (JSON file).
 int DLR_OutputSettingsToFile (void* recognizer, const char* filePath, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	filePath` The path of the output file which stores current settings.  
 `[in]	templateName` A unique name for declaring current runtime settings.  
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -379,10 +380,10 @@ Clear all appended parameter settings of the current label recognition instance.
 void DLR_ClearAppendedSettings (void* recognizer)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	recognizer` Handle of the Dynamsoft Label Recognizer instance.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -396,17 +397,17 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 int DLR_UpdateReferenceRegionFromBarcodeResults (void* recognizer, const BarcodeResultArray* barcodeResults, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	recognizer` Handle of the Dynamsoft Label Recognizer instance.  
 `[in]	barcodeResults` The barcode results used to localize reference region.  See also [`BarcodeResultArray`](barcode-result-array.md).
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -427,7 +428,7 @@ Set argument value for the specified mode parameter.
 ```c
 int DLR_SetModeArgument (void* recognizer, const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[],  const int errorMsgBufferLen)	
 ```   
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	modesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
@@ -436,7 +437,7 @@ int DLR_SetModeArgument (void* recognizer, const char* modesName, const int inde
 `[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
@@ -444,7 +445,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -468,7 +469,7 @@ Get argument value for the specified mode parameter.
 int DLR_GetModeArgument (void* recognizer, const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[], const int errorMsgBufferLen)	
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	modesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
@@ -478,7 +479,7 @@ int DLR_GetModeArgument (void* recognizer, const char* modesName, const int inde
 `[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of the allocated buffer.  
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
@@ -486,7 +487,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -518,16 +519,16 @@ Recognizes text from the memory buffer containing image pixels in defined format
 int DLR_RecognizeByBuffer(void* recognizer, const ImageData* imageData, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	imageData` A struct of [`ImageData`](image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -546,16 +547,16 @@ Recognizes text from a specified image file.
 int DLR_RecognizeByFile (void* recognizer, const char* fileName, const char* templateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[in]	fileName` A string defining the file name.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -580,15 +581,15 @@ Get all recognized results.
 int DLR_GetAllResults (void* recognizer, DLR_ResultArray** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[out] results`	Recognized results returned by last calling function [`DLR_RecognizeByBuffer`](#dlr_recognizebybuffer) / [`DLR_RecognizeByFile`](#dlr_recognizebyfile). The results is allocated by SDK and should be freed by calling function [`DLR_FreeResults`](#dlr_freeresults).
 
-#### Return value
+**Return value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -608,10 +609,10 @@ Free memory allocated for text results.
 void DLR_FreeResults (DLR_ResultArray ** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	results` Recognized results.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");

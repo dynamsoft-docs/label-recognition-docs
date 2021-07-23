@@ -5,6 +5,7 @@ description: This page shows the Quadrilateral Class of Dynamsoft Core for Andro
 keywords: Quadrilateral, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

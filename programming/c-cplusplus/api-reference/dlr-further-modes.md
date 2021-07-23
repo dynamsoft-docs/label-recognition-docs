@@ -5,6 +5,7 @@ description: This page shows the DLR_FurtherModes Struct of Dynamsoft Label Reco
 keywords: DLR_FurtherModes, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

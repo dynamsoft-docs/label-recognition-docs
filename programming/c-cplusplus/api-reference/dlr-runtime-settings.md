@@ -5,6 +5,7 @@ description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label R
 keywords: DLR_RuntimeSettings, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

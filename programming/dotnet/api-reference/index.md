@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - .Net API Reference
+# API Reference - .Net 
 
 ## Primary Classes
 

@@ -5,6 +5,7 @@ description: This page shows the DLRLineSpecification Struct of Dynamsoft Label 
 keywords: DLRLineSpecification, Java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

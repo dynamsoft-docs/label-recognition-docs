@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognizer - C API Reference
+# API Reference - C
 
 ## Primary API
 

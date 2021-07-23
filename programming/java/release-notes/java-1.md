@@ -6,7 +6,7 @@ keywords: release notes, java
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for Java - 1.x
+# Release Notes - Java 1.x
 
 ## 1.2.1 (06/08/2021)
 

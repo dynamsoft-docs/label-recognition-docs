@@ -5,6 +5,7 @@ description: This page shows the BarcodeResult Class of Dynamsoft Core for Andro
 keywords: BarcodeResult, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

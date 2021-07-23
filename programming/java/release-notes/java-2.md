@@ -6,7 +6,7 @@ keywords: release notes, java
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for Java - 2.x
+# Release Notes - Java 2.x
 
 ## 2.0 (xx/xx/2021)
 

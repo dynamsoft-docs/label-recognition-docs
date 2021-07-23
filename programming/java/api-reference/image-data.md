@@ -5,6 +5,7 @@ description: This page shows the ImageData Class of Dynamsoft Core for Java Lang
 keywords: ImageData, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

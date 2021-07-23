@@ -68,7 +68,7 @@ Sets the parameters passed to the library to load dynamically.
 | ImageParameter | TextureDetectionModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextureDetectionModes": [
         {

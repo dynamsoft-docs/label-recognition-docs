@@ -169,7 +169,7 @@ Default values will be used if there is no manual setting.
 | LabelRecognizerParameter | GrayscaleEnhancementModes | *JSON Object Array* | 
 
 **Json Parameter Example**   
-```
+```json
 {
     "GrayscaleEnhancementModes": [
         {

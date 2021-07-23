@@ -5,11 +5,12 @@ description: This article shows Error Code of Dynamsoft Label Recognizer.
 keywords: error code, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
-# Dynamsoft Label Recognizer - Error Code  
+# Error Code  
    
-## Error code common to all programming languages
+## For all programming languages
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
@@ -49,7 +50,7 @@ needGenerateH3Content: true
   | `DMERR_TRIAL_LICENSE`                   | `EnumErrorCode_Trial_License`                   | -20010 | Using a trial license. |
 
 
-## Error code for specific programming languages  
+## For specific programming languages  
 
 ### Android
 

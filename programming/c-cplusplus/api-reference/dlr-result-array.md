@@ -5,6 +5,7 @@ description: This page shows the DLR_ResultArray struct of Dynamsoft Label Recog
 keywords: DLR_ResultArray, struct, c, c++
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # DLR_ResultArray

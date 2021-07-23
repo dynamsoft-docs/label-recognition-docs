@@ -6,7 +6,7 @@ keywords: release notes, .Net
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Label Recognizer .Net SDK - Release Notes
+# Release Notes - .Net
 
 - [2.0   (xx/xx/2021)](dotnet-2.md#20-xxxx2021)
 - [1.2.1 (06/08/2021)](dotnet-1.md#121-06082021)

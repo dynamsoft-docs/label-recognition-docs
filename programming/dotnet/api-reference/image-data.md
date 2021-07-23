@@ -5,6 +5,7 @@ description: This page shows the ImageData Class of Dynamsoft Core for .Net Lang
 keywords: ImageData, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 

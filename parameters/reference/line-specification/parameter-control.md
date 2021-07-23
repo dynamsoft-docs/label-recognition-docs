@@ -32,7 +32,7 @@ The name of the LineSpecification object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -55,7 +55,7 @@ The line number of the line targeted by the LineSpecification object.
 2. "" represents all lines.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -83,7 +83,7 @@ The allowed values for x/y: [0, 100].<br>
 It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -111,7 +111,7 @@ The allowed values for x/y: [0, 100].<br>
 It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -139,7 +139,7 @@ The allowed values for x/y: [0, 100].<br>
 It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -167,7 +167,7 @@ The allowed values for x/y: [0, 100].<br>
 It is valid only when 'LineNumber' is setting to one specified line number.<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -190,7 +190,7 @@ Sets the name of a white list of recognizable characters.
 If you set a character model, the result will only contain characters within the model.  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -208,7 +208,7 @@ If you set a character model, the result will only contain characters within the
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
 
-### As Json Parameter
+**As Json Parameter**
 `LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
 
 
@@ -221,7 +221,7 @@ Sets the range of string length for each recognized line.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringLengthRange": 
     {
@@ -241,7 +241,7 @@ Specifies the regular expression pattern of the string within a line.
 Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |

@@ -28,13 +28,13 @@ A CharacterModel is consisted by the following three files:
 [Name].prototxt,  
 [Name].caffemodel  
 And optionally, it can have some assisted CharacterModels with formatted file names like:  
-[Name]_Assist_[***].txt  
-[Name]_Assist_[***].prototxt  
-[Name]_Assist_[***].caffemodel  
-Note: [Name] is current value and [***] can be customized by you own.
+[Name]_Assist_[SubName].txt  
+[Name]_Assist_[SubName].prototxt  
+[Name]_Assist_[SubName].caffemodel  
+Note: [Name] is current value and [SubName] can be customized by you own.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -48,13 +48,13 @@ Note: [Name] is current value and [***] can be customized by you own.
 ```
 
 
-&nbsp;
+
 
 ## DirectoryPath
 The path of the folder containing the character model files.  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -68,12 +68,12 @@ The path of the folder containing the character model files.
 ```
 
 
-&nbsp;
+
 
 ## FilterFilePath
 The full path of the filter file which specifies the characters to be recognized.  
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -87,5 +87,5 @@ The full path of the filter file which specifies the characters to be recognized
 ```
 
 
-&nbsp;
+
 

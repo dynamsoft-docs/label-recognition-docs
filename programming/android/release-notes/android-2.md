@@ -6,7 +6,7 @@ keywords: release notes, android
 needAutoGenerateSidebar: false
 ---
 
-# Release Notes for Android - 2.x
+# Release Notes - Android 2.x
 
 ## 2.0 (xx/xx/2021)
 

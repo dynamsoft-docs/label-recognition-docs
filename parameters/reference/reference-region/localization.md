@@ -15,16 +15,14 @@ A JSON object containing the following settings.
 ### SourceType
 The source type used to localize the reference region(s).  
 
-**Remarks**    
-
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | Localization | SourceType | *string* | "LST_MANUAL_SPECIFICATION"<br>"LST_PREDETECTED_REGION"<br>"LST_BARCODE". | "LST_MANUAL_SPECIFICATION" |
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -36,7 +34,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 
 ### FirstPoint
@@ -50,7 +48,7 @@ When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate
 
 It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICATION<br>
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -74,7 +72,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 ### SecondPoint
 The second point of the reference region, which is usually the top-right corner.
@@ -88,7 +86,7 @@ When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate
 It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICATION<br>
 
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -96,7 +94,7 @@ It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICAT
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -112,7 +110,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 ### ThirdPoint
 The third point of the reference region, which is usually the bottom-right corner.
@@ -126,7 +124,7 @@ When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate
 It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICATION<br>
 
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -134,7 +132,7 @@ It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICAT
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -150,7 +148,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 ### FourthPoint
 The fourth point of the reference region, which is usually the bottom-left corner.
@@ -164,7 +162,7 @@ When MeasuredByPercentage=1, the valid value range for x-coordinate/y-coordinate
 It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICATION<br>
 
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -172,7 +170,7 @@ It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICAT
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -188,7 +186,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 ### MeasuredByPercentage
 Sets whether or not to use percentages to measure the coordinate.
@@ -198,7 +196,7 @@ Sets whether or not to use percentages to measure the coordinate.
 1: by percentage<br>
 It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICATION<br>
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -206,7 +204,7 @@ It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICAT
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -222,7 +220,7 @@ ReferenceRegion:
 }
 ```
 
-&nbsp;
+
 
 
 ### RegionPredetectionModesIndex
@@ -233,7 +231,7 @@ The index of a specific region predetection mode in the regionPredetectionModes 
 It works only when [SourceType](#sourcetype) is setting to LST_PREDETECTED_REGION<br>
 The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -241,7 +239,7 @@ The library will localize reference region(s) based on the detected regions from
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -252,7 +250,7 @@ ReferenceRegion:
     }
 }
 ```
-&nbsp;
+
 
 
 ### BarcodeFormatIds
@@ -262,14 +260,14 @@ The formats of the barcode in BarcodeFormat group 1.
 It works only when [SourceType](#sourcetype) is setting to LST_BARCODE.<br>
 The library will localize reference region(s) based on the barcodes whose format meets current setting.  
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | Localization | BarcodeFormatIds | *string Array* | An array item can be any one of the [`BarcodeFormat` Enumeration]({{ site.enumerations }}barcode-format.html) items | "BF_ALL" |
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -284,7 +282,7 @@ ReferenceRegion:
 ```
 
 
-&nbsp;
+
 
 
 
@@ -295,14 +293,14 @@ The formats of the barcode in BarcodeFormat group 2.
 It works only when [SourceType](#sourcetype) is setting to LST_BARCODE.<br>
 The library will localize reference region(s) based on the barcodes whose format meets current setting.  
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | Localization | BarcodeFormatIds_2 | *string Array* | An array item can be any one of the [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}barcode-format-2.html) items | "BF2_NULL" |
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -317,7 +315,7 @@ ReferenceRegion:
 ```
 
 
-&nbsp;
+
 
 
 ### BarcodeTextRegExPattern
@@ -326,14 +324,14 @@ The regular express pattern of barcode text.
 **Remarks**   
 It works only when [SourceType](#sourcetype) is setting to LST_BARCODE<br>
 
-#### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | Localization | BarcodeTextRegExPattern | *string* | regular express pattern as string. | "" |
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",
@@ -348,6 +346,6 @@ ReferenceRegion:
 ```
 
 
-&nbsp;
+
 
 

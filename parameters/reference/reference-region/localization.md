@@ -56,7 +56,7 @@ It works only when [SourceType](#sourcetype) is setting to LST_MANUAL_SPECIFICAT
 
 
 **Json Parameter Example**   
-```
+```json
 ReferenceRegion:  
 {
 "Name": "R1",

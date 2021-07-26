@@ -32,4 +32,4 @@ jobs:
           cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DLRDoc/
           cd DLRDoc && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/ prod

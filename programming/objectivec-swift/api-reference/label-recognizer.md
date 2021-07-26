@@ -30,9 +30,11 @@ Initializes DynamsoftLabelRecognizer.
 ```
 
 **Return value**
+
 The instance of DynamsoftLabelRecognizer.
 
 **Code Snippet**
+
 
 Objective-C:
 
@@ -60,10 +62,12 @@ Sets the license and activates the SDK.
 ```   
 
 **Parameters**
+
 `[in] license`: The product keys.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -88,10 +92,12 @@ Initializes the label Recognizer license and connects to the specified server fo
 ```   
 
 **Parameters**
+
 `[in] ltsConnectionParameters` The struct iDMDLSConnectionParameters with customized settings.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -147,6 +153,7 @@ Appends CharacterModel to the SDK object.
 ```   
    
 **Parameters**
+
 `name` A unique name for the appended CharacterModel.   
 `prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.   
 `txtBuffer` The .txt file data of the CharacterModel in a byte array.   
@@ -154,6 +161,7 @@ Appends CharacterModel to the SDK object.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -190,11 +198,13 @@ Appends LabelRecognizerParameter settings in a file to the SDK object.
 ```   
    
 **Parameters**
+
 `filePath` The settings file path.   
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -230,11 +240,13 @@ Append a new template string to the current label Recognizer instance.
 ```   
    
 **Parameters**
+
 `content` A JSON string that represents the content of the settings.   
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -271,9 +283,11 @@ Clear all appended parameter settings of the current label Recognizer instance.
 ```   
 
 **Parameters**
+
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -309,6 +323,7 @@ Erases all CharacterModels the SDK object currently loaded.
 ```   
    
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -343,9 +358,11 @@ Erases a name specified CharacterModel from the SDK object.
 ```   
 
 **Parameters**
+
 `name` A unique name representing the CharacterModel to erase.   
   
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -381,13 +398,15 @@ Get argument value for the specified mode parameter.
 - (NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName index:(NSInteger)index argumentName:(NSString* _Nonnull)argumentName error:(NSError* _Nullable * _Nullable)error;
 ```   
    
-**Parameters**  
+**Parameters**
+  
 `modeName`: The mode parameter name to get argument.  
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to get.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
+
 the optional argument for a specified mode in Modes parameters.
 
 &nbsp;
@@ -397,6 +416,7 @@ Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -432,14 +452,17 @@ Get current settings and save them into a [`iDLRRuntimeSettings`](dlr-runtime-se
 - (iDLRRuntimeSettings*)getRuntimeSettings:(NSError**)error;
 ```   
 
-**Parameters**  
+**Parameters**
+  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
    
 **Return value**
 
+
 The class object of runtime settings.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -475,12 +498,14 @@ Outputs runtime settings and save them into a settings file (JSON file).
 ```   
    
 **Parameters**
+
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -518,9 +543,11 @@ Reset all runtime settings to default values.
 ```   
    
 **Parameters**
+
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -558,6 +585,7 @@ Set argument value for the specified mode parameter.
 - (void)setModeArgument:(NSString* _Nonnull)modeName index:(NSInteger)index argumentName:(NSString* _Nonnull)argumentName argumentValue:(NSString* _Nonnull)argumentValue error:(NSError* _Nullable * _Nullable)error;
 ```   
 **Parameters**
+
 `modeName`: The mode parameter name to set argument.
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to set.  
@@ -572,6 +600,7 @@ Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -609,12 +638,14 @@ Updates reference region which is defined with source type LST_BARCODE.
 ```   
    
 **Parameters**
+
 `barcodeResults` The barcode results used to localize reference region.  See also [`iBarcodeResult`](barcode-result.md).
 `templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -656,11 +687,13 @@ Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-setting
 ```   
    
 **Parameters**
+
 `settings` The class object of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -708,14 +741,17 @@ Recognizes text from the memory buffer containing image pixels in defined format
 ```   
    
 **Parameters**
+
 `[in]	imageData` An object of iImageData that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
+
 All results recognized successfully.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -756,15 +792,18 @@ Recognizes text from a specified image file.
 ```   
    
 **Parameters**
+
 `[in] name` A string defining the file name.  
 `[in] templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
+
 All results recognized successfully.
 
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
@@ -801,15 +840,18 @@ Recognizes text from an image in memory.
 
 **Parameters**
 
+
 `[in] image` The image file in memory.
 `[in] templateName` The template name.
 `[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
 
+
 All results recognized successfully.
 
 **Code Snippet**
+
 
 Objective-C:
 
@@ -858,9 +900,11 @@ Get version information of SDK.
 ```
 
 **Return value**
+
 The version information string.
 
 **Code Snippet**
+
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;

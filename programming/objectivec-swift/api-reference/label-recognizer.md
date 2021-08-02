@@ -706,7 +706,7 @@ recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificati
 }
 NSError __autoreleasing *  error;
 iDLRRuntimeSettings *settings;
-settings.linesCount = 1;
+settings.maxThreadCount = 4;
 [recognizer updateRuntimeSettings:settings error:&error];
 ```
 
@@ -717,7 +717,7 @@ lts.organizationID = "200001"
 let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
 let error: NSError? = NSError()
 let settings = recognizer.getRuntimeSettings(&error)
-settings.linesCount = 1;
+settings.maxThreadCount = 1;
 recognizer.updateRuntimeSettings(settings, error:&error);
 ```
 

@@ -360,7 +360,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
+settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 String argumentValue = recognizer.getModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");
@@ -452,7 +452,7 @@ void resetRuntimeSettings () throws LabelRecognizerException
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.linesCount = 1;
+settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings);
 recognizer.resetRuntimeSettings();
 recognizer.destroy();
@@ -496,7 +496,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
+settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 recognizer.destroy();
@@ -563,7 +563,7 @@ void updateRuntimeSettings (DLRRuntimeSettings settings) throws LabelRecognizerE
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.linesCount = 1;
+settings.maxThreadCount = 1;
 recognizer.updateRuntimeSettings(settings);
 recognizer.destroy();
 ```

@@ -217,7 +217,7 @@ void UpdateRuntimeSettings(DLRRuntimeSettings settings)
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.linesCount = 1;
+settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.Dispose();
 ```
@@ -243,7 +243,7 @@ void ResetRuntimeSettings ()
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.linesCount = 1;
+settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.ResetRuntimeSettings();
 recognizer.Dispose();
@@ -430,7 +430,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
+settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 recognizer.Dispose();
@@ -475,7 +475,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
-settings.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
+settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 string argumentValue = recognizer.GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");

@@ -19,8 +19,6 @@ noTitleIndex: true
   | [`DLR_CreateInstance`](#dlr_createinstance) | Creates a Dynamsoft Label Recognizer instance. |
   | [`DLR_DestroyInstance`](#dlr_destroyinstance) | Destroys an instance of Dynamsoft Label Recognizer. |
   | [`DLR_InitLicense`](#dlr_initlicense) | Sets the license and activates the SDK. |
-  | [`DLR_InitDLSConnectionParameters`](#dlr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
-  | [`DLR_InitLicenseFromDLS`](#dlr_initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -44,7 +42,6 @@ Returns an instance of Dynamsoft Label Recognizer. If failed, returns NULL.
 
 ```c
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_DestroyInstance(recognizer);
 ```
 
@@ -67,7 +64,6 @@ void DLR_DestroyInstance (void* recognizer)
 
 ```c
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_DestroyInstance(recognizer);
 ```
 
@@ -77,67 +73,14 @@ DLR_DestroyInstance(recognizer);
 Sets product key and activate the SDK.
 
 ```c
-int DLR_InitLicense (void* recognizer, const char* pLicense)
+int DLR_InitLicense (const char* pLicense, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
 **Parameters**
 
-`[in] recognizer` Handle of the label Recognizer instance.   
 `[in]	pLicense` The product keys.
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```c
-void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
-DLR_DestroyInstance(recognizer);
-```
-
-&nbsp;
-
-### DLR_InitDLSConnectionParameters
-Initializes a DM_DLSConnectionParameters struct with default values.
-
-```c
-int DLR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
-```   
-
-**Parameters**
-
-`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```c
-char errorBuf[512];
-DMDLSConnectionParameters paramters;
-DLR_InitDLSConnectionParameters(&paramters);
-```
-
-&nbsp;
-
-### DLR_InitLicenseFromDLS
-Initializes the label recognition license and connects to the specified server for online verification.
-
-```c
-int DLR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-
-**Parameters**
-
-`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of allocated buffer.  
+`[in]	errorMsgBufferLen` The length of allocated buffer. 
 
 **Return value**
 
@@ -147,11 +90,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
-char errorBuf[512];
-DM_DLSConnectionParameters paramters;
-DLR_InitDLSConnectionParameters(&paramters);
-paramters.organizationID = "Your organization id";
-DLR_InitLicenseFromDLS(&paramters, errorBuf, 512);
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
+void* recognizer = DLR_CreateInstance();
+DLR_DestroyInstance(recognizer);
 ```
 
 
@@ -194,8 +137,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
 DLR_DestroyInstance(recognizer);
@@ -227,12 +172,13 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
 settings.maxThreadCount = 4;
-char errorMessage[256];
 DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_DestroyInstance(recognizer);
 ```
@@ -260,8 +206,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
 settings.maxThreadCount = 4;
@@ -299,9 +247,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
-void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
+void* recognizer = DLR_CreateInstance();
 DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 DLR_DestroyInstance(recognizer);
 ```
@@ -334,9 +283,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
-void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
+void* recognizer = DLR_CreateInstance();
 DLR_AppendSettingsFromFile(recognizer, "your file path", errorMessage, 256);
 DLR_DestroyInstance(recognizer);
 ```
@@ -368,10 +318,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
-char errorMessageAppend[256];
-DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 DLR_OutputSettingsToFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 DLR_DestroyInstance(recognizer);
 ```
@@ -395,8 +346,10 @@ void DLR_ClearAppendedSettings (void* recognizer)
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_ClearAppendedSettings(recognizer);
 ```
 
@@ -424,10 +377,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
-char errorMessageAppend[256];
-DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+DLR_AppendSettingsFromString(recognizer, "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 DLR_UpdateReferenceRegionFromBarcodeResults(recognizer, barcodeResults, "P1");
 DLR_DestroyInstance(recognizer);
@@ -460,21 +414,22 @@ int DLR_SetModeArgument (void* recognizer, const char* modesName, const int inde
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
 
-&nbsp;
 
-#### Remark
+**Remark**
+
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
 settings.furtherModes.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
-char errorMessage[256];
 DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
 DLR_DestroyInstance(recognizer);
@@ -511,19 +466,21 @@ Returns error code (returns 0 if the function operates successfully).
 
 &nbsp;
 
-#### Remark
+**Remark**
+
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = DLR_GetRuntimeSettings(recognizer, &settings);
 settings.furtherModes.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
-char errorMessage[256];
 DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_SetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
 DLR_GetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange", argumentValue, 480, errorMessage, 256);
@@ -564,8 +521,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
+
 //Generate imageData from somewhere else
 int errorCode = DLR_RecognizeByBuffer(recognizer, imageData, "");
 DLR_DestroyInstance(recognizer);
@@ -597,8 +557,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 int errorCode = DLR_RecognizeByFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DLR_DestroyInstance(recognizer);
 ```
@@ -635,8 +597,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
-DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_ResultArray * results = NULL;
 int errorCode = DLR_RecognizeByFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DLR_GetAllResults(recognizer, &results);
@@ -662,6 +626,9 @@ void DLR_FreeResults (DLR_ResultArray ** results)
 **Code Snippet**
 
 ```c
+char errorMessage[256];
+DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
 DLR_ResultArray * results = NULL;

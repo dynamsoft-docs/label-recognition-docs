@@ -16,8 +16,7 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`init`](#init) | Create an instance of Dynamsoft Label Recognizer. |
-  | [`initWithLicense`](#initwithlicense) | Sets the license and activates the SDK. |
-  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label Recognizer license and connects to the specified server for online verification. |
+  | [`initLicense`](#initlicense) | Initializes the label Recognizer license. |
 
 &nbsp;
 
@@ -50,50 +49,18 @@ let recognizer = DynamsoftLabelRecognizer.init()
 ```
 
 
-
-
 &nbsp;
 
-### initWithLicense
-Sets the license and activates the SDK.
+### initLicense
+Initializes the label Recognizer license.
 
 ```objc
-- (instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)license;
++ (void)initLicense:(NString* _Nullable)license verificationDelegate:(id _Nullable)connectionDelegate;
 ```   
 
 **Parameters**
 
-`[in] license`: The product keys.
-
-
-**Code Snippet**
-
-Objective-C:
-```objc
-DynamsoftLabelRecognizer *recognizer;
-recognizer = [[DynamsoftLabelRecognizer alloc] initWithLicense:@"t0260NwAAAHV***************"];
-```
-
-Swift:
-```Swift
-let recognizer = DynamsoftLabelRecognizer.initWithLicense(license: "t0260NwAAAHV***************")
-```
-
-
-
-
-&nbsp;
-
-### initLicenseFromDLS
-Initializes the label Recognizer license and connects to the specified server for online verification.
-
-```objc
-- (instancetype _Nonnull)initLicenseFromDLS:(iDMDLSConnectionParameters* _Nullable)ltsConnectionParameters verificationDelegate:(id _Nullable)connectionDelegate;
-```   
-
-**Parameters**
-
-`[in] ltsConnectionParameters` The struct iDMDLSConnectionParameters with customized settings.  
+`[in] license` The product keys.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
 **Code Snippet**
@@ -409,11 +376,12 @@ Get argument value for the specified mode parameter.
 
 the optional argument for a specified mode in Modes parameters.
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
@@ -593,11 +561,12 @@ Set argument value for the specified mode parameter.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 

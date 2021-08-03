@@ -16,9 +16,27 @@ noTitleIndex: true
   
   | Method               | Description |
   |----------------------|-------------|
+  | [`CLabelRecognizer`](#labelrecognizer) | Initialization of `CLabelRecognizer` object.|
   | [`InitLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`InitDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
-  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
+
+
+
+&nbsp;
+
+### CLabelRecognizer
+
+Initialization of `CLabelRecognizer` object.
+
+```cpp
+CLabelRecognizer()
+```
+
+**Code Snippet**
+
+```cpp
+CLabelRecognizer* recognizer = new CLabelRecognizer();
+delete recognizer;
+```
 
 
 
@@ -28,12 +46,14 @@ noTitleIndex: true
 Sets product key and activate the SDK.
 
 ```cpp
-int InitLicense (const char *license)
+static int InitLicense (const char *license, char errorMsgBuffer[], const int errorMsgBufferLen))
 ```   
 
 **Parameters**
 
 `[in]	license`	The product key.
+`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen` The length of allocated buffer. 
 
 **Return value**
 
@@ -45,70 +65,10 @@ Possible returns are:
 **Code Snippet**
 
 ```cpp
-CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
-delete recognizer;
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
 ```
 
-&nbsp;
-
-### InitDLSConnectionParameters
-Initializes a DM_DLSConnectionParameters struct with default values.
-
-```cpp
-static int InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
-```   
-
-**Parameters**
-
-`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md).   
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```cpp
-char errorBuf[512];
-DM_DLSConnectionParameters paramters;
-CLabelRecognizer::InitDLSConnectionParameters(&paramters);
-paramters.organizationID = "Your organization ID";
-CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
-```
-
-
-
-&nbsp;
-
-### InitLicenseFromDLS
-Initializes the label recognizer license and connects to the specified server for online verification.
-
-```cpp
-static int InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-
-**Parameters**
-
-`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`](dm-lts-connection-parameters.md) with customized settings.   
-`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of allocated buffer.  
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```cpp
-char errorBuf[512];
-DMDLSConnectionParameters paramters;
-CLabelRecognizer::InitDLSConnectionParameters(&paramters);
-paramters.organizationID = "Your organization ID";
-CLabelRecognizer::InitLicenseFromDLS(&paramters, errorBuf, 512);
-```
 
  
 
@@ -150,8 +110,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 delete recognizer;
@@ -182,12 +144,13 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.maxThreadCount = 4;
-char errorMessage[256];
 recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 delete recognizer;
 ```
@@ -211,8 +174,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.maxThreadCount = 4;
@@ -249,9 +214,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
-CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
+CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 delete recognizer;
 ```
@@ -282,9 +248,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
-CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
+CLabelRecognizer* recognizer = new CLabelRecognizer();
 recognizer->AppendSettingsFromString("your file path", errorMessage, 256);
 delete recognizer;
 ```
@@ -315,10 +282,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
-char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 recognizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 delete recognizer;
 ```
@@ -338,8 +306,10 @@ void ClearAppendedSettings ()
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 recognizer->ClearAppendedSettings();
 ```
 
@@ -366,10 +336,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
-char errorMessageAppend[256];
-recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessageAppend, 256);
+recognizer->AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", errorMessage, 256);
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer->UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 delete recognizer;
@@ -401,21 +372,23 @@ int SetModeArgument (const char* modesName, const int index, const char* argumen
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.furtherModes.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
-char errorMessage[256];
 recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
 delete recognizer;
@@ -449,21 +422,23 @@ int GetModeArgument (const char* modesName, const int index, const char* argumen
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_RuntimeSettings settings;
 int errorCode = recognizer->GetRuntimeSettings(&settings);
 settings.furtherModes.regionPredetectionModes[0] = RPM_GENERAL_RGB_CONTRAST;
-char errorMessage[256];
 char argumentValue[480];
 recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 recognizer->SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100", errorMessage, 256);
@@ -502,8 +477,11 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
+
 //Generate imageData from somewhere else
 int errorCode = recognizer->RecognizeByBuffer(imageData, "");
 delete recognizer;
@@ -534,8 +512,10 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 delete recognizer;
 ```
@@ -570,12 +550,14 @@ Returns error code (returns 0 if the function operates successfully).
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_ResultArray * results;
 int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 recognizer->GetAllResults(&results);
-dynamsoft::dlr::CLabelRecognizer::FreeResults(&results);
+CLabelRecognizer::FreeResults(&results);
 delete recognizer;
 ```
 
@@ -597,12 +579,14 @@ static void FreeResults (DLR_ResultArray ** results)
 **Code Snippet**
 
 ```cpp
+char errorMessage[256];
+CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
+
 CLabelRecognizer* recognizer = new CLabelRecognizer();
-recognizer->InitLicense("t0260NwAAAHV***************");
 DLR_ResultArray * results;
 int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 recognizer->GetAllResults(&results);
-dynamsoft::dlr::CLabelRecognizer::FreeResults(&results);
+CLabelRecognizer::FreeResults(&results);
 delete recognizer;
 ```
 

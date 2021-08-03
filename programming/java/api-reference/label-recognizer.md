@@ -20,38 +20,28 @@ noTitleIndex: true
   | [`LabelRecognizer`](#labelrecognizer) | Initialization of `LabelRecognizer` object.|
   | [`destroy`](#destroy) | Destroys an instance of `LabelRecognizer` object.|   
   | [`initLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`initDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |  
-  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
-
 
 
 &nbsp;
 
 ### LabelRecognizer
 
-Initialization of `LabelRecognizer` object without or with a license.
+Initialization of `LabelRecognizer` object.
 
 ```java
 LabelRecognizer() throws LabelRecognizerException;
-LabelRecognizer(String license) throws LabelRecognizerException;
 ```
 
 **Exceptions**
 
-
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-
-**Remarks**
-
-If you initialize DynamsoftLabelRecognizer without a license, the recognizer results may be unreliable.
 
 **Code Snippet**
 
 
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
-LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
 ```
 
 
@@ -71,7 +61,7 @@ void destroy()
 
 
 ```java
-LabelRecognizer recognizer = new LabelRecognizer("t0260NwAAAHV***************");
+LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.destroy();
 ```
 
@@ -82,7 +72,7 @@ recognizer.destroy();
 Sets product key and activate the SDK.
 
 ```java
-void initLicense(String license) throws LabelRecognizerException
+static void initLicense(String license) throws LabelRecognizerException
 ```   
 
 **Parameters**
@@ -97,65 +87,8 @@ void initLicense(String license) throws LabelRecognizerException
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.initLicense("t0260NwAAAHV***************");
-```
-
-
-
-
-&nbsp;
-
-### initDLSConnectionParameters
-Initializes a DMDLSConnectionParameters struct with default values.
-
-```java
-static DMDLSConnectionParameters initDLSConnectionParameters() throws LabelRecognizerException
-```   
-
-**Return value**
-
-
-An instance of DMDLSConnectionParameters.
-
-**Exceptions**
-
-
-[`LabelRecognizerException`](label-recognizer-exception.md)
-
-**Code Snippet**
-
-```java
-DMDLSConnectionParameters info = LabelRecognizer.initDLSConnectionParameters();
-info.organiztionID = "<your organization id got from Dynamsoft>";
-LabelRecognizer.initLicenseFromDLS(info);
-```
-
-
-&nbsp;
-
-### initLicenseFromDLS
-Initializes the label recognizer license and connects to the specified server for online verification.
-
-```java
-static void initLicenseFromDLS(DMDLSConnectionParameters ltsInfo) throws LabelRecognizerException
-```   
-
-**Parameters**
-
-- `ltsInfo`: The struct DMDLSConnectionParameters with customized settings.  
-
-**Exceptions**
-
-
-[`LabelRecognizerException`](label-recognizer-exception.md)
-
-**Code Snippet**
-
-```java
-DMDLSConnectionParameters info = LabelRecognizer.initDLSConnectionParameters();
-info.organiztionID = "<your organization id got from Dynamsoft>";
-LabelRecognizer.initLicenseFromDLS(info);
 ```
 
 
@@ -199,6 +132,8 @@ The class object of template settings.
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 recognizer.destroy();
@@ -227,10 +162,12 @@ void updateRuntimeSettings (DLRRuntimeSettings settings) throws LabelRecognizerE
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.maxThreadCount = 1;
+settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings);
 recognizer.destroy();
 ```
@@ -254,9 +191,11 @@ void resetRuntimeSettings () throws LabelRecognizerException
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-settings.maxThreadCount = 1;
+settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings);
 recognizer.resetRuntimeSettings();
 recognizer.destroy();
@@ -288,6 +227,8 @@ void outputSettingsToFile (String filePath, String templateName) throws LabelRec
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
@@ -320,6 +261,8 @@ void appendSettingsFromFile (String filePath) throws LabelRecognizerException
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromFile("your file path");
 recognizer.destroy();
@@ -349,6 +292,8 @@ void appendSettingsFromString (String content) throws LabelRecognizerException
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.destroy();
@@ -368,6 +313,8 @@ void clearAppendedSettings () throws LabelRecognizerException
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.clearAppendedSettings();
 ```
@@ -399,15 +346,18 @@ the optional argument for a specified mode in Modes parameters.
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
@@ -444,15 +394,18 @@ void setModeArgument (String modesName, int index, String argumentName, String a
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
@@ -488,6 +441,8 @@ void updateReferenceRegionFromBarcodeResults (BarcodeResult[] barcodeResults, St
 **Code Snippet**
 
 ```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
 
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
@@ -515,12 +470,12 @@ recognizer.destroy();
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```java
-DLRResult[] recognizeByBuffer(DLRImageData imageData, String templateName) throws LabelRecognizerException
+DLRResult[] recognizeByBuffer(ImageData imageData, String templateName) throws LabelRecognizerException
 ```   
    
 **Parameters**
 
-`[in]	imageData` An object of DLRImageData that represents an image.  
+`[in]	imageData` An object of [`ImageData`](image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 **Return value**
@@ -535,9 +490,11 @@ All results recognized successfully.
 **Code Snippet**
 
 ```java
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-// 1. init license...
-// 2. Generate imageData from somewhere else...
+
+// Generate imageData from somewhere else...
 DLRResult[] result = recognizer.recognizeByBuffer(imageData, "");
 recognizer.destroy();
 ```
@@ -571,8 +528,9 @@ All results recognized successfully.
 **Code Snippet**
 
 ```java
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-// 1. init license...
 DLRResult[] result = recognizer.recognizeByFile("full file path", "");
 recognizer.destroy();
 ```

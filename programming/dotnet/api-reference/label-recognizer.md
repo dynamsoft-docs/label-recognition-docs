@@ -20,7 +20,6 @@ noTitleIndex: true
   | [`LabelRecognizer`](#labelrecognizer) | Initialization of `LabelRecognizer` object.|
   | [`Dispose`](#dispose) | Destroys an instance of `LabelRecognizer` object.|   
   | [`InitLicense`](#initlicense) | Sets the license and activates the SDK. |
-  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the label recognizer license and connects to the specified server for online verification. |
 
 
 
@@ -44,7 +43,6 @@ LabelRecognizer()
 
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 ```
 
 
@@ -64,7 +62,6 @@ void Dispose()
 
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.Dispose();
 ```
 
@@ -75,7 +72,7 @@ recognizer.Dispose();
 Sets product key and activate the SDK.
 
 ```csharp
-void InitLicense(string license)
+static void InitLicense(string license)
 ```   
 
 **Parameters**
@@ -90,58 +87,8 @@ void InitLicense(string license)
 **Code Snippet**
 
 ```csharp
-LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
-recognizer.Dispose();
-```
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
-
-
-&nbsp;
-
-### InitDLSConnectionParameters
-Initializes a DMDLSConnectionParameters struct with default values.
-
-```csharp
-static DMDLSConnectionParameters InitDLSConnectionParameters()
-```   
-
-**Code Snippet**
-
-```csharp
-DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
-ltsInfo.organizationID = '200005';
-LabelRecognizer.InitLicenseFromDLS(info);
-LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.Dispose();
-```
-
-
-
-
-&nbsp;
-
-### InitLicenseFromDLS
-Initializes the label Recognizer license and connects to the specified server for online verification.
-
-```csharp
-static void InitLicenseFromDLS(DMDLSConnectionParameters ltsConnectionParameters)
-```   
-
-**Parameters**
-
-- `ltsConnectionParameters`: The struct DMDLSConnectionParameters with customized settings.  
-
-**Exceptions**
-
-[`LabelRecognizerException`](label-recognizer-exception.md)
-
-**Code Snippet**
-
-```csharp
-DMDLSConnectionParameters ltsInfo = LabelRecognizer.InitDLSConnectionParameters();
-info.organizationID = '200005';
-LabelRecognizer.InitLicenseFromDLS(info);
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.Dispose();
 ```
@@ -185,8 +132,9 @@ The class object of runtime settings.
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 recognizer.Dispose();
 ```
@@ -214,8 +162,9 @@ void UpdateRuntimeSettings(DLRRuntimeSettings settings)
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
@@ -240,8 +189,9 @@ void ResetRuntimeSettings ()
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
@@ -274,8 +224,9 @@ void AppendSettingsFromString (string content)
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.Dispose();
 ```
@@ -304,8 +255,9 @@ void AppendSettingsFromFile (string filePath)
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.AppendSettingsFromFile("your file path");
 recognizer.Dispose();
 ```
@@ -335,8 +287,9 @@ void OutputSettingsToFile(string filePath, string templateName)
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.OutputSettingsToFile("your saving file path", "currentRuntimeSettings");
 recognizer.Dispose();
@@ -357,8 +310,9 @@ void ClearAppendedSettings ()
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.ClearAppendedSettings();
 ```
 
@@ -387,8 +341,9 @@ void UpdateReferenceRegionFromBarcodeResults(BarcodeResult[] barcodeResults, str
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 recognizer.AppendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.UpdateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
@@ -418,17 +373,19 @@ void SetModeArgument(string modesName, int index, string argumentName, string ar
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
@@ -463,17 +420,19 @@ the optional argument for a specified mode in Modes parameters.
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-&nbsp;
 
-#### Remark
+
+**Remark**
+
 Check follow link for available modes and arguments:
-- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-Recognizer-parameter/region-predetection-modes.html#regionpredetectionmodes)
+- [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
@@ -503,7 +462,7 @@ DLRResult[] RecognizeByBuffer(ImageData imageData, string templateName)
    
 **Parameters**
 
-`[in]	imageData` An object of [`ImageData`](dlr-image-data.md) that represents an image.  
+`[in]	imageData` An object of [`ImageData`](image-data.md) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 **Return value**
@@ -517,8 +476,9 @@ All results recognized successfully.
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 //Generate imageData from somewhere else
 DLRResult[] result = recognizer.RecognizeByBuffer(imageData, "");
 recognizer.Dispose();
@@ -552,8 +512,9 @@ All results recognized successfully.
 **Code Snippet**
 
 ```csharp
+LabelRecognizer.InitLicense("t0260NwAAAHV***************");
+
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 DLRResult[] result = recognizer.RecognizeByFile("full file path", "");
 recognizer.Dispose();
 ```
@@ -584,7 +545,6 @@ The version information string.
 
 ```csharp
 LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.InitLicense("t0260NwAAAHV***************");
 string versionInfo = recognizer.GetVersion();
 recognizer.Dispose();
 ```

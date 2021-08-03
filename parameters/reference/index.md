@@ -16,7 +16,7 @@ needGenerateH3Content: true
  | [`TextAreaArray `](#textareaarray) | An array of TextArea objects. |
  | [`LineSpecificationArray `](#linespecificationarray) | An array of LineSpecification objects. |
  | [`CharacterModelArray `](#charactermodelarray) | An array of CharacterModel objects. |
- | [`InferenceSettings `](#inferencesettings) | An array of InferenceSetting objects. |
+
  
 ---
 
@@ -153,33 +153,4 @@ An array of [CharacterModel objects](character-model/parameter-control.md).
     ]
 }
 ```
-
-
-
-
-## InferenceSettings
-An array of [InferenceSetting objects](inference-setting/index.md).  
-
-**As Json Parameter**
-
-|	Json Key Name | Value Type |
-| --------------- | ---------- |
-| InferenceSettings | *Object array* |
-
-**Json Parameter Example**   
-```json
-{
-    "InferenceSettings": [
-      {
-        "Name": "InferenceSettings1", 
-        ......
-      },
-      {
-        "Name": "InferenceSettings2", 
-        ......
-      }
-    ]
-}
-```
-
 

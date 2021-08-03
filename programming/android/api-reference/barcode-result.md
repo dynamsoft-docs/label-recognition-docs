@@ -35,6 +35,9 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
+- **See also**  
+    [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html)
+
 &nbsp;
 
 ### barcodeFormat_2
@@ -42,6 +45,9 @@ Barcode type in BarcodeFormat group 2.
 ```java
 int barcodeFormat_2
 ```
+
+- **See also**  
+    [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html)
 
 &nbsp;
 

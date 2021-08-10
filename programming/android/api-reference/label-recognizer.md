@@ -118,7 +118,7 @@ LabelRecognizer.initLicense("t0260NwAAAHV***************", new DLRLicenseVerific
 Appends CharacterModel to the SDK object.
 
 ```java
-void appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte[] txtBuffer, byte[] characterModelBuffer) throws LabelRecognizerException
+static void appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte[] txtBuffer, byte[] characterModelBuffer)
 ```   
    
 **Parameters**
@@ -129,15 +129,9 @@ void appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte[] txtB
 `characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.   
 
 
-**Exceptions**
-
-[`LabelRecognizerException`](label-recognizer-exception.md)
-
 **Code Snippet**
 
 ```java
-LabelRecognizer recognizer = new LabelRecognizer();
-
 AssetManager manager = getAssets();
 InputStream isPrototxt = manager.open("CharacterModel/NumberLetter.prototxt");
 byte[] prototxt = new byte[isPrototxt.available()];
@@ -151,8 +145,43 @@ InputStream isTxt = manager.open("CharacterModel/NumberLetter.txt");
 byte[] txt = new byte[isTxt.available()];
 isTxt.read(txt);
 isTxt.close();
-recognizer.appendCharacterModelBuffer("NumberLetter", prototxt, txt, characterModel);
-recognizer.destroy();
+
+LabelRecognizer.appendCharacterModelBuffer("NumberLetter", prototxt, txt, characterModel);
+```
+
+&nbsp;
+
+### eraseAllCharacterModels
+Erases all CharacterModels the SDK object currently loaded.
+
+```java
+static void eraseAllCharacterModels ()
+```   
+   
+**Code Snippet**
+
+```java
+LabelRecognizer.eraseAllCharacterModels();
+```
+
+
+&nbsp;
+
+### eraseCharacterModelByName
+Erases a name specified CharacterModel from the SDK object.
+
+```java
+static void eraseCharacterModelByName(String name)
+```   
+
+**Parameters**
+
+`name` A unique name representing the CharacterModel to erase.   
+  
+**Code Snippet**
+
+```java
+LabelRecognizer.eraseCharacterModelByName("NumberLetter");
 ```
 
 
@@ -237,47 +266,6 @@ recognizer.clearAppendedSettings();
 
 &nbsp;
 
-### eraseAllCharacterModels
-Erases all CharacterModels the SDK object currently loaded.
-
-```java
-void eraseAllCharacterModels () throws LabelRecognizerException
-```   
-   
-**Code Snippet**
-
-```java
-LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.eraseAllCharacterModels();
-```
-
-
-
-
-&nbsp;
-
-### eraseCharacterModelByName
-Erases a name specified CharacterModel from the SDK object.
-
-```java
-void eraseCharacterModelByName(String name) throws LabelRecognizerException
-```   
-
-**Parameters**
-
-`name` A unique name representing the CharacterModel to erase.   
-  
-**Code Snippet**
-
-```java
-LabelRecognizer recognizer = new LabelRecognizer();
-recognizer.eraseCharacterModelByName("NumberLetter");
-```
-
-
-
-
-&nbsp;
 
 ### getModeArgument
 

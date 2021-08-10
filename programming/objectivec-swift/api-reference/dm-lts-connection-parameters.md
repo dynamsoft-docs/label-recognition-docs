@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDMDLSConnectionParameters
 Defines a class to configure the parameters to connect to license tracking server.  
 
+```objc
+@interface iDMDLSConnectionParameters : NSObject 
+```
 
 ## Attributes
     

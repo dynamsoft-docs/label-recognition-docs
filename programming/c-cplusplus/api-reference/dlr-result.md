@@ -12,14 +12,10 @@ noTitleIndex: true
 # DLR_Result
 Stores the recognized result.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_Result  DLR_Result
 typedef struct tagDLR_Result*  PDLR_Result
 ```  
-  
----
   
 
 ## Attributes

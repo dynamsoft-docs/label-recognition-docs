@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRCharacterResult
+# DLRCharacterResult
 Stores the character result.
   
+```java
+class com.dynamsoft.dlr.DLRCharacterResult
+```
 
 ## Attributes
   

@@ -12,6 +12,9 @@ noTitleIndex: true
 # iQuadrilateral
 Stores the quadrilateral.  
 
+```objc
+@interface iQuadrilateral : NSObject 
+```
 
 ## Attributes
   

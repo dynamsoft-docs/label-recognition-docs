@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDLRReferenceRegion
 Stores the reference region information.  
   
+```objc
+@interface iDLRReferenceRegion : NSObject 
+```
 
 ## Attributes
   

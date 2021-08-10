@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRCharacterResult
+# DLRCharacterResult
 Stores the character result.
   
+```csharp
+class Dynamsoft.DLR.DLRCharacterResult
+```
 
 ## Attributes
   

@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.Core.DMDLSConnectionParameters
+# DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
+```csharp
+class Dynamsoft.Core.DMDLSConnectionParameters
+```   
 
 ## Attributes
     

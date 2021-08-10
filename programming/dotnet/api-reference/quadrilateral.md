@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.Core.Quadrilateral
+# Quadrilateral
 Stores the quadrilateral.  
 
+```csharp
+class Dynamsoft.Core.Quadrilateral
+``` 
 
 ## Attributes
   

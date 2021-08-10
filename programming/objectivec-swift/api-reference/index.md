@@ -18,7 +18,6 @@ needGenerateH3Content: true
 
 - [iQuadrilateral](quadrilateral.md)
 - [iImageData](image-data.md)		
-- [iDMDLSConnectionParameters](dm-lts-connection-parameters.md)
 - [iBarcodeResult](barcode-result.md)
 - [iDLRRuntimeSettings](dlr-runtime-settings.md)	
 - [iDLRReferenceRegion](dlr-reference-region.md)	
@@ -27,7 +26,6 @@ needGenerateH3Content: true
 - [iDLRCharacterResult](dlr-character-result.md)		
 - [iDLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [iDLRFurtherModes](dlr-further-modes.md)	
-- [iDLRLineSpecification](dlr-line-specification.md)
 
 ## Enumerations
 

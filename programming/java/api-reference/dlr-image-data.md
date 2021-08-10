@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRImageData
+# DLRImageData
 Stores the image data.  
 
+```java
+class com.dynamsoft.dlr.DLRImageData
+```
 
 ## Attributes
     

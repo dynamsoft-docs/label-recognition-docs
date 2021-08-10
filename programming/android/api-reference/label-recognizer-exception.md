@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.LabelRecognizerException 
+# LabelRecognizerException 
 Exception for signalling label recognition errors.
   
+```java
+class com.dynamsoft.dlr.LabelRecognizerException
+```  
 
 ## Method
   

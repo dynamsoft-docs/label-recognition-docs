@@ -9,9 +9,13 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRReferenceRegion
+# DLRReferenceRegion
 Stores the reference region information.  
   
+
+```java
+class com.dynamsoft.dlr.DLRReferenceRegion
+```
 
 ## Attributes
   

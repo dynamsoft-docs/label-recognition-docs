@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRDictionaryCorrectionThreshold
+# DLRDictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
+
+```java
+class com.dynamsoft.dlr.DLRDictionaryCorrectionThreshold
+```
 
 ## Attributes
   

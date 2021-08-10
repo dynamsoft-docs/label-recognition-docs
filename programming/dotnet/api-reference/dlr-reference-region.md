@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRReferenceRegion
+# DLRReferenceRegion
 Stores the reference region information.  
-  
+
+```csharp
+class Dynamsoft.DLR.DLRReferenceRegion
+``` 
 
 ## Attributes
   

@@ -18,7 +18,6 @@ needGenerateH3Content: true
 - [DM_Point](point.md)		
 - [Quadrilateral](quadrilateral.md)	
 - [ImageData](image-data.md)	
-- [DM_DLSConnectionParameters](dm-lts-connection-parameters.md)
 - [BarcodeResultArray](barcode-result-array.md)
 - [BarcodeResult](barcode-result.md)
 - [DLR_RuntimeSettings](dlr-runtime-settings.md)	
@@ -29,7 +28,6 @@ needGenerateH3Content: true
 - [DLR_CharacterResult](dlr-character-result.md)
 - [DLR_DictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [DLR_FurtherModes](dlr-further-modes.md)
-- [DLR_LineSpecification](dlr-line-specification.md)
 
 ## Enumerations
 

@@ -12,13 +12,9 @@ noTitleIndex: true
 # DLR_ReferenceRegion
 Stores the reference region information.  
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_ReferenceRegion  DLR_ReferenceRegion 
 ```  
-  
----
   
 
 ## Attributes

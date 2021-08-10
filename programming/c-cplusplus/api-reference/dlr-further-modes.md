@@ -12,6 +12,10 @@ noTitleIndex: true
 # DLR_FurtherModes
 Stores the FurtherModes. 
 
+```cpp
+typedef struct tagDLR_FurtherModes DLR_FurtherModes
+```  
+
 ## Attributes
   
 | Attribute | Type |

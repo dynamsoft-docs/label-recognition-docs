@@ -12,8 +12,6 @@ noTitleIndex: true
 # DLR_CharacterResult
 Stores the character result.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_CharacterResult  DLR_CharacterResult
 typedef struct tagDLR_CharacterResult*  PDLR_CharacterResult

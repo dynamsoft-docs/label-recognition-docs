@@ -12,13 +12,10 @@ noTitleIndex: true
 # DM_DLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
-## Typedefs
-
 ```cpp
 typedef struct tagDM_DLSConnectionParameters  DM_DLSConnectionParameters
 ```
 
----
 
 ## Attributes
     

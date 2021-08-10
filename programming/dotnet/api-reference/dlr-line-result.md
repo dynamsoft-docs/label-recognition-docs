@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRLineResult
+# DLRLineResult
 Stores the line result.
   
+```csharp
+class Dynamsoft.DLR.DLRLineResult
+```
 
 ## Attributes
   

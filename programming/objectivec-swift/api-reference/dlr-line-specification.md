@@ -12,6 +12,10 @@ noTitleIndex: true
 # iDLRLineSpecification
 Stores the settings of text line.
 
+```objc
+@interface iDLRLineSpecification : NSObject 
+```
+
 ## Attributes
   
 | Attribute | Type |

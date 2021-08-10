@@ -12,6 +12,10 @@ noTitleIndex: true
 # DLR_LineSpecification
 Stores the settings of text line. 
 
+```cpp
+typedef struct tagDLR_LineSpecification DLR_LineSpecification
+``` 
+
 ## Attributes
   
 | Attribute | Type |

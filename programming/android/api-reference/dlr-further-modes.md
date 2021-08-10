@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRFurtherModes
+# DLRFurtherModes
 Stores the FurtherModes. 
+
+```java
+class com.dynamsoft.dlr.DLRFurtherModes
+```
 
 ## Attributes
   

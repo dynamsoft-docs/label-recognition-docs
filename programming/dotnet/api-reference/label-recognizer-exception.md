@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.LabelRecognizerException
+# LabelRecognizerException
 The exception class of Dynamsoft.DBR.LabelRecognizer.
+
+```csharp
+class Dynamsoft.DLR.LabelRecognizerException
+```   
 
 ## Attributes
   

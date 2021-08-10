@@ -9,9 +9,11 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.LabelRecognizer
+# LabelRecognizer
 
-
+```csharp
+class Dynamsoft.DLR.LabelRecognizer
+```   
 
 ## Initialization
   

@@ -11,6 +11,10 @@ noTitleIndex: true
 
 # DynamsoftLabelRecognizer
 
+```objc
+@interface DynamsoftLabelRecognizer : NSObject 
+```
+
 ## Initialization
   
   | Method               | Description |

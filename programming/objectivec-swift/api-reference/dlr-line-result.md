@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDLRLineResult
 Stores the line result.
   
+```objc
+@interface iDLRLineResult : NSObject 
+```
 
 ## Attributes
   

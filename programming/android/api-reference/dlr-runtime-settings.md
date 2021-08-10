@@ -9,10 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRRuntimeSettings
+# DLRRuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
-  
+```java
+class com.dynamsoft.dlr.DLRRuntimeSettings
+```    
 
 ## Attributes
   
@@ -26,7 +28,6 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`binarizationModes`](#binarizationmodes) | *int\[\]* |
 | [`furtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
-| [`lineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 
 &nbsp;
 
@@ -117,15 +118,3 @@ DLRFurtherModes furtherModes
 - **See also**  
     [`DLRFurtherModes`](dlr-further-modes.md)
 
-
-&nbsp;
-
-### lineSpecification
-Sets line specification.
-
-```java
-DLRLineSpecification lineSpecification
-```
-
-- **See also**  
-    [`DLRLineSpecification`](dlr-line-specification.md)

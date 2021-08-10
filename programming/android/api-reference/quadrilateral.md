@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.core.Quadrilateral
+# Quadrilateral
 Stores the quadrilateral.  
 
+```java
+class com.dynamsoft.core.Quadrilateral
+```
 
 ## Attributes
   

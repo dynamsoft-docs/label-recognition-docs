@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.Core.BarcodeResult
+# BarcodeResult
 Stores the barcode result.
 
+```csharp
+class Dynamsoft.Core.BarcodeResult
+```
 
 ## Attributes
   

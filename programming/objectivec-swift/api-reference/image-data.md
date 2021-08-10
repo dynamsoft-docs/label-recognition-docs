@@ -12,6 +12,9 @@ noTitleIndex: true
 # iImageData
 Stores the image data.  
 
+```objc
+@interface iImageData : NSObject 
+```
 
 ## Attributes
     

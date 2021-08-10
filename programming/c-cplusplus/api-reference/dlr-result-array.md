@@ -11,13 +11,10 @@ noTitleIndex: true
 # DLR_ResultArray
 Stores the DLR_ResultArray array.  
 
-## Typedefs
 
 ```cpp
 typedef struct tagDLR_ResultArray  DLR_ResultArray
 ```  
-  
----
   
 
 ## Attributes

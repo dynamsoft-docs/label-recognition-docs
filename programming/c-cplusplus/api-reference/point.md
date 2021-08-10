@@ -12,14 +12,11 @@ noTitleIndex: true
 # DM_Point
 Stores an x- and y-coordinate pair in two-dimensional space.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDM_Point  DM_Point
 typedef struct tagDM_Point*  PDM_Point
 ``` 
 
----
 
 ## Attributes
   

@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRLineSpecification
+# DLRLineSpecification
 Stores the settings of text line.
+
+```csharp
+class Dynamsoft.DLR.DLRLineSpecification
+```
 
 ## Attributes
   

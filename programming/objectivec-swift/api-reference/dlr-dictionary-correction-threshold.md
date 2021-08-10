@@ -12,6 +12,10 @@ noTitleIndex: true
 # iDLRDictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
 
+```objc
+@interface iDLRDictionaryCorrectionThreshold : NSObject 
+```
+
 ## Attributes
   
 | Attribute | Type |

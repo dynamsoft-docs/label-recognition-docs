@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRLineResult
+# DLRLineResult
 Stores the line result.
   
+```java
+class com.dynamsoft.dlr.DLRLineResult
+```
 
 ## Attributes
   

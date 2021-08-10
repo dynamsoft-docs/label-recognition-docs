@@ -9,10 +9,13 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.core.BarcodeResult
+# BarcodeResult
 Stores the barcode result.
 
-  
+```java
+class com.dynamsoft.core.BarcodeResult
+```
+
 ## Attributes
   
 | Attribute | Type |

@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.core.Point
+# Point
 Stores an x- and y-coordinate pair in two-dimensional space.
 
+```java
+class com.dynamsoft.core.Point
+```
 
 ## Attributes
   

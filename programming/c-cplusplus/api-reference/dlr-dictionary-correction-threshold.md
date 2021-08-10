@@ -12,8 +12,6 @@ noTitleIndex: true
 # DLR_DictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_DictionaryCorrectionThreshold  DLR_DictionaryCorrectionThreshold
 ```  

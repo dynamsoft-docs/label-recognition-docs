@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.core.ImageData
+# ImageData
 Stores the image data.  
 
+```java
+class com.dynamsoft.core.ImageData
+```  
 
 ## Attributes
     

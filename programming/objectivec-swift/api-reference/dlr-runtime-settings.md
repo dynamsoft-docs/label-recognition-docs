@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDLRRuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
+```objc
+@interface iDLRRuntimeSettings : NSObject 
+```
 
 ## Attributes
   
@@ -25,7 +28,6 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`iDLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md)\* |
 | [`binarizationModes`](#binarizationmodes) | *NSArray\** |
 | [`furtherModes`](#furthermodes) | [`iDLRFurtherModes`](dlr-further-modes.md)\*|
-| [`lineSpecification`](#linespecification) | [`iDLRLineSpecification`](dlr-line-specification.md)\* |
 
 &nbsp;
 
@@ -115,15 +117,3 @@ iDLRFurtherModes* furtherModes
 - **See also**  
     [`iDLRFurtherModes`](dlr-further-modes.md)
 
-
-&nbsp;
-
-### lineSpecification
-Sets line specification.
-
-```objc
-iDLRLineSpecification* lineSpecification
-```
-
-- **See also**  
-    [`iDLRLineSpecification`](dlr-line-specification.md)

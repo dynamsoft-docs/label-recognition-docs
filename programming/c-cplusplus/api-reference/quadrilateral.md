@@ -12,13 +12,10 @@ noTitleIndex: true
 # Quadrilateral
 Stores the quadrilateral.  
 
-## Typedefs
-
 ```cpp
 typedef struct tagQuadrilateral  Quadrilateral 
 ```  
-  
----
+
   
 
 ## Attributes

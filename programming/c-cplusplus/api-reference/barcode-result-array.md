@@ -11,13 +11,10 @@ noTitleIndex: true
 # BarcodeResultArray
 Stores the BarcodeResult array.  
 
-## Typedefs
-
 ```cpp
 typedef struct tagBarcodeResultArray  BarcodeResultArray
 ```  
   
----
   
 
 ## Attributes

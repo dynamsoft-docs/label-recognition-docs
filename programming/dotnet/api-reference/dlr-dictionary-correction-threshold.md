@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRDictionaryCorrectionThreshold
+# DLRDictionaryCorrectionThreshold
 Stores the dictionary correction threshold.
+
+```csharp
+class Dynamsoft.DLR.DLRDictionaryCorrectionThreshold
+```
 
 ## Attributes
   

@@ -12,7 +12,10 @@ noTitleIndex: true
 # iBarcodeResult
 Stores the barcode result.
 
-  
+```objc
+@interface iBarcodeResult : NSObject 
+```
+
 ## Attributes
   
 | Attribute | Type |

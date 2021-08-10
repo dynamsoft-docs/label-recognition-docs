@@ -12,14 +12,10 @@ noTitleIndex: true
 # BarcodeResult
 Stores the barcode result.
 
-## Typedefs
-
 ```cpp
 typedef struct tagBarcodeResult  BarcodeResult
 typedef struct tagBarcodeResult*  PBarcodeResult
 ```  
-  
----
   
 
 ## Attributes

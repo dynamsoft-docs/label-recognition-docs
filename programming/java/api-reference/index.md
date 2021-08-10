@@ -11,22 +11,14 @@ needGenerateH3Content: true
 
 ## Primary Classes
 
-### Package com.dynamsoft.dlr
-
 - [LabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
 
-### Package com.dynamsoft.core
-
 - [Point](point.md)
 - [Quadrilateral](quadrilateral.md)
 - [ImageData](image-data.md)
-- [DMDLSConnectionParameters](dm-lts-connection-parameters.md)
 - [BarcodeResult](barcode-result.md)
-
-### Package com.dynamsoft.dlr
-
 - [LabelRecognizerException](label-recognizer-exception.md)
 - [DLRRuntimeSettings](dlr-runtime-settings.md)
 - [DLRReferenceRegion](dlr-reference-region.md)
@@ -35,11 +27,9 @@ needGenerateH3Content: true
 - [DLRCharacterResult](dlr-character-result.md)	
 - [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [DLRFurtherModes](dlr-further-modes.md)
-- [DLRLineSpecification](dlr-line-specification.md)
 
 ## Enumerations
 
-### Package com.dynamsoft.core
 - [EnumRegionPredetectionMode]({{ site.enumerations }}region-predetection-mode.html)
 - [EnumColourConversionMode]({{ site.enumerations }}colour-conversion-mode.html)
 - [EnumGrayscaleTransformationMode]({{ site.enumerations }}grayscale-transformation-mode.html)
@@ -53,8 +43,6 @@ needGenerateH3Content: true
 - [EnumDMLicenseModule]({{ site.enumerations }}dm-license-module.html)	
 - [EnumDMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)	
 - [EnumProduct]({{ site.enumerations }}product.html)	
-
-### Package com.dynamsoft.dlr
 - [EnumLocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
 
 ## Error Code

@@ -12,13 +12,9 @@ noTitleIndex: true
 # DLR_RuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 ```  
-  
----
   
 
 ## Attributes
@@ -33,7 +29,6 @@ typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`binarizationModes[8]`](#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) |
 | [`furtherModes`](#furthermodes) | [`DLR_FurtherModes`](dlr-further-modes.md)|
-| [`lineSpecification`](#linespecification) | [`DLR_LineSpecification`](dlr-line-specification.md) |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -123,19 +118,6 @@ DLR_FurtherModes furtherModes
 
 - **See also**  
     [`DLR_FurtherModes`](dlr-further-modes.md)
-
-
-&nbsp;
-
-### lineSpecification
-Sets line specification.
-
-```cpp
-DLR_LineSpecification lineSpecification
-```
-
-- **See also**  
-    [`DLR_LineSpecification`](dlr-line-specification.md)
 
 
 &nbsp;

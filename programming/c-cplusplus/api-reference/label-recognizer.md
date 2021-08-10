@@ -9,8 +9,11 @@ noTitleIndex: true
 ---
 
 
-# class dynamsoft::dlr::CLabelRecognizer
+# CLabelRecognizer
 
+```cpp
+class dynamsoft::dlr::CLabelRecognizer
+```
 
 ## Initialization
   

@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRRuntimeSettings
+# DLRRuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
+```csharp
+class Dynamsoft.DLR.DLRRuntimeSettings
+```   
 
 ## Attributes
   
@@ -25,7 +28,6 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)[ ] |
 | [`FurtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
-| [`LineSpecification`](#linespecification) | [`DLRLineSpecification`](dlr-line-specification.md) |
 
 
 &nbsp;
@@ -117,15 +119,3 @@ DLRFurtherModes FurtherModes
 - **See also**  
     [`DLRFurtherModes`](dlr-further-modes.md)
 
-
-&nbsp;
-
-### LineSpecification
-Sets line specification.
-
-```csharp
-DLRLineSpecification LineSpecification
-```
-
-- **See also**  
-    [`DLRLineSpecification`](dlr-line-specification.md)

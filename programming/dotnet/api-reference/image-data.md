@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.Core.ImageData
+# ImageData
 Stores the image data.  
 
+```csharp
+class Dynamsoft.Core.ImageData
+``` 
 
 ## Attributes
     

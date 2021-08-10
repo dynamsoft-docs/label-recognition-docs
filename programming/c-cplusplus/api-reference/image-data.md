@@ -12,13 +12,10 @@ noTitleIndex: true
 # ImageData
 Stores the image data.  
 
-## Typedefs
-
 ```cpp
 typedef struct tagImageData  ImageData
 ```
 
----
 
 ## Attributes
     

@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDLRResult
 Stores the recognized result.
 
+```objc
+@interface iDLRResult : NSObject 
+```
   
 
 ## Attributes

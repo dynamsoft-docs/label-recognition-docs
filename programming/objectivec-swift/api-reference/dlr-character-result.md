@@ -12,6 +12,9 @@ noTitleIndex: true
 # iDLRCharacterResult
 Stores the character result.
   
+```objc
+@interface iDLRCharacterResult : NSObject 
+```
 
 ## Attributes
   

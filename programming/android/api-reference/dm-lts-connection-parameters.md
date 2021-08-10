@@ -9,9 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.core.DMDLSConnectionParameters
+# DMDLSConnectionParameters
 Defines a struct to configure the parameters to connect to license tracking server.  
 
+```java
+class com.dynamsoft.core.DMDLSConnectionParameters
+```
 
 ## Attributes
     

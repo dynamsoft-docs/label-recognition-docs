@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.DLRLineSpecification
+# DLRLineSpecification
 Stores the settings of text line.
+
+```java
+class com.dynamsoft.dlr.DLRLineSpecification
+```
 
 ## Attributes
   

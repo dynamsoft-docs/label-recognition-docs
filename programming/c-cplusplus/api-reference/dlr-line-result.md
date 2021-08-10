@@ -12,14 +12,11 @@ noTitleIndex: true
 # DLR_LineResult
 Stores the line result.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDLR_LineResult  DLR_LineResult
 typedef struct tagDLR_LineResult*  PDLR_LineResult
 ```  
-  
----
+
   
 
 ## Attributes

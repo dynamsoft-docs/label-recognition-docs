@@ -8,7 +8,11 @@ needGenerateH3Content: true
 ---
 
 
-# class com.dynamsoft.dlr.LabelRecognition
+# LabelRecognition
+
+```java
+class com.dynamsoft.dlr.LabelRecognition
+```  
 
 ## General
    

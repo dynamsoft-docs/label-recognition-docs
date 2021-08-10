@@ -9,8 +9,12 @@ noTitleIndex: true
 ---
 
 
-# class Dynamsoft.DLR.DLRFurtherModes
+# DLRFurtherModes
 Stores the FurtherModes. 
+
+```csharp
+class Dynamsoft.DLR.DLRFurtherModes
+```
 
 ## Attributes
   

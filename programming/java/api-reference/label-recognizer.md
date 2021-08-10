@@ -9,9 +9,11 @@ noTitleIndex: true
 ---
 
 
-# class com.dynamsoft.dlr.LabelRecognizer
+# LabelRecognizer
 
-
+```java
+class com.dynamsoft.dlr.LabelRecognizer
+```
 
 ## Initialization
   

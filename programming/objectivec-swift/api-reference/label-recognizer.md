@@ -67,24 +67,21 @@ Initializes the label Recognizer license.
 
 Objective-C:
 ```objc
-DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = "200005";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
+[DynamsoftLabelRecognizer initLicense:@"t0260NwAAAHV***************" verificationDelegate:self];
+
+- (void)DLRLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
 {
-    //TODO add your code for license verification
+    //TODO: add your code for license verification
 }
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200005"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
-func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+DynamsoftLabelRecognizer.initLicense(license:"t0260NwAAAHV***************", verificationDelegate: self)
+
+func DLRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
-    print("isSuccess : \(isSuccess) error : \(String(describing: error))")
+    //TODO: add your code for license verification
 }
 ```
 
@@ -116,7 +113,7 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 Appends CharacterModel to the SDK object.
 
 ```objc
-- (void)appendCharacterModel:(NSString*)name prototxtBuffer:(NSData*)prototxtBuffer txtBuffer:(NSData*)txtBuffer characterModelBuffer:(NSData*)characterModelBuffer
++ (void)appendCharacterModel:(NSString*)name prototxtBuffer:(NSData*)prototxtBuffer txtBuffer:(NSData*)txtBuffer characterModelBuffer:(NSData*)characterModelBuffer
 ```   
    
 **Parameters**
@@ -131,25 +128,66 @@ Appends CharacterModel to the SDK object.
 
 Objective-C:
 ```objc
-DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
 //construct prototxtBuffer, txtBuffer and characterModelBuffer
-[recognizer appendCharacterModel:@"your model name" prototxtBuffer: prototxtBuffer txtBuffer: txtBuffer characterModelBuffer: characterModelBuffer];
+[DynamsoftLabelRecognizer appendCharacterModel:@"your model name" prototxtBuffer: prototxtBuffer txtBuffer: txtBuffer characterModelBuffer: characterModelBuffer];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
 //construct prototxtBuffer, txtBuffer and characterModelBuffer
-recognizer.appendCharacterModel("your model name", prototxtBuffer: prototxtBuffer, txtBuffer: txtBuffer, characterModelBuffer: characterModelBuffer)
+DynamsoftLabelRecognizer.appendCharacterModel("your model name", prototxtBuffer: prototxtBuffer, txtBuffer: txtBuffer, characterModelBuffer: characterModelBuffer)
+```
+
+
+
+
+&nbsp;
+
+### eraseAllCharacterModels
+Erases all CharacterModels the SDK object currently loaded.
+
+```objc
++ (void)eraseAllCharacterModels;
+```   
+   
+**Code Snippet**
+
+Objective-C:
+```objc
+[DynamsoftLabelRecognizer eraseAllCharacterModels];
+```
+
+Swift:
+```Swift
+DynamsoftLabelRecognizer.eraseAllCharacterModels()
+```
+
+
+
+
+&nbsp;
+
+### eraseCharacterModelByName
+Erases a name specified CharacterModel from the SDK object.
+
+```objc
++ (void)eraseCharacterModelByName:(NSString*)name
+```   
+
+**Parameters**
+
+`name` A unique name representing the CharacterModel to erase.   
+  
+**Code Snippet**
+
+Objective-C:
+```objc
+[DynamsoftLabelRecognizer eraseCharacterModelByName:@"your model name"];
+```
+
+Swift:
+```Swift
+DynamsoftLabelRecognizer.eraseCharacterModelByName("your model name")
 ```
 
 
@@ -175,22 +213,15 @@ Appends LabelRecognizerParameter settings in a file to the SDK object.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 [recognizer appendSettingsFromFile:@"your file path" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.appendSettingsFromFile("your file path", error:&error)
 ```
@@ -217,22 +248,15 @@ Append a new template string to the current label Recognizer instance.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", error:&error)
 ```
@@ -258,22 +282,15 @@ Clear all appended parameter settings of the current label Recognizer instance.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 [recognizer clearAppendedSettings:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.clearAppendedSettings(&error)
 ```
@@ -282,80 +299,6 @@ recognizer.clearAppendedSettings(&error)
 
 &nbsp;
 
-### eraseAllCharacterModels
-Erases all CharacterModels the SDK object currently loaded.
-
-```objc
-- (void)eraseAllCharacterModels;
-```   
-   
-**Code Snippet**
-
-Objective-C:
-```objc
-DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-[recognizer eraseAllCharacterModels];
-```
-
-Swift:
-```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
-recognizer.eraseAllCharacterModels()
-```
-
-
-
-
-&nbsp;
-
-### eraseCharacterModelByName
-Erases a name specified CharacterModel from the SDK object.
-
-```objc
-- (void)eraseCharacterModelByName:(NSString*)name
-```   
-
-**Parameters**
-
-`name` A unique name representing the CharacterModel to erase.   
-  
-**Code Snippet**
-
-Objective-C:
-```objc
-DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-[recognizer eraseCharacterModelByName:@"your model name"];
-```
-
-Swift:
-```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
-recognizer.eraseCharacterModelByName("your model name")
-```
-
-
-
-
-&nbsp;
 
 ### getModeArgument
 
@@ -388,22 +331,15 @@ Check follow link for available modes and arguments:
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 NSString *argumentValue = [recognizer getModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 let argumentValue = recognizer.getModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", error:&error)
 ```
@@ -434,22 +370,15 @@ The class object of runtime settings.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 iDLRRuntimeSettings* settings = [recognizer getRuntimeSettings:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 let settings = recognizer.getRuntimeSettings(&error)
 ```
@@ -477,23 +406,15 @@ Outputs runtime settings and save them into a settings file (JSON file).
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-NSString *settingsName;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 [recognizer outputSettingsToFile:@"your saving file path" templateName:@"currentRuntimeSettings" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.outputSettingsToFile("your saving file path", templateName:"currentRuntimeSettings", error:&error)
 ```
@@ -519,22 +440,15 @@ Reset all runtime settings to default values.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 [recognizer resetRuntimeSettings:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.resetRuntimeSettings(error:&error)
 ```
@@ -573,23 +487,15 @@ Check follow link for available modes and arguments:
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-iDLRRuntimeSettings *settings;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing * _Nullable error;   
 [recognizer setModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" argumentValue:"100" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 recognizer.setModeArgument("RegionPredetectionModes", index:0, argumentName:"AspectRatioRange", argumentValue:"100", error:&error)
 ```
@@ -618,14 +524,9 @@ Updates reference region which is defined with source type LST_BARCODE.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-NSArray<iTextResult*> *textResults;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
+NSArray<iBarcodeResult*> *textResults;
 //get textResults from Dynamsoft Barcode Reader SDK
 NSError __autoreleasing *error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
@@ -634,10 +535,8 @@ NSError __autoreleasing *error;
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
-var textResults = [iTextResult]()
+let recognizer = DynamsoftLabelRecognizer()
+var textResults = [iBarcodeResult]()
 //get textResults from Dynamsoft Barcode Reader SDK
 let error: NSError? = NSError()
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}", error:&error)
@@ -648,7 +547,7 @@ recognizer.updateReferenceRegionFromBarcodeResults(textResults, templateName:"P1
 
 &nbsp;
 
-### updateRuntimeSettingsi
+### updateRuntimeSettings
 Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-settings.md) class object.
 
 ```objc
@@ -666,13 +565,8 @@ Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-setting
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 iDLRRuntimeSettings *settings;
 settings.maxThreadCount = 4;
@@ -681,12 +575,10 @@ settings.maxThreadCount = 4;
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 let settings = recognizer.getRuntimeSettings(&error)
-settings.maxThreadCount = 1;
+settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings, error:&error);
 ```
 
@@ -724,26 +616,17 @@ All results recognized successfully.
 Objective-C:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-iDLRResult *result;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 iImageData *imageData = [[iImageData alloc] init];
 //construct imageData
 NSError __autoreleasing *  error;
-result = [recognizer recognizeByBuffer:imageData templateName:@"" error:&error];
+NSArray<iDLRResult*>* result = [recognizer recognizeByBuffer:imageData templateName:@"" error:&error];
 ```
 
 Swift:
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-lts.sessionPassword = "******"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let imageData = iImageData.init()
 let error: NSError? = NSError()
 //construct imageData
@@ -774,25 +657,20 @@ All results recognized successfully.
 **Code Snippet**
 
 Objective-C:
+
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-iDLRResult *result;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
-result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
+NSArray<iDLRResult*>* result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
 
 ```
+
 Swift:
+
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 let result = recognizer.recognizeByFile("your file path", templateName:"", error:&error)
 ```
@@ -826,14 +704,8 @@ Objective-C:
 
 ```objc
 DynamsoftLabelRecognizer *recognizer;
-iDMDLSConnectionParameters* lts = [[iDMDLSConnectionParameters alloc] init];
-lts.organizationID = @"200001";
-recognizer = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
-{
-    //TODO add your code for license verification
-}
-iDLRResult *result;
+recognizer = [[DynamsoftLabelRecognizer alloc] init];
+
 NSError __autoreleasing *  error;
 UIImage *image = [[UIImage alloc] init];
 NSArray<iDLRResult*>* result = [recognizer recognizeByImage:image withTemplate:@"" error:&error];
@@ -842,9 +714,8 @@ NSArray<iDLRResult*>* result = [recognizer recognizeByImage:image withTemplate:@
 Swift:
 
 ```Swift
-let lts = iDMDLSConnectionParameters()
-lts.organizationID = "200001"
-let recognizer = DynamsoftLabelRecognizer(licenseFromDLS: lts, verificationDelegate: self)
+
+let recognizer = DynamsoftLabelRecognizer()
 let error: NSError? = NSError()
 let image: UIImage? = UIImage()
 let result = recognizer.recognizeByImage(image:image withTemplate:"" error:&error)

@@ -25,7 +25,6 @@ needGenerateH3Content: true
  | [`TextArea.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
  | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
- | [`TextArea.InferenceSettingName`](#inferencesettingname) | Specifies the name of the Inference Setting object. |
  | [`TextArea.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
  | [`TextArea.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
  | [`TextArea.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
@@ -367,29 +366,6 @@ Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ 
     "TextRegExPattern":""
 }
 ```
-
-
-
-## InferenceSettingName
-Specifies the name of the Inference Setting object.
-
-**Remarks**
-It is the name of the [`InferenceSetting`](../inference-setting/index.md) object. 
-
-**As Json Parameter**
-
-
-| Json Object |	Json Parameter Name | Value Type | Default Value |
-| ----------- | ------------------- | ---------- | ------------- |
-| TextArea | InferenceSettingName | *string* | "" |
-
-**Json Parameter Example**   
-```json
-{
-    "InferenceSettingName":"IS0"
-}
-```
-
 
 
 

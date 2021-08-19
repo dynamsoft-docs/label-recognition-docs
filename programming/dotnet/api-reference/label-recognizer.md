@@ -116,10 +116,10 @@ recognizer.Dispose();
 &nbsp;
 
 ### GetRuntimeSettings
-Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
+Get current settings and save them into a [`DLR_RuntimeSettings`](dlr-runtime-settings.html) class object.
 
 ```csharp
-DLRRuntimeSettings GetRuntimeSettings()
+DLR_RuntimeSettings GetRuntimeSettings()
 ```   
    
 **Return value**
@@ -137,7 +137,7 @@ The class object of runtime settings.
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
 recognizer.Dispose();
 ```
 
@@ -146,10 +146,10 @@ recognizer.Dispose();
 &nbsp;
 
 ### UpdateRuntimeSettings
-Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings.html) class object.
+Update runtime settings with a given [`DLR_RuntimeSettings`](dlr-runtime-settings.html) class object.
 
 ```csharp
-void UpdateRuntimeSettings(DLRRuntimeSettings settings)
+void UpdateRuntimeSettings(DLR_RuntimeSettings settings)
 ```   
    
 **Parameters**
@@ -167,7 +167,7 @@ void UpdateRuntimeSettings(DLRRuntimeSettings settings)
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.Dispose();
@@ -194,7 +194,7 @@ void ResetRuntimeSettings ()
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.MaxThreadCount = 4;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.ResetRuntimeSettings();
@@ -388,7 +388,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
@@ -435,7 +435,7 @@ Check follow link for available modes and arguments:
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRRuntimeSettings settings = recognizer.GetRuntimeSettings();
+DLR_RuntimeSettings settings = recognizer.GetRuntimeSettings();
 settings.FurtherModes.RegionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.UpdateRuntimeSettings(settings);
 recognizer.SetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
@@ -459,7 +459,7 @@ recognizer.Dispose();
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```csharp
-DLRResult[] RecognizeByBuffer(ImageData imageData, string templateName)
+DLR_Result[] RecognizeByBuffer(ImageData imageData, string templateName)
 ```   
    
 **Parameters**
@@ -482,7 +482,7 @@ LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
 //Generate imageData from somewhere else
-DLRResult[] result = recognizer.RecognizeByBuffer(imageData, "");
+DLR_Result[] result = recognizer.RecognizeByBuffer(imageData, "");
 recognizer.Dispose();
 ```
 
@@ -495,7 +495,7 @@ recognizer.Dispose();
 Recognizes text from a specified image file.
 
 ```csharp
-DLRResult[] RecognizeByFile (string fileName, string templateName)	
+DLR_Result[] RecognizeByFile (string fileName, string templateName)	
 ```   
    
 **Parameters**
@@ -517,7 +517,7 @@ All results recognized successfully.
 LabelRecognizer.InitLicense("t0260NwAAAHV***************");
 
 LabelRecognizer recognizer = new LabelRecognizer();
-DLRResult[] result = recognizer.RecognizeByFile("full file path", "");
+DLR_Result[] result = recognizer.RecognizeByFile("full file path", "");
 recognizer.Dispose();
 ```
 

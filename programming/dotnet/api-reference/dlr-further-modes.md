@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRFurtherModes Struct
-description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRFurtherModes, .Net
+title: Dynamsoft Label Recognizer .NET API Reference - DLR_FurtherModes Struct
+description: This page shows the DLR_FurtherModes Struct of Dynamsoft Label Recognizer for .NET SDK.
+keywords: DLR_FurtherModes, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRFurtherModes
+# DLR_FurtherModes
 Stores the FurtherModes. 
 
 ```csharp
-class Dynamsoft.DLR.DLRFurtherModes
+class Dynamsoft.DLR.DLR_FurtherModes
 ```
 
 ## Attributes

@@ -21,9 +21,13 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
+
+Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+
+>You can download the entire source code from [Here].
 
 ### Create a new project 
 
@@ -34,7 +38,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 ### Include the library
 
 1. Add the Dynamsoft Label Recognizer JAR file to your project.
-    Click File > Properties > Java Build Path > Libraries > Add external JARs, add `dynamsoft-labelrecognizer-{version number}.jar` and click Apply.
+    Click File > Properties > Java Build Path > Libraries > Add external JARs, add `dynamsoft-labelrecognizer-{version number}.jar` and `dynamsoft-core-{version number}.jar` click Apply.
     >Note: The JAR file can be found at `[INSTALLATION FOLDER]\lib`.
 
 
@@ -45,21 +49,24 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 
 ### Initialize the Dynamsoft Label Recognizer
 
-1. Create an instance of Dynamsoft Label Recognizer
+1. Initialize the license key
 
     ```java
-    LabelRecognizer dlr = new LabelRecognizer();
-    ```
-
-2. Initialize the license key
-
-    ```java
-    dlr.InitLicense("<insert DLR license key here>");
+	// 1.Initialize license.
+    LabelRecognizer.InitLicense("<insert DLR license key here>");
     ```    
     
     >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
     >- Find the license in the sample code of the installation package;
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+
+2. Create an instance of Dynamsoft Label Recognizer
+
+    ```java
+    // 2.Create an instance of Label Recognizer.
+    LabelRecognizer dlr = new LabelRecognizer();
+    ```
+
 
 ### Recognizing and output results
 
@@ -69,13 +76,13 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     DLRResult[] results = null;
 
     try {
-        results = dlr.recognizeByFile("dlr_test.png", "");
+        results = dlr.recognizeByFile("../../SampleImages/dlr-sample-vin.png", "");
     } catch (LabelRecognizerException ex) {
         ex.printStackTrace();
     }
     ```
 
-    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
+    >You can download the image [dlr-sample-vin.png](../assets/dlr-sample-vin.png) for testing. In addition, you can replace it with the full path of the image you want to recognize.
 
     >For the error handling mechanism, when an error occurs during the recognition process, an exception will be thrown. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
@@ -113,7 +120,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
-You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorld`.
+You can download the entire source code from [Here].
 
 ### Build and run the project
 

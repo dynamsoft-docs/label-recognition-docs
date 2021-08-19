@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLRReferenceRegion
-description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLRReferenceRegion, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLR_ReferenceRegion
+description: This page shows the DLR_ReferenceRegion struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLR_ReferenceRegion, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRReferenceRegion
+# DLR_ReferenceRegion
 Stores the reference region information.  
 
 ```csharp
-class Dynamsoft.DLR.DLRReferenceRegion
+class Dynamsoft.DLR.DLR_ReferenceRegion
 ``` 
 
 ## Attributes
@@ -49,7 +49,7 @@ int LocalizationSourceType
 ### Points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```csharp
-DLRPoint[] Points
+Point[] Points
 ```
 - **Remarks**   
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
@@ -108,7 +108,7 @@ int BarcodeFormatIds
     BF_ALL
     
 - **Remarks**   
-    Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
+    Barcode formats in BarcodeFormat group 1 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
     
@@ -127,7 +127,7 @@ int BarcodeFormatIds_2
     BF2_NULL
     
 - **Remarks**   
-    Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
+    Barcode formats in BarcodeFormat group 2 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
     

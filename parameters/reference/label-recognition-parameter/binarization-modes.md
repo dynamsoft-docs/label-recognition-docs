@@ -25,9 +25,16 @@ needGenerateH3Content: true
 - [BlockSizeX](#blocksizex)
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
+- [ThresholdCompensation](#thresholdcompensation)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
 - [BinarizationThreshold](#binarizationThreshold)
- 
+- [MorphOperation](#morphoperation)
+- [MorphShape](#morphshape)
+- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
+- [MorphOperationKernelSizeY](#morphoperationkernelsizey)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
+
 ##### BlockSizeX 
 Sets the horizontal block size for the binarization process.
 
@@ -76,12 +83,16 @@ Sets whether to enable binary vacancy filling.
   For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. Better accuracy for images with a large module size.  
   
 
-##### ThreshValueCoefficient 
+##### ThresholdCompensation 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
 
 | Value Type | Value Range | Default Value | 
 | ---------- | ----------- | ------------- |
 | *int* | [-255, 255] | 10 |         
+
+##### ThreshValueCoefficient 
+Deprecated. Use [ThresholdCompensation](#thresholdcompensation) instead.
+
 
 ##### BinarizationThreshold
 Sets the binarization threshold.
@@ -89,6 +100,74 @@ Sets the binarization threshold.
 | Value Type | Value Range | Default Value | 
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 255] | -1 |   
+
+
+
+##### MorphOperation 
+Sets the morph operation for the morphology process. 
+
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
+
+- **Remarks**    
+   - "Erode": Perform erosion process.
+   - "Dilate": Perform dilation process.
+   - "Open": Perform erosion first, then perform dilation.
+   - "Close": Perform dilation first, then perform erosion.
+   
+   For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
+
+
+##### MorphShape  
+ Sets the morph shape for the morphology process.  
+
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
+
+- **Remarks**    
+   - "Rectangle": 
+   - "Cross": 
+   - "Ellipse": 
+
+
+
+##### MorphOperationKernelSizeX  
+Sets the horizontal kernel size for the morphology process. 
+
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 1000]  | -1 |         
+
+
+
+##### MorphOperationKernelSizeY  
+ Sets the vertical kernel size for the morphology process.  
+
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 1000]  | -1 |   
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid For | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
+
+
+- **Remarks**     
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid For | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
 
 ### Setting Methods

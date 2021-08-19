@@ -21,9 +21,13 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
+
+Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+
+>You can download the entire source code from [Here].
 
 ### Create a new project 
 
@@ -34,7 +38,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 2. Add a new source file named `DLRCppSample.cpp` into the project.
 
 #### For Linux
-1. Create a new source file named `DLRCppSample.cpp` and place it into the folder `[INSTALLATION FOLDER]\Samples`.
+1. Create a new source file named `DLRCppSample.cpp` and place it into the folder `[INSTALLATION FOLDER]\Samples\DLRCppSample`.
 
 2. Create a file named `Makefile` and put it in the same directory as the file `DLRCppSample.cpp`. The content of `Makefile` is as follows:
 
@@ -42,7 +46,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     CC=gcc
     CCFLAGS=-c
 
-    DLRLIB_PATH=../Lib/Linux
+    DLRLIB_PATH=../../Lib/Linux
 
     LDFLAGS=-L $(DLRLIB_PATH) -Wl,-rpath=$(DLRLIB_PATH) -Wl,-rpath=./
     DLRLIB=-lDynamsoftLabelRecognizer
@@ -67,7 +71,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
         rm -f $(OBJECT) $(TARGET)
     ```
 
-    >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Linux`.
+    >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]/Lib/Linux`.
 
 ### Include the library
 
@@ -89,25 +93,29 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     #endif
     ```
    
-    >Please replace `<relative path>` in the above code with the relative path to the `DLRCppSample.cpp` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCppSample.cpp` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]/Include/` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]/Lib/`. 
     
 ### Initialize the Dynamsoft Label Recognizer
 
-1. Create an instance of Dynamsoft Label Recognizer
+1. Initialize the license key
 
     ```cpp
-    CLabelRecognizer dlr;
-    ```
-
-2. Initialize the license key
-
-    ```cpp
-    dlr.InitLicense("<insert DLR license key here>");
+    char error[512];
+    
+    // 1.Initialize license.
+    dlr.InitLicense("<insert DLR license key here>", error, 512);
     ```    
     
     >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
     >- Find the license in the sample code of the installation package;
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+
+2. Create an instance of Dynamsoft Label Recognizer
+
+    ```cpp
+    // 2.Create an instance of Label Recognizer.
+    CLabelRecognizer dlr;
+    ```
 
 
 ### Recognizing and output results
@@ -115,13 +123,14 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 1. Recognizing text in an image 
     
     ```cpp
-    errorcode = dlr.RecognizeByFile("dlr_test.png", "");
+    // 3.Recognize text from an image file.
+    errorcode = dlr.RecognizeByFile("../../SampleImages/dlr-sample-vin.png", "");
     
     if(errorcode != DLR_OK)
         printf("%s\n", DLR_GetErrorString(errorcode));
     ```
 
-    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
+    >You can download the image [dlr-sample-vin.png](../assets/dlr-sample-vin.png) for testing. In addition, you can replace it with the full path of the image you want to recognize.
     
     >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DLR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
@@ -132,13 +141,13 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
     DLRResult* result = NULL;
     int lCount, rCount, li, ri;
 
-    // Get all recognized results.
+    // 4. Get all recognized results.
     dlr.GetAllResults(&pDLRResults);
 
     if (pDLRResults != NULL && pDLRResults->resultsCount > 0)
     {
         rCount = pDLRResults->resultsCount;
-        printf("Recognized %d results\r\n", rCount);
+        printf("Recognized %d results\n", rCount);
         for (ri = 0; ri < rCount; ++ri)
         {
             // Get result of each text area (also called label).
@@ -147,21 +156,21 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
             for (li = 0; li < lCount; ++li)
             {
                 // Get the result of each text line in the label.
-                printf("Line result %d: %s\r\n", li, result->lineResults[li]->text);
+                printf("Line result %d: %s\n", li, result->lineResults[li]->text);
             }
         }
     }
     else
     {
-        printf("No data detected.\r\n");
+        printf("No data detected.\n");
     }
     ```
 
     The recognition results of SDK are organized into a four-tier structure: 
-    - `DLRResultArray` corresponds to the results of an `image`
-    - `DLRResult` corresponds to the result of a `TextArea` (also called Label) 
-    - `DLRLineResult` corresponds to the result of each `TextLine` in the Label
-    - `DLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`
+    - `DLR_ResultArray` corresponds to the results of an `image`
+    - `DLR_Result` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLR_LineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLR_CharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
     The structure is shown in the figure below:
 
@@ -179,7 +188,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
         CLabelRecognizer::FreeResults(&pDLRResults);
     ```
 
-You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorldCpp`.
+You can download the entire source code from [Here].
 
 ### Build and run the project
 
@@ -188,7 +197,7 @@ You can find the similar complete source code for this application in `[INSTALLA
 1. Build the application through Visual Studio and copy the related DLL files and character models directory to the same folder as the EXE file. The DLL files and character models directory can be found in `[INSTALLATION FOLDER]\Lib\Windows\[platforms]`.
     >Note: Select the corresponding folder (x86 or x64) based on your project's platform setting.
 
-2. Run the program `DLRCppSample.exe`. The executable files can be downloaded [here](). 
+2. Run the program `DLRCppSample.exe`.
 
 
 #### For Linux
@@ -199,7 +208,7 @@ You can find the similar complete source code for this application in `[INSTALLA
     >make
     ```
 
-2. Run the program `DLRCppSample`. The executable files can be downloaded [here](). 
+2. Run the program `DLRCppSample`.
     ```
     >./DLRCppSample
     ```

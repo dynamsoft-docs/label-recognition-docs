@@ -16,7 +16,7 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) array* | "GEM_SKIP"<br>"GEM_AUTO"<br>"GEM_GENERAL"<br>"GEM_GRAY_EQUALIZE"<br>"GEM_GRAY_SMOOTH"<br>"GEM_SHARPEN_SMOOTH"<br>"GEM_MORPHOLOGY" | ["GEM_GENERAL", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP"] |
+| *string array* or *[`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) array* | "GEM_SKIP"<br>"GEM_AUTO"<br>"GEM_GENERAL"<br>"GEM_GRAY_EQUALIZE"<br>"GEM_GRAY_SMOOTH"<br>"GEM_SHARPEN_SMOOTH" | ["GEM_GENERAL", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP", "GEM_SKIP"] |
 
 - **See also**:   
     [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}grayscale-enhancement-mode.html)
@@ -27,10 +27,6 @@ needGenerateH3Content: true
 - [SmoothBlockSizeY](#smoothblocksizey)
 - [SharpenBlockSizeX](#sharpenblocksizex)
 - [SharpenBlockSizeY](#sharpenblocksizey)
-- [MorphOperation](#morphoperation)
-- [MorphShape](#morphshape)
-- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
-- [MorphOperationKernelSizeY](#morphoperationkernelsizey)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -87,54 +83,7 @@ Sets the vertical block size for the sharpening process.
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
-  
-
-
-##### MorphOperation 
-Sets the morph operation for the morphology process. 
-
-| Value Type | Value Range | Default Value | 
-| ---------- | ----------- | ------------- |
-| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
-
-- **Remarks**    
-   - "Erode": Perform erosion process.
-   - "Dilate": Perform dilation process.
-   - "Open": Perform erosion first, then perform dilation.
-   - "Close": Perform dilation first, then perform erosion.
-   
-   For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
-
-
-##### MorphShape  
- Sets the morph shape for the morphology process.  
-
-| Value Type | Value Range | Default Value | 
-| ---------- | ----------- | ------------- |
-| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
-
-- **Remarks**    
-   - "Rectangle": 
-   - "Cross": 
-   - "Ellipse": 
-
-
-
-##### MorphOperationKernelSizeX  
-Sets the horizontal kernel size for the morphology process. 
-
-| Value Type | Value Range | Default Value | 
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1000]  | 0 |         
-
-
-
-##### MorphOperationKernelSizeY  
- Sets the vertical kernel size for the morphology process.  
-
-| Value Type | Value Range | Default Value | 
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1000]  | 0 |       
+      
 
 
 ##### LibraryFileName 

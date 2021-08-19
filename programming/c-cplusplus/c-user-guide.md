@@ -21,9 +21,13 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
+
+Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+
+>You can download the entire source code and compiled program from [Here].
 
 ### Create a new project 
 
@@ -34,7 +38,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 2. Add a new source file named `DLRCSample.c` into the project.
 
 #### For Linux
-1. Create a new source file named `DLRCSample.c` and place it into the folder `[INSTALLATION FOLDER]\Samples`.
+1. Create a new source file named `DLRCSample.c` and place it into the folder `[INSTALLATION FOLDER]\Samples\DLRCSample`.
 
 2. Create a file named `Makefile` and put it in the same directory as the file `DLRCSample.c`. The content of `Makefile` is as follows:
 
@@ -42,7 +46,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     CC=gcc
     CCFLAGS=-c
 
-    DLRLIB_PATH=../Lib/Linux
+    DLRLIB_PATH=../../Lib/Linux
 
     LDFLAGS=-L $(DLRLIB_PATH) -Wl,-rpath=$(DLRLIB_PATH) -Wl,-rpath=./
     DLRLIB=-lDynamsoftLabelRecognizer
@@ -85,51 +89,55 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     #endif
     ```
    
-    >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]\Include\` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]\Lib\`. 
+    >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]/Include/` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]/Lib/`. 
     
 ### Initialize the Dynamsoft Label Recognizer
 
-1. Create an instance of Dynamsoft Label Recognizer
+1. Initialize the license key
 
     ```c
-    void* dlr = DLR_CreateInstance();
-    ```
-
-2. Initialize the license key
-
-    ```c
-    DLR_InitLicense(dlr, "<insert DLR license key here>");
+    char error[512];
+    
+    // 1.Initialize license.
+    DLR_InitLicense("<insert DLR license key here>", error, 512);
     ```    
     
     >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
     >- Find the license in the sample code of the installation package;
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
+2. Create an instance of Dynamsoft Label Recognizer
+
+    ```c
+    // 2.Create an instance of Label Recognizer.
+    void* dlr = DLR_CreateInstance();
+    ```
 
 ### Recognizing and output results
 
 1. Recognizing text in an image 
     
     ```c
-    errorcode = DLR_RecognizeByFile(dlr, "dlr_test.png", "");
+    // 3.Recognize text from an image file.
+    errorcode = DLR_RecognizeByFile(dlr, "../../SampleImages/dlr-sample-vin.png", "");
     
-    if(errorcode != DLR_OK)
+    if(errorcode != DM_OK)
         printf("%s\n", DLR_GetErrorString(errorcode));
     ```
 
-    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
+    >You can download the image [dlr-sample-vin.png](../assets/dlr-sample-vin.png) for testing. In addition, you can replace it with the full path of the image you want to recognize.
 
     >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DLR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
 2. Get and output the recognition results
 
     ```c
-    DLRResultArray *pDLRResults = NULL;
-    DLRResult* result = NULL;
-    DLRLineResult *lineResult = NULL;
+    DLR_ResultArray *pDLRResults = NULL;
+    DLR_Result* result = NULL;
+    DLR_LineResult *lineResult = NULL;
     int lCount, rCount, li, ri;
 
-    // Get all recognized results.
+    // 4. Get all recognized results.
     DLR_GetAllResults(dlr, &pDLRResults);
 
     if (pDLRResults != NULL && pDLRResults->resultsCount > 0)
@@ -157,10 +165,10 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     ```
 
     The recognition results of SDK are organized into a four-tier structure: 
-    - `DLRResultArray` corresponds to the results of an `image`
-    - `DLRResult` corresponds to the result of a `TextArea` (also called Label) 
-    - `DLRLineResult` corresponds to the result of each `TextLine` in the Label
-    - `DLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`
+    - `DLR_ResultArray` corresponds to the results of an `image`
+    - `DLR_Result` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLR_LineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLR_CharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
     The structure is shown in the figure below:
 
@@ -180,7 +188,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     DLR_DestroyInstance(dlr);
     ```
 
-You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorldC`.
+You can download the entire source code from [here].
 
 ### Build and run the project
 

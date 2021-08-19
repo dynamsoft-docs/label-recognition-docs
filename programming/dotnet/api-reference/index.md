@@ -20,13 +20,13 @@ needGenerateH3Content: true
 - [ImageData](image-data.md)
 - [BarcodeResult](barcode-result.md)
 - [LabelRecognizerException](label-recognizer-exception.md)
-- [DLRRuntimeSettings](dlr-runtime-settings.md)
-- [DLRReferenceRegion](dlr-reference-region.md)
-- [DLRResult](dlr-result.md)
-- [DLRLineResult](dlr-line-result.md)
-- [DLRCharacterResult](dlr-character-result.md)	
-- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
-- [DLRFurtherModes](dlr-further-modes.md)
+- [DLR_RuntimeSettings](dlr-runtime-settings.md)
+- [DLR_ReferenceRegion](dlr-reference-region.md)
+- [DLR_Result](dlr-result.md)
+- [DLR_LineResult](dlr-line-result.md)
+- [DLR_CharacterResult](dlr-character-result.md)	
+- [DLR_DictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
+- [DLR_FurtherModes](dlr-further-modes.md)
 
 ## Enumerations
 

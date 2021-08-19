@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLRLineSpecification Struct
-description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for .NET SDK.
-keywords: DLRLineSpecification, .Net
+title: Dynamsoft Label Recognizer .NET API Reference - DLR_LineSpecification Struct
+description: This page shows the DLR_LineSpecification Struct of Dynamsoft Label Recognizer for .NET SDK.
+keywords: DLR_LineSpecification, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRLineSpecification
+# DLR_LineSpecification
 Stores the settings of text line.
 
 ```csharp
-class Dynamsoft.DLR.DLRLineSpecification
+class Dynamsoft.DLR.DLR_LineSpecification
 ```
 
 ## Attributes

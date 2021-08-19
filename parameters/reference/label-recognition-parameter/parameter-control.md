@@ -75,11 +75,11 @@ All TextArea Objects without CharacterModelName set will be set from this settin
 Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
 
 **Remarks**    
-Format: [MinHeight, MaxHeight, ByPercentage]  
+Format: [MinHeight, MaxHeight, ByThousandth]  
 The allowed values for MinHeight/MaxHeight:  
-ByPercentage=0, [1, 0x7fffffff]  
-ByPercentage=1, [1, 100]  
-The allowed values for ByPercentage: [0,1]  
+ByThousandth=0, [1, 0x7fffffff]  
+ByThousandth=1, [1, 1000]  
+The allowed values for ByThousandth: [0,1]  
 All TextArea Objects without LetterHeightRange set will be set from this setting.
 
 

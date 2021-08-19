@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLRRuntimeSettings
-description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLRRuntimeSettings, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLR_RuntimeSettings
+description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLR_RuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRRuntimeSettings
+# DLR_RuntimeSettings
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 ```csharp
-class Dynamsoft.DLR.DLRRuntimeSettings
+class Dynamsoft.DLR.DLR_RuntimeSettings
 ```   
 
 ## Attributes
@@ -22,12 +22,12 @@ class Dynamsoft.DLR.DLRRuntimeSettings
 |---------- | ---- |
 | [`MaxThreadCount`](#maxthreadcount) | *int* |
 | [`CharacterModelName`](#charactermodelname) | *string* |
-| [`ReferenceRegion`](#referenceregion) | [`DLRReferenceRegion`](dlr-reference-region.md) |
+| [`ReferenceRegion`](#referenceregion) | [`DLR_ReferenceRegion`](dlr-reference-region.md) |
 | [`TextArea`](#textarea) | [`Quadrilateral`](quadrilateral.md) |
 | [`DictionaryPath`](#dictionarypath) | *string* |
-| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
+| [`DictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)[ ] |
-| [`FurtherModes`](#furthermodes) | [`DLRFurtherModes`](dlr-further-modes.md)|
+| [`FurtherModes`](#furthermodes) | [`DLR_FurtherModes`](dlr-further-modes.md)|
 
 
 &nbsp;
@@ -61,7 +61,7 @@ string CharacterModelName
 ### ReferenceRegion
 Sets the reference region to search for text.
 ```csharp
-DLRReferenceRegion ReferenceRegion
+DLR_ReferenceRegion ReferenceRegion
 ```
 
 &nbsp;
@@ -85,7 +85,7 @@ string DictionaryPath
 ### DictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
 ```csharp
-DLRDictionaryCorrectionThreshold DictionaryCorrectionThreshold
+DLR_DictionaryCorrectionThreshold DictionaryCorrectionThreshold
 ```
 
 &nbsp;
@@ -113,9 +113,9 @@ EnumBinarizationMode[] BinarizationModes
 Sets further modes.
 
 ```csharp
-DLRFurtherModes FurtherModes
+DLR_FurtherModes FurtherModes
 ```
 
 - **See also**  
-    [`DLRFurtherModes`](dlr-further-modes.md)
+    [`DLR_FurtherModes`](dlr-further-modes.md)
 

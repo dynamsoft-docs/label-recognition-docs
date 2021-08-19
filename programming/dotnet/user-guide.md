@@ -20,9 +20,12 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your first application
+Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+
+>You can download the entire source code from [Here].
 
 ### Create a new project 
 
@@ -36,38 +39,41 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 2. Import the namespace in the file `Program.cs`
     
     ```cs
-    using Dynamsoft.Core;
     using Dynamsoft.DLR;
     ```
 
 ### Initialize the Dynamsoft Label Recognizer
 
-1. Create an instance of Dynamsoft Label Recognizer
+1. Initialize the license key
 
     ```cs
-    LabelRecognizer dlr = new LabelRecognizer();
-    ```
-
-2. Initialize the license key
-
-    ```cs
-    dlr.InitLicense("<insert DLR license key here>");
+    // 1.Initialize license.
+    LabelRecognizer.InitLicense("<insert DLR license key here>");
     ```    
     
     >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
     >- Find the license in the sample code of the installation package;
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>. 
 
+2. Create an instance of Dynamsoft Label Recognizer
+
+    ```cs
+    // 2.Create an instance of Label Recognizer.
+    LabelRecognizer dlr = new LabelRecognizer();
+    ```
+
+
 ### Recognizing and output results
 
 1. Recognizing text in an image 
     
     ```cs
-    DLRResult[] results = null;
+    DLR_Result[] results = null;
 
     try
     {
-        results = dlr.RecognizeByFile("dlr_test.png", "");
+        // 3.Recognize text from an image file.
+        results = dlr.RecognizeByFile("../../SampleImages/dlr-sample-vin.png", "");
     }
     catch (LabelRecognizerException exp)
     {
@@ -75,7 +81,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     }
     ```
 
-    >You can download the image [dlr_test.png](../assets/dlr_test.png) for testing. In addition, you can replace `dlr_test.png` with the full path of the image you want to recognize.
+    >You can download the image [dlr-sample-vin.png](../assets/dlr-sample-vin.png) for testing. In addition, you can replace it with the full path of the image you want to recognize.
 
     >For the error handling mechanism, when an error occurs during the recognition process, an exception will be thrown. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
@@ -89,11 +95,11 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
             Console.WriteLine("Result " + i.ToString() + ":");
 
             // Get result of each text area (also called label).
-            DLRResult result = results[i];
+            DLR_Result result = results[i];
             for (int j = 0; j < result.LineResults.Length; ++j)
             {
                 // Get the result of each text line in the label.
-                DLRLineResult lineResult = result.LineResults[j];
+                DLR_LineResult lineResult = result.LineResults[j];
                 Console.WriteLine(">>LineResult " + j.ToString() + ": " + lineResult.Text);
             }
         }
@@ -105,10 +111,10 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     ```
 
     The recognition results of SDK are organized into a four-tier structure: 
-    - `DLRResult[]` corresponds to the results of an `image`
-    - `DLRResult` corresponds to the result of a `TextArea` (also called Label) 
-    - `DLRLineResult` corresponds to the result of each `TextLine` in the Label
-    - `DLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`
+    - `DLR_Result[]` corresponds to the results of an `image`
+    - `DLR_Result` corresponds to the result of a `TextArea` (also called Label) 
+    - `DLR_LineResult` corresponds to the result of each `TextLine` in the Label
+    - `DLR_CharacterResult` corresponds to the result of each `Character` in the `TextLine`
 
     The structure is shown in the figure below:
 
@@ -117,7 +123,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
-You can find the similar complete source code for this application in `[INSTALLATION FOLDER]\Samples\HelloWorld`.
+You can download the entire source code from [Here].
 
 ### Build and run the project
 

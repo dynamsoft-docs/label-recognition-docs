@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLRCharacterResult
-description: This page shows the DLRCharacterResult struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLRCharacterResult, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLR_CharacterResult
+description: This page shows the DLR_CharacterResult struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLR_CharacterResult, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRCharacterResult
+# DLR_CharacterResult
 Stores the character result.
   
 ```csharp
-class Dynamsoft.DLR.DLRCharacterResult
+class Dynamsoft.DLR.DLR_CharacterResult
 ```
 
 ## Attributes

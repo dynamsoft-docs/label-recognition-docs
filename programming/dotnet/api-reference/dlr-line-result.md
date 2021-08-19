@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLRLineResult
-description: This page shows the DLRLineResult struct of Dynamsoft Label Recognizer for .Net Language.
-keywords: DLRLineResult, struct, .Net
+title: Dynamsoft Label Recognizer .Net Class - DLR_LineResult
+description: This page shows the DLR_LineResult struct of Dynamsoft Label Recognizer for .Net Language.
+keywords: DLR_LineResult, struct, .Net
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 
-# DLRLineResult
+# DLR_LineResult
 Stores the line result.
   
 ```csharp
-class Dynamsoft.DLR.DLRLineResult
+class Dynamsoft.DLR.DLR_LineResult
 ```
 
 ## Attributes
@@ -25,7 +25,7 @@ class Dynamsoft.DLR.DLRLineResult
 | [`CharacterModelName`](#charactermodelname) | *string* |
 | [`Location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`Confidence`](#confidence) | *int* |
-| [`CharacterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
+| [`CharacterResults`](#characterresults) | [`DLR_CharacterResult[]`](dlr-character-result.md) |
 
 
 &nbsp;
@@ -74,6 +74,6 @@ int Confidence
 ### CharacterResults
 The character results array.
 ```csharp
-DLRCharacterResult[] CharacterResults
+DLR_CharacterResult[] CharacterResults
 ```
 

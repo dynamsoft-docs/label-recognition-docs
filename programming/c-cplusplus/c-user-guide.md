@@ -99,11 +99,12 @@ Let’s start by creating a console application which demonstrates how to use th
     char error[512];
     
     // 1.Initialize license.
-    DLR_InitLicense("<insert DLR license key here>", error, 512);
-    ```    
-    
-    >Please replace `<insert DLR license key here>` with your DLR license key. There are two ways to obtain a DLR license:
-    >- Find the license in the sample code of the installation package;
+    DLR_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==", error, 512);
+    ```  
+
+    >Note:
+    >- Network connection is required for the license to work.
+    >- "DLS2***" is a default 7-day trial license used in the sample.
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
 2. Create an instance of Dynamsoft Label Recognizer

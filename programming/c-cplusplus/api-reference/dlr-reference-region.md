@@ -22,7 +22,7 @@ typedef struct tagDLR_ReferenceRegion  DLR_ReferenceRegion
 | Attribute | Type |
 |---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`LocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
-| [`points[4]`](#points) | [`DM_Point`](point.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`barcodeFormatIds`](#barcodeformatids) | *int* |
@@ -48,10 +48,10 @@ LocalizationSourceType localizationSourceType
 
 &nbsp;
 
-### points
+### location
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```cpp
-DM_Point points[4]
+Quadrilateral location
 ```
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>

@@ -21,7 +21,7 @@ Stores the reference region information.
 | Attribute | Type |
 |---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
-| [`points`](#points) | *NSArray\** |
+| [`location`](#location) | [`iQuadrilateral`](quadrilateral.md)\* |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *NSInteger* |
 | [`barcodeFormatIds`](#barcodeformatids) | *NSInteger* |
@@ -46,10 +46,10 @@ NSInteger localizationSourceType
 
 &nbsp;
 
-### points
+### location
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```objc
-NSArray* points
+iQuadrilateral* location
 ```
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeManualSpecification.<br>

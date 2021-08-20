@@ -21,7 +21,7 @@ class com.dynamsoft.dlr.DLRReferenceRegion
 | Attribute | Type |
 |---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
-| [`points`](#points) | [`com.dynamsoft.core.Point[]`](point.md) |
+| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`barcodeFormatIds`](#barcodeformatids) | *int* |
@@ -46,10 +46,10 @@ int localizationSourceType
 
 &nbsp;
 
-### points
+### location
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```java
-com.dynamsoft.core.Point[] points
+com.dynamsoft.core.Quadrilateral location
 ```
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>

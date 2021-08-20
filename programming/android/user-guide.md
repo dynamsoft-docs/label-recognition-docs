@@ -19,11 +19,12 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the [Dynamsoft website](https://www.dynamsoft.com/label-recognition/downloads) and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR) SDK from the <a href="https://www.dynamsoft.com/label-recognition/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unzip the package. After decompression, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build Your First Application
 
 The following sample will demonstrate how to take a picture and recognize it.
+>You can download the entire source code from [Here].
 
 ### Create a New Project 
 
@@ -41,7 +42,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 
 #### Local Binary Dependency
 
-1. Copy the file `[INSTALLATION FOLDER]\DynamsoftLabelRecognizerAndroid.aar` to the target directory `DLRAndroidSample\app\libs`
+1. Copy the file `[INSTALLATION FOLDER]\DynamsoftLabelRecognizerAndroid.aar` and `[INSTALLATION FOLDER]\DynamsoftCoreAndroid.aar` to the target directory `DLRAndroidSample\app\libs`
 
 2. Open the file `DLRAndroidSample\app\build.gradle`, and add reference in the dependencies:
     ```
@@ -63,6 +64,9 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     ```
     repositories {
         maven {
+            url "http://download2.dynamsoft.com/maven/dc/aar"
+        }
+        maven {
             url "http://download2.dynamsoft.com/maven/dlr/aar"
         }
     }
@@ -71,6 +75,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 2. Add reference in the dependencies:
     ```
     dependencies {
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}@aar'
         implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}@aar'
     }
     ```
@@ -85,33 +90,30 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
 
 ### Initialize the Dynamsoft Label Recognizer
 
-1. Create an instance of Dynamsoft Label Recognizer
+
+1. Initialize the license
 
     ```java
-    LabelRecognizer dlr = new LabelRecognizer();
-    ```
-
-2. Initialize the license
-
-    ```java
-    DMDLSConnectionParameters licenseInfo = new DMDLSConnectionParameters();
-
-    licenseInfo.organizationID = "200001";
-    dlr.initLicenseFromDLS(licenseInfo, new DLRDLSLicenseVerificationListener() {
+    LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==", new DLRLicenseVerificationListener() {
         @Override
-        public void DLSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        public void DLRLicenseVerificationCallback(boolean isSuccess, Exception error) {
             if(!isSuccess){
                 error.printStackTrace();
             }
         }
     });
     ```    
-    
+
     >Note:
     >- Network connection is required for the license to work.
-    >- If `organizationID` is specified as "200001", a 7-day trial license will be used by default in the sample.
-    >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs).
+    >- "DLS2***" is a default 7-day trial license used in the sample.
+    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
+2. Create an instance of Dynamsoft Label Recognizer
+
+    ```java
+    LabelRecognizer dlr = new LabelRecognizer();
+    ```
 
 ### Recognizing and Output Results
 
@@ -129,10 +131,12 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     if (results != null && results.length > 0) {
         String strCurResult = "";
         for (int i = 0; i < results.length; i++) {
+            
             // Get result of each text area (also called label).
             DLRResult result = results[i];
             strCurResult += "Result " + i + ":\n";
             for (int j = 0; j < result.lineResults.length; j++) {
+
                 // Get the result of each text line in the label.
                 DLRLineResult lineResult = result.lineResults[j];
                 strCurResult += ">>Line Result " + j + ": " + lineResult.text + "\n";
@@ -309,7 +313,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     </paths>
     ```
 
-The complete source code can be found [here](MainActivity.java).
+You can download the entire source code from [Here].
 
 ### Build and Run the Project
 

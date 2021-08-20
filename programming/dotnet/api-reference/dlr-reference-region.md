@@ -21,7 +21,7 @@ class Dynamsoft.DLR.DLR_ReferenceRegion
 | Attribute | Type |
 |---------- | ---- |
 | [`LocalizationSourceType`](#localizationsourcetype) | [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) |
-| [`Points`](#points) | *Point\[\]* |
+| [`Location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 | [`RegionMeasuredByPercentage`](#regionmeasuredbypercentage) | *int* |
 | [`RegionPredetectionModesIndex`](#regionpredetectionmodesindex) | *int* |
 | [`BarcodeFormatIds`](#barcodeformatids) | *int* |
@@ -46,10 +46,10 @@ int LocalizationSourceType
 
 &nbsp;
 
-### Points
+### Location
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 ```csharp
-Point[] Points
+Quadrilateral Location
 ```
 - **Remarks**   
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>

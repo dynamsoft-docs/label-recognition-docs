@@ -26,7 +26,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 ## Build Your First Application
 
 The following sample will demonstrate how to take a picture and recognize it.
->Note: The following steps are all completed in XCode 12.2
+>Note: 
+>1.The following steps are completed in XCode 12.2
+>2.You can download the entire source code from [Here].
 
 ### Create a New Project 
 
@@ -43,13 +45,10 @@ The following sample will demonstrate how to take a picture and recognize it.
 ### Include the Library
 
 1. Add the Dynamsoft Label Recognizer framework to your project.
-    - Drag and drop the framework(`[INSTALLATION FOLDER]\DynamsoftLabelRecognizer.framework`) into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
+    - Drag and drop the frameworks(`[INSTALLATION FOLDER]\DynamsoftCore.framework` and `[INSTALLATION FOLDER]\DynamsoftLabelRecognizer.framework`) into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
     - Click on the project, go to the `General` > `Frameworks, Libraries, and Embedded Content`, set the embed type to `Embed & Sign`.
    
-2. Add the library `libc++.tbd`.
-    - Click + button. Search for the file `libc++.tbd`, select it and click Add button. Then the libc++.tbd file will be copied to your project.
-
-3. Import the framework in the file `ViewController.m`
+2. Import the framework in the file `ViewController.m`
     
     - Objective-C
 
@@ -69,33 +68,31 @@ The following sample will demonstrate how to take a picture and recognize it.
     - Objective-C
 
     ```objc
-    iDLRDLSConnectionParameters* lts = [[iDLRDLSConnectionParameters alloc] init];
-    lts.organizationID = @"200001";
+    [DynamsoftLabelRecognizer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==" verificationDelegate:self];
     ```
     - Swift
 
     ```swift
-    let lts:iDLRDLSConnectionParameters = iDLRDLSConnectionParameters()
-    lts.organizationID = "200001"
+    DynamsoftLabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInByb2R1Y3RzIjoyfQ==",verificationDelegate:self)
     ```       
 
     >Note:
     >- Network connection is required for the license to work.
-    >- If `organizationID` is specified as "200001", a 7-day trial license will be used by default in the sample.
-    >- If the license has expired, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs).
+    >- "DLS2***" is a default 7-day trial license used in the sample.
+    >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
 2. Create an instance of Dynamsoft Label Recognizer
 
     - Objective-C
 
     ```objc
-    DynamsoftLabelRecognizer *dlr = [[DynamsoftLabelRecognizer alloc] initLicenseFromDLS:lts verificationDelegate:self];
+    DynamsoftLabelRecognizer *dlr = [[DynamsoftLabelRecognizer alloc] init];
     ```
 
     - Swift
 
     ```swift
-    let dlr = DynamsoftLabelRecognition(licenseFromDLS: lts, verificationDelegate: self)
+    let dlr = DynamsoftLabelRecognition.init()
     ```
 
 ### Recognizing and Output Results
@@ -106,14 +103,14 @@ The following sample will demonstrate how to take a picture and recognize it.
 
     ```objc
     NSError* error = [[NSError alloc] init];
-    NSArray<iDLRResult*>* results = [dlr recognizeByBuffer:data templateName:@"" error:&error];
+    NSArray<iDLRResult*>* results = [dlr recognizeByImage:self.imgView.image templateName:@"" error:&error];
     ```
 
     - Swift
 
     ```swift
     var error : NSError? = NSError()
-    let results = dlr.recognizeByBuffer(imageData: data, templateName: "", error: &error)
+    let results = dlr.recognizeByBuffer(image: imgView.image!, templateName: "", error: &error)
     ```
 
     >The variable `data` represents the temporary photo taken by camera app, which will be explained later.

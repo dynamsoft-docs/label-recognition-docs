@@ -24,7 +24,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 ## Build Your First Application
 
 The following sample will demonstrate how to take a picture and recognize it.
->You can download the entire source code from [Here].
+>Note: 
+>1.The following steps are completed in Android Studio 4.2.
+>2.You can download the entire source code from [Here].
 
 ### Create a New Project 
 

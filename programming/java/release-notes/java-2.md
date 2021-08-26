@@ -30,7 +30,7 @@ needAutoGenerateSidebar: false
 - Fixed a bug that might cause wrong line number matching when using [`LineSpecification.LineNumber`]({{ site.parameters-reference }}line-specification/parameter-control.html#linenumber).
 
 ### API Changes
-- Modified the method `initLicense(String)` to static [`initLicense(String)`](../api-reference/label-recognizer.md#initlicense)
+- Modified the method `initLicense(String)` to static [`initLicense(String)`](../api-reference/label-recognizer.md#initlicense).
 - Modified the parameter type of the method [`updateReferenceRegionFromBarcodeResults`](../api-reference/label-recognizer.md#updatereferenceregionfrombarcoderesults) from `TextResult[]` to `BarcodeResult[]`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.
 - Renamed class `LabelRecognition` to [`LableRecognizer`](../api-reference/label-recognizer.md).

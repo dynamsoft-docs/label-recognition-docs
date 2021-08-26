@@ -35,11 +35,11 @@ needAutoGenerateSidebar: false
 
 ### API Changes
 
-- Modified the method initLicense(String) to static [`initLicense(String, DLRLicenseVerificationListener)`](../api-reference/label-recognizer.md#initlicense)
+- Modified the method initLicense(String) to static [`initLicense(String, DLRLicenseVerificationListener)`](../api-reference/label-recognizer.md#initlicense).
 - Modified the parameter type of the method [`updateReferenceRegionFromBarcodeResults`](../api-reference/label-recognizer.md#updatereferenceregionfrombarcoderesults) from `TextResult[]` to `BarcodeResult[]`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.
 - Renamed class `LabelRecognition` to [`LableRecognizer`](../api-reference/label-recognizer.md).
-- Renamed interface `DLRLTSLicenseVerificationListener` to `DLRLicenseVerificationListener`
+- Renamed interface `DLRLTSLicenseVerificationListener` to `DLRLicenseVerificationListener`.
 - Renamed interface method `LTSLicenseVerificationCallback` to `DLRLicenseVerificationCallback`.
 - Removed method `initLicenseFromLTS`.
 - Removed method `LabelRecognizer(string license)`.

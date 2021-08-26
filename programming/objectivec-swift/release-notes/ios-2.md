@@ -15,7 +15,7 @@ needAutoGenerateSidebar: false
 - Added framework `DynamsoftCore.framework`. Migrated the Dynamsoft core classes from framework `DynamsoftLabelRecognizer.framework` to `DynamsoftCore.framework`.
 - Added class  [`iBarcodeResult`]({{site.objectivec-swift-api}}barcode-result.html) for users to interact with Dynamsoft Barcode Reader SDK.
 - Added [`iDLRRuntimeSettings`]({{site.objectivec-swift-api}}dlr-runtime-settings.html) property [`dictionaryPath`]({{site.objectivec-swift-api}}dlr-runtime-settings.html#dictionarypath) and [`dictionaryCorrectionThreshold`]({{site.objectivec-swift-api}}dlr-runtime-settings.html#dictionarycorrectionthreshold) for users to further improve the recognizing accuracy by referencing dictionary files.
-- Added class [`iDLRDictionaryCorrectionThreshold`]({{site.objectivec-swift-api}}dlr-dictionary-correction-threshold.html)
+- Added class [`iDLRDictionaryCorrectionThreshold`]({{site.objectivec-swift-api}}dlr-dictionary-correction-threshold.html).
 - Added class [`iDLRFurtherModes`]({{site.objectivec-swift-api}}dlr-further-modes.html) and property [`iDLRRuntimeSettings.furtherModes`]({{site.objectivec-swift-api}}dlr-runtime-settings.html#furthermodes) for users to config more processing modes.
 - Added enumeration [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) and property [`iDLRFurtherModes.textureDetectionModes`]({{site.objectivec-swift-api}}dlr-further-modes.html#texturedetectionmodes) for users to detect and remove the texture background.
 - Added enumeration [`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) and property [`iDLRFurtherModes.colourConversionModes`]({{site.objectivec-swift-api}}dlr-further-modes.html#colourconversionmodes) for users to convert color images to grayscale images in differenct ways.
@@ -37,10 +37,10 @@ needAutoGenerateSidebar: false
 
 - Modified the parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`]({{site.objectivec-swift-api}}label-recognizer.html#updatereferenceregionfrombarcoderesults) from `NSArray<iTextResult*>*` to `NSArray<iBarcodeResult*>*`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.
-- Renamed framework `DynamsoftLabelRecognition` to `DynamsoftLableRecognizer`
-- Renamed protocol `DLRLTSLicenseVerificationDelegate` to `DLRLicenseVerificationDelegate`
-- Renamed protocol method `DLRLTSLicenseVerificationCallback` to `DLRLicenseVerificationCallback`
-- Removed property `license`
-- Removed method `initWithLicense`
+- Renamed framework `DynamsoftLabelRecognition` to `DynamsoftLableRecognizer`.
+- Renamed protocol `DLRLTSLicenseVerificationDelegate` to `DLRLicenseVerificationDelegate`.
+- Renamed protocol method `DLRLTSLicenseVerificationCallback` to `DLRLicenseVerificationCallback`.
+- Removed property `license`.
+- Removed method `initWithLicense`.
 - Removed method `initLicenseFromLTS`.
 - Removed class `iDLRLTSConnectionParameters`.

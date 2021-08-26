@@ -31,8 +31,8 @@ needAutoGenerateSidebar: false
 - Fixed a bug that might cause wrong line number matching when using [`LineSpecification.LineNumber`]({{ site.parameters-reference }}line-specification/parameter-control.html#linenumber).
 
 ### API Changes
-- Modified the function `DLR_InitLicense(void*, const char*)` to [`DLR_InitLicense(const char*,char errorMsgBuffer[], const int errorMsgBufferLen)`](../api-reference/label-recognizer-functions.md#dlr_initlicense) (C)
-- Modified the method `InitLicense(const char*)` to static [`InitLicense(const char*,char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)`](../api-reference/label-recognizer.md#initlicense) (C++)
+- Modified the function `DLR_InitLicense(void*, const char*)` to [`DLR_InitLicense(const char*,char errorMsgBuffer[], const int errorMsgBufferLen)`](../api-reference/label-recognizer-functions.md#dlr_initlicense) (C).
+- Modified the method `InitLicense(const char*)` to static [`InitLicense(const char*,char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)`](../api-reference/label-recognizer.md#initlicense) (C++).
 - Modified the first parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`](../api-reference/label-recognizer.md#updatereferenceregionfrombarcoderesults) from `TextResultArray` to `BarcodeResultArray`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.
 - Renamed class `CLabelRecognition` to [`CLableRecognizer`](../api-reference/label-recognizer.md).

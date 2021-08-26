@@ -23,7 +23,7 @@ needAutoGenerateSidebar: false
 - Added enumeration [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) and property [`DLRRuntimeSettings.binarizationModes`](../api-reference/dlr-runtime-settings.md#binarizationmodes) for users to convert grayscale images to binary images in different ways. 
 - Added enumeration [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) and property [`DLRFurtherModes.grayscaleEnhancementModes`](../api-reference/dlr-further-modes.md#grayscaleenhancementmodes) for users to enable grayscale images preprocessing.  
 - Added [`characterHConfidence`](../api-reference/dlr-character-result.md#characterhconfidence), [`characterMConfidence`](../api-reference/dlr-character-result.md#charactermconfidence) and [`characterLConfidence`](../api-reference/dlr-character-result.md#characterlconfidence) properties in [`DLRCharacterResult`](../api-reference/dlr-character-result.md) class so that more alternative results will be available for users.
-- Added API [`recognizeByImage`](../api-reference/label-recognizer.md#recognizebyimage)
+- Added API [`recognizeByImage`](../api-reference/label-recognizer.md#recognizebyimage).
 
 ### Improved
 

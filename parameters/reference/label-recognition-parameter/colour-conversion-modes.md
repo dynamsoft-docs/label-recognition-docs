@@ -17,7 +17,7 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) array* | "CICM_SKIP"<br>"CICM_GENERAL" | ["CICM_GENERAL", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP"] |
+| *string array* or *[`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) array* | "CICM_SKIP"<br>"CICM_GENERAL"<br>"CICM_HSV" | ["CICM_GENERAL", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP"] |
 
 - **See also**:   
     [`ColourConversionMode` Enumeration]({{ site.enumerations }}colour-conversion-mode.html)
@@ -26,6 +26,7 @@ needGenerateH3Content: true
 - [BlueChannelWeight](#bluechannelweight)
 - [GreenChannelWeight](#greenchannelweight)
 - [RedChannelWeight](#redchannelweight)
+- [ReferChannel](#referchannel)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -61,6 +62,12 @@ Sets the weight value of Red Colour Channel used for converting a colour image t
 - **Remarks**     
   -1: The weight value will be set automatically by the SDK. 
 
+##### ReferChannel 
+Sets reference channel used for converting a colour image to a grayscale image by HSV algorithm.
+
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* |     "H_CHANNEL"<br>"S_CHANNEL"<br>"V_CHANNEL" | "H_CHANNEL" |         
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.

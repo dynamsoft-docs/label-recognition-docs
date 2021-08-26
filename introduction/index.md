@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Introduction  - Main Page
-description: This is the main page of Dynamsoft Label Recognition Introduction. 
+title: Dynamsoft Label Recognizer Introduction  - Main Page
+description: This is the main page of Dynamsoft Label Recognizer Introduction. 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Overview of Dynamsoft Label Recognition
+# Overview of Dynamsoft Label Recognizer
 
-Dynamsoft Label Recognition (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, etc. 
+Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, etc. 
 
 DLR powers your software development from the following aspects:
 - Introduces the `Reference Region` feature to reduce the difficulty of specifying a Region of Interest (ROI).

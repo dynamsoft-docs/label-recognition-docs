@@ -1,21 +1,23 @@
 ---
 layout: home-page
-title: Dynamsoft Label Recognition SDK Documentation
-keywords: dynamsoft label recognition, dlr, documentation
-description: Dynamsoft Label Recognition SDK Documentation Homepage
+title: Dynamsoft Label Recognizer SDK Documentation
+keywords: dynamsoft label recognizer, dlr, documentation
+description: Dynamsoft Label Recognizer SDK Documentation Homepage
+needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Label Recognition Documentation
+# Dynamsoft Label Recognizer Documentation
 
 - [Introduction]({{ site.introduction }})
 
 - [Programming]({{ site.programming }})
-   - [C/C++]({{ site.c-cplusplus }})
-   - [.NET]({{ site.dotnet }})
    - [Android]({{ site.android }})
-   - [Objective-C & Swift]({{ site.objectivec-swift }})
+   - [iOS]({{ site.objectivec-swift }})
+   - [.NET]({{ site.dotnet }})
    - [Java]({{ site.java }})
-   
+   - [C]({{ site.c-cplusplus }}c-index.html)
+   - [C++]({{ site.c-cplusplus }}cpp-index.html)
+
 - [Parameters]({{ site.parameters }})
    - [Reference]({{ site.parameters-reference }})
    - [Enumerations]({{ site.enumerations }})

@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 
 # DLRRuntimeSettings
-Defines a struct to configure the barcode reading runtime settings. These settings control the barcode recognition process such as which barcode types to decode.
+Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 
 ## Attributes

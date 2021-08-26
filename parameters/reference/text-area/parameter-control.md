@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for TextArea Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for TextArea Object.
+title: Dynamsoft Label Recognizer Parameter Reference for TextArea Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for TextArea Object.
 keywords: TextArea, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # TextArea Object
@@ -19,14 +19,18 @@ needGenerateH3Content: false
  | [`TextArea.CharacterModelName`](#charactermodelname) | Sets the name of a white list of recognizable characters. |
  | [`TextArea.GrayscaleTransformationModes`](#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
  | [`TextArea.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`TextArea.LinesCount`](#linescount) | Sets the text lines count of the text area. |
  | [`TextArea.LineSpecificationNameArray `](#LineSpecificationnamearray ) | Specifies the name array of the LineSpecification objects which is relative to current TextArea. |
  | [`TextArea.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
  | [`TextArea.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current text area to recognize. |
  | [`TextArea.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
- | [`TextArea.TextAreaNameArray `](#textareanamearray ) | Specifies the name array of the TextAreas which is relative to current text area. |
  | [`TextArea.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`TextArea.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`TextArea.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
+ | [`TextArea.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
+ | [`TextArea.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
+ | [`TextArea.ColourConversionModes`](#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
+ | [`TextArea.GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
+ | [`TextArea.TextureDetectionModes`](#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
 
 ---
 
@@ -37,7 +41,7 @@ The name of the TextArea object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -51,7 +55,7 @@ It must be a unique name.
 ```
 
 
-&nbsp;
+
 
 
 ## FirstPoint
@@ -65,7 +69,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -79,7 +83,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 }
 ```
 
-&nbsp;
+
 
 ## SecondPoint
 The second point of the text area, which is usually the top-right corner.
@@ -92,7 +96,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -106,7 +110,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 }
 ```
 
-&nbsp;
+
 
 ## ThirdPoint
 The third point of the text area, which is usually the bottom-right corner.
@@ -119,7 +123,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -133,7 +137,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 }
 ```
 
-&nbsp;
+
 
 ## FourthPoint
 The fourth point of the text area, which is usually the bottom-left corner.
@@ -146,7 +150,7 @@ The value of y is a percentage value relative to the height of the ReferenceRegi
 The allowed values for x/y: [-10000, 10000]<br>
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -160,7 +164,7 @@ The allowed values for x/y: [-10000, 10000]<br>
 }
 ```
 
-&nbsp;
+
 
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
@@ -169,7 +173,7 @@ Sets the name of a white list of recognizable characters.
 If you set a character model, the result will only contain characters within the model.  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -182,12 +186,12 @@ If you set a character model, the result will only contain characters within the
 }
 ```
 
-&nbsp;
+
 
 ## GrayscaleTransformationModes
-Please check [LabelRecognitionParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#GrayscaleTransformationModes) for reference.
+Please check [LabelRecognizerParameter.GrayscaleTransformationModes](../label-recognition-parameter/grayscale-transformation-modes.md#grayscaletransformationmodes) for reference.
 
-&nbsp;
+
 
 ## LetterHeightRange
 Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
@@ -200,7 +204,7 @@ ByPercentage=1, [1, 100]
 The allowed values for ByPercentage: [0,1]  
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -213,30 +217,7 @@ The allowed values for ByPercentage: [0,1]
 }
 ```
 
-&nbsp;
 
-
-## LinesCount
-Sets the text lines count of the text area.
-
-**Remarks**   
-0: line count is not certain.  
-
-### As Json Parameter
-
-| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
-| ----------- | ------------------- | ---------- | ----------- | ------------- |
-| TextArea | LinesCount | *int* | [0, 200] | 0 |
-
-
-**Json Parameter Example**   
-```json
-{
-    "LinesCount":1
-}
-```
-
-&nbsp;
 
 ## LineSpecificationNameArray
 Specifies the name array of the LineSpecification objects which is relative to current text area. 
@@ -244,7 +225,7 @@ Specifies the name array of the LineSpecification objects which is relative to c
 **Remarks**   
 An array item is a name of any available `LineSpecification`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -260,12 +241,12 @@ An array item is a name of any available `LineSpecification`.
     ]
 }
 ```
-&nbsp;
+
 
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
 
-### As Json Parameter
+**As Json Parameter**
 `LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
 
 
@@ -278,7 +259,7 @@ Sets the range of string length for each recognized line.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringLengthRange": 
     {
@@ -288,7 +269,7 @@ Sets the range of string length for each recognized line.
 }
 ```
 
-&nbsp;
+
 
 
 ## LineStringRegExPattern
@@ -299,7 +280,7 @@ Specifies the regular expression pattern of each line string text in current tex
  - Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -312,7 +293,7 @@ Specifies the regular expression pattern of each line string text in current tex
 }
 ```
 
-&nbsp;
+
 
 ## MaxLineCharacterSpacing
 Sets the maximum spacing between characters treated as one line.
@@ -321,7 +302,7 @@ Sets the maximum spacing between characters treated as one line.
 - 0: means automatically set by the library.
 - It is a percentage value relative to the average letter height of each line.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
@@ -335,12 +316,12 @@ Sets the maximum spacing between characters treated as one line.
 }
 ```
 
-&nbsp;
+
 
 ## TextStringLengthRange
 Sets the range of string length for each recognized text area.
 
-### As Json Parameter
+**As Json Parameter**
 `TextStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized text area. Default values will be used if there is no manual setting. 
 
 
@@ -353,7 +334,7 @@ Sets the range of string length for each recognized text area.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextStringLengthRange": 
     {
@@ -363,7 +344,7 @@ Sets the range of string length for each recognized text area.
 }
 ```
 
-&nbsp;
+
 
 
 ## TextRegExPattern
@@ -373,7 +354,7 @@ Specifies the regular expression pattern of the text to recognize.
 Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -386,29 +367,75 @@ Supported regular expressions pattern syntax is same as [`TextRegExPattern`]({{ 
 }
 ```
 
-&nbsp;
 
-## TextAreaNameArray
-Specifies the name array of the TextArea objects which is relative to current text area. 
 
-**Remarks**   
-An array item is a name of any available `TextArea`.    
+## DictionaryPath
+Sets the path of the dictionary file.
 
-### As Json Parameter
+**As Json Parameter**
 
-| Json Object |	Json Parameter Name |	Value Type | Default Value |
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| TextArea | TextAreaNameArray | *string Array* | `null` |
-
+| TextArea | DictionaryPath | *string* | "" |
 
 **Json Parameter Example**   
 ```json
 {
-    "TextAreaNameArray":[
-        "TextArea1",
-        "TextArea2"
-    ]
+    "DictionaryPath":"D:\\DictModel\\nutrition.txt"
 }
 ```
-&nbsp;
 
+
+
+
+## DictionaryCorrectionThresholds
+Sets the threshold of dictionary error correction.
+
+**Remarks**   
+It supports segmentation threshold. 
+
+**As Json Parameter**
+
+| Json Object |	Json Parameter Name |	Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| TextArea | DictionaryCorrectionThresholds | *Array* | `null` |
+
+- MinWordLength: The minimum value of word length. 
+- MaxWordLength: The maximum value of word length.
+- Threshold: The threshold for the number of error correction characters.
+
+**Json Parameter Example**   
+```json
+{
+    "DictionaryCorrectionThresholds": [
+        {
+            "MinWordLength": 3,
+            "MaxWordLength": 5,
+            "Threshold": 1
+        },
+        {
+            "MinWordLength": 6,
+            "MaxWordLength": 10,
+            "Threshold": 2
+        },
+        {
+            "MinWordLength": 11,
+            "Threshold": 3
+        }
+    ]
+
+}
+```
+
+## BinarizationModes
+Please check [LabelRecognizerParameter.BinarizationModes](../label-recognition-parameter/binarization-modes.md#binarizationmodes) for reference.
+
+## ColourConversionModes
+Please check [LabelRecognizerParameter.ColourConversionModes](../label-recognition-parameter/colour-conversion-modes.md#colourconversionmodes) for reference.
+
+## GrayscaleEnhancementModes
+Please check [LabelRecognizerParameter.GrayscaleEnhancementModes](../label-recognition-parameter/grayscale-enhancement-modes.md#grayscaleenhancementmodes) for reference.
+
+## TextureDetectionModes
+Please check [LabelRecognizerParameter.TextureDetectionModes](../label-recognition-parameter/texture-detection-modes.md#texturedetectionmodes) for reference.

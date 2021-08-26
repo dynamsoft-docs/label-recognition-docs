@@ -1,61 +1,53 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object.
-keywords: LabelRecognitionParameter, parameter reference, parameter
+title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object.
+keywords: LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
-# LabelRecognitionParameter Object
+# LabelRecognizerParameter Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`LabelRecognitionParameter.Name`](#name) | The name of the LabelRecognitionParameter object. |
- | [`LabelRecognitionParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
- | [`LabelRecognitionParameter.CharacterModelName`](#charactermodelname) | Sets the name of a white list of recognizable characters. |
- | [`LabelRecognitionParameter.GrayscaleTransformationModes`](grayscale-transformation-modes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
- | [`LabelRecognitionParameter.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
- | [`LabelRecognitionParameter.LinesCount`](#linescount) | Sets the text lines count of the text area. |
- | [`LabelRecognitionParameter.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
- | [`LabelRecognitionParameter.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
- | [`LabelRecognitionParameter.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
- | [`LabelRecognitionParameter.MaxThreadCount`](#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
- | [`LabelRecognitionParameter.Pages`](#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
- | [`LabelRecognitionParameter.ReferenceRegionNameArray`](#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
- | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`LabelRecognitionParameter.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
- | [`LabelRecognitionParameter.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
- | [`LabelRecognitionParameter.Timeout`](#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |
-
+ | [`LabelRecognizerParameter.Name`](#name) | The name of the LabelRecognizerParameter object. |
+ | [`LabelRecognizerParameter.CharacterModelName`](#charactermodelname) | Sets the name of a white list of recognizable characters. |
+ | [`LabelRecognizerParameter.DictionaryCorrectionThresholds`](#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
+ | [`LabelRecognizerParameter.DictionaryPath`](#dictionarypath) | Sets the path of the dictionary file. |
+ | [`LabelRecognizerParameter.LetterHeightRange`](#letterheightrange) | Sets the range of letter height (in pixel or a percentage value relative to the height of the text area). |
+ | [`LabelRecognizerParameter.LineStringLengthRange`](#linestringlengthrange) | Sets the range of string length for each recognized line. |
+ | [`LabelRecognizerParameter.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
+ | [`LabelRecognizerParameter.MaxLineCharacterSpacing`](#maxlinecharacterspacing) | Sets the maximum spacing between characters treated as one line. |
+ | [`LabelRecognizerParameter.MaxThreadCount`](#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
+ | [`LabelRecognizerParameter.Pages`](#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
+ | [`LabelRecognizerParameter.ReferenceRegionNameArray`](#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
+ | [`LabelRecognizerParameter.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
+ | [`LabelRecognizerParameter.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
+ | [`LabelRecognizerParameter.Timeout`](#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |
 
 ---
 
 
 ## Name
-The name of the LabelRecognitionParameter object.  
+The name of the LabelRecognizerParameter object.  
 
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | Name | *string* | It must be a mandatory setting value. |
+| LabelRecognizerParameter | Name | *string* | It must be a mandatory setting value. |
 
 **Json Parameter Example**   
 ```json
 {
-    "Name":"LabelRecognitionParameter1"
+    "Name":"LabelRecognizerParameter1"
 }
 ```
 
-&nbsp;
-
-
-## [BinarizationModes](binarization-modes.md#binarizationmodes)
-&nbsp;
 
 ## CharacterModelName
 Sets the name of a white list of recognizable characters.  
@@ -65,11 +57,11 @@ If you set a character model, the result will only contain characters within the
 All TextArea Objects without CharacterModelName set will be set from this setting.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | CharacterModelName | *string* | "" |
+| LabelRecognizerParameter | CharacterModelName | *string* | "" |
 
 **Json Parameter Example**   
 ```json
@@ -78,28 +70,24 @@ All TextArea Objects without CharacterModelName set will be set from this settin
 }
 ```
 
-&nbsp;
-
-## [GrayscaleTransformationModes](grayscale-transformation-modes.md#grayscaletransformationmodes)
-&nbsp;
 
 ## LetterHeightRange
 Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
 
 **Remarks**    
-Format: [MinHeight, MaxHeight, ByPercentage]  
+Format: [MinHeight, MaxHeight, ByThousandth]  
 The allowed values for MinHeight/MaxHeight:  
-ByPercentage=0, [1, 0x7fffffff]  
-ByPercentage=1, [1, 100]  
-The allowed values for ByPercentage: [0,1]  
+ByThousandth=0, [1, 0x7fffffff]  
+ByThousandth=1, [1, 1000]  
+The allowed values for ByThousandth: [0,1]  
 All TextArea Objects without LetterHeightRange set will be set from this setting.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | LetterHeightRange | *int array* | [1,100,1] |
+| LabelRecognizerParameter | LetterHeightRange | *int array* | [1,1000,1] |
 
 **Json Parameter Example**   
 ```json
@@ -108,50 +96,24 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 }
 ```
 
-&nbsp;
-
-
-## LinesCount
-Sets the text lines count of the text area.
-
-**Remarks**   
-- 0: line count is not certain.  
-- All TextArea Objects without LinesCount set will be set from this setting.
-
-
-### As Json Parameter
-
-| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
-| ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognitionParameter | LinesCount | *int* | [0, 200] | 0 |
-
-
-**Json Parameter Example**   
-```json
-{
-    "LinesCount":1
-}
-```
-
-&nbsp;
 
 ## LineStringLengthRange
 Sets the range of string length for each recognized line.
 
-### As Json Parameter
+**As Json Parameter**
 `LineStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized line. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | LineStringLengthRange | *JSON Object* | `null` |
+| LabelRecognizerParameter | LineStringLengthRange | *JSON Object* | `null` |
 
 - **Remarks** 
  - Value range of `MinValue` and `MaxValue`: [0, 0x7fffffff]<br>
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "LineStringLengthRange": 
     {
@@ -161,7 +123,7 @@ Sets the range of string length for each recognized line.
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -173,11 +135,11 @@ Specifies the regular expression pattern of each line string text in current ima
  - Supported regular expressions pattern syntax is same as [`TextRegExPattern`](#textregexpattern).
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | LineStringRegExPattern | *string* | "" |
+| LabelRecognizerParameter | LineStringRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
 ```json
@@ -186,7 +148,7 @@ Specifies the regular expression pattern of each line string text in current ima
 }
 ```
 
-&nbsp;
+
 
 ## MaxLineCharacterSpacing
 Sets the maximum spacing between characters treated as one line.
@@ -196,11 +158,11 @@ Sets the maximum spacing between characters treated as one line.
 - It is a percentage value relative to the average letter height of each line.
 - All TextArea Objects without MaxLineCharacterSpacing set will be set from this setting.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognitionParameter | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
+| LabelRecognizerParameter | MaxLineCharacterSpacing | *int* | [0, 0x7fffffff] | 0 |
 
 
 **Json Parameter Example**   
@@ -210,17 +172,17 @@ Sets the maximum spacing between characters treated as one line.
 }
 ```
 
-&nbsp;
+
 
 ## MaxThreadCount
 Sets the maximum number of threads the algorithm will use to recognize text.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognitionParameter | MaxThreadCount | *int* | [1, 4] | 4 |
+| LabelRecognizerParameter | MaxThreadCount | *int* | [1, 4] | 4 |
 
 
 **Json Parameter Example**   
@@ -230,7 +192,7 @@ Sets the maximum number of threads the algorithm will use to recognize text.
 }
 ```
 
-&nbsp;
+
 
 ## Pages
 Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition.
@@ -240,21 +202,21 @@ Sets the specific pages or the range of pages of a file (.tiff or .pdf) for labe
 2. "" represents all pages.
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognitionParameter | Pages | *string* | A string of one or more of the following data, separated by commas:<br>1. One int value which represents a specified page index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified page index range; | "" |
+| LabelRecognizerParameter | Pages | *string* | A string of one or more of the following data, separated by commas:<br>1. One int value which represents a specified page index;<br>2. One Expression, start index and stop index connected with ""-"", which represents a specified page index range; | "" |
 
 
 **Json Parameter Example**   
-```
+```json
 {
     "Pages": "0,3,5,7-10"
 }
 ```
 
-&nbsp;
+
 
 
 ## ReferenceRegionNameArray
@@ -263,11 +225,11 @@ The name array of the ReferenceRegion object(s).
 **Remarks**   
 An array item is a name of any available `ReferenceRegion`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | ReferenceRegionNameArray | *string Array* | `null` |
+| LabelRecognizerParameter | ReferenceRegionNameArray | *string Array* | `null` |
 
 
 **Json Parameter Example**   
@@ -279,28 +241,24 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
-&nbsp;
-
-## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)
-&nbsp;
 
 ## TextStringLengthRange
 Sets the range of string length for each recognized text area.
 
-### As Json Parameter
+**As Json Parameter**
 `TextStringLengthRange` as a JSON parameter is a JSON Object with two keys `MinValue` and `MaxValue` for setting the range of string length for each recognized text area. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | TextStringLengthRange | *JSON Object* | `null` |
+| LabelRecognizerParameter | TextStringLengthRange | *JSON Object* | `null` |
 
 **Remarks** 
  - Value range of `MinValue` and `MaxValue`: [0, 0x7fffffff]<br>
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
     "TextStringLengthRange": 
     {
@@ -310,7 +268,7 @@ Sets the range of string length for each recognized text area.
 }
 ```
 
-&nbsp;
+
 
 
 ## TextRegExPattern
@@ -346,11 +304,11 @@ Specifies the regular expression pattern of the text to recognize.
 | [(`minnumericstring`-`maxnumericstring`)] | a numeric string that is between `minnumericstring` and `maxnumericstring`. For example: [(01-12)] matches 01, 02, 03, ... until 12). |
 
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognitionParameter | TextRegExPattern | *string* | "" |
+| LabelRecognizerParameter | TextRegExPattern | *string* | "" |
 
 **Json Parameter Example**   
 ```json
@@ -359,7 +317,7 @@ Specifies the regular expression pattern of the text to recognize.
 }
 ```
 
-&nbsp;
+
 
 ## Timeout
 Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
@@ -367,17 +325,81 @@ Sets the maximum amount of time (in milliseconds) that should be spent searching
 **Remarks**   
 If you want to stop searching for labels after a specified amount of time, you can use this parameter to set a timeout.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| LabelRecognitionParameter | Timeout | *int* | [0,0x7fffffff] | 10000 |
+| LabelRecognizerParameter | Timeout | *int* | [0,0x7fffffff] | 10000 |
 
 **Json Parameter Example**   
-```
+```json
 {
     "Timeout":10000
 }
 ```
 
-&nbsp;
+
+
+
+
+## DictionaryPath
+Sets the path of the dictionary file.
+
+**Remarks**
+If the parameter is not defined in `TextArea`, it will be inherited. Otherwise, the value will be overwritten.
+
+**As Json Parameter**
+
+
+| Json Object |	Json Parameter Name | Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| LabelRecognizerParameter | DictionaryPath | *string* | "" |
+
+**Json Parameter Example**   
+```json
+{
+    "DictionaryPath":"D:\\DictModel\\nutrition.txt"
+}
+```
+
+
+
+
+## DictionaryCorrectionThresholds
+Sets the threshold of dictionary error correction.
+
+**Remarks**   
+It supports segmentation threshold. If the parameter is not defined in `TextArea`, it will be inherited. Otherwise, the value will be overwritten.
+
+**As Json Parameter**
+
+| Json Object |	Json Parameter Name |	Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| LabelRecognizerParameter | DictionaryCorrectionThresholds | *Array* | `null` |
+
+- MinWordLength: The minimum value of word length. 
+- MaxWordLength: The maximum value of word length.
+- Threshold: The threshold for the number of error correction characters.
+
+**Json Parameter Example**   
+```json
+{
+    "DictionaryCorrectionThresholds": [
+        {
+            "MinWordLength": 3,
+            "MaxWordLength": 5,
+            "Threshold": 1
+        },
+        {
+            "MinWordLength": 6,
+            "MaxWordLength": 10,
+            "Threshold": 2
+        },
+        {
+            "MinWordLength": 11,
+            "Threshold": 3
+        }
+    ]
+
+}
+```

@@ -1,1 +1,1 @@
-# label-recognition
+# label-recognizer

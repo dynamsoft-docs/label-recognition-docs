@@ -1,36 +1,40 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Enumerations - Main Page
-description: This article shows the main page of Dynamsoft Label Recognition Enumerations.
+title: Dynamsoft Label Recognizer Enumerations - Main Page
+description: This article shows the main page of Dynamsoft Label Recognizer Enumerations.
 keywords: enumerations
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamesoft Label Recognition - Enumerations
+# Enumerations
 
 ## [Parameter Mode Enumeration](parameter-mode-enums.md)
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DLRBinarizationMode`](parameter-mode-enums.md#dlrbinarizationmode) | Describes the binarization mode. |
-  | [`DLRGrayscaleTransformationMode`](parameter-mode-enums.md#dlrgrayscaletransformationmode) | Describes the grayscale transformation mode. |
-  | [`DLRRegionPredetectionMode`](parameter-mode-enums.md#dlrregionpredetectionmode) | Describes the region predetection mode. |
-  | [`DLRScaleUpMode`](parameter-mode-enums.md#dlrscaleupmode) | Describes the scale up mode. |
+  | [`BinarizationMode`](binarization-mode.md) | Describes the binarization mode. |
+  | [`GrayscaleTransformationMode`](grayscale-transformation-mode.md) | Describes the grayscale transformation mode. |
+  | [`RegionPredetectionMode`](region-predetection-mode.md) | Describes the region predetection mode. |
+  | [`ColourConversionMode`](colour-conversion-mode.md) | Describes the colour conversion mode. |
+  | [`GrayscaleEnhancementMode`](grayscale-enhancement-mode.md) | Describes the grayscale image preprocessing mode. |
+  | [`TextureDetectionMode`](texture-detection-mode.md) | Describes the texture detection mode. | 
+  | [`ScaleUpMode`](scale-up-mode.md) | Describes the scale up mode. |
+  | [`PDFReadingMode`](pdf-reading-mode.md) | Describes the PDF reading mode.  |
 
-  
 ## [Other Enumeration](other-enums.md)
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DLRBarcodeFormat`](other-enums.md#dlrbarcodeformat) | Describes the barcode formats in DLRBarcodeFormat group 1. |
-  | [`DLRBarcodeFormat_2`](other-enums.md#dlrbarcodeformat_2) | Describes the barcode formats in DLRBarcodeFormat group 2. |
-  | [`DLRImagePixelFormat`](other-enums.md#dlrimagepixelformat) | Describes the image pixel format. |
-  | [`DLRLocalizationSourceType`](other-enums.md#dlrlocalizationsourcetype) | Describes the source type used to localize the reference region(s). |
-  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | Describes the charge way. |
-  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
-  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |
-  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
-  | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
+  | [`BarcodeFormat`](barcode-format.md) | Describes the barcode formats in BarcodeFormat group 1. |
+  | [`BarcodeFormat_2`](barcode-format-2.md) | Describes the barcode formats in BarcodeFormat group 2. |
+  | [`ImagePixelFormat`](image-pixel-format.md) | Describes the image pixel format. |
+  | [`LocalizationSourceType`](localization-source-type.md) | Describes the source type used to localize the reference region(s). |
+  | [`DM_ChargeWay`](dm-charge-way.md) | Describes the charge way. |
+  | [`DM_DeploymentType`](dm-deployment-type.md) | Describes the deployment type. |
+  | [`DM_LicenseModule`](dm-license-module.md) | Describes Dynamsoft license modules. |
+  | [`DM_UUIDGenerationMethod`](dm-uuid-generation-method.md) | Describes the UUID generation method. |
+  | [`Product`](product.md) | Describes Dynamsoft products.   |
 
 ## [Error Code](error-code.md)
   

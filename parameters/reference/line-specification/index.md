@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference - LineSpecification Object
-description: This article shows LineSpecification Object of Dynamsoft Label Recognition.
+title: Dynamsoft Label Recognizer Parameter Reference - LineSpecification Object
+description: This article shows LineSpecification Object of Dynamsoft Label Recognizer.
 keywords: parameter reference, parameters, LineSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Label Recognition SDK - LineSpecification Object
+# Dynamsoft Label Recognizer SDK - LineSpecification Object
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
@@ -21,3 +21,5 @@ needGenerateH3Content: true
  | [`LineSpecification.SecondPoint`](parameter-control.md#secondpoint) | The second point of the line, which is usually the top-right corner. |
  | [`LineSpecification.ThirdPoint`](parameter-control.md#thirdpoint) | The third point of the line, which is usually the bottom-right corner. |
  | [`LineSpecification.FourthPoint`](parameter-control.md#fourthpoint) | The fourth point of the line, which is usually the bottom-left  corner. |
+ | [`LineSpecification.BinarizationModes`](parameter-control.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
+ | [`LineSpecification.GrayscaleEnhancementModes`](parameter-control.md#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |

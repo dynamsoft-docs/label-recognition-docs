@@ -1,10 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for ReferenceRegion Object
-description: This page shows Dynamsoft Label Recognition Parameter Reference for ReferenceRegion Object.
+title: Dynamsoft Label Recognizer Parameter Reference for ReferenceRegion Object
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for ReferenceRegion Object.
 keywords: ReferenceRegion, parameter reference, parameter
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 ---
 
 # ReferenceRegion Object
@@ -12,7 +12,6 @@ needGenerateH3Content: false
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`ReferenceRegion.Name`](#name) | The name of the ReferenceRegion object. |
- | [`ReferenceRegion.Localization`](localization.md#localization) | The localization of the reference region(s). |
  | [`ReferenceRegion.TextAreaNameArray `](#textareanamearray) | Specifies the name array of the TextAreas which is relative to current reference region. |
 
 ---
@@ -24,7 +23,7 @@ The name of the ReferenceRegion object.
 **Remarks**    
 It must be a unique name.
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -37,7 +36,7 @@ It must be a unique name.
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -47,7 +46,7 @@ Specifies the name array of the TextArea objects which is relative to current re
 **Remarks**   
 An array item is a name of any available `TextArea`.    
 
-### As Json Parameter
+**As Json Parameter**
 
 | Json Object |	Json Parameter Name |	Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
@@ -63,5 +62,5 @@ An array item is a name of any available `TextArea`.
     ]
 }
 ```
-&nbsp;
+
 

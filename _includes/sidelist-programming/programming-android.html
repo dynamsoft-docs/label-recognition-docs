@@ -1,28 +1,24 @@
 <li><a href="{{ site.android }}" class="otherLinkColour">Android</a>
     <ul>
-        {%- if page.url contains '/android/' or page.url contains '/android-v'-%}
         <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
+
         <li><a href="{{ site.android-api }}" class="otherLinkColour">API Reference</a>
             <ul>
-                <li><a href="{{ site.android-api }}label-recognition/" class="otherLinkColour">LabelRecognition Methods</a>
+                <li><a href="{{ site.android-api }}label-recognizer.html" class="otherLinkColour">LabelRecognizer</a></li> 
+                <li><a style="cursor:pointer;color:#3c3c3c">Auxiliary Classes</a>
                     <ul>
-                            <li><a href="{{ site.android-api }}label-recognition/general.html" class="otherLinkColour">General Methods</a></li>
-                            <li><a href="{{ site.android-api }}label-recognition/initialization.html" class="otherLinkColour">Initialization Methods</a></li>
-                            <li><a href="{{ site.android-api }}label-recognition/recognizing.html" class="otherLinkColour">Recognizing Methods</a></li>
-                            <li><a href="{{ site.android-api }}label-recognition/settings.html" class="otherLinkColour">Setting Methods</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{ site.android-api }}class/" class="otherLinkColour">Class</a>
-                    <ul>
-                        <li><a href="{{ site.android-api }}class/dlr-character-result.html" class="otherLinkColour">DLRCharacterResult</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-image-data.html" class="otherLinkColour">DLRImageData</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-line-result.html" class="otherLinkColour">DLRLineResult</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-point.html" class="otherLinkColour">DLRPoint</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-quadrilateral.html" class="otherLinkColour">DLRQuadrilateral</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-reference-region.html" class="otherLinkColour">DLRReferenceRegion</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-result.html" class="otherLinkColour">DLRResult</a></li>
-                        <li><a href="{{ site.android-api }}class/dlr-runtime-settings.html" class="otherLinkColour">DLRRuntimeSettings</a></li>
-                        <li><a href="{{ site.android-api }}class/dm-lts-connection-parameters.html" class="otherLinkColour">DMLTSConnectionParameters</a></li>
+                        <li><a href="{{ site.android-api }}point.html" class="otherLinkColour">Point</a></li>
+                        <li><a href="{{ site.android-api }}quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
+                        <li><a href="{{ site.android-api }}image-data.html" class="otherLinkColour">ImageData</a></li>
+                        <li><a href="{{ site.android-api }}barcode-result.html" class="otherLinkColour">BarcodeResult</a></li>
+                        <li><a href="{{ site.android-api }}label-recognizer-exception.html" class="otherLinkColour">LabelRecognizerException</a></li>
+                        <li><a href="{{ site.android-api }}dlr-runtime-settings.html" class="otherLinkColour">DLRRuntimeSettings</a></li>
+                        <li><a href="{{ site.android-api }}dlr-reference-region.html" class="otherLinkColour">DLRReferenceRegion</a></li>
+                        <li><a href="{{ site.android-api }}dlr-result.html" class="otherLinkColour">DLRResult</a></li>
+                        <li><a href="{{ site.android-api }}dlr-line-result.html" class="otherLinkColour">DLRLineResult</a></li>
+                        <li><a href="{{ site.android-api }}dlr-character-result.html" class="otherLinkColour">DLRCharacterResult</a></li>
+                        <li><a href="{{ site.android-api }}dlr-dictionary-correction-threshold.html" class="otherLinkColour">DLRDictionaryCorrectionThreshold</a></li>
+                        <li><a href="{{ site.android-api }}dlr-further-modes.html" class="otherLinkColour">DLRFurtherModes</a></li>
                     </ul>
                 </li>
             </ul>
@@ -30,9 +26,9 @@
 
         <li><a href="{{ site.android-release-notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
+                <li><a href="{{ site.android-release-notes }}android-2.html" class="otherLinkColour">Version 2.x</a></li>
                 <li><a href="{{ site.android-release-notes }}android-1.html" class="otherLinkColour">Version 1.x</a></li>
             </ul>
         </li>
-        {%- endif -%}
     </ul>
 </li>

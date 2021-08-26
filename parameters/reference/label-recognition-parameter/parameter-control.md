@@ -87,7 +87,7 @@ All TextArea Objects without LetterHeightRange set will be set from this setting
 
 | Json Object |	Json Parameter Name | Value Type | Default Value |
 | ----------- | ------------------- | ---------- | ------------- |
-| LabelRecognizerParameter | LetterHeightRange | *int array* | [1,100,1] |
+| LabelRecognizerParameter | LetterHeightRange | *int array* | [1,1000,1] |
 
 **Json Parameter Example**   
 ```json

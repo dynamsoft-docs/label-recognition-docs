@@ -27,7 +27,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer SDK 
 
 Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
 
->You can download the entire source code from [Here].
+<!-- >You can download the entire source code from [Here]. -->
 
 ### Create a new project 
 
@@ -188,7 +188,7 @@ Let’s start by creating a console application which demonstrates how to use th
         CLabelRecognizer::FreeResults(&pDLRResults);
     ```
 
-You can download the entire source code from [Here].
+<!-- You can download the entire source code from [Here]. -->
 
 ### Build and run the project
 

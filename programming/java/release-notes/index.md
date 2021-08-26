@@ -8,5 +8,5 @@ needAutoGenerateSidebar: false
 
 # Release Notes - Java
 
-- [2.0 (xx/xx/2021)](java-2.md#20-xxxx2021)
+- [2.0 (08/26/2021)](java-2.md#20-08262021)
 - [1.2.1 (06/08/2021)](java-1.md#121-06082021)

@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # Release Notes - C/C++ 2.x
 
-## 2.0 (06/28/2021)
+## 2.0 (08/26/2021)
 
 ### New
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters. 

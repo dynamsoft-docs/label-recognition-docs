@@ -15,7 +15,7 @@ needAutoGenerateSidebar: false
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters.
 - Added package `DynamsoftCoreAndroid.aar`. Migrated the Dynamsoft core classes/enums from package `DynamsoftLabelRecognizerAndroid.aar` to ` DynamsoftCoreAndroid.aar`.
 - Added class [`BarcodeResult`](../api-reference/barcode-result.md) for users to interact with Dynamsoft Barcode Reader SDK.
-- Added [`DLRRuntimeSettings`](../api-reference/dlr-runtime-settings.md) property [`dictionaryPath`](../api-reference/dlr-runtime-settings.md#dictionarypath) and [`dictionaryCorrectionThresholds`](../api-reference/dlr-runtime-settings.md#dictionarycorrectionthresholds) for users to further improve the recognizing accuracy by referencing dictionary files.
+- Added [`DLRRuntimeSettings`](../api-reference/dlr-runtime-settings.md) property [`dictionaryPath`](../api-reference/dlr-runtime-settings.md#dictionarypath) and [`dictionaryCorrectionThreshold`](../api-reference/dlr-runtime-settings.md#dictionarycorrectionthreshold) for users to further improve the recognizing accuracy by referencing dictionary files.
 - Added class [`DLRDictionaryCorrectionThreshold`](../api-reference/dlr-dictionary-correction-threshold.md).
 - Added class [`DLRFurtherModes`](../api-reference/dlr-further-modes.md) and property [`DLRRuntimeSettings.furtherModes`](../api-reference/dlr-runtime-settings.md#furthermodes) for users to config more processing modes.
 - Added enumeration [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) and property [`DLRFurtherModes.textureDetectionModes`](../api-reference/dlr-further-modes.md#texturedetectionmodes) for users to detect and remove the texture background. 

@@ -13,7 +13,9 @@ needAutoGenerateSidebar: false
 ### Highlights
 {%- include release-notes/release-notes-2.0.md -%}
 
+
 ### Changelog
+
 #### New
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters. 
 - Added header file `DynamsoftCore.h` to replace the header file `DynamsoftCommon.h`. All the core structs/enums in `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` are migrated to the header file `DynamsoftCore.h`.

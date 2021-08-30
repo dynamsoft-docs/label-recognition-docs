@@ -14,3 +14,4 @@
 - Improved the MRZ reading performance.
 	
 - Added a `core` library. Migrated the core structs/classes from the LabelRecognizer library to the `core` library.
+

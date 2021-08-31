@@ -26,8 +26,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 ## Build your first application
 
 Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
-
-<!-- >You can download the entire source code and compiled program from [Here]. -->
+>You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/HelloWorld_C).
 
 ### Create a new project 
 
@@ -189,7 +188,7 @@ Let’s start by creating a console application which demonstrates how to use th
     DLR_DestroyInstance(dlr);
     ```
 
-<!-- You can download the entire source code from [here]. -->
+You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/HelloWorld_C).
 
 ### Build and run the project
 

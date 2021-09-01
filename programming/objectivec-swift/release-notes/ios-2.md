@@ -10,7 +10,21 @@ needAutoGenerateSidebar: false
 
 ## 2.0 (08/26/2021)
 
-### New
+### Highlights
+
+<div class="fold-panel-prefix"></div>
+
+#### Product Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters.
 - Added framework `DynamsoftCore.framework`. Migrated the Dynamsoft core classes from framework `DynamsoftLabelRecognizer.framework` to `DynamsoftCore.framework`.
 - Added class  [`iBarcodeResult`]({{site.objectivec-swift-api}}barcode-result.html) for users to interact with Dynamsoft Barcode Reader SDK.
@@ -25,15 +39,15 @@ needAutoGenerateSidebar: false
 - Added API [`recognizeByImage`]({{site.objectivec-swift-api}}label-recognizer.html#recognizebyimage).
 - Added static method [`initLicense`]({{site.objectivec-swift-api}}label-recognizer.html#initlicense) to replace the old license activation APIs.
 
-### Improved
+#### Improved
 
 - Improved the neural network performance by replacing Caffe engine with OpenCV DNN engine.
 
-### Fixed
+#### Fixed
 
 - Fixed a bug that might cause wrong line number matching when using [`LineSpecification.LineNumber`]({{ site.parameters-reference }}line-specification/parameter-control.html#linenumber).
 
-### API Changes
+#### API Changes
 
 - Modified the parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`]({{site.objectivec-swift-api}}label-recognizer.html#updatereferenceregionfrombarcoderesults) from `NSArray<iTextResult*>*` to `NSArray<iBarcodeResult*>*`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.

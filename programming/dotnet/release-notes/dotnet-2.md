@@ -10,7 +10,21 @@ needAutoGenerateSidebar: false
 
 ## 2.0 (08/26/2021)
 
-### New
+### Highlights
+
+<div class="fold-panel-prefix"></div>
+
+#### Product Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
 
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters.
 - Added library `Dynamsoft.Core.dll`. Migrated the Dynamsoft core classes/enums from library `Dynamsoft.LabelRecognizer.dll` and `DynamsoftCommon.dll` to library `Dynamsoft.Core.dll`.
@@ -24,15 +38,15 @@ needAutoGenerateSidebar: false
 - Added enumeration [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) and property [`DLR_FurtherModes.GrayscaleEnhancementModes`]({{site.dotnet_api}}dlr-further-modes.html#grayscaleenhancementmodes) for users to enable grayscale images preprocessing.  
 - Added [`CharacterHConfidence`]({{site.dotnet_api}}dlr-character-result.html#characterhconfidence), [`CharacterMConfidence`]({{site.dotnet_api}}dlr-character-result.html#charactermconfidence) and [`CharacterLConfidence`]({{site.dotnet_api}}dlr-character-result.html#characterlconfidence) properties in [`DLR_CharacterResult`]({{site.dotnet_api}}dlr-character-result.html) class so that more alternative results will be available for users.
 
-### Improved
+#### Improved
 
 - Improved the neural network performance by replacing Caffe engine with OpenCV DNN engine.
 
-### Fixed
+#### Fixed
 
 - Fixed a bug that might cause wrong line number matching when using [`LineSpecification.LineNumber`]({{ site.parameters-reference }}line-specification/parameter-control.html#linenumber).
 
-### API Changes
+#### API Changes
 
 - Modified the `InitLicense(string)` to static [`InitLicense(string)`]({{site.dotnet_api}}label-recognizer.html#initlicense).
 - Modified the parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`]({{site.dotnet_api}}label-recognizer.html#updatereferenceregionfrombarcoderesults) from `TextResult[]` to `BarcodeResult[]`.

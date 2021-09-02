@@ -10,7 +10,20 @@ needAutoGenerateSidebar: false
 
 ## 2.0 (08/26/2021)
 
-### New
+### Highlights
+
+<div class="fold-panel-prefix"></div>
+
+#### Product Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+#### New
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters. 
 - Added header file `DynamsoftCore.h` to replace the header file `DynamsoftCommon.h`. All the core structs/enums in `DynamsoftLabelRecognizer.h` and `DynamsoftCommon.h` are migrated to the header file `DynamsoftCore.h`.
 - Added struct [`BarcodeResultArray`](../api-reference/barcode-result-array.md) and [`BarcodeResult`](../api-reference/barcode-result.md) for users to interact with Dynamsoft Barcode Reader SDK.
@@ -24,13 +37,13 @@ needAutoGenerateSidebar: false
 - Added [`charaterHConfidence`](../api-reference/dlr-character-result.md#characterhconfidence), [`charaterMConfidence`](../api-reference/dlr-character-result.md#charactermconfidence) and [`charaterLConfidence`](../api-reference/dlr-character-result.md#characterlconfidence) properties in [`DLRCharacterResult`](../api-reference/dlr-character-result.md) struct so that more alternative results will be available for users.
 
 
-### Improved
+#### Improved
 - Improved the neural network performance by replacing Caffe engine with OpenCV DNN engine.
 
-### Fixed
+#### Fixed
 - Fixed a bug that might cause wrong line number matching when using [`LineSpecification.LineNumber`]({{ site.parameters-reference }}line-specification/parameter-control.html#linenumber).
 
-### API Changes
+#### API Changes
 - Modified the function `DLR_InitLicense(void*, const char*)` to [`DLR_InitLicense(const char*,char errorMsgBuffer[], const int errorMsgBufferLen)`](../api-reference/label-recognizer-functions.md#dlr_initlicense) (C).
 - Modified the method `InitLicense(const char*)` to static [`InitLicense(const char*,char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)`](../api-reference/label-recognizer.md#initlicense) (C++).
 - Modified the first parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`](../api-reference/label-recognizer.md#updatereferenceregionfrombarcoderesults) from `TextResultArray` to `BarcodeResultArray`.

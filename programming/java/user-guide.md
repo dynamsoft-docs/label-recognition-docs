@@ -27,7 +27,7 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 
 Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
 
-<!-- >You can download the entire source code from [Here]. -->
+>You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-java-samples/tree/master/samples/HelloWorld).
 
 ### Create a new project 
 
@@ -121,7 +121,7 @@ Let’s start by creating a console application which demonstrates how to use th
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
-<!-- You can download the entire source code from [Here]. -->
+You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-java-samples/tree/master/samples/HelloWorld).
 
 ### Build and run the project
 

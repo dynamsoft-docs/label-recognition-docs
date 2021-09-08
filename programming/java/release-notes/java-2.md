@@ -12,15 +12,7 @@ needAutoGenerateSidebar: false
 
 ### Highlights
 
-<div class="fold-panel-prefix"></div>
-
-#### Product Highlights <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
-
 {%- include release-notes/product-highlight-2.0.md -%}
-
-<div class="fold-panel-end"></div>
 
 ### Changelog
 

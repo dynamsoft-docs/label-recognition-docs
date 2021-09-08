@@ -16,7 +16,7 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *[`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
+| *[`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK"<br>"BM_THRESHOLD" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
 
 - **See also**:   
     [`BinarizationMode` Enumeration]({{ site.enumerations }}binarization-mode.html)
@@ -27,7 +27,7 @@ needGenerateH3Content: true
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ThresholdCompensation](#thresholdcompensation)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
-- [BinarizationThreshold](#binarizationThreshold)
+- [BinarizationThreshold](#binarizationthreshold)
 - [MorphOperation](#morphoperation)
 - [MorphShape](#morphshape)
 - [MorphOperationKernelSizeX](#morphoperationkernelsizex)

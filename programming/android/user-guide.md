@@ -66,10 +66,10 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     ```
     repositories {
         maven {
-            url "http://download2.dynamsoft.com/maven/dc/aar"
+            url "https://download2.dynamsoft.com/maven/dc/aar"
         }
         maven {
-            url "http://download2.dynamsoft.com/maven/dlr/aar"
+            url "https://download2.dynamsoft.com/maven/dlr/aar"
         }
     }
     ```

@@ -26,6 +26,8 @@ needGenerateH3Content: true
 - [iDLRCharacterResult](dlr-character-result.md)		
 - [iDLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [iDLRFurtherModes](dlr-further-modes.md)	
+- [DLRLicenseVerificationDelegate](dlr-license-verification-delegate.md)	
+
 
 ## Enumerations
 

@@ -27,9 +27,9 @@ If you don’t have SDK yet, please download the Dynamsoft Label Recognizer(DLR)
 
 The following sample will demonstrate how to take a picture and recognize it.
 >Note: 
->1.The following steps are completed in XCode 12.2
->2.You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjc)
->3.You can download the entire Swift source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
+>- The following steps are completed in XCode 12.2
+>- You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjc)
+>- You can download the entire Swift source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
 
 
 ### Create a New Project 

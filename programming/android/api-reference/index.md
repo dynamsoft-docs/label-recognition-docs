@@ -28,6 +28,7 @@ needGenerateH3Content: true
 - [DLRCharacterResult](dlr-character-result.md)	
 - [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [DLRFurtherModes](dlr-further-modes.md)
+- [DLRLicenseVerificationListener](dlr-license-verification-listener.md)	
 
 ## Enumerations
 

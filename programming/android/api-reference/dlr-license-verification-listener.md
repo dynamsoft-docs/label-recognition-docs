@@ -17,9 +17,9 @@ interface com.dynamsoft.dlr.DLRLicenseVerificationListener
 ```
 
 ## Methods
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLRLicenseVerificationCallback`](#dlrlicenseverificationcallback) | The callback of Dynamsoft License Server.|
+| Method               | Description |
+|----------------------|-------------|
+| [`DLRLicenseVerificationCallback`](#dlrlicenseverificationcallback) | The callback of Dynamsoft License Server.|
 
 &nbsp;
 

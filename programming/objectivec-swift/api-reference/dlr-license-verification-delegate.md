@@ -18,9 +18,9 @@ A delegate to handle callback when Dynamsoft License Server returns.
 
 ## Methods
   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLRLicenseVerificationCallback`](#dlrlicenseverificationcallback) | The callback of Dynamsoft License Server.|
+| Method               | Description |
+|----------------------|-------------|
+| [`DLRLicenseVerificationCallback`](#dlrlicenseverificationcallback) | The callback of Dynamsoft License Server.|
 
 
 &nbsp;

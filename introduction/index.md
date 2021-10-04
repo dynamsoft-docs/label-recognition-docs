@@ -8,21 +8,21 @@ needGenerateH3Content: true
 
 # Overview of Dynamsoft Label Recognizer
 
-Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, etc. 
+Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (or a 'Label' in this context). Some common scenarios where a component like DLR can prove handy include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, and ID cards.
 
-DLR powers your software development from the following aspects:
+DLR powers your software development through the following aspects:
 - Introduces the `Reference Region` feature to reduce the difficulty of specifying a Region of Interest (ROI).
 - Creates the `Inference Area` concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks, particularly for key-value pairs.
-- Innovates a text recognition engine that combines the advantages of Convolutional Neural Network (CNN) models and traditional image feature extraction.
+- Innovative text recognition engine that combines the advantages of Convolutional Neural Network (CNN) models and traditional image feature extraction.
 - Supports extensible regular expressions to improve the accuracy of text recognition.
-- Utilizes a variety of processing modes at different algorithm stages to maintain great scalability.
+- Utilizes a variety of processing modes at different stages of the algorithm to maintain great scalability.
 
 With DLR, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
 ## Key Features
 
 ### Reference Region 
-The `Reference Region` is an important feature of DLR. It can greatly enhance the ability to localize ROI. Generally, a label is not fixed in a certain position, but we could utilize some characteristic areas around the target label to locate it. The reference region may utilize the features such as foreground and background colours, straight lines, textures, or barcodes around the label.
+The `Reference Region` is an important feature of DLR. It can greatly enhance the ability to localize the Region of Interest (ROI). Generally, a label is not fixed in a certain position, but we could utilize some characteristic areas around the target label to locate it. The reference region may utilize surrounding features such as foreground and background colours, straight lines, textures, or barcodes around the label.
 
 A reference region could be:
 - A predefined region with absolute or relative coordinates known in advance.

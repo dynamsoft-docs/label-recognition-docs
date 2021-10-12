@@ -64,10 +64,18 @@ One scenario would be a label that contains both numbers and letters, but only n
 Additionally, DLR also supports data set training in order to generate customized recognition models. In some cases, there may still be some misreading of certain characters. Then the traditional image features of each character will be captured to further distinguish.
 
 ### Extensible Regular Expressions
-In order to improve the text recognition accuracy, DLR supports `extensible regular expressions` to correct misrecognized characters. Using the matching results, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Afterwards, DLR attempts to reduce the size of the candidate recognition character set as much as possible via the partial matching results. Finally, DLR will perform multiple iterations to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
+In order to improve text recognition accuracy, DLR supports `extensible regular expressions` to correct misrecognized characters. 
+
+Using the matching results, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Afterwards, DLR attempts to reduce the size of the character set used for recognition as much as possible via the partial matching results. 
+
+Finally, DLR will perform multiple iterations to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
 
 ### Various processing modes
-In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm to maintain great scalability. For example, the `BinarizationModes` provides several image binarization methods; The `RegionPredetectionModes` provides different pre-detection methods for the reference region. These modes can be configured not only through API but also through a configuration template. Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
+In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm process to maintain great scalability. 
+
+For example, [`BinarizationModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-runtime-settings.html?ver=latest#binarizationmodes) provides several image binarization methods and [`RegionPredetectionModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-further-modes.html?ver=latest#regionpredetectionmodes) provides different pre-detection methods to help locate the reference region. 
+
+These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
 
 
@@ -102,7 +110,7 @@ Accurate data capture helps to simplify banking processes, making them more effi
 
 ## Cross-Platform Programming Languages
 
-DLR is cross-platform. The core of DLR is written in C/C++ for performance. The library is wrapped for .NET, Java, and other programming languages so that users can use DLR on iOS, Android, Windows, and Linux. Below is a list of supported OSes and programming languages: 
+DLR is designed to be cross-platform. The core of DLR is written in C/C++ for performance. The library is wrapped for .NET, Java, and other programming languages so that users can use DLR on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages: 
 
 | OS            | Programming Language |
 |---------------|----------------------|

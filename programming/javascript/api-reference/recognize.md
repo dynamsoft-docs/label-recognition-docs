@@ -169,3 +169,95 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 * [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
 * [EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)
 * [DLRResult](./interface/dlr-result.md)
+
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
+
+## onUnduplicatedRead
+
+This event is triggered when a new, unduplicated label is found.
+
+```typescript
+onUnduplicatedRead: (txt: string, result: DLRResult) => void
+```
+
+**Arguments**
+
+`txt` : a string that holds the label text. 
+
+`result` : a `DLRResult` object that contains more detailed info.
+
+**Code Snippet**
+
+```javascript
+recognizer.onUnduplicatedRead = (txt, result) => {
+    alert(txt);
+    for (let lineResult of result.LineResults) {
+        console.log(lineResult.Text);
+    }
+}
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)
+
+## onFrameRead
+
+This event is triggered after the library finishes scanning a frame.
+
+```typescript
+onFrameRead: (results: DLRResult[]) => void
+```
+
+**Arguments**
+
+`results` : a `DLRResult` object that contains all the label results in this frame.
+
+**Code Snippet**
+
+```js
+recognizer.onFrameRead = results => {
+    for (let result of results) {
+        for (let lineResult of result.LineResults) {
+            console.log(lineResult.Text);
+        }
+    }
+};
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)
+
+## decodeCurrentFrame
+
+Scans the current frame of the video for barcodes.
+
+```typescript
+decodeCurrentFrame(): Promise<DLRResult[]>
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `DLRResult` object that contains all the label results found in this frame.
+
+**Code Snippet**
+
+```js
+await recognizer.showVideo();
+let results = await recognizer.decodeCurrentFrame();
+for (let result of results) {
+    for (let lineResult of result.LineResults) {
+        console.log(lineResult.Text);
+    }
+}
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)

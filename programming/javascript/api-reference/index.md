@@ -85,9 +85,9 @@ The APIs for this class include
 | [resetRuntimeSettings()](settings.md#resetruntimesettings) | Resets all parameters to default values. |
 | [getModeArgument()](settings.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](settings.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
-| [appendSettingsFromString()](settings.md#appendsettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
+| [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputSettingsToString()](settings.md#outputsettingstostring) | Output the current runtime settings to a JSON string. |
-| [updateReferenceRegionFromBarcodeResults()](settings.md#) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
 | [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 | [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |

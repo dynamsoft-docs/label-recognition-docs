@@ -11,11 +11,7 @@ breadcrumbText: API Reference
 
 # JavaScript API Reference
 
-The primary class of the library is `LabelRecognizer` .
-
-## LabelRecognizer
-
-The following code snippets shows the basic usage.
+The primary class of the library is `LabelRecognizer` . The following code snippets shows the basic usage.
 
 * Recognize a still image
 
@@ -45,11 +41,17 @@ labelRecognizer.startScanning();
 
 The APIs for this class include
 
-## License Control
+## Initialization Control
+
+The following static methods and properties help to set up the runtime environment for the library.
 
 | API Name | Description |
 |---|---|
-| [initLicense()](general.md#initLicense) | Initializes the license with a license string. |
+| [engineResourcePath](initialize.md#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
+| [loadWasm()](initialize.md#loadwasm) | Loads the recognition engine and models. |
+| [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
+| [version](initialize.md#version) | Returns the version of the library. |
+| [detectEnvironment()](initialize.md#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
 ### Create and Destroy Instances
 
@@ -58,6 +60,14 @@ The APIs for this class include
 | [createInstance()](general.md#createinstance) | Creates a `LabelRecognizer` instance. |
 | [destroyContext()](general.md#destroycontext) | Destroies the LabelRecognizer instance. |
 | [isContextDestroyed()](general.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+
+### License Control
+
+| API Name | Description |
+|---|---|
+| [initLicense()](general.md#initLicense) | Initializes the license with a license string. |
+
+## Recognition
 
 ### Recognize Labels from Still Images
 
@@ -76,7 +86,7 @@ The APIs for this class include
 | [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](recognize.md#recognizecurrentframe) | Scans the current frame of the video for labels. |
 
-### Change Settings
+## Settings
 
 | API Name | Description |
 |---|---|
@@ -92,24 +102,12 @@ The APIs for this class include
 | [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |
 
-### Auxiliary
+## Auxiliary
 
 | API Name | Description |
 |---|---|
 | [ifSaveOriginalImageInACanvas](auxiliary.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](auxiliary.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
-
-## Initialization Control
-
-The following static methods and properties help to set up the runtime environment for the library.
-
-| API Name | Description |
-|---|---|
-| [engineResourcePath](initialize.md#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
-| [loadWasm()](initialize.md#loadwasm) | Loads the recognition engine and models. |
-| [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [version](initialize.md#version) | Returns the version of the library. |
-| [detectEnvironment()](initialize.md#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
 ## Interfaces and Enums
 

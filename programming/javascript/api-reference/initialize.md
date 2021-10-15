@@ -64,12 +64,12 @@ Dynamsoft.DLR.initLicense("DBRJS_Samples:DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAwLWR
 Creates a `LabelRecognizer` instance.
 
 ```typescript
-static createInstance(): Promise<LabelRecognizer>
+static createInstance(config?: any): Promise<LabelRecognizer>
 ```
 
 **Parameters**
 
-None.
+`config` : Configure how to create the instance. At present, it only specifies a default runtimeSettings template. Please see [UpdateRuntimeSettings](settings.md#updateruntimesettings) for more information.
 
 **Return value**
 
@@ -78,7 +78,10 @@ A promise resolving to the created `LabelRecognizer` object.
 **Code Snippet**
 
 ```js
-let scanner = await Dynamsoft.DLR.createInstance();
+let recognizer = await Dynamsoft.DLR.createInstance({
+    runtimeSettings: "video"
+});
+recognizer.startScanning();
 ```
 
 ## destroyContext
@@ -100,9 +103,9 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-let scanner = await Dynamsoft.DLR.createInstance();
+let recognizer = await Dynamsoft.DLR.createInstance();
 // ... decode ...
-scanner.destroyContext();
+recognizer.destroyContext();
 ```
 
 ## isContextDestroyed

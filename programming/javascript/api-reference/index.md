@@ -16,7 +16,7 @@ The primary class of the library is `LabelRecognizer` . The following code snipp
 * Recognize a still image
 
 ```js
-let labelRecognizer = await Dynamsoft.DLR.createInstance();
+let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let results = await labelRecognizer.recognize(imageSource);
 for (let result of results) {
     for (let lineResult of result.LineResults) {
@@ -28,7 +28,7 @@ for (let result of results) {
 * Recognize continuous video frames
 
 ```js
-let labelRecognizer = await Dynamsoft.DLR.createInstance();
+let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.LineResults) {

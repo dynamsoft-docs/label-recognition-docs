@@ -56,7 +56,7 @@ None.
 **Code Snippet**
 
 ```js
-Dynamsoft.DLR.initLicense("DBRJS_Samples:DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAwLWRicl9qc19zYW1wbGVzIiwib3JnYW5pemF0aW9uSUQiOiIyMDAwMDAifQ==");
+Dynamsoft.DLR.LabelRecognizer.initLicense("DBRJS_Samples:DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAwLWRicl9qc19zYW1wbGVzIiwib3JnYW5pemF0aW9uSUQiOiIyMDAwMDAifQ==");
 ```
 
 ## createInstance
@@ -78,7 +78,7 @@ A promise resolving to the created `LabelRecognizer` object.
 **Code Snippet**
 
 ```js
-let recognizer = await Dynamsoft.DLR.createInstance({
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video"
 });
 recognizer.startScanning();
@@ -103,7 +103,7 @@ A promise that resolves when the operation succeeds.
 **Code Snippet**
 
 ```js
-let recognizer = await Dynamsoft.DLR.createInstance();
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 // ... decode ...
 recognizer.destroyContext();
 ```
@@ -127,8 +127,8 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DLR.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
-await Dynamsoft.DLR.loadWasm();
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+await Dynamsoft.DLR.LabelRecognizer.loadWasm();
 ```
 
 ## loadWasm
@@ -145,7 +145,7 @@ static loadWasm(): Promise<void>
 
 ```js
 window.addEventListener('DOMContentLoaded', (event) => {
-    Dynamsoft.DLR.loadWasm();
+    Dynamsoft.DLR.LabelRecognizer.loadWasm();
 });
 ```
 
@@ -170,9 +170,9 @@ readonly static version: string
 **Code Snippet**
 
 ```js
-console.log(Dynamsoft.DLR.version);
-await Dynamsoft.DLR.loadWasm();
-console.log(Dynamsoft.DLR.version);
+console.log(Dynamsoft.DLR.LabelRecognizer.version);
+await Dynamsoft.DLR.LabelRecognizer.loadWasm();
+console.log(Dynamsoft.DLR.LabelRecognizer.version);
 ```
 
 ## detectEnvironment
@@ -186,6 +186,6 @@ static detectEnvironment(): Promise<any>
 **Code Snippet**
 
 ```js
-console.log(Dynamsoft.DLR.detectEnvironment());
+console.log(Dynamsoft.DLR.LabelRecognizer.detectEnvironment());
 // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
 ```

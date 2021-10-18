@@ -27,6 +27,8 @@ breadcrumbText: Recognition APIs
 | [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
+| [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
+| [stopScanning()](#stopscanning) | Stops continuous scanning. |
 
 ## recognize
 
@@ -190,12 +192,16 @@ onUnduplicatedRead: (txt: string, result: DLRResult) => void
 **Code Snippet**
 
 ```javascript
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
 recognizer.onUnduplicatedRead = (txt, result) => {
-    alert(txt);
+    console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
     }
 }
+recognizer.startScanning();
 ```
 
 **See also**
@@ -217,6 +223,9 @@ onFrameRead: (results: DLRResult[]) => void
 **Code Snippet**
 
 ```js
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
 recognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.LineResults) {
@@ -224,18 +233,19 @@ recognizer.onFrameRead = results => {
         }
     }
 };
+recognizer.startScanning();
 ```
 
 **See also**
 
 * [DLRResult](./interface/dlr-result.md)
 
-## decodeCurrentFrame
+## recognizeCurrentFrame
 
 Scans the current frame of the video for barcodes.
 
 ```typescript
-decodeCurrentFrame(): Promise<DLRResult[]>
+recognizeCurrentFrame(): Promise<DLRResult[]>
 ```
 
 **Parameters**
@@ -249,13 +259,89 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 **Code Snippet**
 
 ```js
-await recognizer.showVideo();
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
+let cEnhancer = recognizer.cameraEnhancer;
+cEnhancer.open();
 let results = await recognizer.decodeCurrentFrame();
 for (let result of results) {
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
     }
 }
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)
+
+## startScanning
+
+Starts continuous scanning of incoming frames.
+
+```typescript
+startScanning(showUI: boolean): void;
+```
+
+**Parameters**
+
+`showUI` : whether to show UI. The UI will display the video stream and highlight the recognized text, etc.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```js
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
+recognizer.onUnduplicatedRead = (txt, result) => {
+    console.log(txt);
+    for (let lineResult of result.LineResults) {
+        console.log(lineResult.Text);
+    }
+}
+recognizer.startScanning();
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)
+
+## stopScanning
+
+Stops continuous scanning.
+
+```typescript
+stopScanning(hideUI: boolean): void;
+```
+
+**Parameters**
+
+`hideUI` : whether to hide UI.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```js
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
+recognizer.onUnduplicatedRead = (txt, result) => {
+    console.log(txt);
+    for (let lineResult of result.LineResults) {
+        console.log(lineResult.Text);
+    }
+    // Stops scanning the video input as soon as a label is found.
+    recognizer.stopScanning;
+}
+recognizer.startScanning();
 ```
 
 **See also**

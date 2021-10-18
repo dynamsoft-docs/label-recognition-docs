@@ -85,6 +85,8 @@ The following static methods and properties help to set up the runtime environme
 | [onUnduplicatedRead](recognize.md#onunduplicatedread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](recognize.md#recognizecurrentframe) | Scans the current frame of the video for labels. |
+| [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming frames. |
+| [stopScanning()](recognize.md#stopscanning) | Stops continuous scanning. |
 
 ## Settings
 

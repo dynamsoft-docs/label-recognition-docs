@@ -97,10 +97,10 @@ If the text is decoded, an alert will pop up with the result text. At the same t
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a [7-day free period](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
+  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a [7-day free period](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
     > Network connection is required for the 7-day free license to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js).
 
 ## Building your own page
 
@@ -174,9 +174,9 @@ Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ
 *Note*:
 
 * By default, network connection is required for the license to work.
-* If nothing is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be used by default which is the case in the above "hello world" example.
+* If nothing is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be used by default which is the case in the above "hello world" example.
 * The license is actually fetched during the creation of a `LabelRecognizer` instance.
-* If a public network connection is not available, you can choose to host a license server in your private network or apply for an offline license. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide) for more information.
+* If a public network connection is not available, you can choose to host a license server in your private network or apply for an offline license. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js) for more information.
 
 #### Specify the location of the "engine" files
 
@@ -259,135 +259,102 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
 Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
 
-  
-  > You must set `defaultUIElementURL` before you call `createInstance()` .
+> You must set `defaultUIElementURL` before you call `createInstance()` .
 
 * Append the default UI element to your page, customize it before showing it.
 
-  
-
 ```html
-  <div id="scannerUI"></div>
+<div id="recognizerUI"></div>
 ```
 
-  
-
 ```javascript
-  document.getElementById('scannerUI').appendChild(recognizer.getUIElement());
-  document.getElementsByClassName('dbrScanner-btn-close')[0].hidden = true; // Hide the close button
+document.getElementById('recognizerUI').appendChild(recognizer.getUIElement());
+document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
 ```
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
   + Embed the video
-    <select class="dbrScanner-sel-resolution">
-        <option class="dbrScanner-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
-    </select>
 
 ```html
-    <div id="div-video-container">
-        <video class="dbrScanner-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
-    </div>
-    <script>
-        let pRecognizer = null;
-        (async () => {
-            let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance());
-            await recognizer.setUIElement(document.getElementById('div-video-container'));
-            recognizer.onFrameRead = results => {
-                console.log(results);
-            };
-            recognizer.onUniqueRead = (txt, result) => {
-                alert(txt);
-            };
-            await recognizer.show();
-        })();
-    </script>
+<select class="dce-sel-resolution">
+    <option class="dce-opt-gotResolution" value="got"></option>
+    <option data-width="1920" data-height="1080">1920 x 1080</option>
+    <option data-width="1280" data-height="720">1280 x 720</option>
+    <option data-width="640" data-height="480">640 x 480</option>
+</select>
+<div id="div-video-container">
+    <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+</div>
+<script>
+    let pRecognizer = null;
+    (async () => {
+        let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video"
+        }));
+        await recognizer.setUIElement(document.getElementById('div-video-container'));
+        recognizer.onFrameRead = results => {
+            for (let result of results) {
+                for (let lineResult of result.lineResults) {
+                    console.log(lineResult.text);
+                }
+            }
+        };
+        recognizer.onUniqueRead = (txt, result) => {
+            alert(txt);
+        };
+        recognizer.startScanning();
+    })();
+</script>
 ```
 
-    > The video element must have the class `dbrScanner-video` .
-
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
+> The video element must have the class `dce-video` .
 
   + Add the camera list and resolution list
-  
-
-    If the class names for these lists match the default ones, `dbrScanner-sel-camera` and `dbrScanner-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
-    <select class="dbrScanner-sel-resolution">
-        <option class="dbrScanner-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
-    </select>
+    If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-    <select class="dbrScanner-sel-camera"></select>
+<select class="dce-sel-camera"></select>
 ```
-
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
-    <select class="dbrScanner-sel-resolution">
-        <option class="dbrScanner-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
-    </select>
 
 ```html
-    <select class="dbrScanner-sel-resolution"></select>
+<select class="dce-sel-resolution"></select>
 ```
 
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
-
-    > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
-    <select class="dbrScanner-sel-resolution">
-        <option class="dbrScanner-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
-    </select>
+> Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-    <select class="dbrScanner-sel-resolution">
-        <option class="dbrScanner-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">1920 x 1080</option>
-        <option data-width="1280" data-height="720">1280 x 720</option>
-        <option data-width="640" data-height="480">640 x 480</option>
-    </select>
+<select class="dbrScanner-sel-resolution">
+    <option class="dbrScanner-opt-gotResolution" value="got"></option>
+    <option data-width="1920" data-height="1080">1920 x 1080</option>
+    <option data-width="1280" data-height="720">1280 x 720</option>
+    <option data-width="640" data-height="480">640 x 480</option>
+</select>
 ```
-
-    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
-
-    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
-
-See also [UI customization samples](https://www.dynamsoft.com/label-recognition/programming/javascript/samples-demos/ui-customization.html?ver=latest&utm_source=guide).
 
 Interested to test it further? Read on to learn how to request a 30-day free trial.
 
 ## Requesting A Trial
 
-From version 8.2.5 of the library, if no license is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide) will be used by default. 
+If no license is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be used by default. 
 
 > Network connection is required for the 7-day free license to work.
 
-After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist?utm_source=guide) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js).
+After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist?utm_source=guide&product=dlr&package=js) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js).
 
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=guide) to get a trial license.
+* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js) to get a trial license.
 
 ## System Requirements
 
 This library requires the following features which are supported by all modern mainstream browsers:
 
 * `WebAssembly`, `Blob`, `URL`/`createObjectURL`,  `Web Workers`  
-    
 
   The above four features are required for the library to work.
 
 * `MediaDevices`/`getUserMedia`
-    
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/LabelRecognizer/properties.html?ver=latest&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://officecn.dynamsoft.com:808/label-recognition/programming/javascript/api-reference/ui.html?ver=latest&utm_source=guide&product=dlr&package=js#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
 
 The following table is a list of supported browsers based on the above requirements:
 
@@ -399,12 +366,8 @@ The following table is a list of supported browsers based on the above requireme
   Safari<sup>3</sup> | v11+
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
-
   <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
-
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
-
-     
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
@@ -415,13 +378,10 @@ Apart from the browsers, the operating systems may impose some limitations of th
 Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). The following shows some of the files in this directory:
 
 * `dlr.js` // The main library file
-* `dlr.browser.mjs` // For using the library as a module (`<script type="module">`)
 * `dlr.ui.html` // Defines the default recognizer UI
 * `dlr-<version>.worker.js` // Defines the worker thread for text reading
 * `dlr-<version>.wasm.js` // Compact edition of the library (.js)
 * `dlr-<version>.wasm` // Compact edition of the library (.wasm)
-* `dlr-<version>.full.wasm.js` // Full edition of the library (.js)
-* `dlr-<version>.full.wasm` // Full edition of the library (.wasm)
 
 ### Step Two: Configure the Server
 
@@ -465,7 +425,7 @@ If you open the web page as `file:///` or `http://` , the camera may not work an
 
 * In Safari 12 the equivalent error is:
 
-> Trying to call getUserMedia from an insecure document.
+> Trying to call "getUserMedia" from an insecure document.
 
 You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
 

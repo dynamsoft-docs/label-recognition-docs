@@ -22,6 +22,7 @@ breadcrumbText: UI Control
 | [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
 | [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
 | [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+| [singleFrameMode](#singleframemode) | Returns or sets whether to enable the singe-frame mode. |
 
 ## getUIElement
 
@@ -136,4 +137,14 @@ Specifies the width of the outline of the scanning region. This outline only app
 
 ```typescript
 regionMaskLineWidth: number
+```
+
+## singleFrameMode
+
+Returns or sets the status of the single-frame mode. If enabled, the video input will not be played and the user can choose to take a picture with the system camera or select an existing image for text reading.
+
+The single-frame mode can only be enabled or disabled before the video input starts playing.
+
+```typescript
+singleFrameMode: boolean
 ```

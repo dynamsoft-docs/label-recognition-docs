@@ -92,21 +92,25 @@ The following static methods and properties help to set up the runtime environme
 
 ## Settings
 
-<!--| [getRuntimeSettings()](settings.md#getruntimesettings) | Returns the current runtime settings. |
+<!--
+| [getRuntimeSettings()](settings.md#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](settings.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](settings.md#resetruntimesettings) | Resets all parameters to default values. |
 | [getModeArgument()](settings.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
-| [setModeArgument()](settings.md#setmodeargument) | Sets the argument value for the specified mode parameter. |-->
+| [setModeArgument()](settings.md#setmodeargument) | Sets the argument value for the specified mode parameter. |
+-->
 
 | API Name | Description |
 |---|---|
 | [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputSettingsToString()](settings.md#outputsettingstostring) | Output the current runtime settings to a JSON string. |
-<!--| [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 
+<!--
+| [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 | [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
-| [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |-->
-<!--| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |-->
+| [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |
+| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
+-->
 
 ## Auxiliary
 

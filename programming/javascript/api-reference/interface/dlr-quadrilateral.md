@@ -3,9 +3,9 @@ layout: default-layout
 title: Dynamsoft Label Recognizer JavaScript Interface - DLRQuadrilateral
 description: This page shows the DLRQuadrilateral interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DLRQuadrilateral, javascript, interface
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
 noTitleIndex: true
+breadcrumbText: DLRQuadrilateral
 ---
 
 # DLRQuadrilateral

@@ -3,9 +3,9 @@ layout: default-layout
 title: Dynamsoft Label Recognizer JavaScript Interface - DLRPoint
 description: This page shows the DLRPoint interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DLRPoint, javascript, interface
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needAutoGenerateSidebar: false
 noTitleIndex: true
+breadcrumbText: DLRPoint
 ---
 
 # DLRPoint

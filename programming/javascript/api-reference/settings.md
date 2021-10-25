@@ -11,6 +11,19 @@ breadcrumbText: Settings APIs
 
 # Change Settings
 
+## Scan Settings
+
+| API Name | Description |
+|---|---|
+| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
+| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
+| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
+| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [getScanSettings](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+
+## Runtime Settings
+
 | API Name | Description |
 |---|---|
 | [updateRuntimeSettingsFromString()](#appendsettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
@@ -25,6 +38,148 @@ breadcrumbText: Settings APIs
 | [appendCharacterModelBuffer()](#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 | [eraseCharacterModelByName()](#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](#eraseallcharactermodels) | Erases all CharacterModels. |
+-->
+
+## whenToPlaySoundforSuccessfulRead
+
+Sets when to play sound on text recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
+
+* `never`: never play sound, the default value; <!--never-->
+* `frame`: play sound when text is found on a frame; <!--always-->
+* `unduplicated`: play sound when a unique/unduplicated text is found (if multiple unique barcodes are found on the same frame, play only once).
+
+```typescript
+whenToPlaySoundforSuccessfulRead: (boolean | string)
+```
+
+**Default value**
+
+ `false`
+
+**Code Snippet**
+
+```js
+// A user gesture required. 
+startPlayButton.addEventListener('click', function() {
+    recognizer.whenToPlaySoundforSuccessfulRead = true;
+});
+```
+
+## soundOnSuccessfullRead
+
+Specifies the sound to play on text recognition. If not specified, the default one is used.
+
+```typescript
+soundOnSuccessfullRead: HTMLAudioElement
+```
+
+**Code Snippet**
+
+```js
+recognizer.soundOnSuccessfullRead = new Audio("./pi.mp3");
+```
+
+**See also**
+
+* [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
+* [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread)
+
+## whenToVibrateforSuccessfulRead
+
+Sets when to vibrate on text recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
+
+* `never`: never vibrate, the default value; <!--never-->
+* `frame`: vibrate when text is found on a frame; <!--always-->
+* `unduplicated`: vibrate when a unique/unduplicated text is found (if multiple unique barcodes are found on the same frame, vibrate only once).
+
+```typescript
+whenToVibrateforSuccessfulRead: (boolean | string)
+```
+
+**Default value**
+
+ `false`
+
+**Code Snippet**
+
+```js
+// Can I use? https://caniuse.com/?search=vibrate
+startVibrateButton.addEventListener('click', function() {
+    recognizer.whenToVibrateforSuccessfulRead = true;
+});
+```
+
+## vibrateDuration
+
+Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
+
+```typescript
+vibrateDuration: number
+```
+
+**See also** 
+
+* [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread)
+
+## getScanSettings
+
+Returns the current scan settings.
+
+```typescript
+getScanSettings(): Promise<ScanSettings>
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise resolving to a `ScanSettings` .
+
+**Code Snippet**
+
+```js
+let scanSettings = await recognizer.getScanSettings();
+scanSettings.intervalTime = 50;
+scanSettings.duplicateForgetTime = 1000;
+await recognizer.updateScanSettings(scanSettings);
+```
+
+**See also**
+
+* [ScanSettings](./interface/dlr-scansettings.md)
+
+## updateScanSettings
+
+Changes scan settings with the object passed in.
+
+```typescript
+updateScanSettings(settings: ScanSettings): Promise<void>
+```
+
+**Parameters**
+
+`settings` : specifies the new scan settings.
+
+**Return value**
+
+A promise that resolves when the operation succeeds.
+
+**Code Snippet**
+
+```js
+let scanSettings = await recognizer.getScanSettings();
+scanSettings.intervalTime = 50;
+scanSettings.duplicateForgetTime = 1000;
+await recognizer.updateScanSettings(scanSettings);
+```
+
+**See also**
+
+* [ScanSettings](./interface/dlr-scansettings.md)
+
+<!--
 
 ## getRuntimeSettings
 
@@ -152,6 +307,7 @@ A promise that resolves when the operation succeeds.
 ```js
 await recognizer.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
+
 -->
 
 ## updateRuntimeSettingsFromString
@@ -187,6 +343,7 @@ None.
 A JSON string that represents the runtime settings.
 
 <!--
+
 ## updateReferenceRegionFromBarcodeResults
 
 Updates reference region which is defined with source type `DLR_LST_BARCODE` .
@@ -202,7 +359,6 @@ updateReferenceRegionFromBarcodeResults(barcodeResults: BarcodeResultArray): Pro
 **Return value**
 
 A promise that resolves when the operation succeeds.
-
 
 ## appendCharacterModelBuffer
 

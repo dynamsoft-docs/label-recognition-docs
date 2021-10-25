@@ -81,7 +81,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library have found on this frame. In this example, we print the results to the browser console.
 
-  + `onUnduplicatedRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
 
   + `startScanning()`: This method brings up the built-in UI of the `LabelRecognizer` object for vido streaming and scanning.
 
@@ -233,58 +233,30 @@ await recognizer.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// use one of the built-in RuntimeSetting templates: "single" (decode a single text, the default mode), "speed", "balance" and "coverage"
-await recognizer.updateRuntimeSettings("speed");
-
-// make changes to the template. The code below demonstrates how to specify enabled symbologies
-let runtimeSettings = await recognizer.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds = Dynamsoft.DLR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DLR.EnumBarcodeFormat.BF_QR_CODE;
-await recognizer.updateRuntimeSettings(runtimeSettings);
+// use one of the built-in RuntimeSetting templates: "video" or "image". You can also pass in a JSON string as the template.
+await recognizer.updateRuntimeSettingsFromString("image");
 ```
-
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/yfkcajxz/)
 
 As you can see from the above code snippets, there are three types of configurations:
 
-* `get/updateVideoSettings`: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more [here](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax).
+* Use the internal `cameraEnhancer` object: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=latest&utm_source=guide&product=dlr&package=js).
 
-* `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
+* `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime` and `intervalTime`.
 
-* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/global-interfaces.html?utm_source=guide#runtimesettings). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
-
-  
-
-```javascript
-  await barcodeScanner.updateRuntimeSettings("speed");
-  //await barcodeScanner.updateRuntimeSettings("balance"); //alternative
-  //await barcodeScanner.updateRuntimeSettings("coverage"); //alternative
-  let settings = await barcodeScanner.getRuntimeSettings();
-  settings.localizationModes = [
-      Dynamsoft.DLR.EnumLocalizationMode.LM_CONNECTED_BLOCKS,
-      Dynamsoft.DLR.EnumLocalizationMode.LM_SCAN_DIRECTLY,
-      Dynamsoft.DLR.EnumLocalizationMode.LM_LINES, 0, 0, 0, 0, 0
-  ];
-  await barcodeScanner.updateRuntimeSettings(settings);
-```
-
-  Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
-
-  See also [settings samples](https://www.dynamsoft.com/label-recognition/programming/javascript/samples-demos/parameter-settings.html?ver=latest&utm_source=guide).
+* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built in template or a template represented by a JSON string.
 
 #### Customize the UI
 
-The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr.recognizer.html` . There are a few ways to customize it:
+The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr.ui.html` . There are a few ways to customize it:
 
-* Modify the file `dist/dlr.recognizer.html` directly. 
+* Modify the file `dist/dlr.ui.html` directly. 
 
   This option is only possible when you host this file on your own web server instead of using a CDN.
 
-* Copy the file `dist/dlr.recognizer.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
-
-  
+* Copy the file `dist/dlr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
 
 ```javascript
-  Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
+Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
 
   
@@ -327,7 +299,7 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
             recognizer.onFrameRead = results => {
                 console.log(results);
             };
-            recognizer.onUnduplicatedRead = (txt, result) => {
+            recognizer.onUniqueRead = (txt, result) => {
                 alert(txt);
             };
             await recognizer.show();
@@ -444,7 +416,7 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 
 * `dlr.js` // The main library file
 * `dlr.browser.mjs` // For using the library as a module (`<script type="module">`)
-* `dlr.recognizer.html` // Defines the default recognizer UI
+* `dlr.ui.html` // Defines the default recognizer UI
 * `dlr-<version>.worker.js` // Defines the worker thread for text reading
 * `dlr-<version>.wasm.js` // Compact edition of the library (.js)
 * `dlr-<version>.wasm` // Compact edition of the library (.wasm)

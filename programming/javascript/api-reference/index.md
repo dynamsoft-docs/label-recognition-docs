@@ -69,6 +69,20 @@ The following static methods and properties help to set up the runtime environme
 |---|---|
 | [license](initialize.md#license) | Use an alphanumeric string to specify the license. |
 
+## UI Control
+
+| API Name | Description |
+|---|---|
+| [getUIElement](ui.md#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
+| [setUIElement](ui.md#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
+| [defaultUIElementURL](ui.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [lineFillStyle](ui.md#linefillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
+| [lineStrokeStyle](ui.md#linestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
+| [lineLineWidth](ui.md#linelinewidth) | Specifies the line width of the outline of the shape which highlights a found line of text. |
+| [regionMaskFillStyle](ui.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](ui.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](ui.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+
 ## Recognition
 
 ### Recognize Labels from Still Images
@@ -84,13 +98,26 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](recognize.md#onunduplicatedread) | This event is triggered when a new, unduplicated label is found. |
+| [onUniqueRead](recognize.md#onUniqueRead) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](recognize.md#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming frames. |
 | [stopScanning()](recognize.md#stopscanning) | Stops continuous scanning. |
 
 ## Settings
+
+### Scan Settings
+
+| API Name | Description |
+|---|---|
+| [whenToPlaySoundforSuccessfulRead](settings.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
+| [soundOnSuccessfullRead](settings.md#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
+| [whenToVibrateforSuccessfulRead](settings.md#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
+| [vibrateDuration](settings.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
+| [getScanSettings](settings.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings](settings.md#updatescansettings) | Changes scan settings with the object passed in. |
+
+### Runtime Settings
 
 <!--
 | [getRuntimeSettings()](settings.md#getruntimesettings) | Returns the current runtime settings. |

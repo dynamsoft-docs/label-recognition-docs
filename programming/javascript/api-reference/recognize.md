@@ -24,7 +24,7 @@ breadcrumbText: Recognition APIs
 
 | API Name | Description |
 |---|---|
-| [onUnduplicatedRead](#onunduplicatedread) | This event is triggered when a new, unduplicated label is found. |
+| [onUniqueRead](#onUniqueRead) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
@@ -175,12 +175,12 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 
-## onUnduplicatedRead
+## onUniqueRead
 
 This event is triggered when a new, unduplicated label is found.
 
 ```typescript
-onUnduplicatedRead: (txt: string, result: DLRResult) => void
+onUniqueRead: (txt: string, result: DLRResult) => void
 ```
 
 **Arguments**
@@ -195,7 +195,7 @@ onUnduplicatedRead: (txt: string, result: DLRResult) => void
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video"
 });
-recognizer.onUnduplicatedRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
@@ -298,7 +298,7 @@ None.
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video"
 });
-recognizer.onUnduplicatedRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
@@ -333,7 +333,7 @@ None.
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video"
 });
-recognizer.onUnduplicatedRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);

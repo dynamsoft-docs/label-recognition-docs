@@ -17,7 +17,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
-| [initLicense()](#initLicense) | Initializes the license with a license string. |
+| [license](#license) | Use an alphanumeric string to specify the license. |
 
 ## Create and Destroy Instances
 
@@ -69,7 +69,10 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 
 **Parameters**
 
-`config` : Configure how to create the instance. At present, it only specifies a default runtimeSettings template. Please see [UpdateRuntimeSettings](settings.md#updateruntimesettings) for more information.
+`config` : Configures how to create the instance. At present, it only specifies one of the built-in `runtimeSettings` templates which include
+
+* `video`: with this template, the created `LabelRecognizer` instance will be optimized for reading continuous frames from a vidoe input. 
+* `image`: with this template, the created `LabelRecognizer` instance will be optimized for reading still images.
 
 **Return value**
 

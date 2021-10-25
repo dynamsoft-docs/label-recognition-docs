@@ -20,10 +20,10 @@ breadcrumbText: Settings APIs
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |-->
 | [updateRuntimeSettingsFromString()](#appendsettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputSettingsToString()](#outputsettingstostring) | Output the current runtime settings to a JSON string. |
-<!--| [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |-->
+<!--| [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
 | [appendCharacterModelBuffer()](#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 <!--| [eraseCharacterModelByName()](#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
-| [eraseAllCharacterModels()](#eraseallcharactermodels) | Erases all CharacterModels. |-->
+| [eraseAllCharacterModels()](#eraseallcharactermodels) | Erases all CharacterModels. |
 
 ## getRuntimeSettings
 
@@ -151,6 +151,7 @@ A promise that resolves when the operation succeeds.
 ```js
 await recognizer.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
+-->
 
 ## updateRuntimeSettingsFromString
 
@@ -184,6 +185,7 @@ None.
 
 A JSON string that represents the runtime settings.
 
+<!--
 ## updateReferenceRegionFromBarcodeResults
 
 Updates reference region which is defined with source type `DLR_LST_BARCODE` .
@@ -199,6 +201,7 @@ updateReferenceRegionFromBarcodeResults(barcodeResults: BarcodeResultArray): Pro
 **Return value**
 
 A promise that resolves when the operation succeeds.
+
 
 ## appendCharacterModelBuffer
 
@@ -250,3 +253,4 @@ None.
 **Return value**
 
 A promise that resolves when the operation succeeds.
+-->

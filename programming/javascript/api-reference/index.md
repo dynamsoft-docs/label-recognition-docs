@@ -28,7 +28,9 @@ for (let result of results) {
 * Recognize continuous video frames
 
 ```js
-let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
+let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video"
+});
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.LineResults) {
@@ -36,7 +38,7 @@ labelRecognizer.onFrameRead = results => {
         }
     }
 };
-labelRecognizer.startScanning();
+labelRecognizer.startScanning(true);
 ```
 
 The APIs for this class include
@@ -57,15 +59,15 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [createInstance()](general.md#createinstance) | Creates a `LabelRecognizer` instance. |
-| [destroyContext()](general.md#destroycontext) | Destroies the LabelRecognizer instance. |
-| [isContextDestroyed()](general.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
+| [createInstance()](initialize.md#createinstance) | Creates a `LabelRecognizer` instance. |
+| [destroyContext()](initialize.md#destroycontext) | Destroies the LabelRecognizer instance. |
+| [isContextDestroyed()](initialize.md#iscontextdestroyed) | Returns whether the instance has been destroyed. |
 
 ### License Control
 
 | API Name | Description |
 |---|---|
-| [initLicense()](general.md#initLicense) | Initializes the license with a license string. |
+| [license](initialize.md#license) | Use an alphanumeric string to specify the license. |
 
 ## Recognition
 
@@ -90,19 +92,21 @@ The following static methods and properties help to set up the runtime environme
 
 ## Settings
 
-| API Name | Description |
-|---|---|
 <!--| [getRuntimeSettings()](settings.md#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](settings.md#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](settings.md#resetruntimesettings) | Resets all parameters to default values. |
 | [getModeArgument()](settings.md#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](settings.md#setmodeargument) | Sets the argument value for the specified mode parameter. |-->
+
+| API Name | Description |
+|---|---|
 | [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputSettingsToString()](settings.md#outputsettingstostring) | Output the current runtime settings to a JSON string. |
-<!--| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |-->
-| [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
-<!--| [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
+<!--| [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
+
+| [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |-->
+<!--| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |-->
 
 ## Auxiliary
 

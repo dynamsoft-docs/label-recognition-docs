@@ -169,7 +169,7 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 * [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 * [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 * [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-* [EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)
+* [EnumImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
 * [DLRResult](./interface/dlr-result.md)
 
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |

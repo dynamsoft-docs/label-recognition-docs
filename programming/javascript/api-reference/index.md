@@ -146,7 +146,7 @@ The following static methods and properties help to set up the runtime environme
 | [ifSaveOriginalImageInACanvas](auxiliary.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](auxiliary.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 
-## Interfaces and Enums
+## Interfaces and Enumerations
 
 In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations.
 
@@ -158,3 +158,14 @@ In order to make the code more predictable and readable, the library defines a s
 * [`DLRReferenceRegion`](interface/dlr-reference-region.md)	
 * [`DLRResult`](interface/dlr-result.md)		
 * [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)	
+
+### Enumerations
+
+* [RegionPredetectionMode]({{ site.enumerations }}region-predetection-mode.html)
+* [ColourConversionMode]({{ site.enumerations }}colour-conversion-mode.html)
+* [GrayscaleTransformationMode]({{ site.enumerations }}grayscale-transformation-mode.html)
+* [GrayscaleEnhancementMode]({{ site.enumerations }}grayscale-enhancement-mode.html)
+* [BinarizationMode]({{ site.enumerations }}binarization-mode.html)
+* [TextureDetectionMode]({{ site.enumerations }}texture-detection-mode.html)
+* [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
+* [LocalizationSourceType]({{ site.enumerations }}localization-source-type.html)

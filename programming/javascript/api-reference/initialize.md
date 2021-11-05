@@ -37,28 +37,6 @@ The following methods and properties help with the initialization of the library
 | [version](#version) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
-## initLicense
-
-Initializes the license with a license string.
-
-```typescript
-static initLicense(licenseString: string): void
-```
-
-**Parameters**
-
-`licenseString` : an alphanumeric string that specifies the license.
-
-**Return value**
-
-None.
-
-**Code Snippet**
-
-```js
-Dynamsoft.DLR.LabelRecognizer.initLicense("DBRJS_Samples:DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAwLWRicl9qc19zYW1wbGVzIiwib3JnYW5pemF0aW9uSUQiOiIyMDAwMDAifQ==");
-```
-
 ## createInstance
 
 Creates a `LabelRecognizer` instance.

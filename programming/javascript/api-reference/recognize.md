@@ -264,7 +264,7 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let cEnhancer = recognizer.cameraEnhancer;
 cEnhancer.open();
-let results = await recognizer.decodeCurrentFrame();
+let results = await recognizer.recognizeCurrentFrame();
 for (let result of results) {
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);

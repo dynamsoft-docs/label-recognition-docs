@@ -49,8 +49,16 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 
 `config` : Configures how to create the instance. At present, it only specifies one of the built-in `runtimeSettings` templates which include
 
-* `video`: with this template, the created `LabelRecognizer` instance will be optimized for reading continuous frames from a vidoe input. 
-* `image`: with this template, the created `LabelRecognizer` instance will be optimized for reading still images.
+| Name | Description |
+|:-:|:-:|
+| `number` | For pure number recognition. |
+| `numberLetter` | For number and English letter recognition. |
+| `numberUpperCase` | For number and uppercase English letter recognition. |
+| `letter` | For pure English letter recognition. |
+| `passportMrz` | For passport MRZ recognition. |
+| `vin` | For VIN (vehicle identification number) recognition. |
+
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMrz` to read the MRZ on passports with a camera.
 
 **Return value**
 
@@ -60,7 +68,7 @@ A promise resolving to the created `LabelRecognizer` object.
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMrz"
 });
 recognizer.startScanning();
 ```

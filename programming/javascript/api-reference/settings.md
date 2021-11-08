@@ -320,7 +320,22 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 
 **Parameters**
 
-`runtimeSettings` : a JSON string that specifies the runtime settings.
+`runtimeSettings` : a JSON string that specifies the runtime settings or one of the built-in `runtimeSettings` templates which include
+
+| Name | Description |
+|:-:|:-:|
+| `number` | For pure number recognition. |
+| `numberLetter` | For number and English letter recognition. |
+| `numberUpperCase` | For number and uppercase English letter recognition. |
+| `letter` | For pure English letter recognition. |
+| `passportMrz` | For passport MRZ recognition. |
+| `vin` | For VIN (vehicle identification number) recognition. |
+
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMrz` to read the MRZ on passports with a camera.
+
+**Return value**
+
+A promise resolving to the created `LabelRecognizer` object.
 
 **Return value**
 
@@ -331,7 +346,7 @@ A promise that resolves when the operation succeeds.
 Output the current runtime settings to a JSON string.
 
 ```typescript
-outputSettingsToString(): string;
+outputSettingsToString(): Promise<string>;
 ```
 
 **Parameters**
@@ -340,7 +355,7 @@ None.
 
 **Return value**
 
-A JSON string that represents the runtime settings.
+A promise resolving to a JSON string that represents the runtime settings.
 
 <!--
 

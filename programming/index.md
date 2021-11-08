@@ -9,6 +9,7 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer - Programming
 
+- [JavaScript]({{ site.javascript }})
 - [Android]({{ site.android }})
 - [iOS]({{ site.objectivec-swift }})
 - [.NET]({{ site.dotnet }})

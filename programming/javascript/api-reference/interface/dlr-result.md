@@ -13,16 +13,18 @@ breadcrumbText: DLRResult
 Stores the recognized result.
 
 ## Attributes
+
   
 | Attribute | Type |
 |---------- | ---- |
-| [`referenceRegionName`](#referenceregionname) | *string* |
-| [`textAreaName`](#textareaname) | *string* |
-| [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
-| [`confidence`](#confidence) | *number* |
-| [`lineResultsCount`](#lineresultscount) | *number* |
-| [`lineResults`](#lineresults) | *[`DLR_LineResult`](dlr-line-result.md)* |
-| [`pageNumber`](#pagenumber) | *number* |
+| [ `referenceRegionName` ](#referenceregionname) | *string* |
+| [ `textAreaName` ](#textareaname) | *string* |
+| [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
+| [ `confidence` ](#confidence) | *number* |
+| [ `lineResults` ](#lineresults) | *[ `DLR_LineResult` ](dlr-line-result.md)* |
+| [ `pageNumber` ](#pagenumber) | *number* |
+
+<!--| [ `lineResultsCount` ](#lineresultscount) | *number* |-->
 
 ### referenceRegionName
 
@@ -40,9 +42,12 @@ The location of current recognized text.
 
 The confidence of the result. It ranges from 0 to 100.
 
+<!--
+
 ### lineResultsCount
 
 The line result count.
+-->
 
 ### lineResults
 

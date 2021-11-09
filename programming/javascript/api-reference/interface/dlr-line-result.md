@@ -21,8 +21,10 @@ Stores the line result.
 | [ `characterModelName` ](#charactermodelname) | *string* |
 | [ `location` ](#location) | [ `DLRQuadrilateral` ](dlr-quadrilateral.md) |
 | [ `confidence` ](#confidence) | *number* |
-| [ `characterResultsCount` ](#characterresultscount) | *number* |
 | [ `characterResults` ](#characterresults) | *[ `PDLRCharacterResult` ](dlr-character-result.md)* |
+
+<!--
+| [ `characterResultsCount` ](#characterresultscount) | *number* |-->
 
 ### lineSpecificationName
 
@@ -44,9 +46,12 @@ The location of current line.
 
 The confidence of the result. It ranges from 0 to 100.
 
+<!-->
+
 ### characterResultsCount
 
 The character result count.
+-->
 
 ### characterResults
 

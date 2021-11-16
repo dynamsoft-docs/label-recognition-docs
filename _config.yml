@@ -36,6 +36,10 @@ java: /label-recognition/programming/java/
 java-api: /label-recognition/programming/java/api-reference/
 java-release-notes: /label-recognition/programming/java/release-notes/
 
+javascript: /label-recognition/programming/javascript/
+javascript-api: /label-recognition/programming/javascript/api-reference/
+javascript-release-notes: /label-recognition/programming/javascript/release-notes/
+
 assets: /label-recognition/assets/
 edit_icon: /label-recognition/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/assets/img-icon/icon-smile.png

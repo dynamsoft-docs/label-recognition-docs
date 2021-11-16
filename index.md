@@ -7,10 +7,10 @@ needAutoGenerateSidebar: true
 ---
 
 # Dynamsoft Label Recognizer Documentation
+* [Introduction]({{ site.introduction }})
 
-- [Introduction]({{ site.introduction }})
-
-- [Programming]({{ site.programming }})
+* [Programming]({{ site.programming }})
+   - [JavaScript]({{ site.javascript }})
    - [Android]({{ site.android }})
    - [iOS]({{ site.objectivec-swift }})
    - [.NET]({{ site.dotnet }})
@@ -18,6 +18,6 @@ needAutoGenerateSidebar: true
    - [C]({{ site.c-cplusplus }}c-index.html)
    - [C++]({{ site.c-cplusplus }}cpp-index.html)
 
-- [Parameters]({{ site.parameters }})
+* [Parameters]({{ site.parameters }})
    - [Reference]({{ site.parameters-reference }})
    - [Enumerations]({{ site.enumerations }})

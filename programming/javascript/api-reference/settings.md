@@ -46,7 +46,7 @@ Sets when to play sound on text recognition (user input is required on iOS or [C
 
 * `never`: never play sound, the default value; <!--never-->
 * `frame`: play sound when text is found on a frame; <!--always-->
-* `unduplicated`: play sound when a unique/unduplicated text is found (if multiple unique barcodes are found on the same frame, play only once).
+* `unique`: play sound when a unique new text is found (if multiple unique barcodes are found on the same frame, play only once).
 
 ```typescript
 whenToPlaySoundforSuccessfulRead: (boolean | string)
@@ -90,7 +90,7 @@ Sets when to vibrate on text recognition (user input is required on iOS or [Chro
 
 * `never`: never vibrate, the default value; <!--never-->
 * `frame`: vibrate when text is found on a frame; <!--always-->
-* `unduplicated`: vibrate when a unique/unduplicated text is found (if multiple unique barcodes are found on the same frame, vibrate only once).
+* `unique`: vibrate when a unique new text is found (if multiple unique barcodes are found on the same frame, vibrate only once).
 
 ```typescript
 whenToVibrateforSuccessfulRead: (boolean | string)

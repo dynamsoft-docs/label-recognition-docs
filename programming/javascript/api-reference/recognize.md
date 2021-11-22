@@ -24,7 +24,7 @@ breadcrumbText: Recognition APIs
 
 | API Name | Description |
 |---|---|
-| [onUniqueRead](#onuniqueread) | This event is triggered when a new label is found. |
+| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
@@ -177,7 +177,7 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 
 ## onUniqueRead
 
-This event is triggered when a new label is found.
+This event is triggered when a new, unduplicated label is found.
 
 ```typescript
 onUniqueRead: (txt: string, result: DLRResult) => void

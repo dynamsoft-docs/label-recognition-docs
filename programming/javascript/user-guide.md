@@ -49,14 +49,17 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.js"></script>
     <script>
         // initializes and uses the library
-        let pRecognizer = null;
         (async () => {
-            let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
-                runtimeSettings: "video"
-            }));
+            let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+            await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+            let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+                runtimeSettings: "video-passportMrz"
+            });
+            recognizer.cameraEnhancer = cameraEnhancer;
             recognizer.onFrameRead = results => {
                 for (let result of results) {
                     for (let lineResult of result.lineResults) {
@@ -168,7 +171,7 @@ The library requires a license to work, use the API `license` to specify the lic
 
 ```javascript
 // The following line uses a public trial license (valid for 7 days) which is equivalent to not setting any license.
-Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.DLR.LabelRecognizer.initlicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
 *Note*:

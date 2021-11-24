@@ -57,7 +57,7 @@ The complete code of the "Hello World" example is shown below
             let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
             await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-                runtimeSettings: "video-passportMrz"
+                runtimeSettings: "video-passportMRZ"
             });
             recognizer.cameraEnhancer = cameraEnhancer;
             recognizer.onFrameRead = results => {
@@ -70,7 +70,7 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, result) => {
                 alert(txt);
             };
-            recognizer.startScanning(true);
+            await recognizer.startScanning(true);
         })();
     </script>
 </body>
@@ -198,12 +198,11 @@ Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm
 To use the library, we first create a `LabelRecognizer` object.
 
 ```javascript
-let recognizer = null,
-    pRecognizer = null;
+let recognizer = null;
 try {
-    recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
+    recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
         runtimeSettings: "video"
-    }));
+    });
 } catch (ex) {
     console.error(ex);
 }
@@ -236,8 +235,8 @@ await recognizer.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// use one of the built-in RuntimeSetting templates: "video" or "image". You can also pass in a JSON string as the template.
-await recognizer.updateRuntimeSettingsFromString("image");
+// use one of the built-in RuntimeSetting templates: "number", "letter", "numberLetter", "numberUppercase", "VIN", "passportMRZ", "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-passportMRZ". For convenience, these names are not case-sensitive. You can also pass in a JSON string as the template.
+await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 ```
 
 As you can see from the above code snippets, there are three types of configurations:
@@ -290,12 +289,13 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
-    let pRecognizer = null;
     (async () => {
-        let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video"
-        }));
-        await recognizer.setUIElement(document.getElementById('div-video-container'));
+        let recognizer = Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video-passportMRZ"
+        });
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
+        recognizer.cameraEnhancer = cameraEnhancer;
         recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {
@@ -306,7 +306,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
         recognizer.onUniqueRead = (txt, result) => {
             alert(txt);
         };
-        recognizer.startScanning();
+        await recognizer.startScanning(true);
     })();
 </script>
 ```
@@ -327,11 +327,11 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-<select class="dbrScanner-sel-resolution">
-    <option class="dbrScanner-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">1920 x 1080</option>
-    <option data-width="1280" data-height="720">1280 x 720</option>
-    <option data-width="640" data-height="480">640 x 480</option>
+<select class="dce-sel-resolution">
+    <option class="dce-opt-gotResolution" value="got"></option>
+    <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
+    <option data-width="1280" data-height="720">ask 1280 x 720</option>
+    <option data-width="640" data-height="480">ask 640 x 480</option>
 </select>
 ```
 

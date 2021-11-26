@@ -29,7 +29,7 @@ for (let result of results) {
 
 ```js
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
@@ -52,7 +52,7 @@ The following static methods and properties help to set up the runtime environme
 | [engineResourcePath](initialize.md#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](initialize.md#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [version](initialize.md#version) | Returns the version of the library. |
+| [getVersion](initialize.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](initialize.md#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
 ### Create and Destroy Instances

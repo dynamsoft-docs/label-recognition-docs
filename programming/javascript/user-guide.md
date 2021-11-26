@@ -266,7 +266,7 @@ As you can see from the above code snippets, there are two types of configuratio
 
 * `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime` and `intervalTime`.
 
-* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built in template or a template represented by a JSON string. If a template was configured at creation, it will be replaced.
+* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built-in template or a template represented by a JSON string. If a template was configured at creation, it will be replaced.
 
 #### Customize the UI
 

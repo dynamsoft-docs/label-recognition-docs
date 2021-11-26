@@ -298,7 +298,7 @@ startScanning(showUI: boolean): Promise<PlayCallbackInfo>;
 
 **Return value**
 
-None.
+A promise resolving to a `PlayCallbackInfo` object which contains the resolution of the video.
 
 **Code Snippet**
 

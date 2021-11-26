@@ -88,7 +88,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
 
-  + `startScanning()`: Starts contious video frame scanning. The camera will be opened and the video input will show up on the page. At the same time,  `enhancer` will start feeding `recognizer` with frames.
+  + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Step Two: Test the example
 

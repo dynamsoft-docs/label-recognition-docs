@@ -8,6 +8,30 @@ needAutoGenerateSidebar: false
 
 # Release Notes
 
+## 2.2
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.2.md -%}
+
+### Editions
+
+- [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#20-11302021)
+
+## 2.0 (08/26/2021)
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.0.md -%}
+
+### Editions
+
+- [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#20-08262021)
+- [DotNet](../programming/dotnet/release-notes/dotnet-2.md#20-08262021)
+- [Java](../programming/java/release-notes/java-2.md#20-08262021)
+- [Android](../programming/android/release-notes/android-2.md#20-08262021)
+- [iOS](../programming/objectivec-swift/release-notes/ios-2.md#20-08262021)
+
 ## 2.0 (08/26/2021)
 
 ### Highlights

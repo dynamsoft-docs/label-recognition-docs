@@ -29,8 +29,7 @@ typedef struct tagDLR_RuntimeSettings  DLR_RuntimeSettings
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) |  [`DLR_DictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md) |
 | [`binarizationModes[8]`](#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) |
 | [`furtherModes`](#furthermodes) | [`DLR_FurtherModes`](dlr-further-modes.md)|
-| [`timeout`](#timeout) | *int* |
-| [`reserved`](#reserved) | *char\[60\]* |
+| [`reserved`](#reserved) | *char\[64\]* |
 
 
 &nbsp;
@@ -122,26 +121,9 @@ DLR_FurtherModes furtherModes
 
 &nbsp;
 
-### timeout
-Sets the maximum amount of time (in milliseconds) that should be spent searching for labels per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
-```cpp
-int timeout
-```
-
-**Value Range**     
-    [0, 0x7fffffff]
-      
-**Default Value**     
-    10000
-    
-**Remarks**       
-    If you want to stop searching for labels after a certain period of time, you can use this parameter to set a timeout.
-
-&nbsp;
-
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char reserved[60]
+char reserved[64]
 ```
 

@@ -27,8 +27,10 @@ breadcrumbText: Recognition APIs
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
-| [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
-| [stopScanning()](#stopscanning) | Stops continuous scanning. |
+| [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
+| [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
+| [stopScanning()](#stopscanning) | Stops continuous scanning and closes the video stream. |
 
 ## recognize
 
@@ -286,7 +288,7 @@ for (let result of results) {
 
 ## startScanning
 
-Starts continuous scanning of incoming frames.
+Open the camera and starts continuous scanning of incoming frames.
 
 ```typescript
 startScanning(showUI: boolean): Promise<PlayCallbackInfo>;
@@ -322,9 +324,25 @@ recognizer.startScanning(true);
 
 * [DLRResult](./interface/dlr-result.md)
 
+## pauseScanning
+
+Pause continuous scanning but keep the video stream.
+
+```typescript
+pauseScanning(): void;
+```
+
+## resumeScanning
+
+Resumes continuous scanning.
+
+```typescript
+resumeScanning(): void;
+```
+
 ## stopScanning
 
-Stops continuous scanning.
+Stops continuous scanning and closes the video stream.
 
 ```typescript
 stopScanning(hideUI: boolean): void;

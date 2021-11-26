@@ -80,9 +80,9 @@ The complete code of the "Hello World" example is shown below
 
 *About the code*
 
-  + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "video-letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettings()`.
+  + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "video-letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettingsFromString()`.
 
-  + `CameraEnhancer.createInstance()`: this method creats a `CameraEnhancer` object called `enhancer` which is used to control the camera as well as the default user interface. To use `enhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
+  + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `enhancer` which is used to control the camera as well as the default user interface. To use `enhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 

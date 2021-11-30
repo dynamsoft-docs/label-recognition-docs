@@ -49,14 +49,14 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
-        let pRecognizer = null;
         (async () => {
-            let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
-                runtimeSettings: "video"
-            }));
+            let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+                runtimeSettings: "video-letter"
+            });
             recognizer.onFrameRead = results => {
                 for (let result of results) {
                     for (let lineResult of result.lineResults) {
@@ -67,7 +67,10 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, result) => {
                 alert(txt);
             };
-            recognizer.startScanning(true);
+            let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+            await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+            recognizer.cameraEnhancer = enhancer;
+            await recognizer.startScanning(true);
         })();
     </script>
 </body>
@@ -77,13 +80,15 @@ The complete code of the "Hello World" example is shown below
 
 *About the code*
 
-  + `createInstance()`: This method creates a `LabelRecognizer` object. Note that the code passed the configuration `runtimeSettings: "video"` which sets up the object with a built-in template optimized for reading continous frames from a video input.
+  + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "video-letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettingsFromString()`.
 
-  + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library have found on this frame. In this example, we print the results to the browser console.
+  + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `enhancer` which is used to control the camera as well as the default user interface. To use `enhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
-  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+  + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
-  + `startScanning()`: This method brings up the built-in UI of the `LabelRecognizer` object for vido streaming and scanning.
+  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+
+  + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Step Two: Test the example
 
@@ -108,18 +113,20 @@ If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contac
 
 #### Use a CDN
 
-The simplest way to include the library is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
+The simplest way to include the library is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**. Since the recognition is mostly on a video input, we should also include the supporting library Dynamsoft Camera Enhancer.
 
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.0.0/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 #### Host the library yourself (recommended)
@@ -132,28 +139,34 @@ The following shows a few ways to download the library.
 
   [Download the JavaScript Package](https://www.dynamsoft.com/label-recognition/downloads/?utm_source=guide&product=dlr&package=js)
 
+  > NOTE that the package contains the library Dynamsoft Camera Enhancer
+
 * yarn
 
 ```cmd
 $ yarn add dynamsoft-label-recognizer
+$ yarn add dynamsoft-camera-enhancer
 ```
 
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer --save
+$ npm install dynamsoft-label-recognizer
+$ npm install dynamsoft-camera-enhancer
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DLR-JS-2.0.0/dist/dlr.js"></script>
+<script src="/DLR-JS-2.2.0/dist/dlr.js"></script>
+<script src="/DLR-JS-2.2.0/dce/dist/dce.js"></script>
 ```
 
 or
 
 ```html
 <script src="/node_modules/dynamsoft-label-recognizer/dist/dlr.js"></script>
+<script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
 ```
 
 Read more on [how to host the library](#hosting-the-library).
@@ -164,11 +177,11 @@ Before using the library, you need to configure a few things.
 
 #### Specify the license
 
-The library requires a license to work, use the API `license` to specify the license.
+The library requires a license to work, use the API `initLicense()` to specify the license.
 
 ```javascript
 // The following line uses a public trial license (valid for 7 days) which is equivalent to not setting any license.
-Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.DLR.LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
 *Note*:
@@ -185,7 +198,8 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/";
+Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
 ### Interact with the library
@@ -195,12 +209,11 @@ Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm
 To use the library, we first create a `LabelRecognizer` object.
 
 ```javascript
-let recognizer = null,
-    pRecognizer = null;
+let recognizer = null;
 try {
-    recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video"
-    }));
+    recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+        runtimeSettings: "video-letter"
+    });
 } catch (ex) {
     console.error(ex);
 }
@@ -210,20 +223,32 @@ try {
 
 * The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from Dynamsoft License Server (assuming an online license is used).
 
-#### Set up the recognition operation
+#### Create a `CameraEnhancer` object and bind it to the `LabelRecognizer` object
 
-Let's take a look at the following code snippets:
+A `CameraEnhancer` object is required for video recognition. Also, the object should make use of a customized UI from the Label Recognition SDK to streamline the recognition.
+
+```javascript
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+```
+
+#### Change the camera settings if necessary.
+
+In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=latest&utm_source=guide&product=dlr&package=js).
 
 ```javascript
 // set which camera and what resolution to use
-var cameraEnhancer = recognizer.cameraEnhancer;
-var allCameras = await cameraEnhancer.getAllCameras();
-await cameraEnhancer.selectCamera(allCameras[0]);
-await cameraEnhancer.setResolution(1280, 720);
+var allCameras = await enhancer.getAllCameras();
+await enhancer.selectCamera(allCameras[0]);
+await enhancer.setResolution(1280, 720);
 ```
 
+#### Set up the recognition process
+
+Check out the following code:
+
 ```javascript
-// set up the recognizer behavior
 let scanSettings = await recognizer.getScanSettings();
 // disregard duplicated results found in a specified time period (in milliseconds)
 scanSettings.duplicateForgetTime = 5000;
@@ -233,17 +258,15 @@ await recognizer.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// use one of the built-in RuntimeSetting templates: "video" or "image". You can also pass in a JSON string as the template.
-await recognizer.updateRuntimeSettingsFromString("image");
+// use one of the built-in RuntimeSetting templates. You can also pass in a JSON string as the template.
+await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 ```
 
-As you can see from the above code snippets, there are three types of configurations:
-
-* Use the internal `cameraEnhancer` object: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=latest&utm_source=guide&product=dlr&package=js).
+As you can see from the above code snippets, there are two types of configurations:
 
 * `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime` and `intervalTime`.
 
-* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built in template or a template represented by a JSON string.
+* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built-in template or a template represented by a JSON string. If a template was configured at creation, it will be replaced.
 
 #### Customize the UI
 
@@ -251,15 +274,13 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
 
 * Modify the file `dist/dlr.ui.html` directly. 
 
-  This option is only possible when you host this file on your own web server instead of using a CDN.
+  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft. DLR. LabelRecognizer.defaultUIElementURL` .
 
-* Copy the file `dist/dlr.ui.html` to your application, modify it and use the the API `defaultUIElementURL` to set it as the default UI.
+* Copy the file `dist/dlr.ui.html` to your application, modify it and use the API `defaultUIElementURL` to set it as the default UI.
 
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
-
-> You must set `defaultUIElementURL` before you call `createInstance()` .
 
 * Append the default UI element to your page, customize it before showing it.
 
@@ -268,7 +289,8 @@ Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
 
 ```javascript
-document.getElementById('recognizerUI').appendChild(recognizer.getUIElement());
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+document.getElementById('recognizerUI').appendChild(enhancer.getUIElement());
 document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
 ```
 
@@ -287,12 +309,13 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
-    let pRecognizer = null;
     (async () => {
-        let recognizer = await (pRecognizer = pRecognizer || Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video"
-        }));
-        await recognizer.setUIElement(document.getElementById('div-video-container'));
+        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video-letter"
+        });
+        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        await enhancer.setUIElement(document.getElementById('div-video-container'));
+        recognizer.cameraEnhancer = enhancer;
         recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {
@@ -303,7 +326,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
         recognizer.onUniqueRead = (txt, result) => {
             alert(txt);
         };
-        recognizer.startScanning();
+        recognizer.startScanning(true);
     })();
 </script>
 ```
@@ -383,6 +406,8 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 * `dlr-<version>.wasm.js` // Compact edition of the library (.js)
 * `dlr-<version>.wasm` // Compact edition of the library (.wasm)
 
+NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can be copied to the same location as the above "dist" directory.
+
 ### Step Two: Configure the Server
 
 * Set the MIME type for `.wasm` as `application/wasm` on your webserver.
@@ -407,6 +432,7 @@ Now that the library is hosted on your server, you can include it accordingly.
 
 ```html
 <script src="https://www.yourwebsite.com/dynamsoft-label-recognizer/dist/dlr.js"></script>
+<script src="https://www.yourwebsite.com/dynamsoft-camera-enhancer/dist/dce.js"></script>
 ```
 
 Optionally, you may also need to [specify the location of the "engine" files](#specify-the-location-of-the-engine-files).

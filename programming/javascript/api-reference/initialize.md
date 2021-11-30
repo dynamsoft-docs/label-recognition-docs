@@ -17,7 +17,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
-| [license](#license) | Use an alphanumeric string to specify the license. |
+| [initLicense](#initlicense) | Use an alphanumeric string to specify the license. |
 
 ## Create and Destroy Instances
 
@@ -34,8 +34,20 @@ The following methods and properties help with the initialization of the library
 | [engineResourcePath](#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [version](#version) | Returns the version of the library. |
+| [getVersion](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
+
+## initLicense
+
+Use an alphanumeric string to specify the license. Note that the method must be called before `createInstance()` and `loadWasm()` .
+
+```typescript
+static initLicense(license: string): void;
+```
+
+**Parameters**
+
+`license` : An alphanumeric string that specifies the license.
 
 ## createInstance
 
@@ -146,22 +158,22 @@ Returns whether the engine is loaded/ready.
 static isWasmLoaded(): boolean
 ```
 
-## version
+## getVersion
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
 Only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
-readonly static version: string
+readonly static getVersion(): string
 ```
 
 **Code Snippet**
 
 ```js
-console.log(Dynamsoft.DLR.LabelRecognizer.version);
+console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
 await Dynamsoft.DLR.LabelRecognizer.loadWasm();
-console.log(Dynamsoft.DLR.LabelRecognizer.version);
+console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
 ```
 
 ## detectEnvironment

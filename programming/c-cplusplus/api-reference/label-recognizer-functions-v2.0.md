@@ -104,12 +104,10 @@ DLR_DestroyInstance(recognizer);
   |----------------------|-------------|
   | [`DLR_GetRuntimeSettings`](#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`DLR_UpdateRuntimeSettings`](#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`DLR_UpdateRuntimeSettingsFromString`](#dlr_updateruntimesettingsfromstring) | Updates runtime settings with the settings in a given JSON string. |
   | [`DLR_ResetRuntimeSettings`](#dlr_resetruntimesettings) | Resets the runtime settings. |
   | [`DLR_AppendSettingsFromString`](#dlr_appendsettingsfromstring) | Appends LabelRecognizerParameter settings in a string to the SDK object. |
   | [`DLR_AppendSettingsFromFile`](#dlr_appendsettingsfromfile) | Appends LabelRecognizerParameter settings in a file to the SDK object. |
   | [`DLR_OutputSettingsToFile`](#dlr_outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
-  | [`DLR_OutputSettingsToString`](#dlr_outputsettingstostring) | Output runtime settings to a string. |
   | [`DLR_ClearAppendedSettings`](#dlr_appendsettingsfromstring) | Clears appended LabelRecognizerParameter settings. |
   | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`DLR_GetModeArgument`](#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
@@ -185,38 +183,7 @@ DLR_UpdateRuntimeSettings(recognizer, &settings, errorMessage, 256);
 DLR_DestroyInstance(recognizer);
 ```
 
-&nbsp;
 
-### DLR_UpdateRuntimeSettingsFromString
-Updates runtime settings with the parameters obtained from a JSON string.
-
-```c
-int DLR_UpdateRuntimeSettingsFromString (void* recognizer, const char* content, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-   
-**Parameters** 
-`[in] recognizer` Handle of the label recognition instance.  
-`[in]	content` A JSON string that represents the content of the settings.  
-`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of allocated buffer.
-
-
-**Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**  
-```c
-char errorMessage[256];
-DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-void* recognizer = DLR_CreateInstance();
-
-const char* strJson = "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}";
-
-DLR_UpdateRuntimeSettingsFromString(recognizer, strJson, errorMessage, 256);
-DLR_DestroyInstance(recognizer);
-```
 
 &nbsp;
 
@@ -360,39 +327,7 @@ DLR_OutputSettingsToFile(recognizer, "C:\\Program Files (x86)\\Dynamsoft\\{Versi
 DLR_DestroyInstance(recognizer);
 ```
 
-&nbsp;
 
-### DLR_OutputSettingsToString
-Outputs runtime settings and save them into a settings file (JSON file).  
-
-```c
-int DLR_OutputSettingsToString (void* recognizer, char content[], const int contentLen, const char* pSettingsName)
-```   
-
-**Parameters**
-
-`[in] recognizer` Handle of the label recognition instance.  
-`[in,out]	content` The output string which stores the contents of current settings.   
-`[in]	contentLen` The length of output string.   
-`[in]	pSettingsName` A unique name for declaring current runtime settings.  
-
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```c
-char errorMessage[256];
-DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-void* recognizer = DLR_CreateInstance();
-char conent[2048] = {0};
-DLR_OutputSettingsToString(recognizer, content, 2048, "currentRuntimeSettings");
-DLR_DestroyInstance(recognizer);
-```
 
 
 &nbsp;
@@ -559,8 +494,7 @@ DLR_DestroyInstance(recognizer);
   | Method               | Description |
   |----------------------|-------------|
   | [`DLR_RecognizeByBuffer`](#dlr_recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`DLR_RecognizeByFile`](#dlr_recognizebyfile) | Recognizes text from a specified image file. |
-  | [`DLR_RecognizeFileInMemory`](#dlr_recognizefileinmemory) | Recognizes text from an image file in memory. |
+  | [`DLR_RecognizeByFile`](#dlr_recognizebyfile) | Recognizes text from a specified image file. |   
 
 
 &nbsp;
@@ -631,41 +565,6 @@ DLR_DestroyInstance(recognizer);
 ```
 
  
-&nbsp;
-
-### DLR_RecognizeFileInMemory
-Recognizes text from a specified image file in memory.
-
-```c
-int DLR_RecognizeFileInMemory (void* recognizer, const unsigned char* pFileBytes, const int fileSize, const char* pTemplateName)	
-```  
-   
-**Parameters**  
-`[in] recognizer` Handle of the label recognition instance.  
-`[in]	pFileBytes` The image file bytes in memory.  
-`[in]	fileSize`	The length of the file bytes in memory.  
-`[in]	pTemplateName` The template name.  
-
-**Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DLR_GetErrorString`](#dlr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**  
-```c
-char errorMessage[256];
-DLR_InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-void* recognizer = DLR_CreateInstance();
-
-unsigned char* pFileBytes;
-int nFileSize = 0;
-GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
-
-int errorCode = DLR_RecognizeFileInMemory(recognizer, pFileBytes, nFileSize, "");
-DLR_DestroyInstance(recognizer);
-```
-
-
    
 ## Result
    

@@ -341,12 +341,12 @@ A promise resolving to the created `LabelRecognizer` object.
 
 A promise that resolves when the operation succeeds.
 
-## outputSettingsToString
+## outputRuntimeSettingsToString
 
 Output the current runtime settings to a JSON string.
 
 ```typescript
-outputSettingsToString(): Promise<string>;
+outputRuntimeSettingsToString(): Promise<string>;
 ```
 
 **Parameters**

@@ -130,7 +130,7 @@ The following static methods and properties help to set up the runtime environme
 | API Name | Description |
 |---|---|
 | [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
-| [outputSettingsToString()](settings.md#outputsettingstostring) | Output the current runtime settings to a JSON string. |
+| [outputRuntimeSettingsToString()](settings.md#outputruntimesettingstostring) | Output the current runtime settings to a JSON string. |
 
 <!--
 | [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |

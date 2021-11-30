@@ -23,4 +23,3 @@ needGenerateH3Content: true
  | [`LineSpecification.FourthPoint`](parameter-control.md#fourthpoint) | The fourth point of the line, which is usually the bottom-left  corner. |
  | [`LineSpecification.BinarizationModes`](parameter-control.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LineSpecification.GrayscaleEnhancementModes`](parameter-control.md#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
- | [`LineSpecification.CharacterNormalizationModes`](parameter-control.md#characternormalizationmodes) | 	Sets the mode and priority for character normalization. |

@@ -81,12 +81,10 @@ CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
   |----------------------|-------------|
   | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
   | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`UpdateRuntimeSettingsFromString`](#updateruntimesettingsfromstring) | Updates runtime settings with the settings in a given JSON string. |
   | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognizerParameter settings in a string to the SDK object. |
   | [`AppendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognizerParameter settings in a file to the SDK object. |
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
-  | [`OutputSettingsToString`](#outputsettingstostring) | Output runtime settings to a string. |
   | [`ClearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
   | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
@@ -160,37 +158,7 @@ recognizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
 delete recognizer;
 ```
 
-&nbsp;
 
-### UpdateRuntimeSettingsFromString
-Updates runtime settings with the parameters obtained from a JSON string.
-
-```cpp
-int UpdateRuntimeSettingsFromString (const char* content, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-   
-**Parameters** 
-`[in]	content` A JSON string that represents the content of the settings.  
-`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
-`[in]	errorMsgBufferLen` The length of allocated buffer.
-
-
-**Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
-
-**Code Snippet**  
-```cpp
-char errorMessage[256];
-CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-CLabelRecognizer* recognizer = new CLabelRecognizer();
-
-const char* strJson = "{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}";
-
-recognizer->UpdateRuntimeSettingsFromString(strJson, errorMessage, 256);
-delete recognizer;
-```
 
 &nbsp;
 
@@ -326,41 +294,10 @@ recognizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version n
 delete recognizer;
 ```
 
-&nbsp;
 
-### OutputSettingsToString
-Outputs runtime settings and save them into a settings file (JSON file).  
-
-```cpp
-int OutputSettingsToString (char content[], const int contentLen, const char* pSettingsName)
-```   
-
-**Parameters**
-`[in,out]	content` The output string which stores the contents of current settings.   
-`[in]	contentLen` The length of output string.   
-`[in]	pSettingsName` A unique name for declaring current runtime settings.  
-
-
-**Return value**
-
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```cpp
-char errorMessage[256];
-CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-CLabelRecognizer* recognizer = new CLabelRecognizer;
-char conent[2048] = {0};
-recognizer->OutputSettingsToString(content, 2048, "currentRuntimeSettings");
-delete recognizer;
-```
 
 
 &nbsp;
-
 
 ### ClearAppendedSettings
 Clear all appended parameter settings of the current label recognizer instance.
@@ -520,7 +457,6 @@ delete recognizer;
   |----------------------|-------------|
   | [`RecognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`RecognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
-  | [`RecognizeFileInMemory`](#recognizefileinmemory) | Recognizes text from an image file in memory. |
    
 &nbsp;
 
@@ -587,36 +523,7 @@ int errorCode = recognizer->RecognizeByFile("C:\\Program Files (x86)\\Dynamsoft\
 delete recognizer;
 ```
 
-### RecognizeFileInMemory
-Recognizes text from a specified image file in memory.
-
-```cpp
-int RecognizeFileInMemory (const unsigned char* pFileBytes, const int fileSize, const char* pTemplateName)	
-```  
-   
-**Parameters**  
-`[in]	pFileBytes` The image file bytes in memory.  
-`[in]	fileSize`	The length of the file bytes in memory.  
-`[in]	pTemplateName` The template name.  
-
-**Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](#geterrorstring) to get detailed error message.*
-
-**Code Snippet**  
-```cpp
-char errorMessage[256];
-CLabelRecognizer::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
-
-CLabelRecognizer* recognizer = new CLabelRecognizer();
-
-unsigned char* pFileBytes;
-int nFileSize = 0;
-GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
-
-int errorCode = recognizer->RecognizeFileInMemory(pFileBytes, nFileSize, "");
-delete recognizer;
-``` 
+ 
    
 ## Result
    

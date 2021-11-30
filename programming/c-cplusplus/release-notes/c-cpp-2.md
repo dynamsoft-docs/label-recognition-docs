@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 
 ### Highlights
 
-{%- include release-notes/product-highlight-2.0.md -%}
+{%- include release-notes/product-highlight-2.2.md -%}
 
 ### Changelog
 #### New

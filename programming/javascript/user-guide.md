@@ -302,9 +302,9 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 ```html
 <select class="dce-sel-resolution">
     <option class="dce-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">1920 x 1080</option>
-    <option data-width="1280" data-height="720">1280 x 720</option>
-    <option data-width="640" data-height="480">640 x 480</option>
+    <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
+    <option data-width="1280" data-height="720">ask 1280 x 720</option>
+    <option data-width="640" data-height="480">ask 640 x 480</option>
 </select>
 <div id="div-video-container">
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>

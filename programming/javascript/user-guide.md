@@ -181,7 +181,8 @@ The library requires a license to work, use the API `initLicense()` to specify t
 
 ```javascript
 // The following line uses a public trial license (valid for 7 days) which is equivalent to not setting any license.
-Dynamsoft.DLR.LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+
+Dynamsoft.DLR.LabelRecognizer.initlicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
 *Note*:
@@ -258,7 +259,7 @@ await recognizer.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// use one of the built-in RuntimeSetting templates. You can also pass in a JSON string as the template.
+// use one of the built-in RuntimeSetting templates: "number", "letter", "numberLetter", "numberUppercase", "VIN", "passportMRZ", "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-passportMRZ". For convenience, these names are not case-sensitive. You can also pass in a JSON string as the template.
 await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 ```
 
@@ -310,12 +311,12 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 </div>
 <script>
     (async () => {
-        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video-letter"
+        let recognizer = Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video-passportMRZ"
         });
-        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-        await enhancer.setUIElement(document.getElementById('div-video-container'));
-        recognizer.cameraEnhancer = enhancer;
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
+        recognizer.cameraEnhancer = cameraEnhancer;
         recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {
@@ -347,11 +348,11 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-<select class="dbrScanner-sel-resolution">
-    <option class="dbrScanner-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">1920 x 1080</option>
-    <option data-width="1280" data-height="720">1280 x 720</option>
-    <option data-width="640" data-height="480">640 x 480</option>
+<select class="dce-sel-resolution">
+    <option class="dce-opt-gotResolution" value="got"></option>
+    <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
+    <option data-width="1280" data-height="720">ask 1280 x 720</option>
+    <option data-width="640" data-height="480">ask 640 x 480</option>
 </select>
 ```
 

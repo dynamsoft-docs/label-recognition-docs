@@ -27,8 +27,10 @@ breadcrumbText: Recognition APIs
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
-| [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
-| [stopScanning()](#stopscanning) | Stops continuous scanning. |
+| [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
+| [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
+| [stopScanning()](#stopscanning) | Stops continuous scanning and closes the video stream. |
 
 ## recognize
 
@@ -193,15 +195,18 @@ onUniqueRead: (txt: string, result: DLRResult) => void
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
     }
 }
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
@@ -224,8 +229,11 @@ onFrameRead: (results: DLRResult[]) => void
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.LineResults) {
@@ -233,7 +241,7 @@ recognizer.onFrameRead = results => {
         }
     }
 };
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
@@ -260,10 +268,12 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
-let cEnhancer = recognizer.cameraEnhancer;
-cEnhancer.open();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+await cEnhancer.open();
 let results = await recognizer.recognizeCurrentFrame();
 for (let result of results) {
     for (let lineResult of result.LineResults) {
@@ -278,10 +288,10 @@ for (let result of results) {
 
 ## startScanning
 
-Starts continuous scanning of incoming frames.
+Open the camera and starts continuous scanning of incoming frames.
 
 ```typescript
-startScanning(showUI: boolean): void;
+startScanning(showUI: boolean): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
@@ -290,30 +300,49 @@ startScanning(showUI: boolean): void;
 
 **Return value**
 
-None.
+A promise resolving to a `PlayCallbackInfo` object which contains the resolution of the video.
 
 **Code Snippet**
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
     }
 }
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
 
 * [DLRResult](./interface/dlr-result.md)
 
+## pauseScanning
+
+Pause continuous scanning but keep the video stream.
+
+```typescript
+pauseScanning(): void;
+```
+
+## resumeScanning
+
+Resumes continuous scanning.
+
+```typescript
+resumeScanning(): void;
+```
+
 ## stopScanning
 
-Stops continuous scanning.
+Stops continuous scanning and closes the video stream.
 
 ```typescript
 stopScanning(hideUI: boolean): void;
@@ -331,17 +360,20 @@ None.
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
     for (let lineResult of result.LineResults) {
         console.log(lineResult.Text);
     }
     // Stops scanning the video input as soon as a label is found.
-    recognizer.stopScanning;
+    recognizer.stopScanning(true);
 }
-recognizer.startScanning();
+await recognizer.startScanning(true);
 ```
 
 **See also**

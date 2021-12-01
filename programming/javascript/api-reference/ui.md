@@ -55,7 +55,7 @@ A promise that resolves when the operation succeeds.
 <video class="dce-video" playsinline="true"></video>
 <script>
     let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video"
+        runtimeSettings: "video-passportMRZ"
     });
     await recognizer.setUIElement(document.getElementsByClassName("dce-video")[0]);
     await recognizer.startScanning();
@@ -66,7 +66,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video"
+        runtimeSettings: "video-passportMRZ"
     });
     await recognizer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.ui.html");
     await recognizer.startScanning();
@@ -84,9 +84,12 @@ static defaultUIElementURL: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.ui.html";
+// Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.ui.html";
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
 await recognizer.startScanning();
 ```

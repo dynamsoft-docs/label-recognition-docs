@@ -31,7 +31,6 @@ needGenerateH3Content: true
  | [`TextArea.ColourConversionModes`](#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`TextArea.GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
  | [`TextArea.TextureDetectionModes`](#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
- | [`TextArea.CharacterNormalizationModes`](#characternormalizationmodes) | 	Sets the mode and priority for texture detection. |
 
 ---
 
@@ -440,6 +439,3 @@ Please check [LabelRecognizerParameter.GrayscaleEnhancementModes](../label-recog
 
 ## TextureDetectionModes
 Please check [LabelRecognizerParameter.TextureDetectionModes](../label-recognition-parameter/texture-detection-modes.md#texturedetectionmodes) for reference.
-
-## CharacterNormalizationModes
-Please check [LabelRecognizerParameter.CharacterNormalizationModes](../label-recognition-parameter/character-normalization-modes.md#characternormalizationmodes) for reference.

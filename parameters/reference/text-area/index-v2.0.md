@@ -34,4 +34,3 @@ needGenerateH3Content: true
  | [`TextArea.ColourConversionModes`](parameter-control.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`TextArea.GrayscaleEnhancementModes`](parameter-control.md#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
  | [`TextArea.TextureDetectionModes`](parameter-control.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
- | [`TextArea.CharacterNormalizationModes`](parameter-control.md#characternormalizationmodes) | 	Sets the mode and priority for character normalization. |

@@ -169,3 +169,4 @@ In order to make the code more predictable and readable, the library defines a s
 * [TextureDetectionMode]({{ site.enumerations }}texture-detection-mode.html)
 * [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
 * [LocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
+* [ErrorCode]({{ site.enumerations }}error-code.html)

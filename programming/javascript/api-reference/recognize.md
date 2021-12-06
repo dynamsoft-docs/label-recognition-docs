@@ -182,14 +182,14 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 This event is triggered when a new, unduplicated label is found.
 
 ```typescript
-onUniqueRead: (txt: string, result: DLRResult) => void
+onUniqueRead: (txt: string, result: DLRLineResult[]) => void
 ```
 
 **Arguments**
 
 `txt` : a string that holds the label text. 
 
-`result` : a `DLRResult` object that contains more detailed info.
+`result` : one or more `DLRLineResult` object(s) that contains more detailed info about the returned text.
 
 **Code Snippet**
 

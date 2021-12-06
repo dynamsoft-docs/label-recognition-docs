@@ -158,8 +158,8 @@ $ npm install dynamsoft-camera-enhancer
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DLR-JS-2.2.0/dist/dlr.js"></script>
-<script src="/DLR-JS-2.2.0/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.0/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.0/dce/dist/dce.js"></script>
 ```
 
 or

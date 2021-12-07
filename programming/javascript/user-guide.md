@@ -11,13 +11,13 @@ needGenerateH3Content: true
 
 Add the capability of reading ID cards or other text of fixed formats in your web application with just a few lines of code.
 
-[![](https://img.shields.io/badge/Download-Offline%20SDK-orange)](https://www.dynamsoft.com/label-recognition/downloads/?utm_source=guide&product=dlr&package=js)
+[![](https://img.shields.io/badge/Download-Offline%20SDK-orange)](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
 
 Once integrated, your users can open your website in a browser, access their cameras, and read the intended text directly from the video input.
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-[TEST THE LIBRARY](https://www.dynamsoft.com/label-recognition/downloads/?utm_source=guide&product=dlr&package=js)
+[TEST THE LIBRARY](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
 
 **Table of Contents**
 
@@ -137,7 +137,7 @@ The following shows a few ways to download the library.
 
 * From the website
 
-  [Download the JavaScript Package](https://www.dynamsoft.com/label-recognition/downloads/?utm_source=guide&product=dlr&package=js)
+  [Download the JavaScript Package](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
 
   > NOTE that the package contains the library Dynamsoft Camera Enhancer
 
@@ -158,8 +158,8 @@ $ npm install dynamsoft-camera-enhancer
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/DLR-JS-2.2.0/dist/dlr.js"></script>
-<script src="/DLR-JS-2.2.0/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.0/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.0/dce/dist/dce.js"></script>
 ```
 
 or
@@ -378,7 +378,7 @@ This library requires the following features which are supported by all modern m
 
 * `MediaDevices`/`getUserMedia`
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://officecn.dynamsoft.com:808/label-recognition/programming/javascript/api-reference/ui.html?ver=latest&utm_source=guide&product=dlr&package=js#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/ui.html?ver=latest&utm_source=guide&product=dlr&package=js#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
 
 The following table is a list of supported browsers based on the above requirements:
 
@@ -404,8 +404,8 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 * `dlr.js` // The main library file
 * `dlr.ui.html` // Defines the default recognizer UI
 * `dlr-<version>.worker.js` // Defines the worker thread for text reading
-* `dlr-<version>.wasm.js` // Compact edition of the library (.js)
-* `dlr-<version>.wasm` // Compact edition of the library (.wasm)
+* `dlr-<version>.wasm.js` // The recognition engine (.js)
+* `dlr-<version>.wasm` // The recognition engine (.wasm)
 
 NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can be copied to the same location as the above "dist" directory.
 

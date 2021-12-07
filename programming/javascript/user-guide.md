@@ -129,7 +129,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
-#### Host the library yourself (recommended)
+#### Host the library yourself
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
@@ -274,7 +274,7 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
 
 * Modify the file `dist/dlr.ui.html` directly. 
 
-  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft. DLR. LabelRecognizer.defaultUIElementURL` .
+  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL` .
 
 * Copy the file `dist/dlr.ui.html` to your application, modify it and use the API `defaultUIElementURL` to set it as the default UI.
 

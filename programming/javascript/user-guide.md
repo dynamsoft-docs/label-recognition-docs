@@ -68,7 +68,7 @@ The complete code of the "Hello World" example is shown below
                     }
                 }
             };
-            recognizer.onUniqueRead = (txt, result) => {
+            recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
             let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -90,7 +90,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
-  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
   + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
 
@@ -328,7 +328,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
                 }
             }
         };
-        recognizer.onUniqueRead = (txt, result) => {
+        recognizer.onUniqueRead = (txt, results) => {
             alert(txt);
         };
         recognizer.startScanning(true);

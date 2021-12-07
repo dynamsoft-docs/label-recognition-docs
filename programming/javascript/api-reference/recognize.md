@@ -65,8 +65,8 @@ try {
     // The current frame will be recognized.
     results = await recognizer.recognize(htmlVideoElement);
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 } catch (ex) {
@@ -107,8 +107,8 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 ```js
 let results = await recognizer.recognizeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -138,8 +138,8 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 ```js
 let results = await recognizer.recognizeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -182,14 +182,14 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 This event is triggered when a new, unduplicated label is found.
 
 ```typescript
-onUniqueRead: (txt: string, result: DLRLineResult[]) => void
+onUniqueRead: (txt: string, results: DLRLineResult[]) => void
 ```
 
 **Arguments**
 
 `txt` : a string that holds the label text. 
 
-`result` : one or more `DLRLineResult` object(s) that contains more detailed info about the returned text.
+`results` : one or more `DLRLineResult` object(s) that contains more detailed info about the returned text.
 
 **Code Snippet**
 
@@ -200,10 +200,12 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
-recognizer.onUniqueRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
 }
 recognizer.startScanning(true);
@@ -236,8 +238,8 @@ await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
 recognizer.onFrameRead = results => {
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 };
@@ -276,8 +278,8 @@ recognizer.cameraEnhancer = enhancer;
 await cEnhancer.open();
 let results = await recognizer.recognizeCurrentFrame();
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -311,10 +313,12 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
-recognizer.onUniqueRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
 }
 recognizer.startScanning(true);
@@ -365,10 +369,12 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
-recognizer.onUniqueRead = (txt, result) => {
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
     // Stops scanning the video input as soon as a label is found.
     recognizer.stopScanning(true);

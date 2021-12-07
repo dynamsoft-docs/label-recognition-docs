@@ -181,7 +181,8 @@ The library requires a license to work, use the API `initLicense()` to specify t
 
 ```javascript
 // The following line uses a public trial license (valid for 7 days) which is equivalent to not setting any license.
-Dynamsoft.DLR.LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+
+Dynamsoft.DLR.LabelRecognizer.initlicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
 *Note*:
@@ -258,7 +259,7 @@ await recognizer.updateScanSettings(scanSettings);
 ```
 
 ```javascript
-// use one of the built-in RuntimeSetting templates. You can also pass in a JSON string as the template.
+// use one of the built-in RuntimeSetting templates: "number", "letter", "numberLetter", "numberUppercase", "VIN", "passportMRZ", "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-passportMRZ". For convenience, these names are not case-sensitive. You can also pass in a JSON string as the template.
 await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 ```
 
@@ -310,12 +311,12 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 </div>
 <script>
     (async () => {
-        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video-letter"
+        let recognizer = Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video-passportMRZ"
         });
-        let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-        await enhancer.setUIElement(document.getElementById('div-video-container'));
-        recognizer.cameraEnhancer = enhancer;
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
+        recognizer.cameraEnhancer = cameraEnhancer;
         recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {

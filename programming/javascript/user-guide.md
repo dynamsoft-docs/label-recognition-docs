@@ -31,6 +31,10 @@ In this guide, you will learn step by step on how to integrate this library into
 * [Hosting the Library](#hosting-the-library)
 * [FAQ](#faq)
 
+**Other resources**
+
+* [API reference](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=latest&utm_source=guide&product=dlr&package=js)
+
 ## Hello World - Simplest Implementation
 
 Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read text from a live video stream.  

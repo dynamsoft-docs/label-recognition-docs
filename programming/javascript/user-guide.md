@@ -301,12 +301,12 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 
 ```html
 <div id="div-video-container">
-  <select class="dce-sel-resolution">
-      <option class="dce-opt-gotResolution" value="got"></option>
-      <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
-      <option data-width="1280" data-height="720">ask 1280 x 720</option>
-      <option data-width="640" data-height="480">ask 640 x 480</option>
-  </select>
+    <select class="dce-sel-resolution">
+        <option class="dce-opt-gotResolution" value="got"></option>
+        <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
+        <option data-width="1280" data-height="720">ask 1280 x 720</option>
+        <option data-width="640" data-height="480">ask 640 x 480</option>
+    </select>
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
@@ -411,7 +411,7 @@ NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can
 
 ### Step Two: Configure the Server
 
-* Set the MIME type for `.wasm` as `application/wasm` on your webserver.
+* Set the MIME type for `.wasm` as `application/wasm` and `.data` as `application/octet-stream` on your webserver.
   
   The goal is to configure your server to send the correct Content-Type header for the wasm file so that it is processed correctly by the browser.
 

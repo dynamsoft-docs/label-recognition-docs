@@ -29,4 +29,4 @@ breadcrumbText: v2.x Release Notes
 * Supports decoding of various formats of source data.
 * Integrated with Dynamsoft Camera Enhancer v2.0.3 to support continuous label scanning of frames from a video input.
 * Supports various use cases with multiple built-in templates.
-* Supports verification of Passport MRZ, Visa MRZ as North American VIN.
+* Supports verification of Passport MRZ, Visa MRZ and North American VIN.

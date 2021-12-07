@@ -31,6 +31,10 @@ In this guide, you will learn step by step on how to integrate this library into
 * [Hosting the Library](#hosting-the-library)
 * [FAQ](#faq)
 
+**Other resources**
+
+* [API reference](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=latest&utm_source=guide&product=dlr&package=js)
+
 ## Hello World - Simplest Implementation
 
 Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read text from a live video stream.  
@@ -64,7 +68,7 @@ The complete code of the "Hello World" example is shown below
                     }
                 }
             };
-            recognizer.onUniqueRead = (txt, result) => {
+            recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
             let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
@@ -86,7 +90,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
-  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
   + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
 
@@ -129,7 +133,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
-#### Host the library yourself (recommended)
+#### Host the library yourself
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
@@ -275,7 +279,7 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
 
 * Modify the file `dist/dlr.ui.html` directly. 
 
-  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft. DLR. LabelRecognizer.defaultUIElementURL` .
+  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL` .
 
 * Copy the file `dist/dlr.ui.html` to your application, modify it and use the API `defaultUIElementURL` to set it as the default UI.
 
@@ -300,13 +304,13 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
   + Embed the video
 
 ```html
-<select class="dce-sel-resolution">
-    <option class="dce-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
-    <option data-width="1280" data-height="720">ask 1280 x 720</option>
-    <option data-width="640" data-height="480">ask 640 x 480</option>
-</select>
 <div id="div-video-container">
+    <select class="dce-sel-resolution">
+        <option class="dce-opt-gotResolution" value="got"></option>
+        <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
+        <option data-width="1280" data-height="720">ask 1280 x 720</option>
+        <option data-width="640" data-height="480">ask 640 x 480</option>
+    </select>
     <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
 </div>
 <script>
@@ -324,7 +328,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
                 }
             }
         };
-        recognizer.onUniqueRead = (txt, result) => {
+        recognizer.onUniqueRead = (txt, results) => {
             alert(txt);
         };
         recognizer.startScanning(true);
@@ -411,7 +415,7 @@ NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can
 
 ### Step Two: Configure the Server
 
-* Set the MIME type for `.wasm` as `application/wasm` on your webserver.
+* Set the MIME type for `.wasm` as `application/wasm` and `.data` as `application/octet-stream` on your webserver.
   
   The goal is to configure your server to send the correct Content-Type header for the wasm file so that it is processed correctly by the browser.
 

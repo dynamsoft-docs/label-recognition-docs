@@ -19,8 +19,8 @@ The primary class of the library is `LabelRecognizer` . The following code snipp
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let results = await labelRecognizer.recognize(imageSource);
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -33,8 +33,8 @@ let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 };

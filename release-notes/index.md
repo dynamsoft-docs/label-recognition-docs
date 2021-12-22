@@ -17,6 +17,7 @@ needAutoGenerateSidebar: false
 ### Editions
 
 - [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#20-11302021)
+- [JavaScript](../programming/javascript/release-notes/javascript-2.md#220-12072021)
 
 ## 2.0 
 

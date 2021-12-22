@@ -213,7 +213,7 @@ recognizer.startScanning(true);
 
 **See also**
 
-* [DLRResult](./interface/dlr-result.md)
+* [DLRLineResult](./interface/dlr-line-result.md)
 
 ## onFrameRead
 

@@ -105,3 +105,6 @@ DLR is cross-platform. The core of DLR is written in C/C++ for performance. The 
 |Android        | Java                 |
 |iOS            | Swift/Objective-C    |
 
+## License Agreement
+
+Before you install Dynamsoft Label Recognizer, please <a href="https://www.dynamsoft.com/label-recognition/license-agreement/" target="_blank">click here</a> to read the license agreement.

@@ -62,3 +62,5 @@ needAutoGenerateSidebar: false
 | Versions | Available Editions |
 | -------- | ------------------ |
 | 1.0.0 Beta | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-1.md#10-beta-12102020) |
+
+<div class="fold-panel-end"></div>

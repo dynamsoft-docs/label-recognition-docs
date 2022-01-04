@@ -293,12 +293,12 @@ for (let result of results) {
 Open the camera and starts continuous scanning of incoming frames.
 
 ```typescript
-startScanning(showUI: boolean): Promise<PlayCallbackInfo>;
+startScanning(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
 
-`showUI` : whether to show UI. The UI will display the video stream and highlight the recognized text, etc.
+`appendOrShowUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 **Return value**
 
@@ -349,12 +349,12 @@ resumeScanning(): void;
 Stops continuous scanning and closes the video stream.
 
 ```typescript
-stopScanning(hideUI: boolean): void;
+stopScanning(hideUI?: boolean): void;
 ```
 
 **Parameters**
 
-`hideUI` : whether to hide UI.
+`hideUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
 
 **Return value**
 

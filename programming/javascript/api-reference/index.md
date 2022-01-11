@@ -19,8 +19,8 @@ The primary class of the library is `LabelRecognizer` . The following code snipp
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let results = await labelRecognizer.recognize(imageSource);
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -29,12 +29,12 @@ for (let result of results) {
 
 ```js
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 };
@@ -52,7 +52,7 @@ The following static methods and properties help to set up the runtime environme
 | [engineResourcePath](initialize.md#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](initialize.md#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [version](initialize.md#version) | Returns the version of the library. |
+| [getVersion](initialize.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](initialize.md#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
 ### Create and Destroy Instances
@@ -98,7 +98,7 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new label is found. |
+| [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](recognize.md#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming frames. |
@@ -130,7 +130,7 @@ The following static methods and properties help to set up the runtime environme
 | API Name | Description |
 |---|---|
 | [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
-| [outputSettingsToString()](settings.md#outputsettingstostring) | Output the current runtime settings to a JSON string. |
+| [outputRuntimeSettingsToString()](settings.md#outputruntimesettingstostring) | Output the current runtime settings to a JSON string. |
 
 <!--
 | [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
@@ -169,3 +169,4 @@ In order to make the code more predictable and readable, the library defines a s
 * [TextureDetectionMode]({{ site.enumerations }}texture-detection-mode.html)
 * [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
 * [LocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
+* [ErrorCode]({{ site.enumerations }}error-code.html)

@@ -16,7 +16,6 @@ needGenerateH3Content: true
  | [`LabelRecognizerParameter.BinarizationModes`](binarization-modes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LabelRecognizerParameter.CharacterModelName`](parameter-control.md#charactermodelname) | Sets the name of a white list of recognizable characters. |
 | [`LabelRecognizerParameter.ColourConversionModes`](colour-conversion-modes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`LabelRecognizerParameter.CharacterNormalizationModes`](character-normalization-modes.md#characternormalizationmodes) | 	Sets the mode and priority for character normalization. |
  | [`LabelRecognizerParameter.DictionaryCorrectionThresholds`](parameter-control.md#dictionarycorrectionthresholds) | Sets the threshold of dictionary error correction. |
  | [`LabelRecognizerParameter.DictionaryPath`](parameter-control.md#dictionarypath) | Sets the path of the dictionary file. |
  | [`LabelRecognizerParameter.GrayscaleEnhancementModes`](grayscale-enhancement-modes.md#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |

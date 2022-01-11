@@ -22,7 +22,6 @@ needGenerateH3Content: true
  | [`LineSpecification.LineStringRegExPattern`](#linestringregexpattern) | Specifies the regular expression pattern of the string within a line. |
  | [`LineSpecification.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`LineSpecification.GrayscaleEnhancementModes`](#grayscaleenhancementmodes) | Sets the mode and priority for grayscale image preprocessing algorithms. |
- | [`LineSpecification.CharacterNormalizationModes`](#characternormalizationmodes) | 	Sets the mode and priority for texture detection. |
 
 ---
 
@@ -262,5 +261,3 @@ Please check [LabelRecognizerParameter.BinarizationModes](../label-recognition-p
 ## GrayscaleEnhancementModes
 Please check [LabelRecognizerParameter.GrayscaleEnhancementModes](../label-recognition-parameter/grayscale-enhancement-modes.md#grayscaleenhancementmodes) for reference.
 
-## CharacterNormalizationModes
-Please check [LabelRecognizerParameter.CharacterNormalizationModes](../label-recognition-parameter/character-normalization-modes.md#characternormalizationmodes) for reference.

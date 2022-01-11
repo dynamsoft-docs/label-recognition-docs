@@ -24,11 +24,13 @@ breadcrumbText: Recognition APIs
 
 | API Name | Description |
 |---|---|
-| [onUniqueRead](#onuniqueread) | This event is triggered when a new label is found. |
+| [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
-| [startScanning()](#startscanning) | Starts continuous scanning of incoming frames. |
-| [stopScanning()](#stopscanning) | Stops continuous scanning. |
+| [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
+| [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
+| [stopScanning()](#stopscanning) | Stops continuous scanning and closes the video stream. |
 
 ## recognize
 
@@ -63,8 +65,8 @@ try {
     // The current frame will be recognized.
     results = await recognizer.recognize(htmlVideoElement);
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 } catch (ex) {
@@ -105,8 +107,8 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 ```js
 let results = await recognizer.recognizeBase64String(strBase64); //e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -136,8 +138,8 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 ```js
 let results = await recognizer.recognizeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -177,36 +179,41 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 
 ## onUniqueRead
 
-This event is triggered when a new label is found.
+This event is triggered when a new, unduplicated label is found.
 
 ```typescript
-onUniqueRead: (txt: string, result: DLRResult) => void
+onUniqueRead: (txt: string, results: DLRLineResult[]) => void
 ```
 
 **Arguments**
 
 `txt` : a string that holds the label text. 
 
-`result` : a `DLRResult` object that contains more detailed info.
+`results` : one or more `DLRLineResult` object(s) that contains more detailed info about the returned text.
 
 **Code Snippet**
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
-recognizer.onUniqueRead = (txt, result) => {
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
 }
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
 
-* [DLRResult](./interface/dlr-result.md)
+* [DLRLineResult](./interface/dlr-line-result.md)
 
 ## onFrameRead
 
@@ -224,16 +231,19 @@ onFrameRead: (results: DLRResult[]) => void
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onFrameRead = results => {
     for (let result of results) {
-        for (let lineResult of result.LineResults) {
-            console.log(lineResult.Text);
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
         }
     }
 };
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
@@ -260,14 +270,16 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
-let cEnhancer = recognizer.cameraEnhancer;
-cEnhancer.open();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+await cEnhancer.open();
 let results = await recognizer.recognizeCurrentFrame();
 for (let result of results) {
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
     }
 }
 ```
@@ -278,50 +290,71 @@ for (let result of results) {
 
 ## startScanning
 
-Starts continuous scanning of incoming frames.
+Open the camera and starts continuous scanning of incoming frames.
 
 ```typescript
-startScanning(showUI: boolean): void;
+startScanning(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
 ```
 
 **Parameters**
 
-`showUI` : whether to show UI. The UI will display the video stream and highlight the recognized text, etc.
+`appendOrShowUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree, the CameraEnhancer instance will append it in the DOM and show it; if the UI already exists in the DOM tree but is hidden, it'll be displayed. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing shows up on the page; if it exists in the DOM tree, it may or may not show up depending on its original state.
 
 **Return value**
 
-None.
+A promise resolving to a `PlayCallbackInfo` object which contains the resolution of the video.
 
 **Code Snippet**
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
-recognizer.onUniqueRead = (txt, result) => {
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
 }
-recognizer.startScanning();
+recognizer.startScanning(true);
 ```
 
 **See also**
 
 * [DLRResult](./interface/dlr-result.md)
 
-## stopScanning
+## pauseScanning
 
-Stops continuous scanning.
+Pause continuous scanning but keep the video stream.
 
 ```typescript
-stopScanning(hideUI: boolean): void;
+pauseScanning(): void;
+```
+
+## resumeScanning
+
+Resumes continuous scanning.
+
+```typescript
+resumeScanning(): void;
+```
+
+## stopScanning
+
+Stops continuous scanning and closes the video stream.
+
+```typescript
+stopScanning(hideUI?: boolean): void;
 ```
 
 **Parameters**
 
-`hideUI` : whether to hide UI.
+`hideUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
 
 **Return value**
 
@@ -331,17 +364,22 @@ None.
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video"
+    runtimeSettings: "video-passportMRZ"
 });
-recognizer.onUniqueRead = (txt, result) => {
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let lineResult of result.LineResults) {
-        console.log(lineResult.Text);
+    for (let result of results) {
+        for (let lineResult of result.lineResults) {
+            console.log(lineResult.text);
+        }
     }
     // Stops scanning the video input as soon as a label is found.
-    recognizer.stopScanning;
+    recognizer.stopScanning(true);
 }
-recognizer.startScanning();
+await recognizer.startScanning(true);
 ```
 
 **See also**

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - DLRPoint
-description: This page shows the DLRPoint interface of Dynamsoft Label Recognizer for JavaScript.
-keywords: DLRPoint, javascript, interface
+title: Dynamsoft Label Recognizer JavaScript Interface - Point
+description: This page shows the Point interface of Dynamsoft Label Recognizer for JavaScript.
+keywords: Point, javascript, interface
 needAutoGenerateSidebar: false
 noTitleIndex: true
-breadcrumbText: DLRPoint
+breadcrumbText: Point
 ---
 
-# DLRPoint
+# Point
 
 Stores an x- and y-coordinate pair in two-dimensional space.
 

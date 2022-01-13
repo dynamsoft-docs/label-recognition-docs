@@ -22,8 +22,11 @@ Stores the line result.
 | [ `characterHConfidence` ](#characterhconfidence) | *number* |
 | [ `characterMConfidence` ](#charactermconfidence) | *number* |
 | [ `characterLConfidence` ](#characterlconfidence) | *number* |
-| [ `location` ](#location) | [ `DLRQuadrilateral` ](dlr-quadrilateral.md) |
+| [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
+
+<!-->
 | [ `reserved` ](#reserved) | *string* |
+-->
 
 ### characterH
 
@@ -53,6 +56,8 @@ The confidence of the recognized character with the middle confidence.
 
 The confidence of the recognized character with the lowest confidence.
 
+<!--
 ### reserved
 
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
+-->

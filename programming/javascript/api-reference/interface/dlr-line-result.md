@@ -19,9 +19,9 @@ Stores the line result.
 | [ `lineSpecificationName` ](#linespecificationname) | *string* |
 | [ `text` ](#text) | *string* |
 | [ `characterModelName` ](#charactermodelname) | *string* |
-| [ `location` ](#location) | [ `DLRQuadrilateral` ](dlr-quadrilateral.md) |
+| [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
 | [ `confidence` ](#confidence) | *number* |
-| [ `characterResults` ](#characterresults) | *[ `PDLRCharacterResult` ](dlr-character-result.md)* |
+| [ `characterResults` ](#characterresults) | *[ `DLRCharacterResult` ](dlr-character-result.md)* |
 
 <!--
 | [ `characterResultsCount` ](#characterresultscount) | *number* |-->

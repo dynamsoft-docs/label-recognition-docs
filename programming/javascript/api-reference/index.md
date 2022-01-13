@@ -153,8 +153,8 @@ In order to make the code more predictable and readable, the library defines a s
 ### Interfaces
 
 * [`DLRLineResult`](interface/dlr-line-result.md)	
-* [`DLRPoint`](interface/dlr-point.md)		
-* [`DLRQuadrilateral`](interface/dlr-quadrilateral.md)	
+* [`Point`](interface/point.md)		
+* [`Quadrilateral`](interface/quadrilateral.md)	
 * [`DLRReferenceRegion`](interface/dlr-reference-region.md)	
 * [`DLRResult`](interface/dlr-result.md)		
 * [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)	

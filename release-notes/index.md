@@ -9,6 +9,7 @@ needAutoGenerateSidebar: false
 # Release Notes
 
 ## 2.2
+> First released: 11-30-2021
 
 ### Highlights
 
@@ -21,6 +22,7 @@ needAutoGenerateSidebar: false
 &nbsp;
 
 ## 2.0
+> First released: 08-26-2021
 
 ### Highlights
 
@@ -41,6 +43,7 @@ needAutoGenerateSidebar: false
 &nbsp;
 
 ### 1.2
+> First released: 05-18-2021
 
 #### Highlights
 
@@ -54,6 +57,7 @@ needAutoGenerateSidebar: false
 &nbsp;
 
 ### 1.0
+> First released: 02-24-2021
 
 #### Highlights
 
@@ -68,6 +72,7 @@ needAutoGenerateSidebar: false
 &nbsp;
 
 ### 1.0 Beta
+> First released: 12-10-2020
 
 | Versions | Available Editions |
 | -------- | ------------------ |

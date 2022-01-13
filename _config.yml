@@ -49,6 +49,7 @@ dwt_icon: /label-recognition/assets/img-icon/icon-dwt.svg
 dnt_icon: /label-recognition/assets/img-icon/icon-dnt.svg
 
 release-notes: /label-recognition/release-notes/
+license-activation: /label-recognition/license-activation/
 
 useVersionTree: true
 

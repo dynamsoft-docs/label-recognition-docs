@@ -4,6 +4,7 @@ title: Dynamsoft Label Recognizer Introduction  - Main Page
 description: This is the main page of Dynamsoft Label Recognizer Introduction. 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Overview of Dynamsoft Label Recognizer
@@ -119,3 +120,6 @@ DLR is designed to be cross-platform. The core of DLR is written in C/C++ for pe
 |Android        | Java                 |
 |iOS            | Swift/Objective-C    |
 
+## License Agreement
+
+Please <a href="https://www.dynamsoft.com/label-recognition/license-agreement/" target="_blank">click here</a> to read the license agreement.

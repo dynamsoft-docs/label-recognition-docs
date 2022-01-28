@@ -36,6 +36,10 @@ java: /label-recognition/programming/java/
 java-api: /label-recognition/programming/java/api-reference/
 java-release-notes: /label-recognition/programming/java/release-notes/
 
+javascript: /label-recognition/programming/javascript/
+javascript-api: /label-recognition/programming/javascript/api-reference/
+javascript-release-notes: /label-recognition/programming/javascript/release-notes/
+
 assets: /label-recognition/assets/
 edit_icon: /label-recognition/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/assets/img-icon/icon-smile.png
@@ -45,19 +49,13 @@ dwt_icon: /label-recognition/assets/img-icon/icon-dwt.svg
 dnt_icon: /label-recognition/assets/img-icon/icon-dnt.svg
 
 release-notes: /label-recognition/release-notes/
+license-activation: /label-recognition/license-activation/
 
 useVersionTree: true
 
 baseurl: "/label-recognition"
 plugins:
   - jemoji
-  - jekyll-sitemap
-  
-defaults:
-  - scope:
-      path: "Hide_Tree_Page.html"
-    values:
-      sitemap: false
 
 url: "https://www.dynamsoft.com" # sitemap root
 

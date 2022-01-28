@@ -18,7 +18,9 @@ tree_file_list:
     - sidelist-programming/programming-java.html
     - sidelist-programming/programming-objectivec-swift-v1.2.1.html
     - sidelist-programming/programming-objectivec-swift.html
+    - sidelist-programming/programming-javascript.html
     - sidelist-programming-v1.2.1.html
     - sidelist-programming.html
     - sidelist-release-notes.html
+    - sidelist-license-activation.html
 

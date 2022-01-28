@@ -8,6 +8,27 @@ needAutoGenerateSidebar: false
 
 # Release Notes - C/C++ 2.x
 
+## 2.2 (11/30/2021)
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.2.md -%}
+
+### Changelog
+#### New
+
+- Added a new method [`DLR_UpdateRuntimeSettingsFromString`](../api-reference/label-recognizer-functions.md#dlr_updateruntimesettingsfromstring)  for users to upload runtime settings from stringified JSON data.
+- Added a new method [`DLR_OutputSettingsToString`](../api-reference/label-recognizer-functions.md#dlr_outputsettingstostring) for users to output runtime settings to stringified JSON data.
+- Added a new method [`DLR_RecognizeFileInMemory`](../api-reference/label-recognizer-functions.md#dlr_recognizefileinmemory) to recognize from a file in the memory.
+- Added a new method [`UpdateRuntimeSettingsFromString`](../api-reference/label-recognizer.md#updateruntimesettingsfromstring) for users to upload runtime settings from stringified JSON data.
+- Added a new method [`OutputSettingsToString`](../api-reference/label-recognizer.md#outputsettingstostring) for users to output runtime settings to stringified JSON data.
+- Added a new method [`RecognizeFileInMemory`](../api-reference/label-recognizer.md#recognizefileinmemory) to recognize from a file in the memory.
+- Added modes parameter `CharacterNormalizationModes` to normalize the text. The parameter is available under the following classes:
+  - `LabelRecognizerParameter`
+  - `TextArea`
+  - `LineSpecification`
+
+
 ## 2.0 (08/26/2021)
 
 ### Highlights

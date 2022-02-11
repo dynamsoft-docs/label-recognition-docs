@@ -15,11 +15,11 @@ As seen across the API documentation, the JavaScript Label Recognizer works with
 
 | API Interface | Description |
 |---|---|
-| [DLRCharacterResult](dlr-character-result.md) | The interface provides more info on the specific characters of a result returned by the recognizer. |
-| [DLRLineResult](RegionDefinition.md) | Interface used to specify the reading region via the runtime settings. |
-| [DLRPoint](RuntimeSettings.md) | An interface for the points used to represent a quadrilateral or reference region. |
-| [DLRQuadrilateral](ScannerPlayCallbackInfo.md) | Interface for the quadrilateral in which the result (line or character) is located. |
-| [DLRReferenceRegion](ScanSettings.md) | Interface used to get or set (via the RuntimeSettings) the reference region used to identify the label. |
-| [DLRResult](TextResult.md) | The core interface for the results returned by the label recognizer. |
-| [DLRRuntimeSettings](dlr-runtime-settings.md) | The main interface used for label recognizer customization. |
-| [DLRScanSettings](dlr-scansettings.md) | The main interface used for label recognizer customization. |
+| [DLRCharacterResult](dlr-character-result.md) | Interface that provides more info on the specific characters of a result returned by the recognizer. |
+| [DLRLineResult](dlr-line-result.md) | Interface that provides more info on the specific lines of a result returned by the recognizer. |
+| [DLRReferenceRegion](dlr-reference-region.md) | Interface used to get or set (via the RuntimeSettings) the reference region used to identify the label. |
+| [DLRResult](dlr-result.md)| Interface for the results returned by the label recognizer. |
+| [DLRRuntimeSettings](dlr-runtime-settings.md) | Interface for setting up the recognition process. |
+| [DLRScanSettings](dlr-scansettings.md) | Interface for scan behaviour customization. |
+| [Point](point.md) | Interface for the points used to represent a quadrilateral or reference region. |
+| [Quadrilateral](quadrilateral.md) | Interface for the quadrilateral in which the result (line or character) is located. |

@@ -10,7 +10,7 @@ breadcrumbText: DLRReferenceRegion
 
 # DLRReferenceRegion
 
-Stores the reference region information.
+Interface used to get or set (via the RuntimeSettings) the reference region used to identify the label.
 
 ## Attributes
 

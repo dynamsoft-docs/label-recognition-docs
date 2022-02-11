@@ -10,7 +10,7 @@ breadcrumbText: DLRLineResult
 
 # DLRLineResult
 
-Stores the line result.
+Interface that provides more info on the specific lines of a result returned by the recognizer.
 
 ## Attributes
 

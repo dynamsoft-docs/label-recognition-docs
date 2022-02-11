@@ -10,7 +10,7 @@ breadcrumbText: Quadrilateral
 
 # Quadrilateral
 
-Stores the quadrilateral.  
+Interface for the quadrilateral in which the result (line or character) is located.
 
 ## Attributes
 

@@ -24,36 +24,6 @@ noTitleIndex: true
 
 &nbsp;
 
-## Recognizing
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
-  | [`recognizeByImage`](#recognizebyimage) | Recognizes text from an image in memory. |
-
-&nbsp;
-
-## Settings
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a class. |
-  | [`updateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given class. |
-  | [`resetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
-  | [`appendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognizerParameter settings in a string to the SDK object. |
-  | [`appendSettingsFromFile`](#appendsettingsfromFile) | Appends LabelRecognizerParameter settings from a file to the SDK object. |
-  | [`outputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
-  | [`clearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
-  | [`updateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
-  | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`appendCharacterModel`](#appendCharacterModel) | Appends CharacterModel to the SDK object. |
-  | [`eraseAllCharacterModels`](#appendCharacterModel) | Erases all CharacterModels the SDK object currently loaded. |
-  | [`eraseCharacterModelByName`](#appendCharacterModel) | Erases a name specified CharacterModel from the SDK object. |
-
-&nbsp;
-
 
 ### init
 
@@ -121,6 +91,26 @@ func DLRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```
 
 
+
+&nbsp;
+
+## Settings
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a class. |
+  | [`updateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given class. |
+  | [`resetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
+  | [`appendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognizerParameter settings in a string to the SDK object. |
+  | [`appendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognizerParameter settings from a file to the SDK object. |
+  | [`outputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
+  | [`clearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
+  | [`updateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
+  | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`appendCharacterModel`](#appendcharactermodel) | Appends CharacterModel to the SDK object. |
+  | [`eraseAllCharacterModels`](#eraseallcharactermodels) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](#erasecharactermodelbyname) | Erases a name specified CharacterModel from the SDK object. |
 
 &nbsp;
 
@@ -597,6 +587,15 @@ settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings, error:&error);
 ```
 
+## Recognizing
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
+  | [`recognizeByImage`](#recognizebyimage) | Recognizes text from an image in memory. |
+
+&nbsp;
 
 ### recognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.

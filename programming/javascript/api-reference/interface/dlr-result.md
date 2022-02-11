@@ -19,7 +19,7 @@ Stores the recognized result.
 |---------- | ---- |
 | [ `referenceRegionName` ](#referenceregionname) | *string* |
 | [ `textAreaName` ](#textareaname) | *string* |
-| [ `location` ](#location) | [ `DLRQuadrilateral` ](dlr-quadrilateral.md) |
+| [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
 | [ `confidence` ](#confidence) | *number* |
 | [ `lineResults` ](#lineresults) | *[ `DLR_LineResult` ](dlr-line-result.md)* |
 | [ `pageNumber` ](#pagenumber) | *number* |

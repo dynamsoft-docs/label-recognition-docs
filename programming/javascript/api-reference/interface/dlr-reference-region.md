@@ -36,7 +36,7 @@ The source type used to localize the reference region(s).
     
 ### points
 
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+Four vertices in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>

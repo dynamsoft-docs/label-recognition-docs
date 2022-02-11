@@ -24,6 +24,7 @@ noTitleIndex: true
 
 &nbsp;
 
+
 ### init
 
 Initializes DynamsoftLabelRecognizer.
@@ -89,8 +90,9 @@ func DLRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 }
 ```
 
- 
 
+
+&nbsp;
 
 ## Settings
 
@@ -100,16 +102,15 @@ func DLRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   | [`updateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given class. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
   | [`appendSettingsFromString`](#appendsettingsfromstring) | Appends LabelRecognizerParameter settings in a string to the SDK object. |
-  | [`appendSettingsFromFile`](#appendsettingsfromFile) | Appends LabelRecognizerParameter settings from a file to the SDK object. |
+  | [`appendSettingsFromFile`](#appendsettingsfromfile) | Appends LabelRecognizerParameter settings from a file to the SDK object. |
   | [`outputSettingsToFile`](#outputsettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
   | [`clearAppendedSettings`](#clearappendedsettings) | Clear all appended LabelRecognizerParameter settings in the SDK object. |
   | [`updateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`appendCharacterModel`](#appendCharacterModel) | Appends CharacterModel to the SDK object. |
-  | [`eraseAllCharacterModels`](#appendCharacterModel) | Erases all CharacterModels the SDK object currently loaded. |
-  | [`eraseCharacterModelByName`](#appendCharacterModel) | Erases a name specified CharacterModel from the SDK object. |
-
+  | [`appendCharacterModel`](#appendcharactermodel) | Appends CharacterModel to the SDK object. |
+  | [`eraseAllCharacterModels`](#eraseallcharactermodels) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](#erasecharactermodelbyname) | Erases a name specified CharacterModel from the SDK object. |
 
 &nbsp;
 
@@ -586,8 +587,6 @@ settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings, error:&error);
 ```
 
- 
-   
 ## Recognizing
    
   | Method               | Description |

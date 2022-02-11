@@ -67,10 +67,13 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 | `numberLetter` | For number and English letter recognition. |
 | `numberUpperCase` | For number and uppercase English letter recognition. |
 | `letter` | For pure English letter recognition. |
-| `passportMrz` | For passport MRZ recognition. |
-| `vin` | For VIN (vehicle identification number) recognition. |
+| `passportMRZ` | For passport MRZ recognition. |
+| `visaMRZ_A` | For Visa (Country not Credit Card) MRZ recognition. |
+| `VIN` | For VIN (vehicle identification number) recognition. |
+| `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
-When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMrz` to read the MRZ on passports with a camera.
+
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
 
 **Return value**
 

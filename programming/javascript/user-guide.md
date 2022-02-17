@@ -58,6 +58,9 @@ The complete code of the "Hello World" example is shown below
     <script>
         // initializes and uses the library
         (async () => {
+            Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
+            let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
                 runtimeSettings: "video-letter"
             });
@@ -71,8 +74,6 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
-            let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-            await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
             recognizer.cameraEnhancer = enhancer;
             await recognizer.startScanning(true);
         })();
@@ -155,8 +156,8 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer
-$ npm install dynamsoft-camera-enhancer
+$ npm install dynamsoft-label-recognizer --save
+$ npm install dynamsoft-camera-enhancer --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
@@ -233,8 +234,8 @@ try {
 A `CameraEnhancer` object is required for video recognition. Also, the object should make use of a customized UI from the Label Recognition SDK to streamline the recognition.
 
 ```javascript
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
 ```
 
@@ -304,22 +305,16 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
   + Embed the video
 
 ```html
-<div id="div-video-container">
-    <select class="dce-sel-resolution">
-        <option class="dce-opt-gotResolution" value="got"></option>
-        <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
-        <option data-width="1280" data-height="720">ask 1280 x 720</option>
-        <option data-width="640" data-height="480">ask 640 x 480</option>
-    </select>
-    <video class="dce-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+<div id="div-video-container" style="width:640px; height:500px; position: relative;">
+    <video class="dce-video" playsinline="true" muted style="position:absolute;left:0;top:0;width:100%;height:100%;"></video>
 </div>
 <script>
     (async () => {
-        let recognizer = Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video-passportMRZ"
-        });
         let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
+        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+            runtimeSettings: "video-passportMRZ"
+        });
         recognizer.cameraEnhancer = cameraEnhancer;
         recognizer.onFrameRead = results => {
             for (let result of results) {
@@ -331,7 +326,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
         recognizer.onUniqueRead = (txt, results) => {
             alert(txt);
         };
-        recognizer.startScanning(true);
+        await recognizer.startScanning(true);
     })();
 </script>
 ```
@@ -342,21 +337,21 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera"></select>
+<select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution"></select>
+<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
 ```
 
 > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-<select class="dce-sel-resolution">
+<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
     <option class="dce-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">ask 1920 x 1080</option>
-    <option data-width="1280" data-height="720">ask 1280 x 720</option>
-    <option data-width="640" data-height="480">ask 640 x 480</option>
+    <option data-width="1920" data-height="1080">1920x1080</option>
+    <option data-width="1280" data-height="720">1280x720</option>
+    <option data-width="640" data-height="480">640x480</option>
 </select>
 ```
 

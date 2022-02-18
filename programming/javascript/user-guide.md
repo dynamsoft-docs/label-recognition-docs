@@ -245,7 +245,7 @@ In some cases, a different camera might be required instead of the default one. 
 
 ```javascript
 // set which camera and what resolution to use
-var allCameras = await enhancer.getAllCameras();
+let allCameras = await enhancer.getAllCameras();
 await enhancer.selectCamera(allCameras[0]);
 await enhancer.setResolution(1280, 720);
 ```
@@ -305,8 +305,8 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
   + Embed the video
 
 ```html
-<div id="div-video-container" style="width:640px; height:500px; position: relative;">
-    <video class="dce-video" playsinline="true" muted style="position:absolute;left:0;top:0;width:100%;height:100%;"></video>
+<div id="div-video-container" style="width:100%;height:100%;">
+    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;"></video>
 </div>
 <script>
     (async () => {
@@ -337,17 +337,17 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
+<select class="dce-sel-camera"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
+<select class="dce-sel-resolution"></select>
 ```
 
 > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
+<select class="dce-sel-resolution">
     <option class="dce-opt-gotResolution" value="got"></option>
     <option data-width="1920" data-height="1080">1920x1080</option>
     <option data-width="1280" data-height="720">1280x720</option>

@@ -157,7 +157,7 @@ $ yarn add dynamsoft-camera-enhancer
 
 ```
 $ npm install dynamsoft-label-recognizer --save
-$ npm install dynamsoft-camera-enhancer --save
+$ npm install dynamsoft-camera-enhancer@2.0.3 --save-exact
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:

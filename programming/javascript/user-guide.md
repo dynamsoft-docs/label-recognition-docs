@@ -53,7 +53,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
@@ -123,14 +123,14 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
@@ -156,15 +156,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer --save
-$ npm install dynamsoft-camera-enhancer --save
+$ npm install dynamsoft-label-recognizer@2.2.1 --save
+$ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.0/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.0/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.1/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.1/dce/dist/dce.js"></script>
 ```
 
 or
@@ -204,7 +204,7 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 

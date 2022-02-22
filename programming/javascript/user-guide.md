@@ -59,7 +59,7 @@ The complete code of the "Hello World" example is shown below
         // initializes and uses the library
         (async () => {
             Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
-            let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+            let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
                 runtimeSettings: "video-letter"
@@ -74,7 +74,7 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
-            recognizer.cameraEnhancer = enhancer;
+            recognizer.cameraEnhancer = cameraEnhancer;
             await recognizer.startScanning(true);
         })();
     </script>
@@ -83,17 +83,37 @@ The complete code of the "Hello World" example is shown below
 </html>
 ```
 
+<p align="center" style="text-align:center; ">
+  <!--<a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;">
+  </a>
+  &nbsp;-->
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/" title="Run via JSFiddle">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;">
+  </a>
+  <!--&nbsp;
+  <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;">
+  </a>
+  &nbsp;
+  <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px; ">-->
+  </a>
+</p>
+
+-----
+
 *About the code*
 
   + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "video-letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettingsFromString()`.
 
-  + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `enhancer` which is used to control the camera as well as the default user interface. To use `enhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
+  + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer` which is used to control the camera as well as the default user interface. To use `cameraEnhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
   + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
-  + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
+  + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Step Two: Test the example
 
@@ -107,8 +127,8 @@ If the text is decoded, an alert will pop up with the result text. At the same t
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a [7-day free period](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
-    > Network connection is required for the 7-day free license to work.
+  + The library requires a license to work. However, when no license is specified in the code, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be applied. You can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do want more evaluation time, you can [request a trial](#requesting-a-trial).
+    > Network connection is required for the free public trial license to work.
 
 If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js).
 
@@ -182,20 +202,18 @@ Before using the library, you need to configure a few things.
 
 #### Specify the license
 
-The library requires a license to work, use the API `initLicense()` to specify the license.
+The library requires a license to work, use the API `license` to specify the license.
 
 ```javascript
-// The following line uses a public trial license (valid for 7 days) which is equivalent to not setting any license.
-
-Dynamsoft.DLR.LabelRecognizer.initlicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+Dynamsoft.DLR.LabelRecognizer.license =
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
 ```
 
 *Note*:
 
-* By default, network connection is required for the license to work.
-* If nothing is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be used by default which is the case in the above "hello world" example.
-* The license is actually fetched during the creation of a `LabelRecognizer` instance.
-* If a public network connection is not available, you can choose to host a license server in your private network or apply for an offline license. [Contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js) for more information.
+* When specified by YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE, the license is an online license and a network connection to Dynamsoft License Server is required for it to work.
+* In most cases, online licenses are offered. If you want to use an offline license, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+* If nothing is specified like the above "hello world" example, a [free public trial license](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=dlr&package=js) will be automatically used. This license requires a network connection.
 
 #### Specify the location of the "engine" files
 
@@ -235,8 +253,8 @@ A `CameraEnhancer` object is required for video recognition. Also, the object sh
 
 ```javascript
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-recognizer.cameraEnhancer = enhancer;
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+recognizer.cameraEnhancer = cameraEnhancer;
 ```
 
 #### Change the camera settings if necessary.
@@ -257,9 +275,9 @@ Check out the following code:
 ```javascript
 let scanSettings = await recognizer.getScanSettings();
 // disregard duplicated results found in a specified time period (in milliseconds)
-scanSettings.duplicateForgetTime = 5000;
+scanSettings.duplicateForgetTime = 6000;
 // set a scan interval in milliseconds so the library may release the CPU from time to time
-scanSettings.intervalTime = 300;
+scanSettings.intervalTime = 100;
 await recognizer.updateScanSettings(scanSettings);
 ```
 
@@ -359,9 +377,9 @@ Interested to test it further? Read on to learn how to request a 30-day free tri
 
 ## Requesting A Trial
 
-If no license is specified, a [7-day free license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be used by default. 
+If no license is specified, a [free public trial license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#public-trial-license?utm_source=guide&product=dlr&package=js) will be used by default. 
 
-> Network connection is required for the 7-day free license to work.
+> Network connection is required for the free public trial license to work.
 
 After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist?utm_source=guide&product=dlr&package=js) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js).
 
@@ -441,7 +459,7 @@ Optionally, you may also need to [specify the location of the "engine" files](#s
 
 ### Can I open the web page directly from the hard drive?
 
-Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [ `http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). 
+Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [http-server on npm](https://www.npmjs.com/package/http-server). 
 
 ### Why can't I use my camera?
 

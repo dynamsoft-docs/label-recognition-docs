@@ -283,11 +283,11 @@ await recognizer.updateScanSettings(scanSettings);
 
 ```javascript
 // use one of the built-in RuntimeSetting templates: 
-// "number", "letter", "numberLetter", "numberUppercase", "VIN", "passportMRZ",
-// "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-passportMRZ".
+// "number", "letter", "numberLetter", "numberUppercase", "VIN", "MRZ",
+// "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-MRZ".
 // For convenience, these names are not case-sensitive.
 // You can also pass in a JSON string as the template.
-await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
+await recognizer.updateRuntimeSettingsFromString("video-MRZ");
 ```
 
 As you can see from the above code snippets, there are two types of configurations:

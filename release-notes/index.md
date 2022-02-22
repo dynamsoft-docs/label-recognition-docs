@@ -17,9 +17,15 @@ needAutoGenerateSidebar: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 2.2.0 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#20-11302021) / [JavaScript](../programming/javascript/release-notes/javascript-2.md#220-12072021) |
+
+<!-->
+| Versions | Available Editions |
+| -------- | ------------------ |
 | 2.2.1 | [JavaScript](../programming/javascript/release-notes/javascript-2.md#221-02222022) |
 | 2.2.0 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#20-11302021) / [JavaScript](../programming/javascript/release-notes/javascript-2.md#220-12072021) |
 
+-->
 &nbsp;
 
 ## 2.0

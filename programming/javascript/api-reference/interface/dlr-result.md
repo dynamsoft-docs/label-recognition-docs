@@ -10,7 +10,7 @@ breadcrumbText: DLRResult
 
 # DLRResult
 
-Stores the recognized result.
+Interface for the results returned by the label recognizer.
 
 ## Attributes
 

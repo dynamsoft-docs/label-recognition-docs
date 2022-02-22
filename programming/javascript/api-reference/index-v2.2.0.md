@@ -131,13 +131,12 @@ The following static methods and properties help to set up the runtime environme
 |---|---|
 | [updateRuntimeSettingsFromString()](settings.md#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputRuntimeSettingsToString()](settings.md#outputruntimesettingstostring) | Output the current runtime settings to a JSON string. |
-[updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type `DLR_LST_BARCODE`. |
 
 <!--
 | [appendCharacterModelBuffer()](settings.md#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 | [eraseCharacterModelByName()](settings.md#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](settings.md#eraseallcharactermodels) | Erases all CharacterModels. |
-| 
+| [updateReferenceRegionFromBarcodeResults()](settings.md#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
 -->
 
 ## Auxiliary
@@ -146,8 +145,6 @@ The following static methods and properties help to set up the runtime environme
 |---|---|
 | [ifSaveOriginalImageInACanvas](auxiliary.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](auxiliary.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
-| [onResourcesLoadStarted](auxiliary.md#onresourcesloadstarted) | This event is triggered when the resource file (.data) for a particular template starts to load. |
-| [onResourcesLoaded](auxiliary.md#onresourcesloaded) | This event is triggered when the resource file (.data) for a particular template finishes loading. |
 
 ## Interfaces and Enumerations
 

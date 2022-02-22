@@ -10,14 +10,14 @@ breadcrumbText: DLRReferenceRegion
 
 # DLRReferenceRegion
 
-Stores the reference region information.
+Interface used to get or set (via the RuntimeSettings) the reference region used to identify the label.
 
 ## Attributes
 
 | Attribute | Type |
 |---------- | ---- |
 | [`localizationSourceType`](#localizationsourcetype) | [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) |
-| [`points`](#points) | [`DLRPoint`](dlr-point.md)[4] |
+| [`points`](#points) | [`Point`](point.md)[4] |
 | [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *number* |
 | [`regionPredetectionModesIndex`](#regionpredetectionmodesindex) | *number* |
 | [`barcodeFormatIds`](#barcodeformatids) | *number* |
@@ -36,7 +36,7 @@ The source type used to localize the reference region(s).
     
 ### points
 
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+Four vertices in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 
 - **Remarks**   
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>

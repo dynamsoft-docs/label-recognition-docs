@@ -53,8 +53,8 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
         (async () => {
@@ -71,7 +71,7 @@ The complete code of the "Hello World" example is shown below
                     }
                 }
             };
-            recognizer.onUniqueRead = (txt, result) => {
+            recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
             recognizer.cameraEnhancer = enhancer;
@@ -91,7 +91,7 @@ The complete code of the "Hello World" example is shown below
 
   + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
-  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `result` is an object that holds details of the text. In this example, an alert will be displayed for this new text.
+  + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
   + `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `enhancer` has started feeding `recognizer` with frames to recognize).
 
@@ -123,14 +123,14 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
@@ -156,15 +156,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer --save
-$ npm install dynamsoft-camera-enhancer@2.0.3 --save-exact
+$ npm install dynamsoft-label-recognizer@2.2.1 --save
+$ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.0/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.0/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.1/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.1/dce/dist/dce.js"></script>
 ```
 
 or
@@ -204,7 +204,7 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
@@ -323,7 +323,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
                 }
             }
         };
-        recognizer.onUniqueRead = (txt, result) => {
+        recognizer.onUniqueRead = (txt, results) => {
             alert(txt);
         };
         await recognizer.startScanning(true);
@@ -389,7 +389,9 @@ The following table is a list of supported browsers based on the above requireme
   Safari<sup>3</sup> | v11+
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+
   <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+  
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.

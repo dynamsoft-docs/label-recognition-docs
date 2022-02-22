@@ -10,7 +10,7 @@ breadcrumbText: DLRRuntimeSettings
 
 # DLRRuntimeSettings
 
-Stores the recognized result.
+Interface for setting up the recognition process.
 
 ## Attributes
 
@@ -21,7 +21,7 @@ Stores the recognized result.
 | [ `linesCount` ](#linescount) | *number* |
 | [ `regionPredetectionModes` ](#regionpredetectionmodes) | [ `DLRRegionPredetectionMode` ]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)\[8\] |
 | [ `referenceRegion` ](#referenceregion) | [ `DLRReferenceRegion` ](dlr-reference-region.md) |
-| [ `textArea` ](#textarea) | [ `DLRQuadrilateral` ](dlr-quadrilateral.md) |
+| [ `textArea` ](#textarea) | [ `Quadrilateral` ](quadrilateral.md) |
 | [ `grayscaleTransformationModes` ](#grayscaletransformationmodes) | [ `DLRGrayscaleTransformationMode` ]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)\[8\] |
 
 ### maxThreadCount

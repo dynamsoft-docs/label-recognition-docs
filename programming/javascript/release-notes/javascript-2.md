@@ -10,6 +10,20 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+## 2.2.1 (02/22/2022)
+
+### ADDED
+
+* Added a new template `MRZ` for recognizing Passports, Visas and IDs with Machine-readable zones.
+* Added property `isCheckDigitMatched` to the interface `DLRLineResult`.
+* Added events `onResourcesLoadStarted` / `onResourcesLoaded` which gets triggered when the resource file for a particular template starts to be loaded / finishes loading.
+* Added method `updateReferenceRegionFromBarcodeResults` to make it possible for a DLR instance to use the results of DBR as the reference region.
+
+### IMPROVED
+
+* Renamed the template `visaMRZ_A` to `visaMRZ` and updated it to support both Format-A machine readable visas (MRV-A) and Format-B machine readable visas (MRV-B).
+* Improved the method `recognize()` to support `DCEFrame` objects.
+
 ## 2.2.0 (12/07/2021)
 
 <div class="fold-panel-prefix"></div>
@@ -29,4 +43,4 @@ breadcrumbText: v2.x Release Notes
 * Supports decoding of various formats of source data.
 * Integrated with Dynamsoft Camera Enhancer v2.0.3 to support continuous label scanning of frames from a video input.
 * Supports various use cases with multiple built-in templates.
-* Supports verification of Passport MRZ, Visa MRZ as North American VIN.
+* Supports verification of Passport MRZ, Visa MRZ and North American VIN.

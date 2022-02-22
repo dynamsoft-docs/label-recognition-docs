@@ -28,14 +28,13 @@ breadcrumbText: Settings APIs
 |---|---|
 | [updateRuntimeSettingsFromString()](#appendsettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputSettingsToString()](#outputsettingstostring) | Output the current runtime settings to a JSON string. |
-| [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type `DLR_LST_BARCODE`. |
 
 <!--| [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
 | [updateRuntimeSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
 | [getModeArgument()](#getmodeargument) | Returns the argument value for the specified mode parameter. |
 | [setModeArgument()](#setmodeargument) | Sets the argument value for the specified mode parameter. |
-
+| [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type DLR_LST_BARCODE. |
 | [appendCharacterModelBuffer()](#appendcharactermodelbuffer) | Appends a CharacterModel to assist the recognition. |
 | [eraseCharacterModelByName()](#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](#eraseallcharactermodels) | Erases all CharacterModels. |
@@ -321,7 +320,7 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 
 **Parameters**
 
-`runtimeSettings` : a JSON string that specifies the runtime settings or one of the built-in `runtimeSettings` templates. The following shows the built-in templates:
+`runtimeSettings` : a JSON string that specifies the runtime settings or one of the built-in `runtimeSettings` templates which include
 
 | Name | Description |
 |:-:|:-:|
@@ -329,9 +328,8 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 | `numberLetter` | For number and English letter recognition. |
 | `numberUpperCase` | For number and uppercase English letter recognition. |
 | `letter` | For pure English letter recognition. |
-| `passportMRZ` | For recognition of the machine-readable zones on passports. |
-| `visaMRZ` | For recognition of the machine-readable zones on visas. |
-| `MRZ` | For recognition of the machine-readable zones passports visas and IDs. |
+| `passportMRZ` | For passport MRZ recognition. |
+| `visaMRZ_A` | For Visa (Country not Credit Card) MRZ recognition. |
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
@@ -361,6 +359,8 @@ None.
 
 A promise resolving to a JSON string that represents the runtime settings.
 
+<!--
+
 ## updateReferenceRegionFromBarcodeResults
 
 Updates reference region which is defined with source type `DLR_LST_BARCODE` .
@@ -377,7 +377,6 @@ updateReferenceRegionFromBarcodeResults(barcodeResults: BarcodeResultArray): Pro
 
 A promise that resolves when the operation succeeds.
 
-<!--
 ## appendCharacterModelBuffer
 
 Appends a CharacterModel to assist the recognition.
@@ -396,7 +395,6 @@ appendCharacterModelBuffer(name: string, prototxtBuffer: ArrayBuffer, txtBuffer:
 **Return value**
 
 A promise that resolves when the operation succeeds.
-
 
 ## eraseCharacterModelByName
 

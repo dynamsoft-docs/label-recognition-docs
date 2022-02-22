@@ -15,8 +15,6 @@ breadcrumbText: Auxiliary APIs
 |---|---|
 | [ifSaveOriginalImageInACanvas](#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
-| [onResourcesLoadStarted](#onresourcesloadstarted) | This event is triggered when the resource file (.data) for a particular template starts to load. |
-| [onResourcesLoaded](#onresourcesloaded) | This event is triggered when the resource file (.data) for a particular template finishes loading. |
 
 ## ifSaveOriginalImageInACanvas
 
@@ -60,37 +58,3 @@ document.body.append(recognizer.getOriginalImageInACanvas());
 
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 * [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
-
-## onResourcesLoadStarted
-
-This event is triggered when the resource file (.data) for a particular template starts to load.
-
-```typescript
-onResourcesLoadStarted = (resourcePath: string) => {};
-```
-
-**Code snippet**
-
-```js
-onResourcesLoadStarted = (resourcePath) => {
-  console.log("Loading " + resourcePath);
-}
-recognizer.updateRuntimeSettingsFromString("passportMRZ");
-```
-
-## onResourcesLoaded
-
-This event is triggered when the resource file (.data) for a particular template finishes loading.
-
-```typescript
-onResourcesLoaded = (resourcePath: string) => {};
-```
-
-**Code snippet**
-
-```js
-onResourcesLoaded = (resourcePath) => {
-  console.log("Finished loading " + resourcePath);
-}
-recognizer.updateRuntimeSettingsFromString("passportMRZ");
-```

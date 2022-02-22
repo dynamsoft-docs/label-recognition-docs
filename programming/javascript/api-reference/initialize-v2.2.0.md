@@ -17,7 +17,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
-| [license](#license) | Use an alphanumeric string to specify the license. |
+| [initLicense](#initlicense) | Use an alphanumeric string to specify the license. |
 
 ## Create and Destroy Instances
 
@@ -34,15 +34,15 @@ The following methods and properties help with the initialization of the library
 | [engineResourcePath](#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [getVersion()](#getversion) | Returns the version of the library. |
+| [getVersion](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
-## license
+## initLicense
 
 Use an alphanumeric string to specify the license. Note that the method must be called before `createInstance()` and `loadWasm()` .
 
 ```typescript
-static license: string;
+static initLicense(license: string): void;
 ```
 
 **Parameters**
@@ -67,11 +67,11 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 | `numberLetter` | For number and English letter recognition. |
 | `numberUpperCase` | For number and uppercase English letter recognition. |
 | `letter` | For pure English letter recognition. |
-| `passportMRZ` | For recognition of the machine-readable zones on passports. |
-| `visaMRZ` | For recognition of the machine-readable zones on visas. |
-| `MRZ` | For recognition of the machine-readable zones passports visas and IDs. |
+| `passportMRZ` | For passport MRZ recognition. |
+| `visaMRZ_A` | For Visa (Country not Credit Card) MRZ recognition. |
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
+
 
 When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
 

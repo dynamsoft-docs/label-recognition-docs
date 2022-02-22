@@ -53,7 +53,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
@@ -143,14 +143,14 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.0/dist/dlr.js"></script>
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
@@ -176,15 +176,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer@2.2.1 --save
+$ npm install dynamsoft-label-recognizer@2.2.0 --save
 $ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.1/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.1/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.0/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.0/dce/dist/dce.js"></script>
 ```
 
 or
@@ -222,7 +222,7 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.0/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
@@ -263,7 +263,7 @@ In some cases, a different camera might be required instead of the default one. 
 
 ```javascript
 // set which camera and what resolution to use
-var allCameras = await enhancer.getAllCameras();
+let allCameras = await enhancer.getAllCameras();
 await enhancer.selectCamera(allCameras[0]);
 await enhancer.setResolution(1280, 720);
 ```
@@ -327,8 +327,8 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
   + Embed the video
 
 ```html
-<div id="div-video-container" style="width:640px; height:500px; position: relative;">
-    <video class="dce-video" playsinline="true" muted style="position:absolute;left:0;top:0;width:100%;height:100%;"></video>
+<div id="div-video-container" style="width:100%;height:100%;">
+    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;"></video>
 </div>
 <script>
     (async () => {
@@ -359,17 +359,17 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
 ```html
-<select class="dce-sel-camera" style="position:absolute;left:0;top:0;"></select>
+<select class="dce-sel-camera"></select>
 ```
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;"></select>
+<select class="dce-sel-resolution"></select>
 ```
 
 > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the library will then use it to show the actual resolution.
 
 ```html
-<select class="dce-sel-resolution" style="position:absolute;left:0;top:20px;">
+<select class="dce-sel-resolution">
     <option class="dce-opt-gotResolution" value="got"></option>
     <option data-width="1920" data-height="1080">1920x1080</option>
     <option data-width="1280" data-height="720">1280x720</option>
@@ -411,7 +411,9 @@ The following table is a list of supported browsers based on the above requireme
   Safari<sup>3</sup> | v11+
 
   <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+
   <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+  
   <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.

@@ -80,7 +80,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 
     >Note:
     >- Network connection is required for the license to work.
-    >- "DLS2***" is a default 7-day trial license used in the sample.
+    >- "DLS2***" is a default free public trial license used in the sample.
     >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
 
 2. Create an instance of Dynamsoft Label Recognizer

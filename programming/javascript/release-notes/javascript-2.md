@@ -10,6 +10,7 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+<!-->
 ## 2.2.1 (02/22/2022)
 
 ### ADDED
@@ -23,6 +24,7 @@ breadcrumbText: v2.x Release Notes
 
 * Renamed the template `visaMRZ_A` to `visaMRZ` and updated it to support both Format-A machine readable visas (MRV-A) and Format-B machine readable visas (MRV-B).
 * Improved the method `recognize()` to support `DCEFrame` objects.
+-->
 
 ## 2.2.0 (12/07/2021)
 

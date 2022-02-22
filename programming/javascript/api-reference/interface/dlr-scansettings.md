@@ -10,15 +10,24 @@ breadcrumbText: ScanSettings
 
 # ScanSettings
 
-`interface` ScanSettings
+Interface for scan behaviour customization.
 
-* intervalTime?: *number*
+## Attributes
 
-  > Scan interval used to allow the library to release the CPU periodically. Measured in ms.
+| Attribute | Type | 
+|---------- | ---- | 
+| [ `intervalTime` ](#intervaltime) | *number* |
+| [ `duplicateForgetTime` ](#duplicateforgettime) | *number* |
 
-* duplicateForgetTime?: *number*
+### intervalTime
 
-  > Ignore duplicated results found in the specified time period. Measured in ms.
+Scan interval used to allow the library to release the CPU periodically. Measured in ms.
+
+### duplicateForgetTime
+
+Ignore duplicated results found in the specified time period. Measured in ms.
+
+## Example Usage
 
 ```js
 let scanSettings = await recognizer.getScanSettings();

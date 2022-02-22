@@ -10,7 +10,7 @@ breadcrumbText: Point
 
 # Point
 
-Stores an x- and y-coordinate pair in two-dimensional space.
+Interface for the points used to represent a quadrilateral or reference region.
 
 ## Attributes
 

@@ -22,7 +22,6 @@ Interface that provides more info on the specific lines of a result returned by 
 | [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
 | [ `confidence` ](#confidence) | *number* |
 | [ `characterResults` ](#characterresults) | *[ `DLRCharacterResult` ](dlr-character-result.md)* |
-| [ `isCheckDigitMatched` ](#ischeckdigitmatched) | *bool* |
 
 <!--
 | [ `characterResultsCount` ](#characterresultscount) | *number* |-->
@@ -57,7 +56,3 @@ The character result count.
 ### characterResults
 
 The character results array.
-
-### isCheckDigitMatched
-
-Indicates whether this line of text has passed the check digit verificiation. If this line of text doesn't have a check digit, `null` is returned. Otherwise, it's either `true` or `false`.

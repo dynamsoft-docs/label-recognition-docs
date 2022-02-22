@@ -9,36 +9,36 @@ noTitleIndex: true
 
 # Overview of Dynamsoft Label Recognizer
 
-Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (Label). Common scenarios include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, etc. 
+Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (or a 'Label' in this context). Some common scenarios where a component like DLR can prove handy include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, and more.
 
-DLR powers your software development from the following aspects:
+DLR powers your software development through the following aspects:
 - Introduces the `Reference Region` feature to reduce the difficulty of specifying a Region of Interest (ROI).
 - Creates the `Inference Area` concept to effectively calculate the target label position by utilizing fixed relative position characteristics between text blocks, particularly for key-value pairs.
-- Innovates a text recognition engine that combines the advantages of Convolutional Neural Network (CNN) models and traditional image feature extraction.
+- Innovative text recognition engine that combines the advantages of Convolutional Neural Network (CNN) models and traditional image feature extraction.
 - Supports extensible regular expressions to improve the accuracy of text recognition.
-- Utilizes a variety of processing modes at different algorithm stages to maintain great scalability.
+- Utilizes a variety of processing modes at different stages of the algorithm to maintain great scalability.
 
 With DLR, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
 ## Key Features
 
 ### Reference Region 
-The `Reference Region` is an important feature of DLR. It can greatly enhance the ability to localize ROI. Generally, a label is not fixed in a certain position, but we could utilize some characteristic areas around the target label to locate it. The reference region may utilize the features such as foreground and background colours, straight lines, textures, or barcodes around the label.
+The `Reference Region` is the most important feature of DLR. Generally, a label is not fixed in a certain position, but we could utilize some characteristic areas around the target label to locate it. The reference region may utilize surrounding features such as foreground and background colours, straight lines, textures, or barcodes around the label in order to localize the Region of Interest (ROI).
 
 A reference region could be:
-- A predefined region with absolute or relative coordinates known in advance.
+- A pre-defined region based on absolute or relative coordinates known in advance.
 - A barcode region.
-- A pre-detect region according to the background colour, foreground colour, etc. 
+- A pre-detected region based on background colour, foreground colour, etc. 
 
-The position of a label (also called text area) is specified by percentage coordinates relative to the reference region. The relationship between the reference region and the label is shown in the figure below.
+The position of a label (also called the text area) is specified by percentage coordinates relative to the reference region. The relationship between the reference region and the label is shown in the figure below.
 <div align="center">
    <p><img src="assets/dlr_roi.png" alt="ROI definition" width="100%" /></p>
    <p>Figure 1 – ROI definition</p>
 </div> 
 
-On the left side of the above figure, the position of the reference region could be determined by the barcode. The barcode can be localized and recognized through [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/?urlsource=navigation). In addition, if there are multiple barcodes in an image, we can further determine the target barcode region by specifying the barcode formats and barcode text. 
+The left portion of Figure 1 above demonstrates how the position of the reference region can be determined by the barcode region. The barcode can be localized and recognized through [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/?urlsource=navigation). In addition, if there are multiple barcodes in an image, we can further determine the target barcode region by specifying the barcode format(s) and barcode text. 
 
-On the right side, the background colour of the reference region is specified as red, then DLR can automatically detect it through algorithms.
+On the right side, we demonstrate how the SDK is able to locate the reference region based on the background colour. In this case, DLR is told (via the API) that the background colour is red, and in turn it automatically determines the reference region through its algorithms.
 
 ### Inference Area
 
@@ -54,25 +54,39 @@ As shown in the figure below, the text blocks L0 and Label T1 inside the label T
 T0 is not only a label but also an inference area with appropriate inference parameters. DLR can find the text line L0 with the same vertical coordinate as T0, then calculate more accurate reference coordinates of the target label T1.
 
 ### Text recognition engine
-In order to obtain the most accurate and robust text recognition results, DLR has innovated a `text recognition engine`. It combines the advantages of CNN(Convolutional Neural Networks) models and traditional image feature extraction.
+DLR comes with an innovative `text recognition engine` that helps it obtain text recogntion results quickly and accurately. This feature combines the advantages of CNN (Convolutional Neural Networks) models and traditional image feature extraction.
 
-The text recognition engine of DLR supports one primary model and multiple auxiliary models. In the iterative recognition process, DLR will automatically select the smallest CNN-model according to the character sets. For example, if the text of a label contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results. Additionally, DLR also supports data set training in order to generate customized recognition models. In some cases, there may still be some misreading of certain characters. Then the traditional image features of each character will be captured to further distinguish.
+The text recognition engine of DLR supports one primary model and multiple auxiliary models. The primary model mainly covers uppercase and lowercase letters, numbers, arabic numerals, and few punctuation marks. The primary model is used by default when there is no character set specified in the parameters of DLR. 
+
+Usually, the smaller a set of characters is, the higher the recognition rate will be. In the iterative recognition process, DLR will automatically select the smallest CNN-model (**auxiliary model**) according to the character sets. If no set is specified, then DLR will go with the **primary model**. DLR takes an iterative approach to the recognition process, so once the initial recognition result is produced, DLR may divide the result string into a few parts, each part having a smaller character set than the other. DLR can then take advantage of these specific sets to improve the recognition rate by selecting suitable auxiliary models.
+
+One scenario would be a label that contains both numbers and letters, but only numbers in a certain position. If it is known by DLR and there is a number-only auxiliary model in the directories, DLR will automatically select the number-only model for best results.
+
+Additionally, DLR also supports data set training in order to generate customized recognition models. In some cases, there may still be some misreading of certain characters. Then the traditional image features of each character will be captured to further distinguish.
 
 ### Extensible Regular Expressions
-In order to improve the accuracy of text recognition, DLR supports `extensible regular expressions` to correct the misrecognized characters. Using the matching results, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Then DLR attempts to reduce the size of the candidate recognition character set as much as possible via the partial matching results. Finally, DLR will perform multiple iterations to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
+In order to improve text recognition accuracy, DLR supports `extensible regular expressions` to correct misrecognized characters. 
+
+Using the matching results, DLR will perform segment analysis to find out the exact position that does not match the regular expression. Afterwards, DLR attempts to reduce the size of the character set used for recognition as much as possible via the partial matching results. 
+
+Finally, DLR will perform multiple iterations to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
 
 ### Various processing modes
-In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm to maintain great scalability. For example, the `BinarizationModes` provides several image binarization methods; The `RegionPredetectionModes` provides different pre-detection methods for the reference region. These modes can be configured not only through API but also through a configuration template. Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
+In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm process to maintain great scalability. 
+
+For example, [`BinarizationModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-runtime-settings.html?ver=latest#binarizationmodes) provides several image binarization methods and [`RegionPredetectionModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-further-modes.html?ver=latest#regionpredetectionmodes) provides different pre-detection methods to help locate the reference region. 
+
+These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
 
 
 ## [Usage scenarios]({{ site.docFullPath }}/use-cases)
 
 ### VIN Scanning
-Vehicle Identification Numbers (VINs) are commonly used in the automotive industry for vehicles identification. With the help of DLR, users can identify any vehicle anywhere, anytime by scanning VINs.
+Vehicle Identification Numbers (VINs) are one of, if not the most important pieces of information commonly used in the automotive industry, usually for vehicle identification. With the help of DLR, users can identify any vehicle anywhere, anytime by scanning the VINs.
 
 ### Retail
-In retail, DLR ensures accurate price label recognition. Multiple price labels can be recognized accurately and quickly. Even when a barcode is damaged, the employees can make use of the label recognition feature to perform price verification.
+In retail, DLR can help ensure fast and accurate price label recognition, whether it's multiple price labels at a time or just one. DLR is not dependent on a price label's associated barcode like the Barcode Reader, so retail employees can still use the label recognition feature to perform price verification .
 
 ### Inventory and Warehouse Management
 Staff in a warehouse could utilize DLR for inventory management. Even if the barcodes are damaged, inventories can be easily recognized with the help of the accompanying text to make sure everything is in its place.
@@ -97,7 +111,7 @@ Accurate data capture helps to simplify banking processes, making them more effi
 
 ## Cross-Platform Programming Languages
 
-DLR is cross-platform. The core of DLR is written in C/C++ for performance. The library is wrapped for .NET, Java, and other programming languages so that users can use DLR on iOS, Android, Windows, and Linux. Below is a list of supported OSes and programming languages: 
+DLR is designed to be cross-platform. The core of DLR is written in C/C++ for performance. The library is wrapped for .NET, Java, and other programming languages so that users can use DLR on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages: 
 
 | OS            | Programming Language |
 |---------------|----------------------|

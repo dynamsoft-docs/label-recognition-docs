@@ -10,7 +10,7 @@ breadcrumbText: DLRRuntimeSettings
 
 # DLRRuntimeSettings
 
-Stores the recognized result.
+Interface for setting up the recognition process.
 
 ## Attributes
 

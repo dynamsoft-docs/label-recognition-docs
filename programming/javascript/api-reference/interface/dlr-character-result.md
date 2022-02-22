@@ -10,7 +10,7 @@ breadcrumbText: DLRCharacterResult
 
 # DLRCharacterResult
 
-Stores the line result.
+Interface that provides more info on the specific characters of a result returned by the recognizer.
 
 ## Attributes
 

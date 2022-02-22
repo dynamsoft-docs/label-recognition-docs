@@ -17,7 +17,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
-| [initLicense](#initlicense) | Use an alphanumeric string to specify the license. |
+| [license](#license) | Use an alphanumeric string to specify the license. |
 
 ## Create and Destroy Instances
 
@@ -34,15 +34,15 @@ The following methods and properties help with the initialization of the library
 | [engineResourcePath](#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [getVersion](#getversion) | Returns the version of the library. |
+| [getVersion()](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
-## initLicense
+## license
 
 Use an alphanumeric string to specify the license. Note that the method must be called before `createInstance()` and `loadWasm()` .
 
 ```typescript
-static initLicense(license: string): void;
+static license: string;
 ```
 
 **Parameters**

@@ -73,7 +73,7 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
-When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-MRZ` to read the MRZ on passports with a camera.
 
 **Return value**
 

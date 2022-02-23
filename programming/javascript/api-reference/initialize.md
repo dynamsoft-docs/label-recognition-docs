@@ -69,7 +69,7 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 | `letter` | For pure English letter recognition. |
 | `passportMRZ` | For recognition of the machine-readable zones on passports. |
 | `visaMRZ` | For recognition of the machine-readable zones on visas. |
-| `MRZ` | For recognition of the machine-readable zones passports visas and IDs. |
+| `MRZ` | For recognition of the machine-readable zones on passports, visas and IDCards. |
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
@@ -83,9 +83,9 @@ A promise resolving to the created `LabelRecognizer` object.
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
+    runtimeSettings: "video-MRZ"
 });
-recognizer.startScanning();
+await recognizer.startScanning();
 ```
 
 ## destroyContext
@@ -93,7 +93,7 @@ recognizer.startScanning();
 Destroys the `LabelRecognizer` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroyContext(): void
 ```
 
 **Parameters**
@@ -165,7 +165,7 @@ static isWasmLoaded(): boolean
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
-Only valid after [loadWasm](#loadwasm) has been called.
+The engine version only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
 readonly static getVersion(): string
@@ -175,8 +175,10 @@ readonly static getVersion(): string
 
 ```js
 console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
+// loading...(JS 2.2.0.20211011)
 await Dynamsoft.DLR.LabelRecognizer.loadWasm();
 console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
+// 2.2.0.11051(JS 2.2.0.20211011)
 ```
 
 ## detectEnvironment
@@ -191,5 +193,6 @@ static detectEnvironment(): Promise<any>
 
 ```js
 console.log(Dynamsoft.DLR.LabelRecognizer.detectEnvironment());
-// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
+// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, 
+// "browser":"Chrome", "version":90, "OS":"Windows"}
 ```

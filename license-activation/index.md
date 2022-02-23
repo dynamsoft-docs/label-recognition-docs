@@ -11,7 +11,7 @@ breadcrumbText: License Initialization
 
 ## Get a trial key
 
-- A 7-day public trial key is available for every new device for first use of Dynamsoft Label Recognizer. The public trial key is the default key used in samples. You can also find the public trial key on the following parts of this page.
+- A free public trial license is available for every new device for first use of Dynamsoft Label Recognizer. The public trial license is the default key used in samples. You can also find the public trial license on the following parts of this page.
 - If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
 ## Get a full license
@@ -20,12 +20,12 @@ breadcrumbText: License Initialization
 
 ## Initialize the license
 
-The following code snippets are using the public trial key to initialize the license. You can replace the public trial key with your own license key.
+The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
 
 **JavaScript Code Snippet**
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
+Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9";
 ```
       
 **Android Java Code Snippet**

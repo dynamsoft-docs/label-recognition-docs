@@ -331,7 +331,7 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 | `letter` | For pure English letter recognition. |
 | `passportMRZ` | For recognition of the machine-readable zones on passports. |
 | `visaMRZ` | For recognition of the machine-readable zones on visas. |
-| `MRZ` | For recognition of the machine-readable zones passports visas and IDs. |
+| `MRZ` | For recognition of the machine-readable zones on passports, visas and IDCards. |
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 

@@ -17,7 +17,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
-| [initLicense](#initlicense) | Use an alphanumeric string to specify the license. |
+| [license](#license) | Use an alphanumeric string to specify the license. |
 
 ## Create and Destroy Instances
 
@@ -34,20 +34,16 @@ The following methods and properties help with the initialization of the library
 | [engineResourcePath](#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [getVersion](#getversion) | Returns the version of the library. |
+| [getVersion()](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
-## initLicense
+## license
 
-Use an alphanumeric string to specify the license. Note that the method must be called before `createInstance()` and `loadWasm()` .
+Use an alphanumeric string to specify the license. Note that the license must be specified before the methods `createInstance()` and `loadWasm()` .
 
 ```typescript
-static initLicense(license: string): void;
+static license: string;
 ```
-
-**Parameters**
-
-`license` : An alphanumeric string that specifies the license.
 
 ## createInstance
 
@@ -69,11 +65,11 @@ static createInstance(config?: any): Promise<LabelRecognizer>
 | `letter` | For pure English letter recognition. |
 | `passportMRZ` | For recognition of the machine-readable zones on passports. |
 | `visaMRZ` | For recognition of the machine-readable zones on visas. |
-| `MRZ` | For recognition of the machine-readable zones passports visas and IDs. |
+| `MRZ` | For recognition of the machine-readable zones on passports, visas and IDCards. |
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
-When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-MRZ` to read the MRZ on passports with a camera.
 
 **Return value**
 
@@ -83,9 +79,9 @@ A promise resolving to the created `LabelRecognizer` object.
 
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
+    runtimeSettings: "video-MRZ"
 });
-recognizer.startScanning();
+await recognizer.startScanning();
 ```
 
 ## destroyContext
@@ -93,7 +89,7 @@ recognizer.startScanning();
 Destroys the `LabelRecognizer` instance. If your page needs to create a new instance from time to time, don't forget to destroy unused old instances.
 
 ```typescript
-destroyContext(): Promise<void>
+destroyContext(): void
 ```
 
 **Parameters**
@@ -165,7 +161,7 @@ static isWasmLoaded(): boolean
 
 Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
 
-Only valid after [loadWasm](#loadwasm) has been called.
+The engine version only valid after [loadWasm](#loadwasm) has been called.
 
 ```typescript
 readonly static getVersion(): string
@@ -175,8 +171,10 @@ readonly static getVersion(): string
 
 ```js
 console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
+// loading...(JS 2.2.0.20211011)
 await Dynamsoft.DLR.LabelRecognizer.loadWasm();
 console.log(Dynamsoft.DLR.LabelRecognizer.getVersion());
+// 2.2.0.11051(JS 2.2.0.20211011)
 ```
 
 ## detectEnvironment
@@ -191,5 +189,6 @@ static detectEnvironment(): Promise<any>
 
 ```js
 console.log(Dynamsoft.DLR.LabelRecognizer.detectEnvironment());
-// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
+// {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, 
+// "browser":"Chrome", "version":90, "OS":"Windows"}
 ```

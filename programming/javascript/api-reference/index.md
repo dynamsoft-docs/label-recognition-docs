@@ -29,7 +29,7 @@ for (let result of results) {
 
 ```js
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
+    runtimeSettings: "video-MRZ"
 });
 labelRecognizer.onFrameRead = results => {
     for (let result of results) {
@@ -52,7 +52,7 @@ The following static methods and properties help to set up the runtime environme
 | [engineResourcePath](initialize.md#engineresourcepath) | Specifies the path from where the recognition engine and models, etc. can be loaded. |
 | [loadWasm()](initialize.md#loadwasm) | Loads the recognition engine and models. |
 | [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
-| [getVersion](initialize.md#getversion) | Returns the version of the library. |
+| [getVersion()](initialize.md#getversion) | Returns the version of the library. |
 | [detectEnvironment()](initialize.md#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
 
 ### Create and Destroy Instances
@@ -73,8 +73,8 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [getUIElement](ui.md#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
-| [setUIElement](ui.md#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
+| [getUIElement()](ui.md#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
+| [setUIElement()](ui.md#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
 | [defaultUIElementURL](ui.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [lineFillStyle](ui.md#linefillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
 | [lineStrokeStyle](ui.md#linestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
@@ -114,8 +114,8 @@ The following static methods and properties help to set up the runtime environme
 | [soundOnSuccessfullRead](settings.md#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
 | [whenToVibrateforSuccessfulRead](settings.md#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
 | [vibrateDuration](settings.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
-| [getScanSettings](settings.md#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](settings.md#updatescansettings) | Changes scan settings with the object passed in. |
+| [getScanSettings()](settings.md#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](settings.md#updatescansettings) | Changes scan settings with the object passed in. |
 
 ### Runtime Settings
 

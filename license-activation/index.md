@@ -25,7 +25,7 @@ The following code snippets are using the public trial license to initialize the
 **JavaScript Code Snippet**
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
+Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9";
 ```
       
 **Android Java Code Snippet**

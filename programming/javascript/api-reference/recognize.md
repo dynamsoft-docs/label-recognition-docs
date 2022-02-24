@@ -151,7 +151,7 @@ for (let result of results) {
 
 ## recognizeBuffer
 
-Recognizes labels from raw image data.
+Recognizes labels from raw image data. It is an advanced API, if you don't know what you are doing, use [recognize](#recognize) instead. 
 
 ```typescript
 recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<DLRResult[]>
@@ -159,11 +159,30 @@ recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedA
 
 **Parameters**
 
-`buffer` : specifies the image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+
+`width`: image width.
+
+`height`: image height.
+
+`stride`: `image-width * pixel-byte-length`.
+
+`format`: pixel format.
 
 **Return value**
 
 A promise resolving to a `DLRResult` object that contains all the label results found in this image.
+
+**Code snippet**
+
+```js
+let results = await reader.recognizeBuffer(u8RawImage, 1280, 720, 1280 * 4, DLR.EnumDLRImagePixelFormat.IPF_ABGR_8888);
+for (let result of results) {
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
+    }
+}
+```
 
 **See also**
 

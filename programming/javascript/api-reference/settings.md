@@ -26,8 +26,8 @@ breadcrumbText: Settings APIs
 
 | API Name | Description |
 |---|---|
-| [updateRuntimeSettingsFromString()](#appendsettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
-| [outputSettingsToString()](#outputsettingstostring) | Output the current runtime settings to a JSON string. |
+| [updateRuntimeSettingsFromString()](#appendruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
+| [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Output the current runtime settings to a JSON string. |
 | [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type `DLR_LST_BARCODE`. |
 
 <!--| [getRuntimeSettings()](#getruntimesettings) | Returns the current runtime settings. |
@@ -55,7 +55,7 @@ whenToPlaySoundforSuccessfulRead: (boolean | string)
 
 **Default value**
 
- `false`
+ `never`
 
 **Code Snippet**
 
@@ -99,7 +99,7 @@ whenToVibrateforSuccessfulRead: (boolean | string)
 
 **Default value**
 
- `false`
+ `never`
 
 **Code Snippet**
 
@@ -129,10 +129,6 @@ Returns the current scan settings.
 ```typescript
 getScanSettings(): Promise<ScanSettings>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -190,10 +186,6 @@ Returns the current runtime settings.
 getRuntimeSettings(): Promise<RuntimeSettings>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
 A promise resolving to a `RuntimeSettings` object that contains the settings for label recognizing.
@@ -245,10 +237,6 @@ Resets all parameters to default values.
 ```typescript
 resetRuntimeSettings(): Promise<void>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -335,11 +323,11 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 | `VIN` | For VIN (vehicle identification number) recognition. |
 | `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
 
-When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
+When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-MRZ` to read the MRZ with a camera.
 
 **Return value**
 
-A promise resolving to the created `LabelRecognizer` object.
+A promise that resolves when the operation succeeds.
 
 **Return value**
 
@@ -352,10 +340,6 @@ Output the current runtime settings to a JSON string.
 ```typescript
 outputRuntimeSettingsToString(): Promise<string>;
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 
@@ -421,10 +405,6 @@ Erases all CharacterModels.
 ```typescript
 eraseAllCharacterModels(): Promise<void>
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 

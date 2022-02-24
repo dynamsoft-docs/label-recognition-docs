@@ -63,11 +63,11 @@ The complete code of the "Hello World" example is shown below
             Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
                 console.log("Loading " + resourcePath);
                 // Show a visual cue that a model file is being 
-            }
+            };
             Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
                 console.log("Finished loading " + resourcePath);
                 // Hide the visual cue
-            }
+            };
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
                 runtimeSettings: "video-letter"
             });

@@ -17,7 +17,7 @@ Once integrated, your users can open your website in a browser, access their cam
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-[TEST THE LIBRARY](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
+[GET THE LIBRARY](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
 
 **Table of Contents**
 
@@ -53,14 +53,21 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
         (async () => {
             Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
             let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-
+            Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
+                console.log("Loading " + resourcePath);
+                // Show a visual cue that a model file is being 
+            }
+            Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
+                console.log("Finished loading " + resourcePath);
+                // Hide the visual cue
+            }
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
                 runtimeSettings: "video-letter"
             });
@@ -85,19 +92,27 @@ The complete code of the "Hello World" example is shown below
 
 <p align="center" style="text-align:center; ">
   <!--<a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github">
+
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;">
+
   </a>
-  &nbsp;-->
+  &nbsp; -->
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/" title="Run via JSFiddle">
+
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" style="width:20px;height:20px;">
+
   </a>
-  <!--&nbsp;
+  <!--&nbsp; 
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft">
+
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;">
+
   </a>
-  &nbsp;
+  &nbsp; 
   <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft">
+
     <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px; ">
+
   </a>-->
 </p>
 
@@ -206,7 +221,7 @@ The library requires a license to work, use the API `license` to specify the lic
 
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.license =
-  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
+    "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
 ```
 
 *Note*:
@@ -228,16 +243,16 @@ Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/
 
 #### Add a visual cue about the loading of a .data file
 
-The .data files are crucial for the recognition of certain types of text. For example, to read the MRZ zone on passports, the file MRZ.data must be loaded first. These .data files are loaded from the server on demand at runtime. At present, these files are quite large, for example, MRZ.data is about 10MB. Although these files are cached locally as soon as they are downloaded, loading them for the first time can be quite time-consuming. To make the process user-friendly, it's recommended to show a visual cue about the loading process to the user with the help of the APIs `onResourcesLoadStarted` and `onResourcesLoaded`:
+The .data files are crucial for the recognition of certain types of text. For example, to read the MRZ zone on passports, the file MRZ.data must be loaded first. These .data files are loaded from the server on demand at runtime. At present, these files are quite large, for example, MRZ.data is about 10MB. Although these files are cached locally as soon as they are downloaded, loading them for the first time can be quite time-consuming. To make the process user-friendly, it's recommended to show a visual cue about the loading process to the user with the help of the APIs `onResourcesLoadStarted` and `onResourcesLoaded` :
 
 ```js
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
-  console.log("Loading " + resourcePath);
-  // Show a visual cue that a model file is being 
+    console.log("Loading " + resourcePath);
+    // Show a visual cue that a model file is being 
 }
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
-  console.log("Finished loading " + resourcePath);
-  // Hide the visual cue
+    console.log("Finished loading " + resourcePath);
+    // Hide the visual cue
 }
 recognizer.updateRuntimeSettingsFromString("passportMRZ");
 ```
@@ -409,7 +424,7 @@ After that, if you want to evaluate the library further, you can [register for a
 
 This library requires the following features which are supported by all modern mainstream browsers:
 
-* `WebAssembly`, `Blob`, `URL`/`createObjectURL`,  `Web Workers`  
+* `WebAssembly`,   `Blob`,   `URL`/`createObjectURL`,  `Web Workers`  
 
   The above four features are required for the library to work.
 

@@ -217,13 +217,29 @@ Dynamsoft.DLR.LabelRecognizer.license =
 
 #### Specify the location of the "engine" files
 
-The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library file (dlr.js). However, in cases where the engine files are not in the same location as the main library file (for example, with frameworks like Angular or React, dlr.js is compiled into another file), this configuration will be required.
+The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime as well as model files (\*.data) which are necessary for the recognition of specific types of text. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library file (dlr.js). However, in cases where the engine files are not in the same location as the main library file (for example, with frameworks like Angular or React, dlr.js is compiled into another file), this configuration will be required.
 
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
+```
+
+#### Add a visual cue about the loading of a .data file
+
+The .data files are crucial for the recognition of certain types of text. For example, to read the MRZ zone on passports, the file MRZ.data must be loaded first. These .data files are loaded from the server on demand at runtime. At present, these files are quite large, for example, MRZ.data is about 10MB. Although these files are cached locally as soon as they are downloaded, loading them for the first time can be quite time-consuming. To make the process user-friendly, it's recommended to show a visual cue about the loading process to the user with the help of the APIs `onResourcesLoadStarted` and `onResourcesLoaded`:
+
+```js
+Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
+  console.log("Loading " + resourcePath);
+  // Show a visual cue that a model file is being 
+}
+Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
+  console.log("Finished loading " + resourcePath);
+  // Hide the visual cue
+}
+recognizer.updateRuntimeSettingsFromString("passportMRZ");
 ```
 
 ### Interact with the library
@@ -263,9 +279,9 @@ In some cases, a different camera might be required instead of the default one. 
 
 ```javascript
 // set which camera and what resolution to use
-let allCameras = await enhancer.getAllCameras();
-await enhancer.selectCamera(allCameras[0]);
-await enhancer.setResolution(1280, 720);
+let allCameras = await cameraEnhancer.getAllCameras();
+await cameraEnhancer.selectCamera(allCameras[0]);
+await cameraEnhancer.setResolution(1280, 720);
 ```
 
 #### Set up the recognition process
@@ -317,8 +333,8 @@ Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
 ```
 
 ```javascript
-await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-document.getElementById('recognizerUI').appendChild(enhancer.getUIElement());
+await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+document.getElementById('recognizerUI').appendChild(cameraEnhancer.getUIElement());
 document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
 ```
 

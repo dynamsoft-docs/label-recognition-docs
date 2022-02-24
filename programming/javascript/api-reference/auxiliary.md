@@ -66,13 +66,13 @@ document.body.append(recognizer.getOriginalImageInACanvas());
 This event is triggered when the resource file (.data) for a particular template starts to load.
 
 ```typescript
-onResourcesLoadStarted = (resourcePath: string) => {};
+static onResourcesLoadStarted = (resourcePath: string) => {};
 ```
 
 **Code snippet**
 
 ```js
-onResourcesLoadStarted = (resourcePath) => {
+Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
   console.log("Loading " + resourcePath);
 }
 recognizer.updateRuntimeSettingsFromString("passportMRZ");
@@ -83,13 +83,13 @@ recognizer.updateRuntimeSettingsFromString("passportMRZ");
 This event is triggered when the resource file (.data) for a particular template finishes loading.
 
 ```typescript
-onResourcesLoaded = (resourcePath: string) => {};
+static onResourcesLoaded = (resourcePath: string) => {};
 ```
 
 **Code snippet**
 
 ```js
-onResourcesLoaded = (resourcePath) => {
+Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
   console.log("Finished loading " + resourcePath);
 }
 recognizer.updateRuntimeSettingsFromString("passportMRZ");

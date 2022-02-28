@@ -39,10 +39,44 @@ The following methods and properties help with the initialization of the library
 
 ## license
 
-Use an alphanumeric string to specify the license. Note that the license must be specified before the methods `createInstance()` and `loadWasm()` .
+<!--Use an alphanumeric string to specify the license. Note that the license must be specified before the methods `createInstance()` and `loadWasm()` .-->
+
+An online license or an offline license can be set here. Most license formats are supported. Dynamsoft usually provides an online license. 
+
+`license` needs to be set before `createInstance()` or `loadWasm()`.
 
 ```typescript
-static license: string;
+static license: string
+```
+
+> Note:
+>
+> **Handshake Code and Organization ID**
+>
+> When you are using the online licenses, the license items can't be used directly. You need to use either a "Handshake Code" or an "Organization ID" instead.
+> 
+> The "Handshake Code" refers to an array of license items. When an "Handshake Code" is set, these license items will be consumed in a preset order.
+>
+> When an  "Organization ID" is set, the default "Handshake Code" of the "Organization ID" will be used.
+>
+> Generally, the first "Handshake Code" ever created for an organization is the default one. However, you can always configure another "Handshake Code" as the default.
+>
+> "Handshake Codes" can be configured in the [customer portal](https://www.dynamsoft.com/lts/#/handshakeCodes).
+
+
+**Code Snippet**
+
+```js
+Dynamsoft.DLR.LabelRecognizer.license =
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING";
+let scanner = await Dynamsoft.DLR.LabelRecognizer.createInstance();
+```
+
+For convenience, you can even set `license` in the `script` tag.
+
+```html
+<script src="/dist/dlr.js" data-license=
+  "YOUR-ORGANIZATION-ID or YOUR-HANDSHAKECODE or AN-OFFLINE-LICENSE or ANY-OTHER-TYPE-OF-SUPPORTED-LICENSE-STRING"></script>
 ```
 
 ## createInstance
@@ -91,10 +125,6 @@ Destroys the `LabelRecognizer` instance. If your page needs to create a new inst
 ```typescript
 destroyContext(): void
 ```
-
-**Parameters**
-
-None.
 
 **Return value**
 

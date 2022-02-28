@@ -13,8 +13,8 @@ breadcrumbText: UI Control
 
 | API Name | Description |
 |---|---|
-| [getUIElement](#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
-| [setUIElement](#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
+| [getUIElement()](#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
+| [setUIElement()](#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
 | [defaultUIElementURL](#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
 | [lineFillStyle](#linefillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
 | [lineStrokeStyle](#linestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
@@ -55,7 +55,7 @@ A promise that resolves when the operation succeeds.
 <video class="dce-video" playsinline="true"></video>
 <script>
     let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video-passportMRZ"
+        runtimeSettings: "video-MRZ"
     });
     await recognizer.setUIElement(document.getElementsByClassName("dce-video")[0]);
     await recognizer.startScanning();
@@ -66,7 +66,7 @@ A promise that resolves when the operation succeeds.
 <!-- Use the default official UI element definition -->
 <script>
     let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video-passportMRZ"
+        runtimeSettings: "video-MRZ"
     });
     await recognizer.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.0.0/dist/dlr.ui.html");
     await recognizer.startScanning();
@@ -85,9 +85,9 @@ static defaultUIElementURL: string
 
 ```js
 // Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.ui.html";
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.cameraEnhancer = enhancer;
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = cameraEnhancer;
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video-passportMRZ"
 });

@@ -22,14 +22,21 @@ breadcrumbText: License Initialization
 
 The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
 
-**JavaScript Code Snippet**
-
+<div class="sample-code-prefix"></div>
+>- JavaScript
+>- Java-Android
+>- Objective-C
+>- Swift
+>- C
+>- C++
+>- C#
+>- Java
+>
+>1. 
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9";
-```
-      
-**Android Java Code Snippet**
-
+```     
+2. 
 ```java
 LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRLicenseVerificationListener() {
     @Override
@@ -40,12 +47,9 @@ LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRL
     }
 });
 ```
-
-**iOS Objective-C Code Snippet**
-
+3. 
 ```objc
 [DynamsoftLabelRecognizer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-
 - (void)DLRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     if(!isSuccess && error != nil){
         NSString* msg = error.userInfo[NSUnderlyingErrorKey];
@@ -53,12 +57,9 @@ LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRL
     }
 }
 ```
-
-**iOS Swift Code Snippet**
-
+4. 
 ```swift
 DynamsoftLabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
-
 func dlrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
     if(!isSuccess && error != nil){
         let err = error as NSError?
@@ -67,31 +68,22 @@ func dlrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
     }
 }
 ```
-
-**Java Code Snippet**
-
-```java
-LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
-```
-    
-**C# Code Snippet**
-
-```csharp
-LabelRecognizer.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
-```
-    
-**C Code Snippet**
-
+5. 
 ```c
 char errorMessage[256];
 DLR_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
 ```
-
-**C++ Code Snippet**
-
+6. 
 ```cpp
 char errorMessage[256];
 CLabelRecognizer::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+```   
+7. 
+```csharp
+LabelRecognizer.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
 ```
-
+8. 
+```java
+LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
+```
 

@@ -75,7 +75,7 @@ static onResourcesLoadStarted = (resourcePath: string) => {};
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
   console.log("Loading " + resourcePath);
 }
-recognizer.updateRuntimeSettingsFromString("passportMRZ");
+recognizer.updateRuntimeSettingsFromString("MRZ");
 ```
 
 ## onResourcesLoaded
@@ -92,5 +92,5 @@ static onResourcesLoaded = (resourcePath: string) => {};
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
   console.log("Finished loading " + resourcePath);
 }
-recognizer.updateRuntimeSettingsFromString("passportMRZ");
+recognizer.updateRuntimeSettingsFromString("MRZ");
 ```

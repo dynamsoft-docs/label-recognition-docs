@@ -46,7 +46,7 @@ recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray |
 
 **Return value**
 
-A promise resolving to a `DLRResult` object that contains all the label results found in this image.
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -101,7 +101,7 @@ recognizeBase64String(base64Str: string): Promise<DLRResult[]>
 
 **Return value**
 
-A promise resolving to a `DLRResult` object that contains all the label results found in this image.
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -132,7 +132,7 @@ recognizeUrl(url: string): Promise<DLRResult[]>
 
 **Return value**
 
-A promise resolving to a `DLRResult` object that contains all the label results found in this image.
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -151,7 +151,7 @@ for (let result of results) {
 
 ## recognizeBuffer
 
-Recognizes labels from raw image data.
+Recognizes labels from raw image data. It is an advanced API, if you don't know what you are doing, use [recognize](#recognize) instead. 
 
 ```typescript
 recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray, width: number, height: number, stride: number, format: EnumImagePixelFormat): Promise<DLRResult[]>
@@ -159,11 +159,30 @@ recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedA
 
 **Parameters**
 
-`buffer` : specifies the image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+`buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
+
+`width`: image width.
+
+`height`: image height.
+
+`stride`: `image-width * pixel-byte-length`.
+
+`format`: pixel format.
 
 **Return value**
 
-A promise resolving to a `DLRResult` object that contains all the label results found in this image.
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
+
+**Code snippet**
+
+```js
+let results = await reader.recognizeBuffer(u8RawImage, 1280, 720, 1280 * 4, DLR.EnumDLRImagePixelFormat.IPF_ABGR_8888);
+for (let result of results) {
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
+    }
+}
+```
 
 **See also**
 
@@ -182,6 +201,7 @@ A promise resolving to a `DLRResult` object that contains all the label results 
 
 This event is triggered when a new, unduplicated label is found.
 
+<!--TODO: result format may not right-->
 ```typescript
 onUniqueRead: (txt: string, results: DLRLineResult[]) => void
 ```
@@ -203,11 +223,6 @@ await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
-    for (let result of results) {
-        for (let lineResult of result.lineResults) {
-            console.log(lineResult.text);
-        }
-    }
 }
 recognizer.startScanning(true);
 ```
@@ -259,13 +274,9 @@ Scans the current frame of the video for barcodes.
 recognizeCurrentFrame(): Promise<DLRResult[]>
 ```
 
-**Parameters**
-
-None.
-
 **Return value**
 
-A promise resolving to a `DLRResult` object that contains all the label results found in this frame.
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this frame.
 
 **Code Snippet**
 
@@ -356,10 +367,6 @@ stopScanning(hideUI?: boolean): void;
 **Parameters**
 
 `hideUI` : this parameter specifies how to handle the UI that comes with the bound CameraEnhancer instance. When set to true, if the UI doesn't exist in the DOM tree or it exists but is hidden, nothing is done; if the UI already exists in the DOM tree and is shown, it'll be hidden. When not set or set to false, it means not to change the original state of that UI: if it doesn't exist in the DOM tree, nothing happens; if it exists in the DOM tree, it may or may not be hidden depending on its original state.
-
-**Return value**
-
-None.
 
 **Code Snippet**
 

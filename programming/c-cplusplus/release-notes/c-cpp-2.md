@@ -8,6 +8,14 @@ needAutoGenerateSidebar: false
 
 # Release Notes - C/C++ 2.x
 
+## 2.2.2 (03/03/2022)
+
+### Changelog
+#### Fixed 
+
+- Fixed a bug that might cause incorrect regular expression matching. 
+- Fixed a bug that might output incorrect MRZ results. 
+
 ## 2.2 (11/30/2021)
 
 ### Highlights

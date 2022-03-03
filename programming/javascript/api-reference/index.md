@@ -147,7 +147,7 @@ The following static methods and properties help to set up the runtime environme
 | [ifSaveOriginalImageInACanvas](auxiliary.md#ifsaveoriginalimageinacanvas) | Whether to save the original image into a &lt; canvas&gt; element. |
 | [getOriginalImageInACanvas()](auxiliary.md#getoriginalimageinacanvas) | Returns an `HTMLCanvasElement` that holds the original image. |
 | [onResourcesLoadStarted](auxiliary.md#onresourcesloadstarted) | This event is triggered when the resource file (.data) for a particular template starts to load. |
-| [onResourcesLoadProgress](#onresourcesloadprogress) | This event is triggered multiple times when the resource file (.data) for a particular template is being loaded. |
+| [onResourcesLoadProgress](auxiliary.md#onresourcesloadprogress) | This event is triggered multiple times when the resource file (.data) for a particular template is being loaded. |
 | [onResourcesLoaded](auxiliary.md#onresourcesloaded) | This event is triggered when the resource file (.data) for a particular template finishes loading. |
 
 ## Interfaces and Enumerations

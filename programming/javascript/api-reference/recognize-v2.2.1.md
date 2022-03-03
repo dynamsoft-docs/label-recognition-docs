@@ -25,7 +25,6 @@ breadcrumbText: Recognition APIs
 | API Name | Description |
 |---|---|
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
@@ -162,13 +161,13 @@ recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedA
 
 `buffer` : specifies the raw image represented by a `Uint8Array` , `Uint8ClampedArray` , `ArrayBuffer` , `Blob` or `Buffer` object.
 
-`width` : image width.
+`width`: image width.
 
-`height` : image height.
+`height`: image height.
 
-`stride` : `image-width * pixel-byte-length` .
+`stride`: `image-width * pixel-byte-length`.
 
-`format` : pixel format.
+`format`: pixel format.
 
 **Return value**
 
@@ -203,47 +202,13 @@ for (let result of results) {
 This event is triggered when a new, unduplicated label is found.
 
 <!--TODO: result format may not right-->
-
 ```typescript
-onUniqueRead: (txt: string, result: DLRLineResult) => void
+onUniqueRead: (txt: string, results: DLRLineResult[]) => void
 ```
 
 **Arguments**
 
-`txt` : a string that holds the label text (one single line). 
-
-`result` : a `DLRLineResult` object that contains more detailed info about the returned text.
-
-**Code Snippet**
-
-```javascript
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-numberLetter"
-});
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.cameraEnhancer = enhancer;
-recognizer.onUniqueRead = (txt, result) => {
-    console.log(txt);
-}
-recognizer.startScanning(true);
-```
-
-**See also**
-
-* [DLRLineResult](./interface/dlr-line-result.md)
-
-## onMRZRead
-
-This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
-
-```typescript
-onMRZRead: (txt: string, results: DLRLineResult[]) => void
-```
-
-**Arguments**
-
-`txt` : a string that holds the multi-line text result from a machine-readable zone. 
+`txt` : a string that holds the label text. 
 
 `results` : one or more `DLRLineResult` object(s) that contains more detailed info about the returned text.
 
@@ -251,12 +216,12 @@ onMRZRead: (txt: string, results: DLRLineResult[]) => void
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-MRZ"
+    runtimeSettings: "video-passportMRZ"
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.cameraEnhancer = enhancer;
-recognizer.onMRZRead = (txt, results) => {
+recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
 }
 recognizer.startScanning(true);

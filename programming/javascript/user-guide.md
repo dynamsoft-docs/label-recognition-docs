@@ -53,7 +53,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
@@ -149,6 +149,8 @@ If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contac
 
 ## Building your own page
 
+We'll show all the steps required to build a web page for reading machine-readable zones (MRZ) on passports, visas, etc.
+
 ### Include the library
 
 #### Use a CDN
@@ -158,14 +160,14 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.1/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
 <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
@@ -191,15 +193,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer@2.2.1 --save
+$ npm install dynamsoft-label-recognizer@2.2.2 --save
 $ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.1/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.1/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.2/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.2/dce/dist/dce.js"></script>
 ```
 
 or
@@ -237,24 +239,27 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
 #### Add a visual cue about the loading of a .data file
 
-The .data files are crucial for the recognition of certain types of text. For example, to read the MRZ zone on passports, the file MRZ.data must be loaded first. These .data files are loaded from the server on demand at runtime. At present, these files are quite large, for example, MRZ.data is about 10MB. Although these files are cached locally as soon as they are downloaded, loading them for the first time can be quite time-consuming. To make the process user-friendly, it's recommended to show a visual cue about the loading process to the user with the help of the APIs `onResourcesLoadStarted` and `onResourcesLoaded` :
+The .data files are crucial for the recognition of certain types of text. For example, to read the MRZ zone on passports, the file MRZ.data must be loaded first. These .data files are loaded from the server on demand at runtime. At present, these files are quite large, for example, MRZ.data is about 10MB. Although these files are cached locally as soon as they are downloaded, loading them for the first time can be quite time-consuming. To make the process user-friendly, it's recommended to show a visual cue about the loading process to the user with the help of the APIs `onResourcesLoadStarted`, `onResourcesLoadProgress` and `onResourcesLoaded` :
 
 ```js
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
     console.log("Loading " + resourcePath);
     // Show a visual cue that a model file is being 
 }
+Dynamsoft.DLR.LabelRecognizer.onResourcesLoadProgress = (resourcePath, progress) => {
+    console.log(resourcePath + "loading progress: " + progress.loaded + "/" + progress.total);
+    // Show the progress
+}
 Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
     console.log("Finished loading " + resourcePath);
     // Hide the visual cue
 }
-recognizer.updateRuntimeSettingsFromString("passportMRZ");
 ```
 
 ### Interact with the library
@@ -266,9 +271,7 @@ To use the library, we first create a `LabelRecognizer` object.
 ```javascript
 let recognizer = null;
 try {
-    recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-        runtimeSettings: "video-letter"
-    });
+    recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 } catch (ex) {
     console.error(ex);
 }
@@ -365,10 +368,9 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
     (async () => {
         let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
-        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-            runtimeSettings: "video-passportMRZ"
-        });
+        let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
         recognizer.cameraEnhancer = cameraEnhancer;
+        await recognizer.updateRuntimeSettingsFromString("video-MRZ");
         recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {
@@ -376,7 +378,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
                 }
             }
         };
-        recognizer.onUniqueRead = (txt, results) => {
+        recognizer.onMRZRead = (txt, results) => {
             alert(txt);
         };
         await recognizer.startScanning(true);

@@ -10,6 +10,17 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+## 2.2.2 (03/03/2022)
+
+### ADDED
+
+* Added event `onResourcesLoadProgress` which is triggered multiple times when the resource file for a particular template is beling loaded.
+* Added event `onMRZRead` which is triggered when a frame gets read successfully with the  built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+
+### CHANGED
+
+* Changed event `onUniqueRead` to return only the result of one line.
+
 ## 2.2.1 (02/23/2022)
 
 ### ADDED

@@ -29,7 +29,7 @@ needAutoGenerateSidebar: false
 
 - Added the following error codes: [`DLRERR_TIFF_READ_FAILED`]({{ site.enumerations }}error-code.html) , [`DLRERR_PDF_READ_FAILED`]({{ site.enumerations }}error-code.html) and [`DLRERR_PDF_DLL_MISSING`]({{ site.enumerations }}error-code.html). These error codes will be returned when the recognizer fails to read a TIFF file, a PDF file, or if the PDF DLL is missing, respectively.
 
-- Added a new property [`PageNumber`]({{ site.dotnet-structs }}dlr-result.html#pagenumber) to `DLR_Result` to identify the page on which the result is located.
+- Added a new property [`PageNumber`]({{ site.dotnet_api }}dlr-result.html#pagenumber) to `DLR_Result` to identify the page on which the result is located.
 
 - Added parameters `TextStringLengthRange` and `LineStringLengthRange` that can be used to define the minimum and maximum string length when running the recognition process on a text area or a specific line, respectively. They are available as:
   - [`LabelRecognitionParameter.TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textstringlengthrange)

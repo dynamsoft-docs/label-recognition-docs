@@ -44,7 +44,7 @@ needAutoGenerateSidebar: false
 - Modified the parameter type of the method [`UpdateReferenceRegionFromBarcodeResults`]({{site.dotnet_api}}label-recognizer.html#updatereferenceregionfrombarcoderesults) from `TextResult[]` to `BarcodeResult[]`.
 - Modified the parameters [`LabelRecognizerParameter.LetterHeightRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#letterheightrange) and [`TextArea.LetterHeightRange`]({{ site.parameters-reference }}text-area/parameter-control.html#letterheightrange). The value unit of the parameters are modified from percentage to thousandth. The available range of the value and the default value are updated as well.
 - Renamed class `LabelRecognition` to [`LableRecognizer`]({{site.dotnet_api}}label-recognizer.html).
-- Renamed exception `DLR_Exception` to [`LabelRecognizerException`](({{site.dotnet_api}}label-recognizer-exception.html)).
+- Renamed exception `DLR_Exception` to [`LabelRecognizerException`]({{site.dotnet_api}}label-recognizer-exception.html).
 - Removed method `InitLicenseFromLTS`.
 - Removed method `InitLTSConnectionParameters`.
 - Removed class `DMLTSConnectionParameters`.

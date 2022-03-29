@@ -6,7 +6,7 @@ keywords: api reference, cpp
 needAutoGenerateSidebar: true
 ---
 
-# C+ API Reference - Settings
+# C++ API Reference - Settings
 
 | Method               | Description |
 |----------------------|-------------|

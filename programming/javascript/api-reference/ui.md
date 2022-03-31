@@ -34,7 +34,7 @@ getUIElement(): HTMLElement
 
 ## setUIElement
 
-Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide/#customize-the-ui).
+Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. The structure inside the element determines the appearance of the UI. See more on [how to customize the UI](../user-guide.md#customize-the-ui).
 
 ```typescript
 setUIElement(elementOrURL: HTMLElement | string): Promise<void>

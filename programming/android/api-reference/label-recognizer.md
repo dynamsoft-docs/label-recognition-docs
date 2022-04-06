@@ -466,7 +466,7 @@ void updateReferenceRegionFromBarcodeResults (BarcodeResult[] barcodeResults, St
 **Exceptions**
 
 
-[`LabelRecognizerException`](label-Recognizer-exception.md)
+[`LabelRecognizerException`](label-recognizer-exception.md)
 
 
 **Code Snippet**

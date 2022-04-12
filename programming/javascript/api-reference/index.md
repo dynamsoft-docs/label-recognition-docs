@@ -110,10 +110,6 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](settings.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
-| [soundOnSuccessfullRead](settings.md#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
-| [whenToVibrateforSuccessfulRead](settings.md#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
-| [vibrateDuration](settings.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [getScanSettings()](settings.md#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](settings.md#updatescansettings) | Changes scan settings with the object passed in. |
 

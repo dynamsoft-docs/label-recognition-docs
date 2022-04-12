@@ -53,8 +53,8 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
         (async () => {
@@ -81,7 +81,7 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
-            recognizer.setImageSource(enhancer);
+            recognizer.cameraEnhancer = cameraEnhancer;
             await recognizer.startScanning(true);
         })();
     </script>
@@ -152,15 +152,15 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 #### Host the library yourself
@@ -185,15 +185,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer@2.2.3 --save
-$ npm install dynamsoft-camera-enhancer@2.3.2 --save
+$ npm install dynamsoft-label-recognizer@2.2.2 --save
+$ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.3/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.3/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.2/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.2/dce/dist/dce.js"></script>
 ```
 
 or
@@ -231,8 +231,8 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/";
-Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/";
+Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
 #### Add a visual cue about the loading of a .data file
@@ -280,7 +280,7 @@ A `CameraEnhancer` object is required for video recognition. Also, the object sh
 ```javascript
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
 let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = cameraEnhancer;
 ```
 
 #### Change the camera settings if necessary.
@@ -361,7 +361,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
         let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
         let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-        recognizer.setImageSource(enhancer);
+        recognizer.cameraEnhancer = cameraEnhancer;
         await recognizer.updateRuntimeSettingsFromString("video-MRZ");
         recognizer.onFrameRead = results => {
             for (let result of results) {

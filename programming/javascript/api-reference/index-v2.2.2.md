@@ -31,7 +31,7 @@ for (let result of results) {
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video-MRZ"
 });
-labelRecognizer.onImageRead = results => {
+labelRecognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.lineResults) {
             console.log(lineResult.text);
@@ -98,10 +98,9 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [setImageSource](recognize.md#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onImageRead](recognize.md#onimageread) | This event is triggered after the library finishes scanning an image. |
-| [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming images. |
+| [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming frames. |
 | [stopScanning()](recognize.md#stopscanning) | Stops continuous scanning. |
 
 ## Settings
@@ -156,14 +155,12 @@ In order to make the code more predictable and readable, the library defines a s
 
 ### Interfaces
 
-* [`DLRLineResult`](interface/dlr-line-result.md)
-* [`Point`](interface/point.md)
-* [`Quadrilateral`](interface/quadrilateral.md)
-* [`DLRReferenceRegion`](interface/dlr-reference-region.md)
-* [`DLRResult`](interface/dlr-result.md)
-* [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)
-* [`ImageSource`](interface/imagesource.md)
-* [`DSImage`](interface/dsimage.md)
+* [`DLRLineResult`](interface/dlr-line-result.md)	
+* [`Point`](interface/point.md)		
+* [`Quadrilateral`](interface/quadrilateral.md)	
+* [`DLRReferenceRegion`](interface/dlr-reference-region.md)	
+* [`DLRResult`](interface/dlr-result.md)		
+* [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)	
 
 ### Enumerations
 

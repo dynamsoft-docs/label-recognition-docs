@@ -17,7 +17,7 @@ The primary class of the library is `LabelRecognizer` . The following code snipp
 
 ```js
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-let results = await labelRecognizer.recognize(imageSource);
+let results = await labelRecognizer.recognize(imagePath);
 for (let result of results) {
     for (let lineResult of result.lineResults) {
         console.log(lineResult.text);
@@ -28,9 +28,11 @@ for (let result of results) {
 * Recognize continuous video frames
 
 ```js
-let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-MRZ"
-});
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await cameraEnhancer.setUIElement(document.getElementById('div-ui-container'));
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
+recognizer.setImageSource(cameraEnhancer);
+await recognizer.updateRuntimeSettingsFromString("video-MRZ");
 labelRecognizer.onImageRead = results => {
     for (let result of results) {
         for (let lineResult of result.lineResults) {
@@ -68,20 +70,6 @@ The following static methods and properties help to set up the runtime environme
 | API Name | Description |
 |---|---|
 | [license](initialize.md#license) | Use an alphanumeric string to specify the license. |
-
-## UI Control
-
-| API Name | Description |
-|---|---|
-| [getUIElement()](ui.md#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
-| [setUIElement()](ui.md#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
-| [defaultUIElementURL](ui.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
-| [lineFillStyle](ui.md#linefillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
-| [lineStrokeStyle](ui.md#linestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
-| [lineLineWidth](ui.md#linelinewidth) | Specifies the line width of the outline of the shape which highlights a found line of text. |
-| [regionMaskFillStyle](ui.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
-| [regionMaskStrokeStyle](ui.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
-| [regionMaskLineWidth](ui.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 
 ## Recognition
 

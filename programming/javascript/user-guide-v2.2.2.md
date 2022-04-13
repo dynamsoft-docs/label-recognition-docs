@@ -443,7 +443,7 @@ The following table is a list of supported browsers based on the above requireme
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
-## Hosting the library
+## Hosting the Library
 
 ### Step One: Deploy the dist folder
 

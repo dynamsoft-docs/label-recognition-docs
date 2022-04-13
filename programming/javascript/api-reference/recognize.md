@@ -38,7 +38,7 @@ breadcrumbText: Recognition APIs
 Recognizes labels from an image. 
 
 ```typescript
-recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | string): Promise<DLRResult[]>
+recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DSImage | DCEFrame | string): Promise<DLRResult[]>
 ```
 
 **Parameters**
@@ -86,6 +86,7 @@ try {
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 * [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)
 * [DLRResult](./interface/dlr-result.md)
+* [DSImage](./interface/dsimage.md)
 * [DCEFrame](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/interface/dceframe.html?ver=latest)
 
 ## recognizeBase64String

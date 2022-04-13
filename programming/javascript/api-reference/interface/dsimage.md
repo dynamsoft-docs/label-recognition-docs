@@ -19,7 +19,7 @@ Interface that defines an image acquired by an Image Source.
 | [`data`](#data) | *Uint8Array* |
 | [`width`](#width) | *number* |
 | [`height`](#height) | *number* |
-| [`pixelFormat`](#pixelformat) | *EnumImagePixelFormat* |
+| [`pixelFormat`](#pixelformat) | *string* |
 
 ### data
 
@@ -35,4 +35,4 @@ The height of the image.
 
 ### pixelFormat
 
-The pixel format of the image. Read more on [EnumImagePixelFormat]({{ site.enumerations }}image-pixel-format.html).
+The pixel format of the image. Allowed values are "grey", "rgb", "bgr", "rgba", "bgra".

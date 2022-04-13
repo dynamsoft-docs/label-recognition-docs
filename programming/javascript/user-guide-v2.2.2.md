@@ -53,8 +53,8 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
     <script>
         // initializes and uses the library
         (async () => {
@@ -71,7 +71,7 @@ The complete code of the "Hello World" example is shown below
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
                 runtimeSettings: "video-letter"
             });
-            recognizer.onImageRead = results => {
+            recognizer.onFrameRead = results => {
                 for (let result of results) {
                     for (let lineResult of result.lineResults) {
                         console.log(lineResult.text);
@@ -81,7 +81,7 @@ The complete code of the "Hello World" example is shown below
             recognizer.onUniqueRead = (txt, results) => {
                 alert(txt);
             };
-            recognizer.setImageSource(cameraEnhancer);
+            recognizer.cameraEnhancer = cameraEnhancer;
             await recognizer.startScanning(true);
         })();
     </script>
@@ -92,7 +92,7 @@ The complete code of the "Hello World" example is shown below
 
 <p align="center" style="text-align:center; ">
   <!--<a target="_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/master/1.hello-world/1.minimum-code.html" title="Code in Github">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" width="20" height="20" style="width:20px;height:20px;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="Code in Github" style="width:20px;height:20px;">
   </a>
   &nbsp; -->
   <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/" title="Run via JSFiddle">
@@ -100,11 +100,11 @@ The complete code of the "Hello World" example is shown below
   </a>
   <!--&nbsp; 
   <a target="_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/1.hello-world/1.minimum-code.html?utm_source=guide" title="Run in Dynamsoft">
-    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" width="20" height="20" style="width:20px;height:20px;">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/circle-play.svg" alt="Run in Dynamsoft" style="width:20px;height:20px;">
   </a>
   &nbsp; 
   <a target="_blank" href="https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld-v8.8.7.zip?utm_source=guide" title="Download from Dynamsoft">
-    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" width="20" height="20" style="width:20px;height:20px; ">
+    <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/svgs/solid/download.svg" alt="Download from Dynamsoft" style="width:20px;height:20px; ">
   </a>-->
 </p>
 
@@ -116,7 +116,7 @@ The complete code of the "Hello World" example is shown below
 
   + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer` which is used to control the camera as well as the default user interface. To use `cameraEnhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
-  + `onImageRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
+  + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the text results that the library has found on this frame. In this example, we print the results to the browser console.
 
   + `onUniqueRead`: This event is triggered when the library finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
@@ -152,15 +152,15 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 * UNPKG  
 
 ```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.2/dist/dlr.js"></script>
+<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.0.3/dist/dce.js"></script>
 ```
 
 #### Host the library yourself
@@ -185,15 +185,15 @@ $ yarn add dynamsoft-camera-enhancer
 * npm
 
 ```
-$ npm install dynamsoft-label-recognizer@2.2.3 --save
-$ npm install dynamsoft-camera-enhancer@2.3.2 --save
+$ npm install dynamsoft-label-recognizer@2.2.2 --save
+$ npm install dynamsoft-camera-enhancer@2.0.3 --save
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
 ```html
-<script src="/dlr-js-2.2.3/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.3/dce/dist/dce.js"></script>
+<script src="/dlr-js-2.2.2/dist/dlr.js"></script>
+<script src="/dlr-js-2.2.2/dce/dist/dce.js"></script>
 ```
 
 or
@@ -231,8 +231,8 @@ The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are lo
 The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/";
-Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.2/dist/";
+Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.0.3/dist/";
 ```
 
 #### Add a visual cue about the loading of a .data file
@@ -280,7 +280,7 @@ A `CameraEnhancer` object is required for video recognition. Also, the object sh
 ```javascript
 Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
 let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = cameraEnhancer;
 ```
 
 #### Change the camera settings if necessary.
@@ -309,7 +309,8 @@ await recognizer.updateScanSettings(scanSettings);
 
 ```javascript
 // use one of the built-in RuntimeSetting templates: 
-// "number", "letter", "numberLetter", "numberUppercase", "VIN", "VIN_NA", "MRZ", "passportMRZ", "visaMRZ"
+// "number", "letter", "numberLetter", "numberUppercase", "VIN", "MRZ",
+// "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-MRZ".
 // For convenience, these names are not case-sensitive.
 // You can also pass in a JSON string as the template.
 await recognizer.updateRuntimeSettingsFromString("video-MRZ");
@@ -352,17 +353,17 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
   + Embed the video
 
 ```html
-<div id="div-ui-container" style="width:100%;height:100%;">
-    <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
+<div id="div-video-container" style="width:100%;height:100%;">
+    <video class="dce-video" playsinline="true" muted style="width:100%;height:100%;"></video>
 </div>
 <script>
     (async () => {
         let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-        await cameraEnhancer.setUIElement(document.getElementById('div-ui-container'));
+        await cameraEnhancer.setUIElement(document.getElementById('div-video-container'));
         let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-        recognizer.setImageSource(cameraEnhancer);
+        recognizer.cameraEnhancer = cameraEnhancer;
         await recognizer.updateRuntimeSettingsFromString("video-MRZ");
-        recognizer.onImageRead = results => {
+        recognizer.onFrameRead = results => {
             for (let result of results) {
                 for (let lineResult of result.lineResults) {
                     console.log(lineResult.text);
@@ -377,7 +378,7 @@ document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the c
 </script>
 ```
 
-> The video element will be created and appended to the DIV element with the class `dce-video-container`, make sure the class name is the same. Besides, the CSS property `position` of the DIV element must be either `relative`, `absolute`, `fixed`, or `sticky`.
+> The video element must have the class `dce-video` .
 
   + Add the camera list and resolution list
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.

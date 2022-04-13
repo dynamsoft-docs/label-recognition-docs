@@ -56,7 +56,7 @@ The complete code of the "Hello World" example is shown below
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
     <script>
         // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
-        Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+        Dynamsoft.DLR.LabelRecognizer.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // initializes and uses the library
         (async () => {
             Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
@@ -165,15 +165,15 @@ A few ways to download the library.
 * yarn
 
 ```cmd
-yarn add dynamsoft-label-recognizer
-yarn add dynamsoft-camera-enhancer
+yarn add dynamsoft-label-recognizer@2.2.3
+yarn add dynamsoft-camera-enhancer@2.3.2
 ```
 
 * npm
 
 ```cmd
-npm install dynamsoft-label-recognizer@2.2.3 --save
-npm install dynamsoft-camera-enhancer@2.3.2 --save
+npm install dynamsoft-label-recognizer@2.2.3
+npm install dynamsoft-camera-enhancer@2.3.2
 ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
@@ -203,7 +203,7 @@ The library requires a license to work, use the API `license` to specify a licen
 > To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
 
 ```javascript
-Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
+Dynamsoft.DLR.LabelRecognizer.license = "YOUR-LICENSE-KEY";
 ```
 
 #### Specify the location of the "engine" files

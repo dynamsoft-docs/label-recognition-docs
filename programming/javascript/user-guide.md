@@ -69,7 +69,7 @@ The complete code of the "Hello World" example is shown below
                 // Hide the visual cue
             };
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-                runtimeSettings: "letter"
+                runtimeSettings: "video-letter"
             });
             recognizer.onImageRead = results => {
                 for (let result of results) {
@@ -112,7 +112,7 @@ The complete code of the "Hello World" example is shown below
 
 *About the code*
 
-  + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettingsFromString()`.
+  + `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`. Note that the code passed the configuration `runtimeSettings: "video-letter"` which sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that this template can later be swapped or changed by the method `updateRuntimeSettingsFromString()`.
 
   + `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer` which is used to control the camera as well as the default user interface. To use `cameraEnhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK and then bind it to `recognizer` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
@@ -312,7 +312,7 @@ await recognizer.updateScanSettings(scanSettings);
 // "number", "letter", "numberLetter", "numberUppercase", "VIN", "VIN_NA", "MRZ", "passportMRZ", "visaMRZ"
 // For convenience, these names are not case-sensitive.
 // You can also pass in a JSON string as the template.
-await recognizer.updateRuntimeSettingsFromString("MRZ");
+await recognizer.updateRuntimeSettingsFromString("video-MRZ");
 ```
 
 As you can see from the above code snippets, there are two types of configurations:

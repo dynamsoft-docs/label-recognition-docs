@@ -15,10 +15,6 @@ breadcrumbText: Settings APIs
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
-| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
-| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
-| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [getScanSettings](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
 

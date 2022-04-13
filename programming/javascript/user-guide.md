@@ -310,6 +310,7 @@ await recognizer.updateScanSettings(scanSettings);
 ```javascript
 // use one of the built-in RuntimeSetting templates: 
 // "number", "letter", "numberLetter", "numberUppercase", "VIN", "VIN_NA", "MRZ", "passportMRZ", "visaMRZ"
+// "video-number", "video-letter", "video-numberLetter", "video-numberUppercase", "video-VIN", "video-VIN_NA", "video-MRZ", "video-passportMRZ", "video-visaMRZ"
 // For convenience, these names are not case-sensitive.
 // You can also pass in a JSON string as the template.
 await recognizer.updateRuntimeSettingsFromString("video-MRZ");

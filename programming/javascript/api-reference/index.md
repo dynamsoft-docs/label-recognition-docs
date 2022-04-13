@@ -92,6 +92,8 @@ The following static methods and properties help to set up the runtime environme
 | [onMRZRead](recognize.md#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
 | [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming images. |
 | [stopScanning()](recognize.md#stopscanning) | Stops continuous scanning. |
+| [pauseScanning()](recognize.md#pausescanning) | Pause continuous scanning but keep the video stream. |
+| [resumeScanning()](recognize.md#resumescanning) | Resumes continuous scanning. |
 
 ## Settings
 

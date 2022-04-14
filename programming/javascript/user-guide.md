@@ -116,6 +116,8 @@ The complete code of the "Hello World" example is shown below
 
 Create a text file with the name "helloworld.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a simple line of text to read it.
 
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/21/](https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/21/)
+
 If the text is decoded, an alert will pop up with the result text. At the same time, the text location will be highlighted in the video feed.
 
 *Note*:

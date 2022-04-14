@@ -55,13 +55,13 @@ The complete code of the "Hello World" example is shown below
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
     <script>
-        // specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
+        // Specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js to get your own trial license good for 30 days. 
         Dynamsoft.DLR.LabelRecognizer.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
-        // initializes and uses the library
+        // Initialize and use the library
         (async () => {
             Dynamsoft.DLR.LabelRecognizer.onResourcesLoadStarted = (resourcePath) => {
                 console.log("Loading " + resourcePath);
-                // Show a visual cue that a model file is being 
+                // Show a visual cue that a model file is being downloaded
             };
             Dynamsoft.DLR.LabelRecognizer.onResourcesLoaded = (resourcePath) => {
                 console.log("Finished loading " + resourcePath);
@@ -116,6 +116,8 @@ The complete code of the "Hello World" example is shown below
 
 Create a text file with the name "helloworld.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a simple line of text to read it.
 
+> You can also find the sample at "dynamsoft-label-recognizer-js-2.2.3\samples\1.hello-world\1.hello-world.html"
+
 If the text is decoded, an alert will pop up with the result text. At the same time, the text location will be highlighted in the video feed.
 
 *Note*:
@@ -154,13 +156,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
-A few ways to download the library.
-
-* From the website
-
-  [Download the JavaScript Package](https://www.dynamsoft.com/survey/dlr/?utm_source=guide&product=dlr&package=js)
-
-  > NOTE that the package also contains the library Dynamsoft Camera Enhancer
+To download the library:
 
 * yarn
 
@@ -200,11 +196,13 @@ Before using the library, you need to configure a few things.
 
 The library requires a license to work, use the API `license` to specify a license key.
 
-> To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=js).
-
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.license = "YOUR-LICENSE-KEY";
 ```
+
+To test the library, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js).
+
+> If you registered for a Dynamsoft account and downloaded the library from the official site, Dynamsoft will generate a 30-day trial license for you and put the license key in all the downloaded samples.
 
 #### Specify the location of the "engine" files
 
@@ -423,7 +421,7 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 ## Hosting the Library
 
-### Step One: Deploy the dist folder
+### Step 1: Deploy the dist folder
 
 Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). The following shows some of the files in this directory:
 
@@ -435,7 +433,7 @@ Once you have downloaded the library, you can locate the "dist" directory and co
 
 NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can be copied to the same location as the above "dist" directory.
 
-### Step Two: Configure the Server
+### Step 2: Configure the Server
 
 * Set the MIME type for `.wasm` as `application/wasm` and `.data` as `application/octet-stream` on your webserver.
   
@@ -453,7 +451,7 @@ NOTE: the files for Dynamsoft Camera Enhancer are often required as well and can
 
   > For convenience, self-signed certificates can be used during development and testing.
 
-### Step Three: Include the library from the server
+### Step 3: Include the library from the server
 
 Now that the library is hosted on your server, you can include it accordingly.
 

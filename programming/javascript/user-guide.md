@@ -140,17 +140,17 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 * jsDelivr
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
-```
+  ```html
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+  ```
 
 * UNPKG  
 
-```html
-<script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
-<script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
-```
+  ```html
+  <script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
+  ```
 
 #### Host the library yourself
 
@@ -160,31 +160,31 @@ To download the library:
 
 * yarn
 
-```cmd
-yarn add dynamsoft-label-recognizer@2.2.3
-yarn add dynamsoft-camera-enhancer@2.3.2
-```
+  ```cmd
+  yarn add dynamsoft-label-recognizer@2.2.3
+  yarn add dynamsoft-camera-enhancer@2.3.2
+  ```
 
 * npm
 
-```cmd
-npm install dynamsoft-label-recognizer@2.2.3
-npm install dynamsoft-camera-enhancer@2.3.2
-```
+  ```cmd
+  npm install dynamsoft-label-recognizer@2.2.3
+  npm install dynamsoft-camera-enhancer@2.3.2
+  ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
-```html
-<script src="/dlr-js-2.2.3/dist/dlr.js"></script>
-<script src="/dlr-js-2.2.3/dce/dist/dce.js"></script>
-```
+  ```html
+  <script src="/dlr-js-2.2.3/dist/dlr.js"></script>
+  <script src="/dlr-js-2.2.3/dce/dist/dce.js"></script>
+  ```
 
 or
 
-```html
-<script src="/node_modules/dynamsoft-label-recognizer/dist/dlr.js"></script>
-<script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
-```
+  ```html
+  <script src="/node_modules/dynamsoft-label-recognizer/dist/dlr.js"></script>
+  <script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
+  ```
 
 Read more on [how to host the library](#hosting-the-library).
 
@@ -310,21 +310,21 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
 
 * Copy the file `dist/dlr.ui.html` to your application, modify it and use the API `defaultUIElementURL` to set it as the default UI.
 
-```javascript
-Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
-```
+  ```javascript
+  Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
+  ```
 
 * Append the default UI element to your page, customize it before showing it.
 
-```html
-<div id="recognizerUI"></div>
-```
+  ```html
+  <div id="recognizerUI"></div>
+  ```
 
-```javascript
-await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-document.getElementById('recognizerUI').appendChild(cameraEnhancer.getUIElement());
-document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
-```
+  ```javascript
+  await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+  document.getElementById('recognizerUI').appendChild(cameraEnhancer.getUIElement());
+  document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
+  ```
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 

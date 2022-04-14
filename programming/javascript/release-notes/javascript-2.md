@@ -10,16 +10,35 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
-## 2.2.2 (03/03/2022)
+## 2.2.4 (04/14/2022)
 
 ### ADDED
 
-* Added event `onResourcesLoadProgress` which is triggered multiple times when the resource file for a particular template is beling loaded.
-* Added event `onMRZRead` which is triggered when a frame gets read successfully with the  built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+* Added method `setImageSource()` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
 
 ### CHANGED
 
-* Changed event `onUniqueRead` to return only the result of one line.
+* Renamed event `onFrameRead` to `onImageRead`.
+* Moved the following properties to [`ScanSettings`](../api-reference/interface/dlr-scansettings.md).
+  * `whenToPlaySoundforSuccessfulRead`
+  * `soundOnSuccessfullRead`
+  * `whenToVibrateforSuccessfulRead`
+  * `vibrateDuration`
+
+### REMOVED
+
+* Removed property `singeleFrameMode` which should be taken care of by a CameraEnhancer instance.
+* Removed method `RecognizeCurrentFrame()`.
+* Removed the following UI related APIs, use the bound CameraEnhancer instance to manipulate UI instead.
+  * `getUIElement()`
+  * `setUIElement()`
+  * `defaultUIElementURL`
+  * `lineFillStyle`
+  * `lineStrokeStyle`
+  * `lineLineWidth`
+  * `regionMaskFillStyle`
+  * `regionMaskStrokeStyle`
+  * `regionMaskLineWidth`
 
 ## 2.2.1 (02/23/2022)
 

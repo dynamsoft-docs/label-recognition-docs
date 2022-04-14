@@ -15,10 +15,6 @@ breadcrumbText: Settings APIs
 
 | API Name | Description |
 |---|---|
-| [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
-| [soundOnSuccessfullRead](#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
-| [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
-| [vibrateDuration](#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [getScanSettings](#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
 
@@ -40,87 +36,6 @@ breadcrumbText: Settings APIs
 | [eraseCharacterModelByName()](#erasecharactermodelbyname) | Erases a CharacterModel by its name. |
 | [eraseAllCharacterModels()](#eraseallcharactermodels) | Erases all CharacterModels. |
 -->
-
-## whenToPlaySoundforSuccessfulRead
-
-Sets when to play sound on text recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for any sound to play). Allowed values are
-
-* `never`: never play sound, the default value; <!--never-->
-* `frame`: play sound when text is found on a frame; <!--always-->
-* `unique`: play sound when a unique new text is found (if multiple unique barcodes are found on the same frame, play only once).
-
-```typescript
-whenToPlaySoundforSuccessfulRead: (boolean | string)
-```
-
-**Default value**
-
- `never`
-
-**Code Snippet**
-
-```js
-// A user gesture required. 
-startPlayButton.addEventListener('click', function() {
-    recognizer.whenToPlaySoundforSuccessfulRead = true;
-});
-```
-
-## soundOnSuccessfullRead
-
-Specifies the sound to play on text recognition. If not specified, the default one is used.
-
-```typescript
-soundOnSuccessfullRead: HTMLAudioElement
-```
-
-**Code Snippet**
-
-```js
-recognizer.soundOnSuccessfullRead = new Audio("./pi.mp3");
-```
-
-**See also**
-
-* [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
-* [whenToPlaySoundforSuccessfulRead](#whentoplaysoundforsuccessfulread)
-
-## whenToVibrateforSuccessfulRead
-
-Sets when to vibrate on text recognition (user input is required on iOS or [Chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies) for the vibration). Allowed values are
-
-* `never`: never vibrate, the default value; <!--never-->
-* `frame`: vibrate when text is found on a frame; <!--always-->
-* `unique`: vibrate when a unique new text is found (if multiple unique barcodes are found on the same frame, vibrate only once).
-
-```typescript
-whenToVibrateforSuccessfulRead: (boolean | string)
-```
-
-**Default value**
-
- `never`
-
-**Code Snippet**
-
-```js
-// Can I use? https://caniuse.com/?search=vibrate
-startVibrateButton.addEventListener('click', function() {
-    recognizer.whenToVibrateforSuccessfulRead = true;
-});
-```
-
-## vibrateDuration
-
-Returns or sets how long the vibration lasts in milliseconds. The default value is `300` .
-
-```typescript
-vibrateDuration: number
-```
-
-**See also** 
-
-* [whenToVibrateforSuccessfulRead](#whentovibrateforsuccessfulread)
 
 ## getScanSettings
 

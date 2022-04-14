@@ -20,15 +20,15 @@ breadcrumbText: Recognition APIs
 | [recognizeUrl()](#recognizeurl) | Recognizes labels from an image specified by its URL. |
 | [recognizeBuffer()](#recognizebuffer) | Recognizes labels from raw image data. |
 
-## Recognize Labels from Video Frame Images
+## Recognize Labels from Video Frames
 
 | API Name | Description |
 |---|---|
-| [setImageSource](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a image with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
-| [onImageRead](#onimageread) | This event is triggered after the library finishes scanning a image. |
-| [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming images. |
+| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
+| [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
 | [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
 | [stopScanning()](#stopscanning) | Stops continuous scanning and closes the video stream. |
@@ -38,7 +38,7 @@ breadcrumbText: Recognition APIs
 Recognizes labels from an image. 
 
 ```typescript
-recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DSImage | DCEFrame | string): Promise<DLRResult[]>
+recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | string): Promise<DLRResult[]>
 ```
 
 **Parameters**
@@ -86,7 +86,6 @@ try {
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
 * [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)
 * [DLRResult](./interface/dlr-result.md)
-* [DSImage](./interface/dsimage.md)
 * [DCEFrame](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/interface/dceframe.html?ver=latest)
 
 ## recognizeBase64String
@@ -196,32 +195,8 @@ for (let result of results) {
 * [EnumImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
 * [DLRResult](./interface/dlr-result.md)
 
-## setImageSource
-
-Sets an image source for continous scanning.
-
-```typescript
-setImageSource(imageSource: ImageSource): boolean;
-```
-
-**Arguments**
-
-`imageSource` : Specifies the image source.
-
-**Code Snippet**
-
-```javascript
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-numberLetter"
-});
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
-recognizer.onUniqueRead = (txt, result) => {
-    console.log(txt);
-}
-recognizer.startScanning(true);
-```
+| [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 
 ## onUniqueRead
 
@@ -247,7 +222,7 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
@@ -260,7 +235,7 @@ recognizer.startScanning(true);
 
 ## onMRZRead
 
-This event is triggered after the library finishes scanning a image with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
 
 ```typescript
 onMRZRead: (txt: string, results: DLRLineResult[]) => void
@@ -280,7 +255,7 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onMRZRead = (txt, results) => {
     console.log(txt);
 }
@@ -291,17 +266,17 @@ recognizer.startScanning(true);
 
 * [DLRLineResult](./interface/dlr-line-result.md)
 
-## onImageRead
+## onFrameRead
 
-This event is triggered after the library finishes scanning a image.
+This event is triggered after the library finishes scanning a frame.
 
 ```typescript
-onImageRead: (results: DLRResult[]) => void
+onFrameRead: (results: DLRResult[]) => void
 ```
 
 **Arguments**
 
-`results` : a `DLRResult` object that contains all the label results in this image.
+`results` : a `DLRResult` object that contains all the label results in this frame.
 
 **Code Snippet**
 
@@ -311,8 +286,8 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
-recognizer.onImageRead = results => {
+recognizer.cameraEnhancer = enhancer;
+recognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.lineResults) {
             console.log(lineResult.text);
@@ -326,9 +301,43 @@ recognizer.startScanning(true);
 
 * [DLRResult](./interface/dlr-result.md)
 
+## recognizeCurrentFrame
+
+Scans the current frame of the video for barcodes.
+
+```typescript
+recognizeCurrentFrame(): Promise<DLRResult[]>
+```
+
+**Return value**
+
+A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this frame.
+
+**Code Snippet**
+
+```js
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video-passportMRZ"
+});
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.cameraEnhancer = enhancer;
+await cEnhancer.open();
+let results = await recognizer.recognizeCurrentFrame();
+for (let result of results) {
+    for (let lineResult of result.lineResults) {
+        console.log(lineResult.text);
+    }
+}
+```
+
+**See also**
+
+* [DLRResult](./interface/dlr-result.md)
+
 ## startScanning
 
-Open the camera and starts continuous scanning of incoming images.
+Open the camera and starts continuous scanning of incoming frames.
 
 ```typescript
 startScanning(appendOrShowUI?: boolean): Promise<PlayCallbackInfo>;
@@ -350,7 +359,7 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
     for (let result of results) {
@@ -402,7 +411,7 @@ let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
 });
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
-recognizer.setImageSource(enhancer);
+recognizer.cameraEnhancer = enhancer;
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
     for (let result of results) {

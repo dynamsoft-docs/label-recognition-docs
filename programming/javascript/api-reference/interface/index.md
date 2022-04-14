@@ -23,3 +23,5 @@ As seen across the API documentation, the JavaScript Label Recognizer works with
 | [DLRScanSettings](dlr-scansettings.md) | Interface for scan behaviour customization. |
 | [Point](point.md) | Interface for the points used to represent a quadrilateral or reference region. |
 | [Quadrilateral](quadrilateral.md) | Interface for the quadrilateral in which the result (line or character) is located. |
+| [ImageSource](imagesource.md) | Interface that defines an Image Source. |
+| [DSImage](dsimage.md) | Interface that defines an image acquired by an Image Source. |

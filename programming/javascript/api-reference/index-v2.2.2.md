@@ -17,7 +17,7 @@ The primary class of the library is `LabelRecognizer` . The following code snipp
 
 ```js
 let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-let results = await labelRecognizer.recognize(imagePath);
+let results = await labelRecognizer.recognize(imageSource);
 for (let result of results) {
     for (let lineResult of result.lineResults) {
         console.log(lineResult.text);
@@ -28,12 +28,10 @@ for (let result of results) {
 * Recognize continuous video frames
 
 ```js
-let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await cameraEnhancer.setUIElement(document.getElementById('div-ui-container'));
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-recognizer.setImageSource(cameraEnhancer);
-await recognizer.updateRuntimeSettingsFromString("video-MRZ");
-labelRecognizer.onImageRead = results => {
+let labelRecognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video-MRZ"
+});
+labelRecognizer.onFrameRead = results => {
     for (let result of results) {
         for (let lineResult of result.lineResults) {
             console.log(lineResult.text);
@@ -71,6 +69,20 @@ The following static methods and properties help to set up the runtime environme
 |---|---|
 | [license](initialize.md#license) | Use an alphanumeric string to specify the license. |
 
+## UI Control
+
+| API Name | Description |
+|---|---|
+| [getUIElement()](ui.md#getuielement) | Returns the HTML element that is used by the `LabelRecognizer` instance. |
+| [setUIElement()](ui.md#setuielement) | Specifies an HTML element for the `LabelRecognizer` instance to use as its UI. |
+| [defaultUIElementURL](ui.md#defaultuielementurl) | Returns or sets the URL of the .html file that defines the default UI Element. |
+| [lineFillStyle](ui.md#linefillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
+| [lineStrokeStyle](ui.md#linestrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
+| [lineLineWidth](ui.md#linelinewidth) | Specifies the line width of the outline of the shape which highlights a found line of text. |
+| [regionMaskFillStyle](ui.md#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](ui.md#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](ui.md#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
+
 ## Recognition
 
 ### Recognize Labels from Still Images
@@ -86,14 +98,10 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
-| [setImageSource](recognize.md#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onImageRead](recognize.md#onimageread) | This event is triggered after the library finishes scanning an image. |
-| [onMRZRead](recognize.md#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
-| [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming images. |
+| [onFrameRead](recognize.md#onframeread) | This event is triggered after the library finishes scanning a frame. |
+| [startScanning()](recognize.md#startscanning) | Starts continuous scanning of incoming frames. |
 | [stopScanning()](recognize.md#stopscanning) | Stops continuous scanning. |
-| [pauseScanning()](recognize.md#pausescanning) | Pause continuous scanning but keep the video stream. |
-| [resumeScanning()](recognize.md#resumescanning) | Resumes continuous scanning. |
 
 ## Settings
 
@@ -101,6 +109,10 @@ The following static methods and properties help to set up the runtime environme
 
 | API Name | Description |
 |---|---|
+| [whenToPlaySoundforSuccessfulRead](settings.md#whentoplaysoundforsuccessfulread) | Sets when to play sound on text recognition. |
+| [soundOnSuccessfullRead](settings.md#soundonsuccessfullread) | Specifies the sound to play on text recognition. |
+| [whenToVibrateforSuccessfulRead](settings.md#whentovibrateforsuccessfulread) | Sets when to vibrate on text recognition. |
+| [vibrateDuration](settings.md#vibrateduration) | Returns or sets how long the vibration lastsin milliseconds.  |
 | [getScanSettings()](settings.md#getscansettings) | Returns the current scan settings. |
 | [updateScanSettings()](settings.md#updatescansettings) | Changes scan settings with the object passed in. |
 
@@ -143,14 +155,12 @@ In order to make the code more predictable and readable, the library defines a s
 
 ### Interfaces
 
-* [`DLRLineResult`](interface/dlr-line-result.md)
-* [`Point`](interface/point.md)
-* [`Quadrilateral`](interface/quadrilateral.md)
-* [`DLRReferenceRegion`](interface/dlr-reference-region.md)
-* [`DLRResult`](interface/dlr-result.md)
-* [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)
-* [`ImageSource`](interface/imagesource.md)
-* [`DSImage`](interface/dsimage.md)
+* [`DLRLineResult`](interface/dlr-line-result.md)	
+* [`Point`](interface/point.md)		
+* [`Quadrilateral`](interface/quadrilateral.md)	
+* [`DLRReferenceRegion`](interface/dlr-reference-region.md)	
+* [`DLRResult`](interface/dlr-result.md)		
+* [`DLRRuntimeSettings`](interface/dlr-runtime-settings.md)	
 
 ### Enumerations
 

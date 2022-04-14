@@ -14,17 +14,31 @@ breadcrumbText: v2.x Release Notes
 
 ### ADDED
 
-* Added method `setImageSource()` to specify an Image Source which provides images for continuous scanning.
+* Added method `setImageSource()` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
 
 ### CHANGED
 
 * Renamed event `onFrameRead` to `onImageRead`.
-* Moved the following properties to `ScanSettings`.
+* Moved the following properties to [`ScanSettings`](../api-reference/interface/dlr-scansettings.md).
+  * `whenToPlaySoundforSuccessfulRead`
+  * `soundOnSuccessfullRead`
+  * `whenToVibrateforSuccessfulRead`
+  * `vibrateDuration`
 
 ### REMOVED
 
 * Removed property `singeleFrameMode` which should be taken care of by a CameraEnhancer instance.
 * Removed method `RecognizeCurrentFrame()`.
+* Removed the following UI related APIs, use the bound CameraEnhancer instance to manipulate UI instead.
+  * `getUIElement()`
+  * `setUIElement()`
+  * `defaultUIElementURL`
+  * `lineFillStyle`
+  * `lineStrokeStyle`
+  * `lineLineWidth`
+  * `regionMaskFillStyle`
+  * `regionMaskStrokeStyle`
+  * `regionMaskLineWidth`
 
 ## 2.2.1 (02/23/2022)
 

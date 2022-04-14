@@ -37,7 +37,7 @@ Interface for scan behaviour customization.
   > 
   > * `never` : never play sound, the default value;
   > * `frame` : play sound when one or multiple barcodes are found on a frame;
-  > * `unduplicated` : play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
+  > * `unique` : play sound when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, play only once).
 
 ### soundOnSuccessfullRead?: *string*
 
@@ -49,7 +49,7 @@ Interface for scan behaviour customization.
 
   > * `never`: never vibrate, the default value;
   > * `frame`: vibrate when one or multiple barcodes are found on a frame;
-  > * `unduplicated`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
+  > * `unique`: vibrate when a unique/unduplicated barcode is found (if multiple unique barcodes are found on the same frame, vibrate only once).
 
 ### vibrateDuration?: *number*
 

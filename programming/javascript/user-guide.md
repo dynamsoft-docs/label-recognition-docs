@@ -52,7 +52,7 @@ The complete code of the "Hello World" example is shown below
 <html>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.4/dist/dlr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
     <script>
         // Specify a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js to get your own trial license good for 30 days. 
@@ -141,14 +141,14 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.4/dist/dlr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.3/dist/dlr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.4/dist/dlr.js"></script>
   <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
   ```
 
@@ -161,22 +161,22 @@ To download the library:
 * yarn
 
   ```cmd
-  yarn add dynamsoft-label-recognizer@2.2.3
+  yarn add dynamsoft-label-recognizer@2.2.4
   yarn add dynamsoft-camera-enhancer@2.3.2
   ```
 
 * npm
 
   ```cmd
-  npm install dynamsoft-label-recognizer@2.2.3
+  npm install dynamsoft-label-recognizer@2.2.4
   npm install dynamsoft-camera-enhancer@2.3.2
   ```
 
 Depending on how you downloaded the library and where you put it. You can typically include it like this:
 
   ```html
-  <script src="/dlr-js-2.2.3/dist/dlr.js"></script>
-  <script src="/dlr-js-2.2.3/dce/dist/dce.js"></script>
+  <script src="/dlr-js-2.2.4/dist/dlr.js"></script>
+  <script src="/dlr-js-2.2.4/dce/dist/dce.js"></script>
   ```
 
 or
@@ -210,7 +210,7 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the 
 
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.3/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.4/dist/";
 Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/";
 ```
 

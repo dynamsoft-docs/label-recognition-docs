@@ -16,6 +16,10 @@ breadcrumbText: v2.x Release Notes
 
 * Added method `setImageSource()` to specify an Image Source which provides images of the type [`DSImage`](../api-reference/interface/dsimage.md) for continuous scanning.
 
+### IMPROVED
+
+* Improved the built-in sound which is played when recognition succeeds. Check out more on [`whenToPlaySoundforSuccessfulRead`](../api-reference/interface/dlr-scansettings.md#whentoplaysoundforsuccessfulread-string) and [`soundOnSuccessfullRead`](../api-reference/interface/dlr-scansettings.md#soundonsuccessfullread-string).
+
 ### CHANGED
 
 * Renamed event `onFrameRead` to `onImageRead`.

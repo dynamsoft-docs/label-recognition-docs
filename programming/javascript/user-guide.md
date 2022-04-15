@@ -91,7 +91,7 @@ The complete code of the "Hello World" example is shown below
 ```
 
 <p align="center" style="text-align:center; white-space: normal;">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/21/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -116,7 +116,7 @@ The complete code of the "Hello World" example is shown below
 
 Create a text file with the name "helloworld.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a simple line of text to read it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/21/](https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/21/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/](https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/)
 
 If the text is decoded, an alert will pop up with the result text. At the same time, the text location will be highlighted in the video feed.
 

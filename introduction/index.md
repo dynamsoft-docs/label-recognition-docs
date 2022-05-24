@@ -53,7 +53,7 @@ As shown in the figure below, the text blocks L0 and Label T1 inside the label T
 
 T0 is not only a label but also an inference area with appropriate inference parameters. DLR can find the text line L0 with the same vertical coordinate as T0, then calculate more accurate reference coordinates of the target label T1.
 
-### Text recognition engine
+### Text Recognition Engine
 DLR comes with an innovative `text recognition engine` that helps it obtain text recogntion results quickly and accurately. This feature combines the advantages of CNN (Convolutional Neural Networks) models and traditional image feature extraction.
 
 The text recognition engine of DLR supports one primary model and multiple auxiliary models. The primary model mainly covers uppercase and lowercase letters, numbers, arabic numerals, and few punctuation marks. The primary model is used by default when there is no character set specified in the parameters of DLR. 
@@ -71,7 +71,7 @@ Using the matching results, DLR will perform segment analysis to find out the ex
 
 Finally, DLR will perform multiple iterations to correct the misrecognized characters through a variety of methods such as auxiliary models or character features. 
 
-### Various processing modes
+### Various Processing Modes
 In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm process to maintain great scalability. 
 
 For example, [`BinarizationModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-runtime-settings.html?ver=latest#binarizationmodes) provides several image binarization methods and [`RegionPredetectionModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-further-modes.html?ver=latest#regionpredetectionmodes) provides different pre-detection methods to help locate the reference region. 
@@ -80,7 +80,7 @@ These modes can be configured not only through API but also through a configurat
 
 
 
-## [Usage scenarios]({{ site.docFullPath }}/use-cases)
+## [Usage Scenarios]({{ site.docFullPath }}/use-cases)
 
 ### VIN Scanning
 Vehicle Identification Numbers (VINs) are one of, if not the most important pieces of information commonly used in the automotive industry, usually for vehicle identification. With the help of DLR, users can identify any vehicle anywhere, anytime by scanning the VINs.

@@ -6,7 +6,7 @@ keywords: enumerations
 needAutoGenerateSidebar: false
 ---
 
-# Dynamesoft Label Recognition - Enumerations
+# Dynamsoft Label Recognition - Enumerations
 
 ## [Parameter Mode Enumeration](parameter-mode-enums.md)
 

@@ -211,12 +211,11 @@ setImageSource(imageSource: ImageSource): boolean;
 **Code Snippet**
 
 ```javascript
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-numberLetter"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-numberLetter");
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
@@ -242,12 +241,11 @@ onUniqueRead: (txt: string, result: DLRLineResult) => void
 **Code Snippet**
 
 ```javascript
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-numberLetter"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-numberLetter");
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
@@ -275,12 +273,11 @@ onMRZRead: (txt: string, results: DLRLineResult[]) => void
 **Code Snippet**
 
 ```javascript
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-MRZ"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-MRZ");
 recognizer.onMRZRead = (txt, results) => {
     console.log(txt);
 }
@@ -306,12 +303,11 @@ onImageRead: (results: DLRResult[]) => void
 **Code Snippet**
 
 ```js
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onImageRead = results => {
     for (let result of results) {
         for (let lineResult of result.lineResults) {
@@ -345,12 +341,11 @@ A promise resolving to a `PlayCallbackInfo` object which contains the resolution
 **Code Snippet**
 
 ```js
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
     for (let result of results) {
@@ -397,12 +392,11 @@ stopScanning(hideUI?: boolean): void;
 **Code Snippet**
 
 ```js
-let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
-    runtimeSettings: "video-passportMRZ"
-});
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
     for (let result of results) {

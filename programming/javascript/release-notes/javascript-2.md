@@ -10,6 +10,15 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+## 2.2.10 (06/21/2022)
+
+### Changelog
+
+* Reduced the size of MRZ model from 10MB to 2.56MB.
+* Improved single-line text confidence. This enables users to implement results confidence filter to improve the recognition accuracy.
+* Improved character segmentation when processing some connected characters. This improves the recognition accuracy.
+* Added event [`onVINRead`](../api-reference/recognize.md#onvinread) which is triggered when the library detects a VIN number. Specific processing will be applied for better recognition accuracy of VIN when calling the event.
+
 ## 2.2.4 (04/14/2022)
 
 ### ADDED

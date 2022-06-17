@@ -18,6 +18,7 @@ needAutoGenerateSidebar: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 2.2.10 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#2210-06212022) / [JavaScript](../programming/javascript/release-notes/javascript-2.md#2210-06212022) |
 | 2.2.4 | [JavaScript](../programming/javascript/release-notes/javascript-2.md#224-04142022) |
 | 2.2.2 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#222-03032022) / [JavaScript](../programming/javascript/release-notes/javascript-2.md#222-03032022) |
 | 2.2.1 | [JavaScript](../programming/javascript/release-notes/javascript-2.md#221-02232022) |

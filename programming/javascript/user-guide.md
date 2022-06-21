@@ -319,7 +319,7 @@ As you can see from the above code snippets, there are two types of configuratio
 
 * `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime` and `intervalTime`, etc.
 
-* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built-in template or a template represented by a JSON string. This will override the previous RuntimeSettings.
+* `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built-in template or a template represented by a JSON string. This will override the previous RuntimeSettings. In our case, we use the template "video-passportMRZ" which is meant for reading the machine readable zone (MRZ) on a passport.
   > Note that templates starting with "video-" are only valid after a `CameraEnhancer` instance has been bound to this `LabelRecognizer` instance.
 
 #### Customize the UI
@@ -404,7 +404,8 @@ recognizer.onImageRead = results => {
     }
 };
 recognizer.onMRZRead = (txt, results) => {
-    // In this event handler, you get a two-line string recognized from the MRZ from which you can further decode and display meaningful information such as name, nationality, etc.
+    // In this event handler, you get a two-line string recognized from the MRZ on passports from which you can further decode and display meaningful information such as name, nationality, etc.
+    // Note that if you use the template video-MRZ, you may also get a three-line string.
     alert(txt);
 };
 await recognizer.startScanning(true);

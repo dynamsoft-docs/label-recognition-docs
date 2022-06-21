@@ -114,7 +114,7 @@ The complete code of the "Hello World" example is shown below
   >| `letter` | For pure English letter recognition. |
   >| `MRZ` | For MRZ (machine-readable zone) recognition. |
   >| `passportMRZ` | For passport MRZ recognition. |
-  >| `visaMRZ_A` | For Visa (Country not Credit Card) MRZ recognition. |
+  >| `visaMRZ` | For Visa (Country not Credit Card) MRZ recognition. |
   >| `VIN` | For VIN (vehicle identification number) recognition. |
   >| `VIN_NA` | For North American VIN (vehicle identification number) recognition. |
   >

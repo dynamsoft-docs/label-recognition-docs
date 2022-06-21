@@ -25,7 +25,7 @@ Interface for scan behaviour customization.
 
 ### intervalTime?: *number*
 
-  > Scan interval used to allow the library to release the CPU periodically. Measured in ms.
+  > Scan interval used to allow the library to release the CPU periodically. Measured in ms. Must be a positive value ( > 0 ).
 
 ### duplicateForgetTime?: *number*
 

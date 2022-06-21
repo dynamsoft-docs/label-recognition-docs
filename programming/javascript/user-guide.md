@@ -418,28 +418,27 @@ You can check out the detailed documentation about the APIs of the SDK at
 
 ## System Requirements
 
-The SDK requires the following features to work:
+The SDK requires the following features to work (some of them are required by the `CameraEnhancer` SDK for camera access):
 
 * Secure context (HTTPS deployment)
 
   When deploying your application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
   
+  * Dynamsoft License requires a secure context to work.
   * Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
   > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
   
-  * Dynamsoft License requires a secure context to work.
-
 * `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
 
   The above four features are required for the SDK to work.
 
 * `MediaDevices`/`getUserMedia`
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.0.2&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming by the `CameraEnhancer` SDK.
 
 * `getSettings`
 
-  This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties.
+  This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties. This is also required by the `CameraEnhancer` SDK.
 
 The following table is a list of supported browsers based on the above requirements:
 

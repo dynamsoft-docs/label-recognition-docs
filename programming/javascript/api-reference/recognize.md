@@ -26,8 +26,9 @@ breadcrumbText: Recognition APIs
 |---|---|
 | [setImageSource](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a image with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning a image. |
+| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
+| [onVINRead](#onvinread) | This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. |
 | [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming images. |
 | [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
@@ -258,7 +259,7 @@ recognizer.startScanning(true);
 
 ## onMRZRead
 
-This event is triggered after the library finishes scanning a image with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+This event is triggered after the library finishes scanning an image based on one of the built-in templates  `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
 
 ```typescript
 onMRZRead: (txt: string, results: DLRLineResult[]) => void
@@ -287,6 +288,32 @@ recognizer.startScanning(true);
 **See also**
 
 * [DLRLineResult](./interface/dlr-line-result.md)
+
+## onVINRead
+
+This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`.
+
+```typescript
+onVINRead: (txt: string) => void
+```
+
+**Arguments**
+
+`txt` : a string that holds the text result from a VIN code.
+
+**Code Snippet**
+
+```javascript
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
+await recognizer.updateRuntimeSettingsFromString("video-VIN");
+recognizer.onVINRead = (txt, results) => {
+    console.log(txt);
+}
+recognizer.startScanning(true);
+```
 
 ## onImageRead
 

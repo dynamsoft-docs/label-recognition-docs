@@ -19,7 +19,7 @@ class dynamsoft::dlr::CLabelRecognizer
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`CLabelRecognizer`](#labelrecognizer) | Initialization of `CLabelRecognizer` object.|
+  | [`CLabelRecognizer`](#clabelrecognizer) | Initialization of `CLabelRecognizer` object.|
   | [`InitLicense`](#initlicense) | Sets the license and activates the SDK. |
 
 

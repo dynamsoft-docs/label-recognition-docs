@@ -9,6 +9,16 @@ needGenerateH3Content: true
 
 # User Guide - C
 
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Build Your First Application](#build-your-first-application)
+    * [Create A New Project](#create-a-new-project)
+    * [Include the Label Recognizer Library](#include-the-label-recognizer-library)
+    * [Initialize the Label Recognizer](#initialize-the-label-recognizer)
+    * [Recognition Process and How to Use the Results](#recognition-process-and-how-to-use-the-results)
+    * [Release Allocated Memory](#release-allocated-memory)
+    * [Build and Run the Project](#build-and-run-the-project)
+
 ## Requirements
    
 - Windows 
@@ -21,14 +31,15 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don’t `have` SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. Once the folder is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which we will refer to as `[INSTALLATION FOLDER]` throughout this guide.
 
-## Build your first application
+## Build Your First Application
 
 Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
->You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/HelloWorld_C).
 
-### Create a new project 
+>You can download the complete source code referenced in this guide from [here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/HelloWorld_C).
+
+### Create A New Project 
 
 #### For Windows
 
@@ -70,7 +81,7 @@ Let’s start by creating a console application which demonstrates how to use th
 
     >Note: The DLRLIB_PATH variable should be set to the correct directory where the DLR library files are located. The files and character models directory can be found in `[INSTALLATION FOLDER]/Lib/Linux`.
 
-### Include the library
+### Include the Label Recognizer Library
 
 1. Add headers and libs in `DLRCSample.c`.   
    
@@ -90,7 +101,7 @@ Let’s start by creating a console application which demonstrates how to use th
    
     >Please replace `<relative path>` in the above code with the relative path to the `DLRCSample.c` file. The `DynamsoftLabelRecognizer.h` file can be found in `[INSTALLATION FOLDER]/Include/` folder. The import lib files (only for Windows) can be found in `[INSTALLATION FOLDER]/Lib/`. 
     
-### Initialize the Dynamsoft Label Recognizer
+### Initialize the Label Recognizer
 
 1. Initialize the license key
 
@@ -113,7 +124,7 @@ Let’s start by creating a console application which demonstrates how to use th
     void* dlr = DLR_CreateInstance();
     ```
 
-### Recognizing and output results
+### Recognition Process and How to Use the Results
 
 1. Recognizing text in an image 
     
@@ -177,7 +188,7 @@ Let’s start by creating a console application which demonstrates how to use th
     <p>Figure 1 – DLR Result Structure</p>
     </div> 
 
-### Release allocated memory
+### Release Allocated Memory
 
 1. Release the allocated memory for the recognition results and instance
 
@@ -190,7 +201,7 @@ Let’s start by creating a console application which demonstrates how to use th
 
 You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/HelloWorld_C).
 
-### Build and run the project
+### Build and Run the Project
 
 #### For windows
 

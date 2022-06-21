@@ -9,6 +9,16 @@ needGenerateH3Content: true
 
 # User Guide - iOS
 
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Build Your First Application](#build-your-first-application)
+    * [Create a New Project](#create-a-new-project)
+    * [Include the Label Recognizer Library](#include-the-label-recognizer-library)
+    * [Initialize the Label Recognizer](#initialize-the-label-recognizer)
+    * [Recognition Process and How to Use the Results](#recognition-process-and-how-to-use-the-results)
+    * [Additional Auxiliary Steps](#additional-auxiliary-steps)
+    * [Build and Run the Project](#build-and-run-the-project)
+
 ## Requirements
 
 - Operating systems:
@@ -44,7 +54,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 
 5. Click on the Create button to finish.
 
-### Include the Library
+### Include the Label Recognizer Library
 
 1. Add the Dynamsoft Label Recognizer framework to your project.
     - Drag and drop the frameworks(`[INSTALLATION FOLDER]\DynamsoftCore.framework` and `[INSTALLATION FOLDER]\DynamsoftLabelRecognizer.framework`) into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
@@ -63,7 +73,7 @@ The following sample will demonstrate how to take a picture and recognize it.
     import DynamsoftLabelRecognizer
     ```       
 
-### Initialize the Dynamsoft Label Recognizer
+### Initialize the Label Recognizer
 
 1. Initialize the license connection parameters.
 
@@ -97,7 +107,7 @@ The following sample will demonstrate how to take a picture and recognize it.
     let dlr = DynamsoftLabelRecognition.init()
     ```
 
-### Recognizing and Output Results
+### Recognition Process and How to Use the Results
 
 1. Recognizing text
     

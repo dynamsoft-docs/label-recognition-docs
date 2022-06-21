@@ -8,9 +8,18 @@ needAutoGenerateSidebar: false
 
 # Release Notes - C/C++ 2.x
 
+## 2.2.10 (06/21/2022)
+
+### Changelog
+
+- Reduced the size of MRZ model from 10MB to 2.56MB.
+- Improved single-line text confidence. This enables users to implement results confidence filter to improve the recognition accuracy.
+- Improved character segmentation when processing some connected characters. This improves the recognition accuracy.
+
 ## 2.2.2 (03/03/2022)
 
 ### Changelog
+
 #### Fixed 
 
 - Fixed a bug that might cause incorrect regular expression matching. 
@@ -35,7 +44,6 @@ needAutoGenerateSidebar: false
   - `LabelRecognizerParameter`
   - `TextArea`
   - `LineSpecification`
-
 
 ## 2.0 (08/26/2021)
 

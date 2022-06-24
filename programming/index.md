@@ -14,5 +14,5 @@ needGenerateH3Content: true
 - [iOS]({{ site.objectivec-swift }})
 - [.NET]({{ site.dotnet }})
 - [Java]({{ site.java }})
-- [C]({{ site.c-cplusplus }}{% link c-index.html %})
-- [C++]({{ site.c-cplusplus }}{% link cpp-index.html %})
+- [C]({{ site.c-cplusplus }}c-index.html)
+- [C++]({{ site.c-cplusplus }}cpp-index.html)

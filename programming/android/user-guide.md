@@ -9,6 +9,16 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer - Android User Guide
 
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Build Your First Application](#build-your-first-application)
+    * [Create a New Project](#create-a-new-project)
+    * [Include the Label Recognizer Library](#include-the-label-recognizer-library)
+    * [Initialize the Label Recognizer](#initialize-the-label-recognizer)
+    * [Recognition Process and How to Use the Results](#recognition-process-and-how-to-use-the-results)
+    * [Additional Auxiliary Steps](#additional-auxiliary-steps)
+    * [Build and Run the Project](#build-and-run-the-project)
+
 ## Requirements
 
 - Operating systems:
@@ -38,7 +48,7 @@ The following sample will demonstrate how to take a picture and recognize it.
     >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 
-### Include the Library
+### Include the Label Recognizer Library
 
 There are two ways to include the Dynamsoft Label Recognizer SDK into your project：
 
@@ -90,7 +100,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     import com.dynamsoft.dlr.*;
     ```
 
-### Initialize the Dynamsoft Label Recognizer
+### Initialize the Label Recognizer
 
 
 1. Initialize the license
@@ -117,7 +127,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     LabelRecognizer dlr = new LabelRecognizer();
     ```
 
-### Recognizing and Output Results
+### Recognition Process and How to Use the Results
 
 1. Recognizing text
     

@@ -9,6 +9,15 @@ needGenerateH3Content: true
 
 # User Guide - Java
 
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Build Your First Application](#build-your-first-application)
+    * [Create A New Project](#create-a-new-project)
+    * [Include the Label Recognizer Library](#include-the-label-recognizer-library)
+    * [Initialize the Label Recognizer](#initialize-the-label-recognizer)
+    * [Recognition Process and How to Use the Results](#recognition-process-and-how-to-use-the-results)
+    * [Build and Run the Project](#build-and-run-the-project)
+
 ## Requirements
 
 - Operating systems:
@@ -23,19 +32,19 @@ needGenerateH3Content: true
 
 If you don’t have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
-## Build your first application
+## Build your First Application
 
 Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
 
 >You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-java-samples/tree/master/samples/HelloWorld).
 
-### Create a new project 
+### Create a New Project 
 
 1. Open Eclipse. Go to File > New > Project,  create a new Java project `DLRJavaSample`.
 
 2. Add a new Class named `DLRJavaSample` into the project.
 
-### Include the library
+### Include the Label Recognizer library
 
 1. Add the Dynamsoft Label Recognizer JAR file to your project.
     Click File > Properties > Java Build Path > Libraries > Add external JARs, add `dynamsoft-labelrecognizer-{version number}.jar` and `dynamsoft-core-{version number}.jar` click Apply.
@@ -47,7 +56,7 @@ Let’s start by creating a console application which demonstrates how to use th
     import com.dynamsoft.dlr.*;
     ```
 
-### Initialize the Dynamsoft Label Recognizer
+### Initialize the Label Recognizer
 
 1. Initialize the license key
 
@@ -69,7 +78,7 @@ Let’s start by creating a console application which demonstrates how to use th
     ```
 
 
-### Recognizing and output results
+### Recognition Process and How to Use the Results
 
 1. Recognizing text in an image 
     
@@ -123,7 +132,7 @@ Let’s start by creating a console application which demonstrates how to use th
 
 You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-java-samples/tree/master/samples/HelloWorld).
 
-### Build and run the project
+### Build and Run the Project
 
 1. Right click the project， click Run As > Java Application.
 

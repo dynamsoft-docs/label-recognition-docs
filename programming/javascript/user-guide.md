@@ -11,7 +11,7 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer for Your Website
 
-Add the capability of reading ID cards or other text of fixed formats in your web application with just a few lines of code.
+Add the capability of reading ID cards, passport MRZs, VIN numbers, and various other other fixed text fields in your web application with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-label-recognizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-label-recognizer.svg)

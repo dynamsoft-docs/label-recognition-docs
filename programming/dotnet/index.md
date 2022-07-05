@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# .Net Documentation
+# .NET Documentation
 
 ## Getting Started
 

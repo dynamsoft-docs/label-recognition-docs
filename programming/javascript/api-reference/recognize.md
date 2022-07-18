@@ -225,7 +225,7 @@ recognizer.startScanning(true);
 
 ## onUniqueRead
 
-This event is triggered when a new, unduplicated label is found.
+This event is triggered when a new, unduplicated label is found. This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 <!--TODO: result format may not right-->
 
@@ -259,7 +259,7 @@ recognizer.startScanning(true);
 
 ## onMRZRead
 
-This event is triggered after the library finishes scanning an image based on one of the built-in templates  `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+This event is triggered after the library finishes scanning an image based on one of the built-in templates  `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 ```typescript
 onMRZRead: (txt: string, results: DLRLineResult[]) => void
@@ -291,7 +291,7 @@ recognizer.startScanning(true);
 
 ## onVINRead
 
-This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`.
+This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 ```typescript
 onVINRead: (txt: string) => void
@@ -317,7 +317,7 @@ recognizer.startScanning(true);
 
 ## onImageRead
 
-This event is triggered after the library finishes scanning a image.
+This event is triggered after the library finishes scanning a image. This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 ```typescript
 onImageRead: (results: DLRResult[]) => void

@@ -126,7 +126,7 @@ The complete code of the "Hello World" example is shown below
 
   > While the events `onImageRead` and `onUniqueRead` work for all templates, extra events are provided for certain templates for easier usage. For example, you can use `onMRZRead` if one of the MRZ-related templates is used or use `onVINRead` if one of the VIN-related templates is used.
 
-* `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
+* `startScanning(true)`: Starts continuous video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Test the code
 

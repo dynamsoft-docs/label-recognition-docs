@@ -188,7 +188,7 @@ To download the SDK:
   npm install dynamsoft-camera-enhancer@2.3.2
   ```
 
-Depending on how you downloaded the SDK and where you put it. You can typically include it like this:
+Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
   <script src="/dlr-js-2.2.10/dist/dlr.js"></script>

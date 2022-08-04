@@ -28,7 +28,7 @@ jobs:
           [ ! -d DLRDoc ] && mkdir -p DLRDoc
           [ ! -d label-recognition-docs ] && git clone --depth 1 https://github.com/Dynamsoft/label-recognition-docs.git
           cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DLRDoc/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDoc/
           cd DLRDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/ prod
 
@@ -48,7 +48,7 @@ jobs:
           [ ! -d DLRDocPreview ] && mkdir -p DLRDocPreview
           [ ! -d label-recognition-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/label-recognition-docs.git label-recognition-docs-preview
           cd label-recognition-docs-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-preview/* ./DLRDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DLRDocPreview/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DLRDocPreview/_config.yml
           cd DLRDocPreview && bundle exec jekyll build

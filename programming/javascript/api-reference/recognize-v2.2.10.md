@@ -202,35 +202,25 @@ for (let result of results) {
 Sets an image source for continous scanning.
 
 ```typescript
-setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
+setImageSource(imageSource: ImageSource): boolean;
 ```
 
-### Parameters
+**Arguments**
 
 `imageSource` : Specifies the image source.
-`options` : Options to help with the usage of the `ImageSource` object. For example, pass `Dynamsoft.DCE.DrawingItem` to help with the highlighting of barcode regions as shown in the code snippet below.
 
-### Code Snippet
+**Code Snippet**
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
-recognizer.onUniqueRead = (txt, result) => {
-    console.log(txt);
-}
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-numberLetter");
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
-await recognizer.startScanning(true);
-```
-
-```javascript
-
+recognizer.startScanning(true);
 ```
 
 ## onUniqueRead
@@ -254,10 +244,8 @@ onUniqueRead: (txt: string, result: DLRLineResult) => void
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-numberLetter");
 recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
@@ -288,10 +276,8 @@ onMRZRead: (txt: string, results: DLRLineResult[]) => void
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-MRZ");
 recognizer.onMRZRead = (txt, results) => {
     console.log(txt);
@@ -320,10 +306,8 @@ onVINRead: (txt: string) => void
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-VIN");
 recognizer.onVINRead = (txt, results) => {
     console.log(txt);
@@ -348,10 +332,8 @@ onImageRead: (results: DLRResult[]) => void
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onImageRead = results => {
     for (let result of results) {
@@ -388,10 +370,8 @@ A promise resolving to a `PlayCallbackInfo` object which contains the resolution
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);
@@ -412,14 +392,8 @@ recognizer.startScanning(true);
 
 Pause continuous scanning but keep the video stream.
 
-### Parameters
-
-`options` : Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the text found on the frame (at the time of the pause) highlighted.
-
 ```typescript
-pauseScanning(options?: {
-  keepResultsHighlighted: boolean;
-}): void;
+pauseScanning(): void;
 ```
 
 ## resumeScanning
@@ -447,10 +421,8 @@ stopScanning(hideUI?: boolean): void;
 ```js
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
 let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
 recognizer.onUniqueRead = (txt, results) => {
     console.log(txt);

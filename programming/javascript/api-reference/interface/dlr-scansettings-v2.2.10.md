@@ -16,13 +16,12 @@ Interface for scan behaviour customization.
 
 | Attribute | Type |
 |---------- | ---- |
-| [`intervalTime`](#intervaltime-number) | *number* |
-| [`duplicateForgetTime`](#duplicateforgettime-number) | *number* |
-| [`whenToPlaySoundforSuccessfulRead`](#whentoplaysoundforsuccessfulread-string) | *string* |
-| [`soundOnSuccessfullRead`](#soundonsuccessfullread-string) | *string* |
-| [`whenToVibrateforSuccessfulRead`](#whentovibrateforsuccessfulread-string) | *string* |
-| [`vibrateDuration`](#duplicateforgettime-number) | *number* |
-| [`captureAndDecodeInParallel`](#captureanddecodeinparallel-boolean) | *boolean* |
+| [ `intervalTime` ](#intervaltime) | *number* |
+| [ `duplicateForgetTime` ](#duplicateforgettime) | *number* |
+| [ `whenToPlaySoundforSuccessfulRead` ](#whentoplaysoundforsuccessfulread-string) | *string* |
+| [ `soundOnSuccessfullRead` ](#soundonsuccessfullread-string) | *string* |
+| [ `whenToVibrateforSuccessfulRead` ](#whentovibrateforsuccessfulread-string) | *string* |
+| [ `vibrateDuration` ](#duplicateforgettime) | *number* |
 
 ### intervalTime?: *number*
 
@@ -64,7 +63,3 @@ Interface for scan behaviour customization.
 >scanSettings.duplicateForgetTime = 3000; // 3s
 >await scanner.updateScanSettings(scanSettings);
 >```
-
-### captureAndDecodeInParallel?: *boolean*
-
-> Returns or sets whether to capture the next frame whiel the previous frame is being decoded to save time. The default value is `true`.

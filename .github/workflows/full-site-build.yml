@@ -30,7 +30,7 @@ jobs:
           cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDoc/
           cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDoc/
           cd DLRDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/ prod
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/docs/ prod
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -60,4 +60,4 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DLRDocPreview/_site/
-          server-dir: /www.dynamsoft.com/label-recognition/
+          server-dir: /www.dynamsoft.com/label-recognition/docs/

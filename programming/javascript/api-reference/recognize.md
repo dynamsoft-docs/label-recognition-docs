@@ -223,9 +223,6 @@ recognizer.onUniqueRead = (txt, result) => {
     console.log(txt);
 }
 await recognizer.updateRuntimeSettingsFromString("video-numberLetter");
-recognizer.onUniqueRead = (txt, result) => {
-    console.log(txt);
-}
 await recognizer.startScanning(true);
 ```
 

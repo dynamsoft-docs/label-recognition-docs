@@ -467,7 +467,7 @@ You can check out the detailed documentation about the APIs of the SDK at
 
 ## System Requirements
 
-DBR requires the following features to work:
+DLR requires the following features to work:
 
 * Secure context (HTTPS deployment)
 

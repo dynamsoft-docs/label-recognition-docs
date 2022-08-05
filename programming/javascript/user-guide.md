@@ -31,6 +31,7 @@ In this guide, you will learn step by step on how to integrate this SDK into you
   * [Interact with the SDK](#interact-with-the-sdk)
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
+* [Release Notes](#release-notes)
 
 ## Example Usage - MRZ Reading
 
@@ -500,3 +501,7 @@ The following table is a list of supported browsers based on the above requireme
   <sup>3</sup> Safari v11.x already has the required features, but it has many other issues, so we recommend v12+.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+
+## Release Notes
+
+Learn about what are included in each release at [https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest).

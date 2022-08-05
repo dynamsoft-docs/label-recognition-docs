@@ -151,7 +151,7 @@ The complete code of the "MRZ Reading" example is shown below
 
 * `onUniqueRead`: This event is triggered when the SDK finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
-* `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
+* `startScanning(true)`: Starts continuous video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Test the code
 
@@ -217,7 +217,7 @@ To download the SDK:
   npm install dynamsoft-camera-enhancer@3.0.1
   ```
 
-Depending on how you downloaded the SDK and where you put it. You can typically include it like this:
+Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
   <script src="/dlr-js-2.2.11/dist/dlr.js"></script>

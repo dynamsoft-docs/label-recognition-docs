@@ -32,6 +32,7 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
 * [Release Notes](#release-notes)
+* [Next Step]
 
 ## Example Usage - MRZ Reading
 
@@ -167,6 +168,10 @@ Remember to open the browser console to check the resulting text. Also note that
 * The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+
+### Check out the official sample for MRZ reading
+
+You can also try the official sample for MRZ reading([Test in Github](https://dynamsoft.github.io/label-recognizer-javascript-samples/2.use-case/2.mrz-read-and-parse/), [Check the code](https://github.com/Dynamsoft/label-recognizer-javascript-samples/tree/main/2.use-case/2.mrz-read-and-parse). This sample also demonstrates how to parse the MRZ text into meaningful fields.
 
 ## Building your own page
 
@@ -458,7 +463,7 @@ await recognizer.startScanning(true);
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the SDK at
-[https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js).
+[https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js).
 
 ## System Requirements
 
@@ -505,3 +510,11 @@ Apart from the browsers, the operating systems may impose some limitations of th
 ## Release Notes
 
 Learn about what are included in each release at [https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest).
+
+## Next Steps
+
+Now that you have got the SDK integrated, you can choose to move forward in the following directions
+
+1. Check out the [official samples](https://github.com/Dynamsoft/label-recognizer-javascript-samples).
+2. Check out the official demos: [MRZ Scanner](https://demo.dynamsoft.com/label-recognizer-js/mrz-scanner.html), [VIN Scanner](https://demo.dynamsoft.com/label-recognizer-js/vin.html) and the [source code for the demo](https://github.com/Dynamsoft/label-recognizer-javascript-demo).
+3. Learn about the available [APIs](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=latest).

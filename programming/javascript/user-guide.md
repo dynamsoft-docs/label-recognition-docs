@@ -32,7 +32,7 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
 * [Release Notes](#release-notes)
-* [Next Step]
+* [Next Step](#next-steps)
 
 ## Example Usage - MRZ Reading
 

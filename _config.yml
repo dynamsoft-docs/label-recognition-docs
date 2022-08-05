@@ -1,59 +1,59 @@
 repositoryUrl: https://github.com/dynamsoft-docs/label-recognition-docs/blob/master
 repository: Dynamsoft/label-recognition-docs
-docFullPath: https://www.dynamsoft.com/label-recognition
-firstLevelUrl: /label-recognition
-docHomePage: /label-recognition/introduction/
+docFullPath: https://www.dynamsoft.com/label-recognition/docs
+firstLevelUrl: /label-recognition/docs
+docHomePage: /label-recognition/docs/introduction/
 
-introduction: /label-recognition/introduction/
-parameters: /label-recognition/parameters/
-enumerations: /label-recognition/parameters/enum/
-parameters-reference: /label-recognition/parameters/reference/
+introduction: /label-recognition/docs/introduction/
+parameters: /label-recognition/docs/parameters/
+enumerations: /label-recognition/docs/parameters/enum/
+parameters-reference: /label-recognition/docs/parameters/reference/
 
-programming: /label-recognition/programming/
+programming: /label-recognition/docs/programming/
 
-c-cplusplus: /label-recognition/programming/c-cplusplus/
-c-cplusplus-api-reference: /label-recognition/programming/c-cplusplus/api-reference/
+c-cplusplus: /label-recognition/docs/programming/c-cplusplus/
+c-cplusplus-api-reference: /label-recognition/docs/programming/c-cplusplus/api-reference/
 
-c-functions: /label-recognition/programming/c-cplusplus/api-reference/c-functions/
-cpp-methods: /label-recognition/programming/c-cplusplus/api-reference/c-label-recognition-class/
-c-cplusplus-structs: /label-recognition/programming/c-cplusplus/api-reference/structs/
+c-functions: /label-recognition/docs/programming/c-cplusplus/api-reference/c-functions/
+cpp-methods: /label-recognition/docs/programming/c-cplusplus/api-reference/c-label-recognition-class/
+c-cplusplus-structs: /label-recognition/docs/programming/c-cplusplus/api-reference/structs/
 
-c-cplusplus-release-notes: /label-recognition/programming/c-cplusplus/release-notes/
+c-cplusplus-release-notes: /label-recognition/docs/programming/c-cplusplus/release-notes/
 
-android: /label-recognition/programming/android/
-android-api: /label-recognition/programming/android/api-reference/
-android-release-notes: /label-recognition/programming/android/release-notes/
+android: /label-recognition/docs/programming/android/
+android-api: /label-recognition/docs/programming/android/api-reference/
+android-release-notes: /label-recognition/docs/programming/android/release-notes/
 
-dotnet: /label-recognition/programming/dotnet/
-dotnet_api: /label-recognition/programming/dotnet/api-reference/
-dotnet_release_notes: /label-recognition/programming/dotnet/release-notes/
+dotnet: /label-recognition/docs/programming/dotnet/
+dotnet_api: /label-recognition/docs/programming/dotnet/api-reference/
+dotnet_release_notes: /label-recognition/docs/programming/dotnet/release-notes/
 
-objectivec-swift: /label-recognition/programming/objectivec-swift/
-objectivec-swift-api: /label-recognition/programming/objectivec-swift/api-reference/
-objectivec-swift-release-notes: /label-recognition/programming/objectivec-swift/release-notes/
+objectivec-swift: /label-recognition/docs/programming/objectivec-swift/
+objectivec-swift-api: /label-recognition/docs/programming/objectivec-swift/api-reference/
+objectivec-swift-release-notes: /label-recognition/docs/programming/objectivec-swift/release-notes/
 
-java: /label-recognition/programming/java/
-java-api: /label-recognition/programming/java/api-reference/
-java-release-notes: /label-recognition/programming/java/release-notes/
+java: /label-recognition/docs/programming/java/
+java-api: /label-recognition/docs/programming/java/api-reference/
+java-release-notes: /label-recognition/docs/programming/java/release-notes/
 
-javascript: /label-recognition/programming/javascript/
-javascript-api: /label-recognition/programming/javascript/api-reference/
-javascript-release-notes: /label-recognition/programming/javascript/release-notes/
+javascript: /label-recognition/docs/programming/javascript/
+javascript-api: /label-recognition/docs/programming/javascript/api-reference/
+javascript-release-notes: /label-recognition/docs/programming/javascript/release-notes/
 
-assets: /label-recognition/assets/
-edit_icon: /label-recognition/assets/img-icon/edit-icon.png
-smile_icon: /label-recognition/assets/img-icon/icon-smile.png
-sad_icon: /label-recognition/assets/img-icon/icon-sad.png
-dbr_icon: /label-recognition/assets/img-icon/icon-dbr.svg
-dwt_icon: /label-recognition/assets/img-icon/icon-dwt.svg
-dnt_icon: /label-recognition/assets/img-icon/icon-dnt.svg
+assets: /label-recognition/docs/assets/
+edit_icon: /label-recognition/docs/assets/img-icon/edit-icon.png
+smile_icon: /label-recognition/docs/assets/img-icon/icon-smile.png
+sad_icon: /label-recognition/docs/assets/img-icon/icon-sad.png
+dbr_icon: /label-recognition/docs/assets/img-icon/icon-dbr.svg
+dwt_icon: /label-recognition/docs/assets/img-icon/icon-dwt.svg
+dnt_icon: /label-recognition/docs/assets/img-icon/icon-dnt.svg
 
-release-notes: /label-recognition/release-notes/
-license-activation: /label-recognition/license-activation/
+release-notes: /label-recognition/docs/release-notes/
+license-activation: /label-recognition/docs/license-activation/
 
 useVersionTree: true
 
-baseurl: "/label-recognition"
+baseurl: "/label-recognition/docs"
 plugins:
   - jemoji
 

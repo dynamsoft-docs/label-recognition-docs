@@ -10,6 +10,20 @@ breadcrumbText: v2.x Release Notes
 
 # Release Notes - JavaScript 2.x
 
+
+## 2.2.10 (06/21/2022)
+
+### ADDED
+
+* Added event [`onVINRead`](../api-reference/recognize.md#onvinread). This event is used when the SDK is configured with the template "VIN" or "video-VIN" in which case extra processing is applied for better recognition of VIN codes.
+
+### IMPROVED
+
+* Reduced the size of MRZ model from 10MB to 2.56MB. This significantly reduces the time for the initialization of the SDK for MRZ recognition.
+* Improved single-line text confidence. This enables users to perform confidence filtering on the generated results to improve recognition accuracy.
+* Improved character segmentation when dealing with some connected characters. This improves the recognition accuracy.
+
+
 ## 2.2.10 (06/21/2022)
 
 ### ADDED

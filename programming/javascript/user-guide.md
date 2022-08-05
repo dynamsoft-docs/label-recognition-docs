@@ -361,7 +361,7 @@ As you can see from the above code snippets, there are two types of configuratio
 
 The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr.ui.html` . There are a few ways to customize it:
 
-* Modify the file `dbr.ui.html` directly.
+* Modify the file `dlr.ui.html` directly.
 
   This option is only possible when you host this file on your own web server instead of using a CDN. Note that this file is put in the **dist** directory of the **dynamsoft-camera-enhancer** package.
 

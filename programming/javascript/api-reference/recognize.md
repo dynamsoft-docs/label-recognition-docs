@@ -229,10 +229,6 @@ recognizer.onUniqueRead = (txt, result) => {
 await recognizer.startScanning(true);
 ```
 
-```javascript
-
-```
-
 ## onUniqueRead
 
 This event is triggered when a new, unduplicated label is found.

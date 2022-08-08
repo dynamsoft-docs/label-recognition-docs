@@ -409,14 +409,12 @@ recognizer.startScanning(true);
 
 Pause continuous scanning but keep the video stream.
 
-### Parameters
+**Parameters**
 
-`options` : Options to configure how the pause works. For example, set `keepResultsHighlighted` to true will keep the text found on the frame (at the time of the pause) highlighted.
+`options` : Options to configure how the pause works. At present, it only contains one property `keepResultsHighlighted` which, when set to **true**, will keep the text found on the frame (at the time of the pause) highlighted.
 
 ```typescript
-pauseScanning(options?: {
-  keepResultsHighlighted: boolean;
-}): void;
+pauseScanning(options?: object): void;
 ```
 
 ## resumeScanning

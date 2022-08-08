@@ -140,7 +140,7 @@ A promise resolving to a `DLRResult\[\]` object that contains all the label resu
 **Code snippet**
 
 ```js
-let results = await recognizer.recognizeUrl("https://www.yourdomain.com/imageWithBarcodes.png");
+let results = await recognizer.recognizeUrl("https://www.yourdomain.com/imageWithTexts.png");
 for (let result of results) {
     for (let lineResult of result.lineResults) {
         console.log(lineResult.text);
@@ -208,7 +208,8 @@ setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
 ### Parameters
 
 `imageSource` : Specifies the image source.
-`options` : Options to help with the usage of the `ImageSource` object. For example, pass `Dynamsoft.DCE.DrawingItem` to help with the highlighting of barcode regions as shown in the code snippet below.
+
+`options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of text regions as shown in the code snippet below. More properties will be added as needed in the future.
 
 ### Code Snippet
 
@@ -307,6 +308,7 @@ onVINRead: (txt: string, result: DLRLineResult) => void
 **Arguments**
 
 `txt` : a string that holds the text result from a VIN code.
+
 `result` : a `DLRLineResult` object that contains more detailed info about the returned text.
 
 **Code Snippet**

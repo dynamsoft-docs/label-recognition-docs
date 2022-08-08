@@ -36,7 +36,7 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 
 ## Example Usage - MRZ Reading
 
-Let's start by testing the "MRZ Reading" example of the SDK which demonstrates how to enable a web page to read the machine-readable zones (MRZ) found on passports, VISAs, etc. from a live video stream.
+Let's start by testing the "MRZ Reading" example of the SDK which demonstrates how to enable a web page to read the machine-readable zones (MRZ) found on passports, ID cards, VISAs, etc. from a live video stream.
 
 * Basic Requirements
   * Internet connection  

@@ -83,11 +83,7 @@ The complete code of the "MRZ Reading" example is shown below
             recognizer.onMRZRead = (txt, results) => {
                 // Here we simply show the text in the browser console.
                 console.log("Found and read a MRZ:")
-                console.log(results[0].text);
-                console.log(results[1].text);
-                if(results.length === 3) {
-                  console.log(results[2].text);
-                }
+                console.log(txt);
             };
             // Beginning of redundant code: just to demonstrate the use of onImageRead and onUniqueRead events
             recognizer.onImageRead = results => {

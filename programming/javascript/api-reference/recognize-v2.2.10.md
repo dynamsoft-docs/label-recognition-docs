@@ -309,7 +309,7 @@ let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 await enhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
 recognizer.setImageSource(enhancer);
 await recognizer.updateRuntimeSettingsFromString("video-VIN");
-recognizer.onVINRead = (txt, results) => {
+recognizer.onVINRead = (txt) => {
     console.log(txt);
 }
 recognizer.startScanning(true);

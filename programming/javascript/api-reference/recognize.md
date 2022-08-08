@@ -301,12 +301,13 @@ recognizer.startScanning(true);
 This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 ```typescript
-onVINRead: (txt: string) => void
+onVINRead: (txt: string, result: DLRLineResult) => void
 ```
 
 **Arguments**
 
 `txt` : a string that holds the text result from a VIN code.
+`result` : a `DLRLineResult` object that contains more detailed info about the returned text.
 
 **Code Snippet**
 
@@ -318,8 +319,9 @@ let options = {
 };
 await recognizer.setImageSource(enhancer, options);
 await recognizer.updateRuntimeSettingsFromString("video-VIN");
-recognizer.onVINRead = (txt, results) => {
+recognizer.onVINRead = (txt, result) => {
     console.log(txt);
+    console.log(result);
 }
 recognizer.startScanning(true);
 ```

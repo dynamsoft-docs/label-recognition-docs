@@ -14,7 +14,7 @@ breadcrumbText: v2.x Release Notes
 
 ### ADDED
 
-* Added option `captureAndDecodeInParallel` to the interface `ScanSettings` to control whether to speed up the recognition by capturing the next frame in advance.
+* Added option `captureAndRecognizeInParallel` to the interface `ScanSettings` to control whether to speed up the recognition by capturing the next frame in advance.
 
 ### CHANGED
 

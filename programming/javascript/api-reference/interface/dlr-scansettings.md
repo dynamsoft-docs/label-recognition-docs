@@ -22,7 +22,7 @@ Interface for scan behaviour customization.
 | [`soundOnSuccessfullRead`](#soundonsuccessfullread-string) | *string* |
 | [`whenToVibrateforSuccessfulRead`](#whentovibrateforsuccessfulread-string) | *string* |
 | [`vibrateDuration`](#duplicateforgettime-number) | *number* |
-| [`captureAndDecodeInParallel`](#captureanddecodeinparallel-boolean) | *boolean* |
+| [`captureAndRecognizeInParallel`](#captureAndRecognizeInParallel-boolean) | *boolean* |
 
 ### intervalTime?: *number*
 
@@ -65,6 +65,6 @@ Interface for scan behaviour customization.
 >await scanner.updateScanSettings(scanSettings);
 >```
 
-### captureAndDecodeInParallel?: *boolean*
+### captureAndRecognizeInParallel?: *boolean*
 
 > Returns or sets whether to capture the next frame whiel the previous frame is being decoded to save time. The default value is `true`.

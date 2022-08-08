@@ -331,9 +331,9 @@ scanSettings.duplicateForgetTime = 5000; // The default is 3000
 // Sets a scan interval in milliseconds so the SDK may release the CPU from time to time.
 // (setting this value larger is a simple way to save battery power and reduce device heating).
 scanSettings.intervalTime = 100; // The default is 0.
-// Sets captureAndDecodeInParallel to false, which tells the SDK not to acquire the next frame while decoding the first.
+// Sets captureAndRecognizeInParallel to false, which tells the SDK not to acquire the next frame while decoding the first.
 // This is another way to save battery power and is recommended on low-end phones. However, it does slow down the decoding speed.
-scanSettings.captureAndDecodeInParallel = false; // The default is true.
+scanSettings.captureAndRecognizeInParallel = false; // The default is true.
 await recognizer.updateScanSettings(scanSettings);
 ```
 

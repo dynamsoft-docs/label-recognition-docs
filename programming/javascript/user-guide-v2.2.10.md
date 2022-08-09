@@ -11,7 +11,7 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer for Your Website
 
-Add the capability of reading passport MRZs, ID cards, VIN numbers, and various other fixed text fields in your web application with just a few lines of code.
+Add the capability of reading ID cards, passport MRZs, VIN numbers, and various other other fixed text fields in your web application with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-label-recognizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-label-recognizer.svg)
@@ -24,42 +24,36 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 
 <span style="font-size:20px">Table of Contents</span>
 
-* [Example Usage - MRZ Reading](#example-usage---mrz-reading)
+* [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
 * [Building your own page](#building-your-own-page)
   * [Include the SDK](#include-the-sdk)
   * [Configure the SDK](#configure-the-sdk)
   * [Interact with the SDK](#interact-with-the-sdk)
 * [API Documentation](#api-documentation)
 * [System Requirements](#system-requirements)
-* [Release Notes](#release-notes)
-* [Next Step](#next-steps)
 
-## Example Usage - MRZ Reading
+## Hello World - Simplest Implementation
 
-Let's start by testing the "MRZ Reading" example of the SDK which demonstrates how to enable a web page to read the machine-readable zones (MRZ) found on passports, ID cards, VISAs, etc. from a live video stream.
+Let's start by testing the "Hello World" example of the SDK which demonstrates how to use the minimum code to enable a web page to read text from a live video stream.  
 
 * Basic Requirements
   * Internet connection  
   * [A supported browser](#system-requirements)
-  * An accessible Camera
+  * Camera access  
 
 ### Check the code
 
-The complete code of the "MRZ Reading" example is shown below
+The complete code of the "Hello World" example is shown below
 
 ```html
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>MRZ Reading</title>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.11/dist/dlr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
-</head>
-
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.10/dist/dlr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
     <script>
-        // The following line specifies a license good for 24 hours, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js to get your own trial license good for 30 days.
+        // The following line specifies a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js to get your own trial license good for 30 days.
         Dynamsoft.DLR.LabelRecognizer.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // The following code initializes and uses the SDK.
         (async () => {
@@ -72,22 +66,11 @@ The complete code of the "MRZ Reading" example is shown below
                 console.log("Finished loading " + resourcePath);
             };
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
+            Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
             let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-            let options = {
-                resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-            };
-            await recognizer.setImageSource(cameraEnhancer, options);
-            // The following line sets up the recognizer to read MRZ, which means the SDK will load a model file specifically designed for MRZ.
-            await recognizer.updateRuntimeSettingsFromString("video-mrz");
-            // onMRZRead is a callback specifically designed for MRZ.
-            recognizer.onMRZRead = (txt, results) => {
-                // Here we simply show the text in the browser console.
-                console.log("Found and read a MRZ:")
-                console.log(txt);
-            };
-            // Beginning of redundant code: just to demonstrate the use of onImageRead and onUniqueRead events
+            recognizer.setImageSource(cameraEnhancer);
+            await recognizer.updateRuntimeSettingsFromString("video-letter");
             recognizer.onImageRead = results => {
-                console.log("Finished reading an image:")
                 for (let result of results) {
                     for (let lineResult of result.lineResults) {
                         console.log(lineResult.text);
@@ -95,10 +78,8 @@ The complete code of the "MRZ Reading" example is shown below
                 }
             };
             recognizer.onUniqueRead = (txt, results) => {
-                console.log("Found a new unique text:")
-                console.log(txt);
+                alert(txt);
             };
-            // End of redundant code.
             await recognizer.startScanning(true);
         })();
     </script>
@@ -108,7 +89,7 @@ The complete code of the "MRZ Reading" example is shown below
 ```
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/kc35htxd/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -119,9 +100,9 @@ The complete code of the "MRZ Reading" example is shown below
 
 * `LabelRecognizer.createInstance()`: This method creates a `LabelRecognizer` object called `recognizer`.
 
-* `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `cameraEnhancer` is bound to `recognizer` via `setImageSource()`, it can send video frames from the camera to `recognizer` for recognition as well as highlight the recognized text areas directly in the video feed.
+* `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer` which is used to control the camera as well as the default user interface. To use `cameraEnhancer` with `recognizer`, we pass to it the customized UI provided by the Dynamsoft Label Recognizer SDK via `defaultUIElementURL` and then bind it to `recognizer` with `setImageSource()` to allow the latter to fetch frames from the camera for recognition as well as highlight the recognized text areas.
 
-* `updateRuntimeSettingsFromString("video-mrz")`: this sets up `recognizer` with a built-in template optimized for reading MRZ from continous video frames. Note that all built-in templates starting with "video-" are only valid after `cameraEnhancer` has been bound to `recognizer`.
+* `updateRuntimeSettingsFromString("video-letter")`: this sets up `recognizer` with a built-in template optimized for reading letters from continous video frames. Note that the built-in templates starting with "video-" are only valid after a `CameraEnhancer` instance has been bound to this `LabelRecognizer` instance.
 
   > Built-in templates include
   >
@@ -139,39 +120,33 @@ The complete code of the "MRZ Reading" example is shown below
   >
   > When recognizing from video input, add the prefix "video-" for a slightly different template optimized for continuous frame recognition. For example, use `video-passportMRZ` to read the MRZ on passports with a camera.
 
-* `onMRZRead`: This event is only used with one of the templates "MRZ", "passportMRZ" and "visaMRZ" (similarly, "onVINRead" is only used with either "VIN" or "VIN_NA"). It is triggered each time the SDK has identified and finished the recognition of a MRZ zone. The `results` object contains 2 or 3 lines of text results corresponding to the 2 or 3 lines in the MRZ. In this example, we simply print the results to the browser console.
-
-> The events `onImageRead` and `onUniqueRead` are used in the code but they are not required. You can compare the results returned in the 3 events and see what the differences are.
-
 * `onImageRead`: This event is triggered every time the SDK finishes scanning a video frame image. The `results` object contains all the text results that the SDK has found on this frame. In this example, we print the results to the browser console.
 
 * `onUniqueRead`: This event is triggered when the SDK finds a new text, which is not a duplicate among multiple frames. `txt` holds the text value while `results` is an array of objects that hold details of the text. In this example, an alert will be displayed for this new text.
 
-* `startScanning(true)`: Starts continuous video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
+  > While the events `onImageRead` and `onUniqueRead` work for all templates, extra events are provided for certain templates for easier usage. For example, you can use `onMRZRead` if one of the MRZ-related templates is used or use `onVINRead` if one of the VIN-related templates is used.
+
+* `startScanning(true)`: Starts contious video frame scanning. The return value is a Promise which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `recognizer` with frames to recognize).
 
 ### Test the code
 
-Create a text file with the name "readMRZ.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a simple line of text to read it.
+Create a text file with the name "helloworld.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a simple line of text to read it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/kc35htxd/](https://jsfiddle.net/DynamsoftTeam/kc35htxd/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/](https://jsfiddle.net/DynamsoftTeam/b1w8vm0t/)
 
-Remember to open the browser console to check the resulting text. Also note that the found text will be highlighted on the UI.
+If the text is decoded, an alert will pop up with the result text. At the same time, the text location will be highlighted in the video feed.
 
 *Note*:
 
-* Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server before accessing it. Also, most browsers require a secure connection (HTTPS) to access the cameras, so deploying the page to a HTTPS website is the best choice.
-* On first use, you need to wait a few seconds for the SDK to initialize and download the necessary model file.
+* Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server before accessing it. Also, some browsers require a secure connection (HTTPS) to access the cameras, so deploying the page to a HTTPS website is the best choice.
+* On first use, you may need to wait a few seconds for the SDK to initialize.
 * The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
 
-### Check out the official sample for MRZ reading
-
-You can also try the official sample for MRZ reading ([test in Github](https://dynamsoft.github.io/label-recognizer-javascript-samples/2.use-case/2.mrz-read-and-parse/) or [check the code](https://github.com/Dynamsoft/label-recognizer-javascript-samples/tree/main/2.use-case/2.mrz-read-and-parse)). This sample also demonstrates how to parse the MRZ text into meaningful fields.
-
 ## Building your own page
 
-In this section, we'll break down and show all the steps required to build a web page that reads the machine readable zone (MRZ) on a passport.
+In this section, we'll break down and show all the steps required to build a web page to read the machine readable zone (MRZ) on a passport.
 
 ### Include the SDK
 
@@ -182,15 +157,15 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.11/dist/dlr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.10/dist/dlr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.11/dist/dlr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-label-recognizer@2.2.10/dist/dlr.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@2.3.2/dist/dce.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -202,22 +177,22 @@ To download the SDK:
 * yarn
 
   ```cmd
-  yarn add dynamsoft-label-recognizer@2.2.11
-  yarn add dynamsoft-camera-enhancer@3.0.1
+  yarn add dynamsoft-label-recognizer@2.2.10
+  yarn add dynamsoft-camera-enhancer@2.3.2
   ```
 
 * npm
 
   ```cmd
-  npm install dynamsoft-label-recognizer@2.2.11
-  npm install dynamsoft-camera-enhancer@3.0.1
+  npm install dynamsoft-label-recognizer@2.2.10
+  npm install dynamsoft-camera-enhancer@2.3.2
   ```
 
-Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
+Depending on how you downloaded the SDK and where you put it. You can typically include it like this:
 
   ```html
-  <script src="/dlr-js-2.2.11/dist/dlr.js"></script>
-  <script src="/dlr-js-2.2.11/dce/dist/dce.js"></script>
+  <script src="/dlr-js-2.2.10/dist/dlr.js"></script>
+  <script src="/dlr-js-2.2.10/dce/dist/dce.js"></script>
   ```
 
 or
@@ -231,7 +206,6 @@ or
 
   ```ts
   import { LabelRecognizer } from 'dynamsoft-label-recognizer';
-  import { CameraEnhancer, DrawingItem } from 'dynamsoft-camera-enhancer';
   ```
 
 ### Configure the SDK
@@ -248,14 +222,16 @@ Dynamsoft.DLR.LabelRecognizer.license = "YOUR-LICENSE-KEY";
 
 To test the SDK, you can request a 30-day trial license via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js).
 
+> If you registered for a Dynamsoft account and downloaded the SDK from the official site, Dynamsoft will generate a 30-day trial license for you and put the license key in all the downloaded samples.
+
 #### Specify the location of the "engine" files
 
 If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the same location with the main SDK file (dlr.js), you can use the API `engineResourcePath` to specify the engine path, for example:
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.11/dist/";
-Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.10/dist/";
+Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@2.3.2/dist/";
 ```
 
 **This configuration is usually required with frameworks like Angular or React where dlr.js is compiled into another file.**
@@ -298,19 +274,18 @@ try {
 
 #### Create a `CameraEnhancer` object and bind it to the `LabelRecognizer` object
 
-A `CameraEnhancer` object is required for video recognition.
+A `CameraEnhancer` object is required for video recognition. We recommend that the object should make use of a customized UI from the Label Recognition SDK to streamline the recognition.
 
 ```javascript
+// This line passes the custom UI to the CameraEnhancer class to override the default UI.
+Dynamsoft.DCE.CameraEnhancer.defaultUIElementURL = Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL;
 let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(cameraEnhancer, options);
+recognizer.setImageSource(cameraEnhancer);
 ```
 
 #### Change the camera settings if necessary
 
-In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.0.1&utm_source=guide&product=dlr&package=js).
+In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=2.2.10&utm_source=guide&product=dlr&package=js).
 
 ```javascript
 // The following lines set which camera and what resolution to use.
@@ -324,16 +299,11 @@ await cameraEnhancer.setResolution(1280, 720);
 Check out the following code:
 
 ```javascript
-// Sets up the scanner behavior
 let scanSettings = await recognizer.getScanSettings();
-// Disregards duplicated results found in a specified time period (in milliseconds).
-scanSettings.duplicateForgetTime = 5000; // The default is 3000
-// Sets a scan interval in milliseconds so the SDK may release the CPU from time to time.
-// (setting this value larger is a simple way to save battery power and reduce device heating).
-scanSettings.intervalTime = 100; // The default is 0.
-// Sets captureAndRecognizeInParallel to false, which tells the SDK not to acquire the next frame while decoding the first.
-// This is another way to save battery power and is recommended on low-end phones. However, it does slow down the decoding speed.
-scanSettings.captureAndRecognizeInParallel = false; // The default is true.
+// The following line specifies that duplicate results found within 6000 ms should be ignored. In other words, the event "onUniqueRead" will only be triggered once for the 1st of these duplicate results.
+scanSettings.duplicateForgetTime = 6000;
+// The following line tells the SDK to rest for 100 ms after each recognition operation. This measure can reduce power usage and device heat.
+scanSettings.intervalTime = 100;
 await recognizer.updateScanSettings(scanSettings);
 ```
 
@@ -350,21 +320,20 @@ As you can see from the above code snippets, there are two types of configuratio
 * `get/updateScanSettings`: Configures the behavior of the recognizer which includes `duplicateForgetTime` and `intervalTime`, etc.
 
 * `updateRuntimeSettingsFromString`: Configures the recognizer engine with a built-in template or a template represented by a JSON string. This will override the previous RuntimeSettings. In our case, we use the template "video-passportMRZ" which is meant for reading the machine readable zone (MRZ) on a passport.
-
   > Note that templates starting with "video-" are only valid after a `CameraEnhancer` instance has been bound to this `LabelRecognizer` instance.
 
 #### Customize the UI
 
 The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr.ui.html` . There are a few ways to customize it:
 
-* Modify the file `dlr.ui.html` directly.
+* Modify the file `dist/dlr.ui.html` directly.
 
-  This option is only possible when you host this file on your own web server instead of using a CDN. Note that this file is put in the **dist** directory of the **dynamsoft-camera-enhancer** package.
+  This option is only possible when you host this file on your own web server instead of using a CDN. This file can then be passed to a `CameraEnhancer` object with `Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL` .
 
-* Copy the file `dlr.ui.html` to your application, modify it and pass its URL to the API `setUIElement` to set it as the default UI.
+* Copy the file `dist/dlr.ui.html` to your application, modify it and use the API `defaultUIElementURL` to set it as the default UI.
 
   ```javascript
-  await cameraEnhancer.setUIElement("THE-URL-TO-THE-FILE");
+  Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   ```
 
 * Append the default UI element to your page, customize it before showing it.
@@ -374,7 +343,7 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
   ```
 
   ```javascript
-  await cameraEnhancer.open();
+  await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
   document.getElementById('recognizerUI').appendChild(cameraEnhancer.getUIElement());
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
@@ -392,12 +361,8 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
             let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
             await cameraEnhancer.setUIElement(document.getElementById('div-ui-container'));
             let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
-            let options = {
-                resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-            };
-            await recognizer.setImageSource(cameraEnhancer, options);
+            recognizer.setImageSource(cameraEnhancer);
             await recognizer.updateRuntimeSettingsFromString("video-passportMRZ");
-            await recognizer.startScanning(true);
         })();
     </script>
     ```
@@ -405,36 +370,26 @@ The built-in UI of the `LabelRecognizer` object is defined in the file `dist/dlr
     > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the correct. Also note that the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
 
   * Add the camera list and resolution list
-
-    If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the SDK will automatically populate the lists and handle the camera/resolution switching.
+    If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the SDK will automatically populate the lists and handle the camera/resolution switching. Note that these lists must be within the containing element, in our case, they must be put inside the DIV element `div-ui-container`.
 
     ```html
-    <div id="div-ui-container" style="width:100%;height:100%;">
-        <select class="dce-sel-camera"></select><br>
-        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
-    </div>
+    <select class="dce-sel-camera"></select>
     ```
 
     ```html
-    <div id="div-ui-container">
-        <select class="dce-sel-camera"></select>
-        <select class="dce-sel-resolution"></select>
-        <br>
-        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
-    </div>
+    <select class="dce-sel-resolution"></select>
     ```
 
-    > By default, only 3 hard-coded resolutions (3840 x 2160, 1920 x 1080, 1280 x 720), are populated as options. You can show a customized set of options by hardcoding them.
+    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dce-opt-gotResolution` (as shown below) and the SDK will then use it to show the actual resolution.
 
     ```html
     <select class="dce-sel-resolution">
         <option class="dce-opt-gotResolution" value="got"></option>
-        <option data-width="1280" data-height="720">1280x720</option>
         <option data-width="1920" data-height="1080">1920x1080</option>
+        <option data-width="1280" data-height="720">1280x720</option>
+        <option data-width="640" data-height="480">640x480</option>
     </select>
     ```
-
-    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the **actual resolution**.
 
 #### Starts the recognition
 
@@ -459,32 +414,31 @@ await recognizer.startScanning(true);
 ## API Documentation
 
 You can check out the detailed documentation about the APIs of the SDK at
-[https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=2.2.11&utm_source=guide&product=dlr&package=js).
+[https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=2.2.10&utm_source=guide&product=dlr&package=js](https://www.dynamsoft.com/label-recognition/programming/javascript/api-reference/?ver=2.2.10&utm_source=guide&product=dlr&package=js).
 
 ## System Requirements
 
-DLR requires the following features to work:
+The SDK requires the following features to work (some of them are required by the `CameraEnhancer` SDK for camera access):
 
 * Secure context (HTTPS deployment)
 
   When deploying your application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
   
+  * Dynamsoft License requires a secure context to work.
   * Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
   > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
   
-  * Dynamsoft License requires a secure context to work.
-
 * `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
 
   The above four features are required for the SDK to work.
 
 * `MediaDevices`/`getUserMedia`
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.2.12&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming by the `CameraEnhancer` SDK.
 
 * `getSettings`
 
-  This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties.
+  This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties. This is also required by the `CameraEnhancer` SDK.
 
 The following table is a list of supported browsers based on the above requirements:
 
@@ -499,18 +453,6 @@ The following table is a list of supported browsers based on the above requireme
 
   <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the SDK files on the same domain as your web page.
   
-  <sup>3</sup> Safari v11.x already has the required features, but it has many other issues, so we recommend v12+.
+  <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
-
-## Release Notes
-
-Learn about what are included in each release at [https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/release-notes/?ver=latest).
-
-## Next Steps
-
-Now that you have got the SDK integrated, you can choose to move forward in the following directions
-
-1. Check out the [official samples](https://github.com/Dynamsoft/label-recognizer-javascript-samples).
-2. Check out the official demos: [MRZ Scanner](https://demo.dynamsoft.com/label-recognizer-js/mrz-scanner.html), [VIN Scanner](https://demo.dynamsoft.com/label-recognizer-js/vin.html) and the [source code for the demo](https://github.com/Dynamsoft/label-recognizer-javascript-demo).
-3. Learn about the available [APIs](https://www.dynamsoft.com/label-recognition/docs/programming/javascript/api-reference/?ver=latest).

@@ -85,10 +85,8 @@ static defaultUIElementURL: string
 ```js
 // Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.1/dist/dlr.ui.html";
 let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-let options = {
-    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-};
-await recognizer.setImageSource(enhancer, options);
+await cameraEnhancer.setUIElement(Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL);
+recognizer.setImageSource(enhancer);
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
     runtimeSettings: "video-passportMRZ"
 });

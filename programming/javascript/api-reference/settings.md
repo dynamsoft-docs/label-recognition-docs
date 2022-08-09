@@ -15,8 +15,8 @@ breadcrumbText: Settings APIs
 
 | API Name | Description |
 |---|---|
-| [getScanSettings](#getscansettings) | Returns the current scan settings. |
-| [updateScanSettings](#updatescansettings) | Changes scan settings with the object passed in. |
+| [getScanSettings()](#getscansettings) | Returns the current scan settings. |
+| [updateScanSettings()](#updatescansettings) | Changes scan settings with the object passed in. |
 
 ## Runtime Settings
 

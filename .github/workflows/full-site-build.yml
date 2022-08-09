@@ -30,7 +30,16 @@ jobs:
           cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDoc/
           cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDoc/
           cd DLRDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DLRDoc/_site/ ./www.dynamsoft.com/label-recognition/docs/ prod
+
+      - name: Sync files - Main Site
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 7500 
+          local-dir: /home/ubuntu/DLRDoc/_site/
+          server-dir: /www.dynamsoft.com/label-recognition/docs/
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}

@@ -17,6 +17,9 @@ breadcrumbText: UI Control
 | [highlightFillStyle](#highlightfillstyle) | Specifies the color used inside the shape which highlights a found line of text.  |
 | [highlightStrokeStyle](#highlightstrokestyle) | Specifies the color used to paint the outline of the shape which highlights a found line of text. |
 | [highlightLineWidth](#highlightlinewidth) | Specifies the line width of the outline of the shape which highlights a found line of text. |
+| [regionMaskFillStyle](#regionmaskfillstyle) | Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. |
+| [regionMaskStrokeStyle](#regionmaskstrokestyle) | Specifies the color used to paint the outline of the scanning region. |
+| [regionMaskLineWidth](#regionmasklinewidth) | Specifies the width of the outline of the scanning region. |
 
 ## defaultUIElementURL
 
@@ -61,4 +64,28 @@ Specifies the line width of the outline of the shape which highlights a found li
 
 ```typescript
 highlightLineWidth: number
+```
+
+## regionMaskFillStyle
+
+Specifies the color used in the square-loop shape between the actual scanning area and the boundary of the video input. This shape only appears when the text scanning is limited to a specified region. The default value is `rgba(0, 0, 0, 0.5)` .
+
+```typescript
+regionMaskFillStyle: string
+```
+
+## regionMaskStrokeStyle
+
+Specifies the color used to paint the outline of the scanning region. This outline only appears when the text scanning is limited to a specified region. The default value is `rgb(254, 142, 20)` .
+
+```typescript
+regionMaskStrokeStyle: string
+```
+
+## regionMaskLineWidth
+
+Specifies the width of the outline of the scanning region. This outline only appears when the text scanning is limited to a specified region. The default value is `2` .
+
+```typescript
+regionMaskLineWidth: number
 ```

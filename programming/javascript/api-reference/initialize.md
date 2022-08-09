@@ -23,6 +23,7 @@ The following methods and properties help with the initialization of the library
 
 | API Name | Description |
 |---|---|
+| [defaultUIElementURL](#defaultuielementurl) | [Deprecated] Returns or sets the URL of the .html file that defines the default UI Element. |
 | [createInstance()](#createinstance) | Creates a `LabelRecognizer` instance. |
 | [destroyContext()](#destroycontext) | Destroies the LabelRecognizer instance. |
 | [isContextDestroyed()](#iscontextdestroyed) | Returns whether the instance has been destroyed. |
@@ -36,6 +37,32 @@ The following methods and properties help with the initialization of the library
 | [isWasmLoaded()](#iswasmloaded) | Returns whether the recognition engine and models have been loaded. |
 | [getVersion()](#getversion) | Returns the version of the library. |
 | [detectEnvironment()](#detectenvironment) | Assess the running environment regarding the features the library requires to run. |
+
+## defaultUIElementURL
+
+**[Deprecated]**
+
+Returns or sets the URL of the *.html* file that defines the default UI Element. The URL can only be set before the API [createInstance](#createinstance) is called.
+
+```typescript
+static defaultUIElementURL: string
+```
+
+**Code Snippet**
+
+```js
+// The following line is actually not useful anymore if Dynamsoft Camera Enhancer v3.0.0+ is used.
+Dynamsoft.DLR.LabelRecognizer.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.11/dist/dlr.ui.html";
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+let options = {
+    resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+};
+await recognizer.setImageSource(enhancer, options);
+let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance({
+    runtimeSettings: "video-passportMRZ"
+});
+await recognizer.startScanning();
+```
 
 ## license
 

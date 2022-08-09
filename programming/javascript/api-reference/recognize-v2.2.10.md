@@ -24,7 +24,7 @@ breadcrumbText: Recognition APIs
 
 | API Name | Description |
 |---|---|
-| [setImageSource](#setimagesource) | Sets an image source for continous scanning. |
+| [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning a image. |
 | [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |

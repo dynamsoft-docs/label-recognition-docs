@@ -65,9 +65,9 @@ breadcrumbText: v2.x Release Notes
   * `getUIElement()`
   * `setUIElement()`
   * `defaultUIElementURL`
-  * `lineFillStyle`
-  * `lineStrokeStyle`
-  * `lineLineWidth`
+  * `highlightFillStyle`
+  * `highlightStrokeStyle`
+  * `highlightLineWidth`
   * `regionMaskFillStyle`
   * `regionMaskStrokeStyle`
   * `regionMaskLineWidth`

@@ -35,7 +35,7 @@ breadcrumbText: Recognition APIs
 
 ## recognize
 
-Recognizes labels from an image. 
+Recognizes labels from an image.
 
 ```typescript
 recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | DCEFrame | string): Promise<DLRResult[]>

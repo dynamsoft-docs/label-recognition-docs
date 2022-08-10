@@ -95,7 +95,7 @@ Sets the file name of the library to load dynamically.
 
 
 - **Remarks**     
-  The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 
 ##### LibraryParameters 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - TextureDetectionModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - TextureDetectionModes.
+title: Dynamsoft Label Recognizer Parameter Reference for ImageParameter Object - TextureDetectionModes
+description: This page shows Dynamsoft Label Recognizer Parameter Reference for ImageParameter Object - TextureDetectionModes.
 keywords: TextureDetectionModes, ImageParameter, image process control parameters, parameter reference, parameter 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -45,7 +45,7 @@ Sets the file name of the library to load dynamically.
 
 
 - **Remarks**     
-  The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 
 ##### LibraryParameters 

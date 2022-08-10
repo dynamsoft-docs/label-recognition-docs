@@ -185,7 +185,7 @@ static engineResourcePath: string
 **Code Snippet**
 
 ```js
-Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.6.1/dist/";
+Dynamsoft.DLR.LabelRecognizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@2.2.11/dist/";
 await Dynamsoft.DLR.LabelRecognizer.loadWasm();
 ```
 

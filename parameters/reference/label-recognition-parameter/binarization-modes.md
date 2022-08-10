@@ -22,18 +22,25 @@ needGenerateH3Content: true
     [`BinarizationMode` Enumeration]({{ site.enumerations }}binarization-mode.html)
     
 #### Mode Arguments
-- [BlockSizeX](#blocksizex)
-- [BlockSizeY](#blocksizey)
-- [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
-- [ThresholdCompensation](#thresholdcompensation)
-- [ThreshValueCoefficient](#threshvaluecoefficient)
-- [BinarizationThreshold](#binarizationthreshold)
-- [MorphOperation](#morphoperation)
-- [MorphShape](#morphshape)
-- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
-- [MorphOperationKernelSizeY](#morphoperationkernelsizey)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+- [LabelRecognizerParameter Object](#labelrecognizerparameter-object)
+  - [BinarizationModes](#binarizationmodes)
+    - [Mode Properties](#mode-properties)
+      - [Mode Arguments](#mode-arguments)
+        - [BlockSizeX](#blocksizex)
+        - [BlockSizeY](#blocksizey)
+        - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
+        - [ThresholdCompensation](#thresholdcompensation)
+        - [ThreshValueCoefficient](#threshvaluecoefficient)
+        - [BinarizationThreshold](#binarizationthreshold)
+        - [MorphOperation](#morphoperation)
+        - [MorphShape](#morphshape)
+        - [MorphOperationKernelSizeX](#morphoperationkernelsizex)
+        - [MorphOperationKernelSizeY](#morphoperationkernelsizey)
+        - [LibraryFileName](#libraryfilename)
+        - [LibraryParameters](#libraryparameters)
+    - [Setting Methods](#setting-methods)
+      - [As JSON Parameter](#as-json-parameter)
+      - [As `DLR_RuntimeSettings` Member](#as-dlr_runtimesettings-member)
 
 ##### BlockSizeX 
 Sets the horizontal block size for the binarization process.
@@ -150,17 +157,16 @@ Sets the horizontal kernel size for the morphology process.
 | *int* | [-1, 1000]  | -1 |   
 
 
-##### LibraryFileName 
+##### LibraryFileName
+
 Sets the file name of the library to load dynamically.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
-
-- **Remarks**     
-  The library must be in the same place with Dynamsoft Barcode Reader Library.
-
+- **Remarks**
+-  The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.

@@ -480,7 +480,7 @@ DLR requires the following features to work:
 
 * `MediaDevices`/`getUserMedia`
 
-  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner.html?ver=9.2.12&utm_source=guide#singleframemode) will be used automatically. If the API exists but doesn't work correctly, the Single Frame Mode can be used as an alternative way to access the camera.
+  This API is only required for in-browser video streaming.
 
 * `getSettings`
 

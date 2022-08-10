@@ -41,7 +41,7 @@ recognizer.InitLicense("t0260NwAAAHV***************");
 
 
 ## Dispose
-Destroys an instance of Dynamsoft Barcode Reader.
+Destroys an instance of Dynamsoft Label Recognizer.
 
 ```csharp
 void Dynamsoft.DLR.LabelRecognition.Dispose()	

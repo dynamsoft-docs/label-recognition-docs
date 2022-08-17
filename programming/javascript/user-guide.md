@@ -167,7 +167,7 @@ If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.c
 
 ### Check out the official sample for MRZ reading
 
-You can also try the official sample for MRZ reading ([test in Github](https://dynamsoft.github.io/label-recognizer-javascript-samples/2.use-case/2.mrz-read-and-parse/) or [check the code](https://github.com/Dynamsoft/label-recognizer-javascript-samples/tree/main/2.use-case/2.mrz-read-and-parse)). This sample also demonstrates how to parse the MRZ text into meaningful fields.
+You can also try the official sample for MRZ reading ([test in Github](https://dynamsoft.github.io/label-recognizer-javascript-samples/use-case/mrz-read-and-parse/) or [check the code](https://github.com/Dynamsoft/label-recognizer-javascript-samples/tree/main/use-case/mrz-read-and-parse)). This sample also demonstrates how to parse the MRZ text into meaningful fields.
 
 ## Building your own page
 

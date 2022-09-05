@@ -47,7 +47,7 @@ The location of current line.
 
 The confidence of the result. It ranges from 0 to 100.
 
-<!-->
+<!--
 
 ### characterResultsCount
 

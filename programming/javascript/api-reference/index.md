@@ -87,7 +87,7 @@ The following static methods and properties help to set up the runtime environme
 | API Name | Description |
 |---|---|
 | [setImageSource](recognize.md#setimagesource) | Sets an image source for continous scanning. |
-| [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
+| [onUniqueRead](recognize.md#onuniqueread) | This event is triggered when a new, unduplicated label is found when scanning via video. |
 | [onImageRead](recognize.md#onimageread) | This event is triggered after the library finishes scanning an image. |
 | [onMRZRead](recognize.md#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
 | [onVINRead](recognize.md#onvinread) | This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. |

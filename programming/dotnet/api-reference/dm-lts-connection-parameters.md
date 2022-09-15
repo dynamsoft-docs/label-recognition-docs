@@ -41,13 +41,13 @@ The URL of the license tracking server.
 ```csharp
 string  MainServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -58,13 +58,13 @@ The URL of the standby license tracking server.
 ```csharp
 string  StandbyServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -75,10 +75,10 @@ The handshake code.
 ```csharp
 string  HandshakeCode
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -88,10 +88,10 @@ The session password of the handshake code set in license tracking server.
 ```csharp
 string  SessionPassword
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -104,13 +104,13 @@ Sets the deployment type.
 EnumDMDeploymentType DeploymentType
 ```
 
-- **Value range**   
+**Value Range**   
     Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.   
       
-- **Default value**   
+**Default value**
     DM_DT_DESKTOP   
     
-- **See also**  
+**See also**
     [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html)    
 
 &nbsp;
@@ -120,13 +120,13 @@ Sets the charge way.
 ```csharp
 int ChargeWay
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_CW_AUTO`
     
-- **See also**  
+**See also**
     [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
@@ -137,13 +137,13 @@ Sets the method to generate UUID.
 ```csharp
 int UUIDGenerationMethod
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See also**
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
@@ -154,10 +154,10 @@ Sets the max days to buffer the license info.
 ```csharp
 int MaxBufferDays
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     7
 
 &nbsp;
@@ -167,13 +167,13 @@ Sets the license modules to use.
 ```csharp
 List<Integer>  LimitedLicenseModules
 ```
-- **Value range**   
+**Value Range**   
     A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
       
-- **Default value**   
+**Default value**
     null
     
-- **See also**  
+**See also**
     [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 
@@ -184,12 +184,12 @@ Sets the max concurrent instance count.
 ```csharp
 int MaxConcurrentInstanceCount
 ```
-- **Value range**   
+**Value Range**   
     [1,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     1
-- **Remarks**   
+**Remarks** 
     It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set MaxConcurrentInstanceCount to 20.
 
@@ -200,10 +200,10 @@ The organization ID got from Dynamsoft.
 ```csharp
 string OrganizationID
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -213,11 +213,11 @@ Sets the products to get the license for. Product values can be combined.
 ```csharp
 int Products
 ```
-- **Value range**   
+**Value Range**   
     A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `PROD_ALL`
     
-- **See also**  
+**See also**
     [`EnumProduct`]({{ site.enumerations }}product.html)

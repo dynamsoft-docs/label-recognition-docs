@@ -41,13 +41,13 @@ The URL of the license tracking server.
 ```cpp
 const char*  tagDM_LTSConnectionParameters::mainServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -56,13 +56,13 @@ The URL of the standby license tracking server.
 ```cpp
 const char*  tagDM_LTSConnectionParameters::standbyServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -71,10 +71,10 @@ The handshake code.
 ```cpp
 const char*  tagDM_LTSConnectionParameters::handshakeCode
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 ### sessionPassword
@@ -82,10 +82,10 @@ The session password of the handshake code set in license tracking server.
 ```cpp
 const char*  tagDM_LTSConnectionParameters::sessionPassword
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 ### deploymentType
@@ -93,13 +93,13 @@ Sets the deployment type.
 ```cpp
 DM_DeploymentType tagDM_LTSConnectionParameters::deploymentType
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_DT_DESKTOP`
     
-- **See also**  
+**See also**
     [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)
       
 
@@ -108,13 +108,13 @@ Sets the charge way.
 ```cpp
 DM_ChargeWay tagDM_LTSConnectionParameters::chargeWay
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_CW_AUTO`
     
-- **See also**  
+**See also**
     [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
       
 
@@ -123,13 +123,13 @@ Sets the method to generate UUID.
 ```cpp
 DM_UUIDGenerationMethod tagDM_LTSConnectionParameters::UUIDGenerationMethod
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See also**
     [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
       
 
@@ -138,10 +138,10 @@ Sets the max days to buffer the license info.
 ```cpp
 int tagDM_LTSConnectionParameters::maxBufferDays
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     0
 
 ### limitedLicenseModulesCount
@@ -149,10 +149,10 @@ Sets the count of license modules to use.
 ```cpp
 int tagDM_LTSConnectionParameters::limitedLicenseModulesCount
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     0
 
 ### limitedLicenseModules
@@ -160,13 +160,13 @@ Sets the license modules to use.
 ```cpp
 DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
 ```
-- **Value range**   
+**Value Range**   
     Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
       
-- **Default value**   
+**Default value**
     NULL
     
-- **See also**  
+**See also**
     [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
       
 
@@ -182,11 +182,11 @@ Sets the max concurrent instance count.
 ```cpp
 int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
 ```
-- **Value range**   
+**Value Range**   
     [1,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     1
-- **Remarks**   
+**Remarks** 
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT.<br>
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.

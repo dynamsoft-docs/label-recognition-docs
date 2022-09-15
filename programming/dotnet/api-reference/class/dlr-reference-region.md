@@ -28,13 +28,13 @@ The source type used to localize the reference region(s).
 ```csharp
 int Dynamsoft.DLR.DLR_ReferenceRegion.LocalizationSourceType
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DLR_LST_MANUAL_SPECIFICATION`
     
-- **Remarks**  
+**Remarks**
     
 
 ### Points
@@ -42,7 +42,7 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```csharp
 DLRPoint[4] Dynamsoft.DLR.DLR_ReferenceRegion.Points
 ```
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
@@ -51,13 +51,13 @@ Whether or not to use percentage to measure the coordinate.
 ```csharp
 int Dynamsoft.DLR.DLR_ReferenceRegion.RegionMeasuredByPercentage
 ```
-- **Value range**   
+**Value Range**   
     [0, 1]
       
-- **Default value**   
+**Default value**
     1
     
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
@@ -69,13 +69,13 @@ The index of a specific region predetection mode in the regionPredetectionModes 
 ```csharp
 int Dynamsoft.DLR.DLR_ReferenceRegion.RegionPredetectionModesIndex
 ```
-- **Value range**   
+**Value Range**   
     [-1, 0x7fffffff]
       
-- **Default value**   
+**Default value**
     -1
     
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
@@ -86,13 +86,13 @@ The formats of the barcode in BarcodeFormat group 1.
 ```csharp
 int Dynamsoft.DLR.DLR_ReferenceRegion.BarcodeFormatIds
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF_ALL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
@@ -103,13 +103,13 @@ The formats of the barcode in BarcodeFormat group 2.
 ```csharp
 int Dynamsoft.DLR.DLR_ReferenceRegion.BarcodeFormatIds_2
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF2_NULL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
@@ -120,6 +120,6 @@ The regular express pattern of barcode text.
 string Dynamsoft.DLR.DLR_ReferenceRegion.BarcodeTextRegExPattern
 ```
 
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.

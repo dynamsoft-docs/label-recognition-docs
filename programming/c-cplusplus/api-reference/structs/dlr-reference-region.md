@@ -37,13 +37,13 @@ The source type used to localize the reference region(s).
 ```cpp
 DLRLocalizationSourceType tagDLRReferenceRegion::localizationSourceType
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DLR_LST_MANUAL_SPECIFICATION`
     
-- **Remarks**  
+**Remarks**
     
 
 ### points
@@ -51,7 +51,7 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```cpp
 DLRPoint tagDLRReferenceRegion::points[4]
 ```
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
@@ -60,13 +60,13 @@ Whether or not to use percentage to measure the coordinate.
 ```cpp
 int tagDLRReferenceRegion::regionMeasuredByPercentage
 ```
-- **Value range**   
+**Value Range**   
     [0, 1]
       
-- **Default value**   
+**Default value**
     1
     
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
@@ -78,13 +78,13 @@ The index of a specific region predetection mode in the regionPredetectionModes 
 ```cpp
 int tagDLRReferenceRegion::regionPredetectionModesIndex
 ```
-- **Value range**   
+**Value Range**   
     [-1, 0x7fffffff]
       
-- **Default value**   
+**Default value**
     -1
     
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
@@ -95,13 +95,13 @@ The formats of the barcode in BarcodeFormat group 1.
 ```cpp
 int tagDLRReferenceRegion::barcodeFormatIds
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF_ALL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
@@ -112,13 +112,13 @@ The formats of the barcode in BarcodeFormat group 2.
 ```cpp
 int tagDLRReferenceRegion::barcodeFormatIds_2
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF2_NULL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
@@ -129,7 +129,7 @@ The regular express pattern of barcode text.
 char tagDLRReferenceRegion::barcodeTextRegExPattern[64]
 ```
 
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.
 

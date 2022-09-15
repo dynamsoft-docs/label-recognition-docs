@@ -39,7 +39,7 @@ Barcode type in BarcodeFormat group 1.
 int barcodeFormat
 ```
 
-- **See also**  
+**See also**
     [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html)
 
 &nbsp;
@@ -52,7 +52,7 @@ Barcode type in BarcodeFormat group 2.
 int barcodeFormat_2
 ```
 
-- **See also**  
+**See also**
     [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html)
 
 &nbsp;

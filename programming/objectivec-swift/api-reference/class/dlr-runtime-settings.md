@@ -29,13 +29,13 @@ Sets the number of threads the algorithm will use to recognize label.
 ```objc
 NSInteger maxThreadCount
 ```
-- **Value range**   
+**Value Range**   
     [1, 4]
       
-- **Default value**   
+**Default value**
     4
     
-- **Remarks**   
+**Remarks** 
     To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 ### characterModelName
@@ -49,13 +49,13 @@ Sets the text lines count of the text area.
 ```objc
 NSInteger linesCount
 ```
-- **Value range**   
+**Value Range**   
     [0, 200]
       
-- **Default value**   
+**Default value**
     0
     
-- **Remarks**   
+**Remarks** 
     0: line count is not certain.
 
 
@@ -64,13 +64,13 @@ Sets the region pre-detection mode.
 ```objc
 NSArray * regionPredetectionModes
 ```
-- **Value range**   
+**Value Range**   
     Each array item can be any one of the [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
       
-- **Default value**   
+**Default value**
     `[EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip]`
     
-- **Remarks**   
+**Remarks** 
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
@@ -91,13 +91,13 @@ Sets the grayscale transformation mode.
 ```objc
 NSArray * grayscaleTransformationModes
 ```
-- **Value range**   
+**Value Range**   
     Each array item can be any one of the [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
       
-- **Default value**   
+**Default value**
     `[EnumDLRGrayscaleTransformationModeOriginal,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip]`
     
-- **Remarks**   
+**Remarks** 
     The array index represents the priority of the item. The smaller index is, the higher priority is.
   
 

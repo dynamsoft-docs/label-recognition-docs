@@ -40,7 +40,7 @@ Sets the number of threads the algorithm will use to recognize label.
 int maxThreadCount
 ```
 
-- **Value range**
+**Value Range**
     [1, 4]
 
 - **Default value**
@@ -109,7 +109,7 @@ Sets the mode and priority for binarization.
 int[] binarizationModes
 ```
 
-- **Value range**
+**Value Range**
     Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
 
 - **Default value**
@@ -128,7 +128,7 @@ Sets further modes.
 DLRFurtherModes furtherModes
 ```
 
-- **See also**  
+**See also**
     [`DLRFurtherModes`](dlr-further-modes.md)
 
 &nbsp;

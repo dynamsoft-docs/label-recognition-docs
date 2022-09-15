@@ -60,7 +60,7 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 | *string* | A string value representing aspect ratio range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remarks**     
+**Remarks**   
   -  The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
   - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
   - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
@@ -74,7 +74,7 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 | *string* | A string value representing one or more colour sets. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remarks**     
+**Remarks**   
   - Each set of the foreground and background colours need to be defined as [`ForegroundColour`, `BackgroundColour`, `Tolerance`]. If you want to define multiple sets, you can use a "";"" to separate them. This argument is **mandatory**. If there is no manual setting, no region can be detected.
   - `ForegroundColour`and `BackgroundColour` are the Hue values in the HSV colour space for defining the foreground and background colours of the regions you want to predetect. The value -1 means black, gray, white.
   - `Tolerance` is the allowable deviation of the Hue value defined by `ForegroundColour`. 
@@ -91,7 +91,7 @@ Sets the height range of the bounding rectangle of the predetected region.
 | *string* | A string value representing height range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remarks**     
+**Remarks**   
   - The height range need to be defined as [`MinHeight`, `MaxHeight`]. There will be no limitation without manual setting.
   - Value range of `MinHeight`, `MaxHeight`: [1,0x7fffffff]
 
@@ -104,7 +104,7 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [16384, 0x7fffffff] | 262144 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
-- **Remarks**     
+**Remarks**   
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
 
 
@@ -115,7 +115,7 @@ Sets whether to enable finding accurate boundary.
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1] | 0 | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
-- **Remarks**     
+**Remarks**   
   0: disable.<br>
   1: enable.
  
@@ -126,7 +126,7 @@ Sets the sensitivity used for region predetection algorithm.
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 1 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
-- **Remarks**     
+**Remarks**   
   A larger value means the library will take more effort to detect regions.  
  
 ##### SpatialIndexBlockSize 
@@ -136,7 +136,7 @@ Sets the spatial index block size used for region predetection algorithm.
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 32] | 5 | "DLR_RPM_GENERAL_GRAY_CONTRAST"<br>"DLR_RPM_GENERAL_HSV_CONTRAST"<br>"DLR_RPM_GENERAL_RGB_CONTRAST" |         
 
-- **Remarks**     
+**Remarks**   
   The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
 
 
@@ -149,7 +149,7 @@ Sets the width range of the bounding rectangle of the predetected region.
 | *string* | A string value representing width range. | "" | "DLR_RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remarks**     
+**Remarks**   
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
 
@@ -162,7 +162,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `DLRRegionPredetectionMode` items except DLR_RPM_SKIP and DLR_RPM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**   
   - The library must be in the same place with Dynamsoft Label Recognition Library.
 
 

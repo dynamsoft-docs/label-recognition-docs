@@ -29,7 +29,7 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- |
 | *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
 
-- **Remarks**    
+**Remarks**  
    - "Erode": Perform erosion process.
    - "Dilate": Perform dilation process.
    - "Open": Perform erosion first, then perform dilation.

@@ -30,13 +30,13 @@ The URL of the license tracking server.
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.mainServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -45,13 +45,13 @@ The URL of the standby license tracking server.
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.standbyServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -60,10 +60,10 @@ The handshake code.
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.handshakeCode
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 ### sessionPassword
@@ -71,10 +71,10 @@ The session password of the handshake code set in license tracking server.
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.sessionPassword
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 ### chargeWay
@@ -82,13 +82,13 @@ Sets the charge way.
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.chargeWay
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_CW_AUTO`
     
-- **See also**  
+**See also**
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
       
 
@@ -97,13 +97,13 @@ Sets the method to generate UUID.
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.UUIDGenerationMethod
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See also**
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
       
 
@@ -112,10 +112,10 @@ Sets the max days to buffer the license info.
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.maxBufferDays
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     7
 
 ### limitedLicenseModules
@@ -123,12 +123,12 @@ Sets the license modules to use.
 ```java
 List<Integer>  com.dynamsoft.dlr.DMLTSConnectionParameters.limitedLicenseModules
 ```
-- **Value range**   
+**Value Range**   
     A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
       
-- **Default value**   
+**Default value**
     null
     
-- **See also**  
+**See also**
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
       

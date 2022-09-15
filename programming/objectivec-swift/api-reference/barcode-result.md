@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # iBarcodeResult
+
 Stores the barcode result.
 
 ```objc
@@ -28,11 +29,12 @@ Stores the barcode result.
 | [`moduleSize`](#modulesize) | *int* |
 | [`pageNumber`](#pagenumber) | *int* |
 
-
 &nbsp;
 
 ### barcodeFormat
+
 Barcode type in BarcodeFormat group 1.
+
 ```objc
 EnumBarcodeFormat barcodeFormat
 ```
@@ -40,7 +42,9 @@ EnumBarcodeFormat barcodeFormat
 &nbsp;
 
 ### barcodeFormat_2
+
 Barcode type in BarcodeFormat group 2.
+
 ```objc
 EnumBarcodeFormat_2 barcodeFormat_2
 ```
@@ -48,7 +52,9 @@ EnumBarcodeFormat_2 barcodeFormat_2
 &nbsp;
 
 ### text
+
 The barcode text, ends by '\0'.
+
 ```objc
 NSString* text
 ```
@@ -56,7 +62,9 @@ NSString* text
 &nbsp;
 
 ### bytes
+
 The barcode content in a byte array.
+
 ```objc
 NSData* bytes
 ```
@@ -64,7 +72,9 @@ NSData* bytes
 &nbsp;
 
 ### location
+
 The location of current recognized text.
+
 ```objc
 iQuadrilateral* location
 ```
@@ -72,7 +82,9 @@ iQuadrilateral* location
 &nbsp;
 
 ### moduleSize
+
 The barcode module size (the minimum bar width in pixel).
+
 ```objc
 int moduleSize
 ```
@@ -80,7 +92,9 @@ int moduleSize
 &nbsp;
 
 ### pageNumber
+
 The page number the barcode located in. The index is 0-based.
+
 ```objc
 int pageNumber
 ```

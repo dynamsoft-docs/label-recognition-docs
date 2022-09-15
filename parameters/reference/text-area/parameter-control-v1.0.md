@@ -236,7 +236,7 @@ Please check [LabelRecognitionParameter.GrayscaleTransformationModes](../label-r
 ## LetterHeightRange
 Sets the range of letter height (in pixel or a percentage value relative to the height of the text area).  
 
-- **Remarks**    
+**Remarks**  
  - Format: [MinHeight, MaxHeight, ByPercentage]  
  - The allowed values for MinHeight/MaxHeight:  
  - ByPercentage=0, [1, 0x7fffffff]  

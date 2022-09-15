@@ -35,13 +35,13 @@ The source type used to localize the reference region(s).
 ```csharp
 int LocalizationSourceType
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumLocalizationSourceType`]({{ site.enumerations }}localization-source-type.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `LST_MANUAL_SPECIFICATION`
     
-- **Remarks**  
+**Remarks**
     
 
 &nbsp;
@@ -51,7 +51,7 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```csharp
 Quadrilateral Location
 ```
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
@@ -62,13 +62,13 @@ Whether or not to use percentage to measure the coordinate.
 ```csharp
 int RegionMeasuredByPercentage
 ```
-- **Value range**   
+**Value Range**   
     [0, 1]
       
-- **Default value**   
+**Default value**
     1
     
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
@@ -82,13 +82,13 @@ The index of a specific region predetection mode in the regionPredetectionModes 
 ```csharp
 int RegionPredetectionModesIndex
 ```
-- **Value range**   
+**Value Range**   
     [-1, 0x7fffffff]
       
-- **Default value**   
+**Default value**
     -1
     
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
@@ -101,13 +101,13 @@ The formats of the barcode in BarcodeFormat group 1.
 ```csharp
 int BarcodeFormatIds
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html) Enumeration items
       
-- **Default value**   
+**Default value**
     BF_ALL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in BarcodeFormat group 1 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
@@ -120,13 +120,13 @@ The formats of the barcode in BarcodeFormat group 2.
 ```csharp
 int BarcodeFormatIds_2
 ```
-- **Value range**   
+**Value Range**   
     A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html) Enumeration items
       
-- **Default value**   
+**Default value**
     BF2_NULL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in BarcodeFormat group 2 can be combined.<br>
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
@@ -139,6 +139,6 @@ The regular express pattern of barcode text.
 string BarcodeTextRegExPattern
 ```
 
-- **Remarks**   
+**Remarks** 
     It works only when [LocalizationSourceType](#localizationsourcetype) is setting to LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.

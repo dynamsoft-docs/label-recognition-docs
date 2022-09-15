@@ -33,13 +33,13 @@ Sets the mode and priority for grayscale image preprocessing algorithms.
 GrayscaleEnhancementMode grayscaleEnhancementModes[8]
 ```
 
-- **Value range**  
+**Value Range**  
    Each array item can be any one of the [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) Enumeration items.  
      
 - **Default value**  
    `[GEM_GENERAL, GEM_SKIP, GEM_SKIP, GEM_SKIP, GEM_SKIP, GEM_SKIP, GEM_SKIP, GEM_SKIP]`  
      
-- **Remarks**  
+**Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
@@ -53,11 +53,11 @@ Sets the mode and priority for binarization.
 BinarizationMode binarizationModes[8]
 ```
 
-- **Value range**   
+**Value Range**   
     Each array item can be any one of the [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]`
     
-- **Remarks**   
+**Remarks** 
     The array index represents the priority of the item. The smaller index is, the higher priority is.

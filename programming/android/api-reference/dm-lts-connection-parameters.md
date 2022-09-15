@@ -39,13 +39,13 @@ The URL of the license tracking server.
 ```java
 String  mainServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -56,13 +56,13 @@ The URL of the standby license tracking server.
 ```java
 String  standbyServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -73,10 +73,10 @@ The handshake code.
 ```java
 String  handshakeCode
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -86,10 +86,10 @@ The session password of the handshake code set in license tracking server.
 ```java
 String  sessionPassword
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -99,13 +99,13 @@ Sets the charge way.
 ```java
 int chargeWay
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_CW_AUTO`
     
-- **See also**  
+**See also**
     [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
@@ -116,13 +116,13 @@ Sets the method to generate UUID.
 ```java
 int UUIDGenerationMethod
 ```
-- **Value range**   
+**Value Range**   
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See also**
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
@@ -133,10 +133,10 @@ Sets the max days to buffer the license info.
 ```java
 int maxBufferDays
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     7
 
 &nbsp;
@@ -146,13 +146,13 @@ Sets the license modules to use.
 ```java
 List<Integer>  limitedLicenseModules
 ```
-- **Value range**   
+**Value Range**   
     A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
       
-- **Default value**   
+**Default value**
     null
     
-- **See also**  
+**See also**
     [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 
@@ -163,10 +163,10 @@ The organization ID got from Dynamsoft.
 ```java
 String organizationID
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     ""
 
 &nbsp;
@@ -176,11 +176,11 @@ Sets the products to get the license for. Product values can be combined.
 ```java
 int products
 ```
-- **Value range**   
+**Value Range**   
     A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `PROD_ALL`
     
-- **See also**  
+**See also**
     [`EnumProduct`]({{ site.enumerations }}product.html)

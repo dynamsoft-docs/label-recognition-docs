@@ -44,13 +44,13 @@ The URL of the license tracking server.
 ```cpp
 char*  mainServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     NULL
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -61,13 +61,13 @@ The URL of the standby license tracking server.
 ```cpp
 char*  standbyServerURL
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     NULL
 
-- **Remarks**   
+**Remarks** 
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to NULL (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
@@ -78,10 +78,10 @@ The handshake code.
 ```cpp
 char*  handshakeCode
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     NULL
 
 &nbsp;
@@ -91,10 +91,10 @@ The session password of the handshake code set in license tracking server.
 ```cpp
 char*  sessionPassword
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     NULL
 
 &nbsp;
@@ -104,13 +104,13 @@ Sets the deployment type.
 ```cpp
 DM_DeploymentType deploymentType
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_DT_DESKTOP`
     
-- **See also**  
+**See also**
     [`DM_DeploymentType`]({{ site.enumerations }}dm-deployment-type.html)
       
 
@@ -121,13 +121,13 @@ Sets the charge way.
 ```cpp
 DM_ChargeWay chargeWay
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_CW_AUTO`
     
-- **See also**  
+**See also**
     [`DM_ChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
@@ -138,13 +138,13 @@ Sets the method to generate UUID.
 ```cpp
 DM_UUIDGenerationMethod UUIDGenerationMethod
 ```
-- **Value range**   
+**Value Range**   
     A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See also**
     [`DM_UUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
@@ -155,10 +155,10 @@ Sets the max days to buffer the license info.
 ```cpp
 int maxBufferDays
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     0
 
 &nbsp;
@@ -168,10 +168,10 @@ Sets the count of license modules to use.
 ```cpp
 int limitedLicenseModulesCount
 ```
-- **Value range**   
+**Value Range**   
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     0
 
 &nbsp;
@@ -181,13 +181,13 @@ Sets the license modules to use.
 ```cpp
 DM_LicenseModule* limitedLicenseModules
 ```
-- **Value range**   
+**Value Range**   
     Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     NULL
     
-- **See also**  
+**See also**
     [`DM_LicenseModule`]({{ site.enumerations }}dm-license-module.html)
 
 &nbsp;
@@ -197,12 +197,12 @@ Sets the max concurrent instance count.
 ```cpp
 int maxConcurrentInstanceCount
 ```
-- **Value range**   
+**Value Range**   
     [1,0x7fffffff]   
       
-- **Default value**   
+**Default value**
     1
-- **Remarks**   
+**Remarks** 
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT.<br>
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
@@ -213,10 +213,10 @@ The organization ID got from Dynamsoft.
 ```cpp
 char* organizationID
 ```
-- **Value range**   
+**Value Range**   
     Any string value   
       
-- **Default value**   
+**Default value**
     NULL
 
 &nbsp;
@@ -226,13 +226,13 @@ Sets the products to get the license for. Product values can be combined.
 ```cpp
 int products
 ```
-- **Value range**   
+**Value Range**   
     A combine value of [`Product`]({{ site.enumerations }}product.html) Enumeration items.
       
-- **Default value**   
+**Default value**
     `PROD_ALL`
     
-- **See also**  
+**See also**
     [`Product`]({{ site.enumerations }}product.html)
 
 &nbsp;

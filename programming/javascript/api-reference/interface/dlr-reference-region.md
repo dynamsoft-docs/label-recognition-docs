@@ -28,17 +28,17 @@ Interface used to get or set (via the RuntimeSettings) the reference region used
 
 The source type used to localize the reference region(s).
 
-- **Value range**   
+**Value Range**   
     A value of [`DLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype) Enumeration items.
       
-- **Default value**   
+**Default value**
     `DLR_LST_MANUAL_SPECIFICATION`
     
 ### points
 
 Four vertices in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     The library will localize reference region(s) based on the quadrilateral set by current setting.<br>
 
@@ -46,13 +46,13 @@ Four vertices in a clockwise direction of a quadrilateral. Index 0 represents th
 
 Whether or not to use percentage to measure the coordinate.
 
-- **Value range**   
+**Value Range**   
     [0, 1]
       
-- **Default value**   
+**Default value**
     1
     
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_MANUAL_SPECIFICATION.<br>
     0: not by percentage<br>
     1: by percentage<br>
@@ -62,13 +62,13 @@ Whether or not to use percentage to measure the coordinate.
 
 The index of a specific region predetection mode in the regionPredetectionModes parameter.
 
-- **Value range**   
+**Value Range**   
     [-1, 0x7fffffff]
       
-- **Default value**   
+**Default value**
     -1
     
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_PREDETECTED_REGION.<br>
     The library will localize reference region(s) based on the detected regions from the specified region predetection mode.<br>
     -1: all region predetection modes in the regionPredetectionModes parameter
@@ -77,13 +77,13 @@ The index of a specific region predetection mode in the regionPredetectionModes 
 
 The formats of the barcode in BarcodeFormat group 1.
 
-- **Value range**   
+**Value Range**   
     A combined value of [`DLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF_ALL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 1 can be combined.<br>
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.  
@@ -92,13 +92,13 @@ The formats of the barcode in BarcodeFormat group 1.
 
 The formats of the barcode in BarcodeFormat group 2.
 
-- **Value range**   
+**Value Range**   
     A combined value of [`DLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2) Enumeration items
       
-- **Default value**   
+**Default value**
     DLR_BF2_NULL
     
-- **Remarks**   
+**Remarks** 
     Barcode formats in DLRBarcodeFormat group 2 can be combined.<br>
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose format meets current setting.
@@ -107,6 +107,6 @@ The formats of the barcode in BarcodeFormat group 2.
 
 The regular express pattern of barcode text.
 
-- **Remarks**   
+**Remarks** 
     It works only when [localizationSourceType](#localizationsourcetype) is setting to DLR_LST_BARCODE.<br>
     The library will localize reference region(s) based on the barcodes whose text meets current setting.

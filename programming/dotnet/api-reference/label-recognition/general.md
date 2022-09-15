@@ -21,11 +21,11 @@ Get version information of SDK.
 string Dynamsoft.DLR.LabelRecognition.GetVersion()	
 ```
 
-### Return value
+**Return Value**
 
 The version information string.
 
-### Code Snippet
+**Code Snippet**
 
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();

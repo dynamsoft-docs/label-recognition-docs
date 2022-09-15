@@ -30,14 +30,14 @@ Get current settings and save them into a [`DLR_RuntimeSettings`](../class/dlr-r
 PublicRuntimeSettings Dynamsoft.DLR.LabelRecognition.GetRuntimeSettings ()
 ```   
    
-### Return value
+**Return Value**
 
 The class object of runtime settings.
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -54,14 +54,14 @@ Update runtime settings with a given [`DLR_RuntimeSettings`](../class/dlr-runtim
 void Dynamsoft.DLR.LabelRecognition.UpdateRuntimeSettings (DLR_RuntimeSettings settings)
 ```   
    
-### Parameters
+**Parameters**
 `settings` The class object of runtime settings.  
 
-### Exceptions
+**Exceptions**
 
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -80,10 +80,10 @@ Reset all runtime settings to default values.
 void Dynamsoft.DLR.LabelRecognition.ResetRuntimeSettings ()
 ```   
    
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -105,14 +105,14 @@ Append a new template string to the current label recognition instance.
 void Dynamsoft.DLR.LabelRecognition.AppendSettingsFromString (string content)
 ```   
    
-### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -130,14 +130,14 @@ Appends LabelRecognitionParameter settings in a file to the SDK object.
 void Dynamsoft.DLR.LabelRecognition.AppendSettingsFromFile (string filePath)
 ```   
    
-### Parameters
+**Parameters**
 `filePath` The settings file path.   
 
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -155,15 +155,15 @@ Outputs runtime settings and save them into a settings file (JSON file).
 void Dynamsoft.DLR.LabelRecognition.OutputSettingsToFile (string filePath, string templateName)
 ```   
    
-### Parameters
+**Parameters**
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -182,7 +182,7 @@ Clear all appended parameter settings of the current label recognition instance.
 void Dynamsoft.DLR.LabelRecognition.ClearAppendedSettings ()
 ```   
    
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -198,16 +198,16 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 void Dynamsoft.DLR.LabelRecognition.UpdateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, string templateName)
 ```   
    
-### Parameters
+**Parameters**
 `barcodeResults` The barcode results used to localize reference region.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -226,13 +226,13 @@ Set argument value for the specified mode parameter.
 ```csharp
 void Dynamsoft.DLR.LabelRecognition.SetModeArgument (string modesName, int index, string argumentName, string argumentValue)	
 ```   
-### Parameters
+**Parameters**
 - `modesName`: The mode parameter name to set argument.
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to set.  
 - `argumentValue`: The value of the argument to set. 
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
 
@@ -240,7 +240,7 @@ void Dynamsoft.DLR.LabelRecognition.SetModeArgument (string modesName, int index
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -262,22 +262,22 @@ Get argument value for the specified mode parameter.
 string Dynamsoft.DLR.LabelRecognition.GetModeArgument (string modesName, int index, string argumentName)	
 ```   
    
-### Parameters  
+**Parameters**  
 - `modesName`: The mode parameter name to get argument.  
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to get.
 
-### Return value
+**Return Value**
 the optional argument for a specified mode in Modes parameters.
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
 ### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");

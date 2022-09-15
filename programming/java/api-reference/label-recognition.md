@@ -28,11 +28,11 @@ Get version information of SDK.
 String getVersion()	
 ```
 
-#### Return value
+**Return Value**
 
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 
 ```java
 LabelRecognition recognizer = new LabelRecognition();
@@ -60,16 +60,16 @@ LabelRecognition() throws LabelRecognitionException;
 LabelRecognition(String license) throws LabelRecognitionException;
 ```
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
 
-#### Remarks
+**Remarks**
 
 If you initialize DynamsoftLabelRecognition without a license, the recognition results may be unreliable.
 
-#### Code Snippet
+**Code Snippet**
 
 ```java
 LabelRecognition recognizer = new LabelRecognition();
@@ -87,7 +87,7 @@ Destroys an instance of `LabelRecognition` object.
 void destroy()	
 ```
 
-#### Code Snippet
+**Code Snippet**
 
 ```java
 LabelRecognition recognizer = new LabelRecognition("t0260NwAAAHV***************");
@@ -102,14 +102,14 @@ Sets product key and activate the SDK.
 void initLicense(String license) throws LabelRecognitionException
 ```   
 
-#### Parameters
+**Parameters**
 `license`: The product keys.
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -125,14 +125,14 @@ Initializes the label recognition license and connects to the specified server f
 void initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws LabelRecognitionException
 ```   
 
-#### Parameters
+**Parameters**
 - `ltsInfo`: The struct DMLTSConnectionParameters with customized settings.  
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DMLTSConnectionParameters info = new DMLTSConnectionParameters();
@@ -166,15 +166,15 @@ Get current settings and save them into a [`DLRRuntimeSettings`](dlr-runtime-set
 PublicRuntimeSettings getRuntimeSettings () throws LabelRecognitionException
 ```   
    
-#### Return value
+**Return Value**
 
 The class object of template settings.
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
@@ -190,14 +190,14 @@ Update runtime settings with a given [`DLRRuntimeSettings`](dlr-runtime-settings
 void updateRuntimeSettings (DLRRuntimeSettings settings) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `settings` The class object of template settings.  
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 
@@ -217,10 +217,10 @@ Reset all runtime settings to default values.
 void resetRuntimeSettings () throws LabelRecognitionException
 ```   
    
-#### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
@@ -240,16 +240,16 @@ Outputs runtime settings and save them into a settings file (JSON file).
 void outputSettingsToFile (String filePath, String templateName) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
@@ -268,15 +268,15 @@ Appends LabelRecognitionParameter settings in a file to the SDK object.
 void appendSettingsFromFile (String filePath) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The settings file path.   
 
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.appendSettingsFromFile("your file path");
@@ -293,14 +293,14 @@ Append a new template string to the current label recognition instance.
 void appendSettingsFromString (String content) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.appendSettingsFromString("{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
@@ -316,7 +316,7 @@ Clear all appended parameter settings of the current label recognition instance.
 void clearAppendedSettings () throws LabelRecognitionException
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.clearAppendedSettings();
@@ -333,22 +333,22 @@ Get argument value for the specified mode parameter.
 String getModeArgument (String modesName, int index, String argumentName) throws LabelRecognitionException	
 ```   
    
-#### Parameters  
+**Parameters**  
 - `modesName`: The mode parameter name to get argument.  
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to get.
 
-#### Return value
+**Return Value**
 the optional argument for a specified mode in Modes parameters.
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](label-recognition-exception.md)
 
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
@@ -372,13 +372,13 @@ Set argument value for the specified mode parameter.
 ```java
 void setModeArgument (String modesName, int index, String argumentName, String argumentValue)	throws LabelRecognitionException	
 ```   
-#### Parameters
+**Parameters**
 - `modesName`: The mode parameter name to set argument.
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to set.  
 - `argumentValue`: The value of the argument to set. 
 
-#### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](label-recognition-exception.md)
 
 
@@ -386,7 +386,7 @@ void setModeArgument (String modesName, int index, String argumentName, String a
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
@@ -406,17 +406,17 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 void updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, String templateName) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `barcodeResults` The barcode results used to localize reference region.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 
@@ -446,18 +446,18 @@ Recognizes text from the memory buffer containing image pixels in defined format
 DLRResult[] recognizeByBuffer(DLRImageData imageData, String templateName) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	imageData` An object of DLRImageData that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return Value**
 All results recognized successfully.
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 // 1. init license...
@@ -476,18 +476,18 @@ Recognizes text from a specified image file.
 DLRResult[] recognizeByFile (String fileName, String templateName) throws LabelRecognitionException	
 ```   
    
-#### Parameters
+**Parameters**
 `fileName` A string defining the file name.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return Value**
 All results recognized successfully.
 
-#### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 // 1. init license...

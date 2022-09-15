@@ -29,14 +29,14 @@ Get current settings and save them into a [`DLRRuntimeSettings`]({{ site.c-cplus
 int dynamsoft::dlr::CLabelRecognition::GetRuntimeSettings (DLRRuntimeSettings* settings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out]	settings` The struct of runtime settings.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -54,16 +54,16 @@ Update runtime settings with a given [`DLRRuntimeSettings`]({{ site.c-cplusplus-
 int dynamsoft::dlr::CLabelRecognition::UpdateRuntimeSettings (DLRRuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	settings` The struct of runtime settings.  
 `[in,out]	errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` <sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -84,11 +84,11 @@ Reset all runtime settings to default values.
 int dynamsoft::dlr::CLabelRecognition::ResetRuntimeSettings ()
 ```   
    
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -111,17 +111,17 @@ Append a new template string to the current label recognition instance.
 int dynamsoft::dlr::CLabelRecognition::AppendSettingsFromString (const char* content, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] content` A JSON string that represents the content of the settings.   
 `[in,out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of allocated buffer.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -140,16 +140,16 @@ Outputs runtime settings and save them into a settings file (JSON file).
 int dynamsoft::dlr::CLabelRecognition::OutputSettingsToFile (const char* filePath, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	filePath` The path of the output file which stores current settings.  
 `[in]	templateName` A unique name for declaring current runtime settings.  
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -169,7 +169,7 @@ Clear all appended parameter settings of the current label recognition instance.
 void dynamsoft::dlr::CLabelRecognition::ClearAppendedSettings ()	
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -183,16 +183,16 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 int dynamsoft::dlr::CLabelRecognition::UpdateReferenceRegionFromBarcodeResults (const TextResultArray* barcodeResults, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	barcodeResults` The barcode results used to localize reference region.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -213,7 +213,7 @@ Set argument value for the specified mode parameter.
 ```cpp
 int dynamsoft::dlr::CLabelRecognition::SetModeArgument (const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[] = NULL,  const int errorMsgBufferLen = 0)	
 ```   
-#### Parameters
+**Parameters**
 `[in]	modesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` The name of the argument to set.  
@@ -221,7 +221,7 @@ int dynamsoft::dlr::CLabelRecognition::SetModeArgument (const char* modesName, c
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
@@ -229,7 +229,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -253,7 +253,7 @@ Get argument value for the specified mode parameter.
 int dynamsoft::dlr::CLabelRecognition::GetModeArgument (const char* modesName, const int index, const char* argumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	modesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` The name of the argument to get.  
@@ -262,7 +262,7 @@ int dynamsoft::dlr::CLabelRecognition::GetModeArgument (const char* modesName, c
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
@@ -270,7 +270,7 @@ Returns error code (returns 0 if the function operates successfully).
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");

@@ -225,6 +225,7 @@ An array item is a name of any available `LineSpecification`.
     ]
 }
 ```
+
 &nbsp;
 
 ## GrayscaleTransformationModes
@@ -322,5 +323,6 @@ An array item is a name of any available `TextArea`.
     ]
 }
 ```
+
 &nbsp;
 

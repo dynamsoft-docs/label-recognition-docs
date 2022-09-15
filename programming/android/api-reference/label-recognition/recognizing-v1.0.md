@@ -22,18 +22,18 @@ Recognizes text from the memory buffer containing image pixels in defined format
 DLRResult[] com.dynamsoft.dlr.LabelRecognition.recognizeByBuffer(DLRImageData imageData, String templateName) throws LabelRecognitionException
 ```   
    
-### Parameters
+**Parameters**
 `[in]	imageData` An object of DLRImageData that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-### Return value
+**Return Value**
 All results recognized successfully.
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -52,18 +52,18 @@ Recognizes text from a specified image file.
 DLRResult[] com.dynamsoft.dlr.LabelRecognition.recognizeByFile (String fileName, String templateName) throws LabelRecognitionException	
 ```   
    
-### Parameters
+**Parameters**
 `fileName` A string defining the file name.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-### Return value
+**Return Value**
 All results recognized successfully.
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");

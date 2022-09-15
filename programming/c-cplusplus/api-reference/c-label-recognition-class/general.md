@@ -22,16 +22,16 @@ Get error message by error code.
 static const char* dynamsoft::dlr::CLabelRecognition::GetErrorString (const int errorCode)	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in]	errorCode` The error code.
  
 
-### Return value
+**Return Value**
 
 The error message.
 
-### Code Snippet
+**Code Snippet**
 
 ```c++
 const char* errorString = GetErrorString(errorCode);
@@ -47,10 +47,10 @@ Get version information of SDK.
 static const char* dynamsoft::dlr::CLabelRecognition::GetVersion ()
 ```   
 
-### Return value
+**Return Value**
 The version information string.
 
-### Code Snippet
+**Code Snippet**
 
 ```c++
 const char* versionInfo = GetVersion();

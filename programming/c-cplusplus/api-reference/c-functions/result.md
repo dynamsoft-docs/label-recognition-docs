@@ -22,15 +22,15 @@ Get all recognized results.
 DLR_API int DLR_GetAllDLRResults (void* recognizer, DLRResultArray** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.  
 `[out] results`	Recognized results returned by last calling function [`DLR_RecognizeByBuffer`](recognizing.md#dlr_recognizebybuffer) / [`DLR_RecognizeByFile`](recognizing.md#dlr_recognizebyfile). The results is allocated by SDK and should be freed by calling function [`DLR_FreeDLRResults`](#dlr_freedlrresults).
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -50,10 +50,10 @@ Free memory allocated for text results.
 DLR_API void DLR_FreeDLRResults (DLRResultArray ** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	results` Recognized results.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");

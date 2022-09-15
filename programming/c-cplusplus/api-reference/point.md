@@ -10,35 +10,18 @@ noTitleIndex: true
 
 
 # DM_Point
-Stores an x- and y-coordinate pair in two-dimensional space.
 
-```cpp
-typedef struct tagDM_Point  DM_Point
-typedef struct tagDM_Point*  PDM_Point
-``` 
+Stores the point.
 
+## Definition
 
-## Attributes
-  
-| Attribute | Type | 
-|---------- | ---- | 
-| [`x`](#x) | *int* |
-| [`y`](#y) | *int* |
-
-
-&nbsp;
-
-### x
-The X coordinate of the point.
-```cpp
-int x
+```c
+typedef struct tagDMPoint
+{
+    int coordinate[2];
+}DM_Point;
 ```
 
+### coordinate
 
-&nbsp;
-
-### y
-The Y coordinate of the point.
-```cpp
-int y
-```
+The coordinate defining a point. coordinate\[0\] represents the X coordinate and coordinate\[1\] represents the Y coordinate of the point.

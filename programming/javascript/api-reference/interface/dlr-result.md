@@ -21,7 +21,7 @@ Interface for the results returned by the label recognizer.
 | [ `textAreaName` ](#textareaname) | *string* |
 | [ `location` ](#location) | [ `Quadrilateral` ](quadrilateral.md) |
 | [ `confidence` ](#confidence) | *number* |
-| [ `lineResults` ](#lineresults) | *[ `DLR_LineResult` ](dlr-line-result.md)* |
+| [ `lineResults` ](#lineresults) | *[ `DLRLineResult` ](dlr-line-result.md)* |
 | [ `pageNumber` ](#pagenumber) | *number* |
 
 <!--| [ `lineResultsCount` ](#lineresultscount) | *number* |-->

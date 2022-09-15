@@ -8,19 +8,58 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# CLabelRecognizer
+# class CLabelRecognizer
 
 ```cpp
 class dynamsoft::dlr::CLabelRecognizer
 ```
 
-## Initialization
+## Initialization Methods Summary
   
   | Method               | Description |
   |----------------------|-------------|
   | [`CLabelRecognizer`](#clabelrecognizer) | Initialization of `CLabelRecognizer` object.|
 
-&nbsp;
+## Settings Methods Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`SetCharacterModelDefaultPath`](#setcharactermodeldefaultpath) | Set default directory path of the character models. |
+  | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
+  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
+  | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
+  | [`InitRuntimeSettings`](#initruntimesettings) | Initializes a new setting to the current label recognizer instance via template string. |
+  | [`InitRuntimeSettingsFromFile`](#initruntimesettingsfromfile) | Initializes a new setting to the current label recognizer instance via template file. |
+  | [`OutputRuntimeSettings`](#outputruntimesettings) | Output runtime settings to a string. |
+  | [`OutputRuntimeSettingsToFile`](#outputruntimesettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
+  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
+  | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
+
+## Recognizing Methods Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`RecognizeBuffer`](#recognizebuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`RecognizeFile`](#recognizefile) | Recognizes text from a specified image file. |
+  | [`RecognizeFileInMemory`](#recognizefileinmemory) | Recognizes text from an image file in memory. |
+
+## Result Methods Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`GetAllResults`](#getallresults) | Gets all recognized results. |
+  | [`FreeResults`](#freeresults) | Frees memory allocated for recognized results. |
+
+## General Methods Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`GetErrorString`](#geterrorstring) | Returns the error string. |
+  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
+  | [`FreeString`](#freestring) | Free the allocated string memory. |
+
+## Initialization Methods Details
 
 ### CLabelRecognizer
 
@@ -37,25 +76,7 @@ CLabelRecognizer* recognizer = new CLabelRecognizer();
 delete recognizer;
 ```
 
-&nbsp;
-
-## Settings
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`SetCharacterModelDefaultPath`](#setcharactermodeldefaultpath) | Set default directory path of the character models. |
-  | [`GetRuntimeSettings`](#getruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets the runtime settings. |
-  | [`InitRuntimeSettings`](#initruntimesettings) | Initializes a new setting to the current label recognizer instance via template string. |
-  | [`InitRuntimeSettingsFromFile`](#initruntimesettingsfromfile) | Initializes a new setting to the current label recognizer instance via template file. |
-  | [`OutputRuntimeSettings`](#outputruntimesettings) | Output runtime settings to a string. |
-  | [`OutputRuntimeSettingsToFile`](#outputruntimesettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
-  | [`UpdateReferenceRegionFromBarcodeResults`](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
-  | [`GetModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`SetModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
-
-&nbsp;
+## Settings Methods Details
 
 ### SetCharacterModelDefaultPath
 
@@ -435,27 +456,19 @@ recognizer->GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", ar
 delete recognizer;
 ```
 
-## Recognizing
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`RecognizeBuffer`](#recognizebuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`RecognizeFile`](#recognizefile) | Recognizes text from a specified image file. |
-  | [`RecognizeFileInMemory`](#recognizefileinmemory) | Recognizes text from an image file in memory. |
-
-&nbsp;
+## Recognizing Methods Details
 
 ### RecognizeBuffer
 
 Recognizes text from the memory buffer containing image pixels in defined format.
 
 ```cpp
-int RecognizeBuffer(const ImageData* imageData, const char* templateName)
+int RecognizeBuffer(const CImageData* imageData, const char* templateName)
 ```
 
 **Parameters**
 
-`[in] imageData` A struct of [`ImageData`](image-data.md) that represents an image.  
+`[in] imageData` An instance of [`CImageData`](image-data-cpp.md) that represents an image.  
 `[in] templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 **Return value**
@@ -472,7 +485,7 @@ CLicenseManager::InitLicense("t0260NwAAAHV***************", errorMessage, 256);
 CLabelRecognizer* recognizer = new CLabelRecognizer();
 
 //Generate imageData from somewhere else
-int errorCode = recognizer-> RecognizeBuffer(imageData, "");
+int errorCode = recognizer->RecognizeBuffer(imageData, "");
 delete recognizer;
 ```
 
@@ -540,14 +553,7 @@ int errorCode = recognizer->RecognizeFileInMemory(pFileBytes, nFileSize, "");
 delete recognizer;
 ```
 
-## Result
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`GetAllResults`](#getallresults) | Gets all recognized results. |
-  | [`FreeResults`](#freeresults) | Frees memory allocated for recognized results. |
-
-&nbsp;
+## Result Methods Details
 
 ### GetAllResults
 
@@ -608,15 +614,7 @@ CLabelRecognizer::FreeResults(&results);
 delete recognizer;
 ```
 
-## General
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`GetErrorString`](#geterrorstring) | Returns the error string. |
-  | [`GetVersion`](#getversion) | Returns the version number string for the SDK. |
-  | [`FreeString`](#freestring) | Free the allocated string memory. |
-
-&nbsp;
+## General Methods Details
 
 ### GetErrorString
 

@@ -8,19 +8,94 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# class LabelRecognizer
+# LabelRecognizer
 
 ```java
 class com.dynamsoft.dlr.LabelRecognizer
 ```  
 
-## Initialization Methods Summary
+## Initialization
   
   | Method               | Description |
   |----------------------|-------------|
   | [`LabelRecognizer`](#labelrecognizer) | Initialization of `LabelRecognizer` object.|
+  | [`destroy`](#destroy) | Destroys an instance of `LabelRecognizer` object.|   
+  | [`initLicense`](#initlicense) | Sets the license and activates the SDK. |
 
-## Settings Methods Summary
+
+
+&nbsp;
+
+### LabelRecognizer
+
+Initialization of `LabelRecognizer` object.
+
+```java
+LabelRecognizer() throws LabelRecognizerException
+```
+
+**Exceptions**
+
+
+[`LabelRecognizerException`](label-recognizer-exception.md)
+
+
+**Code Snippet**
+
+
+```java
+LabelRecognizer recognizer = new LabelRecognizer();
+```
+
+
+
+&nbsp;
+
+### destroy
+
+```java
+void destroy()	
+```
+
+**Code Snippet**
+
+
+```java
+LabelRecognizer recognizer = new LabelRecognizer();
+recognizer.destroy();
+```
+
+
+&nbsp;
+
+### initLicense
+Sets product key and activate the SDK.
+
+```java
+static void initLicense(String license, DLRLicenseVerificationListener listener)
+```   
+
+**Parameters**
+
+- `license`: The product keys.
+- `listener`: The delegate to handle callback when license server returns.
+
+**Code Snippet**
+
+```java
+LabelRecognizer.initLicense("t0260NwAAAHV***************", new DLRLicenseVerificationListener() {
+   @Override
+   public void DLRLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
+```
+
+ 
+
+## Settings
 
   | Method               | Description |
   |----------------------|-------------|
@@ -35,57 +110,26 @@ class com.dynamsoft.dlr.LabelRecognizer
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`appendCharacterModelBuffer`](#appendcharactermodelbuffer) | Appends CharacterModel to the SDK object. |
+  | [`eraseAllCharacterModels`](#appendcharactermodelbuffer) | Erases all CharacterModels the SDK object currently loaded. |
+  | [`eraseCharacterModelByName`](#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
 
-## Recognizing Methods Summary
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
-  | [`recognizeByImage`](#recognizebyimage) | Recognizes text from a bitmap. |
-
-## General Methods Summary
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
-
-## Initialization Methods Details
-
-### LabelRecognizer
-
-Initialization of `LabelRecognizer` object.
-
-```java
-LabelRecognizer() throws LabelRecognizerException
-```
-
-**Exceptions**
-
-[`LabelRecognizerException`](label-recognizer-exception.md)
-
-**Code Snippet**
-
-```java
-LabelRecognizer recognizer = new LabelRecognizer();
-```
-
-## Settings Methods Details
+&nbsp;
 
 ### appendCharacterModelBuffer
-
 Appends CharacterModel to the SDK object.
 
 ```java
 static void appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte[] txtBuffer, byte[] characterModelBuffer)
-```
-
+```   
+   
 **Parameters**
 
 `name` A unique name for the appended CharacterModel.   
 `prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.   
 `txtBuffer` The .txt file data of the CharacterModel in a byte array.   
 `characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.   
+
 
 **Code Snippet**
 
@@ -106,6 +150,44 @@ isTxt.close();
 
 LabelRecognizer.appendCharacterModelBuffer("NumberLetter", prototxt, txt, characterModel);
 ```
+
+&nbsp;
+
+### eraseAllCharacterModels
+Erases all CharacterModels the SDK object currently loaded.
+
+```java
+static void eraseAllCharacterModels ()
+```   
+   
+**Code Snippet**
+
+```java
+LabelRecognizer.eraseAllCharacterModels();
+```
+
+
+&nbsp;
+
+### eraseCharacterModelByName
+Erases a name specified CharacterModel from the SDK object.
+
+```java
+static void eraseCharacterModelByName(String name)
+```   
+
+**Parameters**
+
+`name` A unique name representing the CharacterModel to erase.   
+  
+**Code Snippet**
+
+```java
+LabelRecognizer.eraseCharacterModelByName("NumberLetter");
+```
+
+
+
 
 &nbsp;
 
@@ -131,7 +213,7 @@ void appendSettingsFromFile(String filePath) throws LabelRecognizerException
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromFile("your file path");
-
+recognizer.destroy();
 ```
 
 
@@ -160,7 +242,7 @@ void appendSettingsFromString(String content) throws LabelRecognizerException
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
-
+recognizer.destroy();
 ```
 
 
@@ -225,7 +307,7 @@ settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RP
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
 String argumentValue = recognizer.getModeArgument("RegionPredetectionModes", 0, "AspectRatioRange");
-
+recognizer.destroy();
 ```
 
 
@@ -256,7 +338,7 @@ The class object of template settings.
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
-
+recognizer.destroy();
 ```
 
 
@@ -288,7 +370,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 recognizer.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
-
+recognizer.destroy();
 ```
 
 
@@ -316,7 +398,7 @@ DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.maxThreadCount = 4;
 recognizer.updateRuntimeSettings(settings);
 recognizer.resetRuntimeSettings();
-
+recognizer.destroy();
 ```
 
 
@@ -360,7 +442,7 @@ DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.furtherModes.regionPredetectionModes[0] = EnumRegionPredetectionMode.RPM_GENERAL_RGB_CONTRAST;
 recognizer.updateRuntimeSettings(settings);
 recognizer.setModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", "100");
-
+recognizer.destroy();
 ```
 
 
@@ -395,7 +477,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 recognizer.appendSettingsFromString("{\"LabelRecognizerParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}");
 //Get barcodeResults from Dynamsoft Barcode Reader SDK
 recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
-
+recognizer.destroy();
 ```
 
 
@@ -426,15 +508,22 @@ LabelRecognizer recognizer = new LabelRecognizer();
 DLRRuntimeSettings settings = recognizer.getRuntimeSettings();
 settings.maxThreadCount = 1;
 recognizer.updateRuntimeSettings(settings);
-
+recognizer.destroy();
 ```
 
  
 
 
+## Recognizing
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`recognizeByFile`](#recognizebyfile) | Recognizes text from a specified image file. |
+  | [`recognizeByImage`](#recognizebyimage) | Recognizes text from a bitmap. |
 
 
-## Recognizing Methods Details
+&nbsp;
 
 ### recognizeByBuffer
 Recognizes text from the memory buffer containing image pixels in defined format.
@@ -464,7 +553,7 @@ LabelRecognizer recognizer = new LabelRecognizer();
 
 //Generate imageData from somewhere else
 DLRResult[] result = recognizer.recognizeByBuffer(imageData, "");
-
+recognizer.destroy();
 ```
 
 
@@ -499,7 +588,7 @@ All results recognized successfully.
 LabelRecognizer recognizer = new LabelRecognizer();
 
 DLRResult[] result = recognizer.recognizeByFile("full file path", "");
-
+recognizer.destroy();
 ```
 
 &nbsp;
@@ -522,6 +611,7 @@ All results recognized successfully.
 
 **Exceptions**
 
+
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
 **Code Snippet**
@@ -531,24 +621,39 @@ LabelRecognizer recognizer = new LabelRecognizer();
 
 Bitmap img = BitmapFactory.decodeFile("full file path");
 DLRResult[] result = recognizer.recognizeByImage(img, "");
+recognizer.destroy();
 ```
-
-## General Methods Details
+ 
+ 
+   
+## General
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
+   
+&nbsp;
 
 ### getVersion
 
 Get version information of SDK.
 
 ```java
-static String getVersion()
+String getVersion()	
 ```
 
 **Return value**
+
 
 The version information string.
 
 **Code Snippet**
 
+
 ```java
-String versionInfo = LabelRecognizer.getVersion();
+LabelRecognizer recognizer = new LabelRecognizer();
+String versionInfo = recognizer.getVersion();
+recognizer.destroy();
 ```
+
+ 

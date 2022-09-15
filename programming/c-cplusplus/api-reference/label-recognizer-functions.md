@@ -10,14 +10,74 @@ noTitleIndex: true
 
 # C Functions
 
-## Initialization
+## Initialization Functions Summary
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`DC_GetIdleInstancesCount`](#dc_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
   | [`DC_InitLicense`](#dc_initlicense) | Sets the license key and activates the SDK. |
+  | [`DC_GetIdleInstancesCount`](#dc_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
   | [`DLR_CreateInstance`](#dlr_createinstance) | Creates a Dynamsoft Label Recognizer instance. |
   | [`DLR_DestroyInstance`](#dlr_destroyinstance) | Destroys an instance of Dynamsoft Label Recognizer. |
+
+## Setting Functions Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DLR_SetCharacterModelDefaultPath`](#dlr_setcharactermodeldefaultpath) | Set default directory path of the character models. |
+  | [`DLR_GetRuntimeSettings`](#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
+  | [`DLR_UpdateRuntimeSettings`](#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
+  | [`DLR_ResetRuntimeSettings`](#dlr_resetruntimesettings) | Resets the runtime settings. |
+  | [`DLR_InitRuntimeSettings`](#dlr_initruntimesettings) | Initializes a new setting to the current label recognizer instance via template string. |
+  | [`DLR_InitRuntimeSettingsFromFile`](#dlr_initruntimesettingsfromfile) | Initializes a new setting to the current label recognizer instance via template file. |
+  | [`DLR_OutputRuntimeSettings`](#dlr_outputruntimesettings) | Output runtime settings to a string. |
+  | [`DLR_OutputRuntimeSettingsToFile`](#dlr_outputruntimesettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
+  | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
+  | [`DLR_GetModeArgument`](#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`DLR_SetModeArgument`](#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
+
+## Recognizing Functions Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DLR_RecognizeBuffer`](#dlr_recognizebuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
+  | [`DLR_RecognizeFile`](#dlr_recognizefile) | Recognizes text from a specified image file. |
+  | [`DLR_RecognizeFileInMemory`](#dlr_recognizefileinmemory) | Recognizes text from an image file in memory. |
+
+## Result Functions Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DLR_GetAllResults`](#dlr_getallresults) | Gets all recognized results. |
+  | [`DLR_FreeResults`](#dlr_freeresults) | Frees memory allocated for recognized results. |
+
+## General Functions Summary
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
+  | [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
+  | [`DLR_FreeString`](#dlr_freestring) | Free the allocated string memory. |
+
+## Initialization Functions Details
+
+### DLR_CreateInstance
+
+Create an instance of Dynamsoft Label Recognizer.
+
+```c
+void* DLR_CreateInstance()
+```
+
+**Return value**
+
+Returns an instance of Dynamsoft Label Recognizer. If failed, returns NULL.
+
+**Code Snippet**
+
+```c
+void* recognizer = DLR_CreateInstance();
+DLR_DestroyInstance(recognizer);
+```
 
 &nbsp;
 
@@ -55,27 +115,6 @@ if(count = 0)
 {
   //waiting for available instances 
 }
-```
-
-&nbsp;
-
-### DLR_CreateInstance
-
-Create an instance of Dynamsoft Label Recognizer.
-
-```c
-void* DLR_CreateInstance()
-```
-
-**Return value**
-
-Returns an instance of Dynamsoft Label Recognizer. If failed, returns NULL.
-
-**Code Snippet**
-
-```c
-void* recognizer = DLR_CreateInstance();
-DLR_DestroyInstance(recognizer);
 ```
 
 &nbsp;
@@ -130,23 +169,7 @@ void* recognizer = DLR_CreateInstance();
 DLR_DestroyInstance(recognizer);
 ```
 
-## Setting
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLR_SetCharacterModelDefaultPath`](#dlr_setcharactermodeldefaultpath) | Set default directory path of the character models. |
-  | [`DLR_GetRuntimeSettings`](#dlr_getruntimesettings) | Gets the current settings and saves it into a struct. |
-  | [`DLR_UpdateRuntimeSettings`](#dlr_updateruntimesettings) | Updates runtime settings with a given struct. |
-  | [`DLR_ResetRuntimeSettings`](#dlr_resetruntimesettings) | Resets the runtime settings. |
-  | [`DLR_InitRuntimeSettings`](#dlr_initruntimesettings) | Initializes a new setting to the current label recognizer instance via template string. |
-  | [`DLR_InitRuntimeSettingsFromFile`](#dlr_initruntimesettingsfromfile) | Initializes a new setting to the current label recognizer instance via template file. |
-  | [`DLR_OutputRuntimeSettings`](#dlr_outputruntimesettings) | Output runtime settings to a string. |
-  | [`DLR_OutputRuntimeSettingsToFile`](#dlr_outputruntimesettingstofile) | Outputs LabelRecognizerParameter settings into a file (JSON file). |
-  | [`DLR_UpdateReferenceRegionFromBarcodeResults`](#dlr_updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type LST_BARCODE. |
-  | [`DLR_GetModeArgument`](#dlr_getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`DLR_SetModeArgument`](#dlr_setmodeargument) | Set argument value for the specified mode parameter. |
-
-&nbsp;
+## Setting Functions Details
 
 ### DLR_SetCharacterModelDefaultPath
 
@@ -542,15 +565,7 @@ DLR_GetModeArgument(recognizer, "RegionPredetectionModes", 0, "AspectRatioRange"
 DLR_DestroyInstance(recognizer);
 ```
 
-## Recognizing
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLR_RecognizeBuffer`](#dlr_recognizebuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
-  | [`DLR_RecognizeFile`](#dlr_recognizefile) | Recognizes text from a specified image file. |
-  | [`DLR_RecognizeFileInMemory`](#dlr_recognizefileinmemory) | Recognizes text from an image file in memory. |
-
-&nbsp;
+## Recognizing Functions Details
 
 ### DLR_RecognizeBuffer
 
@@ -652,14 +667,7 @@ int errorCode = DLR_RecognizeFileInMemory(recognizer, pFileBytes, nFileSize, "")
 DLR_DestroyInstance(recognizer);
 ```
 
-## Result
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLR_GetAllResults`](#dlr_getallresults) | Gets all recognized results. |
-  | [`DLR_FreeResults`](#dlr_freeresults) | Frees memory allocated for recognized results. |
-
-&nbsp;
+## Result Functions Details
 
 ### DLR_GetAllResults
 
@@ -721,15 +729,7 @@ DLR_FreeResults(&results);
 DLR_DestroyInstance(recognizer);
 ```
 
-## General
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DLR_GetErrorString`](#dlr_geterrorstring) | Returns the error string. |
-  | [`DLR_GetVersion`](#dlr_getversion) | Returns the version number string for the SDK. |
-  | [`DLR_FreeString`](#dlr_freestring) | Free the allocated string memory. |
-
-&nbsp;
+## General Functions Details
 
 ### DLR_GetErrorString
 

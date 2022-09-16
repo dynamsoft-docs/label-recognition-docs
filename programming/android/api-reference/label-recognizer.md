@@ -602,7 +602,7 @@ public void onPause() {
     } catch (CameraEnhancerException e) {
         e.printStackTrace();
     }
-    normalizer.stopScanning();
+    recognizer.stopScanning();
     super.onPause();
 }
 ```

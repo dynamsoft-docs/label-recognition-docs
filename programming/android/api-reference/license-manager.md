@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - LicenseManager class
-description: This page shows LicenseManager class of Dynamsoft Label Recognizer for Android SDK.
-keywords: initLicense, LicenseManager, DocumentNormalizer, api reference, android
+title: Dynamsoft Core Module Android API Reference - LicenseManager class
+description: This page shows LicenseManager class of Dynamsoft Core Module for Android SDK.
+keywords: initLicense, LicenseManager, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 1.0

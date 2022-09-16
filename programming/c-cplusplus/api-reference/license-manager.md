@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CLicenseManager Class
-description: This page shows CLicenseManager class definition of Dynamsoft Document Normalizer SDK C++ Edition.
+description: This page shows CLicenseManager class definition of Dynamsoft Core Module C++ Edition.
 keywords: InitLicense, CLicenseManager, api reference
 ---
 

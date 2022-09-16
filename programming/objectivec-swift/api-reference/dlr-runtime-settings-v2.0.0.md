@@ -28,7 +28,6 @@ Defines a struct to configure the text recognizer runtime settings. These settin
 | [`dictionaryCorrectionThreshold`](#dictionarycorrectionthreshold) | [`iDLRDictionaryCorrectionThreshold`](dlr-dictionary-correction-threshold.md)\* |
 | [`binarizationModes`](#binarizationmodes) | *NSArray\** |
 | [`furtherModes`](#furthermodes) | [`iDLRFurtherModes`](dlr-further-modes.md)\*|
-| [`timeout`](#timeout) | *NSInteger* |
 
 &nbsp;
 
@@ -137,11 +136,3 @@ iDLRFurtherModes* furtherModes
 **See also**
 
 [`iDLRFurtherModes`](dlr-further-modes.md)
-
-### timeout
-
-Set the timeout. Timeout value is measured by millisecond.
-
-```objc
-@property NSInteger timeout
-```

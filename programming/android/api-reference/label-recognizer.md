@@ -92,10 +92,10 @@ static void appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte
 
 **Parameters**
 
-`[in] name` A unique name for the appended CharacterModel.
-`[in] prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.
-`[in] txtBuffer` The .txt file data of the CharacterModel in a byte array.
-`[in] characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.
+`[in] name` A unique name for the appended CharacterModel.  
+`[in] prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.  
+`[in] txtBuffer` The .txt file data of the CharacterModel in a byte array.  
+`[in] characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.  
 
 **Code Snippet**
 
@@ -354,10 +354,10 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 
 **Parameters**
 
-- `[in] modesName`: The mode parameter name to set argument.
+- `[in] modesName`: The mode parameter name to set argument.  
 - `[in] index`: The array index of mode parameter to indicate a specific mode.  
 - `[in] argumentName`: The name of the argument to set.  
-- `[in] argumentValue`: The value of the argument to set. 
+- `[in] argumentValue`: The value of the argument to set.
 
 **Exceptions**
 
@@ -392,7 +392,7 @@ void updateReferenceRegionFromBarcodeResults (BarcodeResult[] barcodeResults, St
 
 **Parameters**
 
-`[in] barcodeResults` The barcode results used to localize reference region.  See also [`BarcodeResult`](barcode-result.md).
+`[in] barcodeResults` The barcode results used to localize reference region.  See also [`BarcodeResult`](barcode-result.md).  
 `[in] templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 **Exceptions**

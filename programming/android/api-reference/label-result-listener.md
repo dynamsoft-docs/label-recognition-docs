@@ -30,8 +30,8 @@ void labelResultCallback(int frameId, ImageData imageData, DLRResult[] labelResu
 
 **Parameters**
 
-`[in] frameId`: The ID of the frame.
-`[in] imgData`: The image data of frame.
+`[in] frameId`: The ID of the frame.  
+`[in] imgData`: The image data of frame.  
 `[in] labelResults`: Recognized label results of the frame.
 
 **Code Snippet**

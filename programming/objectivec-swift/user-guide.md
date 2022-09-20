@@ -258,14 +258,14 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    class ViewController: BaseViewController, LabelResultListener {
       ...
       func configureDLR() -> Void {
-         ...
-         // Set result listener.
-         labelRecognizer.setLabelResultListener(self)
-         // Start the label recognition thread.
-         labelRecognizer.startScanning()
+             ...
+             // Set result listener.
+             labelRecognizer.setLabelResultListener(self)
+             // Start the label recognition thread.
+             labelRecognizer.startScanning()
       }
       func labelResultCallback(_ frameId: Int, imageData: iImageData, results: [iDLRResult]?) {
-         // Add your code to execute on results are received.
+             // Add your code to execute on results are received.
       }
    }
    ```
@@ -281,25 +281,25 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >1. 
    ```objc
    - (void)labelResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDLRResult *> *)results {
-          if (results.count > 0) {
+      if (results.count > 0) {
              [self.labelRecognizer stopScanning];
              NSMutableString *msgString = [NSMutableString string];
              int index = 0;
              for (iDLRResult *dlrResult in results) {
-                    for (iDLRLineResult *lineResult in dlrResult.lineResults) {
+                for (iDLRLineResult *lineResult in dlrResult.lineResults) {
                        index++;
                        [msgString appendString:[NSString stringWithFormat:@"Result %d:%@\n", index, lineResult.text]];
-                    }
+                }
              }
              UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Result" message:msgString preferredStyle:UIAlertControllerStyleAlert];
              UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [self.labelRecognizer startScanning];
+                [self.labelRecognizer startScanning];
              }];
              [alertVC addAction:okAction];
              dispatch_async(dispatch_get_main_queue(), ^{
-                    [self presentViewController:alertVC animated:YES completion:nil];
+                [self presentViewController:alertVC animated:YES completion:nil];
              });
-          }
+      }
    }
    ```
    2. 

@@ -14,6 +14,7 @@ needGenerateH3Content: true
 - [Build Your First Application](#build-your-first-application)
   - [Create a New Project](#create-a-new-project)
   - [Include the Library](#include-the-library)
+  - [Initialize the License](#initialize-the-license)
   - [Initialize Camera Module](#initialize-camera-module)
   - [Initialize Label Recognizer](#initialize-label-recognizer)
   - [Start Recognition Process](#start-recognition-process)
@@ -116,7 +117,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
-### Initialize the license
+### Initialize the License
 
 1. Import the `LicenseManager` class and initialize the license in the file `MainActivity.java`.
 
@@ -281,7 +282,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-### Obtain And Display Recognized Results
+### Obtain and Display Recognized Results
 
 1. Create a label result listener and register with the label recognizer instance to get recognized label results.
 

@@ -356,5 +356,5 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 >Note:
 >
 >* You can get the source code of the HelloWord app from the following link
->  * <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjc" target="_blank">Objective-C</a>
+>  * <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC" target="_blank">Objective-C</a>
 >  * <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift" target="_blank">Swift</a>

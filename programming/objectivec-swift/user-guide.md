@@ -14,10 +14,10 @@ needGenerateH3Content: true
 * [Build Your First Application](#build-your-first-application)
   * [Create a New Project](#create-a-new-project)
   * [Include the Library](#include-the-library)
-  * [Initialize Camera Module](#)
+  * [Initialize Camera Module](#initialize-the-camera-module)
   * [Initialize Label Recognizer](#initialize-the-label-recognizer)
-  * [Start Recognition Process](#)
-  * [Obtain and Display Recognized Result](#)
+  * [Start Recognition Process](#start-recognition-process)
+  * [Obtain and Display Recognized Result](#obtain-and-display-recognized-results)
   * [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
@@ -81,7 +81,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 >Note:
 >
 >* The following steps are completed in XCode 12.2
->* You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjc)
+>* You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC)
 >* You can download the entire Swift source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
 
 ### Create a New Project
@@ -272,7 +272,9 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
     >The variable `data` represents the temporary photo taken by camera app, which will be explained later.
 
-2. Add code to display the label recognition results on the view.
+### Obtain And Display Recognized Results
+
+1. You can obtain the label recognition results via `labelResultCallback`. Add code to display the label recognition results on the view.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C

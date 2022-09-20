@@ -289,8 +289,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
              int index = 0;
              for (iDLRResult *dlrResult in results) {
                 for (iDLRLineResult *lineResult in dlrResult.lineResults) {
-                       index++;
-                       [msgString appendString:[NSString stringWithFormat:@"Result %d:%@\n", index, lineResult.text]];
+                   index++;
+                   [msgString appendString:[NSString stringWithFormat:@"Result %d:%@\n", index, lineResult.text]];
                 }
              }
              UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Result" message:msgString preferredStyle:UIAlertControllerStyleAlert];
@@ -316,10 +316,10 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
              var index = 0
              for dlrResult in results {
                 if let dlrLineResults = dlrResult.lineResults {
-                       for lineResult in dlrLineResults {
+                   for lineResult in dlrLineResults {
                           index+=1
                           msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
-                       }
+                   }
                 }
              }
              let alertVC = UIAlertController.init(title: "Results", message: msgString, preferredStyle: .alert)

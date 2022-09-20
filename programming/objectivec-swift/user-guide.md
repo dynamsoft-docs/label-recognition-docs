@@ -317,8 +317,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
              for dlrResult in results {
                 if let dlrLineResults = dlrResult.lineResults {
                    for lineResult in dlrLineResults {
-                          index+=1
-                          msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
+                      index+=1
+                      msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
                    }
                 }
              }

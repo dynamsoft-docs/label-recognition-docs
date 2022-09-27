@@ -25,10 +25,10 @@ needGenerateH3Content: true
 - [DLRReferenceRegion](dlr-reference-region.md)
 - [DLRResult](dlr-result.md)
 - [DLRLineResult](dlr-line-result.md)
-- [DLRCharacterResult](dlr-character-result.md)	
+- [DLRCharacterResult](dlr-character-result.md)
 - [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
 - [DLRFurtherModes](dlr-further-modes.md)
-- [DLRLicenseVerificationListener](dlr-license-verification-listener.md)	
+- [DLRLicenseVerificationListener](dlr-license-verification-listener.md)
 
 ## Enumerations
 
@@ -41,10 +41,10 @@ needGenerateH3Content: true
 - [EnumBarcodeFormat]({{ site.enumerations }}barcode-format.html)
 - [EnumBarcodeFormat_2]({{ site.enumerations }}barcode-format-2.html)
 - [EnumImagePixelFormat]({{ site.enumerations }}image-pixel-format.html)
-- [EnumDMChargeWay]({{ site.enumerations }}dm-charge-way.html)	
-- [EnumDMLicenseModule]({{ site.enumerations }}dm-license-module.html)	
-- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)	
-- [EnumProduct]({{ site.enumerations }}product.html)	
+- [EnumDMChargeWay]({{ site.enumerations }}dm-charge-way.html)
+- [EnumDMLicenseModule]({{ site.enumerations }}dm-license-module.html)
+- [EnumDMUUIDGenerationMethod]({{ site.enumerations }}dm-uuid-generation-method.html)
+- [EnumProduct]({{ site.enumerations }}product.html)
 - [EnumLocalizationSourceType]({{ site.enumerations }}localization-source-type.html)
 
 ## Error Code

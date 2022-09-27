@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # DLRLineSpecification
+
 Stores the settings of text line.
 
 ```java
@@ -20,29 +21,30 @@ class com.dynamsoft.dlr.DLRLineSpecification
   
 | Attribute | Type |
 |---------- | ---- |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *int\[\]* | 
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *int\[\]* |
 | [`binarizationModes`](#binarizationmodes) | *int\[\]*  |
-
 
 &nbsp;
 
 ### grayscaleEnhancementModes
+
 Sets the mode and priority for grayscale image preprocessing algorithms.
 
 ```java
 int[] grayscaleEnhancementModes
 ```
 
-**Value Range**  
-   Each array item can be any one of the [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) Enumeration items.  
-     
-- **Default value**  
-   `[EnumGrayscaleEnhancementMode.GEM_GENERAL, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP]`  
-     
+**Value Range**
+
+Each array item can be any one of the [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) Enumeration items.  
+
+**Default value**
+
+`[EnumGrayscaleEnhancementMode.GEM_GENERAL, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP]`  
+
 **Remarks**
-   The array index represents the priority of the item. The smaller index is, the higher priority is.
 
-
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 &nbsp;
 
@@ -53,11 +55,14 @@ Sets the mode and priority for binarization.
 int[] binarizationModes
 ```
 
-**Value Range**   
-    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
-      
+**Value Range**
+
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
+
 **Default value**
-    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
-    
-**Remarks** 
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+`[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.

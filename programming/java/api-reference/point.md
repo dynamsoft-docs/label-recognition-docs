@@ -28,6 +28,7 @@ class com.dynamsoft.core.Point
 
 ### x
 The X coordinate of the point.
+
 ```java
 int x
 ```
@@ -37,6 +38,7 @@ int x
 
 ### y
 The Y coordinate of the point.
+
 ```java
 int y
 ```

@@ -41,14 +41,18 @@ The URL of the license tracking server.
 ```csharp
 string  MainServerURL
 ```
-**Value Range**   
-    Any string value   
-      
-**Default value**
-    ""
 
-**Remarks** 
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+**Value Range**
+
+Any string value   
+
+**Default value**
+
+""
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 &nbsp;
@@ -58,14 +62,18 @@ The URL of the standby license tracking server.
 ```csharp
 string  StandbyServerURL
 ```
-**Value Range**   
-    Any string value   
-      
-**Default value**
-    ""
 
-**Remarks** 
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+**Value Range**
+
+Any string value   
+
+**Default value**
+
+""
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 &nbsp;
@@ -75,11 +83,14 @@ The handshake code.
 ```csharp
 string  HandshakeCode
 ```
-**Value Range**   
-    Any string value   
-      
+
+**Value Range**
+
+Any string value   
+
 **Default value**
-    ""
+
+""
 
 &nbsp;
 
@@ -88,11 +99,14 @@ The session password of the handshake code set in license tracking server.
 ```csharp
 string  SessionPassword
 ```
-**Value Range**   
-    Any string value   
-      
+
+**Value Range**
+
+Any string value   
+
 **Default value**
-    ""
+
+""
 
 &nbsp;
 
@@ -104,14 +118,17 @@ Sets the deployment type.
 EnumDMDeploymentType DeploymentType
 ```
 
-**Value Range**   
-    Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.   
-      
+**Value Range**
+
+Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html) Enumeration items.   
+
 **Default value**
-    DM_DT_DESKTOP   
-    
+
+DM_DT_DESKTOP   
+
 **See also**
-    [`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html)    
+
+[`EnumDMDeploymentType`]({{ site.enumerations }}dm-deployment-type.html)    
 
 &nbsp;
 
@@ -120,14 +137,18 @@ Sets the charge way.
 ```csharp
 int ChargeWay
 ```
-**Value Range**   
-    A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
-      
+
+**Value Range**
+
+A value of [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html) Enumeration items.
+
 **Default value**
-    `DM_CW_AUTO`
-    
+
+`DM_CW_AUTO`
+
 **See also**
-    [`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
+
+[`EnumDMChargeWay`]({{ site.enumerations }}dm-charge-way.html)
       
 
 &nbsp;
@@ -137,14 +158,18 @@ Sets the method to generate UUID.
 ```csharp
 int UUIDGenerationMethod
 ```
-**Value Range**   
-    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
-      
+
+**Value Range**
+
+A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html) Enumeration items.
+
 **Default value**
-    `DM_UUIDGM_RANDOM`
-    
+
+`DM_UUIDGM_RANDOM`
+
 **See also**
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}dm-uuid-generation-method.html)
       
 
 &nbsp;
@@ -154,11 +179,14 @@ Sets the max days to buffer the license info.
 ```csharp
 int MaxBufferDays
 ```
-**Value Range**   
-    [0,0x7fffffff]   
-      
+
+**Value Range**
+
+[0,0x7fffffff]   
+
 **Default value**
-    7
+
+7
 
 &nbsp;
 
@@ -167,14 +195,18 @@ Sets the license modules to use.
 ```csharp
 List<Integer>  LimitedLicenseModules
 ```
-**Value Range**   
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
-      
+
+**Value Range**
+
+A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html) Enumeration items.   
+
 **Default value**
-    null
-    
+
+null
+
 **See also**
-    [`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
+
+[`EnumDMLicenseModule`]({{ site.enumerations }}dm-license-module.html)    
       
 
 &nbsp;
@@ -184,13 +216,17 @@ Sets the max concurrent instance count.
 ```csharp
 int MaxConcurrentInstanceCount
 ```
-**Value Range**   
-    [1,0x7fffffff]   
-      
+
+**Value Range**
+
+[1,0x7fffffff]   
+
 **Default value**
-    1
-**Remarks** 
-    It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
+
+1
+**Remarks**
+
+It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set MaxConcurrentInstanceCount to 20.
 
 &nbsp;
@@ -200,11 +236,14 @@ The organization ID got from Dynamsoft.
 ```csharp
 string OrganizationID
 ```
-**Value Range**   
-    Any string value   
-      
+
+**Value Range**
+
+Any string value   
+
 **Default value**
-    ""
+
+""
 
 &nbsp;
 
@@ -213,11 +252,15 @@ Sets the products to get the license for. Product values can be combined.
 ```csharp
 int Products
 ```
-**Value Range**   
-    A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
-      
+
+**Value Range**
+
+A combine value of [`EnumProduct`]({{ site.enumerations }}product.html) Enumeration items.
+
 **Default value**
-    `PROD_ALL`
-    
+
+`PROD_ALL`
+
 **See also**
-    [`EnumProduct`]({{ site.enumerations }}product.html)
+
+[`EnumProduct`]({{ site.enumerations }}product.html)

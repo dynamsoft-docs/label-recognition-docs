@@ -29,14 +29,18 @@ Sets the number of threads the algorithm will use to recognize label.
 ```objc
 NSInteger maxThreadCount
 ```
-**Value Range**   
-    [1, 4]
-      
+
+**Value Range**
+
+[1, 4]
+
 **Default value**
-    4
-    
-**Remarks** 
-    To keep a balance between speed and quality, the library concurrently runs four different threads by default.
+
+4
+
+**Remarks**
+
+To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 ### characterModelName
 The name of the CharacterModel.
@@ -49,14 +53,18 @@ Sets the text lines count of the text area.
 ```objc
 NSInteger linesCount
 ```
-**Value Range**   
-    [0, 200]
-      
+
+**Value Range**
+
+[0, 200]
+
 **Default value**
-    0
-    
-**Remarks** 
-    0: line count is not certain.
+
+0
+
+**Remarks**
+
+0: line count is not certain.
 
 
 ### regionPredetectionModes
@@ -64,14 +72,18 @@ Sets the region pre-detection mode.
 ```objc
 NSArray * regionPredetectionModes
 ```
-**Value Range**   
-    Each array item can be any one of the [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
-      
+
+**Value Range**
+
+Each array item can be any one of the [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode) Enumeration items.
+
 **Default value**
-    `[EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip]`
-    
-**Remarks** 
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+`[EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip,EnumDLRRegionPredetectionModeSkip]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
 ### referenceRegion
@@ -91,13 +103,17 @@ Sets the grayscale transformation mode.
 ```objc
 NSArray * grayscaleTransformationModes
 ```
-**Value Range**   
-    Each array item can be any one of the [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
-      
+
+**Value Range**
+
+Each array item can be any one of the [`EnumDLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) Enumeration items.
+
 **Default value**
-    `[EnumDLRGrayscaleTransformationModeOriginal,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip]`
-    
-**Remarks** 
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+`[EnumDLRGrayscaleTransformationModeOriginal,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip,EnumDLRGrayscaleTransformationModeSkip]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
   
 

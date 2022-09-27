@@ -27,108 +27,145 @@ Defines a struct to configure the parameters to connect to license tracking serv
 
 ### mainServerURL
 The URL of the license tracking server.
+
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.mainServerURL
 ```
-**Value Range**   
-    Any string value   
-      
-**Default value**
-    ""
 
-**Remarks** 
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+**Value Range**
+
+Any string value   
+
+**Default value**
+
+""
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### standbyServerURL
 The URL of the standby license tracking server.
+
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.standbyServerURL
 ```
-**Value Range**   
-    Any string value   
-      
-**Default value**
-    ""
 
-**Remarks** 
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+**Value Range**
+
+Any string value   
+
+**Default value**
+
+""
+
+**Remarks**
+
+If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### handshakeCode
 The handshake code.
+
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.handshakeCode
 ```
-**Value Range**   
-    Any string value   
-      
+
+**Value Range**
+
+Any string value   
+
 **Default value**
-    ""
+
+""
 
 ### sessionPassword
 The session password of the handshake code set in license tracking server.
+
 ```java
 String  com.dynamsoft.dlr.DMLTSConnectionParameters.sessionPassword
 ```
-**Value Range**   
-    Any string value   
-      
+
+**Value Range**
+
+Any string value   
+
 **Default value**
-    ""
+
+""
 
 ### chargeWay
 Sets the charge way.
+
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.chargeWay
 ```
-**Value Range**   
-    A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
-      
+
+**Value Range**
+
+A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
+
 **Default value**
-    `DM_CW_AUTO`
-    
+
+`DM_CW_AUTO`
+
 **See also**
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+
+[`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
       
 
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
+
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.UUIDGenerationMethod
 ```
-**Value Range**   
-    A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
-      
+
+**Value Range**
+
+A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+
 **Default value**
-    `DM_UUIDGM_RANDOM`
-    
+
+`DM_UUIDGM_RANDOM`
+
 **See also**
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+
+[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
       
 
 ### maxBufferDays
 Sets the max days to buffer the license info.
+
 ```java
 int com.dynamsoft.dlr.DMLTSConnectionParameters.maxBufferDays
 ```
-**Value Range**   
-    [0,0x7fffffff]   
-      
+
+**Value Range**
+
+[0,0x7fffffff]   
+
 **Default value**
-    7
+
+7
 
 ### limitedLicenseModules
 Sets the license modules to use.
+
 ```java
 List<Integer>  com.dynamsoft.dlr.DMLTSConnectionParameters.limitedLicenseModules
 ```
-**Value Range**   
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
-      
+
+**Value Range**
+
+A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
+
 **Default value**
-    null
-    
+
+null
+
 **See also**
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
+
+[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
       

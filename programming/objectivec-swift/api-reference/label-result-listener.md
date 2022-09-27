@@ -28,9 +28,9 @@ noTitleIndex: true
 
 **Parameters**
 
-`[in] frameId`: The ID of the frame.
-`[in] imageData`: The image data of frame.
-`[in] results`: Recognized label results of the frame.
+`[in] frameId` The ID of the frame.  
+`[in] imageData` The image data of frame.  
+`[in] results` Recognized label results of the frame.
 
 **Code Snippet**
 

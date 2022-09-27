@@ -47,12 +47,12 @@ class com.dynamsoft.dlr.LabelRecognizer
 
 ## Video Recognizing Methods Summary
 
-| Method | Description |
-|--------|-------------|
-| [`setImageSource`](#setimagesource) | Bind an instance of ImageSource to the Label Recognizer.  |
-| [`startScanning`](#startscanning) | Start the label recognizing thread in the video streaming scenario. |
-| [`stopScanning`](#stopscanning) | Stop the label recognizing thread in the video streaming scenario. |
-| [`setLabelResultListener`](#setlabelresultlistener) | Set callback interface to process recognized label results generated during frame processing. |
+  | Method | Description |
+  |--------|-------------|
+  | [`setImageSource`](#setimagesource) | Bind an instance of ImageSource to the Label Recognizer.  |
+  | [`startScanning`](#startscanning) | Start the label recognizing thread in the video streaming scenario. |
+  | [`stopScanning`](#stopscanning) | Stop the label recognizing thread in the video streaming scenario. |
+  | [`setLabelResultListener`](#setlabelresultlistener) | Set callback interface to process recognized label results generated during frame processing. |
 
 ## General Methods Summary
 
@@ -312,9 +312,9 @@ String getModeArgument(String modesName, int index, String argumentName) throws 
 
 **Parameters**
   
-- `[in] modesName`: The mode parameter name to get argument.  
-- `[in] index`: The array index of mode parameter to indicate a specific mode.  
-- `[in] argumentName`: The name of the argument to get.
+`[in] modesName` The mode parameter name to get argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to get.
 
 **Return value**
 
@@ -354,10 +354,10 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 
 **Parameters**
 
-- `[in] modesName`: The mode parameter name to set argument.  
-- `[in] index`: The array index of mode parameter to indicate a specific mode.  
-- `[in] argumentName`: The name of the argument to set.  
-- `[in] argumentValue`: The value of the argument to set.
+`[in] modesName` The mode parameter name to set argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to set.  
+`[in] argumentValue` The value of the argument to set.
 
 **Exceptions**
 
@@ -508,7 +508,8 @@ Recognizes text from a specified image file in memory.
 DLRResult[] RecognizeFileInMemory(byte[] fileBytes) throws LabelRecognizerException
 ```  
 
-**Parameters**  
+**Parameters**
+
 `[in] fileBytes` The image file bytes in memory.  
 
 **Return value**
@@ -519,7 +520,7 @@ All results recognized successfully.
 
 [`LabelRecognizerException`](label-recognizer-exception.md)
 
-**Code Snippet**  
+**Code Snippet**
 
 ```java
 LabelRecognizer recognizer = new LabelRecognizer();

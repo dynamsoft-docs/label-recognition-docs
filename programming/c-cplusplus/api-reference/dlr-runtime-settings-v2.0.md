@@ -39,14 +39,18 @@ Sets the number of threads the algorithm will use to recognize label.
 ```cpp
 int maxThreadCount
 ```
-**Value Range**   
-    [1, 4]
-      
+
+**Value Range**
+
+[1, 4]
+
 **Default value**
-    4
-    
-**Remarks** 
-    To keep a balance between speed and quality, the library concurrently runs four different threads by default.
+
+4
+
+**Remarks**
+
+To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 &nbsp;
 
@@ -97,14 +101,17 @@ Sets the mode and priority for binarization.
 BinarizationMode binarizationModes[8]
 ```
 
-**Value Range**   
-    Each array item can be any one of the [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
-      
+**Value Range**
+
+Each array item can be any one of the [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
+
 **Default value**
-    `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]`
-    
-**Remarks** 
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+`[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
 &nbsp;
@@ -117,7 +124,8 @@ DLR_FurtherModes furtherModes
 ```
 
 **See also**
-    [`DLR_FurtherModes`](dlr-further-modes.md)
+
+[`DLR_FurtherModes`](dlr-further-modes.md)
 
 &nbsp;
 

@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # iDMDLSConnectionParameters
+
 Defines a class to configure the parameters to connect to license tracking server.  
 
 ```objc
@@ -46,7 +47,8 @@ NSString*  mainServerURL
 Any string value
 
 **Default value**
-    ""
+
+""
 
 **Remarks**
 
@@ -89,7 +91,8 @@ NSString*  handshakeCode
 Any string value
 
 **Default value**
-    ""
+
+""
 
 &nbsp;
 

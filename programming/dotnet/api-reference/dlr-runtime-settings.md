@@ -37,14 +37,18 @@ Sets the number of threads the algorithm will use to recognize label.
 ```csharp
 int MaxThreadCount
 ```
-**Value Range**   
-    [1, 4]
-      
+
+**Value Range**
+
+[1, 4]
+
 **Default value**
-    4
-    
-**Remarks** 
-    To keep a balance between speed and quality, the library concurrently runs four different threads by default.
+
+4
+
+**Remarks**
+
+To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 &nbsp;
 
@@ -97,14 +101,17 @@ Sets the mode and priority for binarization.
 EnumBinarizationMode[] BinarizationModes
 ```
 
-**Value Range**   
-    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
-      
+**Value Range**
+
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
+
 **Default value**
-    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
-    
-**Remarks** 
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+`[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
 &nbsp;
@@ -117,5 +124,6 @@ DLR_FurtherModes FurtherModes
 ```
 
 **See also**
-    [`DLR_FurtherModes`](dlr-further-modes.md)
+
+[`DLR_FurtherModes`](dlr-further-modes.md)
 

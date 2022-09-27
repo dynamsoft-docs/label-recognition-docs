@@ -30,7 +30,9 @@ class com.dynamsoft.core.ImageData
 &nbsp;
 
 ### bytes
-The image data content in a byte array. 
+
+The image data content in a byte array.
+
 ```java
 byte[] bytes
 ```
@@ -38,7 +40,9 @@ byte[] bytes
 &nbsp;
 
 ### width
-The width of the image in pixels.  
+
+The width of the image in pixels.
+
 ```java
 int width
 ```
@@ -46,7 +50,9 @@ int width
 &nbsp;
 
 ### height
-The height of the image in pixels.  
+
+The height of the image in pixels.
+
 ```java
 int height
 ```
@@ -54,7 +60,9 @@ int height
 &nbsp;
 
 ### stride
-The stride (or scan width) of the image. 
+
+The stride (or scan width) of the image.
+
 ```java
 int stride
 ```
@@ -62,9 +70,9 @@ int stride
 &nbsp;
 
 ### format
-The image pixel format used in the image byte array. 
+
+The image pixel format used in the image byte array.
+
 ```java
 ImagePixelFormat format
 ```
-  
-

@@ -36,12 +36,12 @@ Sets the mode and priority for converting a colour image to a grayscale image.
 int[] colourConversionModes
 ```
 
-**Value Range**  
+**Value Range**
    Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html) Enumeration items. 
-     
-- **Default value**  
+ 
+**Default value**
    `[EnumColourConversionMode.CICM_GENERAL, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP]`  
-     
+ 
 **Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
@@ -54,12 +54,12 @@ Sets the mode and priority for the grayscale image conversion.
 int[] grayscaleTransformationModes
 ```
 
-**Value Range**  
+**Value Range**
    Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) Enumeration items. 
-     
-- **Default value**  
+ 
+**Default value**
    `[EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP]`  
-     
+ 
 **Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
@@ -72,12 +72,12 @@ Sets the region pre-detection mode.
 int[] regionPredetectionModes
 ```
 
-**Value Range**  
+**Value Range**
    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}region-predetection-mode.html) Enumeration items.  
-     
-- **Default value**  
+ 
+**Default value**
    `[EnumRegionPredetectionMode.RPM_GENERAL, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP]`  
-     
+ 
 **Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
@@ -90,12 +90,12 @@ Sets the mode and priority for grayscale image preprocessing algorithms.
 int[] grayscaleEnhancementModes
 ```
 
-**Value Range**  
+**Value Range**
    Each array item can be any one of the [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html) Enumeration items.  
-     
-- **Default value**  
+ 
+**Default value**
    `[EnumGrayscaleEnhancementMode.GEM_GENERAL, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP, EnumGrayscaleEnhancementMode.GEM_SKIP]`  
-     
+ 
 **Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
@@ -108,11 +108,11 @@ Sets the mode and priority for texture detection.
 int[] textureDetectionModes
 ```
 
-**Value Range**  
+**Value Range**
    Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) Enumeration items.  
-     
-- **Default value**  
+ 
+**Default value**
    `[EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP]`  
-     
+ 
 **Remarks**
    The array index represents the priority of the item. The smaller index is, the higher priority is.

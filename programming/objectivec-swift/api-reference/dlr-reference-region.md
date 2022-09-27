@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # iDLRReferenceRegion
+
 Stores the reference region information.  
   
 ```objc
@@ -82,10 +83,12 @@ NSInteger regionMeasuredByPercentage
 
 **Remarks**
 
-When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.<br> 
-0: not by percentage<br>
-1: by percentage<br>
-It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeManualSpecification.<br>
+When it's set to 1, the values of points indicate percentage (from 0 to 100); Otherwise, they indicate coordinates in pixel.
+
+- 0: not by percentage
+- 1: by percentage
+
+It works only when [localizationSourceType](#localizationsourcetype) is setting to EnumLocalizationSourceTypeManualSpecification.
 
 &nbsp;
 

@@ -211,7 +211,7 @@ Select the camera position (front-facing or back-facing).
 
 **Parameters**
 
-`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+`[in] cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
 
 **Code Snippet**
 
@@ -269,7 +269,7 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Parameters**
 
-`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`[in] cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
 
 **Code Snippet**
 
@@ -526,7 +526,7 @@ Get the latest frame from the buffer. The boolean value determines whether the f
 
 **Parameters**
 
-`Keep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
+`[in] Keep` If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -588,7 +588,7 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 
 **Parameters**
 
-`listener`: The input listener will be removed from the Camera Enhancer instance.
+`[in] listener` The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -617,7 +617,7 @@ Take a photo from the camera and save the image in the memory. The photo will be
 
 **Parameters**
 
-`listener`: An instance of [`DCEPhotoListener`](protocol-dcephotolistener.md).
+`[in] listener` An instance of [`DCEPhotoListener`](protocol-dcephotolistener.md).
 
 **Code Snippet**
 
@@ -670,7 +670,7 @@ The `EnumEnhancerFeatures` members:
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -703,7 +703,7 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enha
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -736,7 +736,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`[in] enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Return Value**
 
@@ -805,7 +805,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`](enum-resolution.md).
+`[in] resolution` One of the int value that preset in Enumeration [`EnumResolution`](enum-resolution.md).
 
 **Code Snippet**
 
@@ -921,7 +921,7 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Parameters**
 
-`focusPosition`: A CGPoint that stores the x and y coordinate of the targeting focus position.
+`[in] focusPosition` A CGPoint that stores the x and y coordinate of the targeting focus position.
 
 **Code Snippet**
 
@@ -952,7 +952,7 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`scanRegion`: Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
+`[in] scanRegion` Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
 
 **Code Snippet**
 
@@ -1044,7 +1044,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`filePath`: The file path of the JSON file.
+`[in] filePath` The file path of the JSON file.
 
 **Code Snippet**
 
@@ -1077,7 +1077,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`jsonString`: A stringified JSON data.
+`[in] jsonString` A stringified JSON data.
 
 **Code Snippet**
 

@@ -10,7 +10,8 @@ noTitleIndex: true
 
 
 # iDLRFurtherModes
-Stores the FurtherModes. 
+
+Stores the FurtherModes.
 
 ```objc
 @interface iDLRFurtherModes : NSObject 

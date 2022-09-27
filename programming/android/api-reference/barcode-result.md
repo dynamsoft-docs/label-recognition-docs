@@ -40,7 +40,8 @@ int barcodeFormat
 ```
 
 **See also**
-    [`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html)
+
+[`EnumBarcodeFormat`]({{ site.enumerations }}barcode-format.html)
 
 &nbsp;
 
@@ -53,7 +54,8 @@ int barcodeFormat_2
 ```
 
 **See also**
-    [`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html)
+
+[`EnumBarcodeFormat_2`]({{ site.enumerations }}barcode-format-2.html)
 
 &nbsp;
 

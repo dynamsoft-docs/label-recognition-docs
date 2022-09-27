@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-# CoreException 
+# CoreException
 
 Exception for signalling core module errors.
   
@@ -20,7 +20,7 @@ class com.dynamsoft.core.CoreException
 ## Method
   
 | Method | Type |
-|---------- | ----------- | 
+|---------- | ----------- |
 | [`getErrorCode`](#geterrorcode)| *int* |
 
 &nbsp;

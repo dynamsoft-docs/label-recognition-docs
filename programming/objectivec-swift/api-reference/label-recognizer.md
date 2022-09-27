@@ -257,7 +257,7 @@ Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-setting
 
 **Parameters**
 
-`settings` The class object of template settings.  
+`[in] settings` The class object of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -295,10 +295,10 @@ Appends CharacterModel to the SDK object.
 
 **Parameters**
 
-`name` A unique name for the appended CharacterModel.  
-`prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.  
-`txtBuffer` The .txt file data of the CharacterModel in a byte array.  
-`characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.
+`[in] name` A unique name for the appended CharacterModel.  
+`[in] prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.  
+`[in] txtBuffer` The .txt file data of the CharacterModel in a byte array.  
+`[in] characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.
 
 **Code Snippet**
 
@@ -329,9 +329,9 @@ Get argument value for the specified mode parameter.
 
 **Parameters**
   
-`modeName`: The mode parameter name to get argument.  
-`index`: The array index of mode parameter to indicate a specific mode.  
-`argumentName`: The name of the argument to get.  
+`[in] modeName` The mode parameter name to get argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to get.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return value**
@@ -376,7 +376,7 @@ Outputs runtime settings and save them into a settings file (JSON file).
 
 **Parameters**
 
-`settingsName` The path of the output file which stores current settings.  
+`[in] settingsName` The path of the output file which stores current settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -410,8 +410,8 @@ Outputs runtime settings and save them into a settings file (JSON file).
 
 **Parameters**
 
-`filePath` The path of the output file which stores current settings.  
-`settingsName` A unique name for declaring current runtime settings.  
+`[in] filePath` The path of the output file which stores current settings.  
+`[in] settingsName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**
@@ -478,10 +478,10 @@ Set argument value for the specified mode parameter.
 
 **Parameters**
 
-`modeName`: The mode parameter name to set argument.  
-`index`: The array index of mode parameter to indicate a specific mode.  
-`argumentName`: The name of the argument to set.  
-`argumentValue`: The value of the argument to set.  
+`[in] modeName` The mode parameter name to set argument.  
+`[in] index` The array index of mode parameter to indicate a specific mode.  
+`[in] argumentName` The name of the argument to set.  
+`[in] argumentValue` The value of the argument to set.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Remark**
@@ -521,8 +521,8 @@ Updates reference region which is defined with source type LST_BARCODE.
 
 **Parameters**
 
-`barcodeResults` The barcode results used to localize reference region.  See also [`iBarcodeResult`](barcode-result.md).  
-`templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.  
+`[in] barcodeResults` The barcode results used to localize reference region.  See also [`iBarcodeResult`](barcode-result.md).  
+`[in] templateName` The template name. A template name is the value of key LabelRecognizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Code Snippet**

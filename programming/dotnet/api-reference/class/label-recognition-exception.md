@@ -32,7 +32,8 @@ Gets or sets the error code.
 EnumDLRErrorCode Dynamsoft.DLR.DLR_Exception.Code
 ```  
 **See also**
-    [`EnumDLRErrorCode`]({{ site.enumerations }}error-code.html)    
+
+[`EnumDLRErrorCode`]({{ site.enumerations }}error-code.html)    
 
 ### Message
 Gets the message that describes the current exception. 

@@ -300,11 +300,14 @@ Clear all appended parameter settings of the current label Recognizer instance.
 
 **Code Snippet**
 
-Objective-C:
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognizer *recognizer;
 recognizer = [[DynamsoftLabelRecognizer alloc] init];
-
 NSError __autoreleasing *  error;
 [recognizer clearAppendedSettings:&error];
 ```
@@ -363,6 +366,7 @@ let argumentValue = recognizer.getModeArgument("RegionPredetectionModes", index:
 ```
 
 &nbsp;
+
 ### getRuntimeSettings
 
 Get current settings and save them into a [`iDLRRuntimeSettings`](dlr-runtime-settings.md) class object.
@@ -400,6 +404,7 @@ let settings = recognizer.getRuntimeSettings(&error)
 ```
 
 &nbsp;
+
 ### outputSettingsToFile
 
 Outputs runtime settings and save them into a settings file (JSON file).  
@@ -435,6 +440,7 @@ recognizer.outputSettingsToFile("your saving file path", templateName:"currentRu
 ```
 
 &nbsp;
+
 ### resetRuntimeSettings
 
 Reset all runtime settings to default values.
@@ -469,6 +475,7 @@ recognizer.resetRuntimeSettings(error:&error)
 ```
 
 &nbsp;
+
 ### setModeArgument
 
 Set argument value for the specified mode parameter.
@@ -501,7 +508,7 @@ Check follow link for available modes and arguments:
 ```objc
 DynamsoftLabelRecognizer *recognizer;
 recognizer = [[DynamsoftLabelRecognizer alloc] init];
-NSError __autoreleasing * _Nullable error;   
+NSError __autoreleasing * _Nullable error;
 [recognizer setModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" argumentValue:"100" error:&error];
 ```
 2. 
@@ -553,6 +560,7 @@ recognizer.updateReferenceRegionFromBarcodeResults(textResults, templateName:"P1
 ```
 
 &nbsp;
+
 ### updateRuntimeSettings
 
 Update runtime settings with a given [`iDLRRuntimeSettings`](dlr-runtime-settings.md) class object.
@@ -591,6 +599,7 @@ recognizer.updateRuntimeSettings(settings, error:&error);
 ```
 
 &nbsp;
+
 ## Video Scanning Method Details
 
 ### setImageSource
@@ -681,6 +690,7 @@ let result = recognizer.recognizeBuffer(imageData:imageData, templateName:"", er
 ```
 
 &nbsp;
+
 ### recognizeFile
 
 Recognizes text from a specified image file.
@@ -710,7 +720,6 @@ DynamsoftLabelRecognizer *recognizer;
 recognizer = [[DynamsoftLabelRecognizer alloc] init];
 NSError __autoreleasing *  error;
 NSArray<iDLRResult*>* result = [recognizer recognizeFile:@"your file path" templateName:@"" error:&error];
-
 ```
 2. 
 ```swift

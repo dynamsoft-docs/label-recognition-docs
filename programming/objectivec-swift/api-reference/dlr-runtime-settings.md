@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # iDLRRuntimeSettings
+
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 ```objc

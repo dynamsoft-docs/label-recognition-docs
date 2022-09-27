@@ -10,11 +10,12 @@ noTitleIndex: true
 
 
 # DLRRuntimeSettings
+
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 ```java
 class com.dynamsoft.dlr.DLRRuntimeSettings
-```    
+```
 
 ## Attributes
   
@@ -41,13 +42,16 @@ int maxThreadCount
 ```
 
 **Value Range**
-    [1, 4]
+
+[1, 4]
 
 - **Default value**
-    4
+
+4
 
 - **Remarks**
-    To keep a balance between speed and quality, the library concurrently runs four different threads by default.
+
+To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 &nbsp;
 
@@ -110,13 +114,16 @@ int[] binarizationModes
 ```
 
 **Value Range**
-    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
+
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
 
 - **Default value**
-    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
+
+`[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
 
 - **Remarks**
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 &nbsp;
 
@@ -129,7 +136,8 @@ DLRFurtherModes furtherModes
 ```
 
 **See also**
-    [`DLRFurtherModes`](dlr-further-modes.md)
+
+[`DLRFurtherModes`](dlr-further-modes.md)
 
 &nbsp;
 
@@ -142,10 +150,13 @@ int timeout
 ```
 
 **Value Range**
-    [0, 0x7fffffff]
+
+[0, 0x7fffffff]
 
 **Default Value**
-    10000
+
+10000
 
 **Remarks**
-    If you want to stop searching for labels after a certain period of time, you can use this parameter to set a timeout.
+
+If you want to stop searching for labels after a certain period of time, you can use this parameter to set a timeout.

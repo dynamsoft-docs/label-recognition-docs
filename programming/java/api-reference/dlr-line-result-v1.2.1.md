@@ -26,24 +26,28 @@ Stores the line result.
 
 ### lineSpecificationName
 The name of the line specification used to recognize current line result.
+
 ```java
 String lineSpecificationName
 ```
 
 ### text
 The recognized text, ends by '\0'.
+
 ```java
 String text
 ```
 
 ### characterModelName
 The character model used to recognize the text.
+
 ```java
 String characterModelName
 ```
 
 ### location
 The location of current line.
+
 ```java
 DLRQuadrilateral location
 ```
@@ -51,12 +55,14 @@ DLRQuadrilateral location
 
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
+
 ```java
 int confidence
 ```
 
 ### characterResults
 The character results array.
+
 ```java
 DLRCharacterResult[] characterResults
 ```

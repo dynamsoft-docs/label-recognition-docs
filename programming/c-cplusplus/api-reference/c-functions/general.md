@@ -22,16 +22,16 @@ Get error message by error code.
 DLR_API const char* DLR_GetErrorString (int errorCode)	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in]	errorCode` The error code.
  
 
-### Return value
+**Return Value**
 
 The error message.
 
-### Code Snippet
+**Code Snippet**
 
 ```c
 const char* errorString = DLR_GetErrorString(errorCode);
@@ -47,10 +47,10 @@ Get version information of SDK.
 DLR_API const char* DLR_GetVersion ()
 ```   
 
-### Return value
+**Return Value**
 The version information string.
 
-### Code Snippet
+**Code Snippet**
 
 ```c
 const char* versionInfo = DLR_GetVersion();

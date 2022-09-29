@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # Dynamsoft Label Recognition - Android API Reference
 
-- [`LabelRecognition` Methods](#labelrecognition-methods) 
+- [`LabelRecognition` Methods](#labelrecognition-methods)
 - [Classes](#classes)  
 - [Enumerations](#enumerations)
 - [Error Code](#error-code)
@@ -16,12 +16,12 @@ needAutoGenerateSidebar: false
 ## LabelRecognition Methods
 
 ### General
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](label-recognition/general.md#getversion) | Returns the version number string for the SDK. |
-   
-&nbsp; 
+
+&nbsp;
 
 ### Initialization
   
@@ -32,7 +32,7 @@ needAutoGenerateSidebar: false
   | [`initLicense`](label-recognition/initialization.md#initlicense) | Sets the license and activates the SDK. |
   | [`initLicenseFromLTS`](label-recognition/initialization.md#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
-&nbsp; 
+&nbsp;
 
 ### Setting
 
@@ -52,32 +52,34 @@ needAutoGenerateSidebar: false
   | [`eraseAllCharacterModels`](label-recognition/settings.md#appendcharactermodelbuffer) | Erases all CharacterModels the SDK object currently loaded. |
   | [`eraseCharacterModelByName`](label-recognition/settings.md#appendcharactermodelbuffer) | Erases a name specified CharacterModel from the SDK object. |
 
-&nbsp; 
-   
+&nbsp;
+
 ### Recognizing
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`recognizeByBuffer`](label-recognition/recognizing.md#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |
   | [`recognizeByFile`](label-recognition/recognizing.md#recognizebyfile) | Recognizes text from a specified image file. |
-   
-&nbsp; 
 
-## [Classes](class/index.md)
+&nbsp;
+
+## Classes
+
 - [`DMLTSConnectionParameters`](dm-lts-connection-parameters.md)
-- [`DLRCharacterResult`](class/dlr-character-result.md)		
-- [`DLRImageData`](class/dlr-image-data.md)		
-- [`DLRLineResult`](class/dlr-line-result.md)	
-- [`DLRPoint`](class/dlr-point.md)		
-- [`DLRQuadrilateral`](class/dlr-quadrilateral.md)	
-- [`DLRReferenceRegion`](class/dlr-reference-region.md)	
-- [`DLRResult`](class/dlr-result.md)		
-- [`DLRRuntimeSettings`](class/dlr-runtime-settings.md)	
-- [`LabelRecognitionException`](class/label-recognition-exception.md)	
+- [`DLRCharacterResult`](class/dlr-character-result.md)
+- [`DLRImageData`](class/dlr-image-data.md)
+- [`DLRLineResult`](class/dlr-line-result.md)
+- [`DLRPoint`](class/dlr-point.md)
+- [`DLRQuadrilateral`](class/dlr-quadrilateral.md)
+- [`DLRReferenceRegion`](class/dlr-reference-region.md)
+- [`DLRResult`](class/dlr-result.md)
+- [`DLRRuntimeSettings`](class/dlr-runtime-settings.md)
+- [`LabelRecognitionException`](class/label-recognition-exception.md)
 
-&nbsp; 
+&nbsp;
 
-## [Enumerations]({{ site.enumerations }})
+## Enumerations
+
 - [`EnumDLRBarcodeFormat`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat)
 - [`EnumDLRBarcodeFormat_2`]({{ site.enumerations }}other-enums.html#dlrbarcodeformat_2)
 - [`EnumDLRBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrbinarizationmode)
@@ -85,11 +87,10 @@ needAutoGenerateSidebar: false
 - [`EnumDLRImagePixelFormat`]({{ site.enumerations }}other-enums.html#dlrimagepixelformat)
 - [`EnumDLRLocalizationSourceType`]({{ site.enumerations }}other-enums.html#dlrlocalizationsourcetype)
 - [`EnumDLRRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrregionpredetectionmode)
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
-&nbsp; 
+&nbsp;
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
-		

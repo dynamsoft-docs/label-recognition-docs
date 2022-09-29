@@ -24,13 +24,16 @@ Initializes DynamsoftLabelRecognition.
 - (instancetype _Nonnull)init;
 ```
 
-### Return value
+**Return Value**
 The instance of DynamsoftLabelRecognition.
 
-### Code Snippet
+**Code Snippet**
 
-Objective-C:
-
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] init];
@@ -52,18 +55,23 @@ Sets the license and activates the SDK.
 - (instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)license;
 ```   
 
-### Parameters
+**Parameters**
 `[in] license`: The product keys.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 recognizer = [[DynamsoftLabelRecognition alloc] initWithLicense:@"t0260NwAAAHV***************"];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let recognizer = DynamsoftLabelRecognition.initWithLicense(license: "t0260NwAAAHV***************")
 ```
 
@@ -77,12 +85,17 @@ Initializes the label recognition license and connects to the specified server f
 - (instancetype _Nonnull)initLicenseFromLTS:(iDMLTSConnectionParameters* _Nullable)ltsConnectionParameters verificationDelegate:(id _Nullable)connectionDelegate;
 ```   
 
-### Parameters
+**Parameters**
 `[in] ltsConnectionParameters` The struct iDMLTSConnectionParameters with customized settings.  
 `[in,out] connectionDelegate` The delegate to handle callback when license server returns.
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -94,8 +107,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
     //TODO add your code for license verification
 }
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.handshakeCode = "200***001-1000*****"
 lts.sessionPassword = "******"
@@ -105,5 +118,6 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
     print("isSuccess : \(isSuccess) error : \(String(describing: error))")
 }
 ```
+
 &nbsp;
 

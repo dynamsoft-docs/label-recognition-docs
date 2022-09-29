@@ -29,6 +29,7 @@ class com.dynamsoft.dlr.DLRDictionaryCorrectionThreshold
 
 ### minWordLength
 The minimum value of word length.
+
 ```java
 int minWordLength
 ```
@@ -37,6 +38,7 @@ int minWordLength
 
 ### maxWordLength
 The maximum value of word length.
+
 ```java
 int maxWordLength
 ```
@@ -45,6 +47,7 @@ int maxWordLength
 
 ### threshold
 The threshold for the number of error correction characters.
+
 ```java
 int threshold
 ```

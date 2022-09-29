@@ -33,7 +33,7 @@ Sets the sensitivity used for texture detection.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 5 |         
 
-- **Remarks**    
+**Remarks**  
   A larger value means the library will take more effort to detect texture.
      
 ##### LibraryFileName 
@@ -44,7 +44,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `TextureDetectionMode` items except TDM_SKIP and TDM_AUTO|         
 
 
-- **Remarks**     
+**Remarks**   
   The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 

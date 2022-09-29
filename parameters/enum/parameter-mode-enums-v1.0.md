@@ -42,7 +42,7 @@ Describes the binarization mode.
 | DLR_BM_LOCAL_BLOCK | EnumDLRBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. |
 | DLR_BM_THRESHOLD | EnumDLRBinarizationModeThreshold | 0x04 | Binarizes the image based on given threshold. |
 
-### Remarks
+**Remarks**
 Check arguments of [`DLRBinarizationModes`]({{ site.parameters-reference }}label-recognition-parameter/binarization-modes.html#mode-arguments) for available argument settings.
 
 &nbsp;
@@ -103,7 +103,7 @@ Describes the region predetection mode.
 | DLR_RPM_GENERAL_GRAY_CONTRAST | EnumDLRRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. |
 | DLR_RPM_GENERAL_HSV_CONTRAST | EnumDLRRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. |
 
-### Remarks
+**Remarks**
 Check arguments of [`DLRRegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#mode-arguments) for available argument settings.
 
 &nbsp;

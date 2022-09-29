@@ -9,7 +9,8 @@ noTitleIndex: true
 ---
 
 
-# LabelRecognizerException 
+# LabelRecognizerException
+
 Exception for signalling label recognition errors.
   
 ```java
@@ -19,7 +20,7 @@ class com.dynamsoft.dlr.LabelRecognizerException
 ## Method
   
 | Method | Type |
-|---------- | ----------- | 
+|---------- | ----------- |
 | [`getErrorCode`](#geterrorcode)| *int* |
 
 &nbsp;
@@ -29,5 +30,5 @@ class com.dynamsoft.dlr.LabelRecognizerException
 Gets the error code.
 
 ```java
-int getErrorCode()	
+int getErrorCode()
 ```

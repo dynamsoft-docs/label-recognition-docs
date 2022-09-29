@@ -260,6 +260,7 @@ An array item is a name of any available `LineSpecification`.
     ]
 }
 ```
+
 &nbsp;
 
 ## LineStringLengthRange
@@ -410,5 +411,6 @@ An array item is a name of any available `TextArea`.
     ]
 }
 ```
+
 &nbsp;
 

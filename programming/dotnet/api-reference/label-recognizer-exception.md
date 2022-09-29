@@ -33,8 +33,9 @@ Gets or sets the error code.
 ```csharp
 EnumDLRErrorCode Code
 ```  
-- **See also**  
-    [`EnumDLRErrorCode`]({{ site.enumerations }}error-code.html)    
+**See also**
+
+[`EnumDLRErrorCode`]({{ site.enumerations }}error-code.html)    
 
 &nbsp;
 

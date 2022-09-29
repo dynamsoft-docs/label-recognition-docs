@@ -18,6 +18,7 @@ needAutoGenerateSidebar: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 2.2.20 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#2220-09292022) / [Android](../programming/android/release-notes/android-2.md#2220-09292022) / [iOS](../programming/objectivec-swift/release-notes/ios-2.md#2220-09292022) |
 | 2.2.11 | [JavaScript](../programming/javascript/release-notes/javascript-2.md#2211-08082022) |
 | 2.2.10 | [C/C++](../programming/c-cplusplus/release-notes/c-cpp-2.md#2210-06212022) / [JavaScript](../programming/javascript/release-notes/javascript-2.md#2210-06212022) |
 | 2.2.4 | [JavaScript](../programming/javascript/release-notes/javascript-2.md#224-04142022) |

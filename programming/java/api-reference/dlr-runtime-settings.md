@@ -33,22 +33,28 @@ class com.dynamsoft.dlr.DLRRuntimeSettings
 
 ### maxThreadCount
 Sets the number of threads the algorithm will use to recognize label.
+
 ```java
 int maxThreadCount
 ```
-- **Value range**   
-    [1, 4]
-      
-- **Default value**   
-    4
-    
-- **Remarks**   
-    To keep a balance between speed and quality, the library concurrently runs four different threads by default.
+
+**Value Range**
+
+[1, 4]
+
+**Default value**
+
+4
+
+**Remarks**
+
+To keep a balance between speed and quality, the library concurrently runs four different threads by default.
 
 &nbsp;
 
 ### characterModelName
 The name of the CharacterModel.
+
 ```java
 String characterModelName
 ```
@@ -57,6 +63,7 @@ String characterModelName
 
 ### referenceRegion
 Sets the reference region to search for text.
+
 ```java
 DLRReferenceRegion referenceRegion
 ```
@@ -65,6 +72,7 @@ DLRReferenceRegion referenceRegion
 
 ### textArea
 Sets the text area relative to the reference region.
+
 ```java
 Quadrilateral textArea
 ```
@@ -73,6 +81,7 @@ Quadrilateral textArea
 
 ### dictionaryPath
 Sets the path of the dictionary file.
+
 ```java
 String dictionaryPath
 ```
@@ -81,6 +90,7 @@ String dictionaryPath
 
 ### dictionaryCorrectionThreshold
 Sets the threshold of dictionary error correction.
+
 ```java
 DLRDictionaryCorrectionThreshold dictionaryCorrectionThreshold
 ```
@@ -95,14 +105,17 @@ Sets the mode and priority for binarization.
 int[] binarizationModes
 ```
 
-- **Value range**   
-    Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
-      
-- **Default value**   
-    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
-    
-- **Remarks**   
-    The array index represents the priority of the item. The smaller index is, the higher priority is.
+**Value Range**
+
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html) Enumeration items.
+
+**Default value**
+
+`[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
+
+**Remarks**
+
+The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 
 &nbsp;
@@ -114,6 +127,7 @@ Sets further modes.
 DLRFurtherModes furtherModes
 ```
 
-- **See also**  
-    [`DLRFurtherModes`](dlr-further-modes.md)
+**See also**
+
+[`DLRFurtherModes`](dlr-further-modes.md)
 

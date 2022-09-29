@@ -57,13 +57,14 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ ! -d label-recognition-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/label-recognition-docs.git label-recognition-docs-preview
           [ ! -d DLRDocPreview ] && mkdir -p DLRDocPreview
+          [ ! -d label-recognition-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/label-recognition-docs.git label-recognition-docs-preview
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
           cd label-recognition-docs-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-preview/* ./DLRDocPreview/
           cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DLRDocPreview/_config.yml
-          cd DLRDocPreview && bundle exec jekyll build --incremental
+          cd DLRDocPreview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

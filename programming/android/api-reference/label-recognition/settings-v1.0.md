@@ -32,17 +32,17 @@ Appends CharacterModel to the SDK object.
 void com.dynamsoft.dlr.LabelRecognition.appendCharacterModelBuffer (String name, byte[] prototxtBuffer, byte[] txtBuffer, byte[] characterModelBuffer) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `name` A unique name for the appended CharacterModel.   
 `prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.   
 `txtBuffer` The .txt file data of the CharacterModel in a byte array.   
 `characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.   
 
 
-### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -73,15 +73,15 @@ Append a new template string to the current label recognition instance.
 void com.dynamsoft.dlr.LabelRecognition.appendSettingsFromString (String content) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -99,7 +99,7 @@ Clear all appended parameter settings of the current label recognition instance.
 void com.dynamsoft.dlr.LabelRecognition.clearAppendedSettings () throws LabelRecognitionException
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -116,7 +116,7 @@ Erases all CharacterModels the SDK object currently loaded.
 void com.dynamsoft.dlr.LabelRecognition.eraseAllCharacterModels () throws LabelRecognitionException
 ```   
    
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -133,10 +133,10 @@ Clear all appended parameter settings of the current label recognition instance.
 void com.dynamsoft.dlr.LabelRecognition.eraseCharacterModelByName(String name) throws LabelRecognitionException
 ```   
 
-#### Parameters
+**Parameters**
 `name` A unique name representing the CharacterModel to erase.   
   
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -154,22 +154,22 @@ Get argument value for the specified mode parameter.
 String com.dynamsoft.dlr.LabelRecognition.getModeArgument (String modesName, int index, String argumentName) throws LabelRecognitionException	
 ```   
    
-#### Parameters  
+**Parameters**  
 - `modesName`: The mode parameter name to get argument.  
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to get.
 
-#### Return value
+**Return Value**
 the optional argument for a specified mode in Modes parameters.
 
-### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
 #### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -191,15 +191,15 @@ Get current settings and save them into a [`DLRRuntimeSettings`](../class/dlr-ru
 PublicRuntimeSettings com.dynamsoft.dlr.LabelRecognition.getRuntimeSettings () throws LabelRecognitionException
 ```   
    
-### Return value
+**Return Value**
 
 The class object of template settings.
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -216,16 +216,16 @@ Outputs runtime settings and save them into a settings file (JSON file).
 void com.dynamsoft.dlr.LabelRecognition.outputSettingsToFile (String filePath, String templateName) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -244,10 +244,10 @@ Reset all runtime settings to default values.
 void com.dynamsoft.dlr.LabelRecognition.resetRuntimeSettings () throws LabelRecognitionException
 ```   
    
-### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -270,13 +270,13 @@ Set argument value for the specified mode parameter.
 ```java
 void com.dynamsoft.dlr.LabelRecognition.setModeArgument (String modesName, int index, String argumentName, String argumentValue)	throws LabelRecognitionException	
 ```   
-#### Parameters
+**Parameters**
 - `modesName`: The mode parameter name to set argument.
 - `index`: The array index of mode parameter to indicate a specific mode.  
 - `argumentName`: The name of the argument to set.  
 - `argumentValue`: The value of the argument to set. 
 
-### Exceptions
+**Exceptions**
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
 
@@ -284,7 +284,7 @@ void com.dynamsoft.dlr.LabelRecognition.setModeArgument (String modesName, int i
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -305,17 +305,17 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 void com.dynamsoft.dlr.LabelRecognition.updateReferenceRegionFromBarcodeResults (TextResult[] barcodeResults, String templateName) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `barcodeResults` The barcode results used to localize reference region.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");
@@ -334,14 +334,14 @@ Update runtime settings with a given [`DLRRuntimeSettings`](../class/dlr-runtime
 void com.dynamsoft.dlr.LabelRecognition.updateRuntimeSettings (DLRRuntimeSettings settings) throws LabelRecognitionException
 ```   
    
-#### Parameters
+**Parameters**
 `settings` The class object of template settings.  
 
-### Exceptions
+**Exceptions**
 
 [`LabelRecognitionException`](../class/label-recognition-exception.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.initLicense("t0260NwAAAHV***************");

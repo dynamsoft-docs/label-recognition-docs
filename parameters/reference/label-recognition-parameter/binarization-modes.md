@@ -44,7 +44,7 @@ Sets the horizontal block size for the binarization process.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1000] | 0 |         
 
-- **Remarks**    
+**Remarks**  
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -62,7 +62,7 @@ Sets the vertical block size for the binarization process.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1000] | 0 |         
 
-- **Remarks**     
+**Remarks**   
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -78,7 +78,7 @@ Sets whether to enable binary vacancy filling.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1] | 1 |         
 
-- **Remarks**     
+**Remarks**   
   0: disable.   
   1: enable.
 
@@ -112,7 +112,7 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- |
 | *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
 
-- **Remarks**    
+**Remarks**  
    - "Erode": Perform erosion process.
    - "Dilate": Perform dilation process.
    - "Open": Perform erosion first, then perform dilation.
@@ -128,7 +128,7 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- |
 | *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
 
-- **Remarks**    
+**Remarks**  
    - "Rectangle": 
    - "Cross": 
    - "Ellipse": 

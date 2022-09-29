@@ -27,18 +27,21 @@ Stores the recognized result.
 
 ### referenceRegionName
 The name of the reference region which is used to recognize the current result.
+
 ```java
 String referenceRegionName
 ```
 
 ### textAreaName
 The name of the text area used to recognize current result.
+
 ```java
 String textAreaName
 ```
 
 ### location
 The location of current recognized text.
+
 ```java
 DLRQuadrilateral location
 ```
@@ -46,6 +49,7 @@ DLRQuadrilateral location
 
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
+
 ```java
 int confidence
 ```
@@ -53,12 +57,14 @@ int confidence
 
 ### lineResults
 The line results array.
+
 ```java
 DLRLineResult[] lineResults
 ```
 
 ### pageNumber
 The page number the result located in. The index is 0-based.
+
 ```java
 int pageNumber
 ```

@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # DLRLineResult
+
 Stores the line result.
   
 ```java
@@ -27,11 +28,12 @@ class com.dynamsoft.dlr.DLRLineResult
 | [`confidence`](#confidence) | *int* |
 | [`characterResults`](#characterresults) | [`DLRCharacterResult[]`](dlr-character-result.md) |
 
-
 &nbsp;
 
 ### lineSpecificationName
+
 The name of the line specification used to recognize current line result.
+
 ```java
 String lineSpecificationName
 ```
@@ -39,7 +41,9 @@ String lineSpecificationName
 &nbsp;
 
 ### text
+
 The recognized text, ends by '\0'.
+
 ```java
 String text
 ```
@@ -47,7 +51,9 @@ String text
 &nbsp;
 
 ### characterModelName
+
 The character model used to recognize the text.
+
 ```java
 String characterModelName
 ```
@@ -55,16 +61,19 @@ String characterModelName
 &nbsp;
 
 ### location
+
 The location of current line.
+
 ```java
 com.dynamsoft.core.Quadrilateral location
 ```
 
-
 &nbsp;
 
 ### confidence
+
 The confidence of the result. It ranges from 0 to 100.
+
 ```java
 int confidence
 ```
@@ -72,8 +81,9 @@ int confidence
 &nbsp;
 
 ### characterResults
+
 The character results array.
+
 ```java
 DLRCharacterResult[] characterResults
 ```
-

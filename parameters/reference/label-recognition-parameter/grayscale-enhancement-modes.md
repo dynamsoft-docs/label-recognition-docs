@@ -37,7 +37,7 @@ Sets the sensitivity used for gray equalization.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 5 |         
 
-- **Remarks**     
+**Remarks**   
   If you have an image with a low level of contrast, you can set the property to a larger value. A larger value means a higher possibility that gray equalization will be activated. This may cause adverse effect on images with a high level of contrast.  
 
 
@@ -48,7 +48,7 @@ Sets the horizontal block size for the smoothing process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**   
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
@@ -59,7 +59,7 @@ Sets the vertical block size for the smoothing process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**   
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
   
 
@@ -70,7 +70,7 @@ Sets the horizontal block size for the sharpening process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**   
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
@@ -81,7 +81,7 @@ Sets the vertical block size for the sharpening process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**   
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
       
 
@@ -94,7 +94,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `GrayscaleEnhancementMode` items except GEM_SKIP and GEM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**   
   The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 

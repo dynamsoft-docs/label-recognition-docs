@@ -28,11 +28,6 @@ noTitleIndex: true
 | [`DCECameraView`](dcecameraview.md) | UI view class that displays video streaming. UI configuration APIs are available for users to visualize the detected results on the video streaming. |
 | [`DCEImageEditorView`](dceimageeditorview.md) | UI view class that displays images. UI configuration APIs are available for users to highlight the detected results on the view with quadrilateral elements. The border of the quadrilaterals can be edited so that user can further accurate the detected results. |
 
-<div align="center">
-    <p><img src="../../../../assets/dce-ddn-view.gif" width="30%" alt="edit"></p>
-    <p>DynamsoftCameraEnhancer UI View</p>
-</div>
-
 **Auxiliary Classes**
 
 | Classes | Description |

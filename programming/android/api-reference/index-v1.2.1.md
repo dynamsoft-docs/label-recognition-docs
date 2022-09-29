@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 - [`LabelRecognition` Methods](#labelrecognition-methods)
 - [Classes](#classes)  
 - [Enumerations](#enumerations)
-- [Error Code](#error-code-siteenumerations-error-codehtml)
+- [Error Code](#error-code)
 
 ## LabelRecognition Methods
 

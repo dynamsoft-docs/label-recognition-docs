@@ -80,5 +80,19 @@ public class ScanFragment extends Fragment {
             // Implement mrzResultCallback
          }
       });
+   }
+
+   @Override
+   public void onResume() {
+      super.onResume();
+      if (!isShowing) {
+         mMRZRecognizer.startScanning();
+         try {
+               mCamera.open();
+         } catch (CameraEnhancerException e) {
+               e.printStackTrace();
+         }
+      }
+   }
 }
 ```

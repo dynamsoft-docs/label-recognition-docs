@@ -29,11 +29,16 @@ The following APIs are available in the MRZScanner sample
 In this sample, we use Dynamsoft Camera Enhancer to set up the camera module and capture video frames.
 
 ```java
-private DCECameraView mCameraView;
-private CameraEnhancer mCamera;
-mCameraView = view.findViewById(R.id.dce_camera_view);
-mCamera = new CameraEnhancer(requireActivity());
-mCamera.setCameraView(mCameraView);
+public class ScanFragment extends Fragment {
+   private DCECameraView mCameraView;
+   private CameraEnhancer mCamera;
+   @Override
+   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+      mCameraView = view.findViewById(R.id.dce_camera_view);
+      mCamera = new CameraEnhancer(requireActivity());
+      mCamera.setCameraView(mCameraView);
+   }
+}
 ```
 
 ### Initialize MRZ Recognizer and Bind the Camera Module
@@ -41,15 +46,22 @@ mCamera.setCameraView(mCameraView);
 Create an instance of `MRZRecognizer`. Use the method `setImageSource` to bind the `MRZRecognizer` and the camera module you created. After that, the instance of `MRZRecognizer` will be able to obtain video frames from the camera continuously.
 
 ```java
-private MRZRecognizer mMRZRecognizer;
-try {
-    mMRZRecognizer = new MRZRecognizer();
-} catch (LabelRecognizerException e) {
-    e.printStackTrace();
+public class ScanFragment extends Fragment {
+   ...
+   private MRZRecognizer mMRZRecognizer;
+   @Override
+   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+      ...
+      try {
+         mMRZRecognizer = new MRZRecognizer();
+      } catch (LabelRecognizerException e) {
+         e.printStackTrace();
+      }
+      // Use setImageSource to bind MRZRecognizer with the camera enhancer.
+      // You can also implement the interface ImageSource by yourself.
+      mMRZRecognizer.setImageSource(mCamera);
+   }
 }
-// Use setImageSource to bind MRZRecognizer with the camera enhancer.
-// You can also implement the interface ImageSource by yourself.
-mMRZRecognizer.setImageSource(mCamera);
 ```
 
 ### Obtain Results
@@ -57,10 +69,16 @@ mMRZRecognizer.setImageSource(mCamera);
 Use `setMRZResultListener` to Register a `MRZResultListener`. Trigger `startScanning`. So that you can obtain the MRZ results from `mrzResultCallback`.
 
 ```java
-mMRZRecognizer.setMRZResultListener(new MRZResultListener() {
-    @Override
-    public void mrzResultCallback(int i, ImageData imageData, MRZResult mrzResult) {
-        //
-    }
-});
+public class ScanFragment extends Fragment {
+   ...
+   private MRZRecognizer mMRZRecognizer;
+   @Override
+   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+      mMRZRecognizer.setMRZResultListener(new MRZResultListener() {
+         @Override
+         public void mrzResultCallback(int i, ImageData imageData, MRZResult mrzResult) {
+            // Implement mrzResultCallback
+         }
+      });
+}
 ```

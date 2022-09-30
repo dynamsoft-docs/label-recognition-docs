@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # HelloWorld Sample
 
-The iOS Helloworld sample shows how to create the simplest video streaming label text scanning app with Dynamsoft Label Recognizer iOS SDK.
+The iOS Helloworld sample shows how to create the simplest video streaming text scanning app with Dynamsoft Label Recognizer iOS SDK.
 
 View the sample:
 

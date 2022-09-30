@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # HelloWorld Sample
 
-The Android Helloworld sample shows how to create the simplest video streaming label text scanning app with Dynamsoft Label Recognizer Android SDK.
+The Android Helloworld sample shows how to create the simplest video streaming text scanning app with Dynamsoft Label Recognizer Android SDK.
 
 View the sample:
 

@@ -114,7 +114,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ...
    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       ...
-      [DynamsoftLabelRecognizer initLicense:@"Put Your License Here" verificationDelegate:self];
+      [DynamsoftLicenseManager initLicense:@"Put Your License Here" verificationDelegate:self];
    }
    - (void)licenseVerificationCallback:(bool)isSuccess error:(NSError *)error {
       // Add code to execute when license verification is approved or failed.
@@ -124,7 +124,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```swift
    class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-             DynamsoftLabelRecognizer.initLicense("Put Your License Here",verificationDelegate:self)
+             DynamsoftLicenseManager.initLicense("Put Your License Here",verificationDelegate:self)
       }
       func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
              // Add code to execute when license verification is approved or failed.

@@ -10,7 +10,19 @@ needAutoGenerateSidebar: false
 
 ## 2.2.20 (09/29/2022)
 
-### New
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.2.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
 
 - Added methods in `LabelRecognizer` class to support video streaming recognition.
   - [`setImageSource`](../api-reference/label-recognizer.md#setimagesource): Set the source of image/video.
@@ -26,7 +38,7 @@ needAutoGenerateSidebar: false
 - Added a protocol [`LabelResultListener`](../api-reference/label-result-listener.md) to obtain video label recognition results.
 - Added a new parameter [`timeout`](../api-reference/dlr-runtime-settings.md#timeout) to `DLRRuntimeSettings` class.
 
-### Rename
+#### Rename
 
 - The following methods of `LabelRecognizer` class are renamed
   - Renamed `recognizeByFile` to [`recognizeFile`](../api-reference/label-recognizer.md#recognizefile).
@@ -34,7 +46,7 @@ needAutoGenerateSidebar: false
   - Renamed `recognizeByImage` to [`recognizeImage`](../api-reference/label-recognizer.md#recognizeimage).
   - Renamed `outputSettingsToFile` to [`outputRuntimeSettingsToFile`](../api-reference/label-recognizer.md#outputruntimesettingstofile).
 
-### Removed
+#### Removed
 
 - The following methods of `LabelRecognizer` class are removed
   - `initLicense`. The method is replaced by `LicenseManager.initLicense` under `DynamsoftCore`.
@@ -45,9 +57,15 @@ needAutoGenerateSidebar: false
 
 ## 2.0 (08/26/2021)
 
-### Highlights
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 {%- include release-notes/product-highlight-2.0.md -%}
+
+<div class="fold-panel-end"></div>
 
 ### Changelog
 

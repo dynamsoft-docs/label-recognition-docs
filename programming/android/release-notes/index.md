@@ -8,6 +8,7 @@ needAutoGenerateSidebar: false
 
 # Release Notes - Android
 
+- [2.2.20 (09/29/2022)](android-2.md#2220-09292022)
 - [2.0 (08/26/2021)](android-2.md#20-08262021)
 - [1.2.1 (06/08/2021)](android-1.md#121-06082021)
 - [1.2   (05/18/2021)](android-1.md#12-05182021)

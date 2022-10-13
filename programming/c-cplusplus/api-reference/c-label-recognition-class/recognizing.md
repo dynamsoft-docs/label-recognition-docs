@@ -22,15 +22,15 @@ Recognizes text from the memory buffer containing image pixels in defined format
 int dynamsoft::dlr::CLabelRecognition::RecognizeByBuffer(const DLRImageData* imageData, const char* templateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	imageData` A struct of [`DLRImageData`]({{ site.c-cplusplus-structs }}dlr-image-data.html) that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -49,15 +49,15 @@ Recognizes text from a specified image file.
 int dynamsoft::dlr::CLabelRecognition::RecognizeByFile (const char* fileName, const char* templateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	fileName` A string defining the file name.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");

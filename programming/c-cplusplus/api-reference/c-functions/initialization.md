@@ -27,12 +27,12 @@ Create an instance of Dynamsoft Label Recognition.
 DLR_API void* DLR_CreateInstance ()	
 ```   
 
-#### Return value
+**Return Value**
 Returns an instance of Dynamsoft Label Recognition. If failed, returns NULL.
 
 
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -53,10 +53,10 @@ Destroy the instance of Dynamsoft Label Recognition.
 DLR_API void DLR_DestroyInstance (void* recognizer)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	recognizer` Handle of the Dynamsoft Label Recognition instance.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -70,15 +70,15 @@ Sets product key and activate the SDK.
 DLR_API int DLR_InitLicense (void* recognizer, const char* pLicense)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] recognizer` Handle of the label recognition instance.   
 `[in]	pLicense` The product keys.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* recognizer = DLR_CreateInstance();
 DLR_InitLicense(recognizer, "t0260NwAAAHV***************");
@@ -95,14 +95,14 @@ Initializes a DM_LTSConnectionParameters struct with default values.
 DLR_API int DLR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
 ```   
 
-#### Parameters
+**Parameters**
 `[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html).   
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DMLTSConnectionParameters paramters;
@@ -120,16 +120,16 @@ Initializes the label recognition license and connects to the specified server f
 DLR_API int DLR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
-#### Parameters
+**Parameters**
 `[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DLR_GetErrorString`](general.md#dlr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DMLTSConnectionParameters paramters;

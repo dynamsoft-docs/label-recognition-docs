@@ -1,13 +1,17 @@
 <li><a href="{{ site.android }}" class="otherLinkColour">Android</a>
     <ul>
         <li><a href="{{ site.android }}user-guide.html" class="otherLinkColour">User Guide</a></li>
-
+        <li><a href="{{ site.android }}samples.html" class="otherLinkColour">Demo & Samples</a>
+            <ul>
+                <li><a href="{{ site.android }}hello-world-sample.html" class="otherLinkColour">HelloWorld</a></li>
+                <li><a href="{{ site.android }}mrz-sample.html" class="otherLinkColour">MRZScanner</a></li>
+            </ul>
+        </li>
         <li><a href="{{ site.android-api }}" class="otherLinkColour">API Reference</a>
             <ul>
                 <li><a href="{{ site.android-api }}label-recognizer.html" class="otherLinkColour">LabelRecognizer</a></li> 
                 <li><a style="cursor:pointer;color:#3c3c3c">Auxiliary Classes</a>
                     <ul>
-                        <li><a href="{{ site.android-api }}point.html" class="otherLinkColour">Point</a></li>
                         <li><a href="{{ site.android-api }}quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
                         <li><a href="{{ site.android-api }}image-data.html" class="otherLinkColour">ImageData</a></li>
                         <li><a href="{{ site.android-api }}barcode-result.html" class="otherLinkColour">BarcodeResult</a></li>
@@ -19,12 +23,59 @@
                         <li><a href="{{ site.android-api }}dlr-character-result.html" class="otherLinkColour">DLRCharacterResult</a></li>
                         <li><a href="{{ site.android-api }}dlr-dictionary-correction-threshold.html" class="otherLinkColour">DLRDictionaryCorrectionThreshold</a></li>
                         <li><a href="{{ site.android-api }}dlr-further-modes.html" class="otherLinkColour">DLRFurtherModes</a></li>
-                        <li><a href="{{ site.android-api }}dlr-license-verification-listener.html" class="otherLinkColour">DLRLicenseVerificationListener</a></li>
+                        <li><a href="{{ site.android-api }}label-result-listener.html" class="otherLinkColour">LableResultListener</a></li>
+                        <li><a href="{{ site.android-api }}license-manager.html" class="otherLinkColour">LicenseManager</a></li>
+                        <li><a href="{{ site.android-api }}image-source.html" class="otherLinkColour">ImageSource</a></li>
+                        <li><a href="{{ site.android-api }}core-exception.html" class="otherLinkColour">CoreException</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ site.android-api }}camera-enhancer/index.html" class="otherLinkColour">CameraEnhancer Library</a>
+                    <ul>
+                        <li><a href="{{ site.android-api }}camera-enhancer/camera-enhancer.html" class="otherLinkColour">CameraEnhancer</a></li>
+                        <li><a href="{{ site.android-api }}camera-enhancer/guide-of-drawing-items.html" class="otherLinkColour">UI Classes</a>
+                            <ul>
+                                <li><a href="{{ site.android-api }}camera-enhancer/dcecameraview.html" class="otherLinkColour">DCECameraView</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/dceimageeditorview.html" class="otherLinkColour">DCEImageEditorView</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="cursor:pointer;color:#3c3c3c">Auxiliary Classes</a>
+                            <ul>
+                                <li><a href="{{ site.android-api }}camera-enhancer/dceframe.html" class="otherLinkColour">DCEFrame</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/dcedrawinglayer.html" class="otherLinkColour">DCEDrawingLayer</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingitem.html" class="otherLinkColour">DrawingItem</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingitem-quad.html" class="otherLinkColour">QuadDrawingItem</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingitem-rect.html" class="otherLinkColour">RectDrawingItem</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingitem-text.html" class="otherLinkColour">TextDrawingItem</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingstyle.html" class="otherLinkColour">DrawingStyle</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/drawingstylemanager.html" class="otherLinkColour">DrawingStyleManager</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/region-definition.html" class="otherLinkColour">RegionDefinition</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="cursor:pointer;color:#3c3c3c">Protocol</a>
+                            <ul>
+                                <li><a href="{{ site.android-api }}camera-enhancer/interface-dceframelistener.html" class="otherLinkColour">DCEFrameListener</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="cursor:pointer;color:#3c3c3c">Enumerations</a>
+                            <ul>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-enhancer-features.html" class="otherLinkColour">EnumEnhancerFeatures</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-frame-quality.html" class="otherLinkColour">EnumFrameQuality</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-camera-state.html" class="otherLinkColour">EnumCameraState</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-resolution.html" class="otherLinkColour">EnumResolution</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-drawing-item-state.html" class="otherLinkColour">EnumDrawingItemState</a></li>
+                                <li><a href="{{ site.android-api }}camera-enhancer/enum-drawing-item-media-type.html" class="otherLinkColour">EnumDrawingItemMeidaType</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a style="cursor:pointer;color:#3c3c3c">Interfaces</a>
+                    <ul>
+                        <li><a href="{{ site.android-api }}label-result-listener.html" class="otherLinkColour">LabelResultListener</a></li>
+                        <li><a href="{{ site.android-api }}license-verification-listener.html" class="otherLinkColour">LicenseVerificationListener</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-
         <li><a href="{{ site.android-release-notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
                 <li><a href="{{ site.android-release-notes }}android-2.html" class="otherLinkColour">Version 2.x</a></li>

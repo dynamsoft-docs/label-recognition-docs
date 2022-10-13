@@ -35,7 +35,7 @@ Sets the letter height threshold for scale-up.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 0x7fffffff] | 0 |         
 
-- **Remarks**     
+**Remarks**   
   0 : means automatically set by the library.
   If the average letter height of a text line is smaller than the [LetterHeightThreshold](#letterheightthreshold), the image will be enlarged to N times (N=2,4,8…) till N * LetterHeight >= [TargetLetterHeight](#targetletterheight).
 
@@ -48,7 +48,7 @@ Sets the target letter height for scale-up.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 0x7fffffff] | 0 |         
 
-- **Remarks**     
+**Remarks**   
   0 : means automatically set by the library.
 
 ### Setting Methods

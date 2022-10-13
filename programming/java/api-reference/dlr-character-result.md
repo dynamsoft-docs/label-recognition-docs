@@ -33,6 +33,7 @@ class com.dynamsoft.dlr.DLRCharacterResult
 
 ### characterH
 The recognized character with highest confidence.
+
 ```java
 char characterH
 ```
@@ -41,6 +42,7 @@ char characterH
 
 ### characterM
 The recognized character with middle confidence.
+
 ```java
 char characterM
 ```
@@ -49,6 +51,7 @@ char characterM
 
 ### characterL
 The recognized character with lowest confidence.
+
 ```java
 char characterL
 ```
@@ -57,6 +60,7 @@ char characterL
 
 ### characterHConfidence
 The confidence of the recognized character with the highest confidence.
+
 ```java
 int characterHConfidence
 ```
@@ -65,6 +69,7 @@ int characterHConfidence
 
 ### characterMConfidence
 The confidence of the recognized character with the middle confidence.
+
 ```java
 int characterMConfidence
 ```
@@ -73,6 +78,7 @@ int characterMConfidence
 
 ### characterLConfidence
 The confidence of the recognized character with the lowest confidence.
+
 ```java
 int characterLConfidence
 ```
@@ -81,6 +87,7 @@ int characterLConfidence
 
 ### location
 The location of current character.
+
 ```java
 Quadrilateral location
 ```

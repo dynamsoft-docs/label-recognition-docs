@@ -8,29 +8,36 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-
 # ImageData
+
 Stores the image data.  
 
 ```java
 class com.dynamsoft.core.ImageData
-```
+```  
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *byte[]* |
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) |
+| [`orientation`](#orientation) | *int* |
 
+## Methods
+
+| Methods | Type |
+| [`toBitmap`](#tobitmap) | Convert `ImageData` to `android.graphics.Bitmap`. |
 
 &nbsp;
 
 ### bytes
-The image data content in a byte array. 
+
+The image data content in a byte array.
+
 ```java
 byte[] bytes
 ```
@@ -38,7 +45,9 @@ byte[] bytes
 &nbsp;
 
 ### width
+
 The width of the image in pixels.  
+
 ```java
 int width
 ```
@@ -46,7 +55,9 @@ int width
 &nbsp;
 
 ### height
+
 The height of the image in pixels.  
+
 ```java
 int height
 ```
@@ -54,7 +65,9 @@ int height
 &nbsp;
 
 ### stride
-The stride (or scan width) of the image. 
+
+The stride (or scan width) of the image.
+
 ```java
 int stride
 ```
@@ -62,9 +75,27 @@ int stride
 &nbsp;
 
 ### format
-The image pixel format used in the image byte array. 
-```java
-ImagePixelFormat format
-```
-  
 
+The image pixel format used in the image byte array.
+
+```java
+EnumImagePixelFormat format
+```
+
+&nbsp;
+
+### orientation
+
+The orientation of the image.
+
+```java
+int orientation
+```
+
+### toBitmap
+
+Convert `ImageData` to `android.graphics.Bitmap`.
+
+```java
+Bitmap toBitmap() throws CoreException
+```

@@ -50,7 +50,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `DLRGrayscaleTransformationMode` items except DLR_GTM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**   
   - The library must be in the same place with Dynamsoft Label Recognition Library.
 
 

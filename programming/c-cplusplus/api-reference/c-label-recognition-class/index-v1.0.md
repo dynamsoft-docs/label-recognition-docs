@@ -59,6 +59,6 @@ needAutoGenerateSidebar: false
   |----------------------|-------------|
   | [`GetAllDLRResults`](result.md#getalldlrresults) | Gets all recognized results. |
   | [`FreeDLRResults`](result.md#freedlrresults) | Frees memory allocated for recognized results. |
-       
+   
 &nbsp; 
 

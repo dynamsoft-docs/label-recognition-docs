@@ -21,11 +21,11 @@ Get version information of SDK.
 String com.dynamsoft.dlr.LabelRecognition.getVersion()	
 ```
 
-### Return value
+**Return Value**
 
 The version information string.
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 LabelRecognition recognizer = new LabelRecognition();

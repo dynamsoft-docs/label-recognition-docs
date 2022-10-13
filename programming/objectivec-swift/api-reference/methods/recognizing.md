@@ -22,16 +22,21 @@ Recognizes text from the memory buffer containing image pixels in defined format
 - (NSArray<iDLRResult*>*)recognizeByBuffer:(iDLRImageData*)imageData templateName:(NSString*)templateName error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `[in]	imageData` An object of iDLRImageData that represents an image.  
 `[in]	templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return Value**
 All results recognized successfully.
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -48,8 +53,8 @@ iDLRImageData *imageData = [[iDLRImageData alloc] init];
 NSError __autoreleasing *  error;
 result = [recognizer recognizeByBuffer:imageData templateName:@"" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -59,6 +64,7 @@ let error: NSError? = NSError()
 //construct imageData
 let result = recognizer.recognizeByBuffer(imageData:imageData, templateName:"", error:&error)
 ```
+
 &nbsp;
 
 
@@ -69,17 +75,22 @@ Recognizes text from a specified image file.
 - (NSArray<iDLRResult*>*)recognizeByFile:(NSString*)name templateName:(NSString*)templateName error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `name` A string defining the file name.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return Value**
 All results recognized successfully.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -94,8 +105,8 @@ iDLRResult *result;
 NSError __autoreleasing *  error;
 result = [recognizer recognizeByFile:@"your file path" templateName:@"" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"

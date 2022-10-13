@@ -8,8 +8,8 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-
 # iImageData
+
 Stores the image data.  
 
 ```objc
@@ -17,7 +17,7 @@ Stores the image data.
 ```
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *NSData\** |
@@ -26,11 +26,12 @@ Stores the image data.
 | [`stride`](#stride) | *NSInteger* |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
 
-
 &nbsp;
 
 ### bytes
-The image data content in a byte array. 
+
+The image data content in a byte array.
+
 ```objc
 NSData* bytes
 ```
@@ -38,7 +39,9 @@ NSData* bytes
 &nbsp;
 
 ### width
+
 The width of the image in pixels.  
+
 ```objc
 NSInteger width
 ```
@@ -46,7 +49,9 @@ NSInteger width
 &nbsp;
 
 ### height
+
 The height of the image in pixels.  
+
 ```objc
 NSInteger height
 ```
@@ -54,7 +59,9 @@ NSInteger height
 &nbsp;
 
 ### stride
-The stride (or scan width) of the image. 
+
+The stride (or scan width) of the image.
+
 ```objc
 NSInteger stride
 ```
@@ -62,9 +69,9 @@ NSInteger stride
 &nbsp;
 
 ### format
-The image pixel format used in the image byte array. 
+
+The image pixel format used in the image byte array.
+
 ```objc
 EnumImagePixelFormat format
 ```
-  
-

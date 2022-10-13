@@ -33,6 +33,7 @@ class com.dynamsoft.core.BarcodeResult
 
 ### barcodeFormat
 Barcode type in BarcodeFormat group 1.
+
 ```java
 int barcodeFormat
 ```
@@ -41,6 +42,7 @@ int barcodeFormat
 
 ### barcodeFormat_2
 Barcode type in BarcodeFormat group 2.
+
 ```java
 int barcodeFormat_2
 ```
@@ -49,6 +51,7 @@ int barcodeFormat_2
 
 ### text
 The barcode text, ends by '\0'.
+
 ```java
 String text
 ```
@@ -57,6 +60,7 @@ String text
 
 ### bytes
 The barcode content in a byte array.
+
 ```java
 byte[] bytes
 ```
@@ -65,6 +69,7 @@ byte[] bytes
 
 ### location
 The location of current recognized text.
+
 ```java
 Quadrilateral location
 ```
@@ -73,6 +78,7 @@ Quadrilateral location
 
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
+
 ```java
 int moduleSize
 ```
@@ -81,6 +87,7 @@ int moduleSize
 
 ### pageNumber
 The page number the barcode located in. The index is 0-based.
+
 ```java
 int pageNumber
 ```

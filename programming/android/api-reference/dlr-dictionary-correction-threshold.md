@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # DLRDictionaryCorrectionThreshold
+
 Stores the dictionary correction threshold.
 
 ```java
@@ -24,11 +25,12 @@ class com.dynamsoft.dlr.DLRDictionaryCorrectionThreshold
 | [`maxWordLength`](#maxwordlength) | *int* |
 | [`threshold`](#threshold) | *int* |
 
-
 &nbsp;
 
 ### minWordLength
+
 The minimum value of word length.
+
 ```java
 int minWordLength
 ```
@@ -36,7 +38,9 @@ int minWordLength
 &nbsp;
 
 ### maxWordLength
+
 The maximum value of word length.
+
 ```java
 int maxWordLength
 ```
@@ -44,7 +48,9 @@ int maxWordLength
 &nbsp;
 
 ### threshold
+
 The threshold for the number of error correction characters.
+
 ```java
 int threshold
 ```

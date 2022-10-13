@@ -205,13 +205,13 @@ Sets an image source for continous scanning.
 setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
 ```
 
-### Parameters
+**Parameters**
 
 `imageSource` : Specifies the image source.
 
 `options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of text regions as shown in the code snippet below. More properties will be added as needed in the future.
 
-### Code Snippet
+**Code Snippet**
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();

@@ -13,7 +13,14 @@ needGenerateH3Content: true
 
 - [User Guide](user-guide.md)
 
+## Samples
+
+- [Samples](samples.md)
+  - [HelloWorld](hello-world-sample.md)
+  - [MRZScanner](mrz-sample.md)
+  
 ## API Reference
+
 - [API Reference](api-reference/index.md)
 
 ## Release Notes

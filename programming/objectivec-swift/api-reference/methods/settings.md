@@ -33,15 +33,20 @@ Appends CharacterModel to the SDK object.
 - (void)appendCharacterModel:(NSString*)name prototxtBuffer:(NSData*)prototxtBuffer txtBuffer:(NSData*)txtBuffer characterModelBuffer:(NSData*)characterModelBuffer
 ```   
    
-### Parameters
+**Parameters**
 `name` A unique name for the appended CharacterModel.   
 `prototxtBuffer` The .prototxt file data of the CharacterModel in a byte array.   
 `txtBuffer` The .txt file data of the CharacterModel in a byte array.   
 `characterModelBuffer` The .caffemodel file data of the CharacterModel in a byte array.   
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -55,8 +60,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 //construct prototxtBuffer, txtBuffer and characterModelBuffer
 [recognizer appendCharacterModel:@"your model name" prototxtBuffer: prototxtBuffer txtBuffer: txtBuffer characterModelBuffer: characterModelBuffer];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -75,13 +80,18 @@ Appends LabelRecognitionParameter settings in a file to the SDK object.
 - (void)appendSettingsFromFile:(NSString*)filePath error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `filePath` The settings file path.   
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -95,8 +105,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 [recognizer appendSettingsFromFile:@"your file path" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -114,13 +124,18 @@ Append a new template string to the current label recognition instance.
 - (void)appendSettingsFromString:(NSString*)content error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -134,8 +149,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_PREDETECTED_REGION\",\"RegionPredetectionModesIndex\":0},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -154,11 +169,16 @@ Clear all appended parameter settings of the current label recognition instance.
 - (void)clearAppendedSettings:(NSError**)error;
 ```   
 
-### Parameters
+**Parameters**
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -172,8 +192,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 [recognizer clearAppendedSettings:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -181,6 +201,7 @@ let recognizer = DynamsoftLabelRecognition(licenseFromLTS: lts, verificationDele
 let error: NSError? = NSError()
 recognizer.clearAppendedSettings(&error)
 ```
+
 &nbsp;
 
 
@@ -191,8 +212,13 @@ Erases all CharacterModels the SDK object currently loaded.
 - (void)eraseAllCharacterModels;
 ```   
    
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -205,8 +231,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 }
 [recognizer eraseAllCharacterModels];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -224,11 +250,16 @@ Erases a name specified CharacterModel from the SDK object.
 - (void)eraseCharacterModelByName:(NSString*)name
 ```   
 
-### Parameters
+**Parameters**
 `name` A unique name representing the CharacterModel to erase.   
   
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -241,8 +272,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 }
 [recognizer eraseCharacterModelByName:@"your model name"];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -261,21 +292,26 @@ Get argument value for the specified mode parameter.
 - (NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName index:(NSInteger)index argumentName:(NSString* _Nonnull)argumentName error:(NSError* _Nullable * _Nullable)error;
 ```   
    
-### Parameters  
+**Parameters**  
 `modeName`: The mode parameter name to get argument.  
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to get.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Return value
+**Return Value**
 the optional argument for a specified mode in Modes parameters.
 
 ### Remark
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -289,8 +325,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 NSString *argumentValue = [recognizer getModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -309,15 +345,20 @@ Get current settings and save them into a [`DLRRuntimeSettings`](../class/dlr-ru
 - (iDLRRuntimeSettings*)getRuntimeSettings:(NSError**)error;
 ```   
 
-### Parameters  
+**Parameters**  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
    
-### Return value
+**Return Value**
 
 The class object of runtime settings.
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -331,8 +372,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 iDLRRuntimeSettings* settings = [recognizer getRuntimeSettings:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -350,14 +391,19 @@ Outputs runtime settings and save them into a settings file (JSON file).
 - (void)outputSettingsToFile:(NSString*)filePath templateName:(NSString*)templateName error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `filePath` The path of the output file which stores current settings.  
 `templateName` A unique name for declaring current runtime settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 NSString *settingsName;
@@ -372,8 +418,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 [recognizer outputSettingsToFile:@"your saving file path" templateName:@"currentRuntimeSettings" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -392,11 +438,16 @@ Reset all runtime settings to default values.
 - (void)resetRuntimeSettings:(NSError**)error;
 ```   
    
-### Parameters
+**Parameters**
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -410,8 +461,8 @@ recognizer = [[DynamsoftLabelRecognition alloc] initLicenseFromLTS:lts verificat
 NSError __autoreleasing *  error;
 [recognizer resetRuntimeSettings:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -432,7 +483,7 @@ Set argument value for the specified mode parameter.
 ```objc
 - (void)setModeArgument:(NSString* _Nonnull)modeName index:(NSInteger)index argumentName:(NSString* _Nonnull)argumentName argumentValue:(NSString* _Nonnull)argumentValue error:(NSError* _Nullable * _Nullable)error;
 ```   
-### Parameters
+**Parameters**
 `modeName`: The mode parameter name to set argument.
 `index`: The array index of mode parameter to indicate a specific mode.  
 `argumentName`: The name of the argument to set.  
@@ -444,8 +495,13 @@ Set argument value for the specified mode parameter.
 Check follow link for available modes and arguments:
 - [`RegionPredetectionModes`]({{ site.parameters-reference }}label-recognition-parameter/region-predetection-modes.html#regionpredetectionmodes)
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -460,8 +516,8 @@ iDLRRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;   
 [recognizer setModeArgument:@"RegionPredetectionModes" index:0 argumentName:@"AspectRatioRange" argumentValue:"100" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -480,14 +536,19 @@ Updates reference region which is defined with source type DLR_LST_BARCODE.
 - (void)updateReferenceRegionFromBarcodeResults:(NSArray<iTextResult*>*)barcodeResults templateName:(NSString *)templateName error:(NSError**)error
 ```   
    
-### Parameters
+**Parameters**
 `barcodeResults` The barcode results used to localize reference region.  
 `templateName` The template name. A template name is the value of key LabelRecognitionParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -504,8 +565,8 @@ NSError __autoreleasing *error;
 [recognizer appendSettingsFromString:@"{\"LabelRecognitionParameter\":{\"Name\":\"P1\", \"RegionPredetectionModes\":[{\"Mode\":\"DLR_RPM_GENERAL_HSV_CONTRAST\"}], \"ReferenceRegionNameArray\": [\"R1\"]},\"ReferenceRegion\":{\"Name\":\"R1\",\"Localization\":{\"SourceType\":\"DLR_LST_BARCODE\"},\"TextAreaNameArray\":[\"T1\"]},\"TextArea\":{\"Name\":\"T1\",\"CharacterModelName\":\"Number\"}}" error:&error];
 [recognizer updateReferenceRegionFromBarcodeResults:textResults templateName:@"P1" error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -524,15 +585,20 @@ Update runtime settings with a given [`DLRRuntimeSettings`](../class/dlr-runtime
 
 ```objc
 - (void)updateRuntimeSettings:(iDLRRuntimeSettings*)settings error:(NSError**)error
-```   
-   
-### Parameters
+```
+
+**Parameters**
 `settings` The class object of template settings.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 
-### Code Snippet
-Objective-C:
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 DynamsoftLabelRecognition *recognizer;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
@@ -548,8 +614,8 @@ iDLRRuntimeSettings *settings;
 settings.linesCount = 1;
 [recognizer updateRuntimeSettings:settings error:&error];
 ```
-Swift:
-```Swift
+2. 
+```swift
 let lts = iDMLTSConnectionParameters()
 lts.organizationID = "200001"
 lts.sessionPassword = "******"
@@ -559,5 +625,6 @@ let settings = recognizer.getRuntimeSettings(&error)
 settings.linesCount = 1;
 recognizer.updateRuntimeSettings(settings, error:&error);
 ```
+
 &nbsp;
 

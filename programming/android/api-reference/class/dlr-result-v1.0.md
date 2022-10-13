@@ -25,18 +25,21 @@ Stores the recognized result.
 
 ### referenceRegionName
 The name of the reference region which is used to recognize the current result.
+
 ```java
 String com.dynamsoft.dlr.DLRResult.referenceRegionName
 ```
 
 ### textAreaName
 The name of the text area used to recognize current result.
+
 ```java
 String com.dynamsoft.dlr.DLRResult.textAreaName
 ```
 
 ### location
 The location of current recognized text.
+
 ```java
 DLRQuadrilateral com.dynamsoft.dlr.DLRResult.location
 ```
@@ -44,6 +47,7 @@ DLRQuadrilateral com.dynamsoft.dlr.DLRResult.location
 
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
+
 ```java
 int com.dynamsoft.dlr.DLRResult.confidence
 ```
@@ -51,6 +55,7 @@ int com.dynamsoft.dlr.DLRResult.confidence
 
 ### lineResults
 The line results array.
+
 ```java
 DLRLineResult[] com.dynamsoft.dlr.DLRResult.lineResults
 ```

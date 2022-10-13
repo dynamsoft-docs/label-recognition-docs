@@ -66,7 +66,7 @@ needAutoGenerateSidebar: false
   |----------------------|-------------|
   | [`GetAllDLRResults`](c-label-recognition-class/result.md#getalldlrresults) | Gets all recognized results. |
   | [`FreeDLRResults`](c-label-recognition-class/result.md#freedlrresults) | Frees memory allocated for recognized results. |
-       
+   
 &nbsp; 
 
 ## C Functions

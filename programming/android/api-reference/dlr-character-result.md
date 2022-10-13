@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # DLRCharacterResult
+
 Stores the character result.
 
 ```java
@@ -28,11 +29,12 @@ class com.dynamsoft.dlr.DLRCharacterResult
 | [`characterLConfidence`](#characterlconfidence) | *int* |
 | [`location`](#location) | [`Quadrilateral`](quadrilateral.md) |
 
-
 &nbsp;
 
 ### characterH
+
 The recognized character with highest confidence.
+
 ```java
 char characterH
 ```
@@ -40,7 +42,9 @@ char characterH
 &nbsp;
 
 ### characterM
+
 The recognized character with middle confidence.
+
 ```java
 char characterM
 ```
@@ -48,16 +52,19 @@ char characterM
 &nbsp;
 
 ### characterL
+
 The recognized character with lowest confidence.
+
 ```java
 char characterL
 ```
 
-
 &nbsp;
 
 ### characterHConfidence
+
 The confidence of the recognized character with the highest confidence.
+
 ```java
 int characterHConfidence
 ```
@@ -65,7 +72,9 @@ int characterHConfidence
 &nbsp;
 
 ### characterMConfidence
+
 The confidence of the recognized character with the middle confidence.
+
 ```java
 int characterMConfidence
 ```
@@ -73,7 +82,9 @@ int characterMConfidence
 &nbsp;
 
 ### characterLConfidence
+
 The confidence of the recognized character with the lowest confidence.
+
 ```java
 int characterLConfidence
 ```
@@ -81,7 +92,9 @@ int characterLConfidence
 &nbsp;
 
 ### location
+
 The location of current character.
+
 ```java
 com.dynamsoft.core.Quadrilateral location
 ```

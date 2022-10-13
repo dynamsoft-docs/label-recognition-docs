@@ -37,7 +37,7 @@ Sets the weight value of Blue Colour Channel used for converting a colour image 
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**   
   -1: The weight value will be set automatically by the SDK. 
   
 
@@ -48,7 +48,7 @@ Sets the weight value of Green Colour Channel used for converting a colour image
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**   
   -1: The weight value will be set automatically by the SDK. 
 
 
@@ -59,7 +59,7 @@ Sets the weight value of Red Colour Channel used for converting a colour image t
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**   
   -1: The weight value will be set automatically by the SDK. 
 
 ##### ReferChannel 
@@ -77,7 +77,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `ColourConversionMode` items except CICM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**   
   The library must be in the same place with Dynamsoft Label Recognizer Library.
 
 

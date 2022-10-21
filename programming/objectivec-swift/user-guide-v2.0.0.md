@@ -31,7 +31,7 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don't have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build Your First Application
 
@@ -46,7 +46,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 
 1. Open XCode and select New Project… in the File > New > New Project… menu to create a new project.
 
-2. Choose the correct template for your project. In this sample, we’ll use `iOS > App`.
+2. Choose the correct template for your project. In this sample, we'll use `iOS > App`.
 
 3. When prompted, choose your product name (`DLRiOSSample`), Interface (`StoryBoard`), Language (`Swift` or `Objective-C`)
 

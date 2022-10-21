@@ -31,11 +31,11 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t `have` SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. Once the folder is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which we will refer to as `[INSTALLATION FOLDER]` throughout this guide.
+If you don't `have` SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. Once the folder is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which we will refer to as `[INSTALLATION FOLDER]` throughout this guide.
 
 ## Build Your First Application
 
-Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+Let's start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
 
 >You can download the complete source code referenced in this guide from [here](https://github.com/Dynamsoft/label-recognizer-c-cpp-samples/tree/master/samples/C/HelloWorld).
 

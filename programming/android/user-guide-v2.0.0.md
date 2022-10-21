@@ -29,7 +29,7 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don't have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build Your First Application
 
@@ -42,7 +42,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 
 1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
 
-2. Choose the correct template for your project. In this sample, we’ll use `Empty Activity`.
+2. Choose the correct template for your project. In this sample, we'll use `Empty Activity`.
 
 3. When prompted, choose your app name (`DLRAndroidSample`) and set the Save location, Language, and Minimum SDK (21)
     >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).
@@ -50,7 +50,7 @@ The following sample will demonstrate how to take a picture and recognize it.
 
 ### Include the Label Recognizer Library
 
-There are two ways to include the Dynamsoft Label Recognizer SDK into your project：
+There are two ways to include the Dynamsoft Label Recognizer SDK into your project:
 
 #### Local Binary Dependency
 

@@ -108,7 +108,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 1. Open Android Studio and select New Project… in the File > New > New Project… menu to create a new project.
 
-2. Choose the correct template for your project. In this sample, we’ll use `Empty Activity`.
+2. Choose the correct template for your project. In this sample, we'll use `Empty Activity`.
 
 3. When prompted, choose your app name (`HelloWorld`) and set the Save location, Language, and Minimum SDK (21)
     >Note: With minSdkVersion set to 21, your app is available on more than 94.1% of devices on the Google Play Store (last update: March 2021).

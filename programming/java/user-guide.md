@@ -30,11 +30,11 @@ needGenerateH3Content: true
 
 ## Installation
 
-If you don’t have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
+If you don't have SDK yet, please go to <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a> to get it. After the sdk is decompressed, the root directory of the DLR installation package is `DynamsoftLabelRecognizer`, which is represented by `[INSTALLATION FOLDER]`.
 
 ## Build your First Application
 
-Let’s start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
+Let's start by creating a console application which demonstrates how to use the minimum code to recognize text from an image file.
 
 >You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-java-samples/tree/master/samples/HelloWorld).
 
@@ -134,5 +134,5 @@ You can download the similar complete source code from [Here](https://github.com
 
 ### Build and Run the Project
 
-1. Right click the project， click Run As > Java Application.
+1. Right click the project, click Run As > Java Application.
 

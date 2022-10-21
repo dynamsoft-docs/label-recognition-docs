@@ -33,7 +33,7 @@ needGenerateH3Content: true
 The Dynamsoft Label Recognizer (DLR) Android SDK comes with three modules:
 
 * **DynamsoftLabelRecognizer.frameork**: Main module. Provides APIs to recognize text from image files and camera video.
-* **DynamsoftCore.framework**: The core library of Dynamsoft’s capture vision SDKs, including common basic structure and license related APIs.
+* **DynamsoftCore.framework**: The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs.
 * **DynamsoftCameraEnhancer.frameork** (Optional): Dynamsoft Camera Enhancer (DCE) module for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
 
 There are several ways to add the SDK into your project.

@@ -77,7 +77,7 @@ breadcrumbText: v2.x Release Notes
 ### ADDED
 
 * Added event `onResourcesLoadProgress` which is triggered multiple times when the resource file for a particular template is beling loaded.
-* Added event [`onMRZRead`](../api-reference/recognize.md#onmrzread). This event is used when the SDK is configured with one of the templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` in which case extra processing is applied for better recognition of MRZ strings.
+* Added event [`onMRZRead`](../api-reference/recognize.md#onmrzread). This event is used when the SDK is configured with one of the templates `passportMRZ` , `video-passportMRZ` , `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` in which case extra processing is applied for better recognition of MRZ strings.
 
 ### CHANGED
 

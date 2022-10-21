@@ -25,7 +25,7 @@ breadcrumbText: Recognition APIs
 | API Name | Description |
 |---|---|
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
-| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
+| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` , `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
 | [onFrameRead](#onframeread) | This event is triggered after the library finishes scanning a frame. |
 | [recognizeCurrentFrame()](#recognizecurrentframe) | Scans the current frame of the video for labels. |
 | [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming frames. |
@@ -235,7 +235,7 @@ recognizer.startScanning(true);
 
 ## onMRZRead
 
-This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
+This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` , `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` .
 
 ```typescript
 onMRZRead: (txt: string, results: DLRLineResult[]) => void

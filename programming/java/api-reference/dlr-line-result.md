@@ -32,6 +32,7 @@ class com.dynamsoft.dlr.DLRLineResult
 
 ### lineSpecificationName
 The name of the line specification used to recognize current line result.
+
 ```java
 String lineSpecificationName
 ```
@@ -40,6 +41,7 @@ String lineSpecificationName
 
 ### text
 The recognized text, ends by '\0'.
+
 ```java
 String text
 ```
@@ -48,6 +50,7 @@ String text
 
 ### characterModelName
 The character model used to recognize the text.
+
 ```java
 String characterModelName
 ```
@@ -56,6 +59,7 @@ String characterModelName
 
 ### location
 The location of current line.
+
 ```java
 Quadrilateral location
 ```
@@ -65,6 +69,7 @@ Quadrilateral location
 
 ### confidence
 The confidence of the result. It ranges from 0 to 100.
+
 ```java
 int confidence
 ```
@@ -73,6 +78,7 @@ int confidence
 
 ### characterResults
 The character results array.
+
 ```java
 DLRCharacterResult[] characterResults
 ```

@@ -26,12 +26,12 @@ Initialization of `LabelRecognition` object.
 Dynamsoft.DLR.LabelRecognition.LabelRecognition()
 ```
 
-### Exceptions
+**Exceptions**
 
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -47,7 +47,7 @@ Destroys an instance of Dynamsoft Label Recognizer.
 void Dynamsoft.DLR.LabelRecognition.Dispose()	
 ```
 
-### Code Snippet
+**Code Snippet**
 
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
@@ -63,14 +63,14 @@ Sets product key and activate the SDK.
 void Dynamsoft.DLR.LabelRecognition.InitLicense(string license)
 ```   
 
-### Parameters
+**Parameters**
 `license`: The product keys.
 
-### Exceptions
+**Exceptions**
 
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 LabelRecognition recognizer = new LabelRecognition();
 recognizer.InitLicense("t0260NwAAAHV***************");
@@ -86,7 +86,7 @@ Initializes a DMLTSConnectionParameters struct with default values.
 static DMLTSConnectionParameters Dynamsoft.DLR.LabelRecognition.InitLTSConnectionParameters()
 ```   
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 DMLTSConnectionParameters ltsInfo = LabelRecognition.InitLTSConnectionParameters();
 ltsInfo.HandShake = "*****-hs-****";
@@ -106,13 +106,13 @@ Initializes the label recognition license and connects to the specified server f
 static void Dynamsoft.DLR.LabelRecognition.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters)
 ```   
 
-### Parameters
+**Parameters**
 - `ltsConnectionParameters`: The struct DMLTSConnectionParameters with customized settings.  
 
-### Exceptions
+**Exceptions**
 [`DLR_Exception`](../class/label-recognition-exception.md)
 
-### Code Snippet
+**Code Snippet**
 ```csharp
 DMLTSConnectionParameters ltsInfo = LabelRecognition.InitLTSConnectionParameters();
 info.handShakeCode = "*****-hs-****";

@@ -24,16 +24,16 @@ Sets product key and activate the SDK.
 int InitLicense (const char *license)
 ```   
 
-#### Parameters
+**Parameters**
 `[in]	license`	The product key.
 
-#### Return value
+**Return Value**
 Returns error code. Returns 0 if the function completed successfully, otherwise call [`GetErrorString`](general.md#geterrorstring) to get detailed message. 
 
 Possible returns are:
 `DLR_OK`;
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -47,14 +47,14 @@ Initializes a DM_LTSConnectionParameters struct with default values.
 static int dynamsoft::dlr::CLabelRecognition::InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
 ```   
 
-#### Parameters
+**Parameters**
 `[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html).   
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 char errorBuf[512];
 DMLTSConnectionParameters paramters;
@@ -72,16 +72,16 @@ Initializes the label recognition license and connects to the specified server f
 static int dynamsoft::dlr::CLabelRecognition::InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
-#### Parameters
+**Parameters**
 `[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.c-cplusplus-structs }}dm-lts-connection-parameters.html) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 char errorBuf[512];
 DMLTSConnectionParameters paramters;

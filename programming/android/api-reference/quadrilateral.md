@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # Quadrilateral
+
 Stores the quadrilateral.  
 
 ```java
@@ -20,16 +21,14 @@ class com.dynamsoft.core.Quadrilateral
   
 | Attribute | Type |
 |---------- | ---- |
-| [`points`](#points) | [`Point[]`](point.md) |
-
+| [`points`](#points) | `android.graphics.Point[]`|
 
 &nbsp;
 
 ### points
-Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+
+Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
+
 ```java
-Point[] points
+android.graphics.Point[] points
 ```
-
-
-

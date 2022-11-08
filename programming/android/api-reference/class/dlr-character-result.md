@@ -23,24 +23,28 @@ Stores the character result.
 
 ### characterH
 The recognized character with highest confidence.
+
 ```java
 char com.dynamsoft.dlr.DLRCharacterResult.characterH
 ```
 
 ### characterM
 The recognized character with middle confidence.
+
 ```java
 char com.dynamsoft.dlr.DLRCharacterResult.characterM
 ```
 
 ### characterL
 The recognized character with lowest confidence.
+
 ```java
 char com.dynamsoft.dlr.DLRCharacterResult.characterL
 ```
 
 ### location
 The location of current character.
+
 ```java
 DLRQuadrilateral com.dynamsoft.dlr.DLRCharacterResult.location
 ```

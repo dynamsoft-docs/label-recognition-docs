@@ -8,8 +8,8 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-
 # iQuadrilateral
+
 Stores the quadrilateral.  
 
 ```objc
@@ -22,14 +22,12 @@ Stores the quadrilateral.
 |---------- | ---- |
 | [`points`](#points) | *NSArray\** |
 
-
 &nbsp;
 
 ### points
-Four vertexes (CGPoint) in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
+
+Four vertexes (CGPoint) in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
+
 ```objc
 NSArray* points
 ```
-
-
-

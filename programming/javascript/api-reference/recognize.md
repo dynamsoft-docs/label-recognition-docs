@@ -27,8 +27,8 @@ breadcrumbText: Recognition APIs
 | [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onUniqueRead](#onuniqueread) | This event is triggered when a new, unduplicated label is found. |
 | [onImageRead](#onimageread) | This event is triggered after the library finishes scanning a image. |
-| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
-| [onVINRead](#onvinread) | This event is triggered after the library finishes scanning a frame based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. |
+| [onMRZRead](#onmrzread) | This event is triggered after the library finishes scanning a frame with the built-in templates `passportMRZ` , `video-passportMRZ` , `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . |
+| [onVINRead](#onvinread) | This event is triggered after the library finishes scanning an image based on one of the built-in templates `VIN`, `video-VIN`, `VIN_NA` or `video-VIN_NA`. |
 | [startScanning()](#startscanning) | Open the camera and starts continuous scanning of incoming images. |
 | [pauseScanning()](#pausescanning) | Pause continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
@@ -205,13 +205,13 @@ Sets an image source for continous scanning.
 setImageSource(imageSource: ImageSource, options?: object): Promise<void>;
 ```
 
-### Parameters
+**Parameters**
 
 `imageSource` : Specifies the image source.
 
 `options` : Options to help with the usage of the `ImageSource` object. At present, it only contains one property `resultsHighlightBaseShapes` that accepts `Dynamsoft.DCE.DrawingItem` as its value to help with the highlighting of text regions as shown in the code snippet below. More properties will be added as needed in the future.
 
-### Code Snippet
+**Code Snippet**
 
 ```javascript
 let recognizer = await Dynamsoft.DLR.LabelRecognizer.createInstance();
@@ -265,7 +265,7 @@ recognizer.startScanning(true);
 
 ## onMRZRead
 
-This event is triggered after the library finishes scanning a frame based on one of the built-in templates  `passportMRZ` , `video-passportMRZ` ， `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
+This event is triggered after the library finishes scanning an image based on one of the built-in templates  `passportMRZ` , `video-passportMRZ` , `visaMRZ` , `video-visaMRZ` , `MRZ` or `video-MRZ` . This event is only triggered when decoding via video using the [`startScanning`](#startscanning) method.
 
 ```typescript
 onMRZRead: (txt: string, results: DLRLineResult[]) => void

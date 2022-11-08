@@ -279,6 +279,7 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
+
 &nbsp;
 
 ## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)
@@ -318,7 +319,7 @@ Specifies the regular expression pattern of the text to recognize.
 
 **Remarks**    
  - All TextArea Objects without TextRegExPattern set will be set from this setting.
- - Supported regular expressions pattern syntax：
+ - Supported regular expressions pattern syntax:
 
 | characters | matches |
 | ---------- | ------- |

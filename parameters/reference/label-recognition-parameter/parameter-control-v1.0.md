@@ -194,6 +194,7 @@ An array item is a name of any available `ReferenceRegion`.
     ]
 }
 ```
+
 &nbsp;
 
 ## [RegionPredetectionModes](region-predetection-modes.md#regionpredetectionmodes)

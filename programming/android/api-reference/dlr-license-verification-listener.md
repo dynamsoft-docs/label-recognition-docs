@@ -10,6 +10,7 @@ noTitleIndex: true
 
 
 # DLRLicenseVerificationListener
+
 A delegate to handle callback when Dynamsoft License Server returns.
 
 ```java
@@ -25,16 +26,17 @@ interface com.dynamsoft.dlr.DLRLicenseVerificationListener
 &nbsp;
 
 ### DLRLicenseVerificationCallback
+
 The callback of Dynamsoft License Server.
 
 ```java
 void DLRLicenseVerificationCallback(boolean isSuccess, Exception error);
-```   
+```
 
 **Parameters**
 
-- `isSuccess`: Whether the license verification was successful.
-- `error`: The error message from dynamsoft license server.
+`isSuccess`: Whether the license verification was successful.  
+`error`: The error message from dynamsoft license server.
 
 **Code Snippet**
 

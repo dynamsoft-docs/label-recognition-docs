@@ -8,17 +8,71 @@ needAutoGenerateSidebar: false
 
 # Release Notes - Android 2.x
 
+## 2.2.20 (09/29/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-2.2.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
+
+- Added methods in `LabelRecognizer` class to support video streaming recognition.
+  - [`setImageSource`](../api-reference/label-recognizer.md#setimagesource): Set the source of image/video.
+  - [`setLabelResultListener`](../api-reference/label-recognizer.md#setlabelresultlistener): Register a listener to receive label recognizing results.
+  - [`startScanning`](../api-reference/label-recognizer.md#startscanning): Start the label recognizing processes.
+  - [`stopScanning`](../api-reference/label-recognizer.md#stopscanning): Stop the label recognizing processes.
+- Added methods in `LabelRecognizer` class to configure settings.
+  - [`initRuntimeSettings`](../api-reference/label-recognizer.md#initruntimesettings)
+  - [`initRuntimeSettingsFromFile`](../api-reference/label-recognizer.md#initruntimesettingsfromfile)
+  - [`outputRuntimeSettings`](../api-reference/label-recognizer.md#outputruntimesettings)
+  - [`outputRuntimeSettingsFromFile`](../api-reference/label-recognizer.md#outputruntimesettingstofile)
+- Added a new recognition method [`recognizeFileInMemory`](../api-reference/label-recognizer.md#recognizefileinmemory) in `LabelRecognizer` class.
+- Added a protocol [`LabelResultListener`](../api-reference/label-result-listener.md) to obtain video label recognition results.
+- Added a new parameter [`timeout`](../api-reference/dlr-runtime-settings.md#timeout) to `DLRRuntimeSettings` class.
+
+#### Rename
+
+- The following methods of `LabelRecognizer` class are renamed
+  - Renamed `recognizeByFile` to [`recognizeFile`](../api-reference/label-recognizer.md#recognizefile).
+  - Renamed `recognizeByBuffer` to [`recognizeBuffer`](../api-reference/label-recognizer.md#recognizebuffer).
+  - Renamed `recognizeByImage` to [`recognizeImage`](../api-reference/label-recognizer.md#recognizeimage).
+  - Renamed `outputSettingsToFile` to [`outputRuntimeSettingsToFile`](../api-reference/label-recognizer.md#outputruntimesettingstofile).
+
+#### Removed
+
+- The following methods of `LabelRecognizer` class are removed
+  - `initLicense`. The method is replaced by `LicenseManager.initLicense` under `DynamsoftCore`.
+  - `appendSettingsFromString`
+  - `appendSettingsFromFile`
+  - `clearAppendedSettings`
+  - `destory`
+
 ## 2.0 (08/26/2021)
 
-### Highlights
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 {%- include release-notes/product-highlight-2.0.md -%}
 
+<div class="fold-panel-end"></div>
+
 ### Changelog
+
 #### New
 
 - Added auto-deskew algorithm to improve the performance on recognizing the skewed characters.
-- Added package `DynamsoftCoreAndroid.aar`. Migrated the Dynamsoft core classes/enums from package `DynamsoftLabelRecognizerAndroid.aar` to ` DynamsoftCoreAndroid.aar`.
+- Added package `DynamsoftCoreAndroid.aar`. Migrated the Dynamsoft core classes/enums from package `DynamsoftLabelRecognizerAndroid.aar` to `DynamsoftCoreAndroid.aar`.
 - Added class [`BarcodeResult`](../api-reference/barcode-result.md) for users to interact with Dynamsoft Barcode Reader SDK.
 - Added [`DLRRuntimeSettings`](../api-reference/dlr-runtime-settings.md) property [`dictionaryPath`](../api-reference/dlr-runtime-settings.md#dictionarypath) and [`dictionaryCorrectionThreshold`](../api-reference/dlr-runtime-settings.md#dictionarycorrectionthreshold) for users to further improve the recognizing accuracy by referencing dictionary files.
 - Added class [`DLRDictionaryCorrectionThreshold`](../api-reference/dlr-dictionary-correction-threshold.md).
@@ -49,6 +103,3 @@ needAutoGenerateSidebar: false
 - Removed method `initLicenseFromLTS`.
 - Removed method `LabelRecognizer(string license)`.
 - Removed class `DMLTSConnectionParameters`.
-
-
-

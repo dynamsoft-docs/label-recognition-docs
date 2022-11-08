@@ -24,24 +24,28 @@ Stores the character result.
 
 ### characterH
 The recognized character with highest confidence.
+
 ```java
 char characterH
 ```
 
 ### characterM
 The recognized character with middle confidence.
+
 ```java
 char characterM
 ```
 
 ### characterL
 The recognized character with lowest confidence.
+
 ```java
 char characterL
 ```
 
 ### location
 The location of current character.
+
 ```java
 DLRQuadrilateral location
 ```

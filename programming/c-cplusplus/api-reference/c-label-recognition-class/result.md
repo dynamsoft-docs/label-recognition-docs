@@ -22,14 +22,14 @@ Get all recognized results.
 int dynamsoft::dlr::CLabelRecognition::GetAllDLRResults (DLRResultArray** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[out] results`	Recognized results returned by last calling function [`RecognizeByBuffer`](recognizing.md#recognizebybuffer) / [`RecognizeByFile`](recognizing.md#recognizebyfile). The results is allocated by SDK and should be freed by calling function [`FreeDLRResults`](#freedlrresults).
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](general.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");
@@ -49,10 +49,10 @@ Free memory allocated for text results.
 static void dynamsoft::dlr::CLabelRecognition::FreeDLRResults (DLRResultArray ** results)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	results` Recognized results.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CLabelRecognition* recognizer = new CLabelRecognition();
 recognizer->InitLicense("t0260NwAAAHV***************");

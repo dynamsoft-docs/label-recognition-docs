@@ -48,7 +48,7 @@ recognize(source: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedArray |
 
 **Return value**
 
-A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
+A promise resolving to a [`DLRResult`](interface/dlr-result.md) object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -104,7 +104,7 @@ recognizeBase64String(base64Str: string): Promise<DLRResult[]>
 
 **Return value**
 
-A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
+A promise resolving to a [`DLRResult`](interface/dlr-result.md) object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -135,7 +135,7 @@ recognizeUrl(url: string): Promise<DLRResult[]>
 
 **Return value**
 
-A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
+A promise resolving to a [`DLRResult`](interface/dlr-result.md) object that contains all the label results found in this image.
 
 **Code snippet**
 
@@ -174,7 +174,7 @@ recognizeBuffer(buffer: Blob | Buffer | ArrayBuffer | Uint8Array | Uint8ClampedA
 
 **Return value**
 
-A promise resolving to a `DLRResult\[\]` object that contains all the label results found in this image.
+A promise resolving to a [`DLRResult`](interface/dlr-result.md) object that contains all the label results found in this image.
 
 **Code snippet**
 

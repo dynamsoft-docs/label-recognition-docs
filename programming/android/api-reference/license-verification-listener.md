@@ -10,7 +10,7 @@ pageStartVer: 1.0
 
 # LicenseVerificationListener
 
-`LicenseVerificationListener` is the protocol to handle callback when message is output by license server.
+`LicenseVerificationListener` is the interface to handle callback when message is output by license server.
 
 ```java
 interface com.dynamsoft.core.LicenseVerificationListener

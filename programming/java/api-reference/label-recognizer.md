@@ -458,7 +458,7 @@ recognizer.destroy();
 
 
    
-## Recognizing
+## Recognition
    
   | Method               | Description |
   |----------------------|-------------|
@@ -482,7 +482,7 @@ DLRResult[] recognizeByBuffer(ImageData imageData, String templateName) throws L
 
 **Return value**
 
-All results recognized successfully.
+All results organized in a [DLR_Result](dlr-result.md) array.
 
 **Exceptions**
 
@@ -520,7 +520,7 @@ DLRResult[] recognizeByFile (String fileName, String templateName) throws LabelR
 
 **Return value**
 
-All results recognized successfully.
+All results organized in a [DLR_Result](dlr-result.md) array.
 
 **Exceptions**
 

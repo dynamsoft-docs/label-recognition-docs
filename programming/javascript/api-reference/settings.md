@@ -47,7 +47,7 @@ getScanSettings(): Promise<ScanSettings>
 
 **Return value**
 
-A promise resolving to a `ScanSettings` .
+A promise resolving to a `ScanSettings` object.
 
 **Code Snippet**
 

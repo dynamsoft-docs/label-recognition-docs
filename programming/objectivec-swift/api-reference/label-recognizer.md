@@ -118,7 +118,6 @@ Initializes the label Recognizer license.
 >1. 
 ```objc
 [DynamsoftLabelRecognizer initLicense:@"t0260NwAAAHV***************" verificationDelegate:self];
-
 - (void)DLRLicenseVerificationCallback:(bool)isSuccess error:(NSError * )error
 {
     //TODO: add your code for license verification
@@ -127,7 +126,6 @@ Initializes the label Recognizer license.
 2. 
 ```swift
 DynamsoftLabelRecognizer.initLicense(license:"t0260NwAAAHV***************", verificationDelegate: self)
-
 func DLRLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
     //TODO: add your code for license verification

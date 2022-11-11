@@ -20,27 +20,27 @@ interface com.dynamsoft.core.LicenseVerificationListener
 
 | Method               | Description |
 |----------------------|-------------|
-| [`LicenseVerificationCallback`](#licenseverificationcallback) | The callback of license server. It contains error message when license verification is failed. |
+| [`licenseVerificationCallback`](#licenseverificationcallback) | The callback of license server. It contains error message when license verification is failed. |
 
 ### LicenseVerificationCallback
 
-Read the license key and activate the SDK.
+The callback of license server. It contains error message when license verification is failed.
 
 ```java
-void licenseVerificationCallback(boolean var1, CoreException var2);
+void licenseVerificationCallback(boolean isSuccess, CoreException error);
 ```
 
 **Parameters**
 
-`[in] var1` Whether the license verification was successful.  
-`[in out] var2` The error message from license server.
+`[in] isSuccess`: Whether the license verification was successful.  
+`[in out] error`: The error message from license server.
 
 **Code Snippet**
 
 ```java
 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
    @Override
-   public void LicenseVerificationCallback(boolean isSuccess, Exception error) {
+   public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
       if(!isSuccess){
          error.printStackTrace();
       }

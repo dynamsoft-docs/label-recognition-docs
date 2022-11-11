@@ -469,7 +469,7 @@ DLR_Result[] RecognizeByBuffer(ImageData imageData, string templateName)
 
 **Return value**
 
-All results recognized successfully.
+All results organized in a [DLR_Result](dlr-result.md) array.
 
 **Exceptions**
 
@@ -505,7 +505,7 @@ DLR_Result[] RecognizeByFile (string fileName, string templateName)
 
 **Return value**
 
-All results recognized successfully.
+All results organized in a [DLR_Result](dlr-result.md) array.
 
 **Exceptions**
 

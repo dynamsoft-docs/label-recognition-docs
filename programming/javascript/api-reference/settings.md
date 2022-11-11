@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: Settings APIs
 ---
 
-# Change Settings
+# Settings Control
 
 ## Scan Settings
 
@@ -22,7 +22,7 @@ breadcrumbText: Settings APIs
 
 | API Name | Description |
 |---|---|
-| [updateRuntimeSettingsFromString()](#appendruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
+| [updateRuntimeSettingsFromString()](#updateruntimesettingsfromstring) | Updates runtime settings with a template represented by a JSON string. |
 | [outputRuntimeSettingsToString()](#outputruntimesettingstostring) | Output the current runtime settings to a JSON string. |
 | [updateReferenceRegionFromBarcodeResults()](#updatereferenceregionfrombarcoderesults) | Updates reference region which is defined with source type `DLR_LST_BARCODE`. |
 
@@ -47,7 +47,7 @@ getScanSettings(): Promise<ScanSettings>
 
 **Return value**
 
-A promise resolving to a `ScanSettings` .
+A promise resolving to a `ScanSettings` object.
 
 **Code Snippet**
 
@@ -224,7 +224,7 @@ updateRuntimeSettingsFromString(runtimeSettings: string): Promise<void>
 
 **Parameters**
 
-`runtimeSettings` : a JSON string that specifies the runtime settings or one of the built-in `runtimeSettings` templates. The following shows the built-in templates:
+`runtimeSettings` : a JSON string that specifies the runtime settings **or** one of the built-in `runtimeSettings` templates. The following are the built-in templates:
 
 | Name | Description |
 |:-:|:-:|
@@ -244,10 +244,12 @@ When recognizing from video input, add the prefix "video-" for a slightly differ
 
 A promise that resolves when the operation succeeds.
 
-**Return value**
+**Code Snippet**
 
-A promise that resolves when the operation succeeds.
-
+```js
+/* Update settings using one of the preset templates */
+await recognizer.updateRuntimeSettingsFromString('VIN');
+```
 ## outputRuntimeSettingsToString
 
 Output the current runtime settings to a JSON string.
@@ -259,6 +261,13 @@ outputRuntimeSettingsToString(): Promise<string>;
 **Return value**
 
 A promise resolving to a JSON string that represents the runtime settings.
+
+**Code Snippet**
+
+```js
+let settings = await recognizer.outputRuntimeSettingsToString();
+console.log(settings);
+```
 
 ## updateReferenceRegionFromBarcodeResults
 

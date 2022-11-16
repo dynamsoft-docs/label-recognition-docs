@@ -445,7 +445,7 @@ recognizer.Dispose();
 
  
    
-## Recognizing
+## Recognition Methods
    
   | Method               | Description |
   |----------------------|-------------|

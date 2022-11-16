@@ -456,7 +456,7 @@ recognizer->GetModeArgument("RegionPredetectionModes", 0, "AspectRatioRange", ar
 delete recognizer;
 ```
 
-## Recognizing Methods Details
+## Recognition Methods
 
 ### RecognizeBuffer
 

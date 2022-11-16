@@ -458,7 +458,7 @@ recognizer.destroy();
 
 
    
-## Recognition
+## Recognition Methods
    
   | Method               | Description |
   |----------------------|-------------|

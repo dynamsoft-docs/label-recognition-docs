@@ -47,7 +47,7 @@ noTitleIndex: true
   | [`startScanning`](#startscanning) | Start video label recognition. |
   | [`stopScanning`](#stopscanning) | Stop video label recognition. |
 
-## Recognizing Method Summary
+## Recognition Method Summary
 
   | Method               | Description |
   |----------------------|-------------|
@@ -652,7 +652,7 @@ Stop video label recognition.
 - (void)stopScanning;
 ```
 
-## Recognizing Method Details
+## Recognition Method Details
 
 ### recognizeBuffer
 

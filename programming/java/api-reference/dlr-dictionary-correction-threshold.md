@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - DLRDictionaryCorrectionThreshold
+title: Class DLRDictionaryCorrectionThreshold - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for Java Language.
 keywords: DLRDictionaryCorrectionThreshold, java
 needAutoGenerateSidebar: true

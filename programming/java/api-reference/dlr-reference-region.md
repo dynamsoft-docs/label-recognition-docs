@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - DLRReferenceRegion
+title: Class DLRReferenceRegion - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRReferenceRegion struct of Dynamsoft Label Recognizer for Java Language.
 keywords: DLRReferenceRegion, struct, java
 needAutoGenerateSidebar: true

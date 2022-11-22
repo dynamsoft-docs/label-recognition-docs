@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java Class - DLRRuntimeSettings
+title: Class DLRRuntimeSettings - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for Java Language.
 keywords: DLRRuntimeSettings, struct, java
 needAutoGenerateSidebar: true

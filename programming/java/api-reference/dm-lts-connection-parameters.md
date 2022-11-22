@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Java Class - DMDLSConnectionParameters
+title: Class DMDLSConnectionParameters - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Core for Java Language.
 keywords: DMDLSConnectionParameters, java
 needAutoGenerateSidebar: true

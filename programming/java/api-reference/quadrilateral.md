@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Java Class - Quadrilateral
+title: Class Quadrilateral - Dynamsoft Label Recognizer Java Edition
 description: This page shows the Quadrilateral Class of Dynamsoft Core for Java Language.
 keywords: Quadrilateral, java
 needAutoGenerateSidebar: true

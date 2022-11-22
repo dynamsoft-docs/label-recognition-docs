@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Enumerations - BarcodeFormat_2
-description: This article shows the BarcodeFormat_2 enumeration of Dynamsoft Core.
-keywords: enumerations, BarcodeFormat_2
+title: Dynamsoft Core Enumerations - DM_DeploymentType
+description: This article shows the DM_DeploymentType enumeration of Dynamsoft Core.
+keywords: enumerations, DM_DeploymentType
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

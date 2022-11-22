@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Java Class - ImageData
+title: Class ImageData - Dynamsoft Label Recognizer Java Edition
 description: This page shows the ImageData Class of Dynamsoft Core for Java Language.
 keywords: ImageData, java
 needAutoGenerateSidebar: true

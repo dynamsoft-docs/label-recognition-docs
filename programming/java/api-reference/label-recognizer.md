@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java API Reference - LabelRecognizer Class
+title: LabelRecognizer Class - Dynamsoft Label Recognizer Java Edition
 description: This page shows LabelRecognizer of Dynamsoft Label Recognizer for Java API Reference.
 keywords: api reference, java
 needAutoGenerateSidebar: true

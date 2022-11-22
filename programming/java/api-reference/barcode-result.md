@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Java Class - BarcodeResult
+title: Class BarcodeResult - Dynamsoft Label Recognizer Java Edition
 description: This page shows the BarcodeResult Class of Dynamsoft Core for Java Language.
 keywords: BarcodeResult, Java
 needAutoGenerateSidebar: true

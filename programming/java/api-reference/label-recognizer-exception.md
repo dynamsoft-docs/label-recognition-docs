@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Java API Reference - LabelRecognizerException Class
+title: LabelRecognizerException Class - Dynamsoft Label Recognizer Java Edition
 description: This page shows the LabelRecognizerException Class of Dynamsoft Label Recognition for Java SDK.
 keywords: LabelRecognizerException, class, api reference, java
 needAutoGenerateSidebar: true

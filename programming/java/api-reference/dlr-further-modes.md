@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java API Reference - DLRFurtherModes Struct
+title: Class DLRFurtherModes - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRFurtherModes Struct of Dynamsoft Label Recognizer for Java SDK.
 keywords: DLRFurtherModes, Java
 needAutoGenerateSidebar: true

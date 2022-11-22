@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Java API Reference - DLRLineSpecification Struct
+title: Class DLRLineSpecification - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for Java SDK.
 keywords: DLRLineSpecification, Java
 needAutoGenerateSidebar: true

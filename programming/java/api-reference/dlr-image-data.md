@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Java Class - DLRImageData
+title: Class DLRImageData - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DLRImageData struct of Dynamsoft Label Recognition for Java Language.
 keywords: DLRImageData, java
 needAutoGenerateSidebar: true

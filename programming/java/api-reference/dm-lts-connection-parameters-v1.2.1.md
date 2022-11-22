@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Java Class - DMLTSConnectionParameters
+title: Class DMLTSConnectionParameters - Dynamsoft Label Recognizer Java Edition
 description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognition for Java Language.
 keywords: DMLTSConnectionParameters, struct, java
 needAutoGenerateSidebar: true

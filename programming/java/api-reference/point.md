@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Java Class - Point
+title: Class Point - Dynamsoft Label Recognizer Java Edition
 description: This page shows the Point Class of Dynamsoft Core for Java Language.
 keywords: Point, Java
 needAutoGenerateSidebar: true

@@ -36,7 +36,7 @@ class com.dynamsoft.dlr.LabelRecognizer
   | [`getModeArgument`](#getmodeargument) | Get argument value for the specified mode parameter. |
   | [`setModeArgument`](#setmodeargument) | Set argument value for the specified mode parameter. |
 
-## Recognizing Methods Summary
+## Recognition Methods Summary
 
   | Method               | Description |
   |----------------------|-------------|
@@ -411,7 +411,7 @@ recognizer.updateReferenceRegionFromBarcodeResults(barcodeResults, "P1");
 
 &nbsp;
 
-## Recognizing Methods Details
+## Recognition Methods Details
 
 ### recognizeBuffer
 

@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - Point
-description: This page shows the Point interface of Dynamsoft Label Recognizer for JavaScript.
-keywords: Point, javascript, interface
+title: Dynamsoft Label Recognizer JavaScript Interface - ImageSource
+description: This page shows the ImageSource interface of Dynamsoft Label Recognizer for JavaScript.
+keywords: ImageSource, javascript, interface
 needAutoGenerateSidebar: false
 noTitleIndex: true
-breadcrumbText: Point
+breadcrumbText: ImageSource
 ---
 
 # ImageSource

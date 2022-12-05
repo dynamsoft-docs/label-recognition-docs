@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer for Java - Main Page
+title: Main Page - Dynamsoft Label Recognizer for Java
 description: This is the main page of Dynamsoft Label Recognizer for Java Language.
 keywords: java
 needAutoGenerateSidebar: true

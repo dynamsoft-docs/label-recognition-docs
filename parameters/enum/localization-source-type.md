@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Enumerations - LocalizationSourceType
+title:  Enumeration LocalizationSourceType - Dynamsoft Label Recognizer
 description: This article shows the LocalizationSourceType enumeration of Dynamsoft Label Recognizer.
 keywords: enumerations, LocalizationSourceType
 needAutoGenerateSidebar: true
@@ -9,10 +9,11 @@ noTitleIndex: true
 ---
 
 # LocalizationSourceType
+
 Describes the source type used to localize the reference region(s).
 
 ## Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum LocalizationSourceType` |
@@ -21,9 +22,8 @@ Describes the source type used to localize the reference region(s).
 | ObjC / Swift | `enum EnumLocalizationSourceType` |
 | Java | `class com.dynamsoft.dlr.EnumLocalizationSourceType` |
 
-
 ## Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | LST_MANUAL_SPECIFICATION | EnumLocalizationSourceTypeManualSpecification | 0x01 | Define the reference region using the manually specified location. |

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - Quadrilateral
+title: Quadrilateral - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the Quadrilateral interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: Quadrilateral, javascript, interface
 needAutoGenerateSidebar: false

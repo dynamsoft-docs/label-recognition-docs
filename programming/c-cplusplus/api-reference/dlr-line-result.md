@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLR_LineResult
+title: DLR_LineResult - Dynamsoft Label Recognizer C & C++ Struct
 description: This page shows the DLR_LineResult struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLR_LineResult, struct, c, c++
 needAutoGenerateSidebar: true

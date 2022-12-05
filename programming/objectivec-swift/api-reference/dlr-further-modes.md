@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer iOS API Reference - iDLRFurtherModes
+title: iDLRFurtherModes - Dynamsoft Label Recognizer iOS API Reference
 description: This page shows the iDLRFurtherModes of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRFurtherModes, iOS
 needAutoGenerateSidebar: true

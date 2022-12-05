@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - DLRDictionaryCorrectionThreshold
+title: DLRDictionaryCorrectionThreshold - Dynamsoft Label Recognizer Android Class
 description: This page shows the DLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRDictionaryCorrectionThreshold, android
 needAutoGenerateSidebar: true

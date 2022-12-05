@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - Android Samples
+title: Android Samples - Dynamsoft Label Recognizer
 description: This is the android samples page of Dynamsoft Label Recognizer.
 keywords: samples, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .NET API Reference - DLR_FurtherModes Struct
+title: DLR_FurtherModes Struct - Dynamsoft Label Recognizer .NET API Reference
 description: This page shows the DLR_FurtherModes Struct of Dynamsoft Label Recognizer for .NET SDK.
 keywords: DLR_FurtherModes, .Net
 needAutoGenerateSidebar: true

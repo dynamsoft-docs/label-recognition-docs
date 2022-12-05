@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer iOS SDK - Release Notes
+title: iOS SDK Release Notes - Dynamsoft Label Recognizer
 description: This is the release notes page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: release notes, objective-c, oc, swift
 needAutoGenerateSidebar: false

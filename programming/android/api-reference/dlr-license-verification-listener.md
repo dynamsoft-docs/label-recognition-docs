@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - DLRLicenseVerificationListener
+title: DLRLicenseVerificationListener - Dynamsoft Label Recognizer Android API Reference
 description: This page shows the DLRLicenseVerificationListener Interface of Dynamsoft Label Recognizer for Android SDK.
 keywords: DLRLicenseVerificationListener, Android
 needAutoGenerateSidebar: true

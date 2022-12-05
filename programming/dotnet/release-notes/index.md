@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net SDK - Release Notes
+title: .Net SDK Release Notes - Dynamsoft Label Recognizer 
 description: This is the release notes page of Dynamsoft Label Recognizer for .Net SDK.
 keywords: release notes, .Net
 needAutoGenerateSidebar: false

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript API - Initialization APIs
+title: Initialization APIs - Dynamsoft Label Recognizer JavaScript API
 description: This page shows the initialization APIs of Dynamsoft Label Recognizer JavaScript SDK.
 keywords: label recognizer, api reference, javascript, js, initialization
 needAutoGenerateSidebar: true

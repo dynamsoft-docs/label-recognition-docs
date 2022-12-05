@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - Interface LabelResultListener
+title: Interface LabelResultListener - Dynamsoft Label Recognizer Android API Reference
 description: This the interface LabelResultListener page of Dynamsoft Label Recognizer for Android SDK.
 keywords: LabelResultListener, interface, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - DLRReferenceRegion
+title: DLRReferenceRegion - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the DLRReferenceRegion interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DLRReferenceRegion, javascript, interface
 needAutoGenerateSidebar: false

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - ScanSettings
+title: ScanSettings - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the ScanSettings interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: ScanSettings, api reference, javascript, js
 needAutoGenerateSidebar: false

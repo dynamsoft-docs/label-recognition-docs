@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - BinarizationModes
+title: BinarizationModes - Dynamsoft Label Recognizer Parameter Reference
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - BinarizationModes.
 keywords: BinarizationModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -23,18 +23,25 @@ needGenerateH3Content: true
     
 #### Mode Arguments
 
-  - [BlockSizeX](#blocksizex)
-  - [BlockSizeY](#blocksizey)
-  - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
-  - [ThresholdCompensation](#thresholdcompensation)
-  - [ThreshValueCoefficient](#threshvaluecoefficient)
-  - [BinarizationThreshold](#binarizationthreshold)
-  - [MorphOperation](#morphoperation)
-  - [MorphShape](#morphshape)
-  - [MorphOperationKernelSizeX](#morphoperationkernelsizex)
-  - [MorphOperationKernelSizeY](#morphoperationkernelsizey)
-  - [LibraryFileName](#libraryfilename)
-  - [LibraryParameters](#libraryparameters)
+- [LabelRecognizerParameter Object](#labelrecognizerparameter-object)
+  - [BinarizationModes](#binarizationmodes)
+    - [Mode Properties](#mode-properties)
+      - [Mode Arguments](#mode-arguments)
+        - [BlockSizeX](#blocksizex)
+        - [BlockSizeY](#blocksizey)
+        - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
+        - [ThresholdCompensation](#thresholdcompensation)
+        - [ThreshValueCoefficient](#threshvaluecoefficient)
+        - [BinarizationThreshold](#binarizationthreshold)
+        - [MorphOperation](#morphoperation)
+        - [MorphShape](#morphshape)
+        - [MorphOperationKernelSizeX](#morphoperationkernelsizex)
+        - [MorphOperationKernelSizeY](#morphoperationkernelsizey)
+        - [LibraryFileName](#libraryfilename)
+        - [LibraryParameters](#libraryparameters)
+    - [Setting Methods](#setting-methods)
+      - [As JSON Parameter](#as-json-parameter)
+      - [As `DLR_RuntimeSettings` Member](#as-dlr_runtimesettings-member)
 
 ##### BlockSizeX
 

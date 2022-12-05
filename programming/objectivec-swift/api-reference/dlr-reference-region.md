@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift Class - iDLRReferenceRegion
+title: iDLRReferenceRegion - Dynamsoft Label Recognizer Objective-C & Swift Class
 description: This page shows the iDLRReferenceRegion class of Dynamsoft Label Recognition for iOS SDK.
 keywords: iDLRReferenceRegion, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

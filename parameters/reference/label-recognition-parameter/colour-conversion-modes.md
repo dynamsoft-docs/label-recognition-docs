@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - ColourConversionModes
+title: ColourConversionModes - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - ColourConversionModes.
 keywords: ColourConversionModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -23,12 +23,19 @@ needGenerateH3Content: true
     [`ColourConversionMode` Enumeration]({{ site.enumerations }}colour-conversion-mode.html)
     
 #### Mode Arguments
-- [BlueChannelWeight](#bluechannelweight)
-- [GreenChannelWeight](#greenchannelweight)
-- [RedChannelWeight](#redchannelweight)
-- [ReferChannel](#referchannel)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+- [LabelRecognizerParameter Object](#labelrecognizerparameter-object)
+  - [ColourConversionModes](#colourconversionmodes)
+    - [Mode Properties](#mode-properties)
+      - [Mode Arguments](#mode-arguments)
+        - [BlueChannelWeight](#bluechannelweight)
+        - [GreenChannelWeight](#greenchannelweight)
+        - [RedChannelWeight](#redchannelweight)
+        - [ReferChannel](#referchannel)
+        - [LibraryFileName](#libraryfilename)
+        - [LibraryParameters](#libraryparameters)
+    - [Setting Methods](#setting-methods)
+      - [As JSON Parameter](#as-json-parameter)
+      - [As `DLR_RuntimeSettings` Member](#as-dlr_runtimesettings-member)
  
 ##### BlueChannelWeight 
 Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.

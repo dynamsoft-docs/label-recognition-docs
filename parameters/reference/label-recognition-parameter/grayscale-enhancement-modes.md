@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - GrayscaleEnhancementModes
+title: GrayscaleEnhancementModes - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - GrayscaleEnhancementModes.
 keywords: GrayscaleEnhancementModes, LabelRecognizerParameter, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -22,13 +22,20 @@ needGenerateH3Content: true
     [`GrayscaleEnhancementMode` Enumeration]({{ site.enumerations }}grayscale-enhancement-mode.html)
     
 #### Mode Arguments
-- [Sensitivity](#sensitivity)
-- [SmoothBlockSizeX](#smoothblocksizex)
-- [SmoothBlockSizeY](#smoothblocksizey)
-- [SharpenBlockSizeX](#sharpenblocksizex)
-- [SharpenBlockSizeY](#sharpenblocksizey)
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+- [LabelRecognizerParameter Object](#labelrecognizerparameter-object)
+  - [GrayscaleEnhancementModes](#grayscaleenhancementmodes)
+    - [Mode Properties](#mode-properties)
+      - [Mode Arguments](#mode-arguments)
+        - [Sensitivity](#sensitivity)
+        - [SmoothBlockSizeX](#smoothblocksizex)
+        - [SmoothBlockSizeY](#smoothblocksizey)
+        - [SharpenBlockSizeX](#sharpenblocksizex)
+        - [SharpenBlockSizeY](#sharpenblocksizey)
+        - [LibraryFileName](#libraryfilename)
+        - [LibraryParameters](#libraryparameters)
+    - [Setting Methods](#setting-methods)
+      - [As JSON Parameter](#as-json-parameter)
+      - [As `DLR_RuntimeSettings` Member](#as-dlr_runtimesettings-member)
  
 ##### Sensitivity 
 Sets the sensitivity used for gray equalization.

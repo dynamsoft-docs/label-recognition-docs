@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Enumerations - Main Page
+title:  Enumerations Main Page - Dynamsoft Label Recognizer
 description: This article shows the main page of Dynamsoft Label Recognizer Enumerations.
 keywords: enumerations
 needAutoGenerateSidebar: true

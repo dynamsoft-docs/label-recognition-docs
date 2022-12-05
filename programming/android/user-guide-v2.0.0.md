@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - Android User Guide
+title: Android User Guide - Dynamsoft Label Recognizer
 description: This is the user guide page of Dynamsoft Label Recognizer for Android Language.
 keywords: a, user guide
 needAutoGenerateSidebar: true

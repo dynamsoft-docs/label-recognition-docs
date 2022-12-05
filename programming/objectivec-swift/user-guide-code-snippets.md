@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - Objective-C & Swift User Guide
+title: Objective-C & Swift User Guide - Dynamsoft Label Recognizer
 description: This is a supplement to the user guide page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: a, user guide supplement
 needAutoGenerateSidebar: true

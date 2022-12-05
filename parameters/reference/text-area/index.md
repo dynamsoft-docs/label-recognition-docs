@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference - TextArea Object
+title: TextArea Object - Dynamsoft Label Recognizer Parameter Reference 
 description: This article shows TextArea Object of Dynamsoft Label Recognizer.
 keywords: parameter reference, parameters, TextArea
 needAutoGenerateSidebar: true

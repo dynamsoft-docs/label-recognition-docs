@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Enumerations - Parameter Mode Enumerations
+title:  Parameter Mode Enumerations - Dynamsoft Label Recognizer
 description: This article shows Parameter Mode Enumerations of Dynamsoft Label Recognizer.
 keywords: BinarizationMode, GrayscaleTransformationMode, RegionPredetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true

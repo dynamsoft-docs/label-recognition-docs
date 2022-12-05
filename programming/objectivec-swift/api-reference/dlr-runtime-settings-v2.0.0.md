@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer iOS Class - iDLRRuntimeSettings
+title: iDLRRuntimeSettings - Dynamsoft Label Recognizer iOS Class
 description: This page shows the iDLRRuntimeSettings class of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRRuntimeSettings, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

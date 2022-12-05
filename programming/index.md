@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Programming - Main Page
+title: Programming Main Page - Dynamsoft Label Recognizer 
 keywords: programming
 description: Dynamsoft Label Recognizer supports the following programming languages - C, C++, Objective-C & Swift, .NET, Android, iOS, Java
 needAutoGenerateSidebar: true

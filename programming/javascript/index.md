@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer for JavaScript - Main Page
+title: Main Page - Dynamsoft Label Recognizer for JavaScript
 description: This is the main page of Dynamsoft Label Recognizer for JavaScript Language.
 keywords: javascript
 needAutoGenerateSidebar: true

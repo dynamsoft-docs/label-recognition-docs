@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net Class - DLR_DictionaryCorrectionThreshold
+title: DLR_DictionaryCorrectionThreshold - Dynamsoft Label Recognizer .Net Class
 description: This page shows the DLR_DictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for .Net Language.
 keywords: DLR_DictionaryCorrectionThreshold, .Net
 needAutoGenerateSidebar: true

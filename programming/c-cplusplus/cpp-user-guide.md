@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - C++ User Guide
+title: C++ User Guide - Dynamsoft Label Recognizer
 description: This is the user guide page of Dynamsoft Label Recognizer for C++ Language.
 keywords: c++, user guide
 needAutoGenerateSidebar: true

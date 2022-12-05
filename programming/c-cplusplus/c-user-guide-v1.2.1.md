@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - C User Guide
+title: C User Guide - Dynamsoft Label Recognition
 description: This is the user guide page of Dynamsoft Label Recognition for C Language.
 keywords: c, user guide
 needAutoGenerateSidebar: true

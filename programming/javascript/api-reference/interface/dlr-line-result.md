@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - DLRLineResult
+title: DLRLineResult - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the DLRLineResult interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DLRLineResult, javascript, interface
 needAutoGenerateSidebar: false

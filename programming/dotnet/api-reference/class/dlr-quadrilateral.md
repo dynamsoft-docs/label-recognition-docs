@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net Class - DLR_Quadrilateral
+title: DLR_Quadrilateral - Dynamsoft Label Recognition .Net Class
 description: This page shows the DLR_Quadrilateral struct of Dynamsoft Label Recognition for .Net Language.
 keywords: DLR_Quadrilateral, struct, .Net
 needAutoGenerateSidebar: true

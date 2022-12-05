@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - DLRRuntimeSettings
+title: DLRRuntimeSettings - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the DLRRuntimeSettings interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DLRRuntimeSettings, javascript, interface
 needAutoGenerateSidebar: false

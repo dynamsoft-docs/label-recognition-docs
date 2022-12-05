@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - FAQ
+title: FAQ - Dynamsoft Label Recognizer
 description: This is the FAQ page of Dynamsoft Label Recognizer.
 keywords: faq
 needAutoGenerateSidebar: true

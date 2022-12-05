@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - License initialization
+title: License initialization - Dynamsoft Label Recognizer
 description: This is the documentation - License initialization page of Dynamsoft Label Recognizer.
 keywords:  Label Recognizer, License initialization
 needAutoGenerateSidebar: true

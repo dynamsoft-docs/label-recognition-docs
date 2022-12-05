@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net Class - DLR_RuntimeSettings
+title: DLR_RuntimeSettings - Dynamsoft Label Recognition .Net Class
 description: This page shows the DLR_RuntimeSettings struct of Dynamsoft Label Recognition for .Net Language.
 keywords: DLR_RuntimeSettings, struct, .Net
 needAutoGenerateSidebar: true

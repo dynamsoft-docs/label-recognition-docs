@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android SDK - Release Notes 1.x
+title: Android SDK Release Notes 1.x - Dynamsoft Label Recognizer
 description: This is the release notes page of Dynamsoft Label Recognizer for Android SDK version 1.x.
 keywords: release notes, android
 needAutoGenerateSidebar: false

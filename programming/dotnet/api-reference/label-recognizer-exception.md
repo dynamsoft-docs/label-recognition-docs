@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer .Net API Reference - LabelRecognizerException Class
+title: LabelRecognizerException Class - Dynamsoft Label Recognizer .Net API Reference
 description: This page shows the LabelRecognizerException Class of Dynamsoft Label Recognizer for .Net SDK.
 keywords: LabelRecognizerException, class, api reference, .Net
 needAutoGenerateSidebar: true

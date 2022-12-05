@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - CharacterNormalizationModes 
+title: CharacterNormalizationModes  - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - CharacterNormalizationModes .
 keywords: CharacterNormalizationModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference - LabelRecognizerParameter Object
+title: LabelRecognizerParameter Object - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference - LabelRecognizerParameter Object.
 keywords: parameter reference, parameters, LabelRecognizerParameter
 needAutoGenerateSidebar: true

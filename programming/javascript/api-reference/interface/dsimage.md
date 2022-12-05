@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - DSImage
+title: DSImage - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the DSImage interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: DSImage, javascript, interface
 needAutoGenerateSidebar: false

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer for Android - Main Page
+title: Android Main Page - Dynamsoft Label Recognizer
 description: This is the main page of Dynamsoft Label Recognizer for Android Language.
 keywords: android
 needAutoGenerateSidebar: true

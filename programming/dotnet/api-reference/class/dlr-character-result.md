@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net Class - DLR_CharacterResult
+title: DLR_CharacterResult - Dynamsoft Label Recognition .Net Class
 description: This page shows the DLR_CharacterResult struct of Dynamsoft Label Recognition for .Net Language.
 keywords: DLR_CharacterResult, .Net
 needAutoGenerateSidebar: true

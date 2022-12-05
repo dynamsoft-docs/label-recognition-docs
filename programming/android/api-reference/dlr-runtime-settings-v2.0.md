@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android Class - DLRRuntimeSettings
+title: DLRRuntimeSettings - Dynamsoft Label Recognizer Android Class
 description: This page shows the DLRRuntimeSettings struct of Dynamsoft Label Recognizer for Android Language.
 keywords: DLRRuntimeSettings, struct, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - RegionPredetectionModes
+title: RegionPredetectionModes - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - RegionPredetectionModes.
 keywords: RegionPredetectionModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -25,14 +25,21 @@ If the image is large and the barcode on the image is very small, it is recommen
     [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}region-predetection-mode.html)
     
 #### Mode Arguments
-- [AspectRatioRange](#aspectratiorange)
-- [ForeAndBackgroundColours](#foreandbackgroundcolours)
-- [HeightRange](#heightrange)
-- [MinImageDimension](#minimagedimension)
-- [FindAccurateBoundary](#findaccurateboundary)
-- [Sensitivity](#sensitivity)
-- [SpatialIndexBlockSize](#spatialindexblocksize)
-- [WidthRange](#widthrange)
+- [LabelRecognizerParameter Object](#labelrecognizerparameter-object)
+  - [RegionPredetectionModes](#regionpredetectionmodes)
+    - [Mode Properties](#mode-properties)
+      - [Mode Arguments](#mode-arguments)
+        - [AspectRatioRange](#aspectratiorange)
+        - [ForeAndBackgroundColours](#foreandbackgroundcolours)
+        - [HeightRange](#heightrange)
+        - [MinImageDimension](#minimagedimension)
+        - [FindAccurateBoundary](#findaccurateboundary)
+        - [Sensitivity](#sensitivity)
+        - [SpatialIndexBlockSize](#spatialindexblocksize)
+        - [WidthRange](#widthrange)
+    - [Setting Methods](#setting-methods)
+      - [As JSON Parameter](#as-json-parameter)
+      - [As `DLR_RuntimeSettings` Member](#as-dlr_runtimesettings-member)
  
 ##### AspectRatioRange 
 Sets the aspect ratio range of the bounding rectangle of the predetected region.

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer iOS API Reference - iDLRLineSpecification Struct
+title: iDLRLineSpecification Struct - Dynamsoft Label Recognizer iOS API Reference
 description: This page shows the iDLRLineSpecification Struct of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRLineSpecification, iOS
 needAutoGenerateSidebar: true

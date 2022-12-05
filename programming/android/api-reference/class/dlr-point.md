@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android Class - DLRPoint
+title: DLRPoint - Dynamsoft Label Recognition Android Class
 description: This page shows the DLRPoint struct of Dynamsoft Label Recognition for Android Language.
 keywords: DLRPoint, struct, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition C/C++ API Reference - Main Page
+title: Main Page - Dynamsoft Label Recognition C/C++ API Reference
 description: This is the main page of Dynamsoft Label Recognition for C/C++ API Reference.
 keywords: api reference, c, c++
 needAutoGenerateSidebar: false

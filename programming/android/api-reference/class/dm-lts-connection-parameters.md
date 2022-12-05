@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android Class - DMLTSConnectionParameters
+title: DMLTSConnectionParameters - Dynamsoft Label Recognition Android Class
 description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognition for Android Language.
 keywords: DMLTSConnectionParameters, struct, android
 needAutoGenerateSidebar: true

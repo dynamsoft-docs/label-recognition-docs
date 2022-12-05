@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Java SDK - Release Notes 1.x
+title: Java SDK Release Notes 1.x - Dynamsoft Label Recognition 
 description: This is the release notes page of Dynamsoft Label Recognition for Java SDK version 1.x.
 keywords: release notes, java
 needAutoGenerateSidebar: false

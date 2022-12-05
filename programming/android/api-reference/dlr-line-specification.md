@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - DLRLineSpecification Struct
+title: DLRLineSpecification Struct - Dynamsoft Label Recognizer Android API Reference
 description: This page shows the DLRLineSpecification Struct of Dynamsoft Label Recognizer for Android SDK.
 keywords: DLRLineSpecification, Android
 needAutoGenerateSidebar: true

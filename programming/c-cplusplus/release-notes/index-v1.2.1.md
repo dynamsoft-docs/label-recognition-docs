@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition C/C++ SDK - Release Notes
+title: C/C++ SDK Release Notes - Dynamsoft Label Recognition 
 description: This is the release notes page of Dynamsoft Label Recognition for C/C++ SDK.
 keywords: release notes, c, c++
 needAutoGenerateSidebar: false

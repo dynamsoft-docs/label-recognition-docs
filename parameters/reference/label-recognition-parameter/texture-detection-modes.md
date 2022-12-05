@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for ImageParameter Object - TextureDetectionModes
+title: TextureDetectionModes - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for ImageParameter Object - TextureDetectionModes.
 keywords: TextureDetectionModes, ImageParameter, image process control parameters, parameter reference, parameter 
 needAutoGenerateSidebar: true

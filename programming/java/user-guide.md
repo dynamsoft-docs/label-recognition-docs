@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - Java User Guide
+title: Java User Guide - Dynamsoft Label Recognizer
 description: This is the user guide page of Dynamsoft Label Recognizer for Java Language.
 keywords: java, user guide
 needAutoGenerateSidebar: true

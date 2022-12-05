@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Objective-C & Swift API Reference - DLRLicenseVerificationDelegate
-description: This page shows DLRLicenseVerificationDelegate of Dynamsoft Label Recognizer for Objective-C & Swift API Reference.
+title: DLRLicenseVerificationDelegate - Dynamsoft Label Recognizer iOS API Reference
+description: This page shows DLRLicenseVerificationDelegate of Dynamsoft Label Recognizer for iOS API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

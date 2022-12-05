@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C & C++ Struct - DLR_ResultArray
+title: DLR_ResultArray - Dynamsoft Label Recognizer C & C++ Struct
 description: This page shows the DLR_ResultArray struct of Dynamsoft Label Recognizer for C & C++ Language.
 keywords: DLR_ResultArray, struct, c, c++
 needAutoGenerateSidebar: true

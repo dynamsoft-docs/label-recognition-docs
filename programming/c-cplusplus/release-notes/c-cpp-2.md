@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recoginizer C/C++ SDK - Release Notes 2.x
+title: C/C++ SDK Release Notes 2.x - Dynamsoft Label Recoginizer 
 description: This is the release notes page of Dynamsoft Label Recoginizer for C/C++ SDK version 2.x.
 keywords: release notes, c, c++
 needAutoGenerateSidebar: false

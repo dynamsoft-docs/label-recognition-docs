@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript API - Auxiliary APIs
+title: Auxiliary APIs - Dynamsoft Label Recognizer JavaScript API
 description: This page shows the auxiliary APIs of Dynamsoft Label Recognizer JavaScript SDK.
 keywords: label recognizer, api reference, javascript, js, auxiliary
 needAutoGenerateSidebar: true

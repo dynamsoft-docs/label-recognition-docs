@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript API - Main Page
+title: Main Page - Dynamsoft Label Recognizer JavaScript API
 description: This is the main page of Dynamsoft Label Recognizer JavaScript SDK API Reference.
 keywords: LabelRecognizer, api reference, javascript, js
 needAutoGenerateSidebar: true

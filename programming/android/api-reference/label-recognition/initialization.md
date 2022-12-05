@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android API Reference - Initialization
+title: Initialization - Dynamsoft Label Recognition Android API Reference
 description: This is the initialization functions of Dynamsoft Label Recognition for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Enumerations - Error Code
+title:  Enumerations Error Code - Dynamsoft Label Recognizer
 description: This article shows Error Code of Dynamsoft Label Recognizer.
 keywords: error code, enumeration
 needAutoGenerateSidebar: true

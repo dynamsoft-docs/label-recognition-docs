@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference - InferenceSetting Object
+title:  InferenceSetting Object - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference - InferenceSetting Object.
 keywords: parameter reference, parameters, InferenceSetting
 needAutoGenerateSidebar: true

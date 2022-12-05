@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net API Reference - Settings
+title: Settings - Dynamsoft Label Recognition .Net API Reference
 description: This is the settings functions of Dynamsoft Label Recognition for .Net API Reference.
 keywords: api reference, .Net
 needAutoGenerateSidebar: true

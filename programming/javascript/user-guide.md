@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer - JavaScript User Guide
+title: JavaScript User Guide - Dynamsoft Label Recognizer
 description: This is the user guide page of Dynamsoft Label Recognizer for JavaScript Language.
 keywords: javascript, user guide
 needAutoGenerateSidebar: true

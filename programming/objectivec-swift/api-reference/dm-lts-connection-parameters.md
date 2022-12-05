@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Objective-C & Swift Class - iDMDLSConnectionParameters
+title: Dynamsoft Core iOS Class - iDMDLSConnectionParameters
 description: This page shows the iDMDLSConnectionParameters class of Dynamsoft Core for iOS SDK.
 keywords: iDMDLSConnectionParameters, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

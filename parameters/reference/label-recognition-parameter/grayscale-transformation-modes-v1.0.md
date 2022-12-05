@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes
+title: GrayscaleTransformationModes - Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object
 description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - GrayscaleTransformationModes.
 keywords: GrayscaleTransformationModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: true

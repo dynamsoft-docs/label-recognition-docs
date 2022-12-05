@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition for .Net - Main Page
+title: Main Page - Dynamsoft Label Recognition for .Net
 description: This is the main page of Dynamsoft Label Recognition for .Net Language.
 keywords: .Net
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - ScaleUpModes
+title: ScaleUpModes - Dynamsoft Label Recognizer Parameter Reference 
 description: This page shows Dynamsoft Label Recognizer Parameter Reference for LabelRecognizerParameter Object - ScaleUpModes.
 keywords: ScaleUpModes, LabelRecognizerParameter, parameter reference, parameter
 needAutoGenerateSidebar: true

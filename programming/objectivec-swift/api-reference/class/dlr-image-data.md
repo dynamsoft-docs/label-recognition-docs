@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Objective-C & Swift Class - iDLRImageData
+title: iDLRImageData - Dynamsoft Label Recognition iOS Class
 description: This page shows the iDLRImageData class of Dynamsoft Label Recognition for iOS SDK.
 keywords: iDLRImageData, objective-c, oc, swift
 needAutoGenerateSidebar: true

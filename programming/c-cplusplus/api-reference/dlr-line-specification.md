@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer C&C++ API Reference - DLR_LineSpecification Struct
+title: DLR_LineSpecification Struct - Dynamsoft Label Recognizer C&C++ API Reference
 description: This page shows the DLR_LineSpecification Struct of Dynamsoft Label Recognizer for C&C++ SDK.
 keywords: DLR_LineSpecification, c, c++
 needAutoGenerateSidebar: true

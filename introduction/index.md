@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Introduction  - Main Page
+title:  Introduction Main Page - Dynamsoft Label Recognizer
 description: This is the main page of Dynamsoft Label Recognizer Introduction. 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

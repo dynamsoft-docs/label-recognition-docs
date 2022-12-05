@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript Interface - ImageSource
+title: ImageSource - Dynamsoft Label Recognizer JavaScript Interface
 description: This page shows the ImageSource interface of Dynamsoft Label Recognizer for JavaScript.
 keywords: ImageSource, javascript, interface
 needAutoGenerateSidebar: false

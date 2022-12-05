@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android API Reference - Settings
+title: Settings - Dynamsoft Label Recognition Android API Reference
 description: This is the settings functions of Dynamsoft Label Recognition for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true

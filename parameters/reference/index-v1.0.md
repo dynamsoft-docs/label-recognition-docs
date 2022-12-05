@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference - Main Page
+title: Parameter Reference Main Page - Dynamsoft Label Recognition 
 description: Dynamsoft Label Recognition Parameter Reference - Main Page
 keywords: parameter reference, parameters, LabelRecognitionParameter, ReferenceRegion, TextArea, LineSpecification, CharacterModel
 needAutoGenerateSidebar: true

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Objective-C & Swift API Reference - Initialization
-description: This is the initialization functions of Dynamsoft Label Recognition for Objective-C & Swift API Reference.
+title: Initialization - Dynamsoft Label Recognition iOS API Reference
+description: This is the initialization functions of Dynamsoft Label Recognition for iOS API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 ---
 
-# Objective-C & Swift API Reference - Initialization
+# iOS API Reference - Initialization
 
 | Method               | Description |
 |----------------------|-------------|

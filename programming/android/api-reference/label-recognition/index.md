@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android API Reference - LabelRecognition Class
+title: LabelRecognition Class - Dynamsoft Label Recognition Android API Reference
 description: This page shows LabelRecognition methods of Dynamsoft Label Recognition for Android API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: false

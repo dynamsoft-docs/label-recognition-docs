@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition for C - Main Page
+title: Main Page - Dynamsoft Label Recognition for C
 description: This is the main page of Dynamsoft Label Recognition for C Language.
 keywords: c
 needAutoGenerateSidebar: false

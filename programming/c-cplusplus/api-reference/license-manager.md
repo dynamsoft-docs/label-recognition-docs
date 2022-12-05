@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CLicenseManager Class
+title: CLicenseManager Class - Dynamsoft Core C & C++ Class
 description: This page shows CLicenseManager class definition of Dynamsoft Core Module C++ Edition.
 keywords: InitLicense, CLicenseManager, api reference
 ---

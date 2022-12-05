@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Objective-C & Swift User Guide - Dynamsoft Label Recognizer
+title: iOS User Guide - Dynamsoft Label Recognizer
 description: This is a supplement to the user guide page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: a, user guide supplement
 needAutoGenerateSidebar: true
 ---
 
-#  Dynamsoft Label Recognizer - Objective-C & Swift User Guide Code Snippets
+#  Dynamsoft Label Recognizer - iOS User Guide Code Snippets
 
 ## Load Photo from Photo Gallery and OCR
 The following code snippet showcases a simple application that contains three main components: an image viewer, a button to load a photo from the photo gallery, and another button to OCR the photo.

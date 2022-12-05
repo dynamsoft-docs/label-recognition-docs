@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android API Reference - LabelRecognitionException Class
+title: LabelRecognitionException Class - Dynamsoft Label Recognition Android API Reference
 description: This page shows the LabelRecognitionException Class of Dynamsoft Label Recognition for Android SDK.
 keywords: LabelRecognitionException, class, api reference, android
 needAutoGenerateSidebar: false

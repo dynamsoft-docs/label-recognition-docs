@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes
+title: RegionPredetectionModes - Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object
 description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - RegionPredetectionModes.
 keywords: RegionPredetectionModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core Objective-C & Swift Class - iQuadrilateral
+title: Dynamsoft Core iOS Class - iQuadrilateral
 description: This page shows the iQuadrilateral class of Dynamsoft Core for iOS SDK.
 keywords: iQuadrilateral, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

@@ -13,7 +13,7 @@ breadcrumbText: EnumEnhancerFeatures
 
 | Language | Declaration |
 |----------|-------------|
-| Objective-C & Swift | `enum EnumEnhancerFeatures` |
+| iOS | `enum EnumEnhancerFeatures` |
 
 ## Members
 

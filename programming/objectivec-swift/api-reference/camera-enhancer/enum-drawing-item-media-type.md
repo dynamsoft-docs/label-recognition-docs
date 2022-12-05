@@ -15,7 +15,7 @@ The Enumeration of the media type of the `DrawingItems`.
 
 | Language | Declaration |
 |----------|-------------|
-| Objective-C & Swift | `enum EnumDrawingItemMediaType` |
+| iOS | `enum EnumDrawingItemMediaType` |
 
 ## Member
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: LabelResultListener of Dynamsoft Label Recognizer Objective-C & Swift API Reference
+title: LabelResultListener of Dynamsoft Label Recognizer iOS API Reference
 description: This page shows protocol LabelResultListener of Dynamsoft Label Recognizer for iOS edition.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iDLRDictionaryCorrectionThreshold - Dynamsoft Label Recognizer Objective-C & Swift Class
+title: iDLRDictionaryCorrectionThreshold - Dynamsoft Label Recognizer iOS Class
 description: This page shows the iDLRDictionaryCorrectionThreshold struct of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRDictionaryCorrectionThreshold, objective-c, oc, swift
 needAutoGenerateSidebar: true

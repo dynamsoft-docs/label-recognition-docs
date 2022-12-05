@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Objective-C & Swift API Reference - LabelRecognition Class
-description: This page shows LabelRecognition methods of Dynamsoft Label Recognition for Objective-C & Swift API Reference.
+title: LabelRecognition Class - Dynamsoft Label Recognition iOS API Reference
+description: This page shows LabelRecognition methods of Dynamsoft Label Recognition for iOS API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: false
 ---
 
 
-# Dynamsoft Label Recognition - Objective-C & Swift Methods
+# Dynamsoft Label Recognition - iOS Methods
 
 ## General
    

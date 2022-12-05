@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition for Objective-C & Swift - Main Page
+title: Main Page - Dynamsoft Label Recognition for iOS
 description: This is the main page of Dynamsoft Label Recognition for iOS SDK.
 keywords: objective-c, oc, swift
 needAutoGenerateSidebar: true

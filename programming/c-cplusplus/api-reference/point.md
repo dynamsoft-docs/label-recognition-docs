@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core C & C++ Struct - DM_Point
+title: DM_Point - Dynamsoft Core C & C++ Struct
 description: This page shows the DM_Point struct of Dynamsoft Core for C & C++ Language.
 keywords: DM_Point, struct, c, c++
 needAutoGenerateSidebar: true

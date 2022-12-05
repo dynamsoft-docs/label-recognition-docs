@@ -13,7 +13,7 @@ breadcrumbText: EnumResolution
 
 | Language | Declaration |
 |----------|-------------|
-| Objective-C & Swift | `enum EnumResolution` |
+| iOS | `enum EnumResolution` |
 
 ## Members
 

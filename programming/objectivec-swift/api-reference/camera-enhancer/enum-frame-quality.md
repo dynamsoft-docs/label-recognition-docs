@@ -13,7 +13,7 @@ breadcrumbText: EnumFrameQuality
 
 | Language | Declaration |
 |----------|-------------|
-| Objective-C & Swift | `enum EnumFrameQuality` |
+| iOS | `enum EnumFrameQuality` |
 
 ## Members
 

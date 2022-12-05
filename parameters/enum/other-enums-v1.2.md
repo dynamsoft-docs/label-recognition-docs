@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Enumerations - Other Enumerations
+title: Other Enumerations - Dynamsoft Label Recognition Enumerations
 description: This article shows other Enumerations of Dynamsoft Label Recognition.
 keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, DLRImagePixelFormat, other enumeration, enumeration
 needAutoGenerateSidebar: true

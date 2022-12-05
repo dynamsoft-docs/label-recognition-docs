@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Objective-C & Swift API Reference - Settings
-description: This is the settings functions of Dynamsoft Label Recognition for Objective-C & Swift API Reference.
+title: Settings - Dynamsoft Label Recognition iOS API Reference
+description: This is the settings functions of Dynamsoft Label Recognition for iOS API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 ---
 
-# Objective-C & Swift API Reference - Settings
+# iOS API Reference - Settings
 
 | Method               | Description |
 |----------------------|-------------|

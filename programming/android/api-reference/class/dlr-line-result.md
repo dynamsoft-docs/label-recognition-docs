@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android Class - DLRLineResult
+title: DLRLineResult - Dynamsoft Label Recognition Android Class
 description: This page shows the DLRLineResult struct of Dynamsoft Label Recognition for Android Language.
 keywords: DLRLineResult, struct, android
 needAutoGenerateSidebar: true

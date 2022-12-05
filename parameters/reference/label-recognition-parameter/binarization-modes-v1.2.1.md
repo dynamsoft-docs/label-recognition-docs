@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - BinarizationModes
+title: BinarizationModes - Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object
 description: This page shows Dynamsoft Label Recognition Parameter Reference for LabelRecognitionParameter Object - BinarizationModes.
 keywords: BinarizationModes, LabelRecognitionParameter, parameter reference, parameter
 needAutoGenerateSidebar: true

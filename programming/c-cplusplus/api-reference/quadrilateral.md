@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Core C & C++ Struct - Quadrilateral
+title: Quadrilateral - Dynamsoft Core C & C++ Struct
 description: This page shows the Quadrilateral struct of Dynamsoft Core for C & C++ Language.
 keywords: Quadrilateral, struct, c, c++
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Android Class - DLRQuadrilateral
+title: DLRQuadrilateral - Dynamsoft Label Recognition Android Class
 description: This page shows the DLRQuadrilateral struct of Dynamsoft Label Recognition for Android Language.
 keywords: DLRQuadrilateral, struct, android
 needAutoGenerateSidebar: true

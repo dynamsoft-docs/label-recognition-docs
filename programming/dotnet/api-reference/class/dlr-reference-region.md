@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net Class - DLR_ReferenceRegion
+title: DLR_ReferenceRegion - Dynamsoft Label Recognition .Net Class
 description: This page shows the DLR_ReferenceRegion struct of Dynamsoft Label Recognition for .Net Language.
 keywords: DLR_ReferenceRegion, struct, .Net
 needAutoGenerateSidebar: true

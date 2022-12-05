@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition Objective-C & Swift Class - iDLRQuadrilateral
+title: iDLRQuadrilateral - Dynamsoft Label Recognition iOS Class
 description: This page shows the iDLRQuadrilateral class of Dynamsoft Label Recognition for iOS SDK.
 keywords: iDLRQuadrilateral, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

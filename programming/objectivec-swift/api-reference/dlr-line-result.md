@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iDLRLineResult - Dynamsoft Label Recognizer Objective-C & Swift Class
+title: iDLRLineResult - Dynamsoft Label Recognizer iOS Class
 description: This page shows the iDLRLineResult class of Dynamsoft Label Recognizer for iOS SDK.
 keywords: iDLRLineResult, class, objective-c, oc, swift
 needAutoGenerateSidebar: true

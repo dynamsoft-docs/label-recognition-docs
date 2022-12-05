@@ -15,7 +15,7 @@ The Enumeration of the state of the `DrawingItems`.
 
 | Language | Declaration |
 |----------|-------------|
-| Objective-C & Swift | `enum EnumDrawingItemState` |
+| iOS | `enum EnumDrawingItemState` |
 
 ## Member
 

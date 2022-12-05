@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition .Net Class - DMLTSConnectionParameters
+title: DMLTSConnectionParameters - Dynamsoft Label Recognition .Net Class
 description: This page shows the DMLTSConnectionParameters struct of Dynamsoft Label Recognition for .Net Language.
 keywords: DMLTSConnectionParameters, struct, .Net
 needAutoGenerateSidebar: true

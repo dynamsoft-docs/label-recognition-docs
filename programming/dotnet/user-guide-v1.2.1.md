@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognition - .Net User Guide
+title: .Net User Guide - Dynamsoft Label Recognition
 description: This is the user guide page of Dynamsoft Label Recognition for .Net Language.
 keywords: a, user guide
 needAutoGenerateSidebar: true

@@ -13,7 +13,7 @@ breadcrumbText: EnumCameraState
 
 | Language | Declaration |
 |----------|-------------|
-| iOS | `enum EnumCameraState` |
+| Objective-C & Swift | `enum EnumCameraState` |
 
 ## Members
 

@@ -13,7 +13,7 @@ breadcrumbText: Enumerations Camera Position
 
 | Language | Declaration |
 |----------|-------------|
-| iOS | `enum EnumCameraPosition` |
+| Objective-C & Swift | `enum EnumCameraPosition` |
 
 ## Members
 

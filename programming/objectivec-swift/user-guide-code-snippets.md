@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS User Guide - Dynamsoft Label Recognizer
+title: iOS User Guide Code Snippet - Dynamsoft Label Recognizer
 description: This is a supplement to the user guide page of Dynamsoft Label Recognizer for iOS SDK.
 keywords: a, user guide supplement
 needAutoGenerateSidebar: true

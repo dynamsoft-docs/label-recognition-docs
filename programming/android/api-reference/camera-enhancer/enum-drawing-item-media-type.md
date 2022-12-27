@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumDrawingItemMediaType
+title: Android EnumDrawingItemMediaType - Dynamsoft Label Recognizer Documents
 description: This is the documentation - EnumDrawingItemMediaType page of CameraEnhancer library.
 keywords:  Camera Enhancer, EnumDrawingItemMediaType
 needAutoGenerateSidebar: true

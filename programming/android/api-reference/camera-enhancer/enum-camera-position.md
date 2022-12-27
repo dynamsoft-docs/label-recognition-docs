@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumeCameraPosition
+title: Android EnumeCameraPosition - Dynamsoft Label Recognizer Documents
 description: This is the documentation - EnumCameraPosition page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Camera Position
 needAutoGenerateSidebar: true

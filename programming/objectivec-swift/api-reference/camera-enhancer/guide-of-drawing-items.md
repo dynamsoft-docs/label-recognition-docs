@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Guide on iOS
+title: iOS UI Configuration - Dynamsoft Label Recognizer Documents
 description: This is the documentation - Guide on iOS page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Guide on iOS
 needAutoGenerateSidebar: true

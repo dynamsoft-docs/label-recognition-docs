@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Enumerations Camera Position
+title: iOS EnumerationsCameraPosition - Dynamsoft Label Recognizer Documents
 description: This is the documentation - Enumerations Camera Position page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Enumerations Camera Position
 needAutoGenerateSidebar: true

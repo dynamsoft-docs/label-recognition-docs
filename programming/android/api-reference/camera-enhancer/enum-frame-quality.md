@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumFrameQuality
+title: Android EnumFrameQuality - Dynamsoft Label Recognizer Documents
 description: This is the documentation - EnumFrameQuality page of CameraEnhancer library.
 keywords:  Camera Enhancer, EnumFrameQuality
 needAutoGenerateSidebar: true

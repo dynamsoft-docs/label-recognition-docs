@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration -  EnumDrawingItemState
+title: Android EnumDrawingItemState - Dynamsoft Label Recognizer Documents
 description: This is the documentation - EnumDrawingItemState page of CameraEnhancer library.
 keywords:  Camera Enhancer, EnumDrawingItemState
 needAutoGenerateSidebar: true

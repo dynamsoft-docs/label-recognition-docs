@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS TextDrawingItem Class
+title: iOS RectDrawingItem Class - Dynamsoft Label Recognizer Documents
 description: This is the documentation - iOS TextDrawingItem Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, TextDrawingItem
 needAutoGenerateSidebar: true

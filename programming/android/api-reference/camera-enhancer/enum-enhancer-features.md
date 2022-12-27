@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumEnhancerFeatures
+title: Android EnumEnhancerFeatures - Dynamsoft Label Recognizer Documents
 description: This is the documentation - EnumEnhancerFeatures page of CameraEnhancer library.
 keywords:  Camera Enhancer, EnumEnhancerFeatures
 needAutoGenerateSidebar: true

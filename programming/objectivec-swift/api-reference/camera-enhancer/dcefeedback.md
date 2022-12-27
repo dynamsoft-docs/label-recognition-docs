@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS DCEFeedback Class
+title: iOS DCEFeedback Class - Dynamsoft Label Recognizer Documents
 description: This is the documentation - iOS DCEFeedback Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, DCEFeedback
 needAutoGenerateSidebar: true

@@ -279,13 +279,9 @@ Sets the range of string length for each recognized line.
  - MaxValue >= MinValue
 
 **Json Parameter Example**   
-```
+```json
 {
-    "LineStringLengthRange": 
-    {
-        "MinValue": 4,
-        "MaxValue": 200
-    }
+    "LineStringLengthRange": [4,200]
 }
 ```
 

@@ -24,7 +24,7 @@ needGenerateH3Content: true
  | [`LabelRecognitionParameter.LineStringRegExPattern`](label-recognition-parameter/parameter-control.md#linestringregexpattern) | Specifies the regular expression pattern of each line string text in current image to recognize. |
  | [`LabelRecognitionParameter.MaxThreadCount`](label-recognition-parameter/parameter-control.md#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](label-recognition-parameter/parameter-control.md#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
- | [`LabelRecognitionParameter.RegionPredetectionModes`](label-recognition-parameter/region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for target region search. |
+ | [`LabelRecognitionParameter.RegionPredetectionModes`](label-recognition-parameter/region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for searching target regions. |
  | [`LabelRecognitionParameter.TextRegExPattern`](label-recognition-parameter/parameter-control.md#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
 
 

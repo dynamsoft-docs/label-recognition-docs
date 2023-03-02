@@ -23,7 +23,7 @@ needGenerateH3Content: false
  | [`LabelRecognitionParameter.MaxThreadCount`](#maxthreadcount) | Sets the maximum number of threads the algorithm will use to recognize text. |
  | [`LabelRecognitionParameter.Pages`](#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for label recognition. |
  | [`LabelRecognitionParameter.ReferenceRegionNameArray`](#referenceregionnamearray) | The name array of the ReferenceRegion object(s). |
- | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
+ | [`LabelRecognitionParameter.RegionPredetectionModes`](region-predetection-modes.md#regionpredetectionmodes) | Sets the region pre-detection mode for searching target regions. |
  | [`LabelRecognitionParameter.TextStringLengthRange`](#textstringlengthrange) | Sets the range of string length for each recognized text area. |
  | [`LabelRecognitionParameter.TextRegExPattern`](#textregexpattern) | Specifies the regular expression pattern of the text to recognize. |
  | [`LabelRecognitionParameter.Timeout`](#timeout) | Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. |
@@ -359,7 +359,7 @@ Specifies the regular expression pattern of the text to recognize.
 &nbsp;
 
 ## Timeout
-Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
+Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/capture an image (Tiff, PNG, etc) from disk into memory.   
 
 **Remarks**   
 If you want to stop searching for labels after a specified amount of time, you can use this parameter to set a timeout.

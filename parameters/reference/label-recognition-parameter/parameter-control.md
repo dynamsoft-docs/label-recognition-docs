@@ -316,7 +316,7 @@ Specifies the regular expression pattern of the text to recognize.
 
 
 ## Timeout
-Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
+Sets the maximum amount of time (in milliseconds) that should be spent searching for labels on each page. It does not include the time taken to load/capture an image (Tiff, PNG, etc) from disk into memory.   
 
 **Remarks**   
 If you want to stop searching for labels after a specified amount of time, you can use this parameter to set a timeout.

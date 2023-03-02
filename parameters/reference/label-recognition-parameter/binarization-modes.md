@@ -52,7 +52,7 @@ Sets the horizontal block size for the binarization process.
 | *int* | [0, 1000] | 0 |         
 
 **Remarks**  
-  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
+  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of target region localizing.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
   - N:
@@ -70,7 +70,7 @@ Sets the vertical block size for the binarization process.
 | *int* | [0, 1000] | 0 |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
+  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of target region localizing.
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
   - N:
@@ -89,7 +89,7 @@ Sets whether to enable binary vacancy filling.
   0: disable.   
   1: enable.
 
-  For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. Better accuracy for images with a large module size.  
+  For characters with large font-weight, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in capturing failure. Setting this to True will fill in the vacant area with black and may help improve the capturing success rate. Better accuracy for characters with large font-weight.  
   
 
 ##### ThresholdCompensation 

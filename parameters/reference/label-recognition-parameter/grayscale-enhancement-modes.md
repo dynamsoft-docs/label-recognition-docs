@@ -56,7 +56,7 @@ Sets the horizontal block size for the smoothing process.
 | *int* | [3, 1000] | 3 |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
+  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of target region localizing.
 
 
 ##### SmoothBlockSizeY 
@@ -67,7 +67,7 @@ Sets the vertical block size for the smoothing process.
 | *int* | [3, 1000] | 3 |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
+  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of target region localizing.
   
 
 ##### SharpenBlockSizeX 
@@ -78,7 +78,7 @@ Sets the horizontal block size for the sharpening process.
 | *int* | [3, 1000] | 3 |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
+  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of target region localizing.
 
 
 ##### SharpenBlockSizeY 
@@ -89,7 +89,7 @@ Sets the vertical block size for the sharpening process.
 | *int* | [3, 1000] | 3 |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
+  Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of target region localizing.
       
 
 

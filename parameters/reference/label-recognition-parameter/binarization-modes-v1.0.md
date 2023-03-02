@@ -53,7 +53,7 @@ Sets the horizontal block size for the binarization process.
 | *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
 
 **Remarks**  
-  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of textzone localization.   
+  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of target regions localizing.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
   - N:
@@ -71,7 +71,7 @@ Sets the vertical block size for the binarization process.
 | *int* | [0, 1000] | 0 | "DLR_BM_LOCAL_BLOCK" |         
 
 **Remarks**   
-  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of textzone localization.   
+  Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of target regions localizing.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
   - N:

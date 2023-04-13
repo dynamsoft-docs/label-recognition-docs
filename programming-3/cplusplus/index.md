@@ -19,6 +19,6 @@ needGenerateH3Content: true
 
 ## Release Notes
 
-- [Version 2.x](../../programming/release-notes/cpp-3.md)
+- [Version 3.x](../../programming/release-notes/cpp-3.md)
 - [Version 2.x](../../programming/release-notes/c-cpp-2.md)
 - [Version 1.x](../../programming/release-notes/c-cpp-1.md)

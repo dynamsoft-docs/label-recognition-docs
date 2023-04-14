@@ -40,6 +40,9 @@ javascript: /label-recognition/docs/programming/javascript/
 javascript-api: /label-recognition/docs/programming/javascript/api-reference/
 javascript-release-notes: /label-recognition/docs/programming/javascript/release-notes/
 
+cplusplus-3: /label-recognition/docs/programming-3/cplusplus/
+cplusplus-3-api: /label-recognition/docs/programming-3/cplusplus/api-reference/
+
 assets: /label-recognition/docs/assets/
 edit_icon: /label-recognition/docs/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/docs/assets/img-icon/icon-smile.png

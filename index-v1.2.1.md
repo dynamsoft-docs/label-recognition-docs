@@ -8,16 +8,32 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Label Recognition Documentation
 
-- [Introduction]({{ site.introduction }})
+* [Introduction]({{ site.introduction }})
 
-- [Programming]({{ site.programming }})
-   - [Android]({{ site.android }})
-   - [iOS]({{ site.objectivec-swift }})
-   - [.NET]({{ site.dotnet }})
-   - [Java]({{ site.java }})
-   - [C]({{ site.c-cplusplus }}c-index.html)
-   - [C++]({{ site.c-cplusplus }}cpp-index.html)
+<hr>
+DEVELOPMENT
+<hr>
 
-- [Parameters]({{ site.parameters }})
-   - [Reference]({{ site.parameters-reference }})
-   - [Enumerations]({{ site.enumerations }})
+* [Web (Client Side)]({{ site.javascript }})
+* Mobile
+  * [Android]({{ site.android }})
+  * [iOS]({{ site.objectivec-swift }})
+* Server / Desktop
+  * [Java]({{ site.java }})
+  * [C\#]({{ site.dotnet }})
+  * [C++]({{ site.c-cplusplus }cpp-index.html})
+  * [C]({{ site.c-cplusplus }}c-index.html)
+
+<hr>
+UNDERSTANDING DDN
+<hr>
+
+* [Parameter Reference]({{ site.parameters-reference }})
+* [Enumerations]({{ site.enumerations }})
+
+<hr>
+USEFUL RESOURCES
+<hr>
+
+* [Release Notes]({{ site.release_notes }})
+* [License Activation]({{ site.license }}license-activation.html)

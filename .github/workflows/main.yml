@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
           local-dir: /home/ubuntu/DLRDoc/_site/
-          server-dir: /www.dynamsoft.com/label-recognition/docs/
+          server-dir: /www.dynamsoft.com/label-recognition/docs/core/
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -59,9 +59,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DLRDocPreview ] && mkdir -p DLRDocPreview
           [ ! -d label-recognition-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/label-recognition-docs.git label-recognition-docs-preview
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
+          [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
           cd label-recognition-docs-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-preview/* ./DLRDocPreview/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDocPreview/
+          cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DLRDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DLRDocPreview/_config.yml
           cd DLRDocPreview && bundle exec jekyll build
@@ -74,4 +74,4 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DLRDocPreview/_site/
-          server-dir: /www.dynamsoft.com/label-recognition/docs/         
+          server-dir: /www.dynamsoft.com/label-recognition/docs/core/         

@@ -1,1 +1,1 @@
-# label-recognizer
+# label-recognizer-docs

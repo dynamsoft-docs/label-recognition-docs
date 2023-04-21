@@ -30,11 +30,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
-          [ ! -d DLRDoc ] && mkdir -p DLRDoc
+          [ ! -d DLRDocCore ] && mkdir -p DLRDocCore
           [ ! -d label-recognition-docs ] && git clone --depth 1 https://github.com/Dynamsoft/label-recognition-docs.git
-          cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDoc/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDoc/
-          cd DLRDoc && bundle exec jekyll build --incremental
+          cd label-recognition-docs && git pull && cd .. && cp -rfp ./label-recognition-docs/* ./DLRDocCore/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DLRDocCore/
+          cd DLRDocCore && bundle exec jekyll build --incremental
 
       - name: Sync files - Main Site
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
-          local-dir: /home/ubuntu/DLRDoc/_site/
+          local-dir: /home/ubuntu/DLRDocCore/_site/
           server-dir: /www.dynamsoft.com/label-recognition/docs/core/
 
   Build-Preview:
@@ -54,17 +54,25 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a set of commands using the runners shell
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DLRDocCorePreview ] && rm -rf DLRDocCorePreview
+          [ -d label-recognition-docs-core-preview ] && rm -rf label-recognition-docs-core-preview
+          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
+          cd /home/ubuntu
+
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ ! -d DLRDocPreview ] && mkdir -p DLRDocPreview
-          [ ! -d label-recognition-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/label-recognition-docs.git label-recognition-docs-preview
+          [ ! -d DLRDocCorePreview ] && mkdir -p DLRDocCorePreview
+          [ ! -d label-recognition-docs-core-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft-Docs/label-recognition-docs.git label-recognition-docs-core-preview
           [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
-          cd label-recognition-docs-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-preview/* ./DLRDocPreview/
-          cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DLRDocPreview/
+          cd label-recognition-docs-core-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-core-preview/* ./DLRDocCorePreview/
+          cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DLRDocCorePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DLRDocPreview/_config.yml
-          cd DLRDocPreview && bundle exec jekyll build
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DLRDocCorePreview/_config.yml
+          cd DLRDocCorePreview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -73,5 +81,5 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DLRDocPreview/_site/
+          local-dir: /home/ubuntu/DLRDocCorePreview/_site/
           server-dir: /www.dynamsoft.com/label-recognition/docs/core/         

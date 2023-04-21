@@ -38,9 +38,9 @@ java: /label-recognition/docs/server/programming/java/
 java-api: /label-recognition/docs/server/programming/java/api-reference/
 java-release-notes: /label-recognition/docs/server/programming/java/release-notes/
 
-javascript: /label-recognition/docs/web/programming/javascript/
-javascript-api: /label-recognition/docs/web/programming/javascript/api-reference/
-javascript-release-notes: /label-recognition/docs/web/programming/javascript/release-notes/
+js: /label-recognition/docs/web/programming/javascript/
+js-api: /label-recognition/docs/web/programming/javascript/api-reference/
+js-release-notes: /label-recognition/docs/web/programming/javascript/release-notes/
 
 assets: /label-recognition/docs/core/assets/
 edit_icon: /label-recognition/docs/core/assets/img-icon/edit-icon.png

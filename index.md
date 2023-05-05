@@ -21,11 +21,11 @@ DEVELOPMENT
 * Server / Desktop
   * [Java]({{ site.java }})
   * [C\#]({{ site.dotnet }})
-  * [C++]({{ site.c-cplusplus }}cpp-index.html})
+  * [C++]({{ site.c-cplusplus }}cpp-index.html)
   * [C]({{ site.c-cplusplus }}c-index.html)
 
 <hr>
-UNDERSTANDING DDN
+UNDERSTANDING DLR
 <hr>
 
 * [Parameter Organization]({{ site.dcv_parameters }}file/index.html)

@@ -83,7 +83,7 @@ For example, [`BinarizationModes`](https://www.dynamsoft.com/label-recognition/p
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
-## [Usage Scenarios]({{ site.docFullPath }}/use-cases)
+## Usage Scenarios
 
 ### ID Cards in Air Travel
 

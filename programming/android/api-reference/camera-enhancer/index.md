@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android Camera Enhancer Library - Dynamsoft Label Recognizer Documents
-description: This is the main page of Camera Enhancer API Reference for Android SDK.
+description: Main Documentation page of Camera Enhancer API Reference of Dynamsoft Label Recognizer for Android SDK.
 keywords: api reference, Android, camera enhancer
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

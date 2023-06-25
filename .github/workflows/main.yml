@@ -67,7 +67,7 @@ jobs:
           cd /home/ubuntu
           [ ! -d DLRDocCorePreview ] && mkdir -p DLRDocCorePreview
           [ ! -d label-recognition-docs-core-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft-Docs/label-recognition-docs.git label-recognition-docs-core-preview
-          [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
           cd label-recognition-docs-core-preview && git pull && cd .. && cp -rfp ./label-recognition-docs-core-preview/* ./DLRDocCorePreview/
           cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DLRDocCorePreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \

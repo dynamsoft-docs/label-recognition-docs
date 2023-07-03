@@ -8,6 +8,16 @@ needAutoGenerateSidebar: false
 
 # Release Notes
 
+## 3.0
+
+> First released: 07-04-2023
+
+{%- include release-notes/product-highlight-3.0.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 3.0.0 | [C/C++](../programming/c-cplusplus/release-notes/cpp-3.md#300-07042023) |
+
 ## 2.2
 
 > First released: 11-30-2021

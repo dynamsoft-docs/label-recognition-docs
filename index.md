@@ -21,8 +21,8 @@ DEVELOPMENT
 * Server / Desktop
   * [Java]({{ site.java }})
   * [C\#]({{ site.dotnet }})
-  * [C++]({{ site.c-cplusplus }}cpp-index.html)
-  * [C]({{ site.c-cplusplus }}c-index.html)
+  * [C++]({{ site.cpp }})
+  * [C]({{ site.c }})
 
 <hr>
 UNDERSTANDING DLR

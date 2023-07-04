@@ -22,6 +22,13 @@ c-cplusplus-structs: /label-recognition/docs/server/programming/c-cplusplus/api-
 
 c-cplusplus-release-notes: /label-recognition/docs/server/programming/c-cplusplus/release-notes/
 
+cpp: /label-recognition/docs/server/programming/cplusplus/
+cpp_api: /label-recognition/docs/server/programming/cplusplus/api-reference/
+cpp_release_notes: /label-recognition/docs/server/programming/cplusplus/release-notes/
+
+c: /label-recognition/docs/server/programming/c/
+c_api: /label-recognition/docs/server/programming/c/api-reference/
+
 android: /label-recognition/docs/mobile/programming/android/
 android-api: /label-recognition/docs/mobile/programming/android/api-reference/
 android-release-notes: /label-recognition/docs/mobile/programming/android/release-notes/

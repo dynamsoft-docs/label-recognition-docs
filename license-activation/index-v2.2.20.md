@@ -76,7 +76,7 @@ DLR_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
 6. 
 ```cpp
 char errorMessage[256];
-CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+CLabelRecognizer::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
 ```   
 7. 
 ```csharp

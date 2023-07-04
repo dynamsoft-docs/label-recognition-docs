@@ -92,9 +92,9 @@ Sets the parameters passed to the library to load dynamically.
 #### As `DLRRuntimeSettings` Member
 `GrayscaleTransformationModes` is a [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode) array defines in `furtherModes` which is a struct member of `DLRRuntimeSettings`. It is used for setting the modes and the priority for the grayscale image conversion. Default value will be used if there is no manual setting.
 
-| Struct |	Struct Member Name | Value Type |
+| Struct | Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
-| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.c-cplusplus-structs }}FurtherModes.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
+| [`DLRRuntimeSettings`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html) | [`grayscaleTransformationModes`]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html#grayscaletransformationmodes) | [`DLRGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#dlrgrayscaletransformationmode)[8] |
 
 **See Also**    
 - [`DLRRuntimeSettings` Struct]({{ site.c-cplusplus-structs }}dlr-runtime-settings.html)

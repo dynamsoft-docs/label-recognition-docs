@@ -22,7 +22,7 @@ DEVELOPMENT
   * [Java]({{ site.java }})
   * [C\#]({{ site.dotnet }})
   * [C++]({{ site.cpp }})
-  * [C]({{ site.c }})
+  * [C]({{ site.c  }})
 
 <hr>
 UNDERSTANDING DLR

@@ -5,25 +5,13 @@ tree_file_list:
     - sidelist-parameters/parameters-enumerations.html
     - sidelist-parameters/parameters-references-v1.2.1.html
     - sidelist-parameters/parameters-references.html
-    - sidelist-parameters.html
-    - sidelist-programming/programming-android-v1.2.1.html
-    - sidelist-programming/programming-android-v2.0.0.html
-    - sidelist-programming/programming-android.html
-    - sidelist-programming/programming-c-v1.2.1.html
-    - sidelist-programming/programming-c.html
-    - sidelist-programming/programming-cpp-v1.2.1.html
-    - sidelist-programming/programming-cpp-v2.2.10.html
-    - sidelist-programming/programming-cpp.html
-    - sidelist-programming/programming-dotnet-v1.2.1.html
-    - sidelist-programming/programming-dotnet.html
-    - sidelist-programming/programming-java-v1.2.1.html
-    - sidelist-programming/programming-java.html
-    - sidelist-programming/programming-objectivec-swift-v1.2.1.html
-    - sidelist-programming/programming-objectivec-swift.html
-    - sidelist-programming/programming-javascript-v2.2.10.html
-    - sidelist-programming/programming-javascript.html
-    - sidelist-programming-v1.2.1.html
-    - sidelist-programming.html
     - sidelist-release-notes.html
     - sidelist-license-activation.html
-
+    - sidelist-development-v1.2.1.html
+    - sidelist-development-v2.2.20.html
+    - sidelist-development.html
+    - sidelist-parameters-organization.html
+    - sidelist-parameters-reference.html
+    - sidelist-understanding.html
+    - sidelist-understanding-v2.2.20.html
+    - sidelist-useful.html

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Overview of Dynamsoft Label Recognizer
 
-Dynamsoft Label Recognizer (DLR) is an SDK designed to recognize meaningful zonal text or symbols in an image (or a 'Label' in this context). Some common scenarios where a component like DLR can prove handy include price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, ID cards, and more.
+Dynamsoft Label Recognizer (DLR) is a data capture SDK designed to recognize meaningful zonal text or symbols in an image (or a 'Label' in this context). Some common scenarios where a component like DLR can prove handy include passport MRZ, ID cards, price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, and more.
 
 DLR powers your software development through the following aspects:
 
@@ -20,6 +20,11 @@ DLR powers your software development through the following aspects:
 - Utilizes a variety of processing modes at different stages of the algorithm to maintain great scalability.
 
 With DLR, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
+
+Getting started with Dynamsoft Label Recognizer:
+- [JavaScript](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/)
+- [Android](https://www.dynamsoft.com/label-recognition/docs/mobile/programming/android/) | [iOS](https://www.dynamsoft.com/label-recognition/docs/mobile/programming/objectivec-swift/)
+- [Java](https://www.dynamsoft.com/label-recognition/docs/server/programming/java/) | [.NET](https://www.dynamsoft.com/label-recognition/docs/server/programming/dotnet/) | [C++](https://www.dynamsoft.com/label-recognition/docs/server/programming/cplusplus/)
 
 ## Key Features
 

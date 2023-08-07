@@ -30,7 +30,7 @@ needAutoGenerateSidebar: false
 
 | Versions | Available Editions                                                                                                                                                                                                     |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2.2.30   | [JavaScript]({{site.js}}release-notes/javascript-2.html#2231-08072023)                                                                                                                                                 |
+| 2.2.31   | [JavaScript]({{site.js}}release-notes/javascript-2.html#2231-08072023)                                                                                                                                                 |
 | 2.2.30   | [JavaScript]({{site.js}}release-notes/javascript-2.html#2230-07242023)                                                                                                                                                 |
 | 2.2.20   | [C/C++]({{site.c-cplusplus}}release-notes/c-cpp-2.html#2220-09292022) / [Android]({{site.android}}release-notes/android-2.html#2220-09292022) / [iOS]({{site.objectivec-swift}}release-notes/ios-2.html#2220-09292022) |
 | 2.2.11   | [JavaScript]({{site.js}}release-notes/javascript-2.html#2211-08082022)                                                                                                                                                 |

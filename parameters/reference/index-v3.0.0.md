@@ -3,7 +3,7 @@ title: Dynamsoft Label Recognizer Parameter Reference - Main Page
 description: Dynamsoft Label Recognizer  Parameter Reference - Main Page
 keywords: parameter reference, parameters, label recognition
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index.html
+permalink: /parameters/reference/index-v3.0.0.html
 ---
 
 # Parameter Reference
@@ -15,7 +15,7 @@ permalink: /parameters/reference/index.html
  | [`ImageROIProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
  | [`ImageSourceName`]({{ site.dcv_parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
  | [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
- | [`OutputOriginalImage`]({{ site.dcv_parameters_reference }}capture-vision-template/output-original-Image.html) | Indicates whether DCV finally outputs the original input image. |
+ | [`OutputRawImage`]({{ site.dcv_parameters_reference }}capture-vision-template/output-raw-Image.html) | Indicates whether DCV finally outputs the original input image. |
  | [`SemanticProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
  | [`Timeout`]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
 

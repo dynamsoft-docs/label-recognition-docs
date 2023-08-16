@@ -16,6 +16,7 @@ Describes the grayscale transformation mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRGrayscaleTransformationMode` |
 | C / C++ | `enum GrayscaleTransformationMode` |
 | .Net | `enum Dynamsoft.Core.EnumGrayscaleTransformationMode` |
 | Android | `class com.dynamsoft.core.EnumGrayscaleTransformationMode` |

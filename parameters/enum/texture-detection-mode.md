@@ -17,6 +17,7 @@ Describes the texture detection mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRTextureDetectionMode` |
 | C / C++ | `enum TextureDetectionMode` |
 | .Net | `enum Dynamsoft.Core.EnumTextureDetectionMode` |
 | Android | `class com.dynamsoft.core.EnumTextureDetectionMode` |

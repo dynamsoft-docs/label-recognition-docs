@@ -16,6 +16,7 @@ Describes the source type used to localize the reference region(s).
 
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRLocalizationSourceType` |
 | C / C++ | `enum LocalizationSourceType` |
 | .Net | `enum Dynamsoft.DLR.EnumLocalizationSourceType` |
 | Android | `class com.dynamsoft.dlr.EnumLocalizationSourceType` |

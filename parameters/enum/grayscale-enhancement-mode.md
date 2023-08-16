@@ -16,6 +16,7 @@ Describes the grayscale image preprocessing mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRGrayscaleEnhancementMode` |
 | C / C++ | `enum GrayscaleEnhancementMode` |
 | .Net | `enum Dynamsoft.Core.EnumGrayscaleEnhancementMode` |
 | Android | `class com.dynamsoft.core.EnumGrayscaleEnhancementMode` |

@@ -19,6 +19,7 @@ Describes the colour conversion mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRColourConversionMode` |
 | C / C++ | `enum ColourConversionMode` |
 | .Net | `enum Dynamsoft.Core.EnumColourConversionMode` |
 | Android | `class com.dynamsoft.core.EnumColourConversionMode` |

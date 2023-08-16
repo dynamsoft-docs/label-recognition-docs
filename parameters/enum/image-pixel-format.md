@@ -16,6 +16,7 @@ Describes the image pixel format.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRImagePixelFormat` |
 | C / C++ | `enum ImagePixelFormat` |
 | .Net | `enum Dynamsoft.Core.EnumImagePixelFormat` |
 | Android | `class com.dynamsoft.core.EnumImagePixelFormat` |

@@ -17,6 +17,7 @@ Describes the region predetection mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRRegionPredetectionMode` |
 | C / C++ | `enum RegionPredetectionMode` |
 | .Net | `enum Dynamsoft.Core.EnumRegionPredetectionMode` |
 | Android | `class com.dynamsoft.core.EnumRegionPredetectionMode` |

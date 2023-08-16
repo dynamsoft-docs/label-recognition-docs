@@ -17,6 +17,7 @@ Describes the binarization mode.
    
 | Language | Declaration |
 | -------- | ----------- |
+| JavaScript | `enum EnumDLRBinarizationMode` |
 | C / C++ | `enum BinarizationMode` |
 | .Net | `enum Dynamsoft.Core.EnumBinarizationMode` |
 | Android | `class com.dynamsoft.core.EnumBinarizationMode` |

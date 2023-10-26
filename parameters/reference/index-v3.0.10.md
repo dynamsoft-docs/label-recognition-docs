@@ -15,7 +15,6 @@ permalink: /parameters/reference/index.html
  | [`Name`]({{ site.dcv_parameters_reference }}shared-parameter/name.html) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
  | [`ImageROIProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
  | [`ImageSourceName`]({{ site.dcv_parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
- | [`MinImageCaptureInterval`]({{ site.dcv_parameters_reference }}capture-vision-template/min-image-capture-interval.html) | Specifies the minimum time interval (in milliseconds) allowed between consecutive image captures. |
  | [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
  | [`OutputOriginalImage`]({{ site.dcv_parameters_reference }}capture-vision-template/output-original-Image.html) | Indicates whether DCV finally outputs the original input image. |
  | [`SemanticProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
@@ -91,7 +90,6 @@ permalink: /parameters/reference/index.html
  | [`Name`]({{ site.dcv_parameters_reference }}shared-parameter/name.html) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
  | [`DirectoryPath`]({{ site.dcv_parameters_reference }}shared-parameter/directory-path.html) | Defines a path when the library have to read files. |
  | [`FileFilter`]({{ site.dcv_parameters_reference }}image-source-options/file-filter.html) | Defines a file name filter string, which determines which files are fetched. |
- | [`Pages`]({{ site.dcv_parameters_reference }}image-source-options/pages.html) | Sets the 0-based page indexes of a file (.tiff or .pdf) for barcode searching. |
  | [`PDFReadingMode`]({{ site.dcv_parameters_reference }}image-source-options/pdf-reading-mode.html) | Defines how to handle PDF files. |
  | [`Recursive`]({{ site.dcv_parameters_reference }}image-source-options/recursive.html) | Defines whether to fetch files recursively. |
  | [`Type`]({{ site.dcv_parameters_reference }}image-source-options/type.html) | Defines the type of the ImageSource object, which helps CVR create the correct type of image source. |

@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains jobs called "Build-Master" and "Build-Preview"
-  Build-Master:
+  Build-Main:
     if: ${{ github.ref == 'refs/heads/master' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
@@ -91,4 +91,4 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DLRDocCorePreview/_site/
-          server-dir: /www.dynamsoft.com/label-recognition/docs/core/         
+          server-dir: /www.dynamsoft.com/label-recognition/docs/core/

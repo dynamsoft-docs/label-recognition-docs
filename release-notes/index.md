@@ -18,7 +18,8 @@ needAutoGenerateSidebar: false
 
 | Versions | Available Editions                                         |
 | -------- | ---------------------------------------------------------- |
-| 3.0.10 | [C++]({{site.cpp}}release-notes/cpp-3.html#3010-0808023) |
+| 3.0.20 | [C++]({{site.cpp}}release-notes/cpp-3.html#3020-10262023) |
+| 3.0.10 | [C++]({{site.cpp}}release-notes/cpp-3.html#3010-08082023) |
 | 3.0.0    | [C++]({{site.cpp}}release-notes/cpp-3.html#300-07042023) |
 
 ## 2.2

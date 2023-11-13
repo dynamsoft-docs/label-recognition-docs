@@ -22,9 +22,12 @@ DLR powers your software development through the following aspects:
 With DLR, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
 
 Getting started with Dynamsoft Label Recognizer:
-- [JavaScript](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/)
-- [Android](https://www.dynamsoft.com/label-recognition/docs/mobile/programming/android/) | [iOS](https://www.dynamsoft.com/label-recognition/docs/mobile/programming/objectivec-swift/)
-- [Java](https://www.dynamsoft.com/label-recognition/docs/server/programming/java/) | [.NET](https://www.dynamsoft.com/label-recognition/docs/server/programming/dotnet/) | [C++](https://www.dynamsoft.com/label-recognition/docs/server/programming/cplusplus/)
+
+| Platform | Language |
+| -------- | -------- |
+| Web | [JavaScript]({{ site.js }}){:target="_blank"} |
+| Mobile | [Android]({{ site.android }}){:target="_blank"} / [iOS]({{ site.objectivec-swift }}){:target="_blank"} |
+| Server/Desktop | [Java]({{ site.java }}){:target="_blank"} / [.NET]({{ site.dotnet }}){:target="_blank"} / [C++]({{ site.cpp }}){:target="_blank"} |
 
 ## Key Features
 

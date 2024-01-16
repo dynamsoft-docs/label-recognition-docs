@@ -63,7 +63,7 @@ permalink: /parameters/reference/index.html
  | Parameter Name                                                                        | Description |
  | ------------------------------------------------------------------------------------- | ----------- |
  | [`Name`]({{ site.dcv_parameters_reference }}shared-parameter/name.html) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
- | [`DirectoryPath`]({{ site.dcv_parameters_reference }}character-model/directory-path.md) | Defines the path of character models. |
+ | [`DirectoryPath`]({{ site.dcv_parameters_reference }}character-model/directory-path.html) | Defines the path of character models. |
  | [`FilterFilePath`]({{ site.dcv_parameters_reference }}character-model/filter-file-path.html) | Defines the full path of the filter file which specifies the characters to be recognized. |
 
 ## ImageParameter

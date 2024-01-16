@@ -8,6 +8,18 @@ needAutoGenerateSidebar: false
 
 # Release Notes
 
+## 3.2
+
+> First released: 01-16-2024
+
+### Highlights
+
+{%- include release-notes/product-highlight-3.2.0.md -%}
+
+| Versions | Available Editions                                         |
+| -------- | ---------------------------------------------------------- |
+| 3.2.0    | [C++]({{site.cpp}}release-notes/cpp-3.html#320-01162024){:target="_blank"} |
+
 ## 3.0
 
 > First released: 07-04-2023

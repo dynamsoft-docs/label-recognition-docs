@@ -1,5 +1,65 @@
 [
     {
+        "version": "3.2.0",
+        "matchList": {
+            "dcvRepoCore": [
+                {
+                    "path": "/parameters/reference/capture-vision-template",
+                    "version": "2.2.0"
+                },{
+                    "path": "/parameters/reference/target-roi-def",
+                    "version": "2.2.0"
+                },{
+                    "path": "/parameters/reference/label-recognizer-task-settings",
+                    "version": "3.2.0"
+                },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.2.0"
+                },{
+                    "path": "/parameters/reference/text-line-specification",
+                    "version": "3.2.0"
+                },{
+                    "path": "/parameters/reference/image-source-options",
+                    "version": "3.2.0"
+                },{
+                    "path": "/parameters/reference/global-parameter",
+                    "version": "2.2.0"
+                }
+            ]
+        }
+    },{
+        "version": "3.0.30",
+        "matchList": {
+            "dcvRepoCore": [
+                {
+                    "path": "/parameters/reference/capture-vision-template",
+                    "version": "2.0.30"
+                },{
+                    "path": "/parameters/reference/target-roi-def",
+                    "version": "2.0.30"
+                },{
+                    "path": "/parameters/reference/label-recognizer-task-settings",
+                    "version": "3.0.30"
+                },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.0.30"
+                },{
+                    "path": "/parameters/reference/text-line-specification",
+                    "version": "3.0.30"
+                },{
+                    "path": "/parameters/reference/image-source-options",
+                    "version": "2.0.30"
+                },{
+                    "path": "/parameters/reference/global-parameter",
+                    "version": "2.0.30"
+                },{
+                    "path": "/parameters/reference/character-model",
+                    "version": "3.0.30"
+                }
+            ]
+        }
+    },
+    {
         "version": "3.0.20",
         "matchList": {
             "dcvRepoCore": [
@@ -11,19 +71,22 @@
                     "version": "2.0.20"
                 },{
                     "path": "/parameters/reference/label-recognizer-task-settings",
-                    "version": "10.0.20"
-                },{
-                    "path": "/parameters/reference/image-parameter",
                     "version": "3.0.20"
                 },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.0.20"
+                },{
                     "path": "/parameters/reference/text-line-specification",
-                    "version": "10.0.20"
+                    "version": "3.0.20"
                 },{
                     "path": "/parameters/reference/image-source-options",
                     "version": "3.0.20"
                 },{
                     "path": "/parameters/reference/global-parameter",
                     "version": "2.0.20"
+                },{
+                    "path": "/parameters/reference/character-model",
+                    "version": "3.0.20"
                 }
             ]
         }
@@ -39,19 +102,22 @@
                     "version": "2.0.10"
                 },{
                     "path": "/parameters/reference/label-recognizer-task-settings",
-                    "version": "10.0.10"
-                },{
-                    "path": "/parameters/reference/image-parameter",
                     "version": "3.0.10"
                 },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.0.10"
+                },{
                     "path": "/parameters/reference/text-line-specification",
-                    "version": "10.0.10"
+                    "version": "3.0.10"
                 },{
                     "path": "/parameters/reference/image-source-options",
                     "version": "3.0.10"
                 },{
                     "path": "/parameters/reference/global-parameter",
                     "version": "2.0.10"
+                },{
+                    "path": "/parameters/reference/character-model",
+                    "version": "3.0.10"
                 }
             ]
         }
@@ -67,19 +133,22 @@
                     "version": "2.0.0"
                 },{
                     "path": "/parameters/reference/label-recognizer-task-settings",
-                    "version": "10.0.0"
-                },{
-                    "path": "/parameters/reference/image-parameter",
                     "version": "3.0.0"
                 },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.0.0"
+                },{
                     "path": "/parameters/reference/text-line-specification",
-                    "version": "10.0.0"
+                    "version": "3.0.0"
                 },{
                     "path": "/parameters/reference/image-source-options",
                     "version": "3.0.0"
                 },{
                     "path": "/parameters/reference/global-parameter",
                     "version": "2.0.0"
+                },{
+                    "path": "/parameters/reference/character-model",
+                    "version": "3.0.0"
                 }
             ]
         }

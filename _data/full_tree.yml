@@ -12,6 +12,8 @@ tree_file_list:
     - sidelist-development.html
     - sidelist-parameters-organization.html
     - sidelist-parameters-reference-v3.0.0.html
+    - sidelist-parameters-reference-v3.0.10.html
+    - sidelist-parameters-reference-v3.0.30.html
     - sidelist-parameters-reference.html
     - sidelist-understanding.html
     - sidelist-understanding-v2.2.20.html

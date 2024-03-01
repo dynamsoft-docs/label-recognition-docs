@@ -35,37 +35,33 @@ The following code snippets are using the public trial license to initialize the
 >1. 
 ```javascript
 Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9";
-```     
+```
 2. 
 ```java
-LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRLicenseVerificationListener() {
-    @Override
-    public void DLRLicenseVerificationCallback(boolean b, Exception e) {
-        if(!b && e != null){
-            e.printStackTrace();
-        }
-    }
+LicenseManager.initLicense("YOUR-LICENSE-KEY", this, (isSuccess, error) -> {
+   if (!isSuccess) {
+          error.printStackTrace();
+   }
 });
 ```
 3. 
 ```objc
-[DynamsoftLabelRecognizer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-- (void)DLRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-    if(!isSuccess && error != nil){
-        NSString* msg = error.userInfo[NSUnderlyingErrorKey];
-        NSLog(@"%@", msg);
+[DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+- (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
+    if (!isSuccess && error != nil) {
+        NSLog(@"error: %@", error);
     }
 }
 ```
 4. 
 ```swift
-DynamsoftLabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
-func dlrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-    if(!isSuccess && error != nil){
-        let err = error as NSError?
-        let msg = err!.userInfo[NSUnderlyingErrorKey] as? String
-        print(msg ?? "")
-    }
+LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+   if !isSuccess {
+          if let error = error {
+             print("\(error.localizedDescription)")
+          }
+   }
 }
 ```
 5. 

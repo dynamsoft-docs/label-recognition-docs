@@ -34,11 +34,11 @@ The following code snippets are using the public trial license to initialize the
 >
 >1. 
 ```javascript
-Dynamsoft.DLR.LabelRecognizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9";
+Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
 ```     
 2. 
 ```java
-LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRLicenseVerificationListener() {
+LabelRecognizer.initLicense("YOUR-LICENSE-KEY", new DLRLicenseVerificationListener() {
     @Override
     public void DLRLicenseVerificationCallback(boolean b, Exception e) {
         if(!b && e != null){
@@ -49,7 +49,7 @@ LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRL
 ```
 3. 
 ```objc
-[DynamsoftLabelRecognizer initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+[DynamsoftLabelRecognizer initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)DLRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
     if(!isSuccess && error != nil){
         NSString* msg = error.userInfo[NSUnderlyingErrorKey];
@@ -59,7 +59,7 @@ LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DLRL
 ```
 4. 
 ```swift
-DynamsoftLabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
+DynamsoftLabelRecognizer.initLicense("YOUR-LICENSE-KEY",verificationDelegate:self)
 func dlrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
     if(!isSuccess && error != nil){
         let err = error as NSError?
@@ -71,19 +71,19 @@ func dlrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 5. 
 ```c
 char errorMessage[256];
-DLR_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+DLR_InitLicense("YOUR-LICENSE-KEY", errorMessage, 256);
 ```
 6. 
 ```cpp
 char errorMessage[256];
-CLabelRecognizer::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+CLabelRecognizer::InitLicense("YOUR-LICENSE-KEY", errorMessage, 256);
 ```   
 7. 
 ```csharp
-LabelRecognizer.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
+LabelRecognizer.InitLicense("YOUR-LICENSE-KEY");
 ```
 8. 
 ```java
-LabelRecognizer.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9");
+LabelRecognizer.initLicense("YOUR-LICENSE-KEY");
 ```
 

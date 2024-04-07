@@ -34,7 +34,7 @@ The following code snippets are using the public trial license to initialize the
 >
 >1. 
 ```javascript
-Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
+Dynamsoft.DLR.LabelRecognizer.license = "YOUR-LICENSE-KEY";
 ```     
 2. 
 ```java

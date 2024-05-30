@@ -20,7 +20,7 @@ DEVELOPMENT
   * [iOS]({{ site.objectivec-swift }})
 * Server / Desktop
   * [Java]({{ site.java }})
-  * [C\#]({{ site.dotnet }})
+  * [.NET]({{ site.dotnet }})
   * [C++]({{ site.cpp }})
   * [C]({{ site.c  }})
 

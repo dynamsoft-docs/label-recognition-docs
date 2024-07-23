@@ -12,6 +12,10 @@ needAutoGenerateSidebar: false
 
 > First released: 07-23-2023
 
+### Highlights
+
+{%- include release-notes/product-highlight-3.4.10.md -%}
+
 | Versions | Available Editions                                         |
 | -------- | ---------------------------------------------------------- |
 | 3.4.10   | [C++]({{site.cpp}}release-notes/cpp-3.html#3410-07232024){:target="_blank"} |

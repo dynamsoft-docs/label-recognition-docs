@@ -60,7 +60,8 @@ dnt_icon: /label-recognition/docs/core/assets/img-icon/icon-dnt.svg
 release-notes: /label-recognition/docs/core/release-notes/
 license-activation: /label-recognition/docs/core/license-activation/
 
-useVersionTree: true
+useVersionTree: false
+isDCV: true
 
 baseurl: "/label-recognition/docs/core"
 

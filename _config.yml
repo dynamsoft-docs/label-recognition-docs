@@ -1,68 +1,68 @@
 repositoryUrl: https://github.com/dynamsoft-docs/label-recognition-docs/blob/master
 repository: Dynamsoft-Docs/label-recognition-docs
-docFullPath: https://www.dynamsoft.com/label-recognition/docs/core
-firstLevelUrl: /label-recognition/docs/core
-docHomePage: /label-recognition/docs/core/introduction/
+docFullPath: https://www.dynamsoft.com/label-recognition/docs-archive/core
+firstLevelUrl: /label-recognition/docs-archive/core
+docHomePage: /label-recognition/docs-archive/core/introduction/
 
-introduction: /label-recognition/docs/core/introduction/
-parameters: /label-recognition/docs/core/parameters/
-enumerations: /label-recognition/docs/core/parameters/enum/
-parameters-reference: /label-recognition/docs/core/parameters/reference/
+introduction: /label-recognition/docs-archive/core/introduction/
+parameters: /label-recognition/docs-archive/core/parameters/
+enumerations: /label-recognition/docs-archive/core/parameters/enum/
+parameters-reference: /label-recognition/docs-archive/core/parameters/reference/
 
-dcv_parameters: /capture-vision/docs/core/parameters/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
-#license: /capture-vision/docs/core/license/
+dcv_parameters: /capture-vision/docs-archive/core/parameters/
+dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
+#license: /capture-vision/docs-archive/core/license/
 
-c-cplusplus: /label-recognition/docs/server/programming/c-cplusplus/
-c-cplusplus-api-reference: /label-recognition/docs/server/programming/c-cplusplus/api-reference/
+c-cplusplus: /label-recognition/docs-archive/server/programming/c-cplusplus/
+c-cplusplus-api-reference: /label-recognition/docs-archive/server/programming/c-cplusplus/api-reference/
 
-c-functions: /label-recognition/docs/server/programming/c-cplusplus/api-reference/c-functions/
-cpp-methods: /label-recognition/docs/server/programming/c-cplusplus/api-reference/c-label-recognition-class/
-c-cplusplus-structs: /label-recognition/docs/server/programming/c-cplusplus/api-reference/structs/
+c-functions: /label-recognition/docs-archive/server/programming/c-cplusplus/api-reference/c-functions/
+cpp-methods: /label-recognition/docs-archive/server/programming/c-cplusplus/api-reference/c-label-recognition-class/
+c-cplusplus-structs: /label-recognition/docs-archive/server/programming/c-cplusplus/api-reference/structs/
 
-c-cplusplus-release-notes: /label-recognition/docs/server/programming/c-cplusplus/release-notes/
+c-cplusplus-release-notes: /label-recognition/docs-archive/server/programming/c-cplusplus/release-notes/
 
-cpp: /label-recognition/docs/server/programming/cplusplus/
-cpp_api: /label-recognition/docs/server/programming/cplusplus/api-reference/
-cpp_release_notes: /label-recognition/docs/server/programming/cplusplus/release-notes/
+cpp: /label-recognition/docs-archive/server/programming/cplusplus/
+cpp_api: /label-recognition/docs-archive/server/programming/cplusplus/api-reference/
+cpp_release_notes: /label-recognition/docs-archive/server/programming/cplusplus/release-notes/
 
-c: /label-recognition/docs/server/programming/c/
-c_api: /label-recognition/docs/server/programming/c/api-reference/
+c: /label-recognition/docs-archive/server/programming/c/
+c_api: /label-recognition/docs-archive/server/programming/c/api-reference/
 
-android: /label-recognition/docs/mobile/programming/android/
-android-api: /label-recognition/docs/mobile/programming/android/api-reference/
-android-release-notes: /label-recognition/docs/mobile/programming/android/release-notes/
+android: /label-recognition/docs-archive/mobile/programming/android/
+android-api: /label-recognition/docs-archive/mobile/programming/android/api-reference/
+android-release-notes: /label-recognition/docs-archive/mobile/programming/android/release-notes/
 
-dotnet: /label-recognition/docs/server/programming/dotnet/
-dotnet_api: /label-recognition/docs/server/programming/dotnet/api-reference/
-dotnet_release_notes: /label-recognition/docs/server/programming/dotnet/release-notes/
+dotnet: /label-recognition/docs-archive/server/programming/dotnet/
+dotnet_api: /label-recognition/docs-archive/server/programming/dotnet/api-reference/
+dotnet_release_notes: /label-recognition/docs-archive/server/programming/dotnet/release-notes/
 
-objectivec-swift: /label-recognition/docs/mobile/programming/objectivec-swift/
-objectivec-swift-api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
-objectivec-swift-release-notes: /label-recognition/docs/mobile/programming/objectivec-swift/release-notes/
+objectivec-swift: /label-recognition/docs-archive/mobile/programming/objectivec-swift/
+objectivec-swift-api: /label-recognition/docs-archive/mobile/programming/objectivec-swift/api-reference/
+objectivec-swift-release-notes: /label-recognition/docs-archive/mobile/programming/objectivec-swift/release-notes/
 
-java: /label-recognition/docs/server/programming/java/
-java-api: /label-recognition/docs/server/programming/java/api-reference/
-java-release-notes: /label-recognition/docs/server/programming/java/release-notes/
+java: /label-recognition/docs-archive/server/programming/java/
+java-api: /label-recognition/docs-archive/server/programming/java/api-reference/
+java-release-notes: /label-recognition/docs-archive/server/programming/java/release-notes/
 
-js: /label-recognition/docs/web/programming/javascript/
-js-api: /label-recognition/docs/web/programming/javascript/api-reference/
-js-release-notes: /label-recognition/docs/web/programming/javascript/release-notes/
+js: /label-recognition/docs-archive/web/programming/javascript/
+js-api: /label-recognition/docs-archive/web/programming/javascript/api-reference/
+js-release-notes: /label-recognition/docs-archive/web/programming/javascript/release-notes/
 
-assets: /label-recognition/docs/core/assets/
-edit_icon: /label-recognition/docs/core/assets/img-icon/edit-icon.png
-smile_icon: /label-recognition/docs/core/assets/img-icon/icon-smile.png
-sad_icon: /label-recognition/docs/core/assets/img-icon/icon-sad.png
-dbr_icon: /label-recognition/docs/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /label-recognition/docs/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /label-recognition/docs/core/assets/img-icon/icon-dnt.svg
+assets: /label-recognition/docs-archive/core/assets/
+edit_icon: /label-recognition/docs-archive/core/assets/img-icon/edit-icon.png
+smile_icon: /label-recognition/docs-archive/core/assets/img-icon/icon-smile.png
+sad_icon: /label-recognition/docs-archive/core/assets/img-icon/icon-sad.png
+dbr_icon: /label-recognition/docs-archive/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /label-recognition/docs-archive/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /label-recognition/docs-archive/core/assets/img-icon/icon-dnt.svg
 
-release-notes: /label-recognition/docs/core/release-notes/
-license-activation: /label-recognition/docs/core/license-activation/
+release-notes: /label-recognition/docs-archive/core/release-notes/
+license-activation: /label-recognition/docs-archive/core/license-activation/
 
 useVersionTree: true
 
-baseurl: "/label-recognition/docs/core"
+baseurl: "/label-recognition/docs-archive/core"
 
 plugins:
   - jemoji
@@ -86,7 +86,7 @@ defaults:
       path: "" 
     values: 
       docRootName: "Label Recognizer" 
-      docHomePage: "/label-recognition/docs/core/introduction/"
+      docHomePage: "/label-recognition/docs-archive/core/introduction/"
   - scope:
       path: "Hide_Tree_Page.html"
     values:

@@ -14,7 +14,7 @@ needAutoGenerateSidebar: true
 DEVELOPMENT
 <hr>
 
-* [Web (Client Side)]({{ site.javascript }})
+* [Web (Client Side)]({{ site.js }})
 * Mobile
   * [Android]({{ site.android }})
   * [iOS]({{ site.objectivec-swift }})

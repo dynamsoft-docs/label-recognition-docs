@@ -7,7 +7,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Overview of Dynamsoft Label Recognizer
+# Introduction to Dynamsoft Label Recognizer
 
 Dynamsoft Label Recognizer (DLR) is a data capture SDK designed to recognize meaningful zonal text or symbols in an image (or a 'Label' in this context). Some common scenarios where a component like DLR can prove handy include passport MRZ, ID cards, price tags in supermarkets, inventory labels in warehouses, VIN codes on car windshields, driver licenses, and more.
 
@@ -20,14 +20,6 @@ DLR powers your software development through the following aspects:
 - Utilizes a variety of processing modes at different stages of the algorithm to maintain great scalability.
 
 With DLR, you can create customizable text detection and recognition software with enterprise-grade performance to meet your business needs.
-
-Getting started with Dynamsoft Label Recognizer:
-
-| Platform | Language |
-| -------- | -------- |
-| Web | [JavaScript]({{ site.js }}){:target="_blank"} |
-| Mobile | [Android]({{ site.android }}){:target="_blank"} / [iOS]({{ site.objectivec-swift }}){:target="_blank"} |
-| Server/Desktop | [Java]({{ site.java }}){:target="_blank"} / [.NET]({{ site.dotnet }}){:target="_blank"} / [C++]({{ site.cpp }}){:target="_blank"} |
 
 ## Key Features
 
@@ -46,7 +38,7 @@ The position of a label (also called the text area) is specified by percentage c
    <p>Figure 1 – ROI definition</p>
 </div>
 
-The left portion of Figure 1 above demonstrates how the position of the reference region can be determined by the barcode region. The barcode can be localized and recognized through [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/?urlsource=navigation). In addition, if there are multiple barcodes in an image, we can further determine the target barcode region by specifying the barcode format(s) and barcode text. 
+The left portion of Figure 1 above demonstrates how the position of the reference region can be determined by the barcode region. The barcode can be localized and recognized through `Dynamsoft Barcode Reader`. In addition, if there are multiple barcodes in an image, we can further determine the target barcode region by specifying the barcode format(s) and barcode text. 
 
 On the right side, we demonstrate how the SDK is able to locate the reference region based on the background colour. In this case, DLR is told (via the API) that the background colour is red, and in turn it automatically determines the reference region through its algorithms.
 
@@ -87,7 +79,7 @@ Finally, DLR will perform multiple iterations to correct the misrecognized chara
 
 In order to cope with various scenarios, DLR provides a variety of processing modes at each stage of the algorithm process to maintain great scalability. 
 
-For example, [`BinarizationModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-runtime-settings.html?ver=latest#binarizationmodes) provides several image binarization methods and [`RegionPredetectionModes`](https://www.dynamsoft.com/label-recognition/programming/dotnet/api-reference/dlr-further-modes.html?ver=latest#regionpredetectionmodes) provides different pre-detection methods to help locate the reference region. 
+For example, `BinarizationModes` provides several image binarization methods and `RegionPredetectionModes` provides different pre-detection methods to help locate the reference region. 
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
@@ -128,18 +120,3 @@ With the help of DLR, companies can enable their customers to scan voucher codes
 ### Checks in Banking
 
 Accurate data capture helps to simplify banking processes, making them more efficient. Recent OCR innovations allow customers to easily scan and deposit cheques via their mobile devices. The customer's signature, account number, and total amount will be checked. The amounts on cheques are printed with a special font which can be easily recognized by smart devices equipped with DLR-based OCR software. 
-
-## Cross-Platform Programming Languages
-
-DLR is designed to be cross-platform. The core of DLR is written in C/C++ for performance. The library is wrapped for .NET, Java, and other programming languages so that users can use DLR on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages: 
-
-| OS            | Programming Language |
-|---------------|----------------------|
-|Windows        | C/C++/C\#/VB.NET/Java |
-|Linux          | C/C++/Java            |
-|Android        | Java                 |
-|iOS            | Swift/Objective-C    |
-
-## License Agreement
-
-Please <a href="https://www.dynamsoft.com/label-recognition/license-agreement/" target="_blank">click here</a> to read the license agreement.

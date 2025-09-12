@@ -3,6 +3,8 @@ repository: Dynamsoft-Docs/label-recognition-docs
 docFullPath: https://www.dynamsoft.com/label-recognition/docs/core
 firstLevelUrl: /label-recognition/docs/core
 docHomePage: /label-recognition/docs/core/introduction/
+needSearchIndex: true
+searchNeedFilter: true
 
 introduction: /label-recognition/docs/core/introduction/
 parameters: /label-recognition/docs/core/parameters/
@@ -62,6 +64,7 @@ license-activation: /label-recognition/docs/core/license-activation/
 
 useVersionTree: false
 isDCV: true
+useJSVersionV3: true
 
 baseurl: "/label-recognition/docs/core"
 

@@ -1,27 +1,27 @@
 repositoryUrl: https://github.com/dynamsoft-docs/label-recognition-docs/blob/v2
 repository: Dynamsoft-Docs/label-recognition-docs
-docFullPath: https://www.dynamsoft.com/label-recognition/docs/v2/core
-firstLevelUrl: /label-recognition/docs/v2/core
-docHomePage: /label-recognition/docs/v2/core/introduction/
+docFullPath: https://www.dynamsoft.com/label-recognition/docs-v2/core
+firstLevelUrl: /label-recognition/docs-v2/core
+docHomePage: /label-recognition/docs-v2/core/introduction/
 needSearchIndex: true
 searchNeedFilter: true
 
-introduction: /label-recognition/docs/v2/core/introduction/
+introduction: /label-recognition/docs-v2/core/introduction/
 
-assets: /label-recognition/docs/v2/core/assets/
-edit_icon: /label-recognition/docs/v2/core/assets/img-icon/edit-icon.png
-smile_icon: /label-recognition/docs/v2/core/assets/img-icon/icon-smile.png
-sad_icon: /label-recognition/docs/v2/core/assets/img-icon/icon-sad.png
-dbr_icon: /label-recognition/docs/v2/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /label-recognition/docs/v2/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /label-recognition/docs/v2/core/assets/img-icon/icon-dnt.svg
+assets: /label-recognition/docs-v2/core/assets/
+edit_icon: /label-recognition/docs-v2/core/assets/img-icon/edit-icon.png
+smile_icon: /label-recognition/docs-v2/core/assets/img-icon/icon-smile.png
+sad_icon: /label-recognition/docs-v2/core/assets/img-icon/icon-sad.png
+dbr_icon: /label-recognition/docs-v2/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /label-recognition/docs-v2/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /label-recognition/docs-v2/core/assets/img-icon/icon-dnt.svg
 
 
 useVersionTree: false
 isDCV: true
 useJSVersionV3: true
 
-baseurl: "/label-recognition/docs/v2/core"
+baseurl: "/label-recognition/docs-v2/core"
 
 plugins:
   - jemoji
@@ -45,7 +45,7 @@ defaults:
       path: "" 
     values: 
       docRootName: "Label Recognizer" 
-      docHomePage: "/label-recognition/docs/v2/core/introduction/"
+      docHomePage: "/label-recognition/docs-v2/core/introduction/"
   - scope:
       path: "Hide_Tree_Page.html"
     values:
